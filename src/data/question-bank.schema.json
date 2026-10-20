@@ -1,0 +1,130 @@
+{
+  "title": "Gospel Labs question bank",
+  "description": "Curated gospel investigation questions. See docs/QUESTION_BANK.md.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number",
+      "const": 1,
+      "description": "Format version of this file."
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "description": "Stable, unique identifier. Never change it once published; investigations link to it."
+          },
+          "question": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300,
+            "description": "The question, phrased openly without implying an answer."
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60,
+            "description": "Topic used for filtering. Reuse an existing category where one fits; new ones appear automatically."
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "introductory",
+              "intermediate",
+              "advanced"
+            ],
+            "description": "Rough depth of study required."
+          },
+          "tags": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            },
+            "description": "Short keywords that help search. May be empty."
+          },
+          "suggestedReferences": {
+            "default": [],
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 120,
+                  "description": "How the reference is shown, e.g. \"Alma 7:11–13\" or \"Gospel Topics: Prayer\"."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "scripture",
+                    "gospel-topics",
+                    "general-conference",
+                    "manual",
+                    "other"
+                  ],
+                  "description": "Kind of source."
+                },
+                "url": {
+                  "description": "Optional link to the official Church website. Run `npm run verify:references` after adding or changing links.",
+                  "pattern": "^https://www\\.churchofjesuschrist\\.org/",
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "label",
+                "type"
+              ],
+              "additionalProperties": false,
+              "description": "A starting point for study. Not evidence, and not a conclusion."
+            }
+          },
+          "prompts": {
+            "default": [],
+            "description": "Open-ended questions that guide study without presuming a conclusion.",
+            "maxItems": 8,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300
+            }
+          },
+          "submittedBy": {
+            "description": "Optional attribution for whoever suggested the question.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          }
+        },
+        "required": [
+          "id",
+          "question",
+          "category",
+          "difficulty",
+          "tags"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "version",
+    "questions"
+  ],
+  "additionalProperties": false
+}

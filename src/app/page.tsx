@@ -1,69 +1,51 @@
-import Image from "next/image";
+import { BookOpen, FlaskConical } from "lucide-react";
+import { DashboardOverview } from "@/components/dashboard/dashboard-overview";
+import { ProcessOverview } from "@/components/dashboard/process-overview";
+import { PageContainer } from "@/components/layout/app-shell";
+import { ButtonLink } from "@/components/ui/button";
+import { Eyebrow } from "@/components/ui/page-header";
+import { newInvestigationHref } from "@/lib/routes";
 
-export default function Home() {
+export default function DashboardPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <PageContainer className="flex flex-col gap-10 sm:gap-12">
+      <section
+        aria-labelledby="dashboard-title"
+        className="relative overflow-hidden rounded-2xl border border-line bg-surface px-5 py-8 sm:px-10 sm:py-12"
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-accent/10 blur-3xl"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <Eyebrow>Research notebook</Eyebrow>
+        <h1 id="dashboard-title" className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+          Question. Study. Discover.
+        </h1>
+        <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
+          Bring a gospel question, gather what the scriptures and Church resources say, and reach your own
+          understanding at your own pace.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <ButtonLink href={newInvestigationHref()} size="lg">
+            <FlaskConical aria-hidden />
+            Start an investigation
+          </ButtonLink>
+          <ButtonLink href="/questions" size="lg" variant="secondary">
+            <BookOpen aria-hidden />
+            Browse question bank
+          </ButtonLink>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+      <DashboardOverview />
+
+      <section aria-labelledby="process-heading">
+        <h2 id="process-heading" className="mb-1 text-sm font-semibold tracking-tight text-fg">
+          How an investigation works
+        </h2>
+        <p className="mb-4 text-sm text-muted">Move between stages freely. Nothing is required, and nothing is graded.</p>
+        <ProcessOverview />
+      </section>
+    </PageContainer>
   );
 }
