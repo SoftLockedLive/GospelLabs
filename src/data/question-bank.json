@@ -1,0 +1,384 @@
+{
+  "$schema": "./question-bank.schema.json",
+  "version": 1,
+  "questions": [
+    {
+      "id": "faith-and-works",
+      "question": "How do faith and works relate to each other in the plan of salvation?",
+      "category": "Doctrine of Christ",
+      "difficulty": "intermediate",
+      "tags": ["faith", "works", "grace"],
+      "suggestedReferences": [
+        {
+          "label": "James 2:14–26",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p14-p26#p14"
+        },
+        {
+          "label": "2 Nephi 25:23",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=p23#p23"
+        },
+        {
+          "label": "Ether 12:6",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p6#p6"
+        },
+        {
+          "label": "Gospel Topics: Faith in Jesus Christ",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith-in-jesus-christ?lang=eng"
+        }
+      ],
+      "prompts": [
+        "How does each source describe faith?",
+        "Where, if anywhere, do the sources place grace in the process?",
+        "Do the sources present faith and works as separate requirements or as one process?"
+      ]
+    },
+    {
+      "id": "born-again",
+      "question": "What does it mean to be “born again,” and how does it happen?",
+      "category": "Doctrine of Christ",
+      "difficulty": "introductory",
+      "tags": ["conversion", "baptism", "change of heart"],
+      "suggestedReferences": [
+        {
+          "label": "John 3:3–5",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=p3-p5#p3"
+        },
+        {
+          "label": "Mosiah 5:7",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng&id=p7#p7"
+        },
+        {
+          "label": "Alma 5:14",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p14#p14"
+        }
+      ],
+      "prompts": [
+        "Is being born again described as a single event, a process, or both?",
+        "What changes do these passages associate with being born again?"
+      ]
+    },
+    {
+      "id": "repentance-day-to-day",
+      "question": "What does sincere repentance look like in everyday life?",
+      "category": "Doctrine of Christ",
+      "difficulty": "introductory",
+      "tags": ["repentance", "forgiveness"],
+      "suggestedReferences": [
+        {
+          "label": "Alma 36:17–21",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p17-p21#p17"
+        },
+        {
+          "label": "Doctrine and Covenants 58:42–43",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p42-p43#p42"
+        },
+        {
+          "label": "Luke 15:11–32",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p11-p32#p11"
+        },
+        {
+          "label": "Gospel Topics: Repentance",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/repentance?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What feelings and actions accompany repentance in these accounts?",
+        "How do these passages describe the Lord's response to a repentant person?"
+      ]
+    },
+    {
+      "id": "personal-revelation",
+      "question": "How can I recognize personal revelation in my own life?",
+      "category": "Revelation",
+      "difficulty": "intermediate",
+      "tags": ["revelation", "holy ghost"],
+      "suggestedReferences": [
+        {
+          "label": "Doctrine and Covenants 8:2–3",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng&id=p2-p3#p2"
+        },
+        {
+          "label": "1 Kings 19:11–12",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng&id=p11-p12#p11"
+        },
+        {
+          "label": "Moroni 10:4–5",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p4-p5#p4"
+        },
+        {
+          "label": "Gospel Topics: Revelation",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/revelation?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What words do the scriptures use to describe how revelation comes?",
+        "Which of these descriptions resemble your own experiences?"
+      ]
+    },
+    {
+      "id": "scriptures-and-guidance",
+      "question": "Why are the scriptures important for receiving guidance from God?",
+      "category": "Revelation",
+      "difficulty": "introductory",
+      "tags": ["scriptures", "study"],
+      "suggestedReferences": [
+        {
+          "label": "2 Nephi 32:3",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/32?lang=eng&id=p3#p3"
+        },
+        {
+          "label": "2 Timothy 3:15–17",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-tim/3?lang=eng&id=p15-p17#p15"
+        },
+        {
+          "label": "1 Nephi 4:13–16",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/4?lang=eng&id=p13-p16#p13"
+        }
+      ],
+      "prompts": [
+        "What purposes for scripture do these passages describe?",
+        "How do these passages connect scripture study with personal direction?"
+      ]
+    },
+    {
+      "id": "covenants-and-god",
+      "question": "What role do covenants play in drawing closer to God?",
+      "category": "Covenants",
+      "difficulty": "advanced",
+      "tags": ["covenants", "ordinances"],
+      "suggestedReferences": [
+        {
+          "label": "Mosiah 18:8–10",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10#p8"
+        },
+        {
+          "label": "Doctrine and Covenants 84:19–22",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p19-p22#p19"
+        },
+        {
+          "label": "Gospel Topics: Covenant",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/covenant?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What do the people making covenants promise, and what does God promise in return?",
+        "How do these passages connect ordinances with spiritual power?"
+      ]
+    },
+    {
+      "id": "meaning-of-the-sabbath",
+      "question": "Why is the Sabbath day significant, and how can I keep it more meaningfully?",
+      "category": "Worship",
+      "difficulty": "introductory",
+      "tags": ["sabbath", "worship"],
+      "suggestedReferences": [
+        {
+          "label": "Exodus 20:8–11",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/20?lang=eng&id=p8-p11#p8"
+        },
+        {
+          "label": "Isaiah 58:13–14",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/58?lang=eng&id=p13-p14#p13"
+        },
+        {
+          "label": "Doctrine and Covenants 59:9–13",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/59?lang=eng&id=p9-p13#p9"
+        },
+        {
+          "label": "Gospel Topics: Sabbath Day",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sabbath-day?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What purposes for the Sabbath do these passages describe?",
+        "Which of those purposes are most relevant to your circumstances?"
+      ]
+    },
+    {
+      "id": "meaningful-prayer",
+      "question": "What makes prayer meaningful rather than routine?",
+      "category": "Worship",
+      "difficulty": "introductory",
+      "tags": ["prayer"],
+      "suggestedReferences": [
+        {
+          "label": "Matthew 6:5–13",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p5-p13#p5"
+        },
+        {
+          "label": "Alma 34:17–27",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p17-p27#p17"
+        },
+        {
+          "label": "James 1:5–6",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p5-p6#p5"
+        },
+        {
+          "label": "Gospel Topics: Prayer",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What counsel about how to pray appears in these passages?",
+        "What do these passages suggest we can pray about?"
+      ]
+    },
+    {
+      "id": "atonement-and-struggles",
+      "question": "How does the Atonement of Jesus Christ apply to everyday struggles, not only sin?",
+      "category": "Jesus Christ",
+      "difficulty": "intermediate",
+      "tags": ["atonement", "comfort", "weakness"],
+      "suggestedReferences": [
+        {
+          "label": "Alma 7:11–13",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11"
+        },
+        {
+          "label": "Matthew 11:28–30",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28"
+        },
+        {
+          "label": "Ether 12:27",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27"
+        }
+      ],
+      "prompts": [
+        "Beyond sin, what kinds of suffering do these passages mention?",
+        "What do these passages say the Savior offers to those who come to Him?"
+      ]
+    },
+    {
+      "id": "nature-of-the-godhead",
+      "question": "What do the scriptures teach about the nature of the Godhead?",
+      "category": "Godhead",
+      "difficulty": "advanced",
+      "tags": ["godhead", "heavenly father", "holy ghost"],
+      "suggestedReferences": [
+        {
+          "label": "Matthew 3:16–17",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/3?lang=eng&id=p16-p17#p16"
+        },
+        {
+          "label": "John 17:3",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p3#p3"
+        },
+        {
+          "label": "Joseph Smith—History 1:17",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p17#p17"
+        },
+        {
+          "label": "Doctrine and Covenants 130:22",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p22#p22"
+        },
+        {
+          "label": "Gospel Topics: Godhead",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What does each passage reveal about the members of the Godhead?",
+        "How do these passages describe the relationship between the members of the Godhead?"
+      ]
+    },
+    {
+      "id": "purpose-of-trials",
+      "question": "Why does God allow us to experience trials and opposition?",
+      "category": "Plan of Salvation",
+      "difficulty": "intermediate",
+      "tags": ["adversity", "agency", "opposition"],
+      "suggestedReferences": [
+        {
+          "label": "2 Nephi 2:11",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p11#p11"
+        },
+        {
+          "label": "Doctrine and Covenants 122:7–9",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p7-p9#p7"
+        },
+        {
+          "label": "Mosiah 24:13–15",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng&id=p13-p15#p13"
+        }
+      ],
+      "prompts": [
+        "What purposes for opposition do these passages suggest?",
+        "How do the people in these accounts respond to their trials?",
+        "What questions about trials do these passages leave unanswered?"
+      ]
+    },
+    {
+      "id": "purpose-of-mortal-life",
+      "question": "According to the plan of salvation, why did we come to earth?",
+      "category": "Plan of Salvation",
+      "difficulty": "introductory",
+      "tags": ["plan of salvation", "premortal life", "purpose"],
+      "suggestedReferences": [
+        {
+          "label": "Abraham 3:22–26",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22"
+        },
+        {
+          "label": "Moses 1:39",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39"
+        },
+        {
+          "label": "2 Nephi 2:25",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p25#p25"
+        },
+        {
+          "label": "Gospel Topics: Plan of Salvation",
+          "type": "gospel-topics",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng"
+        }
+      ],
+      "prompts": [
+        "What purposes for mortal life do these passages identify?",
+        "How does understanding premortal life change how you view this life?"
+      ]
+    }
+  ]
+}

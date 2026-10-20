@@ -1,0 +1,22 @@
+{
+  "name": "Gospel Labs",
+  "short_name": "Gospel Labs",
+  "description": "Question. Study. Discover. A private research notebook for investigating gospel questions with scriptures and Church resources.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#071116",
+  "theme_color": "#071116",
+  "lang": "en",
+  "categories": ["education", "books"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "New investigation", "url": "/investigations/new" },
+    { "name": "My Library", "url": "/library" }
+  ]
+}
