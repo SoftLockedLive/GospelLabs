@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { richInvestigation } from "@/domain/test-fixtures";
+import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "./legacy-fixtures";
 import {
   BACKUP_FORMAT,
   BACKUP_VERSION,
@@ -32,6 +33,38 @@ describe("serialize → parse round trip", () => {
 
   it("names files by export date", () => {
     expect(backupFileName(EXPORTED_AT)).toBe("gospel-labs-backup-2026-10-20.json");
+  });
+});
+
+describe("older backup versions", () => {
+  it("writes version 2, including challenge responses", () => {
+    const backup = createBackup([richInvestigation("a")], EXPORTED_AT);
+    expect(backup.version).toBe(2);
+    expect(JSON.parse(serializeBackup(backup)).investigations[0].challengeResponses).toHaveLength(1);
+  });
+
+  it("imports a version 1 backup from Gospel Labs 1.0 with every field intact", () => {
+    const result = parseBackup(BACKUP_FROM_1_0);
+    expect(result).toEqual({
+      ok: true,
+      backup: {
+        version: 1,
+        exportedAt: "2026-10-03T08:00:00.000Z",
+        investigations: [{ ...RECORD_FROM_1_0, challengeResponses: [] }],
+        skipped: [],
+      },
+    });
+  });
+
+  it("upgrades valid version 1 entries and still reports broken ones", () => {
+    const text = file({
+      format: BACKUP_FORMAT,
+      version: 1,
+      investigations: [RECORD_FROM_1_0, "junk", null, { ...RECORD_FROM_1_0, id: "bad", status: "solved" }],
+    });
+    const result = parseBackup(text);
+    expect(result.ok && result.backup.investigations.map((i) => i.id)).toEqual([RECORD_FROM_1_0.id]);
+    expect(result.ok && result.backup.skipped.map((entry) => entry.index)).toEqual([1, 2, 3]);
   });
 });
 

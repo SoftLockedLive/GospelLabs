@@ -3,11 +3,12 @@
  * TypeScript types are inferred from them, and the same schemas validate data
  * at boundaries (form input now; IndexedDB records and backup imports later).
  *
- * An investigation is one self-contained record. Evidence cards and claims
- * live inside it and reference each other by id, so it can be stored as a
- * single IndexedDB document without joins.
+ * An investigation is one self-contained record. Evidence cards, claims, and
+ * challenge responses live inside it and reference each other by id, so it
+ * can be stored as a single IndexedDB document without joins.
  */
 import { z } from "zod";
+import { CHALLENGE_TYPES } from "./research-challenges";
 
 export const INVESTIGATION_STATUSES = ["investigating", "partially-understood", "concluded"] as const;
 export type InvestigationStatus = (typeof INVESTIGATION_STATUSES)[number];
@@ -89,6 +90,23 @@ export const claimSchema = z.object({
   updatedAt: timestampSchema,
 });
 
+/**
+ * The user's response to a research challenge. The challenge's wording is
+ * copied in, so the response keeps its context even if the challenge text
+ * is later changed or removed from the app.
+ */
+export const challengeResponseSchema = z.object({
+  id: idSchema,
+  /** The challenge in src/data/research-challenges.json. At most one response per challenge. */
+  challengeId: idSchema,
+  type: z.enum(CHALLENGE_TYPES),
+  title: z.string(),
+  prompt: z.string(),
+  response: z.string(),
+  createdAt: timestampSchema,
+  updatedAt: timestampSchema,
+});
+
 const investigationObjectSchema = z.object({
   id: idSchema,
   question: z.string(),
@@ -105,6 +123,8 @@ const investigationObjectSchema = z.object({
   evidence: z.array(evidenceCardSchema),
   analysisNotes: z.string(),
   claims: z.array(claimSchema),
+  /** Added in Gospel Labs 1.1. Records and backups saved earlier load with none. */
+  challengeResponses: z.array(challengeResponseSchema).default(() => []),
   /** Written only by the user. Nothing in the app generates or edits it. */
   conclusion: z.string(),
   remainingQuestions: z.string(),
@@ -114,7 +134,10 @@ const investigationObjectSchema = z.object({
 
 type InvestigationShape = z.infer<typeof investigationObjectSchema>;
 
-/** Rules that span fields: unique ids per collection, and claims only cite evidence that exists. */
+/**
+ * Rules that span fields: unique ids per collection, claims only cite
+ * evidence that exists, and each challenge has at most one response.
+ */
 export function findIntegrityIssues(investigation: InvestigationShape): string[] {
   const issues: string[] = [];
   const collections = {
@@ -122,6 +145,7 @@ export function findIntegrityIssues(investigation: InvestigationShape): string[]
     hypotheses: investigation.hypotheses,
     evidence: investigation.evidence,
     claims: investigation.claims,
+    challengeResponses: investigation.challengeResponses,
   };
   for (const [name, items] of Object.entries(collections)) {
     const seen = new Set<string>();
@@ -140,10 +164,22 @@ export function findIntegrityIssues(investigation: InvestigationShape): string[]
       issues.push(`claim "${claim.id}" cites the same evidence more than once`);
     }
   }
+
+  const answered = new Set<string>();
+  for (const { challengeId } of investigation.challengeResponses) {
+    if (answered.has(challengeId)) issues.push(`challenge "${challengeId}" has more than one response`);
+    answered.add(challengeId);
+  }
   return issues;
 }
 
-export const investigationSchema = investigationObjectSchema.superRefine((investigation, ctx) => {
+/**
+ * Validates a whole investigation. Top-level fields this version doesn't
+ * know are kept rather than dropped: they come from a newer version of the
+ * app, and a tab still running this version must not erase them on save.
+ * New data should therefore be added as new top-level fields with defaults.
+ */
+export const investigationSchema = investigationObjectSchema.loose().superRefine((investigation, ctx) => {
   for (const message of findIntegrityIssues(investigation)) ctx.addIssue({ code: "custom", message });
 });
 
@@ -151,7 +187,11 @@ export type Subquestion = z.infer<typeof subquestionSchema>;
 export type Hypothesis = z.infer<typeof hypothesisSchema>;
 export type EvidenceCard = z.infer<typeof evidenceCardSchema>;
 export type Claim = z.infer<typeof claimSchema>;
-export type Investigation = z.infer<typeof investigationSchema>;
+export type ChallengeResponse = z.infer<typeof challengeResponseSchema>;
+export type Investigation = InvestigationShape;
+
+/** The challenge wording copied into a response when it is first written. */
+export type ChallengeSnapshot = Pick<ChallengeResponse, "challengeId" | "type" | "title" | "prompt">;
 
 /** The user-editable parts of an evidence card. */
 export type EvidenceInput = Omit<EvidenceCard, "id" | "createdAt" | "updatedAt">;

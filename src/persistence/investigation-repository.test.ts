@@ -1,7 +1,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { Investigation } from "@/domain/investigation";
 import { investigationReducer } from "@/domain/investigation-reducer";
-import { blankInvestigation, richInvestigation, T1, T2 } from "@/domain/test-fixtures";
+import { blankInvestigation, challengeSnapshot, richInvestigation, T1, T2 } from "@/domain/test-fixtures";
+import { RECORD_FROM_1_0 } from "./legacy-fixtures";
 import { StorageError } from "./storage-errors";
 import { createTestRepository } from "./test-utils";
 
@@ -46,6 +47,52 @@ describe("saving and loading", () => {
     const broken = { ...blankInvestigation(), status: "solved" } as unknown as Investigation;
     await expect(repository.save(broken, null)).rejects.toMatchObject({ kind: "invalid-data" });
     expect(await repository.count()).toBe(0);
+  });
+});
+
+describe("records from earlier versions", () => {
+  it("loads a record saved by Gospel Labs 1.0 unchanged, with no challenge responses", async () => {
+    const { db, repository } = createTestRepository();
+    await db.investigations.put(structuredClone(RECORD_FROM_1_0) as unknown as Investigation);
+
+    const expected = { ...RECORD_FROM_1_0, challengeResponses: [] };
+    expect(await repository.get(RECORD_FROM_1_0.id)).toEqual({ status: "found", investigation: expected });
+    expect(await repository.list()).toEqual({ investigations: [expected], unreadable: 0 });
+  });
+
+  it("adds a challenge response to a 1.0 record without changing anything else", async () => {
+    const { db, repository } = createTestRepository();
+    await db.investigations.put(structuredClone(RECORD_FROM_1_0) as unknown as Investigation);
+    const loaded = await repository.get(RECORD_FROM_1_0.id);
+    if (loaded.status !== "found") throw new Error("not loaded");
+
+    const edited = investigationReducer(loaded.investigation, {
+      type: "respondToChallenge",
+      id: "cr-1",
+      challenge: challengeSnapshot(),
+      response: "“Daily” stands out.",
+      now: T2,
+    });
+    expect(await repository.save(edited, RECORD_FROM_1_0.updatedAt)).toEqual({ ok: true });
+
+    const { challengeResponses, ...rest } = (await db.investigations.get(RECORD_FROM_1_0.id))!;
+    expect(rest).toEqual({ ...RECORD_FROM_1_0, updatedAt: T2 });
+    expect(challengeResponses.map((item) => item.response)).toEqual(["“Daily” stands out."]);
+  });
+
+  it("keeps fields written by a newer version through load, edit, and save", async () => {
+    const { db, repository } = createTestRepository();
+    const fromNewer = { ...richInvestigation("next"), trailProgress: { currentStep: 2 } };
+    await db.investigations.put(fromNewer);
+
+    const loaded = await repository.get("next");
+    if (loaded.status !== "found") throw new Error("not loaded");
+    await repository.save(edit(loaded.investigation, "Edited in an older tab"), fromNewer.updatedAt);
+
+    expect(await db.investigations.get("next")).toMatchObject({
+      analysisNotes: "Edited in an older tab",
+      trailProgress: { currentStep: 2 },
+    });
   });
 });
 

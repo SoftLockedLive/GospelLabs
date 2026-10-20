@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "challenges": [
+    {
+      "id": "observe-surprising-detail",
+      "type": "observe",
+      "title": "Something surprising",
+      "prompt": "Read a passage related to your question slowly. What detail surprises you, or isn't what you expected?",
+      "tip": "Write down the verse and what you expected instead. A surprise often points to something worth studying."
+    },
+    {
+      "id": "observe-repeated-words",
+      "type": "observe",
+      "title": "Repeated words",
+      "prompt": "In a passage you're studying, which words or phrases appear more than once? What might the repetition emphasize?",
+      "tip": "Read a few verses before and after to see how far the theme runs."
+    },
+    {
+      "id": "observe-setting",
+      "type": "observe",
+      "title": "Who, where, and why",
+      "prompt": "Choose a passage and identify who is speaking, who is listening, and what is happening. How does that setting shape what is said?",
+      "tip": "Chapter summaries and the surrounding verses often describe the setting."
+    },
+    {
+      "id": "observe-the-savior",
+      "type": "observe",
+      "title": "Look for the Savior",
+      "prompt": "In a passage you've studied, what do you notice about Jesus Christ: His words, actions, names, or attributes?",
+      "tip": "Note the exact verse so you can return to it."
+    },
+    {
+      "id": "observe-key-word",
+      "type": "observe",
+      "title": "One key word",
+      "prompt": "Pick an important word in a verse you're studying and look it up in the Guide to the Scriptures, the Bible Dictionary, or a dictionary. Does the definition change how you read the verse?"
+    },
+    {
+      "id": "connect-follow-a-footnote",
+      "type": "connect",
+      "title": "Follow a footnote",
+      "prompt": "Pick a verse you're studying and follow one of its footnotes or cross-references. How does the passage it leads to relate to the first one?",
+      "tip": "In the Church's editions of the scriptures, footnotes link to related verses and to Topical Guide entries."
+    },
+    {
+      "id": "connect-two-principles",
+      "type": "connect",
+      "title": "Two principles",
+      "prompt": "Name two gospel principles that relate to your question. How might they connect to, or depend on, each other?"
+    },
+    {
+      "id": "connect-across-scripture",
+      "type": "connect",
+      "title": "Across the scriptures",
+      "prompt": "Find a passage in a different book of scripture that speaks to your question, such as the Old Testament, New Testament, Book of Mormon, Doctrine and Covenants, or Pearl of Great Price. What does it add?"
+    },
+    {
+      "id": "connect-your-evidence",
+      "type": "connect",
+      "title": "Between your notes",
+      "prompt": "Look over the evidence you've recorded. Which two pieces seem related, and how would you describe the relationship?",
+      "tip": "If the connection matters to your answer, state it as a claim in Analysis and link both pieces of evidence."
+    },
+    {
+      "id": "connect-to-christ",
+      "type": "connect",
+      "title": "Back to Christ",
+      "prompt": "How might the passage or principle you're studying relate to Jesus Christ and His mission?"
+    },
+    {
+      "id": "compare-two-accounts",
+      "type": "compare",
+      "title": "Two accounts",
+      "prompt": "Find two passages that describe a similar event or teaching. What do they share, and what does each include that the other doesn't?",
+      "tip": "Matthew, Mark, Luke, and John often record the same events, which makes the Gospels a good place to start."
+    },
+    {
+      "id": "compare-ancient-and-modern",
+      "type": "compare",
+      "title": "Ancient and modern",
+      "prompt": "Compare a scripture passage with a general conference talk on the same topic. What does each emphasize, and how do they relate?"
+    },
+    {
+      "id": "compare-joseph-smith-translation",
+      "type": "compare",
+      "title": "Joseph Smith Translation",
+      "prompt": "If a Bible passage you're studying has a Joseph Smith Translation footnote, compare it with the King James text. What is different, and what might the difference clarify?",
+      "tip": "Joseph Smith Translation changes appear in footnotes and in an appendix of the Church's edition of the Bible."
+    },
+    {
+      "id": "compare-teaching-and-example",
+      "type": "compare",
+      "title": "Teaching and example",
+      "prompt": "Compare something Jesus Christ taught with an account of how He acted. What do you notice?"
+    },
+    {
+      "id": "compare-then-and-now",
+      "type": "compare",
+      "title": "Then and now",
+      "prompt": "Compare what you thought about your question when you began with what you think now. What has changed, and what hasn't?"
+    },
+    {
+      "id": "question-new-question",
+      "type": "question",
+      "title": "A new question",
+      "prompt": "What new question has your study raised? Write it down, even if it seems small.",
+      "tip": "You can add it as a subquestion, or start a separate investigation for it later."
+    },
+    {
+      "id": "question-what-puzzles-you",
+      "type": "question",
+      "title": "What puzzles you",
+      "prompt": "Which verse or idea is hardest for you to understand right now? What exactly makes it puzzling?"
+    },
+    {
+      "id": "question-ask-the-passage",
+      "type": "question",
+      "title": "Ask the passage",
+      "prompt": "Ask a passage who, what, when, where, why, and how. Which of your questions would you most like to explore?"
+    },
+    {
+      "id": "question-test-an-assumption",
+      "type": "question",
+      "title": "Test an assumption",
+      "prompt": "What have you assumed about this topic without checking? What question would help you see what the scriptures actually say?"
+    },
+    {
+      "id": "apply-name-a-principle",
+      "type": "apply",
+      "title": "Name a principle",
+      "prompt": "What principle from your study could help someone follow Jesus Christ? State it in one sentence.",
+      "tip": "Note the passage it comes from, so you can return to it."
+    },
+    {
+      "id": "apply-an-ordinary-day",
+      "type": "apply",
+      "title": "An ordinary day",
+      "prompt": "How might what you're learning make a difference in an ordinary day this week?"
+    },
+    {
+      "id": "apply-teach-it-simply",
+      "type": "apply",
+      "title": "Teach it simply",
+      "prompt": "How would you explain what you're learning to a friend or a child? Which passage would you share?"
+    },
+    {
+      "id": "apply-with-others",
+      "type": "apply",
+      "title": "With others",
+      "prompt": "How could what you're learning shape the way you treat family, friends, or the people you serve?"
+    }
+  ]
+}

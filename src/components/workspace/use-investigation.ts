@@ -1,7 +1,14 @@
 "use client";
 
 import { useMemo, useReducer, type Dispatch } from "react";
-import type { ClaimSection, EvidenceInput, Investigation, InvestigationStatus, SectionId } from "@/domain/investigation";
+import type {
+  ChallengeSnapshot,
+  ClaimSection,
+  EvidenceInput,
+  Investigation,
+  InvestigationStatus,
+  SectionId,
+} from "@/domain/investigation";
 import type { InvestigationEdit, TextField } from "@/domain/investigation-reducer";
 import { createId } from "@/lib/ids";
 import { initWorkspaceState, workspaceReducer, type WorkspaceAction } from "./workspace-state";
@@ -42,6 +49,10 @@ function createActions(dispatch: Dispatch<WorkspaceAction>) {
     removeClaim: (id: string) => edit({ type: "removeClaim", id }),
     linkEvidence: (claimId: string, evidenceId: string) => edit({ type: "linkEvidence", claimId, evidenceId }),
     unlinkEvidence: (claimId: string, evidenceId: string) => edit({ type: "unlinkEvidence", claimId, evidenceId }),
+
+    respondToChallenge: (challenge: ChallengeSnapshot, response: string) =>
+      edit({ type: "respondToChallenge", id: createId(), challenge, response }),
+    removeChallengeResponse: (id: string) => edit({ type: "removeChallengeResponse", id }),
 
     undo: () => dispatch({ type: "undo" }),
     dismissUndo: () => dispatch({ type: "dismissUndo" }),

@@ -3,10 +3,11 @@ import { investigationSchema, type Investigation } from "./investigation";
 import {
   claimsInSection,
   countCitations,
+  findChallengeResponse,
   investigationReducer,
   type InvestigationAction,
 } from "./investigation-reducer";
-import { blankInvestigation, deepFreeze, evidenceInput, T0, T1, T2 } from "./test-fixtures";
+import { blankInvestigation, challengeSnapshot, deepFreeze, evidenceInput, T0, T1, T2 } from "./test-fixtures";
 
 /** Applies actions in order, freezing every intermediate state to catch mutation. */
 function apply(state: Investigation, ...actions: InvestigationAction[]): Investigation {
@@ -216,6 +217,76 @@ describe("claims", () => {
   });
 });
 
+describe("challenge responses", () => {
+  const respond = (response: string, now = T1, id = "cr-1", challenge = challengeSnapshot()): InvestigationAction => ({
+    type: "respondToChallenge",
+    id,
+    challenge,
+    response,
+    now,
+  });
+
+  it("creates a response that keeps the challenge's wording", () => {
+    const after = apply(blankInvestigation(), respond("I noticed “faith” repeats."));
+    expect(after.challengeResponses).toEqual([
+      { id: "cr-1", ...challengeSnapshot(), response: "I noticed “faith” repeats.", createdAt: T1, updatedAt: T1 },
+    ]);
+    expect(after.updatedAt).toBe(T1);
+  });
+
+  it("edits the existing response in place, keeping its id, creation time, and original wording", () => {
+    const reworded = challengeSnapshot({ title: "Renamed", prompt: "Changed later" });
+    const after = apply(blankInvestigation(), respond("First"), respond("First, then more", T2, "cr-2", reworded));
+    expect(after.challengeResponses).toEqual([
+      { id: "cr-1", ...challengeSnapshot(), response: "First, then more", createdAt: T1, updatedAt: T2 },
+    ]);
+  });
+
+  it("keeps one response per challenge and separate responses for different challenges", () => {
+    const other = challengeSnapshot({ challengeId: "apply-with-others", type: "apply" });
+    const after = apply(blankInvestigation(), respond("A"), respond("B", T1, "cr-2", other), respond("A2"));
+    expect(after.challengeResponses.map((item) => [item.challengeId, item.response])).toEqual([
+      ["observe-repeated-words", "A2"],
+      ["apply-with-others", "B"],
+    ]);
+    expect(findChallengeResponse(after, "apply-with-others")?.response).toBe("B");
+    expect(findChallengeResponse(after, "unknown")).toBeUndefined();
+  });
+
+  it("never stores a blank response, and clearing the text removes it", () => {
+    const blank = blankInvestigation();
+    expect(apply(blank, respond(""))).toBe(blank);
+    expect(apply(blank, respond("  \n "))).toBe(blank);
+
+    const cleared = apply(blank, respond("Something"), respond("", T2));
+    expect(cleared.challengeResponses).toEqual([]);
+    expect(cleared.updatedAt).toBe(T2);
+  });
+
+  it("returns the same object when the text is unchanged", () => {
+    const state = apply(blankInvestigation(), respond("Same"));
+    expect(apply(state, respond("Same", T2))).toBe(state);
+  });
+
+  it("removes a response by id and ignores unknown ids", () => {
+    const state = apply(blankInvestigation(), respond("Gone soon"));
+    expect(apply(state, { type: "removeChallengeResponse", id: "nope", now: T2 })).toBe(state);
+    const removed = apply(state, { type: "removeChallengeResponse", id: "cr-1", now: T2 });
+    expect(removed.challengeResponses).toEqual([]);
+    expect(removed.updatedAt).toBe(T2);
+  });
+
+  it("leaves everything else in the investigation untouched", () => {
+    const before = apply(
+      blankInvestigation(),
+      { type: "addEvidence", id: "ev-1", input: evidenceInput(), now: T1 },
+      { type: "setText", field: "conclusion", value: "Mine.", now: T1 },
+    );
+    const after = apply(before, respond("A response", T2), { type: "removeChallengeResponse", id: "cr-1", now: T2 });
+    expect({ ...after, updatedAt: before.updatedAt }).toEqual(before);
+  });
+});
+
 describe("user-authored conclusion", () => {
   it("is never written by any operation other than editing it directly", () => {
     const after = apply(
@@ -248,6 +319,16 @@ describe("data integrity", () => {
       { type: "setText", field: "conclusion", value: "Grace enables effort.", now: T2 },
       { type: "setStatus", status: "partially-understood", now: T2 },
       { type: "removeClaim", id: "cl-1", now: T2 },
+      { type: "respondToChallenge", id: "cr-1", challenge: challengeSnapshot(), response: "Noticed", now: T2 },
+      {
+        type: "respondToChallenge",
+        id: "cr-2",
+        challenge: challengeSnapshot({ challengeId: "apply-with-others", type: "apply" }),
+        response: "Kindness",
+        now: T2,
+      },
+      { type: "respondToChallenge", id: "cr-3", challenge: challengeSnapshot(), response: "Noticed more", now: T2 },
+      { type: "removeChallengeResponse", id: "cr-2", now: T2 },
     ];
     let state = blankInvestigation();
     for (const action of actions) {

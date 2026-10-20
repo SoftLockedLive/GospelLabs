@@ -22,6 +22,7 @@ export function createInvestigation({ id, now }: CreateOptions): Investigation {
     evidence: [],
     analysisNotes: "",
     claims: [],
+    challengeResponses: [],
     conclusion: "",
     remainingQuestions: "",
     reflectionNotes: "",

@@ -2,6 +2,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { richInvestigation } from "@/domain/test-fixtures";
 import { parseBackup, serializeBackup } from "./backup";
+import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "./legacy-fixtures";
 import { createTestRepository } from "./test-utils";
 
 afterEach(() => vi.restoreAllMocks());
@@ -46,6 +47,21 @@ describe("export → import round trip", () => {
     const { backup, unreadable } = await repository.exportBackup("2026-10-20T12:00:00.000Z");
     expect(backup.investigations.map((i) => i.id)).toEqual(["good"]);
     expect(unreadable).toBe(1);
+  });
+});
+
+describe("older backups", () => {
+  it("merges a Gospel Labs 1.0 backup alongside newer data", async () => {
+    const { repository } = createTestRepository();
+    await repository.save(richInvestigation("current"), null);
+
+    const summary = await repository.importInvestigations(parsed(BACKUP_FROM_1_0), "merge");
+    expect(summary).toMatchObject({ added: 1, updated: 0, kept: 0 });
+    expect(await repository.get(RECORD_FROM_1_0.id)).toEqual({
+      status: "found",
+      investigation: { ...RECORD_FROM_1_0, challengeResponses: [] },
+    });
+    expect(await repository.get("current")).toEqual({ status: "found", investigation: richInvestigation("current") });
   });
 });
 

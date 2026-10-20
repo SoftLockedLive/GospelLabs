@@ -11,6 +11,7 @@ See [PROJECT_SPEC.md](PROJECT_SPEC.md) for the full product specification.
 ## Features
 
 - **Investigation workspace:** five freely navigable sections; optional subquestions and any number of hypotheses; evidence cards (create, edit, delete) with source, link, observation, relevance, and tags; claims in Analysis and Conclusion linked to evidence; user-controlled status (investigating, partially understood, concluded), with concluded investigations still editable; Undo for deletions.
+- **Research challenges:** optional prompts in Research (Observe, Connect, Compare, Question, Apply) that suggest a way to look closer at any question. Ask for another, filter by type, and write a response that's saved with the investigation; reopen and edit any response later. Responses are never graded or required. Challenges are defined in JSON; see [docs/RESEARCH_CHALLENGES.md](docs/RESEARCH_CHALLENGES.md).
 - **Autosave:** every change is saved on the device as you type, including when you switch tabs, navigate away, or close the page. Investigations reopen at the section you last used. If the same investigation is changed in another tab, Gospel Labs stops and asks rather than overwriting.
 - **Question bank:** 12 curated questions with search, topic and difficulty filters, random selection, verified links to official Church scripture and Gospel Topics pages, and study prompts. Suggested references are starting points, never automatic evidence.
 - **My Library:** search, filter by status, resume or reopen, preview evidence, and delete with confirmation.
@@ -48,7 +49,7 @@ npm start            # http://localhost:3000
 | --- | --- |
 | `npm run dev` | Development server with hot reload |
 | `npm run build` | Production build |
-| `npm start` | Serve the production build |
+| `npm start` | Serve the static build in `out/` the way it's served in production (`scripts/serve-out.mjs`) |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | TypeScript (run `build` or `dev` once first so route types exist) |
 | `npm test` | Unit and integration tests (Vitest; IndexedDB via fake-indexeddb) |
@@ -85,9 +86,14 @@ After one online visit, the service worker caches the app shell: the dashboard, 
 - A page that was never cached shows an "isn't available offline" page instead of a browser error.
 - Pages are fetched from the network first when online, so updates appear right away. The cache is the fallback.
 
-## Adding questions
+## Adding questions and challenges
 
-Edit [`src/data/question-bank.json`](src/data/question-bank.json); no code changes are needed. See [docs/QUESTION_BANK.md](docs/QUESTION_BANK.md) for the fields, rules, and how links are verified.
+- **Questions:** edit [`src/data/question-bank.json`](src/data/question-bank.json); no code changes are needed. See [docs/QUESTION_BANK.md](docs/QUESTION_BANK.md) for the fields, rules, and how links are verified.
+- **Research challenges:** edit [`src/data/research-challenges.json`](src/data/research-challenges.json). See [docs/RESEARCH_CHALLENGES.md](docs/RESEARCH_CHALLENGES.md) for the fields and writing guidelines.
+
+## Feedback
+
+Bug reports and ideas go to **[gospellabs@proton.me](mailto:gospellabs@proton.me)**. In the app, **Settings › Feedback** opens your email app with a short template, and the error page links to the same address. Nothing is sent automatically, and investigations are never attached.
 
 ## Project structure
 
@@ -107,33 +113,34 @@ src/
     layout/                   App shell and navigation
     workspace/                Investigation editor, sections, evidence/, claims/, undo, autosave status
     library/, dashboard/, questions/, settings/, investigations/, pwa/
-  data/                       question-bank.json and its generated JSON Schema
+  data/                       question-bank.json (and its generated JSON Schema), research-challenges.json
   domain/                     Pure logic and Zod schemas: investigation model and reducer,
-                              evidence input, question bank, filters, factory
+                              evidence input, question bank, research challenges, filters, factory
   persistence/                Dexie database, repository, autosave controller, backups, React hooks
   lib/                        Utilities (ids, dates, routes, theme, downloads)
 public/                       sw.js (service worker), PWA icons
 e2e/                          Playwright end-to-end tests
-scripts/                      verify-references.mjs
-docs/                         QUESTION_BANK.md, BACKUPS.md
+scripts/                      deploy.sh, serve-out.mjs (local static server), verify-references.mjs
+docs/                         QUESTION_BANK.md, RESEARCH_CHALLENGES.md, BACKUPS.md
 ```
 
 ### Architecture notes
 
-- **Data model:** one self-contained IndexedDB record per investigation; evidence cards and claims inside it reference each other by id. Zod schemas in `src/domain/investigation.ts` define the types and validate records on every read, write, and import.
+- **Data model:** one self-contained IndexedDB record per investigation; evidence cards, claims, and challenge responses inside it reference each other by id. New data is added as new fields with defaults, so older records load without a migration, and fields added by newer versions are preserved rather than dropped. Zod schemas in `src/domain/investigation.ts` define the types and validate records on every read, write, and import.
 - **State:** every change goes through a pure reducer (`src/domain/investigation-reducer.ts`) via React's `useReducer`; ids and timestamps are passed in, so operations are deterministic and unit-tested.
 - **Persistence:** `src/persistence/investigation-repository.ts` validates data, maps browser storage failures to clear messages, refuses to overwrite changes made elsewhere, and runs multi-record operations in a single transaction. `src/persistence/autosave.ts` debounces and serializes saves independently of React.
 
 ## Testing
 
-- **Unit and integration tests (Vitest, 160+):** the investigation reducer, schema and integrity rules, evidence input, question-bank validation, search, filters and random selection, persistence against a real IndexedDB implementation, autosave timing and conflicts, and backup export/import round trips, including transactional rollback.
-- **End-to-end tests (Playwright, desktop and mobile Chromium):** create, edit, resume, conclude, and reopen; curated questions; delete confirmation; export, delete everything, and restore; replace with its safeguards; damaged and newer-version backups; and full offline use.
+- **Unit and integration tests (Vitest, 200+):** the investigation reducer, schema and integrity rules, evidence input, question-bank and research-challenge validation, search, filters and random selection, persistence against a real IndexedDB implementation, autosave timing and conflicts, backup export/import round trips including transactional rollback, and compatibility with records and backups saved by Gospel Labs 1.0.
+- **End-to-end tests (Playwright, desktop and mobile Chromium):** create, edit, resume, conclude, and reopen; curated questions; research challenges (respond, try another, filter, revisit and edit, undo a deletion); a 1.0 record and a 1.0 backup opening with all their data; delete confirmation; export, delete everything, and restore; replace with its safeguards; damaged and newer-version backups; feedback links; and full offline use.
 
 ## Known limitations
 
 - **One browser, one device.** There is no sync. Use export and import to move investigations between browsers or devices.
 - **Clearing site data deletes investigations.** Regular backups are the safeguard. The browser may grant "persistent storage" (Settings), but that is its decision.
 - **Multiple tabs:** editing the same investigation in two tabs is detected and the user chooses which version to keep. Changes are not merged automatically.
+- **Tabs left open across an update:** a tab still running Gospel Labs 1.0 doesn't know about challenge responses. If you open an investigation in such a tab after adding responses elsewhere and then edit it there, that tab saves the investigation without them. Reload open tabs after an update. From 1.1 on, older tabs keep data added by newer versions.
 - **Undo** covers one deletion at a time inside the editor (subquestions, hypotheses, evidence, claims). Deleting a whole investigation from My Library is confirmed but can't be undone.
 - **Evidence labels** (E1, E2, …) follow list order and shift when a card is deleted. Claim links are unaffected because they use ids, but "E2" typed into free-text notes may then refer to a different card.
 - **Offline support starts after the first online visit**, is active only in production builds, and never includes external Church websites.

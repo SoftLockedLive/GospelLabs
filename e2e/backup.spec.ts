@@ -1,5 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { expect, test, type Page } from "@playwright/test";
+import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "../src/persistence/legacy-fixtures";
 import { createInvestigation, libraryItem } from "./helpers";
 
 async function exportBackup(page: Page, path: string) {
@@ -17,8 +18,9 @@ test("export, delete everything, and restore with merge", async ({ page }, testI
   await createInvestigation(page, "Grace and works");
   const backupPath = testInfo.outputPath("backup.json");
   const backup = await exportBackup(page, backupPath);
-  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 1 });
+  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 2 });
   expect(backup.investigations).toHaveLength(1);
+  expect(backup.investigations[0].challengeResponses).toEqual([]);
 
   // Delete everything (requires acknowledgement).
   await page.getByRole("button", { name: "Delete all data" }).click();
@@ -79,4 +81,26 @@ test("damaged and incompatible files are rejected without changing data", async 
   await expect(page.getByRole("alert").filter({ hasText: "newer version of Gospel Labs" })).toBeVisible();
 
   await expect(page.getByText("1 investigation saved on this device.")).toBeVisible();
+});
+
+test("a backup exported by Gospel Labs 1.0 imports with all of its data", async ({ page }, testInfo) => {
+  const oldBackup = testInfo.outputPath("gospel-labs-backup-1.0.json");
+  writeFileSync(oldBackup, BACKUP_FROM_1_0);
+
+  await page.goto("/settings");
+  await page.locator('input[type="file"]').setInputFiles(oldBackup);
+  const dialog = page.getByRole("dialog", { name: "Import backup" });
+  await expect(dialog).toContainText("1 new · 0 updated · 0 unchanged");
+  await dialog.getByRole("button", { name: "Import", exact: true }).click();
+  await expect(page.getByText("Imported: 1 new, 0 updated, 0 unchanged.")).toBeVisible();
+
+  await page.goto("/library");
+  await libraryItem(page, RECORD_FROM_1_0.title).getByRole("link", { name: /^Resume/ }).click();
+  await expect(page.getByRole("textbox", { name: "Analysis notes" })).toHaveValue(RECORD_FROM_1_0.analysisNotes);
+  await expect(page.getByRole("list", { name: "Evidence linked to claim 1" })).toContainText("Luke 9:23");
+
+  // Exporting again writes the current format, with the 1.0 data unchanged.
+  const reexported = await exportBackup(page, testInfo.outputPath("reexported.json"));
+  expect(reexported.version).toBe(2);
+  expect(reexported.investigations).toEqual([{ ...RECORD_FROM_1_0, challengeResponses: [] }]);
 });

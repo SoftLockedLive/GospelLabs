@@ -50,9 +50,10 @@ export function DeleteInvestigationDialog({ investigation, onClose, onDeleted }:
         investigation && (
           <>
             <strong className="font-medium text-fg">{title}</strong>, including its{" "}
-            {plural(investigation.evidence.length, "evidence card")} and{" "}
-            {plural(investigation.claims.length, "claim")}, will be permanently deleted from this device. This
-            can&rsquo;t be undone.
+            {plural(investigation.evidence.length, "evidence card")},{" "}
+            {plural(investigation.claims.length, "claim")}, and{" "}
+            {plural(investigation.challengeResponses.length, "challenge response")}, will be permanently deleted from
+            this device. This can&rsquo;t be undone.
           </>
         )
       }

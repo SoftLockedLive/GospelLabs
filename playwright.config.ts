@@ -3,8 +3,9 @@ import { defineConfig, devices } from "@playwright/test";
 const PORT = 3210;
 
 /**
- * End-to-end tests run against a production build (the service worker is
- * only active in production). Run `npm run build` first, then `npm run test:e2e`.
+ * End-to-end tests run against the static production build in out/ (the
+ * service worker is only active in production), served like Atlas serves it.
+ * Run `npm run build` first, then `npm run test:e2e`.
  *
  * Set CHROMIUM_PATH to use an already-installed Chromium instead of running
  * `npx playwright install chromium`.
@@ -24,7 +25,7 @@ export default defineConfig({
     { name: "mobile", use: { ...devices["Pixel 7"] } },
   ],
   webServer: {
-    command: `npx next start --port ${PORT}`,
+    command: `node scripts/serve-out.mjs ${PORT}`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !process.env.CI,
   },

@@ -7,6 +7,8 @@
  * status), the reducer returns the same object so React can skip rendering.
  */
 import type {
+  ChallengeResponse,
+  ChallengeSnapshot,
   Claim,
   ClaimSection,
   EvidenceInput,
@@ -46,6 +48,9 @@ export type InvestigationEdit = (
   | { type: "removeClaim"; id: string }
   | { type: "linkEvidence"; claimId: string; evidenceId: string }
   | { type: "unlinkEvidence"; claimId: string; evidenceId: string }
+  /** Creates or updates the response to a challenge; `id` is used only when creating. Blank text removes it. */
+  | { type: "respondToChallenge"; id: string; challenge: ChallengeSnapshot; response: string }
+  | { type: "removeChallengeResponse"; id: string }
 ) & { now: string };
 
 /** Moving between sections is remembered for resuming, but is not an edit. */
@@ -54,7 +59,13 @@ export type InvestigationNavigation = { type: "setSection"; section: SectionId }
 export type InvestigationAction = InvestigationEdit | InvestigationNavigation;
 
 /** Actions that delete user content. The workspace offers Undo for these. */
-export const REMOVAL_ACTIONS = ["removeSubquestion", "removeHypothesis", "removeEvidence", "removeClaim"] as const;
+export const REMOVAL_ACTIONS = [
+  "removeSubquestion",
+  "removeHypothesis",
+  "removeEvidence",
+  "removeClaim",
+  "removeChallengeResponse",
+] as const;
 
 const has = (items: readonly { id: string }[], id: string) => items.some((item) => item.id === id);
 
@@ -179,6 +190,35 @@ function applyEdit(state: Investigation, action: InvestigationEdit): Investigati
           ? { ...claim, evidenceIds: claim.evidenceIds.filter((id) => id !== action.evidenceId) }
           : null,
       );
+
+    case "respondToChallenge": {
+      const blank = action.response.trim() === "";
+      const existing = findChallengeResponse(state, action.challenge.challengeId);
+      if (!existing) {
+        if (blank || has(state.challengeResponses, action.id)) return state;
+        const created: ChallengeResponse = {
+          ...action.challenge,
+          id: action.id,
+          response: action.response,
+          createdAt: now,
+          updatedAt: now,
+        };
+        return edited({ challengeResponses: [...state.challengeResponses, created] });
+      }
+      // Clearing the text removes the response, so blank responses are never stored.
+      if (blank) return edited({ challengeResponses: state.challengeResponses.filter((item) => item !== existing) });
+      if (existing.response === action.response) return state;
+      // The challenge wording copied when the response was created is kept as it was.
+      return edited({
+        challengeResponses: state.challengeResponses.map((item) =>
+          item === existing ? { ...item, response: action.response, updatedAt: now } : item,
+        ),
+      });
+    }
+
+    case "removeChallengeResponse":
+      if (!has(state.challengeResponses, action.id)) return state;
+      return edited({ challengeResponses: state.challengeResponses.filter((item) => item.id !== action.id) });
   }
 }
 
@@ -192,6 +232,11 @@ export function investigationReducer(state: Investigation, action: Investigation
 /** Claims for one section, in the order they were written. */
 export function claimsInSection(investigation: Investigation, section: ClaimSection): Claim[] {
   return investigation.claims.filter((claim) => claim.section === section);
+}
+
+/** The response to one challenge, if the user has written one. */
+export function findChallengeResponse(investigation: Investigation, challengeId: string): ChallengeResponse | undefined {
+  return investigation.challengeResponses.find((item) => item.challengeId === challengeId);
 }
 
 /** How many claims cite each evidence card. */

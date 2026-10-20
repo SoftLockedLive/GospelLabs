@@ -22,7 +22,7 @@ export function sectionHasContent(investigation: Investigation, section: Section
     case "hypothesis":
       return investigation.hypotheses.some((h) => hasText(h.statement));
     case "research":
-      return investigation.evidence.length > 0;
+      return investigation.evidence.length > 0 || investigation.challengeResponses.length > 0;
     case "analysis":
       return hasText(investigation.analysisNotes) || hasClaims("analysis");
     case "conclusion":

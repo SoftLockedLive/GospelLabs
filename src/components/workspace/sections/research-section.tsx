@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import type { EvidenceInput } from "@/domain/investigation";
 import { countCitations } from "@/domain/investigation-reducer";
+import { ChallengePanel } from "../challenges/challenge-panel";
 import { evidenceLabels } from "../evidence/evidence-label";
 import { EvidenceCardView } from "../evidence/evidence-card-view";
 import { EvidenceForm } from "../evidence/evidence-form";
@@ -52,6 +53,8 @@ export function ResearchSection({ investigation, actions, sourceQuestion }: Sect
       {sourceQuestion && sourceQuestion.suggestedReferences.length > 0 && (
         <SuggestedReferences references={sourceQuestion.suggestedReferences} evidence={evidence} onRecord={startNew} />
       )}
+
+      <ChallengePanel investigation={investigation} actions={actions} />
 
       {editor?.mode === "new" && (
         <EvidenceForm

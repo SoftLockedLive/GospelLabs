@@ -1,7 +1,8 @@
-import { Database, Palette, ShieldCheck } from "lucide-react";
+import { Database, MessageSquare, Palette, ShieldCheck } from "lucide-react";
 import type { Metadata } from "next";
 import { PageContainer } from "@/components/layout/app-shell";
 import { DataManagement } from "@/components/settings/data-management";
+import { FeedbackLinks } from "@/components/settings/feedback-links";
 import { SettingsSection } from "@/components/settings/settings-section";
 import { ThemeSelector } from "@/components/settings/theme-selector";
 import { PageHeader } from "@/components/ui/page-header";
@@ -55,6 +56,14 @@ export default function SettingsPage() {
             Gospel Labs is an independent study tool and is not an official product of The Church of Jesus Christ of
             Latter-day Saints. It does not provide doctrinal answers or evaluate your conclusions.
           </p>
+        </SettingsSection>
+
+        <SettingsSection
+          icon={MessageSquare}
+          title="Feedback"
+          description="Report a problem or suggest an improvement. Every message is read."
+        >
+          <FeedbackLinks />
         </SettingsSection>
       </div>
     </PageContainer>

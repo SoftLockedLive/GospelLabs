@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { findIntegrityIssues, investigationSchema, type Investigation } from "./investigation";
 import { investigationReducer } from "./investigation-reducer";
-import { blankInvestigation, evidenceInput, richInvestigation, T1 } from "./test-fixtures";
+import { blankInvestigation, challengeSnapshot, evidenceInput, richInvestigation, T1 } from "./test-fixtures";
 
 function withEvidence(): Investigation {
   return investigationReducer(blankInvestigation(), { type: "addEvidence", id: "ev-1", input: evidenceInput(), now: T1 });
@@ -36,11 +36,42 @@ describe("investigationSchema", () => {
   });
 });
 
+describe("compatibility", () => {
+  it("reads an investigation saved before challenge responses existed", () => {
+    const { challengeResponses, ...savedBy10 } = richInvestigation("legacy");
+    expect(challengeResponses).toHaveLength(1);
+    const result = investigationSchema.safeParse(savedBy10);
+    expect(result.error).toBeUndefined();
+    expect(result.data).toEqual({ ...savedBy10, challengeResponses: [] });
+  });
+
+  it("keeps top-level fields added by a newer version, so saving here doesn't erase them", () => {
+    const fromNewerVersion = { ...richInvestigation("next"), trailProgress: { step: 2, notes: ["kept"] } };
+    expect(investigationSchema.parse(fromNewerVersion)).toEqual(fromNewerVersion);
+  });
+
+  it("rejects a challenge response with an unknown type", () => {
+    const response = { id: "cr-1", ...challengeSnapshot(), type: "debate", response: "x", createdAt: T1, updatedAt: T1 };
+    expect(investigationSchema.safeParse({ ...blankInvestigation(), challengeResponses: [response] }).success).toBe(false);
+  });
+});
+
 describe("findIntegrityIssues", () => {
   it("reports duplicate ids within a collection", () => {
     const investigation = withEvidence();
     const duplicated = { ...investigation, evidence: [investigation.evidence[0], investigation.evidence[0]] };
     expect(findIntegrityIssues(duplicated)).toEqual(['evidence: duplicate id "ev-1"']);
+  });
+
+  it("reports two responses to the same challenge", () => {
+    const response = { id: "cr-1", ...challengeSnapshot(), response: "x", createdAt: T1, updatedAt: T1 };
+    expect(
+      findIntegrityIssues({ ...blankInvestigation(), challengeResponses: [response, { ...response, id: "cr-2" }] }),
+    ).toEqual(['challenge "observe-repeated-words" has more than one response']);
+    expect(findIntegrityIssues({ ...blankInvestigation(), challengeResponses: [response, response] })).toEqual([
+      'challengeResponses: duplicate id "cr-1"',
+      'challenge "observe-repeated-words" has more than one response',
+    ]);
   });
 
   it("reports a claim citing the same evidence twice", () => {

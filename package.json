@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node scripts/serve-out.mjs",
     "deploy": "bash scripts/deploy.sh",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",

@@ -13,6 +13,7 @@ const REMOVAL_LABELS: Record<RemovalAction, string> = {
   removeHypothesis: "Hypothesis removed",
   removeEvidence: "Evidence removed",
   removeClaim: "Claim removed",
+  removeChallengeResponse: "Challenge response removed",
 };
 
 export interface UndoEntry {

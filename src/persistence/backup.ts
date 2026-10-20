@@ -2,19 +2,25 @@
  * Backup file format and import planning. Everything here is pure; the
  * repository applies plans to the database inside a transaction.
  *
- * Format (version 1):
+ * Format (version 2):
  *   {
  *     "format": "gospel-labs-backup",
- *     "version": 1,
+ *     "version": 2,
  *     "exportedAt": "2026-10-20T12:00:00.000Z",
  *     "investigations": [ …Investigation records… ]
  *   }
+ *
+ * Version history:
+ *   1  Gospel Labs 1.0.
+ *   2  Gospel Labs 1.1: investigations gain `challengeResponses`. Bumped so
+ *      that 1.0, which would silently drop the new field, refuses these files
+ *      and asks the user to update instead.
  */
 import { z } from "zod";
 import { investigationSchema, type Investigation } from "@/domain/investigation";
 
 export const BACKUP_FORMAT = "gospel-labs-backup";
-export const BACKUP_VERSION = 1;
+export const BACKUP_VERSION = 2;
 /** Larger files are refused before parsing so the page doesn't freeze. */
 export const MAX_BACKUP_BYTES = 50 * 1024 * 1024;
 
@@ -69,11 +75,28 @@ export interface ParsedBackup {
 
 export type BackupParseResult = { ok: true; backup: ParsedBackup } | { ok: false; error: BackupError };
 
+type Migration = (data: Record<string, unknown>) => Record<string, unknown>;
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
 /**
  * Upgrades older backup versions to the current shape, one step at a time.
- * Key = the version being upgraded from. Empty while only version 1 exists.
+ * Key = the version being upgraded from. Migrations run before validation,
+ * so they must tolerate malformed entries and leave them for validation to report.
  */
-const MIGRATIONS: Record<number, (data: Record<string, unknown>) => Record<string, unknown>> = {};
+const MIGRATIONS: Record<number, Migration> = {
+  // 1 → 2: investigations start with no challenge responses. Nothing else changes.
+  1: (data) => ({
+    ...data,
+    version: 2,
+    investigations: Array.isArray(data.investigations)
+      ? data.investigations.map((entry: unknown) =>
+          isRecord(entry) && !("challengeResponses" in entry) ? { ...entry, challengeResponses: [] } : entry,
+        )
+      : data.investigations,
+  }),
+};
 
 const envelopeSchema = z.object({
   exportedAt: z.iso.datetime().optional().catch(undefined),

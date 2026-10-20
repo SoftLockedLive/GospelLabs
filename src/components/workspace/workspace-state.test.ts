@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { blankInvestigation, evidenceInput, T1, T2 } from "@/domain/test-fixtures";
+import { blankInvestigation, challengeSnapshot, evidenceInput, T1, T2 } from "@/domain/test-fixtures";
 import { initWorkspaceState, workspaceReducer, type WorkspaceAction, type WorkspaceState } from "./workspace-state";
 
 const run = (state: WorkspaceState, ...actions: WorkspaceAction[]) => actions.reduce(workspaceReducer, state);
@@ -23,6 +23,19 @@ describe("workspaceReducer undo", () => {
     const restored = run(removed, { type: "undo" });
     expect(restored.investigation).toEqual(before.investigation);
     expect(restored.undo).toBeNull();
+  });
+
+  it("offers undo after removing a challenge response", () => {
+    const before = run(initWorkspaceState(blankInvestigation()), {
+      type: "respondToChallenge",
+      id: "cr-1",
+      challenge: challengeSnapshot(),
+      response: "Worth keeping",
+      now: T1,
+    });
+    const removed = run(before, { type: "removeChallengeResponse", id: "cr-1", now: T2 });
+    expect(removed.undo?.label).toBe("Challenge response removed");
+    expect(run(removed, { type: "undo" }).investigation).toEqual(before.investigation);
   });
 
   it("does not offer undo for ordinary edits", () => {
