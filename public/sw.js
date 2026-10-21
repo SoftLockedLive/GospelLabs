@@ -127,6 +127,9 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // never touch other sites
 
+  // The deployed build's identifier must always come from the server, never a cache.
+  if (url.pathname === "/version.json") return;
+
   if (request.mode === "navigate") {
     event.respondWith(handleNavigation(request));
   } else if (url.pathname.startsWith("/_next/static/")) {

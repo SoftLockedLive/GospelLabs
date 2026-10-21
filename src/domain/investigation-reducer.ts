@@ -6,15 +6,23 @@
  * When an action changes nothing (an unknown id, a repeated link, the same
  * status), the reducer returns the same object so React can skip rendering.
  */
-import type {
-  ChallengeResponse,
-  ChallengeSnapshot,
-  Claim,
-  ClaimSection,
-  EvidenceInput,
-  Investigation,
-  InvestigationStatus,
-  SectionId,
+import {
+  connectionPairKey,
+  type ChallengeResponse,
+  type ChallengeSnapshot,
+  type Claim,
+  type ClaimSection,
+  type ConnectionInput,
+  type EvidenceConnection,
+  type HighlightInput,
+  type EvidenceInput,
+  type Investigation,
+  type InvestigationStatus,
+  type ResearchActivity,
+  type SectionId,
+  type TrailProgress,
+  type TrailStepProgress,
+  type TrailStepSnapshot,
 } from "./investigation";
 
 /** Free-text fields edited directly by the user. */
@@ -48,13 +56,32 @@ export type InvestigationEdit = (
   | { type: "removeClaim"; id: string }
   | { type: "linkEvidence"; claimId: string; evidenceId: string }
   | { type: "unlinkEvidence"; claimId: string; evidenceId: string }
+  /** Ignored unless both cards exist, differ, and aren't already connected (in either direction). */
+  | { type: "addConnection"; id: string; input: ConnectionInput }
+  /** Replaces a connection's cards, relationship, and explanation, under the same rules as adding. */
+  | { type: "updateConnection"; id: string; input: ConnectionInput }
+  | { type: "removeConnection"; id: string }
+  /** Links are kept only to evidence that exists, once each. */
+  | { type: "addHighlight"; id: string; input: HighlightInput }
+  | { type: "updateHighlight"; id: string; input: HighlightInput }
+  | { type: "removeHighlight"; id: string }
+  /** Answers one "Come unto Christ" prompt. Clearing the text removes the answer. */
+  | { type: "setReflection"; promptId: string; value: string }
   /** Creates or updates the response to a challenge; `id` is used only when creating. Blank text removes it. */
   | { type: "respondToChallenge"; id: string; challenge: ChallengeSnapshot; response: string }
   | { type: "removeChallengeResponse"; id: string }
+  /** Writes the user's notes for a trail step. A step with no notes and no explored mark isn't stored. */
+  | { type: "recordTrailDiscoveries"; trailId: string; step: TrailStepSnapshot; discoveries: string }
+  | { type: "setTrailStepExplored"; trailId: string; step: TrailStepSnapshot; explored: boolean }
 ) & { now: string };
 
-/** Moving between sections is remembered for resuming, but is not an edit. */
-export type InvestigationNavigation = { type: "setSection"; section: SectionId };
+/** Moving between sections or trail steps is remembered for resuming, but is not an edit. */
+export type InvestigationNavigation =
+  | { type: "setSection"; section: SectionId }
+  | { type: "setResearchActivity"; activity: ResearchActivity }
+  | { type: "setTrailStep"; trailId: string; stepId: string };
+
+export const NAVIGATION_ACTIONS = ["setSection", "setResearchActivity", "setTrailStep"] as const;
 
 export type InvestigationAction = InvestigationEdit | InvestigationNavigation;
 
@@ -64,6 +91,8 @@ export const REMOVAL_ACTIONS = [
   "removeHypothesis",
   "removeEvidence",
   "removeClaim",
+  "removeConnection",
+  "removeHighlight",
   "removeChallengeResponse",
 ] as const;
 
@@ -87,6 +116,48 @@ function updateClaim(state: Investigation, claimId: string, now: string, change:
     return updated ? { ...updated, updatedAt: now } : claim;
   });
   return claims === state.claims ? state : { ...state, claims, updatedAt: now };
+}
+
+/** A highlight's fields with links only to evidence that exists, each once. */
+function cleanHighlight(state: Investigation, input: HighlightInput): HighlightInput {
+  const evidenceIds = [...new Set(input.evidenceIds)].filter((id) => has(state.evidence, id));
+  return { title: input.title, insight: input.insight, evidenceIds };
+}
+
+/** Replaces the progress for `trail.trailId`, or appends it. */
+function upsertTrail(list: TrailProgress[], trail: TrailProgress): TrailProgress[] {
+  return list.some((item) => item.trailId === trail.trailId)
+    ? list.map((item) => (item.trailId === trail.trailId ? trail : item))
+    : [...list, trail];
+}
+
+/**
+ * Changes the user's notes on one trail step, creating the trail's progress
+ * and the step's entry as needed. A step left with no notes and no explored
+ * mark is removed, so empty entries are never stored.
+ */
+function updateTrailStep(
+  state: Investigation,
+  trailId: string,
+  snapshot: TrailStepSnapshot,
+  now: string,
+  change: (step: TrailStepProgress) => TrailStepProgress,
+): Investigation {
+  const trail = findTrailProgress(state, trailId) ?? { trailId, steps: [] };
+  const existing = trail.steps.find((step) => step.stepId === snapshot.stepId);
+  // An existing entry keeps the wording it was first written for.
+  const changed = change(existing ?? { ...snapshot, discoveries: "", explored: false, updatedAt: now });
+  if (existing && changed.discoveries === existing.discoveries && changed.explored === existing.explored) return state;
+
+  const empty = changed.discoveries.trim() === "" && !changed.explored;
+  if (!existing && empty) return state;
+  const updated = { ...changed, updatedAt: now };
+  const steps = empty
+    ? trail.steps.filter((step) => step !== existing)
+    : existing
+      ? trail.steps.map((step) => (step === existing ? updated : step))
+      : [...trail.steps, updated];
+  return { ...state, trailProgress: upsertTrail(state.trailProgress, { ...trail, steps }), updatedAt: now };
 }
 
 function applyEdit(state: Investigation, action: InvestigationEdit): Investigation {
@@ -150,11 +221,20 @@ function applyEdit(state: Investigation, action: InvestigationEdit): Investigati
       if (!has(state.evidence, action.id)) return state;
       return edited({
         evidence: state.evidence.filter((card) => card.id !== action.id),
-        // Keep claims consistent: nothing may cite evidence that no longer exists.
+        // Keep claims and connections consistent: nothing may refer to evidence that no longer exists.
         claims: state.claims.map((claim) =>
           claim.evidenceIds.includes(action.id)
             ? { ...claim, evidenceIds: claim.evidenceIds.filter((id) => id !== action.id), updatedAt: now }
             : claim,
+        ),
+        evidenceConnections: state.evidenceConnections.filter(
+          (connection) => connection.fromEvidenceId !== action.id && connection.toEvidenceId !== action.id,
+        ),
+        // Discoveries are the user's own insights: they stay, and only lose the link.
+        discoveryHighlights: state.discoveryHighlights.map((highlight) =>
+          highlight.evidenceIds.includes(action.id)
+            ? { ...highlight, evidenceIds: highlight.evidenceIds.filter((id) => id !== action.id), updatedAt: now }
+            : highlight,
         ),
       });
 
@@ -191,6 +271,66 @@ function applyEdit(state: Investigation, action: InvestigationEdit): Investigati
           : null,
       );
 
+    case "addConnection":
+      if (has(state.evidenceConnections, action.id) || !canConnect(state, action.input)) return state;
+      return edited({
+        evidenceConnections: [
+          ...state.evidenceConnections,
+          { ...action.input, id: action.id, createdAt: now, updatedAt: now },
+        ],
+      });
+
+    case "updateConnection": {
+      if (!canConnect(state, action.input, action.id)) return state;
+      const evidenceConnections = updateById(state.evidenceConnections, action.id, (connection) =>
+        connection.fromEvidenceId === action.input.fromEvidenceId &&
+        connection.toEvidenceId === action.input.toEvidenceId &&
+        connection.relationship === action.input.relationship &&
+        connection.explanation === action.input.explanation
+          ? connection
+          : { ...connection, ...action.input, updatedAt: now },
+      );
+      return evidenceConnections === state.evidenceConnections ? state : edited({ evidenceConnections });
+    }
+
+    case "removeConnection":
+      if (!has(state.evidenceConnections, action.id)) return state;
+      return edited({ evidenceConnections: state.evidenceConnections.filter((item) => item.id !== action.id) });
+
+    case "addHighlight":
+      if (has(state.discoveryHighlights, action.id)) return state;
+      return edited({
+        discoveryHighlights: [
+          ...state.discoveryHighlights,
+          { ...cleanHighlight(state, action.input), id: action.id, createdAt: now, updatedAt: now },
+        ],
+      });
+
+    case "updateHighlight": {
+      const input = cleanHighlight(state, action.input);
+      const discoveryHighlights = updateById(state.discoveryHighlights, action.id, (highlight) =>
+        highlight.title === input.title &&
+        highlight.insight === input.insight &&
+        highlight.evidenceIds.join() === input.evidenceIds.join()
+          ? highlight
+          : { ...highlight, ...input, updatedAt: now },
+      );
+      return discoveryHighlights === state.discoveryHighlights ? state : edited({ discoveryHighlights });
+    }
+
+    case "removeHighlight":
+      if (!has(state.discoveryHighlights, action.id)) return state;
+      return edited({ discoveryHighlights: state.discoveryHighlights.filter((item) => item.id !== action.id) });
+
+    case "setReflection": {
+      const current = state.christReflection[action.promptId] ?? "";
+      if (current === action.value) return state;
+      const others = Object.fromEntries(
+        Object.entries(state.christReflection).filter(([promptId]) => promptId !== action.promptId),
+      );
+      return edited({ christReflection: action.value === "" ? others : { ...others, [action.promptId]: action.value } });
+    }
+
     case "respondToChallenge": {
       const blank = action.response.trim() === "";
       const existing = findChallengeResponse(state, action.challenge.challengeId);
@@ -219,14 +359,42 @@ function applyEdit(state: Investigation, action: InvestigationEdit): Investigati
     case "removeChallengeResponse":
       if (!has(state.challengeResponses, action.id)) return state;
       return edited({ challengeResponses: state.challengeResponses.filter((item) => item.id !== action.id) });
+
+    case "recordTrailDiscoveries":
+      return updateTrailStep(state, action.trailId, action.step, now, (step) => ({
+        ...step,
+        discoveries: action.discoveries,
+      }));
+
+    case "setTrailStepExplored":
+      return updateTrailStep(state, action.trailId, action.step, now, (step) => ({ ...step, explored: action.explored }));
   }
 }
 
-export function investigationReducer(state: Investigation, action: InvestigationAction): Investigation {
-  if (action.type === "setSection") {
-    return state.currentSection === action.section ? state : { ...state, currentSection: action.section };
+function applyNavigation(state: Investigation, action: InvestigationNavigation): Investigation {
+  switch (action.type) {
+    case "setSection":
+      return state.currentSection === action.section ? state : { ...state, currentSection: action.section };
+
+    case "setResearchActivity":
+      return state.researchActivity === action.activity ? state : { ...state, researchActivity: action.activity };
+
+    case "setTrailStep": {
+      const trail = findTrailProgress(state, action.trailId);
+      if (trail?.currentStepId === action.stepId) return state;
+      const next = trail
+        ? { ...trail, currentStepId: action.stepId }
+        : { trailId: action.trailId, currentStepId: action.stepId, steps: [] };
+      return { ...state, trailProgress: upsertTrail(state.trailProgress, next) };
+    }
   }
-  return applyEdit(state, action);
+}
+
+export const isNavigation = (action: InvestigationAction): action is InvestigationNavigation =>
+  (NAVIGATION_ACTIONS as readonly string[]).includes(action.type);
+
+export function investigationReducer(state: Investigation, action: InvestigationAction): Investigation {
+  return isNavigation(action) ? applyNavigation(state, action) : applyEdit(state, action);
 }
 
 /** Claims for one section, in the order they were written. */
@@ -237,6 +405,46 @@ export function claimsInSection(investigation: Investigation, section: ClaimSect
 /** The response to one challenge, if the user has written one. */
 export function findChallengeResponse(investigation: Investigation, challengeId: string): ChallengeResponse | undefined {
   return investigation.challengeResponses.find((item) => item.challengeId === challengeId);
+}
+
+/** The connection between two cards, in either direction, ignoring the connection `exceptId`. */
+export function findConnectionBetween(
+  investigation: Investigation,
+  firstEvidenceId: string,
+  secondEvidenceId: string,
+  exceptId?: string,
+): EvidenceConnection | undefined {
+  const pair = connectionPairKey(firstEvidenceId, secondEvidenceId);
+  return investigation.evidenceConnections.find(
+    (connection) =>
+      connection.id !== exceptId && connectionPairKey(connection.fromEvidenceId, connection.toEvidenceId) === pair,
+  );
+}
+
+/**
+ * Whether a connection with these cards would be valid: both cards exist in
+ * this investigation, they're different, and no other connection joins them.
+ */
+export function canConnect(investigation: Investigation, input: ConnectionInput, exceptId?: string): boolean {
+  const { fromEvidenceId, toEvidenceId } = input;
+  return (
+    fromEvidenceId !== toEvidenceId &&
+    has(investigation.evidence, fromEvidenceId) &&
+    has(investigation.evidence, toEvidenceId) &&
+    !findConnectionBetween(investigation, fromEvidenceId, toEvidenceId, exceptId)
+  );
+}
+
+/** Connections that involve one evidence card. */
+export function connectionsFor(investigation: Investigation, evidenceId: string): EvidenceConnection[] {
+  return investigation.evidenceConnections.filter(
+    (connection) => connection.fromEvidenceId === evidenceId || connection.toEvidenceId === evidenceId,
+  );
+}
+
+/** The user's progress in one trail, if they have opened it or written in it. */
+export function findTrailProgress(investigation: Investigation, trailId: string): TrailProgress | undefined {
+  return investigation.trailProgress.find((item) => item.trailId === trailId);
 }
 
 /** How many claims cite each evidence card. */

@@ -1,5 +1,6 @@
 import { Suspense, type ReactNode } from "react";
 import { OfflineNotice } from "@/components/pwa/offline-notice";
+import { UpdateNotice } from "@/components/pwa/update-notice";
 import { Brand } from "./brand";
 import { NavLinkList, NavLinks } from "./nav-links";
 
@@ -40,6 +41,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           <Brand />
         </header>
 
+        <UpdateNotice />
         <OfflineNotice />
         <main id="main" className="bg-notebook-grid flex-1 pb-24 lg:pb-0">
           {children}

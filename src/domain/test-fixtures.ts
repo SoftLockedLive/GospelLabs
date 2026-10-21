@@ -1,7 +1,7 @@
 /** Shared builders for domain tests. */
 import { createInvestigation } from "./investigation-factory";
 import { investigationReducer } from "./investigation-reducer";
-import type { ChallengeSnapshot, EvidenceInput, Investigation } from "./investigation";
+import type { ChallengeSnapshot, EvidenceInput, Investigation, TrailStepSnapshot } from "./investigation";
 
 export const T0 = "2026-10-19T12:00:00.000Z";
 export const T1 = "2026-10-19T12:05:00.000Z";
@@ -32,6 +32,17 @@ export function challengeSnapshot(overrides: Partial<ChallengeSnapshot> = {}): C
   };
 }
 
+export const TRAIL_ID = "forgiveness-before-the-atonement";
+
+export function trailStepSnapshot(overrides: Partial<TrailStepSnapshot> = {}): TrailStepSnapshot {
+  return {
+    stepId: "mark-2-sins-forgiven",
+    title: "Sins forgiven in Capernaum",
+    question: "What does Jesus say to the man, and how do the people respond?",
+    ...overrides,
+  };
+}
+
 /** Recursively freezes a value so tests fail if a reducer mutates its input. */
 export function deepFreeze<T>(value: T): T {
   if (value && typeof value === "object") {
@@ -41,7 +52,11 @@ export function deepFreeze<T>(value: T): T {
   return value;
 }
 
-/** A fully populated investigation (subquestion, hypothesis, evidence with link, claims, challenge response, conclusion). */
+/**
+ * A fully populated investigation: subquestion, hypothesis, evidence with a
+ * link, claims, a connection, a discovery, a challenge response, trail notes,
+ * a reflection, and a conclusion.
+ */
 export function richInvestigation(id: string, overrides: Partial<Investigation> = {}): Investigation {
   let state = createInvestigation({ id, now: T0 });
   const steps: Parameters<typeof investigationReducer>[1][] = [
@@ -56,7 +71,23 @@ export function richInvestigation(id: string, overrides: Partial<Investigation> 
     { type: "linkEvidence", claimId: "cl-1", evidenceId: "ev-1", now: T1 },
     { type: "addClaim", id: "cl-2", section: "conclusion", now: T2 },
     { type: "linkEvidence", claimId: "cl-2", evidenceId: "ev-2", now: T2 },
+    {
+      type: "addConnection",
+      id: "conn-1",
+      input: { fromEvidenceId: "ev-1", toEvidenceId: "ev-2", relationship: "supports", explanation: "Both define faith." },
+      now: T2,
+    },
     { type: "respondToChallenge", id: "cr-1", challenge: challengeSnapshot(), response: "“Faith” appears three times.", now: T2 },
+    { type: "setTrailStep", trailId: TRAIL_ID, stepId: "mark-2-sins-forgiven" },
+    { type: "recordTrailDiscoveries", trailId: TRAIL_ID, step: trailStepSnapshot(), discoveries: "Verse 10.", now: T2 },
+    { type: "setTrailStepExplored", trailId: TRAIL_ID, step: trailStepSnapshot(), explored: true, now: T2 },
+    {
+      type: "addHighlight",
+      id: "hl-1",
+      input: { title: "Faith looks forward", insight: "Both passages tie faith to hope.", evidenceIds: ["ev-1", "ev-2"] },
+      now: T2,
+    },
+    { type: "setReflection", promptId: "learned-about-christ", value: "He invites rather than compels.", now: T2 },
     { type: "setText", field: "conclusion", value: "My own conclusion.", now: T2 },
     { type: "setSection", section: "analysis" },
   ];

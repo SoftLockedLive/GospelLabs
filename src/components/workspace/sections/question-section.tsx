@@ -1,13 +1,27 @@
 "use client";
 
 import { Field, Input, Textarea } from "@/components/ui/input";
+import { getTrailForQuestion } from "@/lib/discovery-trails";
 import { StartingPoints } from "../starting-points";
 import { TextListEditor } from "../text-list-editor";
+import { TrailNotice } from "../trails/trail-notice";
 import type { SectionProps } from "../types";
 
-export function QuestionSection({ investigation, actions, sourceQuestion }: SectionProps) {
+export function QuestionSection({ investigation, actions, sourceQuestion, onNavigate }: SectionProps) {
+  const trail = sourceQuestion ? getTrailForQuestion(sourceQuestion.id) : undefined;
+
   return (
     <div className="flex flex-col gap-6">
+      {trail && (
+        <TrailNotice
+          trail={trail}
+          investigation={investigation}
+          onOpen={() => {
+            actions.setResearchActivity("discover");
+            onNavigate("research");
+          }}
+        />
+      )}
       {sourceQuestion && <StartingPoints question={sourceQuestion} />}
 
       <Field label="Question" hint="Phrase it in your own words. A good question is one you genuinely want answered.">

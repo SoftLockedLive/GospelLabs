@@ -3,7 +3,9 @@ import Link from "next/link";
 import { StatusBadge } from "@/components/ui/badge";
 import { Button, ButtonLink } from "@/components/ui/button";
 import type { Investigation } from "@/domain/investigation";
+import { findTrailProgress } from "@/domain/investigation-reducer";
 import { getSection } from "@/domain/sections";
+import { getTrailForQuestion } from "@/lib/discovery-trails";
 import { formatDate } from "@/lib/format";
 import { investigationHref } from "@/lib/routes";
 
@@ -18,6 +20,8 @@ export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
   const { evidence } = investigation;
   const headingId = `library-item-${investigation.id}`;
   const resumeLabel = investigation.status === "concluded" ? "Reopen" : "Resume";
+  const trail = investigation.sourceQuestionId ? getTrailForQuestion(investigation.sourceQuestionId) : undefined;
+  const trailProgress = trail && findTrailProgress(investigation, trail.id);
 
   return (
     <article aria-labelledby={headingId} className="rounded-xl border border-line bg-surface p-4 sm:p-5">
@@ -46,6 +50,14 @@ export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
             {section.step}. {section.title}
           </dd>
         </div>
+        {trail && trailProgress && (
+          <div className="flex gap-1">
+            <dt>Discovery trail</dt>
+            <dd className="text-muted">
+              {trailProgress.steps.filter((step) => step.explored).length} of {trail.steps.length} steps explored
+            </dd>
+          </div>
+        )}
       </dl>
 
       {evidence.length > 0 && (

@@ -4,10 +4,14 @@ import { useMemo, useReducer, type Dispatch } from "react";
 import type {
   ChallengeSnapshot,
   ClaimSection,
+  ConnectionInput,
   EvidenceInput,
+  HighlightInput,
   Investigation,
   InvestigationStatus,
+  ResearchActivity,
   SectionId,
+  TrailStepSnapshot,
 } from "@/domain/investigation";
 import type { InvestigationEdit, TextField } from "@/domain/investigation-reducer";
 import { createId } from "@/lib/ids";
@@ -29,6 +33,7 @@ function createActions(dispatch: Dispatch<WorkspaceAction>) {
 
   return {
     setSection: (section: SectionId) => dispatch({ type: "setSection", section }),
+    setResearchActivity: (activity: ResearchActivity) => dispatch({ type: "setResearchActivity", activity }),
     setText: (field: TextField, value: string) => edit({ type: "setText", field, value }),
     setStatus: (status: InvestigationStatus) => edit({ type: "setStatus", status }),
 
@@ -50,9 +55,24 @@ function createActions(dispatch: Dispatch<WorkspaceAction>) {
     linkEvidence: (claimId: string, evidenceId: string) => edit({ type: "linkEvidence", claimId, evidenceId }),
     unlinkEvidence: (claimId: string, evidenceId: string) => edit({ type: "unlinkEvidence", claimId, evidenceId }),
 
+    addConnection: (input: ConnectionInput) => add((id) => ({ type: "addConnection", id, input })),
+    updateConnection: (id: string, input: ConnectionInput) => edit({ type: "updateConnection", id, input }),
+    removeConnection: (id: string) => edit({ type: "removeConnection", id }),
+
+    addHighlight: (input: HighlightInput) => add((id) => ({ type: "addHighlight", id, input })),
+    updateHighlight: (id: string, input: HighlightInput) => edit({ type: "updateHighlight", id, input }),
+    removeHighlight: (id: string) => edit({ type: "removeHighlight", id }),
+    setReflection: (promptId: string, value: string) => edit({ type: "setReflection", promptId, value }),
+
     respondToChallenge: (challenge: ChallengeSnapshot, response: string) =>
       edit({ type: "respondToChallenge", id: createId(), challenge, response }),
     removeChallengeResponse: (id: string) => edit({ type: "removeChallengeResponse", id }),
+
+    setTrailStep: (trailId: string, stepId: string) => dispatch({ type: "setTrailStep", trailId, stepId }),
+    recordTrailDiscoveries: (trailId: string, step: TrailStepSnapshot, discoveries: string) =>
+      edit({ type: "recordTrailDiscoveries", trailId, step, discoveries }),
+    setTrailStepExplored: (trailId: string, step: TrailStepSnapshot, explored: boolean) =>
+      edit({ type: "setTrailStepExplored", trailId, step, explored }),
 
     undo: () => dispatch({ type: "undo" }),
     dismissUndo: () => dispatch({ type: "dismissUndo" }),

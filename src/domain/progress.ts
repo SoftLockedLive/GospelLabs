@@ -22,7 +22,11 @@ export function sectionHasContent(investigation: Investigation, section: Section
     case "hypothesis":
       return investigation.hypotheses.some((h) => hasText(h.statement));
     case "research":
-      return investigation.evidence.length > 0 || investigation.challengeResponses.length > 0;
+      return (
+        investigation.evidence.length > 0 ||
+        investigation.challengeResponses.length > 0 ||
+        investigation.trailProgress.some((trail) => trail.steps.length > 0)
+      );
     case "analysis":
       return hasText(investigation.analysisNotes) || hasClaims("analysis");
     case "conclusion":
@@ -30,7 +34,8 @@ export function sectionHasContent(investigation: Investigation, section: Section
         hasText(investigation.conclusion) ||
         hasClaims("conclusion") ||
         hasText(investigation.remainingQuestions) ||
-        hasText(investigation.reflectionNotes)
+        hasText(investigation.reflectionNotes) ||
+        Object.values(investigation.christReflection).some(hasText)
       );
   }
 }

@@ -1,4 +1,4 @@
-import type { Investigation } from "./investigation";
+import { RECORD_DATA_VERSION, type Investigation } from "./investigation";
 import type { CuratedQuestion } from "./question-bank";
 
 interface CreateOptions {
@@ -10,6 +10,7 @@ interface CreateOptions {
 export function createInvestigation({ id, now }: CreateOptions): Investigation {
   return {
     id,
+    dataVersion: RECORD_DATA_VERSION,
     question: "",
     title: "",
     category: "",
@@ -22,10 +23,14 @@ export function createInvestigation({ id, now }: CreateOptions): Investigation {
     evidence: [],
     analysisNotes: "",
     claims: [],
+    evidenceConnections: [],
     challengeResponses: [],
+    trailProgress: [],
+    discoveryHighlights: [],
     conclusion: "",
     remainingQuestions: "",
     reflectionNotes: "",
+    christReflection: {},
     status: "investigating",
   };
 }

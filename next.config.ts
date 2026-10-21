@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 /**
- * Identifies this build. The service worker uses it to replace its caches on
- * every deployment. Vercel provides the commit SHA; local builds use the time.
+ * Identifies this build: its UTC build time, e.g. 20261020221921. The service
+ * worker uses it to replace its caches on every deployment, and Settings shows
+ * it so bug reports can name the build.
  */
-const appVersion =
-  process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 12) ?? new Date().toISOString().replace(/\D/g, "").slice(0, 14);
+const appVersion = new Date().toISOString().replace(/\D/g, "").slice(0, 14);
 
 /**
  * Gospel Labs is a static export served by Caddy on Atlas (see scripts/deploy.sh).

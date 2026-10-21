@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { expect, test, type Page } from "@playwright/test";
-import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "../src/persistence/legacy-fixtures";
+import { BACKUP_FROM_1_0, RECORD_FROM_1_0, RECORD_FROM_1_0_AS_READ } from "../src/persistence/legacy-fixtures";
 import { createInvestigation, libraryItem } from "./helpers";
 
 async function exportBackup(page: Page, path: string) {
@@ -20,7 +20,13 @@ test("export, delete everything, and restore with merge", async ({ page }, testI
   const backup = await exportBackup(page, backupPath);
   expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 2 });
   expect(backup.investigations).toHaveLength(1);
-  expect(backup.investigations[0].challengeResponses).toEqual([]);
+  expect(backup.investigations[0]).toMatchObject({
+    evidenceConnections: [],
+    discoveryHighlights: [],
+    challengeResponses: [],
+    trailProgress: [],
+    christReflection: {},
+  });
 
   // Delete everything (requires acknowledgement).
   await page.getByRole("button", { name: "Delete all data" }).click();
@@ -102,5 +108,6 @@ test("a backup exported by Gospel Labs 1.0 imports with all of its data", async 
   // Exporting again writes the current format, with the 1.0 data unchanged.
   const reexported = await exportBackup(page, testInfo.outputPath("reexported.json"));
   expect(reexported.version).toBe(2);
-  expect(reexported.investigations).toEqual([{ ...RECORD_FROM_1_0, challengeResponses: [] }]);
+  // Imported by this version, so stamped with its record format.
+  expect(reexported.investigations).toEqual([{ ...RECORD_FROM_1_0_AS_READ, dataVersion: 2 }]);
 });

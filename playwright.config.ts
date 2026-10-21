@@ -1,15 +1,29 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices, type Project } from "@playwright/test";
 
 const PORT = 3210;
 
 /**
  * End-to-end tests run against the static production build in out/ (the
- * service worker is only active in production), served like Atlas serves it.
- * Run `npm run build` first, then `npm run test:e2e`.
+ * service worker is only active in production), served like Atlas serves it,
+ * with the production security headers. Run `npm run build` first, then
+ * `npm run test:e2e`.
  *
- * Set CHROMIUM_PATH to use an already-installed Chromium instead of running
- * `npx playwright install chromium`.
+ * Chromium (desktop and Pixel 7) always runs. Set CHROMIUM_PATH to use an
+ * already-installed Chromium instead of running `npx playwright install chromium`.
+ *
+ * Firefox and WebKit are opt-in: E2E_BROWSERS=firefox,webkit npm run test:e2e
+ * (install them first with `npx playwright install firefox webkit`).
  */
+const chromium = { launchOptions: process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {} };
+const extra = new Set((process.env.E2E_BROWSERS ?? "").split(",").map((name) => name.trim()));
+
+const projects: Project[] = [
+  { name: "desktop", use: { ...devices["Desktop Chrome"], ...chromium } },
+  { name: "mobile", use: { ...devices["Pixel 7"], ...chromium } },
+  ...(extra.has("firefox") ? [{ name: "firefox", use: { ...devices["Desktop Firefox"] } }] : []),
+  ...(extra.has("webkit") ? [{ name: "webkit", use: { ...devices["Desktop Safari"] } }] : []),
+];
+
 export default defineConfig({
   testDir: "e2e",
   timeout: 60_000,
@@ -18,12 +32,8 @@ export default defineConfig({
   use: {
     baseURL: `http://localhost:${PORT}`,
     trace: "retain-on-failure",
-    launchOptions: process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {},
   },
-  projects: [
-    { name: "desktop", use: { ...devices["Desktop Chrome"] } },
-    { name: "mobile", use: { ...devices["Pixel 7"] } },
-  ],
+  projects,
   webServer: {
     command: `node scripts/serve-out.mjs ${PORT}`,
     url: `http://localhost:${PORT}`,

@@ -1,14 +1,16 @@
 "use client";
 
-import { FileQuestion, FileWarning } from "lucide-react";
+import { FileQuestion, FileWarning, RefreshCw } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { ButtonLink } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { Button, ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { InvestigationWorkspace } from "@/components/workspace/investigation-workspace";
 import { WorkspaceSkeleton } from "@/components/workspace/workspace-skeleton";
-import { isSectionId, type SectionId } from "@/domain/investigation";
+import { isSectionId, type Investigation, type SectionId } from "@/domain/investigation";
 import { getCuratedQuestion } from "@/lib/question-bank";
 import { useStoredInvestigation } from "@/persistence/hooks";
+import { dropUnsavedCopy, readUnsavedCopy, resolveUnsavedCopy } from "@/persistence/unsaved-copy";
 import { StorageErrorState } from "./storage-error-state";
 
 /**
@@ -57,9 +59,49 @@ function LoadedInvestigation({ id, openAt }: { id: string; openAt?: SectionId })
     );
   }
 
-  const stored = result.investigation;
-  const initial = openAt && openAt !== stored.currentSection ? { ...stored, currentSection: openAt } : stored;
+  if (result.status === "newer") {
+    return (
+      <EmptyState
+        headingLevel={1}
+        icon={RefreshCw}
+        title="This investigation was saved by a newer version"
+        description="A newer version of Gospel Labs saved it. To protect that data, this version won't open it for editing. Reload to get the latest version."
+        action={
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button onClick={() => window.location.reload()}>Reload</Button>
+            <ButtonLink href="/library" variant="secondary">
+              Go to My Library
+            </ButtonLink>
+          </div>
+        }
+        className="mt-6 bg-surface"
+      />
+    );
+  }
+
+  return <OpenInvestigation key={result.investigation.id} stored={result.investigation} openAt={openAt} />;
+}
+
+/** Opens a loaded investigation, restoring edits that didn't finish saving last time (see unsaved-copy.ts). */
+function OpenInvestigation({ stored, openAt }: { stored: Investigation; openAt?: SectionId }) {
+  // Resolved once, when the investigation opens; the copy is removed once its edits are saved.
+  const [{ initial: content, basedOn, restored }] = useState(() =>
+    resolveUnsavedCopy(stored, readUnsavedCopy(stored.id)),
+  );
+  // A copy whose edits were saved after all (the last save finished as the page closed) is stale.
+  useEffect(() => {
+    if (!restored) dropUnsavedCopy(stored.id);
+  }, [restored, stored.id]);
+  const initial = openAt && openAt !== content.currentSection ? { ...content, currentSection: openAt } : content;
   const sourceQuestion = stored.sourceQuestionId ? getCuratedQuestion(stored.sourceQuestionId) : undefined;
 
-  return <InvestigationWorkspace key={stored.id} initial={initial} stored={stored} sourceQuestion={sourceQuestion} />;
+  return (
+    <InvestigationWorkspace
+      initial={initial}
+      stored={stored}
+      basedOn={basedOn}
+      restored={restored}
+      sourceQuestion={sourceQuestion}
+    />
+  );
 }

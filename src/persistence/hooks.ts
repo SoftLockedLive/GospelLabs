@@ -3,10 +3,12 @@
 import { liveQuery } from "dexie";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { Investigation } from "@/domain/investigation";
+import { registerAutosave } from "@/lib/unsaved-work";
 import { AutosaveController, type AutosaveOptions } from "./autosave";
 import { getRepository } from "./client";
 import type { InvestigationList, LoadResult } from "./investigation-repository";
 import { StorageError, toStorageError } from "./storage-errors";
+import { dropUnsavedCopy, keepUnsavedCopy } from "./unsaved-copy";
 
 export type AsyncState<T> =
   | { status: "loading" }
@@ -100,22 +102,58 @@ export function useAutosave(investigation: Investigation, options: AutosaveHookO
     controller.update(investigation);
   }, [controller, investigation]);
 
+  // Watch the stored copy, so changes made in another tab or window are noticed right away.
+  const id = options.initial.id;
+  useEffect(() => {
+    const subscription = liveQuery(() => getRepository().stamp(id)).subscribe({
+      next: (stamp) => controller.noteStored(stamp),
+      // A failed read is reported by the next save instead.
+      error: () => undefined,
+    });
+    return () => subscription.unsubscribe();
+  }, [controller, id]);
+
+  // Once everything is saved, the safety copy is no longer needed.
+  useEffect(() => {
+    const unsubscribe = controller.subscribe(() => {
+      if (!controller.hasUnsavedChanges()) dropUnsavedCopy(id);
+    });
+    return () => void unsubscribe();
+  }, [controller, id]);
+
+  // Lets a page reload (e.g. to update the app) save pending edits first.
+  useEffect(
+    () =>
+      registerAutosave(async () => {
+        await controller.flush();
+        return !controller.hasUnsavedChanges();
+      }),
+    [controller],
+  );
+
   useEffect(() => {
     const flush = () => void controller.flush();
+    // The page may be closing: keep a synchronous safety copy in case the browser abandons the
+    // IndexedDB write that flush() starts (see unsaved-copy.ts), then try to save as usual.
+    const keepCopyAndFlush = () => {
+      const copy = controller.unsavedCopy();
+      if (copy) keepUnsavedCopy(copy);
+      flush();
+    };
     const onVisibilityChange = () => {
-      if (document.visibilityState === "hidden") flush();
+      if (document.visibilityState === "hidden") keepCopyAndFlush();
     };
     const onBeforeUnload = (event: BeforeUnloadEvent) => {
       if (!controller.hasUnsavedChanges()) return;
-      flush();
+      keepCopyAndFlush();
       event.preventDefault(); // asks the browser to confirm leaving
     };
     document.addEventListener("visibilitychange", onVisibilityChange);
-    window.addEventListener("pagehide", flush);
+    window.addEventListener("pagehide", keepCopyAndFlush);
     window.addEventListener("beforeunload", onBeforeUnload);
     return () => {
       document.removeEventListener("visibilitychange", onVisibilityChange);
-      window.removeEventListener("pagehide", flush);
+      window.removeEventListener("pagehide", keepCopyAndFlush);
       window.removeEventListener("beforeunload", onBeforeUnload);
       flush();
     };
@@ -126,9 +164,10 @@ export function useAutosave(investigation: Investigation, options: AutosaveHookO
     status,
     retry: () => void controller.retry(),
     keepMine: () => void controller.keepMine(),
-    /** Drops unsaved edits and reloads the page to show the stored version. */
+    /** Drops unsaved edits (if any), including their safety copy, and reloads to show the stored version. */
     discardAndReload: () => {
       controller.discard();
+      dropUnsavedCopy(id);
       window.location.reload();
     },
   };

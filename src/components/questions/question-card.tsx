@@ -1,14 +1,16 @@
-import { ArrowRight, FlaskConical, Lightbulb, ScrollText } from "lucide-react";
+import { ArrowRight, FlaskConical, Lightbulb, Route, ScrollText } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { DIFFICULTY_LABELS, type CuratedQuestion } from "@/domain/question-bank";
+import { getTrailForQuestion } from "@/lib/discovery-trails";
 import { newInvestigationHref } from "@/lib/routes";
 
 export function QuestionCard({ question }: { question: CuratedQuestion }) {
   const referenceCount = question.suggestedReferences.length;
   const promptCount = question.prompts.length;
+  const trail = getTrailForQuestion(question.id);
 
   return (
     <Card className="flex w-full flex-col transition-colors hover:border-line-strong">
@@ -46,6 +48,13 @@ export function QuestionCard({ question }: { question: CuratedQuestion }) {
               {promptCount} {promptCount === 1 ? "prompt" : "prompts"}
             </dd>
           </div>
+          {trail && (
+            <div className="flex items-center gap-1.5 text-accent">
+              <Route aria-hidden className="size-3.5" />
+              <dt className="sr-only">Discovery trail</dt>
+              <dd>Discovery trail · {trail.steps.length} steps</dd>
+            </div>
+          )}
         </dl>
       </CardContent>
       <CardFooter className="justify-between">

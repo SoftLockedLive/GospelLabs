@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "trails": [
+    {
+      "id": "forgiveness-before-the-atonement",
+      "questionId": "forgiveness-before-the-atonement",
+      "title": "Forgiveness before the Atonement",
+      "introduction": "Read three passages closely. Each step separates what a passage states from the questions it leaves open, so you can see where the text ends and interpretation begins. Explore the steps in any order and record what you find. The conclusions are yours to draw.",
+      "steps": [
+        {
+          "id": "mark-2-sins-forgiven",
+          "title": "Sins forgiven in Capernaum",
+          "question": "What does Jesus say to the man brought to Him, and how do the people around Him respond?",
+          "references": [
+            {
+              "label": "Mark 2:5–12",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p5-p12#p5"
+            }
+          ],
+          "stated": [
+            "When Jesus saw their faith, He said to the man sick of the palsy, “Son, thy sins be forgiven thee” (verse 5).",
+            "Some of the scribes reasoned in their hearts, “Why doth this man thus speak blasphemies? who can forgive sins but God only?” (verses 6–7).",
+            "Jesus told the man to rise “that ye may know that the Son of man hath power on earth to forgive sins” (verses 10–11).",
+            "The man took up his bed and went out, and the people “were all amazed, and glorified God” (verse 12)."
+          ],
+          "interpretation": [
+            "What do the scribes’ words suggest they understood Jesus to be claiming?",
+            "Why might Jesus have tied a healing that everyone could see to a forgiveness that no one could see?",
+            "Does this passage explain how Jesus was able to forgive sins, or does it state only that He had the power to do so?"
+          ],
+          "reflection": [
+            "What, if anything, does this account change about how you think of coming to the Savior?"
+          ],
+          "connections": [
+            {
+              "stepId": "john-8-no-condemnation",
+              "note": "Compare “thy sins be forgiven thee” with what Jesus says to the woman in John 8:11."
+            }
+          ]
+        },
+        {
+          "id": "john-8-no-condemnation",
+          "title": "“Neither do I condemn thee”",
+          "question": "What does Jesus say to the woman, and what does the account leave unsaid?",
+          "references": [
+            {
+              "label": "John 8:1–11",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/8?lang=eng&id=p1-p11#p1"
+            }
+          ],
+          "stated": [
+            "The scribes and Pharisees brought a woman “taken in adultery” and asked what Jesus would say, since the law of Moses commanded “that such should be stoned” (verses 3–5).",
+            "The account says they asked this “tempting him, that they might have to accuse him” (verse 6).",
+            "Jesus answered, “He that is without sin among you, let him first cast a stone at her,” and her accusers left one by one (verses 7–9).",
+            "He said to her, “Neither do I condemn thee: go, and sin no more” (verse 11).",
+            "The word ‘forgive’ does not appear in this account. It records that Jesus did not condemn the woman; it does not record Him telling her that her sins were forgiven.",
+            "In the footnote to verse 11, the Joseph Smith Translation adds: “And the woman glorified God from that hour, and believed on his name.”"
+          ],
+          "interpretation": [
+            "Is “Neither do I condemn thee” the same as forgiving, part of forgiving, or something different? What in the text supports your reading?",
+            "What might “go, and sin no more” suggest about what Jesus expected of her?",
+            "Should this account count as evidence in an investigation about forgiveness? Why or why not?"
+          ],
+          "reflection": [
+            "How does Jesus treat the woman compared with how her accusers treat her, and what do you make of the difference?"
+          ],
+          "connections": [
+            {
+              "stepId": "mark-2-sins-forgiven",
+              "note": "In Mark 2:5 Jesus says, “thy sins be forgiven thee.” Notice what each account does and doesn’t say."
+            }
+          ]
+        },
+        {
+          "id": "mosiah-3-before-he-came",
+          "title": "As though He had already come",
+          "question": "What does Mosiah 3:13 say about people who believed in Christ before He came?",
+          "references": [
+            {
+              "label": "Mosiah 3:13",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng&id=p13#p13"
+            },
+            {
+              "label": "Mosiah 3:2–5",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng&id=p2-p5#p2"
+            }
+          ],
+          "stated": [
+            "King Benjamin says these words were made known to him “by an angel from God” (verse 2).",
+            "They describe the Lord’s coming as still in the future: “the time cometh, and is not far distant” (verse 5).",
+            "Verse 13 says prophets were sent so “that thereby whosoever should believe that Christ should come, the same might receive remission of their sins.”",
+            "It adds that they might “rejoice with exceedingly great joy, even as though he had already come among them.”"
+          ],
+          "interpretation": [
+            "What might “as though he had already come among them” suggest about how the Savior’s Atonement relates to time?",
+            "Mosiah 3:13 connects remission of sins with believing that Christ would come. How does that compare with the faith Jesus saw in Mark 2:5?",
+            "This verse speaks of people who lived before Christ’s mortal ministry. Could the same reasoning apply to forgiveness Jesus extended during His ministry, before Gethsemane and the cross? What would you need to assume for it to apply?"
+          ],
+          "reflection": [
+            "Which phrase in this verse would you most like to understand better, and why?"
+          ],
+          "connections": [
+            {
+              "stepId": "before-gethsemane",
+              "note": "Jarom 1:11 uses similar “as though” language. Compare the two in the next step."
+            }
+          ]
+        },
+        {
+          "id": "before-gethsemane",
+          "title": "Before Gethsemane and the cross",
+          "question": "Taken together, what do these passages establish, and what do they leave open?",
+          "references": [
+            {
+              "label": "Mark 14:32",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/14?lang=eng&id=p32#p32"
+            },
+            {
+              "label": "Jarom 1:11",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/jarom/1?lang=eng&id=p11#p11"
+            },
+            {
+              "label": "Alma 39:17–19",
+              "type": "scripture",
+              "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/39?lang=eng&id=p17-p19#p17"
+            }
+          ],
+          "stated": [
+            "Mark records the healing in Capernaum (Mark 2) twelve chapters before Jesus comes “to a place which was named Gethsemane” (Mark 14:32).",
+            "Jarom 1:11 describes prophets, priests, and teachers “persuading them to look forward unto the Messiah, and believe in him to come as though he already was.”",
+            "In Alma 39:17–19, Alma answers his son’s wondering “why these things should be known so long beforehand” by asking, “is not a soul at this time as precious unto God as a soul will be at the time of his coming?”"
+          ],
+          "interpretation": [
+            "Mosiah 3:13 and Jarom 1:11 both use “as though” language. What do you think it implies, and how far would you extend it?",
+            "Which parts of your answer come directly from these passages, and which depend on inferences you are making?",
+            "What else would you want to study to test your reading?"
+          ],
+          "connections": [
+            {
+              "stepId": "mosiah-3-before-he-came",
+              "note": "Compare Jarom’s wording with Mosiah 3:13."
+            }
+          ],
+          "recordIn": "analysis"
+        },
+        {
+          "id": "in-your-own-words",
+          "title": "In your own words",
+          "question": "How would you answer the question now, and how confident are you in each part of your answer?",
+          "interpretation": [
+            "Where does your answer rest on what a passage states, and where on your interpretation of it?",
+            "What remains unresolved for you?"
+          ],
+          "reflection": [
+            "What from this study do you want to remember?"
+          ],
+          "recordIn": "conclusion"
+        }
+      ]
+    }
+  ]
+}

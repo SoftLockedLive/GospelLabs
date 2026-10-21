@@ -1,8 +1,16 @@
 /** End-to-end: export from one database, import into another, through the real backup file text. */
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { RECORD_DATA_VERSION } from "@/domain/investigation";
 import { richInvestigation } from "@/domain/test-fixtures";
 import { parseBackup, serializeBackup } from "./backup";
-import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "./legacy-fixtures";
+import {
+  BACKUP_FROM_1_0,
+  BACKUP_V2_BEFORE_TRAILS,
+  RECORD_BEFORE_TRAILS,
+  RECORD_BEFORE_TRAILS_AS_READ,
+  RECORD_FROM_1_0,
+  RECORD_FROM_1_0_AS_READ,
+} from "./legacy-fixtures";
 import { createTestRepository } from "./test-utils";
 
 afterEach(() => vi.restoreAllMocks());
@@ -50,6 +58,39 @@ describe("export → import round trip", () => {
   });
 });
 
+describe("connections", () => {
+  it("survive export and import exactly", async () => {
+    const source = createTestRepository().repository;
+    await source.save(richInvestigation("a"), null);
+    const target = createTestRepository().repository;
+    await target.importInvestigations(parsed(await exportText(source)), "replace");
+    const loaded = await target.get("a");
+    expect(loaded.status === "found" && loaded.investigation.evidenceConnections).toEqual(
+      richInvestigation("a").evidenceConnections,
+    );
+  });
+
+  it("an import containing an orphaned connection changes nothing", async () => {
+    const { repository } = createTestRepository();
+    await repository.save(richInvestigation("kept"), null);
+    const orphaned = richInvestigation("orphaned");
+    orphaned.evidenceConnections = [{ ...orphaned.evidenceConnections[0], fromEvidenceId: "gone" }];
+
+    await expect(repository.importInvestigations([orphaned], "replace")).rejects.toMatchObject({ kind: "invalid-data" });
+    expect((await repository.list()).investigations.map((i) => i.id)).toEqual(["kept"]);
+  });
+});
+
+describe("discoveries and reflections", () => {
+  it("survive export and import exactly", async () => {
+    const source = createTestRepository().repository;
+    await source.save(richInvestigation("a"), null);
+    const target = createTestRepository().repository;
+    await target.importInvestigations(parsed(await exportText(source)), "replace");
+    expect(await target.get("a")).toEqual({ status: "found", investigation: richInvestigation("a") });
+  });
+});
+
 describe("older backups", () => {
   it("merges a Gospel Labs 1.0 backup alongside newer data", async () => {
     const { repository } = createTestRepository();
@@ -59,9 +100,19 @@ describe("older backups", () => {
     expect(summary).toMatchObject({ added: 1, updated: 0, kept: 0 });
     expect(await repository.get(RECORD_FROM_1_0.id)).toEqual({
       status: "found",
-      investigation: { ...RECORD_FROM_1_0, challengeResponses: [] },
+      // Written by this version, so stamped with its record format.
+      investigation: { ...RECORD_FROM_1_0_AS_READ, dataVersion: RECORD_DATA_VERSION },
     });
     expect(await repository.get("current")).toEqual({ status: "found", investigation: richInvestigation("current") });
+  });
+
+  it("restores a version 2 backup from before trails, keeping its challenge responses", async () => {
+    const { repository } = createTestRepository();
+    expect(await repository.importInvestigations(parsed(BACKUP_V2_BEFORE_TRAILS), "replace")).toMatchObject({ added: 1 });
+    expect(await repository.get(RECORD_BEFORE_TRAILS.id)).toEqual({
+      status: "found",
+      investigation: { ...RECORD_BEFORE_TRAILS_AS_READ, dataVersion: RECORD_DATA_VERSION },
+    });
   });
 });
 

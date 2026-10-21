@@ -38,6 +38,61 @@ describe("workspaceReducer undo", () => {
     expect(run(removed, { type: "undo" }).investigation).toEqual(before.investigation);
   });
 
+  it("says how many connections went with deleted evidence, and undo restores them", () => {
+    const connected = run(
+      withEvidence(),
+      { type: "addEvidence", id: "ev-2", input: evidenceInput({ sourceTitle: "Ether 12:6" }), now: T1 },
+      {
+        type: "addConnection",
+        id: "conn-1",
+        input: { fromEvidenceId: "ev-1", toEvidenceId: "ev-2", relationship: "supports", explanation: "" },
+        now: T1,
+      },
+    );
+    const removed = run(connected, { type: "removeEvidence", id: "ev-2", now: T2 });
+    expect(removed.undo?.label).toBe("Evidence and 1 connection removed");
+    expect(removed.investigation.evidenceConnections).toEqual([]);
+    expect(run(removed, { type: "undo" }).investigation).toEqual(connected.investigation);
+
+    const unlinked = run(connected, { type: "removeConnection", id: "conn-1", now: T2 });
+    expect(unlinked.undo?.label).toBe("Connection removed");
+  });
+
+  it("offers undo for a deleted discovery, and restores evidence links a deletion removed", () => {
+    const linked = run(withEvidence(), {
+      type: "addHighlight",
+      id: "hl-1",
+      input: { title: "Insight", insight: "", evidenceIds: ["ev-1"] },
+      now: T1,
+    });
+    const removed = run(linked, { type: "removeHighlight", id: "hl-1", now: T2 });
+    expect(removed.undo?.label).toBe("Discovery removed");
+    expect(run(removed, { type: "undo" }).investigation).toEqual(linked.investigation);
+
+    const evidenceGone = run(linked, { type: "removeEvidence", id: "ev-1", now: T2 });
+    expect(evidenceGone.investigation.discoveryHighlights[0].evidenceIds).toEqual([]);
+    expect(run(evidenceGone, { type: "undo" }).investigation.discoveryHighlights[0].evidenceIds).toEqual(["ev-1"]);
+  });
+
+  it("keeps undo available while moving between trail steps", () => {
+    const removed = run(withEvidence(), { type: "removeEvidence", id: "ev-1", now: T2 });
+    const moved = run(removed, { type: "setTrailStep", trailId: "trail", stepId: "step-2" });
+    expect(moved.undo).toBe(removed.undo);
+  });
+
+  it("undo keeps the section and Research activity the user is viewing", () => {
+    const removed = run(withEvidence(), { type: "removeEvidence", id: "ev-1", now: T2 });
+    const moved = run(
+      removed,
+      { type: "setSection", section: "analysis" },
+      { type: "setResearchActivity", activity: "connections" },
+    );
+    const restored = run(moved, { type: "undo" });
+    expect(restored.investigation.evidence).toHaveLength(1);
+    expect(restored.investigation.currentSection).toBe("analysis");
+    expect(restored.investigation.researchActivity).toBe("connections");
+  });
+
   it("does not offer undo for ordinary edits", () => {
     const state = run(initWorkspaceState(blankInvestigation()), {
       type: "setText",

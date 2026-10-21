@@ -10,6 +10,7 @@ import {
   type EvidenceFormErrors,
   type EvidenceFormValues,
 } from "@/domain/evidence-input";
+import { useUnsavedDraft } from "@/lib/unsaved-work";
 import { EVIDENCE_SOURCE_TYPES, SOURCE_TYPE_LABELS, type EvidenceInput, type EvidenceSourceType } from "@/domain/investigation";
 
 interface EvidenceFormProps {
@@ -21,9 +22,11 @@ interface EvidenceFormProps {
 }
 
 export function EvidenceForm({ heading, initial, submitLabel, onSubmit, onCancel }: EvidenceFormProps) {
-  const [values, setValues] = useState<EvidenceFormValues>(() => toEvidenceFormValues(initial));
+  const [initialValues] = useState<EvidenceFormValues>(() => toEvidenceFormValues(initial));
+  const [values, setValues] = useState<EvidenceFormValues>(initialValues);
   const [errors, setErrors] = useState<EvidenceFormErrors>({});
   const formRef = useRef<HTMLFormElement>(null);
+  useUnsavedDraft(JSON.stringify(values) !== JSON.stringify(initialValues), heading);
   // Start in the first field that still needs the user's input.
   const firstEmptyRef = useRef(initial?.sourceTitle ? "observation" : "sourceTitle");
 

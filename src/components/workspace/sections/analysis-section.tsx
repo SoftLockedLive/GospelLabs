@@ -9,7 +9,8 @@ export function AnalysisSection({ investigation, actions, onNavigate }: SectionP
   const goToResearch = () => onNavigate("research");
 
   return (
-    <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_17rem]">
+    <div className="flex min-w-0 flex-col gap-8">
+      <EvidenceReferencePanel investigation={investigation} onManage={goToResearch} />
       <div className="flex min-w-0 flex-col gap-8">
         <Field label="Analysis notes" hint="Where do sources agree or differ? What patterns or tensions stand out?">
           {(props) => (
@@ -32,7 +33,6 @@ export function AnalysisSection({ investigation, actions, onNavigate }: SectionP
           onGoToResearch={goToResearch}
         />
       </div>
-      <EvidenceReferencePanel investigation={investigation} onManage={goToResearch} />
     </div>
   );
 }

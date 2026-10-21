@@ -1,4 +1,4 @@
-import { ArrowLeft, FlaskConical, Lightbulb, ScrollText } from "lucide-react";
+import { ArrowLeft, FlaskConical, Lightbulb, Route, ScrollText } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { DIFFICULTY_LABELS } from "@/domain/question-bank";
+import { getTrailForQuestion } from "@/lib/discovery-trails";
 import { QUESTION_BANK, getCuratedQuestion } from "@/lib/question-bank";
 
 export function generateStaticParams() {
@@ -25,6 +26,7 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
   const { id } = await params;
   const question = getCuratedQuestion(id);
   if (!question) notFound();
+  const trail = getTrailForQuestion(question.id);
 
   return (
     <PageContainer>
@@ -80,6 +82,39 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
                 you&rsquo;ve read them and recorded what you observed.
               </p>
               <ReferenceList references={question.suggestedReferences} />
+            </CardContent>
+          </Card>
+        </section>
+      )}
+
+      {trail && (
+        <section aria-labelledby="trail-heading">
+          <Card>
+            <CardContent>
+              <h2 id="trail-heading" className="flex items-center gap-2 text-base font-semibold text-fg">
+                <Route aria-hidden className="size-4 text-accent" />
+                Discovery trail: {trail.title}
+              </h2>
+              {trail.introduction && (
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">{trail.introduction}</p>
+              )}
+              <ol className="mt-5 flex flex-col gap-3">
+                {trail.steps.map((step, index) => (
+                  <li key={step.id} className="flex gap-3 text-sm leading-relaxed">
+                    <span aria-hidden className="w-5 shrink-0 font-mono text-xs leading-6 text-accent">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>
+                      <span className="font-medium text-fg">{step.title}</span>
+                      <span className="block text-muted">{step.question}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-5 text-xs leading-relaxed text-subtle">
+                Start an investigation to take the trail. You&rsquo;ll find it in Research, and your notes are saved
+                with your investigation on this device.
+              </p>
             </CardContent>
           </Card>
         </section>

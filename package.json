@@ -13,6 +13,7 @@
     "test:watch": "vitest",
     "questions:schema": "UPDATE_QUESTION_SCHEMA=1 vitest run src/data/question-bank.test.ts",
     "verify:references": "node scripts/verify-references.mjs",
+    "verify:production": "node scripts/verify-production.mjs",
     "test:e2e": "playwright test"
   },
   "dependencies": {

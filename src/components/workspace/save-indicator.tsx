@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertTriangle, Check, CircleDashed, LoaderCircle } from "lucide-react";
+import { AlertTriangle, Check, CircleDashed, LoaderCircle, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { SaveStatus } from "@/persistence/autosave";
 
@@ -48,6 +48,13 @@ export function SaveIndicator({ status, onRetry }: { status: SaveStatus; onRetry
             Try again
           </Button>
         </div>
+      );
+    case "outdated":
+      return (
+        <p className={`${pill} border-accent/40 text-accent`}>
+          <RefreshCw aria-hidden className="size-3.5" />
+          Newer copy available
+        </p>
       );
     case "conflict":
       return (

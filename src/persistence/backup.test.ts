@@ -1,6 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { richInvestigation } from "@/domain/test-fixtures";
-import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "./legacy-fixtures";
+import {
+  BACKUP_FROM_1_0,
+  BACKUP_V2_BEFORE_TRAILS,
+  BACKUP_V2_BEFORE_CONNECTIONS,
+  BACKUP_V2_BEFORE_REFLECTION,
+  RECORD_BEFORE_REFLECTION_AS_READ,
+  RECORD_BEFORE_CONNECTIONS_AS_READ,
+  RECORD_BEFORE_TRAILS_AS_READ,
+  RECORD_FROM_1_0,
+  RECORD_FROM_1_0_AS_READ,
+} from "./legacy-fixtures";
 import {
   BACKUP_FORMAT,
   BACKUP_VERSION,
@@ -37,10 +47,28 @@ describe("serialize → parse round trip", () => {
 });
 
 describe("older backup versions", () => {
-  it("writes version 2, including challenge responses", () => {
+  it("writes version 2 with discoveries and reflections", () => {
+    const [written] = JSON.parse(serializeBackup(createBackup([richInvestigation("a")], EXPORTED_AT))).investigations;
+    expect(written.discoveryHighlights).toEqual(richInvestigation("a").discoveryHighlights);
+    expect(written.christReflection).toEqual({ "learned-about-christ": "He invites rather than compels." });
+  });
+
+  it("skips entries whose discoveries link to missing evidence and says why", () => {
+    const orphaned = richInvestigation("orphaned");
+    orphaned.discoveryHighlights = [{ ...orphaned.discoveryHighlights[0], evidenceIds: ["deleted-card"] }];
+    const result = parseBackup(envelope([orphaned]));
+    expect(result.ok && result.backup.skipped).toEqual([
+      expect.objectContaining({ id: "orphaned", reason: expect.stringContaining('links to missing evidence "deleted-card"') }),
+    ]);
+  });
+
+  it("writes version 2, including challenge responses and trail progress", () => {
     const backup = createBackup([richInvestigation("a")], EXPORTED_AT);
     expect(backup.version).toBe(2);
-    expect(JSON.parse(serializeBackup(backup)).investigations[0].challengeResponses).toHaveLength(1);
+    const [written] = JSON.parse(serializeBackup(backup)).investigations;
+    expect(written.challengeResponses).toHaveLength(1);
+    expect(written.trailProgress).toEqual(richInvestigation("a").trailProgress);
+    expect(written.trailProgress[0].steps).toHaveLength(1);
   });
 
   it("imports a version 1 backup from Gospel Labs 1.0 with every field intact", () => {
@@ -50,10 +78,28 @@ describe("older backup versions", () => {
       backup: {
         version: 1,
         exportedAt: "2026-10-03T08:00:00.000Z",
-        investigations: [{ ...RECORD_FROM_1_0, challengeResponses: [] }],
+        investigations: [RECORD_FROM_1_0_AS_READ],
         skipped: [],
       },
     });
+  });
+
+  it("imports a version 2 backup written before discovery trails existed", () => {
+    const result = parseBackup(BACKUP_V2_BEFORE_TRAILS);
+    expect(result.ok && result.backup.skipped).toEqual([]);
+    expect(result.ok && result.backup.investigations).toEqual([RECORD_BEFORE_TRAILS_AS_READ]);
+  });
+
+  it("imports a version 2 backup written before reflections and discoveries, keeping everything else", () => {
+    const result = parseBackup(BACKUP_V2_BEFORE_REFLECTION);
+    expect(result.ok && result.backup.skipped).toEqual([]);
+    expect(result.ok && result.backup.investigations).toEqual([RECORD_BEFORE_REFLECTION_AS_READ]);
+  });
+
+  it("imports a version 2 backup written before evidence connections, keeping responses and trail notes", () => {
+    const result = parseBackup(BACKUP_V2_BEFORE_CONNECTIONS);
+    expect(result.ok && result.backup.skipped).toEqual([]);
+    expect(result.ok && result.backup.investigations).toEqual([RECORD_BEFORE_CONNECTIONS_AS_READ]);
   });
 
   it("upgrades valid version 1 entries and still reports broken ones", () => {
@@ -104,6 +150,28 @@ describe("skipping bad entries", () => {
     ]);
   });
 
+  it("skips entries with orphaned, self-referencing, or malformed connections and says why", () => {
+    const orphaned = richInvestigation("orphaned");
+    orphaned.evidenceConnections = [{ ...orphaned.evidenceConnections[0], toEvidenceId: "deleted-card" }];
+    const selfLinked = richInvestigation("self");
+    selfLinked.evidenceConnections = [{ ...selfLinked.evidenceConnections[0], toEvidenceId: "ev-1" }];
+    const malformed = { ...richInvestigation("malformed"), evidenceConnections: [{ id: "x", relationship: "proves" }] };
+    const result = parseBackup(envelope([richInvestigation("good"), orphaned, selfLinked, malformed]));
+
+    expect(result.ok && result.backup.investigations.map((i) => i.id)).toEqual(["good"]);
+    expect(result.ok && result.backup.skipped.map((entry) => [entry.id, entry.reason])).toEqual([
+      ["orphaned", expect.stringContaining('refers to missing evidence "deleted-card"')],
+      ["self", expect.stringContaining("connects evidence to itself")],
+      ["malformed", expect.stringContaining("evidenceConnections")],
+    ]);
+  });
+
+  it("skips entries saved by a newer version of the app", () => {
+    const result = parseBackup(envelope([{ ...richInvestigation("next"), dataVersion: 99 }, richInvestigation("ok")]));
+    expect(result.ok && result.backup.investigations.map((i) => i.id)).toEqual(["ok"]);
+    expect(result.ok && result.backup.skipped[0]).toMatchObject({ id: "next", reason: expect.stringContaining("newer version") });
+  });
+
   it("rejects entries whose claims cite missing evidence", () => {
     const broken = richInvestigation("broken");
     broken.evidence = broken.evidence.slice(1); // cl-1 still cites ev-1
@@ -152,6 +220,12 @@ describe("planImport", () => {
   it("merge compares times, not strings, across timestamp formats", () => {
     const sameMomentNoMillis = { ...local, title: "Changed", updatedAt: "2026-05-01T00:00:00Z" };
     expect(planImport([local], [sameMomentNoMillis], "merge")).toMatchObject({ kept: 1 });
+  });
+
+  it("merge never replaces a stored record saved by a newer version", () => {
+    const newerLocal = { ...local, dataVersion: 99 };
+    const edited = { ...local, title: "Edited later", updatedAt: "2026-06-01T00:00:00.000Z" };
+    expect(planImport([newerLocal], [edited], "merge")).toMatchObject({ toWrite: [], kept: 1 });
   });
 
   it("replace writes the whole backup and counts what will be removed", () => {

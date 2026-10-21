@@ -2,7 +2,9 @@
 
 import { Field, Textarea } from "@/components/ui/input";
 import { ClaimList } from "../claims/claim-list";
+import { DiscoveryList } from "../discoveries/discovery-list";
 import { EvidenceReferencePanel } from "../evidence/evidence-reference-panel";
+import { ComeUntoChrist } from "../reflection/come-unto-christ";
 import { StatusSelector } from "../status-selector";
 import type { SectionProps } from "../types";
 
@@ -11,8 +13,10 @@ export function ConclusionSection({ investigation, actions, onNavigate }: Sectio
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_17rem]">
+      <div className="flex min-w-0 flex-col gap-8">
         <div className="flex min-w-0 flex-col gap-8">
+          <DiscoveryList investigation={investigation} actions={actions} />
+          <EvidenceReferencePanel investigation={investigation} onManage={goToResearch} />
           <Field
             label="What I understand now"
             optional
@@ -48,19 +52,8 @@ export function ConclusionSection({ investigation, actions, onNavigate }: Sectio
               />
             )}
           </Field>
-          <Field label="Reflection" optional>
-            {(props) => (
-              <Textarea
-                {...props}
-                rows={3}
-                placeholder="Personal impressions, feelings, or commitments"
-                value={investigation.reflectionNotes}
-                onChange={(event) => actions.setText("reflectionNotes", event.target.value)}
-              />
-            )}
-          </Field>
+          <ComeUntoChrist investigation={investigation} actions={actions} />
         </div>
-        <EvidenceReferencePanel investigation={investigation} onManage={goToResearch} />
       </div>
 
       <div className="border-t border-line pt-6">

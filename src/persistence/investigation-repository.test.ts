@@ -1,8 +1,17 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import type { Investigation } from "@/domain/investigation";
+import { RECORD_DATA_VERSION, type Investigation } from "@/domain/investigation";
 import { investigationReducer } from "@/domain/investigation-reducer";
 import { blankInvestigation, challengeSnapshot, richInvestigation, T1, T2 } from "@/domain/test-fixtures";
-import { RECORD_FROM_1_0 } from "./legacy-fixtures";
+import {
+  RECORD_BEFORE_CONNECTIONS,
+  RECORD_BEFORE_CONNECTIONS_AS_READ,
+  RECORD_BEFORE_REFLECTION,
+  RECORD_BEFORE_REFLECTION_AS_READ,
+  RECORD_BEFORE_TRAILS,
+  RECORD_BEFORE_TRAILS_AS_READ,
+  RECORD_FROM_1_0,
+  RECORD_FROM_1_0_AS_READ,
+} from "./legacy-fixtures";
 import { StorageError } from "./storage-errors";
 import { createTestRepository } from "./test-utils";
 
@@ -55,9 +64,8 @@ describe("records from earlier versions", () => {
     const { db, repository } = createTestRepository();
     await db.investigations.put(structuredClone(RECORD_FROM_1_0) as unknown as Investigation);
 
-    const expected = { ...RECORD_FROM_1_0, challengeResponses: [] };
-    expect(await repository.get(RECORD_FROM_1_0.id)).toEqual({ status: "found", investigation: expected });
-    expect(await repository.list()).toEqual({ investigations: [expected], unreadable: 0 });
+    expect(await repository.get(RECORD_FROM_1_0.id)).toEqual({ status: "found", investigation: RECORD_FROM_1_0_AS_READ });
+    expect(await repository.list()).toEqual({ investigations: [RECORD_FROM_1_0_AS_READ], unreadable: 0 });
   });
 
   it("adds a challenge response to a 1.0 record without changing anything else", async () => {
@@ -75,14 +83,93 @@ describe("records from earlier versions", () => {
     });
     expect(await repository.save(edited, RECORD_FROM_1_0.updatedAt)).toEqual({ ok: true });
 
-    const { challengeResponses, ...rest } = (await db.investigations.get(RECORD_FROM_1_0.id))!;
-    expect(rest).toEqual({ ...RECORD_FROM_1_0, updatedAt: T2 });
-    expect(challengeResponses.map((item) => item.response)).toEqual(["“Daily” stands out."]);
+    expect(await db.investigations.get(RECORD_FROM_1_0.id)).toEqual({
+      ...RECORD_FROM_1_0_AS_READ,
+      dataVersion: RECORD_DATA_VERSION,
+      updatedAt: T2,
+      challengeResponses: [expect.objectContaining({ response: "“Daily” stands out." })],
+    });
+  });
+
+  it("adds trail notes to a record saved before trails, keeping its challenge responses", async () => {
+    const { db, repository } = createTestRepository();
+    await db.investigations.put(structuredClone(RECORD_BEFORE_TRAILS) as unknown as Investigation);
+    const loaded = await repository.get(RECORD_BEFORE_TRAILS.id);
+    if (loaded.status !== "found") throw new Error("not loaded");
+    expect(loaded.investigation).toEqual(RECORD_BEFORE_TRAILS_AS_READ);
+
+    const edited = investigationReducer(loaded.investigation, {
+      type: "recordTrailDiscoveries",
+      trailId: "forgiveness-before-the-atonement",
+      step: { stepId: "mark-2", title: "Sins forgiven", question: "What does Jesus say?" },
+      discoveries: "Verse 10 links the healing to the power to forgive.",
+      now: T2,
+    });
+    expect(await repository.save(edited, RECORD_BEFORE_TRAILS.updatedAt)).toEqual({ ok: true });
+
+    const stored = (await db.investigations.get(RECORD_BEFORE_TRAILS.id))!;
+    expect(stored.challengeResponses).toEqual(RECORD_BEFORE_TRAILS.challengeResponses);
+    expect(stored.trailProgress[0].steps[0].discoveries).toBe("Verse 10 links the healing to the power to forgive.");
+  });
+
+  it("connects evidence in a record saved before connections, keeping its responses and trail notes", async () => {
+    const { db, repository } = createTestRepository();
+    await db.investigations.put(structuredClone(RECORD_BEFORE_CONNECTIONS) as unknown as Investigation);
+    const loaded = await repository.get(RECORD_BEFORE_CONNECTIONS.id);
+    if (loaded.status !== "found") throw new Error("not loaded");
+    expect(loaded.investigation).toEqual(RECORD_BEFORE_CONNECTIONS_AS_READ);
+
+    const edited = investigationReducer(loaded.investigation, {
+      type: "addConnection",
+      id: "conn-1",
+      input: { fromEvidenceId: "ev-legacy", toEvidenceId: "ev-second", relationship: "supports", explanation: "" },
+      now: T2,
+    });
+    expect(await repository.save(edited, RECORD_BEFORE_CONNECTIONS.updatedAt)).toEqual({ ok: true });
+
+    const stored = (await db.investigations.get(RECORD_BEFORE_CONNECTIONS.id))!;
+    expect(stored).toEqual({
+      ...RECORD_BEFORE_CONNECTIONS_AS_READ,
+      dataVersion: RECORD_DATA_VERSION,
+      evidenceConnections: edited.evidenceConnections,
+      updatedAt: T2,
+    });
+    expect(stored.evidenceConnections).toHaveLength(1);
+  });
+
+  it("adds a reflection and a discovery to a record saved before them, keeping everything else", async () => {
+    const { db, repository } = createTestRepository();
+    await db.investigations.put(structuredClone(RECORD_BEFORE_REFLECTION) as unknown as Investigation);
+    const loaded = await repository.get(RECORD_BEFORE_REFLECTION.id);
+    if (loaded.status !== "found") throw new Error("not loaded");
+    expect(loaded.investigation).toEqual(RECORD_BEFORE_REFLECTION_AS_READ);
+
+    let edited = investigationReducer(loaded.investigation, {
+      type: "setReflection",
+      promptId: "learned-about-christ",
+      value: "He asks for daily discipleship.",
+      now: T1,
+    });
+    edited = investigationReducer(edited, {
+      type: "addHighlight",
+      id: "hl-1",
+      input: { title: "Daily", insight: "Both passages stress daily choice.", evidenceIds: ["ev-legacy", "ev-second"] },
+      now: T2,
+    });
+    expect(await repository.save(edited, RECORD_BEFORE_REFLECTION.updatedAt)).toEqual({ ok: true });
+
+    expect(await db.investigations.get(RECORD_BEFORE_REFLECTION.id)).toEqual({
+      ...RECORD_BEFORE_REFLECTION_AS_READ,
+      dataVersion: RECORD_DATA_VERSION,
+      christReflection: { "learned-about-christ": "He asks for daily discipleship." },
+      discoveryHighlights: edited.discoveryHighlights,
+      updatedAt: T2,
+    });
   });
 
   it("keeps fields written by a newer version through load, edit, and save", async () => {
     const { db, repository } = createTestRepository();
-    const fromNewer = { ...richInvestigation("next"), trailProgress: { currentStep: 2 } };
+    const fromNewer = { ...richInvestigation("next"), fieldFromANewerVersion: { currentStep: 2 } };
     await db.investigations.put(fromNewer);
 
     const loaded = await repository.get("next");
@@ -91,8 +178,47 @@ describe("records from earlier versions", () => {
 
     expect(await db.investigations.get("next")).toMatchObject({
       analysisNotes: "Edited in an older tab",
-      trailProgress: { currentStep: 2 },
+      fieldFromANewerVersion: { currentStep: 2 },
     });
+  });
+});
+
+describe("records from newer versions of the app", () => {
+  it("stamps every write with this version's record format", async () => {
+    const { db, repository } = createTestRepository();
+    await repository.save({ ...richInvestigation("inv-1"), dataVersion: undefined }, null);
+    expect((await db.investigations.get("inv-1"))?.dataVersion).toBe(RECORD_DATA_VERSION);
+  });
+
+  it("won't open, save over, or overwrite a record saved by a newer version", async () => {
+    const { db, repository } = createTestRepository();
+    const fromNewer = { ...richInvestigation("next"), dataVersion: RECORD_DATA_VERSION + 1 };
+    await db.investigations.put(fromNewer);
+
+    expect(await repository.get("next")).toEqual({ status: "newer" });
+    const edited = edit(richInvestigation("next"), "Edited by an older tab");
+    expect(await repository.save(edited, fromNewer.updatedAt)).toEqual({ ok: false, conflict: "newer-version" });
+    await expect(repository.overwrite(edited)).rejects.toMatchObject({ kind: "version" });
+    expect(await db.investigations.get("next")).toEqual(fromNewer);
+  });
+
+  it("reports a record's edit time and format for change watching", async () => {
+    const { repository } = createTestRepository();
+    expect(await repository.stamp("nope")).toBeNull();
+    await repository.save(richInvestigation("inv-1"), null);
+    expect(await repository.stamp("inv-1")).toEqual({ updatedAt: T2, dataVersion: RECORD_DATA_VERSION });
+  });
+
+  it("exports records exactly as stored, keeping fields this version doesn't know", async () => {
+    const { db, repository } = createTestRepository();
+    const record = richInvestigation("inv-1");
+    const withFutureField = {
+      ...record,
+      evidence: record.evidence.map((card) => ({ ...card, pageNumber: 12 })),
+    };
+    await db.investigations.put(withFutureField);
+    const { backup } = await repository.exportBackup("2026-10-20T12:00:00.000Z");
+    expect(backup.investigations).toEqual([withFutureField]);
   });
 });
 
@@ -143,10 +269,25 @@ describe("conflict detection", () => {
     expect(await repository.count()).toBe(0);
   });
 
+  it("treats saving exactly what's already stored as success, not a conflict", async () => {
+    const { repository } = createTestRepository();
+    const original = richInvestigation("inv-1");
+    await repository.save(original, null);
+    const edited = edit(original, "Written by a recovered copy", "2026-10-20T09:00:00.000Z");
+    await repository.save(edited, original.updatedAt);
+    expect(await repository.save(edited, original.updatedAt)).toEqual({ ok: true });
+    expect(await repository.save(edited, null)).toEqual({ ok: true });
+    expect(await repository.save(edit(original, "Something else", "2026-10-20T09:01:00.000Z"), original.updatedAt)).toEqual({
+      ok: false,
+      conflict: "modified",
+    });
+  });
+
   it("refuses to create a new investigation over an existing id", async () => {
     const { repository } = createTestRepository();
     await repository.save(richInvestigation("inv-1"), null);
-    expect(await repository.save(richInvestigation("inv-1"), null)).toEqual({ ok: false, conflict: "exists" });
+    const different = richInvestigation("inv-1", { title: "A different investigation with the same id" });
+    expect(await repository.save(different, null)).toEqual({ ok: false, conflict: "exists" });
   });
 
   it("overwrite writes regardless, for when the user chooses their version", async () => {

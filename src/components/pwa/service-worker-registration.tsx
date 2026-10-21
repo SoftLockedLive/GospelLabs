@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-
-const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
+import { APP_VERSION } from "@/lib/app-version";
 
 /**
  * Registers the offline service worker in production builds. In development

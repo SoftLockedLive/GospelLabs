@@ -379,6 +379,35 @@
         "What purposes for mortal life do these passages identify?",
         "How does understanding premortal life change how you view this life?"
       ]
+    },
+    {
+      "id": "forgiveness-before-the-atonement",
+      "question": "How could Jesus Christ forgive sins before the Atonement?",
+      "category": "Jesus Christ",
+      "difficulty": "advanced",
+      "tags": ["forgiveness", "atonement", "remission of sins", "faith"],
+      "suggestedReferences": [
+        {
+          "label": "Mark 2:5–12",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p5-p12#p5"
+        },
+        {
+          "label": "John 8:1–11",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/8?lang=eng&id=p1-p11#p1"
+        },
+        {
+          "label": "Mosiah 3:13",
+          "type": "scripture",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng&id=p13#p13"
+        }
+      ],
+      "prompts": [
+        "What does each passage state directly, and what would you be inferring?",
+        "What do Mark 2:5 and John 8:11 each record Jesus saying, and how do the two statements differ?",
+        "What does Mosiah 3:13 say about people who believed in Christ before He came?"
+      ]
     }
   ]
 }

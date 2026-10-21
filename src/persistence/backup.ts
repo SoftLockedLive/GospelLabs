@@ -12,12 +12,16 @@
  *
  * Version history:
  *   1  Gospel Labs 1.0.
- *   2  Gospel Labs 1.1: investigations gain `challengeResponses`. Bumped so
- *      that 1.0, which would silently drop the new field, refuses these files
- *      and asks the user to update instead.
+ *   2  Gospel Labs 1.1: investigations gain `evidenceConnections`,
+ *      `discoveryHighlights`, `challengeResponses`, `trailProgress`, and
+ *      `christReflection`. Bumped so that 1.0, which
+ *      would silently drop the new fields, refuses these files and asks the
+ *      user to update instead. (Pre-release 1.1 builds wrote version 2 without
+ *      some of these fields; they default to empty, so those files import
+ *      unchanged.)
  */
 import { z } from "zod";
-import { investigationSchema, type Investigation } from "@/domain/investigation";
+import { investigationSchema, isFromNewerVersion, type Investigation } from "@/domain/investigation";
 
 export const BACKUP_FORMAT = "gospel-labs-backup";
 export const BACKUP_VERSION = 2;
@@ -77,6 +81,15 @@ export type BackupParseResult = { ok: true; backup: ParsedBackup } | { ok: false
 
 type Migration = (data: Record<string, unknown>) => Record<string, unknown>;
 
+/** Fields version 2 added to each investigation, as they start out. */
+const addedInVersion2 = () => ({
+  evidenceConnections: [],
+  discoveryHighlights: [],
+  challengeResponses: [],
+  trailProgress: [],
+  christReflection: {},
+});
+
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   typeof value === "object" && value !== null && !Array.isArray(value);
 
@@ -86,14 +99,12 @@ const isRecord = (value: unknown): value is Record<string, unknown> =>
  * so they must tolerate malformed entries and leave them for validation to report.
  */
 const MIGRATIONS: Record<number, Migration> = {
-  // 1 → 2: investigations start with no challenge responses. Nothing else changes.
+  // 1 → 2: investigations start with none of the 1.1 additions. Nothing else changes.
   1: (data) => ({
     ...data,
     version: 2,
     investigations: Array.isArray(data.investigations)
-      ? data.investigations.map((entry: unknown) =>
-          isRecord(entry) && !("challengeResponses" in entry) ? { ...entry, challengeResponses: [] } : entry,
-        )
+      ? data.investigations.map((entry: unknown) => (isRecord(entry) ? { ...addedInVersion2(), ...entry } : entry))
       : data.investigations,
   }),
 };
@@ -161,6 +172,10 @@ export function parseBackup(text: string): BackupParseResult {
       skipped.push({ index, id, title, reason: describeIssue(result.error.issues[0]) });
       return;
     }
+    if (isFromNewerVersion(result.data)) {
+      skipped.push({ index, id, title, reason: "Saved by a newer version of Gospel Labs. Update the app, then import it." });
+      return;
+    }
     const firstIndex = seen.get(result.data.id);
     if (firstIndex !== undefined) {
       skipped.push({ index, id, title, reason: `Duplicate id; the copy at position ${firstIndex + 1} is used` });
@@ -190,12 +205,18 @@ export interface ImportPlan {
 }
 
 /** JSON with sorted keys, so equal records compare equal regardless of key order. */
-function stableStringify(value: unknown): string {
+export function stableStringify(value: unknown): string {
   return JSON.stringify(value, (_key, inner: unknown) =>
     inner && typeof inner === "object" && !Array.isArray(inner)
       ? Object.fromEntries(Object.entries(inner).sort(([a], [b]) => a.localeCompare(b)))
       : inner,
   );
+}
+
+/** Same investigation content, ignoring key order and the format stamp that saving adds. */
+export function sameContent(a: unknown, b: unknown): boolean {
+  const unstamped = (value: unknown) => ({ ...(value as object), dataVersion: undefined });
+  return stableStringify(unstamped(a)) === stableStringify(unstamped(b));
 }
 
 /**
@@ -217,7 +238,10 @@ export function planImport(
   const plan: ImportPlan = { mode, toWrite: [], added: 0, updated: 0, kept: 0, removed: 0 };
   for (const candidate of incoming) {
     const current = stored.get(candidate.id);
-    if (!current) {
+    if (current && isFromNewerVersion(current)) {
+      // Never replace data saved by a newer version of the app.
+      plan.kept++;
+    } else if (!current) {
       plan.toWrite.push(candidate);
       plan.added++;
     } else if (

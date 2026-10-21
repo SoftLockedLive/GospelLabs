@@ -1,11 +1,12 @@
 import { expect, test, type Page } from "@playwright/test";
 import { RECORD_FROM_1_0 } from "../src/persistence/legacy-fixtures";
-import { createInvestigation, expectSaved, goToSection } from "./helpers";
+import { createInvestigation, expectSaved, goToSection, openActivity } from "./helpers";
 
 const challengePanel = (page: Page) => page.getByRole("region", { name: "Research challenge" });
 
 test("respond to challenges, try another, revisit, edit, and undo a deletion", async ({ page }) => {
   await createInvestigation(page, "Challenges");
+  await openActivity(page, "Challenges");
   const panel = challengePanel(page);
   const title = panel.getByRole("heading", { level: 4 });
   const response = panel.getByRole("textbox", { name: "Your response" });
@@ -24,7 +25,8 @@ test("respond to challenges, try another, revisit, edit, and undo a deletion", a
   await expect(panel.locator("[aria-live]")).toContainText("Apply");
   await response.fill("A principle I could act on.");
   await expectSaved(page);
-  await expect(panel.getByRole("radio", { name: "Apply, 1 response" })).toBeChecked();
+  // The first challenge is picked from the investigation's random id, so it may already have been an Apply one.
+  await expect(panel.getByRole("radio", { name: /^Apply, [12] responses?$/ })).toBeChecked();
 
   // Responses survive a reload and can be reopened and edited.
   await page.reload();
@@ -79,6 +81,7 @@ test("an investigation saved by Gospel Labs 1.0 opens unchanged and accepts chal
 
   await goToSection(page, "Research");
   await expect(page.getByText("Jesus says to take up the cross daily.").filter({ visible: true })).toBeVisible();
+  await openActivity(page, "Challenges");
   await challengePanel(page).getByRole("textbox", { name: "Your response" }).fill("Daily stands out.");
   await expectSaved(page);
 
@@ -97,10 +100,17 @@ test("an investigation saved by Gospel Labs 1.0 opens unchanged and accepts chal
       }),
     RECORD_FROM_1_0.id,
   );
-  // Everything 1.0 wrote is still there; only the response, the section, and the edit time are new.
+  // Everything 1.0 wrote is still there; only the response, the section, the edit time,
+  // and the other (empty) 1.1 fields are new.
   expect(stored).toEqual({
     ...RECORD_FROM_1_0,
     currentSection: "research",
+    researchActivity: "challenges",
+    dataVersion: 2,
+    evidenceConnections: [],
+    discoveryHighlights: [],
+    trailProgress: [],
+    christReflection: {},
     updatedAt: expect.not.stringMatching(RECORD_FROM_1_0.updatedAt),
     challengeResponses: [expect.objectContaining({ response: "Daily stands out." })],
   });

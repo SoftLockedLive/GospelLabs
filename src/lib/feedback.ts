@@ -2,10 +2,11 @@
  * Feedback goes by email, composed in the user's own email app. Gospel Labs
  * never sends anything itself; the templates only include what's shown here.
  */
-export const FEEDBACK_EMAIL = "gospellabs@proton.me";
+import { APP_VERSION } from "./app-version";
 
-/** Identifies the build in bug reports (the deployment's commit or build time). */
-export const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
+export { APP_VERSION };
+
+export const FEEDBACK_EMAIL = "gospellabs@proton.me";
 
 export type FeedbackKind = "bug" | "idea";
 

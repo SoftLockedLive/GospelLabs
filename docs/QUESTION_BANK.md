@@ -2,6 +2,8 @@
 
 All curated questions live in one file: [`src/data/question-bank.json`](../src/data/question-bank.json). Adding a question means adding one object to its `questions` array. No code changes are needed: categories, filters, detail pages, and search pick it up automatically.
 
+A question can also have an optional guided **discovery trail**, defined separately in `src/data/discovery-trails.json`; see [DISCOVERY_TRAILS.md](DISCOVERY_TRAILS.md).
+
 The file declares its JSON Schema (`"$schema": "./question-bank.schema.json"`), so editors such as VS Code autocomplete fields and flag mistakes as you type.
 
 ## Example entry

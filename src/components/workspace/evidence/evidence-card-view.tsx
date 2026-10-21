@@ -1,4 +1,4 @@
-import { ExternalLink, Link2, Pencil, Trash2 } from "lucide-react";
+import { ExternalLink, Link2, Pencil, Spline, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SOURCE_TYPE_LABELS, type EvidenceCard } from "@/domain/investigation";
@@ -9,11 +9,22 @@ interface EvidenceCardViewProps {
   card: EvidenceCard;
   label: string;
   citationCount: number;
+  connectionCount: number;
   onEdit: () => void;
   onDelete: () => void;
+  /** Starts a new connection from this card. Omitted when there's nothing to connect it to. */
+  onConnect?: () => void;
 }
 
-export function EvidenceCardView({ card, label, citationCount, onEdit, onDelete }: EvidenceCardViewProps) {
+export function EvidenceCardView({
+  card,
+  label,
+  citationCount,
+  connectionCount,
+  onEdit,
+  onDelete,
+  onConnect,
+}: EvidenceCardViewProps) {
   const headingId = `evidence-${card.id}`;
 
   return (
@@ -21,7 +32,7 @@ export function EvidenceCardView({ card, label, citationCount, onEdit, onDelete 
       id={`evidence-card-${card.id}`}
       tabIndex={-1}
       aria-labelledby={headingId}
-      className="rounded-xl border border-line bg-surface-sunken/60 p-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 sm:p-5"
+      className="scroll-mt-40 rounded-xl border border-line bg-surface-sunken/60 p-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 data-highlight:ring-2 data-highlight:ring-accent/60 sm:p-5"
     >
       <header className="flex items-start justify-between gap-3">
         <div className="min-w-0">
@@ -32,6 +43,12 @@ export function EvidenceCardView({ card, label, citationCount, onEdit, onDelete 
               <span className="inline-flex items-center gap-1 text-xs text-subtle">
                 <Link2 aria-hidden className="size-3" />
                 Cited by {citationCount} {citationCount === 1 ? "claim" : "claims"}
+              </span>
+            )}
+            {connectionCount > 0 && (
+              <span className="inline-flex items-center gap-1 text-xs text-subtle">
+                <Spline aria-hidden className="size-3" />
+                In {connectionCount} {connectionCount === 1 ? "connection" : "connections"}
               </span>
             )}
           </div>
@@ -52,6 +69,17 @@ export function EvidenceCardView({ card, label, citationCount, onEdit, onDelete 
           )}
         </div>
         <div className="flex shrink-0 gap-1">
+          {onConnect && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="size-8 px-0"
+              aria-label={`Connect ${label}: ${card.sourceTitle} to other evidence`}
+              onClick={onConnect}
+            >
+              <Spline aria-hidden />
+            </Button>
+          )}
           <Button variant="ghost" size="sm" className="size-8 px-0" aria-label={`Edit ${label}: ${card.sourceTitle}`} onClick={onEdit}>
             <Pencil aria-hidden />
           </Button>

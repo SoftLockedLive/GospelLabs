@@ -16,6 +16,33 @@ interface DeleteInvestigationDialogProps {
 
 const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? "" : "s"}`;
 
+/** "2 evidence cards, 1 claim, and 3 challenge responses": what deleting an investigation removes. */
+function describeContents(investigation: Investigation): string {
+  const trailNotes = investigation.trailProgress.reduce(
+    (count, trail) => count + trail.steps.filter((step) => step.discoveries.trim()).length,
+    0,
+  );
+  const parts = [
+    plural(investigation.evidence.length, "evidence card"),
+    plural(investigation.claims.length, "claim"),
+    ...(investigation.evidenceConnections.length > 0
+      ? [plural(investigation.evidenceConnections.length, "evidence connection")]
+      : []),
+    ...(investigation.discoveryHighlights.length > 0
+      ? [
+          investigation.discoveryHighlights.length === 1
+            ? "1 saved discovery"
+            : `${investigation.discoveryHighlights.length} saved discoveries`,
+        ]
+      : []),
+    ...(investigation.challengeResponses.length > 0
+      ? [plural(investigation.challengeResponses.length, "challenge response")]
+      : []),
+    ...(trailNotes > 0 ? [`notes on ${plural(trailNotes, "trail step")}`] : []),
+  ];
+  return parts.length === 2 ? parts.join(" and ") : `${parts.slice(0, -1).join(", ")}, and ${parts.at(-1)}`;
+}
+
 export function DeleteInvestigationDialog({ investigation, onClose, onDeleted }: DeleteInvestigationDialogProps) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -49,11 +76,8 @@ export function DeleteInvestigationDialog({ investigation, onClose, onDeleted }:
       description={
         investigation && (
           <>
-            <strong className="font-medium text-fg">{title}</strong>, including its{" "}
-            {plural(investigation.evidence.length, "evidence card")},{" "}
-            {plural(investigation.claims.length, "claim")}, and{" "}
-            {plural(investigation.challengeResponses.length, "challenge response")}, will be permanently deleted from
-            this device. This can&rsquo;t be undone.
+            <strong className="font-medium text-fg">{title}</strong>, including its {describeContents(investigation)},
+            will be permanently deleted from this device. This can&rsquo;t be undone.
           </>
         )
       }

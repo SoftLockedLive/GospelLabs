@@ -1,7 +1,10 @@
 import { expect, test } from "@playwright/test";
 import { createInvestigation, expectSaved, goToSection, libraryItem } from "./helpers";
 
-test("keeps working offline after the first visit", async ({ page, context }) => {
+test("keeps working offline after the first visit", async ({ page, context, browserName }) => {
+  // Playwright's offline mode doesn't reach service-worker requests in Firefox: the worker still
+  // gets network responses, so this test can't tell cached pages from fresh ones there.
+  test.skip(browserName === "firefox", "Playwright can't emulate offline service-worker requests in Firefox");
   await page.goto("/");
   // Wait until the service worker has installed and cached the app shell.
   await page.evaluate(async () => {
