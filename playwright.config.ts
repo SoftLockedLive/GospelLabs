@@ -1,6 +1,10 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { defineConfig, devices, type Project } from "@playwright/test";
 
 const PORT = 3210;
+/** The release being tested (package.json; see docs/VERSIONING.md). */
+const RELEASE = (JSON.parse(readFileSync(join(__dirname, "package.json"), "utf8")) as { version: string }).version;
 
 /**
  * End-to-end tests run against the static production build in out/ (the
@@ -31,6 +35,20 @@ export default defineConfig({
   reporter: process.env.CI ? "github" : "list",
   use: {
     baseURL: `http://localhost:${PORT}`,
+    // Most tests are about a learner already using this version: the welcome and What's new are
+    // marked as seen, so they don't appear. e2e/release-notes.spec.ts opts out to test them.
+    storageState: {
+      cookies: [],
+      origins: [
+        {
+          origin: `http://localhost:${PORT}`,
+          localStorage: [
+            { name: "gospel-labs:last-seen-version", value: RELEASE },
+            { name: "gospel-labs:welcome", value: "done" },
+          ],
+        },
+      ],
+    },
     trace: "retain-on-failure",
   },
   projects,

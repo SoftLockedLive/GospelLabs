@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { fetchDeployedVersion, isUpdateAvailable, VERSION_URL } from "./update-check";
+import { fetchDeployedInfo, fetchDeployedVersion, isUpdateAvailable, VERSION_URL } from "./update-check";
 
 const respond = (body: unknown, ok = true) => vi.fn(async () => ({ ok, json: async () => body }) as Response);
 
@@ -28,5 +28,31 @@ describe("isUpdateAvailable", () => {
     expect(isUpdateAvailable("2", "1")).toBe(true);
     expect(isUpdateAvailable("1", "1")).toBe(false);
     expect(isUpdateAvailable(null, "1")).toBe(false);
+  });
+});
+
+describe("fetchDeployedInfo", () => {
+  const respond = (body: unknown) => (async () => new Response(JSON.stringify(body), { status: 200 })) as unknown as typeof fetch;
+
+  it("reads the release, its title, and up to three highlights (added in 2.1)", async () => {
+    const info = await fetchDeployedInfo(
+      respond({ version: "20261101120000", release: "2.2.0", title: "Something new", highlights: ["One", "Two", "Three", "Four"] }),
+    );
+    expect(info).toEqual({ version: "20261101120000", release: "2.2.0", title: "Something new", highlights: ["One", "Two", "Three"] });
+  });
+
+  it("still works with a file from before 2.1 that has only a version", async () => {
+    expect(await fetchDeployedInfo(respond({ version: "20261020221921" }))).toEqual({
+      version: "20261020221921",
+      release: undefined,
+      title: undefined,
+      highlights: undefined,
+    });
+  });
+
+  it("ignores malformed extras and rejects a file without a version", async () => {
+    const info = await fetchDeployedInfo(respond({ version: "x", release: 3, title: "", highlights: [1, " ", "Kept"] }));
+    expect(info).toEqual({ version: "x", release: undefined, title: undefined, highlights: ["Kept"] });
+    expect(await fetchDeployedInfo(respond({ release: "2.2.0" }))).toBeNull();
   });
 });

@@ -2,6 +2,7 @@ import { ShieldCheck } from "lucide-react";
 import { Suspense, type ReactNode } from "react";
 import { OfflineNotice } from "@/components/pwa/offline-notice";
 import { UpdateNotice } from "@/components/pwa/update-notice";
+import { WhatsNew } from "@/components/release/whats-new";
 import { cn } from "@/lib/cn";
 import { Brand } from "./brand";
 import { BottomNav, BottomNavList, SidebarNav, SidebarNavList } from "./nav-links";
@@ -47,6 +48,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
         <UpdateNotice />
         <OfflineNotice />
+        <WhatsNew />
         <main id="main" className="relative isolate flex-1 pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-0">
           <div aria-hidden className="bg-page-wash pointer-events-none absolute inset-x-0 top-0 -z-10 h-128" />
           <div aria-hidden className="bg-notebook-grid pointer-events-none absolute inset-0 -z-10" />

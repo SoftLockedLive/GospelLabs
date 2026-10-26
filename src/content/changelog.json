@@ -1,0 +1,52 @@
+{
+  "note": "What changed in each release, newest first, in plain words for learners. Drives the What's new card, the update notice, and Settings › About. Version numbers are MAJOR.MINOR.CONTENT (docs/VERSIONING.md); the newest entry must match package.json (checked by tests).",
+  "releases": [
+    {
+      "version": "2.1.0",
+      "date": "2026-10-26",
+      "kind": "minor",
+      "title": "A warmer welcome",
+      "highlights": [
+        "New to Gospel Labs? A short welcome and tour help you get started, choose a look, and know where to report a problem.",
+        "After an update, a card like this one shows what changed since your last visit.",
+        "Fixed: tapping anywhere on the Connect with Christ card on the home page now opens it.",
+        "Settings › About shows your version and every change since 1.0."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-10-26",
+      "kind": "major",
+      "title": "A new way to study",
+      "highlights": [
+        "A new home page: continue where you left off, or start studying in a tap or two, in a quick or a deep session.",
+        "Guided investigations of real gospel questions, with hands-on activities, four levels of difficulty, hints that point back to the scriptures, and side questions.",
+        "A Discovery Notebook and a personal Discovery Map that grow from what you study.",
+        "Scripture Explorer, the Character of Christ Builder, and Connect with Christ, a quiet few minutes with the Savior.",
+        "New themes and motion settings, and backups that include all of your study.",
+        "Your research notebooks are still under Research, unchanged."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-10-21",
+      "kind": "minor",
+      "title": "Guided discovery",
+      "highlights": [
+        "Research challenges, a discovery trail, and connections between pieces of evidence.",
+        "Save discoveries from any section, and an optional Come unto Christ reflection.",
+        "Open tabs notice updates, and your edits are never silently overwritten."
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-10-20",
+      "kind": "major",
+      "title": "First release",
+      "highlights": [
+        "A private research notebook for gospel questions: question, hypothesis, research, analysis, and conclusion.",
+        "A question bank, evidence cards, autosave, backups, and offline use."
+      ]
+    }
+  ]
+}

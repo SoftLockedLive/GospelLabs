@@ -130,8 +130,10 @@ function ConnectCard({
         </span>
         <ArrowUpRight aria-hidden className="size-4 text-sacred-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-sacred-accent" />
       </div>
-      <h3 className="relative mt-4 text-base font-semibold tracking-tight">
-        <Link href={connectHref()} className="outline-none after:absolute after:inset-0 after:rounded-2xl">
+      {/* Not `relative`: the link's ::after must be positioned against the whole card (like ToolCard's), and
+          z-10 keeps it above the description and today's session, which are `relative` to sit above the glow. */}
+      <h3 className="mt-4 text-base font-semibold tracking-tight">
+        <Link href={connectHref()} className="outline-none after:absolute after:inset-0 after:z-10 after:rounded-2xl">
           Connect with Christ
         </Link>
       </h3>

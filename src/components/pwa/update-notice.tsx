@@ -4,7 +4,7 @@ import { RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { saveAllWork, unsavedDrafts } from "@/lib/unsaved-work";
-import { fetchDeployedVersion, isUpdateAvailable } from "@/lib/update-check";
+import { fetchDeployedInfo, isUpdateAvailable, type DeployedInfo } from "@/lib/update-check";
 
 const CHECK_INTERVAL_MS = 30 * 60 * 1000;
 
@@ -18,7 +18,7 @@ type Problem = { kind: "drafts"; names: string[] } | { kind: "unsaved" } | null;
  * connection returns, and every half hour while open. Production builds only.
  */
 export function UpdateNotice() {
-  const [available, setAvailable] = useState(false);
+  const [available, setAvailable] = useState<DeployedInfo | null>(null);
   const [dismissed, setDismissed] = useState(false);
   const [busy, setBusy] = useState(false);
   const [problem, setProblem] = useState<Problem>(null);
@@ -28,8 +28,8 @@ export function UpdateNotice() {
     let active = true;
     const check = async () => {
       if (!navigator.onLine) return;
-      const deployed = await fetchDeployedVersion();
-      if (active && isUpdateAvailable(deployed)) setAvailable(true);
+      const deployed = await fetchDeployedInfo();
+      if (active && deployed && isUpdateAvailable(deployed.version)) setAvailable(deployed);
     };
     const onVisibilityChange = () => {
       if (document.visibilityState === "visible") void check();
@@ -74,8 +74,11 @@ export function UpdateNotice() {
               <p className="flex items-start gap-2 text-sm text-fg">
                 <RefreshCw aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
                 <span>
-                  <strong className="font-semibold">A new version of Gospel Labs is available.</strong> Updating saves
-                  your work, then reloads the page.
+                  <strong className="font-semibold">
+                    {available.release ? `Gospel Labs ${available.release} is available` : "A new version of Gospel Labs is available"}
+                    {available.title ? `: ${available.title}.` : "."}
+                  </strong>{" "}
+                  Updating saves your work, then reloads the page.
                 </span>
               </p>
               <div className="flex gap-2">
@@ -87,6 +90,13 @@ export function UpdateNotice() {
                 </Button>
               </div>
             </div>
+            {available.highlights && (
+              <ul className="flex list-disc flex-col gap-0.5 pl-11 text-xs leading-relaxed text-muted marker:text-subtle">
+                {available.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            )}
             {problem?.kind === "drafts" && (
               <div role="alert" className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-fg">
                 <p>

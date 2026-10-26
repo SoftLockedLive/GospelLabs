@@ -2,9 +2,9 @@
  * Feedback goes by email, composed in the user's own email app. Gospel Labs
  * never sends anything itself; the templates only include what's shown here.
  */
-import { APP_VERSION } from "./app-version";
+import { APP_RELEASE, APP_VERSION } from "./app-version";
 
-export { APP_VERSION };
+export { APP_RELEASE, APP_VERSION };
 
 export const FEEDBACK_EMAIL = "gospellabs@proton.me";
 
@@ -39,7 +39,7 @@ const TEMPLATES: Record<FeedbackKind, { subject: string; body: string[] }> = {
  */
 export function feedbackMailto(kind: FeedbackKind, details?: string): string {
   const { subject, body } = TEMPLATES[kind];
-  const lines = [...body, ...(details ? [details, ""] : []), `App version: ${APP_VERSION}`];
+  const lines = [...body, ...(details ? [details, ""] : []), `App version: ${APP_RELEASE} (build ${APP_VERSION})`];
   // encodeURIComponent, not URLSearchParams: some email apps show "+" literally instead of a space.
   // RFC 6068 asks for CRLF line breaks in mailto bodies.
   return `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\r\n"))}`;

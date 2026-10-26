@@ -32,6 +32,10 @@ Firefox and WebKit are opt-in for the end-to-end tests: `E2E_BROWSERS=firefox,we
 
 Each build is stamped with its UTC build time (for example `20261020221921`). Settings › Feedback shows it, the service worker uses it to replace its caches, and it's published as [`/version.json`](#updates-and-the-version-manifest) so open copies of the app notice a new deployment.
 
+## Versions
+
+Releases are numbered MAJOR.MINOR.CONTENT and recorded in `src/content/changelog.json`. See [VERSIONING.md](VERSIONING.md) for the rule and the release steps. Tag the deployed commit `vX.Y.Z`.
+
 ## Deploying
 
 ```bash

@@ -1,6 +1,7 @@
-import { Database, GraduationCap, MessageSquare, Palette, ShieldCheck, Wind } from "lucide-react";
+import { Database, GraduationCap, Info, MessageSquare, Palette, ShieldCheck, Wind } from "lucide-react";
 import type { Metadata } from "next";
 import { PageContainer } from "@/components/layout/app-shell";
+import { AboutVersion } from "@/components/release/about-version";
 import { DataManagement } from "@/components/settings/data-management";
 import { FeedbackLinks } from "@/components/settings/feedback-links";
 import { MotionSelector } from "@/components/settings/motion-selector";
@@ -80,6 +81,10 @@ export default function SettingsPage() {
           description="Report a problem or suggest an improvement. Every message is read."
         >
           <FeedbackLinks />
+        </SettingsSection>
+
+        <SettingsSection icon={Info} title="About" description="Your version of Gospel Labs, and what changed in each release.">
+          <AboutVersion />
         </SettingsSection>
       </div>
     </PageContainer>

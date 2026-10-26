@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { APP_VERSION, FEEDBACK_EMAIL, feedbackMailto } from "./feedback";
+import { APP_RELEASE, APP_VERSION, FEEDBACK_EMAIL, feedbackMailto } from "./feedback";
 
 function parse(link: string) {
   const [address, query] = link.replace(/^mailto:/, "").split("?");
@@ -25,7 +25,7 @@ describe("feedbackMailto", () => {
   it("ends with the app version and includes optional details", () => {
     const { body } = parse(feedbackMailto("bug", "Error shown: boom"));
     expect(body).toContain("Error shown: boom");
-    expect(body.endsWith(`App version: ${APP_VERSION}`)).toBe(true);
+    expect(body.endsWith(`App version: ${APP_RELEASE} (build ${APP_VERSION})`)).toBe(true);
   });
 
   it("encodes spaces as %20 and line breaks as CRLF", () => {

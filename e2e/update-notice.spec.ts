@@ -50,3 +50,18 @@ test("a newer deployment is announced, and updating saves work before reloading"
   await expect(page.getByRole("textbox", { name: "Context" })).toHaveValue("Typed just before updating");
   await expectSaved(page);
 });
+
+test("from 2.1, the notice names the new release and what changed in it", async ({ page }) => {
+  await page.goto("/");
+  await page.route("**/version.json*", (route) =>
+    route.fulfill({
+      contentType: "application/json",
+      body: JSON.stringify({ version: "a-newer-build", release: "9.9.0", title: "Something new", highlights: ["First change", "Second change"] }),
+    }),
+  );
+  await page.evaluate(() => document.dispatchEvent(new Event("visibilitychange")));
+  const announced = page.getByRole("status").filter({ hasText: "Gospel Labs 9.9.0 is available: Something new." });
+  await expect(announced).toBeVisible();
+  await expect(announced.getByRole("listitem")).toHaveText(["First change", "Second change"]);
+  await expect(announced.getByRole("button", { name: "Update now" })).toBeVisible();
+});

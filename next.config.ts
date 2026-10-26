@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import type { NextConfig } from "next";
 
 /**
@@ -6,6 +7,13 @@ import type { NextConfig } from "next";
  * it so bug reports can name the build.
  */
 const appVersion = new Date().toISOString().replace(/\D/g, "").slice(0, 14);
+
+/**
+ * The release number learners see (MAJOR.MINOR.CONTENT; see docs/VERSIONING.md).
+ * package.json is its only source; src/content/changelog.json must have a
+ * matching entry (checked by tests), so the app, the changelog, and the git tag agree.
+ */
+const appRelease = (JSON.parse(readFileSync(new URL("./package.json", import.meta.url), "utf8")) as { version: string }).version;
 
 /**
  * Gospel Labs is a static export served by Caddy on Atlas (see scripts/deploy.sh).
@@ -18,6 +26,7 @@ const nextConfig: NextConfig = {
   output: "export",
   env: {
     NEXT_PUBLIC_APP_VERSION: appVersion,
+    NEXT_PUBLIC_APP_RELEASE: appRelease,
   },
   turbopack: {
     rules: {

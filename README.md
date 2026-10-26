@@ -6,7 +6,7 @@ Gospel Labs is a private, Christ-centered scripture-study app for youth and adul
 
 Gospel Labs never claims religious authority, grades testimony, or measures how spiritual anyone is. There are no points, streaks, or rankings. Every explanation says where it comes from: scripture, an official Church resource, a speaker's teaching, scholarship, Gospel Labs' own suggestion, or your interpretation. It is an independent study tool, not an official Church product.
 
-Version 2.0 is documented in [docs/GOSPEL_LABS_2.0_RELEASE.md](docs/GOSPEL_LABS_2.0_RELEASE.md) (release report), [docs/2.0/ARCHITECTURE.md](docs/2.0/ARCHITECTURE.md), [docs/2.0/CONTENT_GUIDE.md](docs/2.0/CONTENT_GUIDE.md), [docs/2.0/LEARNER_QUESTIONS.md](docs/2.0/LEARNER_QUESTIONS.md), and [docs/2.0/DOCTRINAL_REVIEW.md](docs/2.0/DOCTRINAL_REVIEW.md). The original specification is [PROJECT_SPEC.md](PROJECT_SPEC.md).
+Versions are MAJOR.MINOR.CONTENT (major update, improvements and fixes, new content); see [docs/VERSIONING.md](docs/VERSIONING.md) and the changelog in `src/content/changelog.json`. Version 2.0 is documented in [docs/GOSPEL_LABS_2.0_RELEASE.md](docs/GOSPEL_LABS_2.0_RELEASE.md) (release report), [docs/2.0/ARCHITECTURE.md](docs/2.0/ARCHITECTURE.md), [docs/2.0/CONTENT_GUIDE.md](docs/2.0/CONTENT_GUIDE.md), [docs/2.0/LEARNER_QUESTIONS.md](docs/2.0/LEARNER_QUESTIONS.md), and [docs/2.0/DOCTRINAL_REVIEW.md](docs/2.0/DOCTRINAL_REVIEW.md). The original specification is [PROJECT_SPEC.md](PROJECT_SPEC.md).
 
 ## Study modes (2.0)
 
@@ -23,6 +23,7 @@ Version 2.0 is documented in [docs/GOSPEL_LABS_2.0_RELEASE.md](docs/GOSPEL_LABS_
 - **Connect with Christ:** quiet, roughly five-minute sessions in three rotating formats (See Christ, Understand Christ, Reflect on Christ). No timer, no counters, no reports of feelings; prayer and notes are optional.
 - **Themes and preferences:** Lab, Daylight, Parchment, and Evening themes (WCAG 2.2 AA contrast), motion (follow device, full, subtle, off), preferred session length, default difficulty, and activity options.
 - **Optional AI boundary:** Gospel Labs works fully without AI. A clean interface exists for a future, clearly labeled, server-side assistant; the shipped implementation is a local, non-AI helper built from curated content. No AI service, API key, or network call is included.
+- **Welcome and What's new:** new learners get a short welcome and tour (with a theme choice, the version, and how to report a bug); returning learners see what changed since their last visit. Settings › About lists every release.
 - **Backups:** export and import everything (research notebooks, study progress, Discovery Cards, map connections, explorations, preferences) as versioned JSON (format 3), with validation, previews, merge or replace, and atomic, all-or-nothing imports. See [docs/BACKUPS.md](docs/BACKUPS.md).
 
 ## Research notebook (from 1.x, preserved)

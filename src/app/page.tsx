@@ -1,4 +1,5 @@
 import { PageContainer } from "@/components/layout/app-shell";
+import { WelcomeCard } from "@/components/release/welcome-card";
 import { StudyDashboard } from "@/components/study/dashboard/study-dashboard";
 import type { DashboardContent, InvestigationSummary } from "@/components/study/dashboard/types";
 import type { StudyInvestigation } from "@/domain/study/content-schema";
@@ -54,7 +55,8 @@ function dashboardContent(): DashboardContent {
 
 export default function HomePage() {
   return (
-    <PageContainer>
+    <PageContainer className="flex flex-col gap-8">
+      <WelcomeCard />
       <StudyDashboard content={dashboardContent()} />
     </PageContainer>
   );
