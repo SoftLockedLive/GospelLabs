@@ -1,127 +1,152 @@
 # Backups and local data
 
-Gospel Labs stores investigations only in the browser's IndexedDB, on the device where they were written. There is no server copy. Backups are the way to keep a safe copy or move investigations to another browser or device.
+Gospel Labs stores everything only in the browser's IndexedDB, on the device where it was written. There is no server copy. Backups are the way to keep a safe copy or move your data to another browser or device.
+
+## What a backup contains
+
+| In the file | What it is | Stored in |
+| --- | --- | --- |
+| `investigations` | Research investigations (the 1.x notebook): evidence cards, claims, evidence connections, saved discoveries, challenge responses, discovery-trail notes, reflections, and other notes | IndexedDB `investigations` |
+| `study.progress` | Progress in each guided investigation: difficulty, length, position, every step's state (attempts, hints, answers, reflections), side questions visited, and the Discovery Card it created | IndexedDB `studyProgress` |
+| `study.discoveries` | Discovery Cards: what was discovered, its sources, concepts, connections (demonstrated or suggested), highlights, and your notes | IndexedDB `discoveries` |
+| `study.personalConnections` | Connections you added to your Discovery Map, with your note | IndexedDB `personalConnections` |
+| `study.explorations` | What you explored in Scripture Explorer, Character of Christ, and Connect with Christ (never a score) | IndexedDB `explorations` |
+| `preferences` | Theme, motion, study length, default difficulty, and activity options | localStorage (`gospel-labs:theme`, `gospel-labs:preferences`) |
+
+Curated content (questions, investigations, passages, attributes) is part of the app, not your data, and is never in a backup.
 
 ## Export
 
-**Settings › Your data › Export backup** downloads `gospel-labs-backup-YYYY-MM-DD.json` containing every investigation, with all of its evidence cards, claims, evidence connections, saved discoveries, challenge responses, discovery-trail notes, reflections, and other notes.
+**Settings › Your data › Export backup** downloads `gospel-labs-backup-YYYY-MM-DD.json` with all of the above.
 
-## File format (version 2)
+- Every record is written **exactly as stored**, so fields added by a newer version of Gospel Labs and unknown to this one are kept in the file.
+- Records saved by a newer version are exported as stored even if this version can't read them, so exporting from an older tab never loses them.
+- Damaged records (ones this version can't read, not from a newer version) are left out; the confirmation says how many.
+- Preferences: only those actually stored on this device are included (a setting you never changed is left out, so restoring it elsewhere leaves that device's choice alone). The Map's "last visited" time is device state, not a preference, and is never exported.
+- The export is read in one transaction, so it's a consistent snapshot, and it runs after any edits a closing page left in a safety copy have been recovered.
+
+## File format (version 3)
 
 ```json
 {
   "format": "gospel-labs-backup",
-  "version": 2,
-  "exportedAt": "2026-10-20T12:00:00.000Z",
-  "investigations": [
-    {
-      "id": "3f0c…",
-      "dataVersion": 2,
-      "question": "…",
-      "sourceQuestionId": "faith-and-works",
-      "title": "…",
-      "category": "…",
-      "createdAt": "…",
-      "updatedAt": "…",
-      "currentSection": "analysis",
-      "context": "…",
-      "subquestions": [{ "id": "…", "text": "…" }],
-      "hypotheses": [{ "id": "…", "statement": "…" }],
-      "evidence": [
-        {
-          "id": "…",
-          "sourceType": "scripture",
-          "sourceTitle": "Alma 32:21",
-          "sourceUrl": "https://…",
-          "observation": "…",
-          "relevance": "…",
-          "tags": ["faith"],
-          "createdAt": "…",
-          "updatedAt": "…"
-        }
-      ],
-      "analysisNotes": "…",
-      "claims": [
-        {
-          "id": "…",
-          "section": "analysis",
-          "statement": "…",
-          "evidenceIds": ["…"],
-          "createdAt": "…",
-          "updatedAt": "…"
-        }
-      ],
-      "evidenceConnections": [
-        {
-          "id": "…",
-          "fromEvidenceId": "…",
-          "toEvidenceId": "…",
-          "relationship": "supports",
-          "explanation": "…",
-          "createdAt": "…",
-          "updatedAt": "…"
-        }
-      ],
-      "discoveryHighlights": [
-        {
-          "id": "…",
-          "title": "…",
-          "insight": "…",
-          "evidenceIds": ["…"],
-          "createdAt": "…",
-          "updatedAt": "…"
-        }
-      ],
-      "challengeResponses": [
-        {
-          "id": "…",
-          "challengeId": "observe-repeated-words",
-          "type": "observe",
-          "title": "Repeated words",
-          "prompt": "In a passage you're studying, which words or phrases appear more than once? …",
-          "response": "…",
-          "createdAt": "…",
-          "updatedAt": "…"
-        }
-      ],
-      "trailProgress": [
-        {
-          "trailId": "forgiveness-before-the-atonement",
-          "currentStepId": "john-8-no-condemnation",
-          "steps": [
-            {
-              "stepId": "mark-2-sins-forgiven",
-              "title": "Sins forgiven in Capernaum",
-              "question": "What does Jesus say to the man brought to Him, …?",
-              "discoveries": "…",
-              "explored": true,
-              "updatedAt": "…"
-            }
-          ]
-        }
-      ],
-      "conclusion": "…",
-      "remainingQuestions": "…",
-      "reflectionNotes": "…",
-      "christReflection": { "learned-about-christ": "…" },
-      "status": "investigating"
-    }
-  ]
+  "version": 3,
+  "exportedAt": "2026-10-26T12:00:00.000Z",
+  "investigations": [ { "id": "3f0c…", "dataVersion": 2, "title": "…", "…": "see below" } ],
+  "study": {
+    "progress": [
+      {
+        "id": "he-knows-how-to-help",
+        "dataVersion": 1,
+        "contentVersion": 1,
+        "startedAt": "…",
+        "updatedAt": "…",
+        "completedAt": "…",
+        "difficulty": "medium",
+        "length": "quick",
+        "position": { "stepId": "connect" },
+        "steps": {
+          "notice": { "status": "complete", "difficulty": "medium", "attempts": 2, "hintsShown": 1, "revealed": false, "skipped": false, "response": { "…": "…" }, "updatedAt": "…" },
+          "friends/why-friends": { "status": "started", "difficulty": "easy", "reflection": "…", "updatedAt": "…" }
+        },
+        "visitedBranches": ["friends"],
+        "discoveryId": "6f1b…"
+      }
+    ],
+    "discoveries": [
+      {
+        "id": "6f1b…",
+        "dataVersion": 1,
+        "createdAt": "…",
+        "updatedAt": "…",
+        "origin": { "kind": "investigation", "contentId": "he-knows-how-to-help", "contentVersion": 1, "difficulty": "medium", "primaryQuestion": "christ" },
+        "title": "He knows how to help",
+        "question": "…",
+        "summary": "…",
+        "sources": [{ "id": "alma-7-11-12", "label": "Alma 7:11–12", "kind": "scripture", "url": "https://…" }],
+        "concepts": [{ "ref": "concept:atonement", "label": "Atonement", "demonstrated": true }],
+        "connections": [{ "id": "…", "from": { "ref": "scripture:alma-7-11-12", "label": "…" }, "to": { "ref": "concept:atonement", "label": "…" }, "relation": "teaches", "sourceIds": ["alma-7-11-12"], "note": "…", "provenance": "demonstrated" }],
+        "highlights": [{ "sourceId": "alma-7-11-12", "verse": 12, "text": "…", "note": "" }],
+        "notes": "…"
+      }
+    ],
+    "personalConnections": [
+      { "id": "8a9b…", "dataVersion": 1, "createdAt": "…", "updatedAt": "…", "from": { "ref": "concept:atonement", "label": "Atonement" }, "to": { "ref": "concept:succor", "label": "Succor" }, "relation": "relates-to", "note": "…", "sourceIds": [] }
+    ],
+    "explorations": [
+      { "id": "passage:alma-7-11-13", "dataVersion": 1, "kind": "passage", "contentId": "alma-7-11-13", "firstAt": "…", "updatedAt": "…", "completedActivities": ["…"], "vocabulary": [], "highlights": [{ "id": "…", "verse": 12, "start": 0, "end": 6, "note": "", "createdAt": "…" }], "note": "" }
+    ]
+  },
+  "preferences": {
+    "theme": "dawn",
+    "motion": "subtle",
+    "studyLength": "quick",
+    "difficulty": "medium",
+    "activity": { "offerBranches": true, "showReflections": true, "suggestDifficulty": true }
+  }
 }
 ```
 
-The authoritative definition is the Zod schema in [`src/domain/investigation.ts`](../src/domain/investigation.ts).
+Each investigation has the same shape as in version 2:
+
+```json
+{
+  "id": "3f0c…",
+  "dataVersion": 2,
+  "question": "…",
+  "sourceQuestionId": "faith-and-works",
+  "title": "…",
+  "category": "…",
+  "createdAt": "…",
+  "updatedAt": "…",
+  "currentSection": "analysis",
+  "researchActivity": "evidence",
+  "context": "…",
+  "subquestions": [{ "id": "…", "text": "…" }],
+  "hypotheses": [{ "id": "…", "statement": "…" }],
+  "evidence": [
+    { "id": "…", "sourceType": "scripture", "sourceTitle": "Alma 32:21", "sourceUrl": "https://…", "observation": "…", "relevance": "…", "tags": ["faith"], "createdAt": "…", "updatedAt": "…" }
+  ],
+  "analysisNotes": "…",
+  "claims": [{ "id": "…", "section": "analysis", "statement": "…", "evidenceIds": ["…"], "createdAt": "…", "updatedAt": "…" }],
+  "evidenceConnections": [{ "id": "…", "fromEvidenceId": "…", "toEvidenceId": "…", "relationship": "supports", "explanation": "…", "createdAt": "…", "updatedAt": "…" }],
+  "discoveryHighlights": [{ "id": "…", "title": "…", "insight": "…", "evidenceIds": ["…"], "createdAt": "…", "updatedAt": "…" }],
+  "challengeResponses": [{ "id": "…", "challengeId": "observe-repeated-words", "type": "observe", "title": "Repeated words", "prompt": "…", "response": "…", "createdAt": "…", "updatedAt": "…" }],
+  "trailProgress": [{ "trailId": "forgiveness-before-the-atonement", "currentStepId": "…", "steps": [{ "stepId": "…", "title": "…", "question": "…", "discoveries": "…", "explored": true, "updatedAt": "…" }] }],
+  "conclusion": "…",
+  "remainingQuestions": "…",
+  "reflectionNotes": "…",
+  "christReflection": { "learned-about-christ": "…" },
+  "status": "investigating"
+}
+```
+
+The authoritative definitions are the Zod schemas in [`src/domain/investigation.ts`](../src/domain/investigation.ts) (investigations) and [`src/domain/study/user-data.ts`](../src/domain/study/user-data.ts) (study records). The file format, migrations, and import rules are in [`src/persistence/backup.ts`](../src/persistence/backup.ts); the database side is in [`src/persistence/full-backup.ts`](../src/persistence/full-backup.ts).
 
 ## Import
 
-**Settings › Your data › Import backup** reads a backup file, validates it, and shows a preview before changing anything.
+**Settings › Your data › Import backup** reads a backup file, validates it, and shows a preview before changing anything: for each mode, what would happen to each kind of data (research investigations, guided-investigation progress, Discovery Cards, Map connections, explorations), computed against the data stored right now.
 
-| Mode | What happens |
-| --- | --- |
-| **Merge** (default) | Adds investigations from the backup. When an investigation exists both on the device and in the backup, the copy edited most recently is kept (ties keep the device's copy). Nothing is deleted. Re-importing the same backup changes nothing. |
-| **Replace** | Deletes every investigation on the device, then writes the backup's investigations. The dialog says how many investigations will be deleted, offers to download a backup of the current data first, and requires an explicit acknowledgement. |
+| Mode | Investigations and study data | Preferences |
+| --- | --- | --- |
+| **Merge** (default) | Adds records from the backup. When a record exists both on the device and in the backup, the copy updated most recently is kept (ties keep the device's copy). A record on the device saved by a newer version of Gospel Labs is never replaced. Nothing is deleted. Re-importing the same backup changes nothing. | Kept as they are unless you tick **Also restore appearance and study preferences** (off by default). |
+| **Replace** | Deletes every research investigation **and all study data** on the device, then writes the backup's records. | Restored by default (the same checkbox, on by default; you can untick it). |
 
-Both modes run in a single IndexedDB transaction: if anything fails partway (for example, the disk is full), the database is left exactly as it was.
+The same rules apply to every kind of record: one progress record per guided investigation, Discovery Cards, Map connections, and explorations are each matched by id. (Unlike research notebooks, study records are small, complete states, so the most recently updated copy is the one to keep.)
+
+A record on the device that this version can't read (damaged) and that wasn't saved by a newer version is replaced by the backup's valid copy during a merge, and the preview counts it as updated.
+
+### Protection against accidental overwrites
+
+- Nothing changes until you confirm, and the preview is computed again inside the import, so the import does exactly what the data allowed at that moment.
+- **Replace** names everything it will delete ("Everything now on this device will be permanently deleted: 2 research investigations, 3 Discovery Cards, …"), offers **Download a backup of my current data**, and requires ticking "I understand…" before **Replace all data** is enabled. Replacing with a 1.x backup (which has no study data) deletes your study data; the dialog says the file was made by Gospel Labs 1.x and lists the study records it will delete.
+- **Merge** never deletes, but when it would replace items on the device with more recently updated copies, it says how many and offers the same download.
+
+### Atomic imports and recovery
+
+Both modes run in a **single IndexedDB transaction across all five tables**. Every record is validated before anything is written; if anything fails partway (an invalid record, a full disk, storage becoming unavailable), the transaction rolls back and the database is left exactly as it was. The dialog then says what went wrong and "Nothing was changed."
+
+Preferences are applied only **after** the database import has succeeded. If applying them fails, the data import still stands and the confirmation says the preferences couldn't be restored.
 
 ## Validation and errors
 
@@ -129,12 +154,24 @@ Both modes run in a single IndexedDB transaction: if anything fails partway (for
 | --- | --- |
 | Empty, truncated, or non-JSON file | Rejected: "The file isn't valid JSON…" |
 | JSON that isn't a Gospel Labs backup | Rejected |
-| Backup from a newer version of the app | Rejected with a request to update the app |
+| Backup from a newer version of the app (format 4 or later) | Rejected with a request to update the app |
 | Missing or invalid version | Rejected |
-| An investigation that fails validation (wrong status, bad timestamp, a claim, connection, or discovery referring to missing evidence, a card connected to itself, a pair connected twice, an unsafe link, …) | That entry is skipped; the preview lists each skipped entry and why |
-| Two entries with the same id | The first is used; the duplicate is skipped and listed |
-| Backup with no valid investigations | Nothing can be imported; Replace is not offered |
+| No list of investigations | Rejected as damaged |
 | Files over 50 MB | Rejected before reading |
+| An investigation that fails validation (wrong status, bad timestamp, a claim, connection, or discovery referring to missing evidence, a card connected to itself, a pair connected twice, an unsafe link, …) | That entry is skipped |
+| A study record that fails its schema (for example a card without a title, a Map connection joining a node to itself, a highlight covering no words) | That entry is skipped |
+| A record (investigation or study) stamped by a newer version | Skipped as "Saved by a newer version of Gospel Labs", even if this version can't validate it |
+| Two entries of the same kind with the same id | The first is used; the duplicate is skipped |
+| A version 3 file without a `study` section | Treated as having no study data; the preview says so |
+| A `study` section, or one of its lists, that isn't the right shape | That section or list is ignored; the preview says so; the other lists import normally |
+| Invalid preferences (an unknown theme, a misspelled motion setting, …) | Those preferences are ignored, the valid ones are kept, and the preview names the ignored ones |
+| A `preferences` section that isn't an object | Ignored, with a note |
+| Unknown preference fields (from a newer version) | Ignored |
+| A backup with no valid records at all | Nothing can be imported; Import and Replace are not offered |
+
+Skipped entries are listed in the preview by kind, position, id, and title or label where the record has one, with the reason. Nothing is silently repaired.
+
+**References between records.** A progress record's `discoveryId` names the Discovery Card its completed investigation created. If a backup has a progress record whose card isn't in the file (the card was damaged and skipped, or the file was edited), the progress is **imported unchanged** and the preview notes it: the link works only if that card is already on the device. Deleting a card in the app removes the link from progress, so exports from the app don't contain such references.
 
 ## Versioning
 
@@ -142,22 +179,41 @@ Both modes run in a single IndexedDB transaction: if anything fails partway (for
 | --- | --- | --- |
 | 1 | Gospel Labs 1.0 | Original format. |
 | 2 | Gospel Labs 1.1 | Investigations gain `evidenceConnections` (see [EVIDENCE_CONNECTIONS.md](EVIDENCE_CONNECTIONS.md)), `discoveryHighlights` and `christReflection` (see [REFLECTION_AND_DISCOVERIES.md](REFLECTION_AND_DISCOVERIES.md)), `challengeResponses` (research challenge responses), and `trailProgress` (discovery-trail notes). |
+| 3 | Gospel Labs 2.0 | Adds `study` (progress, Discovery Cards, personal Map connections, explorations) and `preferences`. Investigations are unchanged. |
 
-`version` changes whenever an older app couldn't safely import the file. Gospel Labs 1.0 would silently drop the new fields, so 1.1 writes version 2, and 1.0 refuses those files with a request to update instead of losing data. Version 2 gained `trailProgress`, `evidenceConnections`, `discoveryHighlights`, and `christReflection` before 1.1 was released; version 2 files written without some of them (by pre-release builds) import with those fields empty and everything else intact.
+`version` changes whenever an older app couldn't safely import the file. Gospel Labs 1.1 would import a version 3 file's investigations and silently leave out its study data (in Replace mode, deleting the study data on the device while looking like a complete restore), so 2.0 writes version 3, and 1.1 refuses those files with a request to update instead. Likewise 1.0 refuses version 2 and 3 files. (Verified against the 1.0 and 1.1 code: both answer a version 3 file with "This backup was made by a newer version of Gospel Labs (format 3).")
 
-Older files are upgraded by migration functions in [`src/persistence/backup.ts`](../src/persistence/backup.ts) (`MIGRATIONS`), one version at a time, before validation. Version 1 backups import into 1.1 with every field intact and none of the 1.1 additions.
+### Compatibility
 
-Each investigation also carries `dataVersion`: the record format of the app version that last saved it (2 for 1.1; absent on records saved before 1.1). It protects newer data from older code:
+| File | Gospel Labs 1.0 | Gospel Labs 1.1 | Gospel Labs 2.0 |
+| --- | --- | --- | --- |
+| Version 1 (from 1.0) | Imports | Imports, every field intact | Imports, every field intact; no study data |
+| Version 2 (from 1.1, including pre-release builds) | Refuses: "newer version" | Imports | Imports, every field intact; no study data |
+| Version 3 (from 2.0) | Refuses: "newer version" | Refuses: "newer version" | Imports |
 
-- **Import:** an investigation stamped with a newer format than this app writes is skipped and listed as saved by a newer version.
-- **Merge:** never replaces a stored investigation stamped with a newer format.
-- **Saving:** the app won't save over one either; it opens it with a request to reload instead.
+Older files are upgraded by migration functions in [`src/persistence/backup.ts`](../src/persistence/backup.ts) (`MIGRATIONS`), one version at a time, before validation: 1 → 2 adds the 1.1 investigation fields, empty; 2 → 3 adds an empty `study` and no preferences (anything under those keys in an older file isn't Gospel Labs data and is ignored). Version 2 gained `trailProgress`, `evidenceConnections`, `discoveryHighlights`, and `christReflection` before 1.1 was released; version 2 files written without some of them (by pre-release builds) import with those fields empty and everything else intact.
 
-Exports write investigations exactly as stored, so fields a newer version added and this one doesn't know are kept in the file.
+### Record formats (`dataVersion`)
 
-Records already stored in IndexedDB need no migration: fields added later are filled in with their defaults when an older record is read, and a record is only rewritten when the user edits it. From 1.1 on, fields added by a newer version are kept, not dropped, when an older version saves the record. The IndexedDB schema itself (tables and indexes) has its own version in [`src/persistence/db.ts`](../src/persistence/db.ts), migrated by Dexie.
+Each record also carries `dataVersion`: the record format of the app version that last saved it. Investigations use `RECORD_DATA_VERSION` (2 since 1.1; absent on records saved before 1.1) and study records use `STUDY_DATA_VERSION` (1 in 2.0). It protects newer data from older code:
+
+- **Import:** a record stamped with a newer format than this app writes is skipped and listed as saved by a newer version.
+- **Merge:** never replaces a stored record stamped with a newer format, even one this version can't read.
+- **Saving:** the app won't save over one either.
+- **Export:** records stamped with a newer format are exported as stored.
+
+Imported records are stamped with this version's format, as saving them would.
+
+Records already stored in IndexedDB need no migration: fields added later are filled in with their defaults when an older record is read, and a record is only rewritten when the user edits it. Fields added by a newer version at the top level of a record are kept, not dropped, when an older version saves it. The IndexedDB schema itself (tables and indexes) has its own version in [`src/persistence/db.ts`](../src/persistence/db.ts), migrated by Dexie; version 2 (Gospel Labs 2.0) only added the study tables.
+
+## Delete all data
+
+**Settings › Your data › Delete all data** deletes every research investigation and all study data (progress, Discovery Cards, Map connections, explorations) in one transaction. The confirmation lists how many of each kind will be deleted, offers a backup first, and requires an explicit acknowledgement. Appearance and study preferences are kept.
+
+The summary at the top of **Your data** shows how many records of each kind are saved on this device, including any damaged ones (deleting everything removes those too).
 
 ## Protecting your data
 
-- Export backups regularly. Clearing this site's data in the browser, or uninstalling the installed app on some platforms, deletes investigations permanently.
+- Export backups regularly. Clearing this site's data in the browser, or uninstalling the installed app on some platforms, deletes everything permanently.
 - **Settings › Your data** can ask the browser to keep Gospel Labs data even when the device is low on space ("persistent storage"). Browsers decide whether to grant this.
+- Before replacing your data, download a backup of what's there (the dialog offers it).

@@ -1,0 +1,2466 @@
+{
+  "id": "fear-god-friend",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "Fear and Friendship",
+  "question": "Should I fear God, or is He my friend?",
+  "hook": "Scripture says both ‘fear God’ and ‘fear not,’ sometimes in the same sermon. One small word is doing two very different jobs.",
+  "theme": "Knowing God",
+  "tags": [
+    "fear-of-god",
+    "reverence",
+    "friendship-with-god",
+    "love-of-god",
+    "vocabulary"
+  ],
+  "primaryQuestion": {
+    "id": "god",
+    "note": "How we should feel toward God depends on who He is. If He is a Father who loves us, the ‘fear’ He asks for must fit that love. This study looks at what scripture means by fearing Him, and why that belongs with being His friend."
+  },
+  "commonQuestions": [
+    "Scripture tells us to fear God, yet Jesus calls His disciples friends. How do both fit?",
+    "What does it mean to ‘fear’ someone you love?"
+  ],
+  "estimatedMinutes": {
+    "quick": 10,
+    "deep": 30
+  },
+  "intro": "Many people notice something real: scripture tells us to ‘fear God,’ yet the Savior calls His disciples His friends. Both teachings are in the scriptures, and sometimes they sit side by side. In this investigation you’ll look closely at what the word ‘fear’ means in different passages, read a sermon where Jesus uses it both ways, and see how love, reverence, and friendship fit together.",
+  "sources": [
+    {
+      "id": "gs-fear",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Fear",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/fear?lang=eng",
+      "excerpt": "Fear can have two meanings: (1) to fear God is to feel reverence and awe for Him and to obey His commandments; (2) to fear man, mortal dangers, pain, and evil is to be afraid of such things and to dread them."
+    },
+    {
+      "id": "bd-fear",
+      "kind": "official",
+      "label": "Bible Dictionary: Fear",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bd/fear?lang=eng",
+      "excerpt": "In such passages fear is equivalent to reverence, awe, worship, and is therefore an essential part of the attitude of mind in which we ought to stand toward the All-holy God. On the other hand fear is spoken of as something unworthy of a child of God, something that “perfect love casteth out” (1 Jn. 4:18)."
+    },
+    {
+      "id": "gs-reverence",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Reverence",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/reverence?lang=eng",
+      "excerpt": "Deep respect for sacred things; wonder."
+    },
+    {
+      "id": "bednar-hushed-their-fears-2015",
+      "kind": "speaker",
+      "label": "Therefore They Hushed Their Fears",
+      "title": "Therefore They Hushed Their Fears",
+      "author": "Elder David A. Bednar",
+      "publication": "General Conference, April 2015",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/therefore-they-hushed-their-fears?lang=eng",
+      "excerpt": "Unlike worldly fear that creates alarm and anxiety, godly fear is a source of peace, assurance, and confidence."
+    },
+    {
+      "id": "buckner-ye-are-my-friends-2024",
+      "kind": "speaker",
+      "label": "“Ye Are My Friends”",
+      "title": "“Ye Are My Friends”",
+      "author": "Elder David L. Buckner",
+      "publication": "General Conference, October 2024",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2024/10/25buckner?lang=eng",
+      "excerpt": "Jesus Christ has long called His faithful followers His friends."
+    },
+    {
+      "id": "proverbs-1-7",
+      "kind": "scripture",
+      "label": "Proverbs 1:7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/prov/1?lang=eng&id=p7#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "¶ The fear of the Lord is the beginning of knowledge: but fools despise wisdom and instruction."
+        }
+      ]
+    },
+    {
+      "id": "deuteronomy-10-12",
+      "kind": "scripture",
+      "label": "Deuteronomy 10:12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/deut/10?lang=eng&id=p12#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "¶ And now, Israel, what doth the Lord thy God require of thee, but to fear the Lord thy God, to walk in all his ways, and to love him, and to serve the Lord thy God with all thy heart and with all thy soul,"
+        }
+      ]
+    },
+    {
+      "id": "ecclesiastes-12-13",
+      "kind": "scripture",
+      "label": "Ecclesiastes 12:13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/eccl/12?lang=eng&id=p13#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "¶ Let us hear the conclusion of the whole matter: Fear God, and keep his commandments: for this is the whole duty of man."
+        }
+      ]
+    },
+    {
+      "id": "psalm-111-10",
+      "kind": "scripture",
+      "label": "Psalm 111:10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/111?lang=eng&id=p10#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "The fear of the Lord is the beginning of wisdom: a good understanding have all they that do his commandments: his praise endureth for ever."
+        }
+      ]
+    },
+    {
+      "id": "psalm-103-13",
+      "kind": "scripture",
+      "label": "Psalm 103:13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/103?lang=eng&id=p13#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "Like as a father pitieth his children, so the Lord pitieth them that fear him."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-12-28",
+      "kind": "scripture",
+      "label": "Hebrews 12:28",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/12?lang=eng&id=p28#p28",
+      "verses": [
+        {
+          "number": 28,
+          "text": "Wherefore we receiving a kingdom which cannot be moved, let us have grace, whereby we may serve God acceptably with reverence and godly fear:"
+        }
+      ]
+    },
+    {
+      "id": "genesis-3-9-10",
+      "kind": "scripture",
+      "label": "Genesis 3:9–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/3?lang=eng&id=p9-p10#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "And the Lord God called unto Adam, and said unto him, Where art thou?"
+        },
+        {
+          "number": 10,
+          "text": "And he said, I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself."
+        }
+      ]
+    },
+    {
+      "id": "exodus-20-18-20",
+      "kind": "scripture",
+      "label": "Exodus 20:18–20",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/20?lang=eng&id=p18-p20#p18",
+      "verses": [
+        {
+          "number": 18,
+          "text": "¶ And all the people saw the thunderings, and the lightnings, and the noise of the trumpet, and the mountain smoking: and when the people saw it, they removed, and stood afar off."
+        },
+        {
+          "number": 19,
+          "text": "And they said unto Moses, Speak thou with us, and we will hear: but let not God speak with us, lest we die."
+        },
+        {
+          "number": 20,
+          "text": "And Moses said unto the people, Fear not: for God is come to prove you, and that his fear may be before your faces, that ye sin not."
+        }
+      ]
+    },
+    {
+      "id": "luke-12-4-7",
+      "kind": "scripture",
+      "label": "Luke 12:4–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p4-p7#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "And I say unto you my friends, Be not afraid of them that kill the body, and after that have no more that they can do."
+        },
+        {
+          "number": 5,
+          "text": "But I will forewarn you whom ye shall fear: Fear him, which after he hath killed hath power to cast into hell; yea, I say unto you, Fear him."
+        },
+        {
+          "number": 6,
+          "text": "Are not five sparrows sold for two farthings, and not one of them is forgotten before God?"
+        },
+        {
+          "number": 7,
+          "text": "But even the very hairs of your head are all numbered. Fear not therefore: ye are of more value than many sparrows."
+        }
+      ]
+    },
+    {
+      "id": "1-john-4-16-19",
+      "kind": "scripture",
+      "label": "1 John 4:16–19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/4?lang=eng&id=p16-p19#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "And we have known and believed the love that God hath to us. God is love; and he that dwelleth in love dwelleth in God, and God in him."
+        },
+        {
+          "number": 17,
+          "text": "Herein is our love made perfect, that we may have boldness in the day of judgment: because as he is, so are we in this world."
+        },
+        {
+          "number": 18,
+          "text": "There is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love."
+        },
+        {
+          "number": 19,
+          "text": "We love him, because he first loved us."
+        }
+      ]
+    },
+    {
+      "id": "moroni-8-16",
+      "kind": "scripture",
+      "label": "Moroni 8:16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng&id=p16#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "Wo be unto them that shall pervert the ways of the Lord after this manner, for they shall perish except they repent. Behold, I speak with boldness, having authority from God; and I fear not what man can do; for perfect love casteth out all fear."
+        }
+      ]
+    },
+    {
+      "id": "dc-6-36",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 6:36",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p36#p36",
+      "verses": [
+        {
+          "number": 36,
+          "text": "Look unto me in every thought; doubt not, fear not."
+        }
+      ]
+    },
+    {
+      "id": "john-15-13-15",
+      "kind": "scripture",
+      "label": "John 15:13–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p13-p15#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "Greater love hath no man than this, that a man lay down his life for his friends."
+        },
+        {
+          "number": 14,
+          "text": "Ye are my friends, if ye do whatsoever I command you."
+        },
+        {
+          "number": 15,
+          "text": "Henceforth I call you not servants; for the servant knoweth not what his lord doeth: but I have called you friends; for all things that I have heard of my Father I have made known unto you."
+        }
+      ]
+    },
+    {
+      "id": "exodus-33-11",
+      "kind": "scripture",
+      "label": "Exodus 33:11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/33?lang=eng&id=p11#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "And the Lord spake unto Moses face to face, as a man speaketh unto his friend. And he turned again into the camp: but his servant Joshua, the son of Nun, a young man, departed not out of the tabernacle."
+        }
+      ]
+    },
+    {
+      "id": "james-2-23",
+      "kind": "scripture",
+      "label": "James 2:23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p23#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God."
+        }
+      ]
+    },
+    {
+      "id": "dc-93-45",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 93:45",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p45#p45",
+      "verses": [
+        {
+          "number": 45,
+          "text": "Verily, I say unto my servant Joseph Smith, Jun., or in other words, I will call you friends, for you are my friends, and ye shall have an inheritance with me—"
+        }
+      ]
+    },
+    {
+      "id": "matthew-17-5-8",
+      "kind": "scripture",
+      "label": "Matthew 17:5–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/17?lang=eng&id=p5-p8#p5",
+      "verses": [
+        {
+          "number": 5,
+          "text": "While he yet spake, behold, a bright cloud overshadowed them: and behold a voice out of the cloud, which said, This is my beloved Son, in whom I am well pleased; hear ye him."
+        },
+        {
+          "number": 6,
+          "text": "And when the disciples heard it, they fell on their face, and were sore afraid."
+        },
+        {
+          "number": 7,
+          "text": "And Jesus came and touched them, and said, Arise, and be not afraid."
+        },
+        {
+          "number": 8,
+          "text": "And when they had lifted up their eyes, they saw no man, save Jesus only."
+        }
+      ]
+    },
+    {
+      "id": "revelation-1-17-18",
+      "kind": "scripture",
+      "label": "Revelation 1:17–18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/1?lang=eng&id=p17-p18#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "And when I saw him, I fell at his feet as dead. And he laid his right hand upon me, saying unto me, Fear not; I am the first and the last:"
+        },
+        {
+          "number": 18,
+          "text": "I am he that liveth, and was dead; and, behold, I am alive for evermore, Amen; and have the keys of hell and of death."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-4-15-16",
+      "kind": "scripture",
+      "label": "Hebrews 4:15–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/4?lang=eng&id=p15-p16#p15",
+      "verses": [
+        {
+          "number": 15,
+          "text": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin."
+        },
+        {
+          "number": 16,
+          "text": "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need."
+        }
+      ]
+    },
+    {
+      "id": "exodus-3-4-6",
+      "kind": "scripture",
+      "label": "Exodus 3:4–6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/3?lang=eng&id=p4-p6#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "And when the Lord saw that he turned aside to see, God called unto him out of the midst of the bush, and said, Moses, Moses. And he said, Here am I."
+        },
+        {
+          "number": 5,
+          "text": "And he said, Draw not nigh hither: put off thy shoes from off thy feet, for the place whereon thou standest is holy ground."
+        },
+        {
+          "number": 6,
+          "text": "Moreover he said, I am the God of thy father, the God of Abraham, the God of Isaac, and the God of Jacob. And Moses hid his face; for he was afraid to look upon God."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-11-12-17",
+      "kind": "scripture",
+      "label": "3 Nephi 11:12–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p12-p17#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And it came to pass that when Jesus had spoken these words the whole multitude fell to the earth; for they remembered that it had been prophesied among them that Christ should show himself unto them after his ascension into heaven."
+        },
+        {
+          "number": 13,
+          "text": "And it came to pass that the Lord spake unto them saying:"
+        },
+        {
+          "number": 14,
+          "text": "Arise and come forth unto me, that ye may thrust your hands into my side, and also that ye may feel the prints of the nails in my hands and in my feet, that ye may know that I am the God of Israel, and the God of the whole earth, and have been slain for the sins of the world."
+        },
+        {
+          "number": 15,
+          "text": "And it came to pass that the multitude went forth, and thrust their hands into his side, and did feel the prints of the nails in his hands and in his feet; and this they did do, going forth one by one until they had all gone forth, and did see with their eyes and did feel with their hands, and did know of a surety and did bear record, that it was he, of whom it was written by the prophets, that should come."
+        },
+        {
+          "number": 16,
+          "text": "And when they had all gone forth and had witnessed for themselves, they did cry out with one accord, saying:"
+        },
+        {
+          "number": 17,
+          "text": "Hosanna! Blessed be the name of the Most High God! And they did fall down at the feet of Jesus, and did worship him."
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "fear-as-dread",
+      "kind": "vocabulary",
+      "label": "Fear as dread",
+      "description": "Fear in the sense of being afraid: alarm or dread about danger, pain, evil, or people. Scripture describes perfect love as casting this kind of fear out.",
+      "sourceIds": [
+        "gs-fear",
+        "1-john-4-16-19"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "two-teachings",
+      "title": "Two teachings side by side",
+      "phase": "question",
+      "method": "analytical",
+      "intro": "Start with the puzzle itself. Some passages invite us to fear God, some tell us not to fear, and some describe people as the Lord’s friends. Before trying to resolve anything, notice what each one actually says.",
+      "sourceIds": [
+        "ecclesiastes-12-13",
+        "proverbs-1-7",
+        "deuteronomy-10-12",
+        "dc-6-36",
+        "1-john-4-16-19",
+        "john-15-13-15",
+        "exodus-33-11",
+        "james-2-23",
+        "luke-12-4-7",
+        "hebrews-12-28"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "sort-three-kinds",
+          "prompt": "Sort each phrase by what it says: an invitation to fear the Lord, a call not to be afraid, or a description of friendship with God.",
+          "sourceIds": [
+            "ecclesiastes-12-13",
+            "proverbs-1-7",
+            "deuteronomy-10-12",
+            "dc-6-36",
+            "1-john-4-16-19",
+            "john-15-13-15",
+            "exodus-33-11",
+            "james-2-23"
+          ],
+          "hints": [
+            "Look for the words ‘fear’ and ‘friend’ in each phrase, then ask what the phrase invites: to fear, not to fear, or friendship.",
+            "Three phrases invite us to fear the Lord, two say not to be afraid or that fear is cast out, and three describe someone as the Lord’s friend."
+          ],
+          "explanation": "Both kinds of passages are really there. Ecclesiastes, Proverbs, and Deuteronomy invite us to fear the Lord; Doctrine and Covenants 6:36 and 1 John 4:18 tell us not to fear; and the Lord calls Moses, Abraham, and His disciples friends. Notice that Deuteronomy 10:12 puts “fear the Lord thy God” and “love him” in the same sentence. That’s a clue that ‘fear’ may not always mean being afraid.",
+          "categories": [
+            {
+              "id": "fear-god",
+              "label": "Fear the Lord",
+              "description": "Invites us to fear God"
+            },
+            {
+              "id": "fear-not",
+              "label": "Fear not",
+              "description": "Says not to be afraid, or that fear is cast out"
+            },
+            {
+              "id": "friends",
+              "label": "Friends",
+              "description": "Describes friendship with God"
+            }
+          ],
+          "items": [
+            {
+              "id": "eccl",
+              "text": "“Fear God, and keep his commandments: for this is the whole duty of man.” (Ecclesiastes 12:13)",
+              "category": "fear-god",
+              "why": "Ecclesiastes 12:13 names fearing God as part of “the whole duty of man.”"
+            },
+            {
+              "id": "prov",
+              "text": "“The fear of the Lord is the beginning of knowledge” (Proverbs 1:7)",
+              "category": "fear-god",
+              "why": "Proverbs 1:7 presents the fear of the Lord as something good: the start of knowledge."
+            },
+            {
+              "id": "deut",
+              "text": "“What doth the Lord thy God require of thee, but to fear the Lord thy God, to walk in all his ways, and to love him” (Deuteronomy 10:12)",
+              "category": "fear-god",
+              "why": "Deuteronomy 10:12 lists fearing the Lord among the things He requires, right beside loving Him."
+            },
+            {
+              "id": "dc6",
+              "text": "“Look unto me in every thought; doubt not, fear not.” (Doctrine and Covenants 6:36)",
+              "category": "fear-not",
+              "why": "The Lord tells Oliver Cowdery and Joseph Smith to look to Him and not to fear."
+            },
+            {
+              "id": "john4",
+              "text": "“There is no fear in love; but perfect love casteth out fear” (1 John 4:18)",
+              "category": "fear-not",
+              "why": "John says perfect love casts fear out."
+            },
+            {
+              "id": "john15",
+              "text": "“I have called you friends” (John 15:15)",
+              "category": "friends",
+              "why": "The Savior tells His disciples He calls them friends, not servants."
+            },
+            {
+              "id": "exodus",
+              "text": "“The Lord spake unto Moses face to face, as a man speaketh unto his friend.” (Exodus 33:11)",
+              "category": "friends",
+              "why": "Exodus 33:11 compares the Lord’s speaking with Moses to talking with a friend."
+            },
+            {
+              "id": "james",
+              "text": "“He was called the Friend of God.” (James 2:23)",
+              "category": "friends",
+              "why": "James says Abraham was called the Friend of God."
+            }
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "clue-same-word",
+          "prompt": "Examine each clue. What do they suggest is the best way to begin making sense of the puzzle?",
+          "sourceIds": [
+            "ecclesiastes-12-13",
+            "1-john-4-16-19",
+            "deuteronomy-10-12",
+            "luke-12-4-7"
+          ],
+          "hints": [
+            "Clues 3 and 4 each put two ideas that seem opposite right next to each other.",
+            "If the same speaker uses ‘fear’ in opposite ways within a few verses, what might that tell you about the word itself?"
+          ],
+          "explanation": "When one sentence asks Israel to fear the Lord and to love Him (Deuteronomy 10:12), and the Savior tells His friends both “Fear him” and “Fear not therefore” (Luke 12:5, 7), the simplest explanation is that ‘fear’ is used in more than one sense. The next steps investigate what those senses are.",
+          "clues": [
+            {
+              "id": "command",
+              "title": "A command to fear",
+              "text": "Ecclesiastes 12:13 sums up “the whole duty of man”: “Fear God, and keep his commandments.”",
+              "sourceId": "ecclesiastes-12-13"
+            },
+            {
+              "id": "promise",
+              "title": "No fear in love",
+              "text": "1 John 4:18: “There is no fear in love; but perfect love casteth out fear: because fear hath torment.”",
+              "sourceId": "1-john-4-16-19"
+            },
+            {
+              "id": "together",
+              "title": "Fear and love together",
+              "text": "Deuteronomy 10:12 asks Israel “to fear the Lord thy God, to walk in all his ways, and to love him,” all in one sentence.",
+              "sourceId": "deuteronomy-10-12"
+            },
+            {
+              "id": "sermon",
+              "title": "Both in one sermon",
+              "text": "In Luke 12, Jesus speaks to people He calls “my friends.” Within four verses He says “Fear him” and also “Fear not therefore.”",
+              "sourceId": "luke-12-4-7"
+            }
+          ],
+          "question": {
+            "id": "q-start",
+            "prompt": "What do these clues suggest?",
+            "options": [
+              {
+                "id": "two-senses",
+                "text": "The word ‘fear’ may be used in more than one sense, so each passage needs to be read for what it means there."
+              },
+              {
+                "id": "testaments",
+                "text": "The Old Testament speaks only of fear, and the New Testament speaks only of friendship.",
+                "feedback": "Look at where the clues come from. Luke 12 is in the New Testament, and there Jesus speaks of both friendship and fear within a few verses."
+              },
+              {
+                "id": "one-wrong",
+                "text": "One of the two teachings must be a mistake, since they can’t both be true.",
+                "feedback": "Take another look at clue 4: the same Teacher says both things to the same people within a few verses."
+              },
+              {
+                "id": "same-thing",
+                "text": "Fear and love are simply the same thing.",
+                "feedback": "Clue 2 says perfect love casts out fear. If they were identical, that wouldn’t make sense. Something more careful is needed."
+              }
+            ],
+            "correct": [
+              "two-senses"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "compare-first-ideas",
+          "prompt": "Test some common ideas against these passages. Is each one supported, does it go beyond what these passages settle, or is it contradicted?",
+          "sourceIds": [
+            "ecclesiastes-12-13",
+            "deuteronomy-10-12",
+            "john-15-13-15",
+            "1-john-4-16-19",
+            "luke-12-4-7",
+            "hebrews-12-28"
+          ],
+          "hints": [
+            "For each idea, look for a verse that speaks to it. If none does, it may go beyond these sources.",
+            "Check Hebrews 12:28 for a New Testament call to “godly fear,” John 15:14 for what friendship includes, and Deuteronomy 10:12 for how fear and love appear together."
+          ],
+          "explanation": "Fearing God isn’t only an Old Testament idea: in the New Testament, Hebrews 12:28 invites believers to serve God “with reverence and godly fear.” The Savior ties friendship to doing what He commands (John 15:14), just as Ecclesiastes 12:13 ties fearing God to keeping His commandments. Deuteronomy 10:12 joins fear and love, while 1 John 4:18 says perfect love casts out the fear that “hath torment.” Whether friends of God ever feel awe in His presence isn’t settled by these passages; a later step looks at that.",
+          "perspectives": [
+            {
+              "id": "terrified",
+              "voice": "A common idea",
+              "text": "God wants us to be terrified of Him.",
+              "verdict": "contradicted",
+              "rationale": "1 John 4:16–18 says “God is love” and that perfect love casts out fear “because fear hath torment.” In Luke 12:7 Jesus tells His friends, “Fear not therefore.”"
+            },
+            {
+              "id": "reverence-optional",
+              "voice": "A classmate",
+              "text": "If God is my friend, reverence doesn’t really matter.",
+              "verdict": "contradicted",
+              "rationale": "John 15:14 makes friendship include doing what He commands, and Ecclesiastes 12:13 joins fearing God with keeping His commandments. Friendship doesn’t cancel the call to fear Him; both lead the same way."
+            },
+            {
+              "id": "alongside-love",
+              "voice": "A friend",
+              "text": "Scripture uses the word ‘fear’ in a way that can sit right beside love.",
+              "verdict": "supported",
+              "rationale": "Deuteronomy 10:12 asks Israel to fear the Lord, walk in His ways, and love Him, all in one sentence."
+            },
+            {
+              "id": "old-only",
+              "voice": "A common idea",
+              "text": "The command to fear God was only for people in Old Testament times.",
+              "verdict": "contradicted",
+              "rationale": "Hebrews 12:28, in the New Testament, invites believers to serve God “with reverence and godly fear.”"
+            },
+            {
+              "id": "no-awe",
+              "voice": "A classmate",
+              "text": "Being God’s friend means never feeling awe or trembling in His presence.",
+              "verdict": "beyond",
+              "rationale": "None of these passages describes what friends of God feel in His presence. That question needs more evidence."
+            }
+          ]
+        },
+        "complex": {
+          "type": "scripture-connect",
+          "id": "connect-commandments",
+          "prompt": "Read these three passages side by side and answer the questions.",
+          "passages": [
+            "ecclesiastes-12-13",
+            "john-15-13-15",
+            "deuteronomy-10-12"
+          ],
+          "hints": [
+            "Look at what each verse puts right next to its key word: fear in Ecclesiastes and Deuteronomy, friends in John.",
+            "Ecclesiastes says “keep his commandments”; John 15:14 says “do whatsoever I command you.”"
+          ],
+          "explanation": "Ecclesiastes 12:13 joins fearing God with keeping His commandments, and in John 15:14 the Savior joins being His friends with doing what He commands. Deuteronomy 10:12 lists fearing the Lord, walking in His ways, loving Him, and serving Him together. However ‘fear’ is meant in these verses, it belongs with love and faithful obedience, not against them.",
+          "questions": [
+            {
+              "id": "common",
+              "prompt": "What do Ecclesiastes 12:13 and John 15:14 have in common?",
+              "options": [
+                {
+                  "id": "obey",
+                  "text": "Both link a relationship with God to keeping His commandments."
+                },
+                {
+                  "id": "avoid",
+                  "text": "Both describe God as someone to keep at a distance.",
+                  "feedback": "Read John 15:13–15 again: the Savior speaks of laying down His life for His friends and making known to them all He has heard from the Father."
+                },
+                {
+                  "id": "opposites",
+                  "text": "Both say that fear and friendship are opposites.",
+                  "feedback": "Neither verse mentions the other idea. Look at what each verse pairs its key idea with."
+                },
+                {
+                  "id": "hardship",
+                  "text": "Both promise that obedience will keep life free of hardship.",
+                  "feedback": "Neither verse speaks of hardship. Look at what each one joins with keeping the commandments."
+                }
+              ],
+              "correct": [
+                "obey"
+              ]
+            },
+            {
+              "id": "deut-list",
+              "prompt": "In Deuteronomy 10:12, which of these appear in the same sentence as fearing the Lord? Choose all that apply.",
+              "multiple": true,
+              "options": [
+                {
+                  "id": "walk",
+                  "text": "Walking in all His ways"
+                },
+                {
+                  "id": "love",
+                  "text": "Loving Him"
+                },
+                {
+                  "id": "serve",
+                  "text": "Serving Him with all the heart and soul"
+                },
+                {
+                  "id": "hide",
+                  "text": "Hiding from His presence",
+                  "feedback": "That isn’t in Deuteronomy 10:12. Read the verse again and list each thing the Lord requires."
+                },
+                {
+                  "id": "afar",
+                  "text": "Standing afar off",
+                  "feedback": "That phrase isn’t in Deuteronomy 10:12. List each thing the verse says the Lord requires."
+                }
+              ],
+              "correct": [
+                "walk",
+                "love",
+                "serve"
+              ]
+            },
+            {
+              "id": "together",
+              "prompt": "Which conclusion do the three passages support together?",
+              "options": [
+                {
+                  "id": "same-path",
+                  "text": "Fearing God and being His friend lead to the same way of life: loving Him and doing what He asks."
+                },
+                {
+                  "id": "choose",
+                  "text": "Fearing God and loving Him are opposites, so we must choose one.",
+                  "feedback": "Deuteronomy 10:12 asks for both in one breath."
+                },
+                {
+                  "id": "replace",
+                  "text": "Friendship with God replaces obedience.",
+                  "feedback": "John 15:14 makes doing what He commands part of being His friend."
+                }
+              ],
+              "correct": [
+                "same-path"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "Both teachings really are in the scriptures, and they don’t come from different eras: Jesus Himself tells His friends both to fear and not to fear. Fearing the Lord and being His friend also point in the same direction, toward loving Him and doing what He asks. That’s a strong hint that ‘fear’ has more than one meaning.",
+      "concepts": [
+        "fear-of-god",
+        "friendship-with-god"
+      ],
+      "connections": [
+        {
+          "from": "concept:fear-of-god",
+          "to": "concept:friendship-with-god",
+          "relation": "relates-to",
+          "sourceIds": [
+            "ecclesiastes-12-13",
+            "john-15-13-15"
+          ],
+          "note": "Scripture ties both fearing God and being the Savior’s friend to keeping His commandments (Ecclesiastes 12:13; John 15:14)."
+        }
+      ]
+    },
+    {
+      "id": "two-meanings",
+      "title": "One word, two meanings",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "The Church’s scripture study aids address this exact puzzle. The Guide to the Scriptures and the Bible Dictionary both explain that the word ‘fear’ is used in two different ways. (The Bible Dictionary is a study aid; its introduction notes that it isn’t intended as an official statement of Church doctrine. On this point it agrees with the Guide to the Scriptures.) Read their entries closely, then test them on some verses.",
+      "sourceIds": [
+        "gs-fear",
+        "bd-fear",
+        "gs-reverence"
+      ],
+      "activities": {
+        "easy": {
+          "type": "vocab-match",
+          "id": "match-senses",
+          "prompt": "Match each term with its meaning, using the Guide to the Scriptures and Bible Dictionary entries.",
+          "sourceIds": [
+            "gs-fear",
+            "bd-fear",
+            "gs-reverence"
+          ],
+          "hints": [
+            "The Guide to the Scriptures entry begins: “Fear can have two meanings.” Read both numbered parts.",
+            "The Guide’s entry for Reverence is a single short line.",
+            "The Bible Dictionary describes one kind of fear as something “perfect love casteth out.”"
+          ],
+          "explanation": "The Guide to the Scriptures says that “to fear God is to feel reverence and awe for Him and to obey His commandments,” while to fear man, mortal dangers, pain, and evil “is to be afraid of such things and to dread them.” It defines reverence as “Deep respect for sacred things; wonder.” The Bible Dictionary agrees: in passages about the fear of the Lord, “fear is equivalent to reverence, awe, worship,” but elsewhere fear is “something unworthy of a child of God.”",
+          "pairs": [
+            {
+              "id": "fear-of-god",
+              "term": "Fear of God",
+              "meaning": "Reverence and awe for God, shown by obeying His commandments"
+            },
+            {
+              "id": "fear-of-man",
+              "term": "Fear of man, danger, or evil",
+              "meaning": "Being afraid of such things and dreading them"
+            },
+            {
+              "id": "reverence",
+              "term": "Reverence",
+              "meaning": "Deep respect for sacred things; wonder"
+            },
+            {
+              "id": "cast-out",
+              "term": "The fear love casts out",
+              "meaning": "Fear that is unworthy of a child of God, which perfect love removes"
+            }
+          ],
+          "extraMeanings": [
+            "Avoiding sacred things so as not to make mistakes",
+            "Being careful only when others are watching"
+          ]
+        },
+        "medium": {
+          "type": "sort",
+          "id": "sort-by-sense",
+          "prompt": "Read these verses with the two meanings in mind. In each one, is ‘fear’ used in the sense of reverence and awe toward God, or in the sense of being afraid?",
+          "sourceIds": [
+            "psalm-111-10",
+            "hebrews-12-28",
+            "genesis-3-9-10",
+            "dc-6-36",
+            "psalm-103-13",
+            "moroni-8-16",
+            "gs-fear"
+          ],
+          "hints": [
+            "Ask: is this a fear God wants us to have, or a fear He wants to remove?",
+            "Fear tied to wisdom, serving God, or the Lord’s compassion is reverence. Fear that makes someone hide, or that we’re told to let go of, is being afraid."
+          ],
+          "explanation": "Psalm 111:10, Hebrews 12:28, and Psalm 103:13 speak of a fear the Lord welcomes, tied to wisdom, worship, and His fatherly compassion. Genesis 3:10, Doctrine and Covenants 6:36, and Moroni 8:16 describe being afraid: the fear that made Adam hide, and the fear the Lord and Mormon say to set aside. The same word carries both meanings the Guide to the Scriptures describes.",
+          "categories": [
+            {
+              "id": "reverence",
+              "label": "Reverence and awe",
+              "description": "The fear of the Lord: reverence, awe, worship"
+            },
+            {
+              "id": "afraid",
+              "label": "Being afraid",
+              "description": "Dread or alarm, the fear we’re told not to have"
+            }
+          ],
+          "items": [
+            {
+              "id": "wisdom",
+              "text": "“The fear of the Lord is the beginning of wisdom” (Psalm 111:10)",
+              "category": "reverence",
+              "why": "Psalm 111:10 links this fear with wisdom and with doing His commandments, the Guide’s first meaning."
+            },
+            {
+              "id": "godly",
+              "text": "“Serve God acceptably with reverence and godly fear” (Hebrews 12:28)",
+              "category": "reverence",
+              "why": "Hebrews pairs godly fear with reverence. The Bible Dictionary cites this verse for the first meaning."
+            },
+            {
+              "id": "father",
+              "text": "“Like as a father pitieth his children, so the Lord pitieth them that fear him.” (Psalm 103:13)",
+              "category": "reverence",
+              "why": "The Lord’s fatherly compassion is for those who fear Him: people who revere Him, not people He frightens away."
+            },
+            {
+              "id": "adam",
+              "text": "“I heard thy voice in the garden, and I was afraid, because I was naked; and I hid myself.” (Genesis 3:10)",
+              "category": "afraid",
+              "why": "The Bible Dictionary notes that the first effect of Adam’s sin was that he was afraid. That fear made him hide from God."
+            },
+            {
+              "id": "doubt-not",
+              "text": "“Look unto me in every thought; doubt not, fear not.” (Doctrine and Covenants 6:36)",
+              "category": "afraid",
+              "why": "The Lord asks His servants to let go of this fear and look to Him."
+            },
+            {
+              "id": "man",
+              "text": "“I fear not what man can do” (Moroni 8:16)",
+              "category": "afraid",
+              "why": "Mormon is describing fear of man, the Guide’s second meaning, which he says he doesn’t have."
+            }
+          ]
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "exodus-both-senses",
+          "prompt": "At Mount Sinai, Moses uses the word ‘fear’ twice in one sentence. Read Exodus 20:18–20 beside Genesis 3:9–10 and answer the questions.",
+          "passages": [
+            "exodus-20-18-20",
+            "genesis-3-9-10"
+          ],
+          "hints": [
+            "Moses uses ‘fear’ twice in verse 20. Look at what each one leads to.",
+            "In verse 18 the people stand far away; in verse 20, “his fear” is meant to help them “sin not.”"
+          ],
+          "explanation": "Read with the Guide to the Scriptures’ two meanings, Moses seems to use ‘fear’ in both senses at once. That is a reading of the verse; the verse doesn’t explain its two uses itself. “Fear not”: don’t let dread drive you away, as it drove the people to stand “afar off.” And let “his fear” be before your faces, “that ye sin not.” Read this way, the fear that pulls people away from God, like Adam hiding in the garden, is the kind Moses tells them to set aside, and the reverent fear that keeps them from sin is the kind he invites.",
+          "questions": [
+            {
+              "id": "both",
+              "prompt": "In Exodus 20:20, Moses says “Fear not” and also speaks of “his fear” being before the people’s faces. Using the Guide to the Scriptures’ two meanings of ‘fear,’ how could both be true?",
+              "options": [
+                {
+                  "id": "two-kinds",
+                  "text": "Read with those two meanings, he could be telling them not to be terrified of God, but to keep a reverent awe of Him that helps them not to sin."
+                },
+                {
+                  "id": "contradiction",
+                  "text": "He contradicts himself in the same sentence.",
+                  "feedback": "Read the verse slowly. The two uses of ‘fear’ lead to different results: one makes the people stand afar off, the other helps them “sin not.”"
+                },
+                {
+                  "id": "moses",
+                  "text": "He means they should fear Moses rather than God.",
+                  "feedback": "Look at whose fear Moses mentions: “his fear,” referring to God earlier in the same sentence."
+                },
+                {
+                  "id": "doesnt-matter",
+                  "text": "He’s telling them fear doesn’t matter at all.",
+                  "feedback": "Moses wants “his fear” to be before their faces. Some kind of fear clearly matters to him."
+                }
+              ],
+              "correct": [
+                "two-kinds"
+              ]
+            },
+            {
+              "id": "distance",
+              "prompt": "What did fear lead people to do in Exodus 20:18–19 and in Genesis 3:10?",
+              "options": [
+                {
+                  "id": "pull-away",
+                  "text": "In both accounts, fear led people to pull away from God: standing afar off, or hiding."
+                },
+                {
+                  "id": "draw-near",
+                  "text": "In both accounts, fear led people to draw closer to God.",
+                  "feedback": "Check Exodus 20:18 (“stood afar off”) and Genesis 3:10 (“I hid myself”)."
+                },
+                {
+                  "id": "unkind",
+                  "text": "In both accounts, fear came because God had been unkind to them.",
+                  "feedback": "Neither passage says that. In Genesis 3:9 the Lord calls out, “Where art thou?” and in Exodus 20:20 Moses says God has come “to prove you.”"
+                }
+              ],
+              "correct": [
+                "pull-away"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "build-two-meanings",
+          "prompt": "Build a statement about the word ‘fear’ that the Guide to the Scriptures, the Bible Dictionary, and the verses you’ve read all support.",
+          "sourceIds": [
+            "gs-fear",
+            "bd-fear",
+            "psalm-103-13",
+            "hebrews-12-28",
+            "genesis-3-9-10"
+          ],
+          "hints": [
+            "Start with the fear scripture invites, then the fear it tells us to set aside.",
+            "The Bible Dictionary describes the fear of the Lord as “reverence, awe, worship” and speaks of the confidence “God’s child should feel in a loving Father.”",
+            "Leave out any fragment that makes God someone to run from or that removes awe of Him altogether."
+          ],
+          "explanation": "The Guide to the Scriptures describes fearing God as feeling “reverence and awe for Him” and obeying His commandments, and the Bible Dictionary calls it “an essential part of the attitude of mind in which we ought to stand toward the All-holy God.” The other kind of fear, the dread that drives people away as it drove Adam to hide, is the kind the Bible Dictionary says God has been teaching us not to have: “Ever since the Fall God has been teaching men not to fear.”",
+          "fragments": [
+            {
+              "id": "invites",
+              "text": "When scripture invites us to fear God,"
+            },
+            {
+              "id": "means-reverence",
+              "text": "it means reverence, awe, and obedience,"
+            },
+            {
+              "id": "child",
+              "text": "the attitude of a child toward a loving and holy Father;"
+            },
+            {
+              "id": "fear-not",
+              "text": "when it tells us to fear not,"
+            },
+            {
+              "id": "let-go",
+              "text": "it means letting go of the dread that drives us away from Him."
+            },
+            {
+              "id": "x-stop-loving",
+              "text": "it means being afraid He will stop loving us;"
+            },
+            {
+              "id": "x-no-awe",
+              "text": "it means we should never feel awe before Him."
+            },
+            {
+              "id": "x-ancient",
+              "text": "it means a feeling meant only for ancient Israel;"
+            }
+          ],
+          "solution": [
+            "invites",
+            "means-reverence",
+            "child",
+            "fear-not",
+            "let-go"
+          ],
+          "statement": "When scripture invites us to fear God, it means reverence, awe, and obedience, the attitude of a child toward a loving and holy Father; when it tells us to fear not, it means letting go of the dread that drives us away from Him."
+        }
+      },
+      "insight": "The Church’s study aids name the two meanings plainly. To fear God is to feel reverence and awe for Him and to obey Him; to fear in the other sense is to be afraid and to dread. Scripture invites the first and asks us to let go of the second. So the question ‘Should I fear God?’ depends on which meaning is meant.",
+      "concepts": [
+        "fear-of-god",
+        "reverence",
+        "fear-as-dread"
+      ],
+      "connections": [
+        {
+          "from": "concept:fear-of-god",
+          "to": "vocabulary:reverence",
+          "relation": "relates-to",
+          "sourceIds": [
+            "gs-fear",
+            "gs-reverence",
+            "bd-fear"
+          ],
+          "note": "The Guide to the Scriptures and the Bible Dictionary describe fearing God as reverence and awe toward Him."
+        },
+        {
+          "from": "concept:fear-of-god",
+          "to": "vocabulary:fear-as-dread",
+          "relation": "contrasts-with",
+          "sourceIds": [
+            "gs-fear",
+            "bd-fear"
+          ],
+          "note": "The study aids distinguish reverent fear of God from being afraid and dreading."
+        }
+      ]
+    },
+    {
+      "id": "fear-him-fear-not",
+      "title": "A sermon to His friends",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "In Luke 12, with an enormous crowd gathered, the Savior speaks first to His disciples, and He addresses them as “my friends.” In four verses He tells them whom not to fear, whom to fear, and why they don’t need to be afraid. Read slowly.",
+      "sourceIds": [
+        "luke-12-4-7"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "highlight-reasons",
+          "prompt": "Tap the phrases that give reasons the Savior’s friends don’t need to be afraid.",
+          "sourceIds": [
+            "luke-12-4-7"
+          ],
+          "hints": [
+            "Look for ‘therefore’ in verse 7. What comes just before it explains it.",
+            "Verse 4 gives one reason about people; verses 6 and 7 give reasons about God’s care.",
+            "The reasons are: people’s power ends at death, no sparrow is forgotten, your hairs are numbered, and you are of more value than many sparrows."
+          ],
+          "explanation": "Jesus gives two kinds of reasons. People who can harm the body “have no more that they can do” (verse 4). And God, who forgets not one sparrow, has numbered “the very hairs of your head,” so “Fear not therefore: ye are of more value than many sparrows” (verses 6–7). The reason not to be afraid is God’s close, personal care.",
+          "passage": "luke-12-4-7",
+          "chunks": [
+            {
+              "verse": 4,
+              "text": "And I say unto you my friends,"
+            },
+            {
+              "verse": 4,
+              "text": "Be not afraid of them that kill the body,"
+            },
+            {
+              "verse": 4,
+              "text": "and after that have no more that they can do."
+            },
+            {
+              "verse": 5,
+              "text": "But I will forewarn you whom ye shall fear:"
+            },
+            {
+              "verse": 5,
+              "text": "Fear him, which after he hath killed hath power to cast into hell;"
+            },
+            {
+              "verse": 5,
+              "text": "yea, I say unto you, Fear him."
+            },
+            {
+              "verse": 6,
+              "text": "Are not five sparrows sold for two farthings,"
+            },
+            {
+              "verse": 6,
+              "text": "and not one of them is forgotten before God?"
+            },
+            {
+              "verse": 7,
+              "text": "But even the very hairs of your head are all numbered."
+            },
+            {
+              "verse": 7,
+              "text": "Fear not therefore:"
+            },
+            {
+              "verse": 7,
+              "text": "ye are of more value than many sparrows."
+            }
+          ],
+          "targets": [
+            2,
+            7,
+            8,
+            10
+          ],
+          "minTargets": 3
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "connect-luke-12",
+          "prompt": "Connect each statement about Luke 12:4–7 with the phrase that supports it.",
+          "sourceIds": [
+            "luke-12-4-7"
+          ],
+          "hints": [
+            "The phrases follow the passage in order, from verse 4 to verse 7.",
+            "Verse 4 has two of the phrases; verses 5, 6, and 7 have one each."
+          ],
+          "explanation": "Read in order, the passage moves from people’s limited power (verse 4), to a power that reaches beyond death (verse 5), to God’s care for sparrows and for every hair of your head (verses 6–7). The Savior’s friends are told whom to fear and why not to be afraid in the same breath.",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "friends",
+                "text": "The Savior speaks to these listeners as friends."
+              },
+              {
+                "id": "limits",
+                "text": "Fear of people has limits, because their power ends at death."
+              },
+              {
+                "id": "greater",
+                "text": "Jesus points to one whose power reaches beyond death and says to fear him."
+              },
+              {
+                "id": "sparrows",
+                "text": "God notices even small, inexpensive creatures."
+              },
+              {
+                "id": "personal",
+                "text": "God’s care for each person is detailed and personal."
+              }
+            ]
+          },
+          "right": {
+            "label": "Phrase from Luke 12",
+            "items": [
+              {
+                "id": "r-friends",
+                "text": "“And I say unto you my friends”",
+                "sourceId": "luke-12-4-7"
+              },
+              {
+                "id": "r-limits",
+                "text": "“have no more that they can do”",
+                "sourceId": "luke-12-4-7"
+              },
+              {
+                "id": "r-greater",
+                "text": "“after he hath killed hath power to cast into hell”",
+                "sourceId": "luke-12-4-7"
+              },
+              {
+                "id": "r-sparrows",
+                "text": "“not one of them is forgotten before God”",
+                "sourceId": "luke-12-4-7"
+              },
+              {
+                "id": "r-personal",
+                "text": "“even the very hairs of your head are all numbered”",
+                "sourceId": "luke-12-4-7"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "friends",
+              "right": "r-friends",
+              "because": "Luke 12:4 begins “And I say unto you my friends.” Everything that follows is spoken to friends.",
+              "clue": "Look at how verse 4 begins: who is being addressed?"
+            },
+            {
+              "left": "limits",
+              "right": "r-limits",
+              "because": "People who kill the body “have no more that they can do” (verse 4).",
+              "clue": "Find the phrase in verse 4 about what people can’t do after death."
+            },
+            {
+              "left": "greater",
+              "right": "r-greater",
+              "because": "Verse 5 points to a power that continues “after he hath killed.”",
+              "clue": "Which phrase describes power that continues after death?"
+            },
+            {
+              "left": "sparrows",
+              "right": "r-sparrows",
+              "because": "Five sparrows sold for two farthings were cheap, yet “not one of them is forgotten before God” (verse 6).",
+              "clue": "Which phrase mentions God noticing the sparrows?"
+            },
+            {
+              "left": "personal",
+              "right": "r-personal",
+              "because": "Verse 7: “even the very hairs of your head are all numbered.”",
+              "clue": "Which phrase is about you personally, not the sparrows?"
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "clue-luke-point",
+          "prompt": "Examine the clues from Luke 12:4–7. What is the Savior’s main point about fear in these verses?",
+          "sourceIds": [
+            "luke-12-4-7",
+            "john-15-13-15"
+          ],
+          "hints": [
+            "Follow the passage in order: whom not to fear (verse 4), whom to fear (verse 5), and why not to be afraid (verses 6–7).",
+            "In verse 7, “Fear not therefore” draws its conclusion from God’s care."
+          ],
+          "explanation": "The Savior contrasts fear of people, whose power ends at death, with a forewarning about one whose power reaches beyond death. Verse 5 doesn’t name him; most readers understand him to be God, since verses 6–7 go on to speak of God’s care. Then Jesus speaks of God, who forgets no sparrow and numbers every hair, and concludes, “Fear not therefore.” However verse 5 is read, Jesus doesn’t leave His friends in dread: He grounds “Fear not” in God’s personal care for each of them.",
+          "clues": [
+            {
+              "id": "to-friends",
+              "title": "Spoken to friends",
+              "text": "The sermon begins “And I say unto you my friends.” In the Church’s edition of the Bible, the footnote on ‘friends’ points to John 15:13–15, where the Savior calls His disciples friends.",
+              "sourceId": "luke-12-4-7"
+            },
+            {
+              "id": "limits",
+              "title": "Fear with limits",
+              "text": "Verse 4: people who kill the body “have no more that they can do.”",
+              "sourceId": "luke-12-4-7"
+            },
+            {
+              "id": "greater",
+              "title": "A greater power",
+              "text": "Verse 5 points to one with power “to cast into hell” and says, twice, “Fear him.”",
+              "sourceId": "luke-12-4-7"
+            },
+            {
+              "id": "not-forgotten",
+              "title": "Not forgotten",
+              "text": "Verses 6–7: not one sparrow “is forgotten before God,” the very hairs of your head are numbered, and “ye are of more value than many sparrows.”",
+              "sourceId": "luke-12-4-7"
+            }
+          ],
+          "question": {
+            "id": "q-point",
+            "prompt": "Which summary fits all four clues best?",
+            "options": [
+              {
+                "id": "reverence-and-care",
+                "text": "Jesus tells His friends not to fear what people can do, gives them a serious forewarning, and then tells them not to be afraid, because God knows and values each of them."
+              },
+              {
+                "id": "dread",
+                "text": "Because of the forewarning in verse 5, His friends should live in constant dread.",
+                "feedback": "Read on to verse 7. What does Jesus conclude right after speaking of God’s care?"
+              },
+              {
+                "id": "comfort-only",
+                "text": "Jesus is only comforting them, so verse 5 doesn’t really matter.",
+                "feedback": "He says “Fear him” twice and calls it a forewarning. The comfort in verses 6–7 doesn’t erase verse 5; it comes alongside it."
+              },
+              {
+                "id": "friendship-replaces",
+                "text": "Because they are His friends, His forewarning in verse 5 doesn’t apply to them.",
+                "feedback": "Look at clues 1 and 3: He gives this forewarning to the very people He has just called “my friends.”"
+              }
+            ],
+            "correct": [
+              "reverence-and-care"
+            ]
+          }
+        },
+        "complex": {
+          "type": "compare",
+          "id": "compare-luke-readings",
+          "prompt": "Weigh these readings of Luke 12:4–7. Which does the passage support, which go beyond it, and which does it contradict?",
+          "sourceIds": [
+            "luke-12-4-7"
+          ],
+          "hints": [
+            "For each reading, find the verse it depends on. If no verse settles it, it goes beyond the passage.",
+            "Compare what Jesus says in verse 5 with what He concludes in verse 7. Does the comfort of verse 7 cancel the forewarning, or come alongside it?"
+          ],
+          "explanation": "Luke 12:4–7 clearly says not to fear people whose power ends at death, and it grounds “Fear not” in God’s personal care. It also gives a forewarning, “Fear him,” so the comfort doesn’t erase the warning. Verse 5 doesn’t name him; most readers understand him to be God, since the next verses speak of God’s care, and many read the passage as using ‘fear’ in the two senses the Guide to the Scriptures describes. That is a reading of the passage, not something it explains itself. The passage also doesn’t explain how judgment works; that would go beyond it.",
+          "perspectives": [
+            {
+              "id": "people",
+              "voice": "A classmate",
+              "text": "Jesus told His friends not to be afraid of people who can only harm the body.",
+              "verdict": "supported",
+              "rationale": "Verse 4: “Be not afraid of them that kill the body, and after that have no more that they can do.”"
+            },
+            {
+              "id": "valued",
+              "voice": "A friend",
+              "text": "Because God values each person, His friends don’t need to be afraid.",
+              "verdict": "supported",
+              "rationale": "Verse 7: “Fear not therefore: ye are of more value than many sparrows.”"
+            },
+            {
+              "id": "not-serious",
+              "voice": "A classmate",
+              "text": "Because God values us, the forewarning in verse 5 doesn’t need to be taken seriously.",
+              "verdict": "contradicted",
+              "rationale": "Jesus says “I will forewarn you” and repeats “Fear him.” God’s care in verses 6–7 comes alongside that warning, not instead of it."
+            },
+            {
+              "id": "how-judgment",
+              "voice": "A common idea",
+              "text": "These verses explain exactly how God will judge each person.",
+              "verdict": "beyond",
+              "rationale": "Verse 5 mentions power beyond death, but these verses don’t describe how judgment works."
+            },
+            {
+              "id": "warning-and-comfort",
+              "voice": "A friend",
+              "text": "In the same few verses, Jesus gives the people He calls friends both a serious forewarning and a reason not to be afraid.",
+              "verdict": "supported",
+              "rationale": "Verse 4 addresses “my friends”; verse 5 says “I will forewarn you … Fear him”; verse 7 says “Fear not therefore: ye are of more value than many sparrows.”"
+            }
+          ]
+        }
+      },
+      "insight": "In one short passage the Savior tells His friends whom to fear and why not to be afraid. He forewarns them about one whose power reaches beyond death; verse 5 doesn’t name him, but most readers understand him to be God, since the next verses speak of God’s care. The fear He removes is dread, answered by God’s care for every sparrow and every hair of your head. “Fear him” and “Fear not”: both come from the same Teacher, to the same friends.",
+      "concepts": [
+        "fear-of-god",
+        "love-of-god",
+        "friendship-with-god"
+      ],
+      "connections": [
+        {
+          "from": "scripture:luke-12-4-7",
+          "to": "concept:love-of-god",
+          "relation": "teaches",
+          "sourceIds": [
+            "luke-12-4-7"
+          ],
+          "note": "The Savior tells His friends that God forgets not one sparrow and numbers the hairs of their heads."
+        },
+        {
+          "from": "scripture:luke-12-4-7",
+          "to": "concept:fear-of-god",
+          "relation": "illustrates",
+          "sourceIds": [
+            "luke-12-4-7"
+          ],
+          "note": "Jesus tells His friends both “Fear him” and “Fear not therefore.” Most readers understand ‘him’ as God and see two senses of the word."
+        }
+      ]
+    },
+    {
+      "id": "love-casts-out-fear",
+      "title": "Love that casts out fear",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "John and Mormon both wrote that “perfect love casteth out” fear. If fearing God is good, which fear does love cast out? And whose love is it? Elder David A. Bednar of the Quorum of the Twelve Apostles also taught about this.",
+      "sourceIds": [
+        "1-john-4-16-19",
+        "moroni-8-16",
+        "hebrews-12-28",
+        "bednar-hushed-their-fears-2015"
+      ],
+      "branchIds": [
+        "fear-and-judgment"
+      ],
+      "activities": {
+        "easy": {
+          "type": "evidence-connect",
+          "id": "connect-love-verses",
+          "prompt": "Connect each idea with the phrase that states it. One phrase comes from a different passage and won’t be used.",
+          "sourceIds": [
+            "1-john-4-16-19",
+            "moroni-8-16"
+          ],
+          "hints": [
+            "Each idea matches a different verse in 1 John 4, from verse 16 to verse 19.",
+            "Verse 18 says why fear is cast out. Look for ‘because.’"
+          ],
+          "explanation": "John grounds everything in who God is: “God is love” (verse 16). Love made perfect brings “boldness in the day of judgment” (verse 17). The fear it casts out is the fear that “hath torment” (verse 18). And our love is a response: “We love him, because he first loved us” (verse 19). Mormon’s words “I fear not what man can do” describe a related freedom: from the fear of people.",
+          "left": {
+            "label": "Idea",
+            "items": [
+              {
+                "id": "nature",
+                "text": "God’s own nature is love."
+              },
+              {
+                "id": "confidence",
+                "text": "Love made perfect brings confidence, not dread, at the judgment."
+              },
+              {
+                "id": "torment",
+                "text": "The fear that love removes is the kind that torments."
+              },
+              {
+                "id": "response",
+                "text": "Our love for God is a response to His love for us."
+              }
+            ]
+          },
+          "right": {
+            "label": "Phrase",
+            "items": [
+              {
+                "id": "v16",
+                "text": "“God is love” (1 John 4:16)",
+                "sourceId": "1-john-4-16-19"
+              },
+              {
+                "id": "v17",
+                "text": "“that we may have boldness in the day of judgment” (1 John 4:17)",
+                "sourceId": "1-john-4-16-19"
+              },
+              {
+                "id": "v18",
+                "text": "“because fear hath torment” (1 John 4:18)",
+                "sourceId": "1-john-4-16-19"
+              },
+              {
+                "id": "v19",
+                "text": "“We love him, because he first loved us.” (1 John 4:19)",
+                "sourceId": "1-john-4-16-19"
+              },
+              {
+                "id": "moroni",
+                "text": "“I fear not what man can do” (Moroni 8:16)",
+                "sourceId": "moroni-8-16"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "nature",
+              "right": "v16",
+              "because": "Verse 16 says plainly, “God is love.”",
+              "clue": "Which phrase describes who God is?"
+            },
+            {
+              "left": "confidence",
+              "right": "v17",
+              "because": "Verse 17 says love is made perfect “that we may have boldness in the day of judgment.”",
+              "clue": "Which phrase mentions the judgment?"
+            },
+            {
+              "left": "torment",
+              "right": "v18",
+              "because": "Verse 18 explains that perfect love casts out fear “because fear hath torment.”",
+              "clue": "Which phrase gives the reason fear is cast out?"
+            },
+            {
+              "left": "response",
+              "right": "v19",
+              "because": "Verse 19: “We love him, because he first loved us.”",
+              "clue": "Which phrase says whose love came first?"
+            }
+          ]
+        },
+        "medium": {
+          "type": "vocab-match",
+          "id": "match-fears-examples",
+          "prompt": "Match each term with its meaning and with a scriptural example.",
+          "sourceIds": [
+            "hebrews-12-28",
+            "1-john-4-16-19",
+            "moroni-8-16",
+            "bednar-hushed-their-fears-2015"
+          ],
+          "hints": [
+            "Two terms name the kinds of fear the study aids contrast, one names fear of people, and one is the opposite of dread.",
+            "‘Boldness’ in 1 John 4:17 is about the day of judgment. It isn’t pride."
+          ],
+          "explanation": "Hebrews 12:28 pairs “reverence and godly fear” in serving God; 1 John 4:18 explains that the fear perfect love casts out is the fear that “hath torment”; Mormon describes freedom from fear of man; and 1 John 4:17 calls the confidence love brings “boldness in the day of judgment.” Elder Bednar taught that godly fear is “a source of peace, assurance, and confidence,” so godly fear and boldness can belong together, while tormenting fear can’t stay where love is made perfect.",
+          "match": "both",
+          "pairs": [
+            {
+              "id": "godly-fear",
+              "term": "Godly fear",
+              "meaning": "Reverence and awe that help us worship and serve God",
+              "example": {
+                "text": "“serve God acceptably with reverence and godly fear”",
+                "sourceId": "hebrews-12-28"
+              }
+            },
+            {
+              "id": "tormenting-fear",
+              "term": "Fear that hath torment",
+              "meaning": "Dread that love made perfect casts out",
+              "example": {
+                "text": "“perfect love casteth out fear: because fear hath torment”",
+                "sourceId": "1-john-4-16-19"
+              }
+            },
+            {
+              "id": "fear-of-man",
+              "term": "Fear of man",
+              "meaning": "Being afraid of what people can do to us",
+              "example": {
+                "text": "“I fear not what man can do”",
+                "sourceId": "moroni-8-16"
+              }
+            },
+            {
+              "id": "boldness",
+              "term": "Boldness",
+              "meaning": "Confidence before God that comes as love is made perfect",
+              "example": {
+                "text": "“that we may have boldness in the day of judgment”",
+                "sourceId": "1-john-4-16-19"
+              }
+            }
+          ],
+          "extraMeanings": [
+            "Pride that refuses to bow before God",
+            "Politeness shown only in public"
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "compare-love-fear",
+          "prompt": "Decide how well each statement fits 1 John 4:16–19, Moroni 8:16, Hebrews 12:28, and Elder Bednar’s teaching.",
+          "sourceIds": [
+            "1-john-4-16-19",
+            "moroni-8-16",
+            "hebrews-12-28",
+            "bednar-hushed-their-fears-2015"
+          ],
+          "hints": [
+            "Read 1 John 4:18 closely. What does it actually say about the person who fears?",
+            "Look for what Elder Bednar says godly fear is, and compare it with the fear that “hath torment.”"
+          ],
+          "explanation": "John and Mormon describe a love that removes tormenting fear, and it starts with God’s love for us. That love doesn’t remove reverence: Hebrews 12:28 asks us to serve God with reverence, and Elder Bednar teaches that godly fear and love grow together. And 1 John 4:18 says the one who fears “is not made perfect in love”; it doesn’t say that feeling afraid proves a person doesn’t love God.",
+          "perspectives": [
+            {
+              "id": "proves",
+              "voice": "A classmate",
+              "text": "If I ever feel afraid, that proves I don’t love God.",
+              "verdict": "beyond",
+              "rationale": "1 John 4:18 says the one who fears “is not made perfect in love.” It doesn’t say that person has no love. Many readers take it to describe love that is still being made perfect; either way, the verse doesn’t say a moment of fear proves there’s no love."
+            },
+            {
+              "id": "starts-with-god",
+              "voice": "A common idea",
+              "text": "The love that casts out fear starts with God’s love for us.",
+              "verdict": "supported",
+              "rationale": "1 John 4:19: “We love him, because he first loved us.” Verse 16 adds, “we have known and believed the love that God hath to us.”"
+            },
+            {
+              "id": "grow-together",
+              "voice": "A friend",
+              "text": "Reverent fear of God and love for Him can grow together.",
+              "verdict": "supported",
+              "rationale": "Elder Bednar taught, “As we fear God more completely, we love Him more perfectly.” This is an apostle’s teaching, consistent with Deuteronomy 10:12, which joins fearing and loving the Lord."
+            },
+            {
+              "id": "no-reverence",
+              "voice": "A common idea",
+              "text": "Perfect love casts out reverence for God, too.",
+              "verdict": "contradicted",
+              "rationale": "Hebrews 12:28 asks us to serve God “with reverence and godly fear,” and Elder Bednar teaches that “Godly fear is loving and trusting in Him.” The fear love casts out is the fear that “hath torment.”"
+            },
+            {
+              "id": "mormon",
+              "voice": "A classmate",
+              "text": "Mormon could speak boldly because he no longer feared what people could do to him.",
+              "verdict": "supported",
+              "rationale": "Moroni 8:16: “I speak with boldness … and I fear not what man can do; for perfect love casteth out all fear.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "build-love-fear",
+          "prompt": "Build a principle that 1 John 4:16–19, Moroni 8:16, and Elder Bednar’s teaching support together.",
+          "sourceIds": [
+            "1-john-4-16-19",
+            "moroni-8-16",
+            "bednar-hushed-their-fears-2015"
+          ],
+          "hints": [
+            "Start where 1 John 4:19 starts: whose love comes first?",
+            "The ending should keep what Elder Bednar says godly fear is: “loving and trusting in Him.”"
+          ],
+          "explanation": "1 John 4:19 puts God’s love first; verse 17 speaks of our love being “made perfect,” and verse 18 says perfect love casts out the fear that “hath torment”; and Mormon shows that love freeing him from the fear of man. Elder Bednar adds that “Godly fear is loving and trusting in Him,” so, as he teaches it, reverence grows with love instead of disappearing.",
+          "fragments": [
+            {
+              "id": "first",
+              "text": "Because God first loved us,"
+            },
+            {
+              "id": "grow",
+              "text": "our love for Him can be made perfect,"
+            },
+            {
+              "id": "casts-out",
+              "text": "and perfect love casts out the fear that torments"
+            },
+            {
+              "id": "deepens",
+              "text": "while deepening our reverence and trust in Him."
+            },
+            {
+              "id": "x-we-first",
+              "text": "Because we first loved God,"
+            },
+            {
+              "id": "x-obey",
+              "text": "and perfect love means we no longer need to obey Him"
+            },
+            {
+              "id": "x-awe",
+              "text": "while removing all awe of His holiness."
+            }
+          ],
+          "solution": [
+            "first",
+            "grow",
+            "casts-out",
+            "deepens"
+          ],
+          "statement": "Because God first loved us, our love for Him can be made perfect, and perfect love casts out the fear that torments while deepening our reverence and trust in Him."
+        }
+      },
+      "insight": "The love that casts out fear starts with God: “We love him, because he first loved us.” What it casts out is the fear that “hath torment”: dread, alarm, the urge to hide. It doesn’t cast out reverence. Elder Bednar taught that godly fear is “a source of peace, assurance, and confidence.”",
+      "concepts": [
+        "love-of-god",
+        "fear-as-dread",
+        "fear-of-god"
+      ],
+      "connections": [
+        {
+          "from": "scripture:1-john-4-16-19",
+          "to": "concept:love-of-god",
+          "relation": "teaches",
+          "sourceIds": [
+            "1-john-4-16-19"
+          ],
+          "note": "John teaches that God is love and that our love for Him responds to His love for us."
+        },
+        {
+          "from": "concept:love-of-god",
+          "to": "vocabulary:fear-as-dread",
+          "relation": "contrasts-with",
+          "sourceIds": [
+            "1-john-4-16-19",
+            "moroni-8-16"
+          ],
+          "note": "John and Mormon both write that perfect love casts out fear."
+        }
+      ]
+    },
+    {
+      "id": "be-not-afraid",
+      "title": "Arise, and be not afraid",
+      "phase": "discover",
+      "method": "academic",
+      "depth": "deep",
+      "intro": "Sometimes people in scripture are overwhelmed in the Lord’s presence and fall to the ground. Watch what the Savior does when that happens.",
+      "sourceIds": [
+        "matthew-17-5-8",
+        "revelation-1-17-18"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "highlight-touch",
+          "prompt": "On the Mount of Transfiguration the disciples fell on their faces. Tap the phrases that show what Jesus did next.",
+          "sourceIds": [
+            "matthew-17-5-8"
+          ],
+          "hints": [
+            "The disciples’ reaction is in verse 6. The Savior’s response comes right after it.",
+            "Verse 7 records two things Jesus did: something with His hands and something He said."
+          ],
+          "explanation": "When the Father’s voice left the disciples “sore afraid,” Jesus “came and touched them, and said, Arise, and be not afraid” (Matthew 17:6–7). The account records no rebuke for their awe. He came close, touched them, and lifted them up.",
+          "passage": "matthew-17-5-8",
+          "chunks": [
+            {
+              "verse": 5,
+              "text": "While he yet spake, behold, a bright cloud overshadowed them:"
+            },
+            {
+              "verse": 5,
+              "text": "and behold a voice out of the cloud, which said,"
+            },
+            {
+              "verse": 5,
+              "text": "This is my beloved Son, in whom I am well pleased;"
+            },
+            {
+              "verse": 5,
+              "text": "hear ye him."
+            },
+            {
+              "verse": 6,
+              "text": "And when the disciples heard it, they fell on their face,"
+            },
+            {
+              "verse": 6,
+              "text": "and were sore afraid."
+            },
+            {
+              "verse": 7,
+              "text": "And Jesus came and touched them,"
+            },
+            {
+              "verse": 7,
+              "text": "and said, Arise, and be not afraid."
+            },
+            {
+              "verse": 8,
+              "text": "And when they had lifted up their eyes,"
+            },
+            {
+              "verse": 8,
+              "text": "they saw no man, save Jesus only."
+            }
+          ],
+          "targets": [
+            6,
+            7
+          ]
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "connect-fear-not",
+          "prompt": "Compare Matthew 17:5–8 with Revelation 1:17–18, where John sees the risen Lord.",
+          "passages": [
+            "matthew-17-5-8",
+            "revelation-1-17-18"
+          ],
+          "hints": [
+            "Compare Matthew 17:6–7 with Revelation 1:17: what posture, what touch, what words?",
+            "In Revelation 1:17–18, the reasons are all about Him: ‘I am…’ and ‘I … have…’."
+          ],
+          "explanation": "In both accounts, disciples fall before the Lord in awe, and He comes close, touches them, and tells them not to fear. In Revelation the reasons are all about who He is: “I am the first and the last,” “I am he that liveth, and was dead,” and He has “the keys of hell and of death.” One observation, though neither passage makes the comparison: Luke 12:5 spoke of a power “to cast into hell,” and here the risen Savior says He has “the keys of hell and of death,” and His first words to John are “Fear not.” The two passages don’t say they describe the same thing.",
+          "questions": [
+            {
+              "id": "pattern",
+              "prompt": "What pattern do the two accounts share?",
+              "options": [
+                {
+                  "id": "touch",
+                  "text": "People fall down before the Lord, and He responds with a touch and words telling them not to fear."
+                },
+                {
+                  "id": "withdraws",
+                  "text": "The Lord withdraws until the people calm down.",
+                  "feedback": "Look at Matthew 17:7 and Revelation 1:17. Does He move away or come near?"
+                },
+                {
+                  "id": "rebukes",
+                  "text": "The Lord rebukes them for being afraid.",
+                  "feedback": "Read His words again. Is there any rebuke in “Arise, and be not afraid” or “Fear not”?"
+                }
+              ],
+              "correct": [
+                "touch"
+              ]
+            },
+            {
+              "id": "reasons",
+              "prompt": "Right after “Fear not,” what reasons does the Savior give John? Choose all that apply.",
+              "multiple": true,
+              "options": [
+                {
+                  "id": "first-last",
+                  "text": "He is the first and the last."
+                },
+                {
+                  "id": "alive",
+                  "text": "He was dead, and He is alive for evermore."
+                },
+                {
+                  "id": "keys",
+                  "text": "He has the keys of hell and of death."
+                },
+                {
+                  "id": "record",
+                  "text": "John had never done anything wrong.",
+                  "feedback": "The reasons He gives are about who He is, not about John’s record."
+                }
+              ],
+              "correct": [
+                "first-last",
+                "alive",
+                "keys"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "Awe in the Lord’s presence is natural; scripture records disciples falling on their faces. But the Savior’s response is to come near, touch them, and say ‘be not afraid.’ The reasons He gives are about who He is: the living One who has overcome death.",
+      "concepts": [
+        "jesus-christ",
+        "fear-of-god"
+      ],
+      "connections": [
+        {
+          "from": "scripture:matthew-17-5-8",
+          "to": "concept:jesus-christ",
+          "relation": "illustrates",
+          "sourceIds": [
+            "matthew-17-5-8",
+            "revelation-1-17-18"
+          ],
+          "note": "When disciples fall before Him in awe, the Savior touches them and tells them not to be afraid."
+        }
+      ]
+    },
+    {
+      "id": "friends-who-revere",
+      "title": "Friends who revere Him",
+      "phase": "understand",
+      "method": "analytical",
+      "intro": "The Lord calls people His friends throughout scripture: Moses, Abraham, His disciples, and Joseph Smith. Look at what that friendship includes, and where reverence fits in it.",
+      "sourceIds": [
+        "john-15-13-15",
+        "exodus-33-11",
+        "james-2-23",
+        "dc-93-45",
+        "hebrews-12-28",
+        "bednar-hushed-their-fears-2015",
+        "buckner-ye-are-my-friends-2024"
+      ],
+      "branchIds": [
+        "reverence-in-friendship"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "sort-friendship",
+          "prompt": "Sort each phrase: is it something the Lord gives or does for His friends, or something His friends do?",
+          "sourceIds": [
+            "john-15-13-15",
+            "exodus-33-11",
+            "dc-93-45",
+            "james-2-23",
+            "hebrews-12-28"
+          ],
+          "hints": [
+            "Ask who is acting in each phrase: the Lord, or the person He calls a friend?",
+            "Four phrases describe the Lord’s gifts: His life, His words, His presence, and an inheritance."
+          ],
+          "explanation": "Most of what these passages describe is the Lord’s doing: He lays down His life, makes known what He has heard from the Father, speaks face to face, and promises an inheritance with Him. His friends respond: they believe Him, do what He commands, and serve Him with reverence. Friendship with God begins with His gifts; reverence and obedience are how His friends answer.",
+          "categories": [
+            {
+              "id": "gives",
+              "label": "What the Lord gives",
+              "description": "Something the Lord does for His friends"
+            },
+            {
+              "id": "does",
+              "label": "What His friends do",
+              "description": "How His friends respond to Him"
+            }
+          ],
+          "items": [
+            {
+              "id": "life",
+              "text": "“Greater love hath no man than this, that a man lay down his life for his friends.” (John 15:13)",
+              "category": "gives",
+              "why": "The Savior speaks of the greatest love: laying down one’s life for one’s friends, as He was about to do."
+            },
+            {
+              "id": "known",
+              "text": "“All things that I have heard of my Father I have made known unto you.” (John 15:15)",
+              "category": "gives",
+              "why": "The Savior shares with His friends what He has heard from the Father."
+            },
+            {
+              "id": "face",
+              "text": "“The Lord spake unto Moses face to face” (Exodus 33:11)",
+              "category": "gives",
+              "why": "The Lord speaks with Moses openly, as a friend."
+            },
+            {
+              "id": "inheritance",
+              "text": "“Ye shall have an inheritance with me” (Doctrine and Covenants 93:45)",
+              "category": "gives",
+              "why": "The Lord promises His friends an inheritance with Him."
+            },
+            {
+              "id": "command",
+              "text": "“Ye are my friends, if ye do whatsoever I command you.” (John 15:14)",
+              "category": "does",
+              "why": "His friends do what He commands."
+            },
+            {
+              "id": "believed",
+              "text": "“Abraham believed God” (James 2:23)",
+              "category": "does",
+              "why": "Abraham’s belief in God is part of why he was called the Friend of God."
+            },
+            {
+              "id": "serve",
+              "text": "“Serve God acceptably with reverence and godly fear” (Hebrews 12:28)",
+              "category": "does",
+              "why": "Those who serve God do it with reverence and godly fear."
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "connect-friendship",
+          "prompt": "Read Exodus 33:11 and John 15:13–15 side by side.",
+          "passages": [
+            "exodus-33-11",
+            "john-15-13-15"
+          ],
+          "hints": [
+            "Both passages describe the Lord speaking with His friends. What does He share?",
+            "John 15:15 contrasts what a servant knows with what a friend is told."
+          ],
+          "explanation": "In Exodus 33:11 the Lord speaks with Moses “face to face, as a man speaketh unto his friend,” and in John 15:15 the Savior explains that friends, unlike servants, are told “all things that I have heard of my Father.” Friendship with the Lord is marked by closeness and shared understanding, and, as John 15:14 shows, it still includes doing what He commands.",
+          "questions": [
+            {
+              "id": "shared",
+              "prompt": "What do Exodus 33:11 and John 15:15 both show about the Lord’s friendship?",
+              "options": [
+                {
+                  "id": "open",
+                  "text": "He speaks openly with His friends and shares what He knows."
+                },
+                {
+                  "id": "hidden",
+                  "text": "He keeps His purposes hidden from His friends.",
+                  "feedback": "John 15:15 says a servant doesn’t know what his lord does, but friends are told “all things that I have heard of my Father.”"
+                },
+                {
+                  "id": "no-listening",
+                  "text": "His friends no longer need to listen or obey.",
+                  "feedback": "John 15:14 ties friendship to doing what He commands."
+                }
+              ],
+              "correct": [
+                "open"
+              ]
+            },
+            {
+              "id": "servant-friend",
+              "prompt": "In John 15:15, what is the difference between a servant and a friend?",
+              "options": [
+                {
+                  "id": "knowing",
+                  "text": "A servant doesn’t know what his lord is doing; a friend is told what the Lord has heard from the Father."
+                },
+                {
+                  "id": "obeying",
+                  "text": "A servant obeys, and a friend doesn’t have to.",
+                  "feedback": "Verse 14 still says “if ye do whatsoever I command you.” The difference in verse 15 is about knowing, not obeying."
+                },
+                {
+                  "id": "tolerated",
+                  "text": "A servant is loved, and a friend is merely tolerated.",
+                  "feedback": "Verse 13 speaks of the greatest love being for friends."
+                }
+              ],
+              "correct": [
+                "knowing"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "clue-reverent-friends",
+          "prompt": "Examine the clues. What do they suggest about how reverence and friendship with God fit together?",
+          "sourceIds": [
+            "john-15-13-15",
+            "hebrews-12-28",
+            "bednar-hushed-their-fears-2015",
+            "buckner-ye-are-my-friends-2024"
+          ],
+          "hints": [
+            "Clue 3 says what godly fear includes; clue 4 says what kind of relationship friendship with the Savior is.",
+            "If His friendship is sacred, and godly fear is loving and trusting Him, how do the two relate?"
+          ],
+          "explanation": "The Savior’s friends do what He commands (John 15:14), and those who serve God do so “with reverence and godly fear” (Hebrews 12:28). Elder Bednar describes godly fear as reverence, respect, and awe, and as “loving and trusting in Him.” Elder Buckner describes the Savior’s friendship as “a sacred and cherished relationship.” Taken together, these suggest reverence is how a friend responds to a holy God, not a barrier between them.",
+          "clues": [
+            {
+              "id": "obey",
+              "title": "Friends who obey",
+              "text": "John 15:14: “Ye are my friends, if ye do whatsoever I command you.”",
+              "sourceId": "john-15-13-15"
+            },
+            {
+              "id": "serve",
+              "title": "Reverence in service",
+              "text": "Hebrews 12:28 invites us to “serve God acceptably with reverence and godly fear.”",
+              "sourceId": "hebrews-12-28"
+            },
+            {
+              "id": "godly-fear",
+              "title": "What godly fear is",
+              "text": "Elder David A. Bednar of the Quorum of the Twelve Apostles taught that godly fear “encompasses a deep feeling of reverence, respect, and awe for the Lord Jesus Christ” and that “Godly fear is loving and trusting in Him.”",
+              "sourceId": "bednar-hushed-their-fears-2015"
+            },
+            {
+              "id": "sacred",
+              "title": "A sacred relationship",
+              "text": "Elder David L. Buckner of the Seventy observed that the Savior “uses the term friend to define a sacred and cherished relationship.”",
+              "sourceId": "buckner-ye-are-my-friends-2024"
+            }
+          ],
+          "question": {
+            "id": "q-fit",
+            "prompt": "What do the clues suggest together?",
+            "options": [
+              {
+                "id": "part-of",
+                "text": "Friendship with the Lord is a sacred relationship, so reverence and trust are part of it, not opposed to it."
+              },
+              {
+                "id": "strangers",
+                "text": "Reverence is for strangers; friends don’t need it.",
+                "feedback": "Clue 4 calls His friendship “sacred,” and clue 2 asks those who serve Him for reverence. Would a sacred friendship leave reverence out?"
+              },
+              {
+                "id": "earned",
+                "text": "Friendship with the Lord is a reward for perfect reverence.",
+                "feedback": "John 15:14 does name a condition, doing what He commands, but nothing here says friendship must be earned by flawless reverence. John 15:13 centers on His love for His friends."
+              },
+              {
+                "id": "separate",
+                "text": "Fearing God and being His friend are two separate paths; we can choose either one.",
+                "feedback": "Clues 1 and 2 describe the same kind of people: those who follow Him in obedience and serve Him with reverence."
+              }
+            ],
+            "correct": [
+              "part-of"
+            ]
+          }
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "build-fear-and-friend",
+          "prompt": "Answer this investigation’s question in one statement, using what you’ve found across it.",
+          "sourceIds": [
+            "luke-12-4-7",
+            "1-john-4-16-19",
+            "john-15-13-15",
+            "gs-fear"
+          ],
+          "hints": [
+            "Begin with the fear we don’t need to have, then the fear we’re invited to keep.",
+            "Check each fragment against a source: Luke 12:7 for not being afraid, John 15:15 for friendship, and the Guide to the Scriptures for what fearing God means.",
+            "The extra fragments make God distant, make His presence something to dread, or treat reverence as temporary."
+          ],
+          "explanation": "Luke 12:7 and 1 John 4:18 tell us not to be afraid, because God cares for us and His love casts out tormenting fear. The Guide to the Scriptures defines fearing God as feeling “reverence and awe for Him” and obeying His commandments, and the Savior calls those who do what He commands His friends (John 15:14–15). The answer isn’t either-or: fear Him in reverence, and fear not, because He loves you and calls you His friend.",
+          "fragments": [
+            {
+              "id": "not-afraid",
+              "text": "We don’t need to be afraid of God,"
+            },
+            {
+              "id": "loves",
+              "text": "because He loves us and calls us His friends;"
+            },
+            {
+              "id": "still",
+              "text": "and we can still fear Him"
+            },
+            {
+              "id": "sense",
+              "text": "in the sense of reverence, awe, and faithful obedience,"
+            },
+            {
+              "id": "respond",
+              "text": "which is how friends respond to a holy and loving God."
+            },
+            {
+              "id": "x-distant",
+              "text": "because He is too distant to notice us;"
+            },
+            {
+              "id": "x-dread",
+              "text": "in the sense of dreading His presence,"
+            },
+            {
+              "id": "x-drop",
+              "text": "which we can drop once we feel close to Him."
+            }
+          ],
+          "solution": [
+            "not-afraid",
+            "loves",
+            "still",
+            "sense",
+            "respond"
+          ],
+          "statement": "We don’t need to be afraid of God, because He loves us and calls us His friends; and we can still fear Him in the sense of reverence, awe, and faithful obedience, which is how friends respond to a holy and loving God."
+        }
+      },
+      "insight": "Scripture never asks us to choose between revering God and being His friend. The Lord’s friendship begins with His gifts: His life, His words, His presence. His friends respond by believing Him, keeping His commandments, and serving Him with reverence. Reverence is how a friend honors a holy God.",
+      "concepts": [
+        "friendship-with-god",
+        "reverence",
+        "fear-of-god"
+      ],
+      "connections": [
+        {
+          "from": "scripture:john-15-13-15",
+          "to": "concept:friendship-with-god",
+          "relation": "teaches",
+          "sourceIds": [
+            "john-15-13-15"
+          ],
+          "note": "The Savior calls His disciples friends, speaks of laying down His life for them, and shares with them what He has heard from the Father."
+        },
+        {
+          "from": "question:fear-god-friend",
+          "to": "question:primary-god",
+          "relation": "rests-on",
+          "sourceIds": [
+            "psalm-103-13",
+            "1-john-4-16-19"
+          ],
+          "note": "How to fear God depends on who He is: scripture describes a Father who pities those who fear Him and whose nature is love."
+        }
+      ]
+    },
+    {
+      "id": "reflect-friend",
+      "title": "Approaching Him as a friend",
+      "phase": "understand",
+      "method": "divine",
+      "intro": "This reflection is optional and private. Write as much or as little as you like, or simply think about it.",
+      "sourceIds": [
+        "luke-12-4-7",
+        "john-15-13-15",
+        "matthew-17-5-8"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "reflect-fear-friend",
+        "prompt": "If you’d like, write about what it could look like for you to approach Heavenly Father and Jesus Christ with both reverence and the confidence of a friend.",
+        "sourceIds": [
+          "luke-12-4-7",
+          "john-15-13-15",
+          "matthew-17-5-8"
+        ],
+        "suggestions": [
+          "What reasons in Luke 12:6–7 could help you set aside fear?",
+          "The Savior spoke of laying down His life for His friends (John 15:13). What does that show about how He sees you?",
+          "What is one way you could show reverence for Him this week: in prayer, in His house, or in how you speak of Him?",
+          "If you wish, you could take this question to Heavenly Father in prayer."
+        ]
+      },
+      "insight": "Jesus Christ is the clearest answer to this question. He is the Holy One before whom disciples fell in awe, and He is the Friend who laid down His life, touched them, and said, ‘be not afraid.’",
+      "concepts": [
+        "jesus-christ",
+        "friendship-with-god"
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "fear-and-judgment",
+      "question": "Does fearing God mean being afraid of the Judgment?",
+      "intro": "Many people wonder what it will be like to stand before God to be judged. Elder David A. Bednar of the Quorum of the Twelve Apostles connected godly fear with the Final Judgment, and John wrote about “boldness in the day of judgment.” Look at what these sources say together.",
+      "steps": [
+        {
+          "id": "boldness-at-judgment",
+          "title": "Boldness in the day of judgment",
+          "phase": "discover",
+          "method": "analytical",
+          "sourceIds": [
+            "1-john-4-16-19",
+            "hebrews-4-15-16",
+            "bednar-hushed-their-fears-2015"
+          ],
+          "activities": {
+            "medium": {
+              "type": "clue",
+              "id": "clue-judgment",
+              "prompt": "Examine the clues. How should a friend of God think about the Judgment?",
+              "sourceIds": [
+                "1-john-4-16-19",
+                "hebrews-4-15-16",
+                "bednar-hushed-their-fears-2015"
+              ],
+              "hints": [
+                "Clues 1 and 3 aren’t opposites: one is about accountability, the other about confidence.",
+                "Hebrews 4:16 explains where confidence comes from: a throne of grace and a High Priest who understands."
+              ],
+              "explanation": "Accountability is real: Elder Bednar teaches that godly fear includes “anticipation of the Final Judgment and justice at His hand.” But scripture also describes “boldness in the day of judgment” as love is made perfect (1 John 4:17), and invites us to “come boldly unto the throne of grace, that we may obtain mercy,” because the Savior is “touched with the feeling of our infirmities” (Hebrews 4:15–16). Elder Bednar added his own view: “I do not believe we will be afraid of Him at all.”",
+              "clues": [
+                {
+                  "id": "accountable",
+                  "title": "Accountability is real",
+                  "text": "Elder Bednar taught that godly fear includes “anticipation of the Final Judgment and justice at His hand.”",
+                  "sourceId": "bednar-hushed-their-fears-2015"
+                },
+                {
+                  "id": "not-afraid",
+                  "title": "Not afraid of Him",
+                  "text": "He also said: “The fear of the Lord is not a reluctant apprehension about coming into His presence to be judged. I do not believe we will be afraid of Him at all.”",
+                  "sourceId": "bednar-hushed-their-fears-2015"
+                },
+                {
+                  "id": "boldness",
+                  "title": "Boldness through love",
+                  "text": "1 John 4:17: “Herein is our love made perfect, that we may have boldness in the day of judgment.”",
+                  "sourceId": "1-john-4-16-19"
+                },
+                {
+                  "id": "high-priest",
+                  "title": "A High Priest who understands",
+                  "text": "Hebrews 4:15–16: we have a high priest who can “be touched with the feeling of our infirmities,” so “Let us therefore come boldly unto the throne of grace, that we may obtain mercy.”",
+                  "sourceId": "hebrews-4-15-16"
+                },
+                {
+                  "id": "good-enough",
+                  "title": "Not good enough on our own",
+                  "text": "Elder Bednar: “godly fear dispels mortal fears. It even subdues the haunting concern that we never can be good enough spiritually.”",
+                  "sourceId": "bednar-hushed-their-fears-2015"
+                }
+              ],
+              "question": {
+                "id": "q-judgment",
+                "prompt": "What do the clues suggest together?",
+                "options": [
+                  {
+                    "id": "accountable-confident",
+                    "text": "We will be accountable to God, but the Savior’s understanding and mercy, and love made perfect, let us look toward that day with confidence instead of dread."
+                  },
+                  {
+                    "id": "not-real",
+                    "text": "Judgment isn’t real, so there’s nothing to think about.",
+                    "feedback": "Clue 1 describes real accountability."
+                  },
+                  {
+                    "id": "terror",
+                    "text": "The right response to the Judgment is constant terror.",
+                    "feedback": "Clues 3 and 4 speak of boldness: approaching God with confidence, not terror."
+                  },
+                  {
+                    "id": "perfect-only",
+                    "text": "We can be confident only if we’ve never made mistakes.",
+                    "feedback": "Hebrews 4:16 invites us to come boldly “that we may obtain mercy.” Mercy is for people who need it."
+                  }
+                ],
+                "correct": [
+                  "accountable-confident"
+                ]
+              }
+            }
+          },
+          "insight": "Fearing God includes knowing we’re accountable to Him. But the One who judges is the One who understands our weaknesses and offers mercy, so His friends can look toward that day with boldness instead of dread.",
+          "concepts": [
+            "judgment",
+            "love-of-god",
+            "grace"
+          ],
+          "connections": [
+            {
+              "from": "concept:judgment",
+              "to": "concept:love-of-god",
+              "relation": "relates-to",
+              "sourceIds": [
+                "1-john-4-16-19"
+              ],
+              "note": "John writes that love made perfect gives boldness in the day of judgment."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main path: what do John and Mormon say love does with fear?"
+    },
+    {
+      "id": "reverence-in-friendship",
+      "question": "What does reverence look like in a friendship with God?",
+      "intro": "If God is our friend, how do we show reverence? Two scenes may help: Moses at the burning bush, and the Nephites meeting the risen Savior.",
+      "steps": [
+        {
+          "id": "reverence-scenes",
+          "title": "Close and reverent",
+          "phase": "evidence",
+          "method": "academic",
+          "sourceIds": [
+            "exodus-3-4-6",
+            "exodus-33-11",
+            "3-nephi-11-12-17"
+          ],
+          "activities": {
+            "medium": {
+              "type": "sort",
+              "id": "sort-reverence-closeness",
+              "prompt": "Sort each moment from these scenes: does it show reverence and awe, or the Lord drawing people close?",
+              "sourceIds": [
+                "exodus-3-4-6",
+                "exodus-33-11",
+                "3-nephi-11-12-17"
+              ],
+              "hints": [
+                "Reverence shows respect for holiness. Closeness shows the Lord coming near or inviting people near.",
+                "In 3 Nephi 11, watch the order: falling down, coming forward one by one, then falling down again to worship."
+              ],
+              "explanation": "In 3 Nephi 11 the people fall to the earth (verse 12); then the Savior invites them to come close enough to feel the prints of the nails, “one by one” (verses 14–15); and afterward they “did fall down at the feet of Jesus, and did worship him” (verse 17). Closeness didn’t end their reverence: after coming near, they worshipped Him. One more observation, though scripture doesn’t draw the contrast itself: Moses, who “hid his face” at the burning bush (Exodus 3:6), is the same Moses the Lord later spoke with “face to face, as a man speaketh unto his friend” (Exodus 33:11).",
+              "categories": [
+                {
+                  "id": "reverence",
+                  "label": "Reverence and awe"
+                },
+                {
+                  "id": "closeness",
+                  "label": "Drawing close"
+                }
+              ],
+              "items": [
+                {
+                  "id": "shoes",
+                  "text": "“Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground.” (Exodus 3:5)",
+                  "category": "reverence",
+                  "why": "Removing shoes on holy ground shows respect for the Lord’s holiness."
+                },
+                {
+                  "id": "face-to-face",
+                  "text": "“The Lord spake unto Moses face to face, as a man speaketh unto his friend.” (Exodus 33:11)",
+                  "category": "closeness",
+                  "why": "The Lord speaks with Moses as closely as one friend speaks with another."
+                },
+                {
+                  "id": "fell",
+                  "text": "“The whole multitude fell to the earth” (3 Nephi 11:12)",
+                  "category": "reverence",
+                  "why": "The people fall to the earth in awe as the Savior appears."
+                },
+                {
+                  "id": "arise",
+                  "text": "“Arise and come forth unto me, that ye may thrust your hands into my side” (3 Nephi 11:14)",
+                  "category": "closeness",
+                  "why": "The Savior invites the people to come close and touch Him."
+                },
+                {
+                  "id": "one-by-one",
+                  "text": "“Going forth one by one until they had all gone forth” (3 Nephi 11:15)",
+                  "category": "closeness",
+                  "why": "Each person comes to Him individually."
+                },
+                {
+                  "id": "worship",
+                  "text": "“They did fall down at the feet of Jesus, and did worship him.” (3 Nephi 11:17)",
+                  "category": "reverence",
+                  "why": "After coming close, they worship Him."
+                }
+              ]
+            }
+          },
+          "insight": "In these scenes, reverence and closeness aren’t opposites. The Lord invites people near, and those who come near worship Him. Reverence in friendship with God can look like taking off our shoes on holy ground, bowing in worship, and also coming forward when He calls.",
+          "concepts": [
+            "reverence",
+            "friendship-with-god"
+          ],
+          "connections": [
+            {
+              "from": "scripture:3-nephi-11-12-17",
+              "to": "vocabulary:reverence",
+              "relation": "illustrates",
+              "sourceIds": [
+                "3-nephi-11-12-17"
+              ],
+              "note": "The people fall before the risen Lord, come forward one by one at His invitation, and then worship Him."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main path to bring everything together."
+    }
+  ],
+  "discovery": {
+    "summary": "Scripture uses the word ‘fear’ in two senses. The Guide to the Scriptures explains that to fear God is “to feel reverence and awe for Him and to obey His commandments,” while the other kind of fear is to be afraid and to dread. In one sermon to people He called “my friends,” the Savior said both “Fear him” (most readers understand ‘him’ as God) and “Fear not therefore: ye are of more value than many sparrows.” John and Mormon taught that perfect love casts out the fear that “hath torment,” a love that begins with God’s love for us. And the Lord calls His faithful followers friends, lays down His life for them, and shares with them what He has heard from the Father. These sources suggest the question isn’t either-or: revere God as holy, and don’t be afraid of Him, because He loves you and calls you His friend.",
+    "keyIdeas": [
+      "In scripture, ‘fear’ can mean reverence and awe toward God, or it can mean dread and alarm.",
+      "Scripture invites the first kind of fear (Ecclesiastes 12:13; Hebrews 12:28) and teaches us to let go of the second (Luke 12:7; 1 John 4:18).",
+      "The love that casts out tormenting fear starts with God’s love: “We love him, because he first loved us.”",
+      "Friendship with the Lord begins with His gifts, and His friends respond with trust, obedience, and reverence (John 15:13–15; Hebrews 12:28)."
+    ],
+    "christConnection": "Jesus Christ is both the Holy One before whom His disciples fell in awe and the Friend who “came and touched them, and said, Arise, and be not afraid.” He showed the greatest love by laying down His life for His friends (John 15:13). In Him, reverence and friendship meet.",
+    "openQuestions": [
+      "Why might scripture use the same word, ‘fear,’ for two such different experiences?",
+      "1 John 4:17–18 speaks of love being “made perfect.” What might that look like, and how could it help someone let go of fear?",
+      "What does reverence look like in everyday friendship with God: in prayer, in His house, and in how we speak of Him?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "steps.fear-him-fear-not (Luke 12:5)",
+        "note": "Luke 12:5 doesn’t name the one who has power to cast into hell. Most readers understand ‘him’ as God, since verses 6–7 go on to speak of God’s care. The Church edition’s footnote on ‘hell’ lists Topical Guide entries that include ‘Devil’ (rechecked 26 October 2026). Several activities and the discovery summary had treated ‘him’ as God, or rewarded answers that depended on it.",
+        "resolution": "Qualified: wherever ‘him’ is discussed, the text now says verse 5 doesn’t name him and that most readers understand him as God. No activity rewards identifying him. The hard clue’s correct answer and two distractors, two compare perspectives, and a step-1 distractor were rewritten to rest only on what verses 4–7 plainly say, and the step-1 evidence that fearing God is also a New Testament teaching now comes from Hebrews 12:28. The originals are in docs/2.0/withheld/fear-god-friend.json. The owner should confirm the ‘most readers understand’ framing."
+      },
+      {
+        "where": "sources.bd-fear",
+        "note": "The Bible Dictionary is a Church-published study aid, but its introduction says it is not intended as an official statement of Church doctrine. It’s used here alongside the Guide to the Scriptures, which gives the same two meanings.",
+        "resolution": "Qualified: the two-meanings step intro now tells learners that the Bible Dictionary is a study aid whose introduction says it isn’t an official statement of Church doctrine, and that here it agrees with the Guide to the Scriptures. The introduction’s wording was rechecked on 26 October 2026. The source declaration is unchanged."
+      },
+      {
+        "where": "Elder Bednar (steps.love-casts-out-fear, steps.friends-who-revere, branch fear-and-judgment)",
+        "note": "Elder Bednar’s description of godly fear is a speaker’s teaching and is labeled as his. He includes accountability and ‘anticipation of the Final Judgment’ in godly fear; the judgment branch keeps that. His words ‘I do not believe we will be afraid of Him at all’ are presented as his own view.",
+        "resolution": "Qualified: every Bednar quotation is attributed to him, and his calling (Quorum of the Twelve Apostles) is now given where he is first introduced in the step, in the friends-who-revere clue, and in the judgment branch intro. The build-principle explanation says ‘as he teaches it.’ The judgment branch keeps his accountability teaching and presents ‘I do not believe we will be afraid of Him at all’ as his own view. The owner should confirm the use of a speaker’s teaching in a ‘supported’ verdict (compare-love-fear)."
+      },
+      {
+        "where": "steps.two-meanings (Exodus 20:20) and branch reverence-in-friendship (Exodus 3:6; 33:11)",
+        "note": "Reading Exodus 20:20 as using ‘fear’ in both senses follows the Guide to the Scriptures’ two meanings, but it is an interpretation. Pairing Moses hiding his face at the bush with the Lord later speaking to him face to face is presented as an observation, not a claim that scripture draws the contrast.",
+        "resolution": "Qualified: the Exodus 20:20 question now asks learners to apply the Guide to the Scriptures’ two meanings (‘Using the Guide… how could both be true?’). The answer is phrased as a reading (‘could be’), and the explanation says the verse doesn’t explain its two uses itself. In the branch, the Moses pairing is introduced as an observation that scripture doesn’t draw itself, and ‘it deepened it’ became the plainly stated ‘after coming near, they worshipped Him.’"
+      },
+      {
+        "where": "steps.be-not-afraid (Revelation 1:18 and Luke 12:5)",
+        "note": "The explanation sets ‘the keys of hell and of death’ (Revelation 1:18) beside the power ‘to cast into hell’ (Luke 12:5) as an observation. It does not claim the two passages describe the same thing.",
+        "resolution": "Qualified: the explanation now introduces the pairing as an observation that neither passage makes, and says the two passages don’t claim to describe the same thing. This also keeps it from implying who ‘him’ in Luke 12:5 is."
+      },
+      {
+        "where": "steps.love-casts-out-fear (compare-love-fear)",
+        "note": "The rationale reads 1 John 4:18 (‘He that feareth is not made perfect in love’) as describing love still being perfected, not love being absent. This is an interpretation meant to protect anxious learners; please check it.",
+        "resolution": "Qualified: the rationale now rests on the verse’s words (the one who fears ‘is not made perfect in love,’ which is not the same as having no love). It presents ‘love still being made perfect’ as how many readers take it. The explanation no longer says ‘over time.’ The build-principle (build-love-fear) now rewards only the verse’s wording (‘can be made perfect … perfect love casts out the fear that torments’) instead of ‘grow toward being made perfect,’ and the open question became a question rather than an assumption."
+      },
+      {
+        "where": "steps.fear-him-fear-not (clue-luke-point)",
+        "note": "The clue says the footnote on ‘friends’ in Luke 12:4 (Church edition) points to John 15:13–15. Checked against the Gospel Library on 26 October 2026.",
+        "resolution": "Resolved: rechecked against the Church content service on 26 October 2026. The footnote on ‘friends’ in Luke 12:4 reads ‘John 15:15 (13–15).’ The clue’s wording is accurate."
+      },
+      {
+        "where": "branches.fear-and-judgment",
+        "note": "The branch question is a general question written by Gospel Labs, not taken from any survey response. It relates to common questions about the Final Judgment.",
+        "resolution": "Resolved: survey references removed from this note, and the branch intro now uses general framing (‘Many people wonder…’). Doctrinal content is covered by the Elder Bednar note."
+      }
+    ]
+  }
+}

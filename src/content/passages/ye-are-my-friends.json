@@ -1,0 +1,534 @@
+{
+  "id": "ye-are-my-friends",
+  "status": "ready",
+  "title": "Ye are my friends",
+  "sourceId": "john-15-9-15",
+  "context": {
+    "setting": "John places these words on the night of a supper “before the feast of the passover” (John 13:1). After Judas went out (John 13:30), Jesus kept teaching His disciples. John 15 begins with Him as the vine and His disciples as the branches. When He finished, He went with them over the brook Cedron to a garden (John 18:1).",
+    "speaker": "Jesus Christ",
+    "audience": "His disciples"
+  },
+  "themes": [
+    {
+      "conceptId": "friendship-with-god",
+      "note": "The Savior calls His disciples friends and explains what that friendship includes: His love, keeping His commandments, and being told what He has heard from the Father.",
+      "verses": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "conceptId": "love-of-god",
+      "note": "A pattern of love: “As the Father hath loved me, so have I loved you,” and disciples are to love one another as He has loved them.",
+      "verses": [
+        9,
+        12,
+        13
+      ]
+    },
+    {
+      "conceptId": "discipleship",
+      "note": "Disciples continue in His love by keeping His commandments and loving one another.",
+      "verses": [
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "conceptId": "obedience",
+      "note": "He links keeping commandments with abiding in His love, “even as I have kept my Father’s commandments.”",
+      "verses": [
+        10,
+        14
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "as-the-father",
+      "verse": 9,
+      "phrase": "As the Father hath loved me, so have I loved you",
+      "meaning": "He describes a chain of love: the Father's love for the Son is the pattern for the Son's love for His disciples.",
+      "sourceIds": []
+    },
+    {
+      "id": "continue",
+      "verse": 9,
+      "phrase": "continue ye in my love",
+      "meaning": "To ‘continue’ is to remain or stay. Verse 10 explains how, using the word ‘abide’ from the vine and branches: “If ye keep my commandments, ye shall abide in my love.”",
+      "sourceIds": [
+        "john-15-4-5"
+      ]
+    },
+    {
+      "id": "as-i-have-loved-you",
+      "verse": 12,
+      "phrase": "That ye love one another, as I have loved you",
+      "meaning": "His love is the measure. He had given the same commandment earlier that evening: “A new commandment I give unto you, That ye love one another.”",
+      "sourceIds": [
+        "john-13-34-35"
+      ]
+    },
+    {
+      "id": "greater-love",
+      "verse": 13,
+      "phrase": "Greater love hath no man than this",
+      "meaning": "The greatest love is to lay down one's life for one's friends. John later wrote: “Hereby perceive we the love of God, because he laid down his life for us.”",
+      "sourceIds": [
+        "1-john-3-16"
+      ]
+    },
+    {
+      "id": "my-friends",
+      "verse": 14,
+      "phrase": "Ye are my friends, if ye do whatsoever I command you",
+      "meaning": "Friendship with Him is tied to following Him. The footnote points to a latter-day revelation where the Lord again says, “ye are my friends.”",
+      "sourceIds": [
+        "dc-84-63"
+      ]
+    },
+    {
+      "id": "not-servants",
+      "verse": 15,
+      "phrase": "Henceforth I call you not servants",
+      "meaning": "‘Henceforth’ means from now on. He explains the difference: “the servant knoweth not what his lord doeth.”",
+      "sourceIds": []
+    },
+    {
+      "id": "made-known",
+      "verse": 15,
+      "phrase": "all things that I have heard of my Father I have made known unto you",
+      "meaning": "Friends are taught. The footnote on ‘known’ points to the topic of revelation, which the Guide to the Scriptures defines as “Communication from God to His children on earth.”",
+      "sourceIds": [
+        "gs-revelation"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "john-13-34-35",
+      "relation": "supports",
+      "note": "Earlier that evening He gave “A new commandment”: to love one another as He had loved them, and said, “By this shall all men know that ye are my disciples.”"
+    },
+    {
+      "sourceId": "john-15-4-5",
+      "relation": "relates-to",
+      "note": "The same discourse begins with the vine and the branches: “Abide in me, and I in you.” Verses 9–10 use the same word, ‘abide,’ for His love."
+    },
+    {
+      "sourceId": "1-john-3-16",
+      "relation": "supports",
+      "note": "John applies verse 13 to the Savior: “he laid down his life for us: and we ought to lay down our lives for the brethren.”"
+    },
+    {
+      "sourceId": "dc-84-63",
+      "relation": "relates-to",
+      "note": "The Lord speaks to latter-day servants the same way: “ye are they whom my Father hath given me; ye are my friends.”"
+    }
+  ],
+  "questions": [
+    {
+      "id": "when-where",
+      "question": "When and where did Jesus say these words?",
+      "answer": "John sets them on one night. John 13 begins “before the feast of the passover,” at supper. After Judas “went immediately out: and it was night” (John 13:30), Jesus kept teaching. When He had finished, “he went forth with his disciples over the brook Cedron, where was a garden” (John 18:1).",
+      "sourceIds": [
+        "john-13-1-2",
+        "john-13-30",
+        "john-18-1"
+      ]
+    },
+    {
+      "id": "conditional-love",
+      "question": "Does “if ye do whatsoever I command you” mean His love depends on our obedience?",
+      "answer": "Read the verses in order. Verse 9 states His love without a condition: “As the Father hath loved me, so have I loved you.” Verse 10 attaches a condition to abiding in that love: “If ye keep my commandments, ye shall abide in my love,” as He kept His Father's commandments. Verse 14 attaches one to being His friends. These verses don't say His love begins only after obedience, and they don't settle every question about God's love; they show what He told His disciples that night.",
+      "sourceIds": [
+        "john-15-9-15"
+      ]
+    },
+    {
+      "id": "servant-friend",
+      "question": "What is the difference between a servant and a friend in verse 15?",
+      "answer": "Jesus names one difference: “the servant knoweth not what his lord doeth,” but He has made known to His friends “all things that I have heard of my Father.” In this verse, friendship means being trusted with what He knows.",
+      "sourceIds": [
+        "john-15-9-15"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "pattern-of-love",
+      "prompt": "Sort each action by who does it in verses 9–15. Then look for a pattern.",
+      "sourceIds": [
+        "john-15-9-15"
+      ],
+      "hints": [
+        "Verse 9 has two people who love. Verse 10 has two people who keep commandments.",
+        "What He asks His disciples to do in verses 10–14 mirrors what He does with the Father."
+      ],
+      "explanation": "The Father loves the Son; the Son keeps His Father's commandments and abides in His love. The Son loves His disciples and teaches them; they continue in His love by keeping His commandments and loving one another. He asks of His friends what He Himself does with the Father.",
+      "categories": [
+        {
+          "id": "father",
+          "label": "The Father"
+        },
+        {
+          "id": "son",
+          "label": "Jesus"
+        },
+        {
+          "id": "disciples",
+          "label": "What Jesus asks of His disciples"
+        }
+      ],
+      "items": [
+        {
+          "id": "loved-son",
+          "text": "Loved the Son",
+          "category": "father",
+          "why": "Verse 9: “As the Father hath loved me.”"
+        },
+        {
+          "id": "loved-disciples",
+          "text": "Loved His disciples",
+          "category": "son",
+          "why": "Verse 9: “so have I loved you.”"
+        },
+        {
+          "id": "kept-commandments",
+          "text": "Kept His Father's commandments",
+          "category": "son",
+          "why": "Verse 10: “even as I have kept my Father’s commandments.”"
+        },
+        {
+          "id": "made-known",
+          "text": "Made known what He heard from the Father",
+          "category": "son",
+          "why": "Verse 15: “I have made known unto you.”"
+        },
+        {
+          "id": "continue",
+          "text": "Continue in His love",
+          "category": "disciples",
+          "why": "Verse 9: “continue ye in my love.”"
+        },
+        {
+          "id": "keep-his",
+          "text": "Keep His commandments",
+          "category": "disciples",
+          "why": "Verse 10: “If ye keep my commandments, ye shall abide in my love.”"
+        },
+        {
+          "id": "love-one-another",
+          "text": "Love one another as He loved them",
+          "category": "disciples",
+          "why": "Verse 12: “That ye love one another, as I have loved you.”"
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "id": "what-makes-a-friend",
+      "prompt": "In verses 14–15, tap the two phrases that explain His friendship: one thing His friends do, and one thing He has done for them.",
+      "sourceIds": [
+        "john-15-9-15"
+      ],
+      "hints": [
+        "Look for ‘if’ in verse 14.",
+        "In verse 15, find what a servant doesn't know. Then find what His friends have been told."
+      ],
+      "explanation": "Verse 14 gives what His friends do: “if ye do whatsoever I command you.” Verse 15 gives what He has done for them: “all things that I have heard of my Father I have made known unto you.” A servant follows orders without knowing what his lord is doing; His friends are taught.",
+      "passage": "john-15-9-15",
+      "chunks": [
+        {
+          "verse": 14,
+          "text": "Ye are my friends,"
+        },
+        {
+          "verse": 14,
+          "text": "if ye do whatsoever I command you."
+        },
+        {
+          "verse": 15,
+          "text": "Henceforth I call you not servants;"
+        },
+        {
+          "verse": 15,
+          "text": "for the servant knoweth not what his lord doeth:"
+        },
+        {
+          "verse": 15,
+          "text": "but I have called you friends;"
+        },
+        {
+          "verse": 15,
+          "text": "for all things that I have heard of my Father I have made known unto you."
+        }
+      ],
+      "targets": [
+        1,
+        5
+      ]
+    },
+    {
+      "type": "scripture-connect",
+      "id": "greater-love",
+      "prompt": "Compare John 15:12–13 with John 13:34–35 and 1 John 3:16.",
+      "sourceIds": [
+        "john-15-9-15",
+        "john-13-34-35",
+        "1-john-3-16"
+      ],
+      "hints": [
+        "Find the words ‘as I have loved you’ in two of the passages.",
+        "1 John 3:16 has two halves: what He did, and what we ought to do."
+      ],
+      "explanation": "John 13:34 and John 15:12 give the same commandment, to love one another “as I have loved you.” John 15:13 calls laying down one's life for one's friends the greatest love, and 1 John 3:16 applies it: “he laid down his life for us: and we ought to lay down our lives for the brethren.”",
+      "passages": [
+        "john-15-9-15",
+        "john-13-34-35",
+        "1-john-3-16"
+      ],
+      "questions": [
+        {
+          "id": "measure",
+          "prompt": "In John 13:34 and John 15:12, what is the measure for how disciples should love one another?",
+          "options": [
+            {
+              "id": "as-he-loved",
+              "text": "As Jesus has loved them"
+            },
+            {
+              "id": "as-themselves",
+              "text": "As they love themselves",
+              "feedback": "That is a different commandment. Look at the last words of John 15:12."
+            },
+            {
+              "id": "as-they-are-loved",
+              "text": "As much as others love them",
+              "feedback": "Neither verse makes love depend on how others treat us. Whose love is the measure?"
+            }
+          ],
+          "correct": [
+            "as-he-loved"
+          ]
+        },
+        {
+          "id": "apply",
+          "prompt": "How does 1 John 3:16 use the idea in John 15:13?",
+          "options": [
+            {
+              "id": "both",
+              "text": "It says Jesus showed this love by laying down His life for us, and that we ought to love others the same way."
+            },
+            {
+              "id": "only-feelings",
+              "text": "It says love is mostly a feeling.",
+              "feedback": "1 John 3:16 describes something done, not only felt."
+            },
+            {
+              "id": "only-prophets",
+              "text": "It says only prophets can show this love.",
+              "feedback": "Who does 1 John 3:16 say “ought” to lay down their lives?"
+            }
+          ],
+          "correct": [
+            "both"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:john-15-9-15",
+      "to": "concept:friendship-with-god",
+      "relation": "teaches",
+      "sourceIds": [
+        "john-15-9-15"
+      ],
+      "note": "Jesus calls His disciples friends and explains what that friendship includes."
+    },
+    {
+      "from": "scripture:john-15-9-15",
+      "to": "concept:love-of-god",
+      "relation": "teaches",
+      "sourceIds": [
+        "john-15-9-15"
+      ],
+      "note": "As the Father has loved the Son, the Son has loved His disciples."
+    },
+    {
+      "from": "concept:love-of-god",
+      "to": "concept:discipleship",
+      "relation": "leads-to",
+      "sourceIds": [
+        "john-15-9-15",
+        "john-13-34-35"
+      ],
+      "note": "Disciples are to love one another as He has loved them; by this all will know they are His disciples."
+    }
+  ],
+  "sources": [
+    {
+      "id": "john-15-9-15",
+      "kind": "scripture",
+      "label": "John 15:9–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p9-p15#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "As the Father hath loved me, so have I loved you: continue ye in my love."
+        },
+        {
+          "number": 10,
+          "text": "If ye keep my commandments, ye shall abide in my love; even as I have kept my Father’s commandments, and abide in his love."
+        },
+        {
+          "number": 11,
+          "text": "These things have I spoken unto you, that my joy might remain in you, and that your joy might be full."
+        },
+        {
+          "number": 12,
+          "text": "This is my commandment, That ye love one another, as I have loved you."
+        },
+        {
+          "number": 13,
+          "text": "Greater love hath no man than this, that a man lay down his life for his friends."
+        },
+        {
+          "number": 14,
+          "text": "Ye are my friends, if ye do whatsoever I command you."
+        },
+        {
+          "number": 15,
+          "text": "Henceforth I call you not servants; for the servant knoweth not what his lord doeth: but I have called you friends; for all things that I have heard of my Father I have made known unto you."
+        }
+      ]
+    },
+    {
+      "id": "john-13-1-2",
+      "kind": "scripture",
+      "label": "John 13:1–2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p1-p2#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Now before the feast of the passover, when Jesus knew that his hour was come that he should depart out of this world unto the Father, having loved his own which were in the world, he loved them unto the end."
+        },
+        {
+          "number": 2,
+          "text": "And supper being ended, the devil having now put into the heart of Judas Iscariot, Simon’s son, to betray him;"
+        }
+      ]
+    },
+    {
+      "id": "john-13-30",
+      "kind": "scripture",
+      "label": "John 13:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "He then having received the sop went immediately out: and it was night."
+        }
+      ]
+    },
+    {
+      "id": "john-18-1",
+      "kind": "scripture",
+      "label": "John 18:1",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=p1#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "When Jesus had spoken these words, he went forth with his disciples over the brook Cedron, where was a garden, into the which he entered, and his disciples."
+        }
+      ]
+    },
+    {
+      "id": "john-13-34-35",
+      "kind": "scripture",
+      "label": "John 13:34–35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p34-p35#p34",
+      "verses": [
+        {
+          "number": 34,
+          "text": "A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another."
+        },
+        {
+          "number": 35,
+          "text": "By this shall all men know that ye are my disciples, if ye have love one to another."
+        }
+      ]
+    },
+    {
+      "id": "john-15-4-5",
+      "kind": "scripture",
+      "label": "John 15:4–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p4-p5#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "Abide in me, and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me."
+        },
+        {
+          "number": 5,
+          "text": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing."
+        }
+      ]
+    },
+    {
+      "id": "1-john-3-16",
+      "kind": "scripture",
+      "label": "1 John 3:16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/3?lang=eng&id=p16#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "Hereby perceive we the love of God, because he laid down his life for us: and we ought to lay down our lives for the brethren."
+        }
+      ]
+    },
+    {
+      "id": "dc-84-63",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 84:63",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p63#p63",
+      "verses": [
+        {
+          "number": 63,
+          "text": "And as I said unto mine apostles, even so I say unto you, for you are mine apostles, even God’s high priests; ye are they whom my Father hath given me; ye are my friends;"
+        }
+      ]
+    },
+    {
+      "id": "gs-revelation",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Revelation",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/revelation?lang=eng"
+    }
+  ],
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "context",
+        "note": "Setting is drawn from John 13:1–2, 13:30, and 18:1. The audience is described as ‘His disciples’; John 13 shows Judas had left, but John 15 doesn't name who was present.",
+        "resolution": "Resolved: checked 26 October 2026. John 13:1–2, 13:30 (‘it was night’), and 18:1 support the setting, so ‘evening’ is now ‘night’. John 18:1 says He went out ‘with his disciples’, which supports the audience; the text doesn't claim to know exactly who was present in John 15."
+      },
+      {
+        "where": "questions.conditional-love",
+        "note": "Doctrinal nuance: whether God's love is conditional. The answer stays with what verses 9–14 say (love first, obedience as how disciples abide). Please review.",
+        "resolution": "Qualified: the answer now quotes verses 9 and 10 and says only what verses 9–14 state: love given without a condition in verse 9, and conditions attached to abiding (verse 10) and to friendship (verse 14). It no longer draws the conclusion ‘no condition comes first’, and says plainly that these verses don't settle every question about God's love. Kept needs-review: whether God's love is conditional is doctrine the owner should confirm."
+      },
+      {
+        "where": "themes.obedience",
+        "note": "Uses the Character of Christ attribute ‘obedience’ as a theme, so it links to that page and Map node.",
+        "resolution": "Resolved: the attribute exists (src/content/attributes/obedience.json), and the theme note quotes verse 10."
+      }
+    ]
+  }
+}

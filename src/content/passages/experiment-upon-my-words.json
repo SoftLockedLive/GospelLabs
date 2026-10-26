@@ -1,0 +1,545 @@
+{
+  "id": "experiment-upon-my-words",
+  "status": "ready",
+  "title": "Experiment upon my words",
+  "sourceId": "alma-32-27-30",
+  "context": {
+    "setting": "Alma led a mission to the Zoramites, who had turned from the Lord (Alma 31). The poor among them had been cast out of their synagogues “because of the coarseness of their apparel,” and they asked Alma what to do with no place to worship (Alma 32:2–5). Just before this passage Alma says they “cannot know of their surety at first, unto perfection” (Alma 32:26).",
+    "speaker": "Alma, the son of Alma",
+    "audience": "The poor among the Zoramites, who had been cast out of their synagogues"
+  },
+  "themes": [
+    {
+      "conceptId": "faith",
+      "note": "Alma asks for only “a particle of faith,” or even a desire to believe, and says the experiment will increase and strengthen faith.",
+      "verses": [
+        27,
+        29,
+        30
+      ]
+    },
+    {
+      "conceptId": "scriptures",
+      "note": "The seed is ‘the word’: Alma's words, and, as Alma 33 shows, the word about the Son of God.",
+      "verses": [
+        27,
+        28
+      ]
+    },
+    {
+      "conceptId": "testimony",
+      "note": "Alma describes how a person can tell the word is good: it enlarges the soul, enlightens the understanding, and grows.",
+      "verses": [
+        28,
+        30
+      ]
+    },
+    {
+      "conceptId": "ways-of-learning",
+      "note": "Elder Lawrence E. Corbridge cited this invitation to “experiment upon [his] words” when he described learning by experiment, which he called the scientific method.",
+      "verses": [
+        27
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "awake",
+      "verse": 27,
+      "phrase": "awake and arouse your faculties",
+      "meaning": "‘Faculties’ are the powers of the mind, such as attention, reason, and understanding. Alma asks his listeners to wake them up and engage.",
+      "sourceIds": []
+    },
+    {
+      "id": "experiment",
+      "verse": 27,
+      "phrase": "an experiment upon my words",
+      "meaning": "An experiment tests something by trying it. Jesus taught a similar way to know: “If any man will do his will, he shall know of the doctrine.”",
+      "sourceIds": [
+        "john-7-17",
+        "corbridge-stand-for-ever-2019"
+      ]
+    },
+    {
+      "id": "desire",
+      "verse": 27,
+      "phrase": "even if ye can no more than desire to believe",
+      "meaning": "Alma sets the starting point low: a desire to believe is enough to begin. Faith grows from there into what the Guide to the Scriptures calls “confidence and trust in Jesus Christ that lead a person to obey Him.”",
+      "sourceIds": [
+        "gs-faith"
+      ]
+    },
+    {
+      "id": "seed",
+      "verse": 28,
+      "phrase": "we will compare the word unto a seed",
+      "meaning": "When they later asked how to plant it, Alma urged them to “begin to believe in the Son of God” and to “plant this word in your hearts.”",
+      "sourceIds": [
+        "alma-33-22-23"
+      ]
+    },
+    {
+      "id": "unbelief",
+      "verse": 28,
+      "phrase": "if ye do not cast it out by your unbelief",
+      "meaning": "Unbelief can stop the experiment before it starts. Alma ties casting the seed out to resisting ‘the Spirit of the Lord.’",
+      "sourceIds": []
+    },
+    {
+      "id": "enlarge",
+      "verse": 28,
+      "phrase": "it beginneth to enlarge my soul",
+      "meaning": "Alma names three signs: the word enlarges the soul, enlightens the understanding, and becomes ‘delicious’ (sweet and good to the taste).",
+      "sourceIds": []
+    },
+    {
+      "id": "not-perfect",
+      "verse": 29,
+      "phrase": "it hath not grown up to a perfect knowledge",
+      "meaning": "Increased faith is not yet perfect knowledge. Alma had said that “faith is not to have a perfect knowledge of things.”",
+      "sourceIds": [
+        "alma-32-21"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "alma-32-21",
+      "relation": "supports",
+      "note": "Alma's description of faith: “faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true.”"
+    },
+    {
+      "sourceId": "alma-32-41-43",
+      "relation": "relates-to",
+      "note": "The experiment continues: nourished “with great diligence, and with patience,” the word becomes “a tree springing up unto everlasting life.”"
+    },
+    {
+      "sourceId": "alma-33-22-23",
+      "relation": "supports",
+      "note": "Alma points the seed to Christ: “begin to believe in the Son of God,” and “plant this word in your hearts.”"
+    },
+    {
+      "sourceId": "john-7-17",
+      "relation": "supports",
+      "note": "Jesus taught that doing comes before knowing: “If any man will do his will, he shall know of the doctrine.”"
+    }
+  ],
+  "questions": [
+    {
+      "id": "who-listening",
+      "question": "Who was Alma teaching, and why were they ready to listen?",
+      "answer": "The poor among the Zoramites. They had been cast out of the synagogues “because of the coarseness of their apparel,” and their spokesman asked Alma, “behold, what shall we do?” (Alma 32:2, 5). Alma saw that their afflictions had humbled them and that they were prepared to hear the word (Alma 32:6).",
+      "sourceIds": [
+        "alma-32-2-5"
+      ]
+    },
+    {
+      "id": "without-evidence",
+      "question": "Is Alma asking them to believe without any evidence?",
+      "answer": "No. He asks them to begin with a desire to believe and to try the word, then to notice what happens: the word enlarges the soul, enlightens the understanding, and grows. He is honest that this is not yet “a perfect knowledge” (verse 29). Elder Lawrence E. Corbridge put it this way: “Truth can be discovered by doing, which is faith.”",
+      "sourceIds": [
+        "alma-32-27-30",
+        "corbridge-stand-for-ever-2019"
+      ]
+    },
+    {
+      "id": "what-seed",
+      "question": "What is the seed?",
+      "answer": "In verse 28 Alma says, “we will compare the word unto a seed.” In the next chapter he points them to the Son of God, “that he will come to redeem his people,” and says, “I desire that ye shall plant this word in your hearts.”",
+      "sourceIds": [
+        "alma-32-27-30",
+        "alma-33-22-23"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "signs-of-a-good-seed",
+      "prompt": "In verse 28, tap the phrases that describe what a person notices when the seed is good.",
+      "sourceIds": [
+        "alma-32-27-30"
+      ],
+      "hints": [
+        "The first half of the verse tells what the learner must do; the second half tells what happens.",
+        "Look for ‘beginneth to.’",
+        "There are four: it swells, enlarges the soul, enlightens the understanding, and becomes delicious."
+      ],
+      "explanation": "Alma names what a person will notice: “it will begin to swell within your breasts,” then “it beginneth to enlarge my soul,” “to enlighten my understanding,” and “to be delicious to me.” The earlier phrases describe what the learner does: give place, and not cast the seed out by unbelief.",
+      "passage": "alma-32-27-30",
+      "chunks": [
+        {
+          "verse": 28,
+          "text": "Now, we will compare the word unto a seed."
+        },
+        {
+          "verse": 28,
+          "text": "Now, if ye give place, that a seed may be planted in your heart,"
+        },
+        {
+          "verse": 28,
+          "text": "behold, if it be a true seed, or a good seed,"
+        },
+        {
+          "verse": 28,
+          "text": "if ye do not cast it out by your unbelief, that ye will resist the Spirit of the Lord,"
+        },
+        {
+          "verse": 28,
+          "text": "behold, it will begin to swell within your breasts;"
+        },
+        {
+          "verse": 28,
+          "text": "and when you feel these swelling motions, ye will begin to say within yourselves—It must needs be that this is a good seed, or that the word is good,"
+        },
+        {
+          "verse": 28,
+          "text": "for it beginneth to enlarge my soul;"
+        },
+        {
+          "verse": 28,
+          "text": "yea, it beginneth to enlighten my understanding,"
+        },
+        {
+          "verse": 28,
+          "text": "yea, it beginneth to be delicious to me."
+        }
+      ],
+      "targets": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "minTargets": 3
+    },
+    {
+      "type": "sort",
+      "id": "faith-or-knowledge",
+      "prompt": "Sort each statement about Alma's experiment: does Alma say it, does he say it isn't so yet, or does he say otherwise?",
+      "sourceIds": [
+        "alma-32-27-30"
+      ],
+      "hints": [
+        "Verse 29 answers whether swelling brings perfect knowledge.",
+        "Verse 27 tells how much faith you need to begin; verse 28 tells what can stop the seed."
+      ],
+      "explanation": "Alma says even a desire to believe is a place to start, that unbelief can cast the seed out, and that a swelling, growing seed increases and strengthens faith, so you can say you know it is a good seed. But he is careful: swelling isn't yet “a perfect knowledge.”",
+      "categories": [
+        {
+          "id": "says",
+          "label": "Alma says this"
+        },
+        {
+          "id": "not-yet",
+          "label": "Not yet, Alma says"
+        },
+        {
+          "id": "otherwise",
+          "label": "Alma says otherwise"
+        }
+      ],
+      "items": [
+        {
+          "id": "desire",
+          "text": "Even a desire to believe is a place to start.",
+          "category": "says",
+          "why": "Verse 27: “even if ye can no more than desire to believe, let this desire work in you.”"
+        },
+        {
+          "id": "unbelief",
+          "text": "Unbelief can cast the seed out.",
+          "category": "says",
+          "why": "Verse 28: “if ye do not cast it out by your unbelief.”"
+        },
+        {
+          "id": "increase",
+          "text": "When the seed swells, faith increases.",
+          "category": "says",
+          "why": "Verse 29: “would not this increase your faith? I say unto you, Yea.”"
+        },
+        {
+          "id": "know-good",
+          "text": "When it sprouts and grows, you can say you know it is a good seed.",
+          "category": "says",
+          "why": "Verse 30: “ye will say I know that this is a good seed.”"
+        },
+        {
+          "id": "perfect-now",
+          "text": "Once the seed swells, your knowledge is perfect.",
+          "category": "not-yet",
+          "why": "Verse 29: “nevertheless it hath not grown up to a perfect knowledge.”"
+        },
+        {
+          "id": "certain-first",
+          "text": "You must be certain before you begin.",
+          "category": "otherwise",
+          "why": "Verse 27 invites them to start with “a particle of faith” or only a desire to believe."
+        },
+        {
+          "id": "no-matter-what",
+          "text": "The seed will grow no matter what you do.",
+          "category": "otherwise",
+          "why": "Verse 28 makes growth depend on giving place and not casting the seed out by unbelief."
+        }
+      ]
+    },
+    {
+      "type": "scripture-connect",
+      "id": "do-to-know",
+      "prompt": "Compare Alma 32:27–30 with John 7:17 and Alma 32:21.",
+      "sourceIds": [
+        "alma-32-27-30",
+        "john-7-17",
+        "alma-32-21"
+      ],
+      "hints": [
+        "In each passage, what comes first: doing or knowing?",
+        "Alma 32:21 and 32:29 both use the words ‘perfect knowledge.’"
+      ],
+      "explanation": "Alma and Jesus both teach that knowing follows doing: “experiment upon my words” and “If any man will do his will, he shall know of the doctrine.” Alma adds that faith grows step by step and “is not to have a perfect knowledge of things”; even a growing seed has “not grown up to a perfect knowledge.”",
+      "passages": [
+        "alma-32-27-30",
+        "john-7-17",
+        "alma-32-21"
+      ],
+      "questions": [
+        {
+          "id": "order",
+          "prompt": "What do Alma 32:27 and John 7:17 both teach about how to come to know?",
+          "options": [
+            {
+              "id": "act-first",
+              "text": "Act on the word, and knowledge follows."
+            },
+            {
+              "id": "wait",
+              "text": "Wait until you are certain before acting.",
+              "feedback": "Alma says even a desire to believe is enough to begin."
+            },
+            {
+              "id": "scholars",
+              "text": "Only experts can test the word.",
+              "feedback": "John 7:17 says “If any man.”"
+            }
+          ],
+          "correct": [
+            "act-first"
+          ]
+        },
+        {
+          "id": "at-first",
+          "prompt": "According to Alma 32:29, what does the growing seed produce at first?",
+          "options": [
+            {
+              "id": "faith",
+              "text": "Increased faith, but not yet perfect knowledge"
+            },
+            {
+              "id": "perfect",
+              "text": "A perfect knowledge right away",
+              "feedback": "Verse 29: “nevertheless it hath not grown up to a perfect knowledge.”"
+            },
+            {
+              "id": "nothing",
+              "text": "No change that a person could notice",
+              "feedback": "Verse 28 lists several things a person will feel and say."
+            }
+          ],
+          "correct": [
+            "faith"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:alma-32-27-30",
+      "to": "concept:faith",
+      "relation": "teaches",
+      "sourceIds": [
+        "alma-32-27-30"
+      ],
+      "note": "Acting on the word with even a desire to believe increases and strengthens faith."
+    },
+    {
+      "from": "scripture:alma-32-27-30",
+      "to": "concept:testimony",
+      "relation": "teaches",
+      "sourceIds": [
+        "alma-32-27-30"
+      ],
+      "note": "Alma describes how a person can come to know that the word is good."
+    },
+    {
+      "from": "scripture:alma-32-27-30",
+      "to": "concept:ways-of-learning",
+      "relation": "illustrates",
+      "sourceIds": [
+        "alma-32-27-30",
+        "john-7-17",
+        "corbridge-stand-for-ever-2019"
+      ],
+      "note": "Elder Corbridge cited Alma's invitation to experiment, and John 7:17, as examples of learning truth by doing."
+    }
+  ],
+  "sources": [
+    {
+      "id": "alma-32-27-30",
+      "kind": "scripture",
+      "label": "Alma 32:27–30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p27-p30#p27",
+      "verses": [
+        {
+          "number": 27,
+          "text": "But behold, if ye will awake and arouse your faculties, even to an experiment upon my words, and exercise a particle of faith, yea, even if ye can no more than desire to believe, let this desire work in you, even until ye believe in a manner that ye can give place for a portion of my words."
+        },
+        {
+          "number": 28,
+          "text": "Now, we will compare the word unto a seed. Now, if ye give place, that a seed may be planted in your heart, behold, if it be a true seed, or a good seed, if ye do not cast it out by your unbelief, that ye will resist the Spirit of the Lord, behold, it will begin to swell within your breasts; and when you feel these swelling motions, ye will begin to say within yourselves—It must needs be that this is a good seed, or that the word is good, for it beginneth to enlarge my soul; yea, it beginneth to enlighten my understanding, yea, it beginneth to be delicious to me."
+        },
+        {
+          "number": 29,
+          "text": "Now behold, would not this increase your faith? I say unto you, Yea; nevertheless it hath not grown up to a perfect knowledge."
+        },
+        {
+          "number": 30,
+          "text": "But behold, as the seed swelleth, and sprouteth, and beginneth to grow, then you must needs say that the seed is good; for behold it swelleth, and sprouteth, and beginneth to grow. And now, behold, will not this strengthen your faith? Yea, it will strengthen your faith: for ye will say I know that this is a good seed; for behold it sprouteth and beginneth to grow."
+        }
+      ]
+    },
+    {
+      "id": "alma-32-2-5",
+      "kind": "scripture",
+      "label": "Alma 32:2–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p2-p5#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "And it came to pass that after much labor among them, they began to have success among the poor class of people; for behold, they were cast out of the synagogues because of the coarseness of their apparel—"
+        },
+        {
+          "number": 3,
+          "text": "Therefore they were not permitted to enter into their synagogues to worship God, being esteemed as filthiness; therefore they were poor; yea, they were esteemed by their brethren as dross; therefore they were poor as to things of the world; and also they were poor in heart."
+        },
+        {
+          "number": 4,
+          "text": "Now, as Alma was teaching and speaking unto the people upon the hill Onidah, there came a great multitude unto him, who were those of whom we have been speaking, of whom were poor in heart, because of their poverty as to the things of the world."
+        },
+        {
+          "number": 5,
+          "text": "And they came unto Alma; and the one who was the foremost among them said unto him: Behold, what shall these my brethren do, for they are despised of all men because of their poverty, yea, and more especially by our priests; for they have cast us out of our synagogues which we have labored abundantly to build with our own hands; and they have cast us out because of our exceeding poverty; and we have no place to worship our God; and behold, what shall we do?"
+        }
+      ]
+    },
+    {
+      "id": "alma-32-26",
+      "kind": "scripture",
+      "label": "Alma 32:26",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p26#p26",
+      "verses": [
+        {
+          "number": 26,
+          "text": "Now, as I said concerning faith—that it was not a perfect knowledge—even so it is with my words. Ye cannot know of their surety at first, unto perfection, any more than faith is a perfect knowledge."
+        }
+      ]
+    },
+    {
+      "id": "alma-32-21",
+      "kind": "scripture",
+      "label": "Alma 32:21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p21#p21",
+      "verses": [
+        {
+          "number": 21,
+          "text": "And now as I said concerning faith—faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen, which are true."
+        }
+      ]
+    },
+    {
+      "id": "alma-32-41-43",
+      "kind": "scripture",
+      "label": "Alma 32:41–43",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p41-p43#p41",
+      "verses": [
+        {
+          "number": 41,
+          "text": "But if ye will nourish the word, yea, nourish the tree as it beginneth to grow, by your faith with great diligence, and with patience, looking forward to the fruit thereof, it shall take root; and behold it shall be a tree springing up unto everlasting life."
+        },
+        {
+          "number": 42,
+          "text": "And because of your diligence and your faith and your patience with the word in nourishing it, that it may take root in you, behold, by and by ye shall pluck the fruit thereof, which is most precious, which is sweet above all that is sweet, and which is white above all that is white, yea, and pure above all that is pure; and ye shall feast upon this fruit even until ye are filled, that ye hunger not, neither shall ye thirst."
+        },
+        {
+          "number": 43,
+          "text": "Then, my brethren, ye shall reap the rewards of your faith, and your diligence, and patience, and long-suffering, waiting for the tree to bring forth fruit unto you."
+        }
+      ]
+    },
+    {
+      "id": "alma-33-22-23",
+      "kind": "scripture",
+      "label": "Alma 33:22–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/33?lang=eng&id=p22-p23#p22",
+      "verses": [
+        {
+          "number": 22,
+          "text": "If so, wo shall come upon you; but if not so, then cast about your eyes and begin to believe in the Son of God, that he will come to redeem his people, and that he shall suffer and die to atone for their sins; and that he shall rise again from the dead, which shall bring to pass the resurrection, that all men shall stand before him, to be judged at the last and judgment day, according to their works."
+        },
+        {
+          "number": 23,
+          "text": "And now, my brethren, I desire that ye shall plant this word in your hearts, and as it beginneth to swell even so nourish it by your faith. And behold, it will become a tree, springing up in you unto everlasting life. And then may God grant unto you that your burdens may be light, through the joy of his Son. And even all this can ye do if ye will. Amen."
+        }
+      ]
+    },
+    {
+      "id": "john-7-17",
+      "kind": "scripture",
+      "label": "John 7:17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng&id=p17#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "If any man will do his will, he shall know of the doctrine, whether it be of God, or whether I speak of myself."
+        }
+      ]
+    },
+    {
+      "id": "gs-faith",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Faith",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/faith?lang=eng"
+    },
+    {
+      "id": "corbridge-stand-for-ever-2019",
+      "kind": "speaker",
+      "label": "Lawrence E. Corbridge, “Stand Forever”",
+      "title": "Stand Forever",
+      "author": "Elder Lawrence E. Corbridge",
+      "publication": "BYU devotional, 22 January 2019",
+      "url": "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+      "excerpt": "although we may not know the answer to every question, we must know the answers to the primary questions."
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "context.setting",
+        "note": "‘Zoramites, who had turned from the Lord’ follows the Alma 31 chapter summary (‘apostate Zoramites’).",
+        "resolution": "Resolved: checked 26 October 2026. The Alma 31 chapter summary reads ‘Alma heads a mission to reclaim the apostate Zoramites’, which supports ‘who had turned from the Lord’."
+      },
+      {
+        "where": "themes.ways-of-learning",
+        "note": "Connects Alma 32:27 to Elder Corbridge's scientific method of learning, as he did in his BYU devotional. This is a speaker's teaching, labeled as such.",
+        "resolution": "Qualified: the theme note and Map connection present the link as Elder Corbridge's. Checked against his devotional on 26 October 2026: under ‘The Scientific Method’ he quotes Alma's invitation to ‘experiment upon [his] words’ and John 7:17, then says ‘Truth can be discovered by doing, which is faith.’"
+      },
+      {
+        "where": "keyPhrases.awake",
+        "note": "The gloss of ‘faculties’ is a dictionary meaning written by Gospel Labs.",
+        "resolution": "Resolved: kept. It is a plain dictionary meaning of the word, not a doctrinal claim, and every key-phrase meaning is labeled ‘Suggested by Gospel Labs’ in the app. Also fixed: the who-listening answer now cites Alma 32:6 for the people being humbled and prepared to hear."
+      }
+    ]
+  }
+}

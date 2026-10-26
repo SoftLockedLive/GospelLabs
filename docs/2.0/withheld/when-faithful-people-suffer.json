@@ -1,0 +1,52 @@
+{
+  "investigation": "when-faithful-people-suffer",
+  "file": "src/content/investigations/when-faithful-people-suffer.json",
+  "reviewed": "2026-10-26",
+  "about": "Content removed or replaced in the Gospel Labs 2.0 doctrinal review. Each entry keeps the original so the owner can restore it after confirming the doctrine.",
+  "items": [
+    {
+      "where": "branches.other-peoples-choices.steps.others-choices.activities.hard (others-compare): perspective ‘god-wants’, and the hint that pointed to it",
+      "action": "withheld",
+      "reason": "Safety in an abuse-related branch. The item (‘If someone else’s choices are hurting me, God must want it to happen.’) was marked ‘goes beyond’. In a branch read by people who may be experiencing abuse, a learner who answers ‘contradicted’ would be told they’re wrong, which could be heard as leaving open that God wants their abuse. Scripture and these sources don’t settle God’s will about every harmful choice, so no verdict on this statement is both accurate and safe here.",
+      "replacement": "Perspective ‘protect’ (‘The Lord wants people who are being abused to be protected and helped.’), marked ‘supported’ by Gospel Topics: Abuse (‘The Lord expects us to do everything we can to prevent abuse and to protect and help victims.’). The insight still says these sources don’t say God wants harmful choices.",
+      "original": {
+        "perspective": {
+          "id": "god-wants",
+          "text": "If someone else’s choices are hurting me, God must want it to happen.",
+          "voice": "A common worry",
+          "verdict": "beyond",
+          "rationale": "These sources say people are free to choose and that adversity can come from others’ poor choices. They don’t say God wants those choices."
+        },
+        "hint": "Separate two ideas: God allowing people to choose, and God wanting a particular harmful choice."
+      }
+    },
+    {
+      "where": "steps.descended-below.activities.hard (descended-connect): question ‘smitten’",
+      "action": "replaced",
+      "reason": "The rewarded answer said the onlookers ‘assumed His suffering meant God was punishing Him’. That is a common reading in light of verse 5, but Isaiah 53:10 (‘it pleased the Lord to bruise him’) complicates any claim about God’s role, so the question now asks only what verse 5 plainly says about why He suffered: “he was wounded for our transgressions.”",
+      "original": {
+        "id": "smitten",
+        "prompt": "Isaiah 53:4 says, “yet we did esteem him stricken, smitten of God, and afflicted.” What mistake were the onlookers making?",
+        "options": [
+          {
+            "id": "punished",
+            "text": "They assumed His suffering meant God was punishing Him, when verse 5 says “he was wounded for our transgressions.”"
+          },
+          {
+            "id": "nothing",
+            "text": "They thought He wasn’t really suffering.",
+            "feedback": "The verse says they saw Him as “stricken” and “afflicted.” What did they think was causing it?"
+          },
+          {
+            "id": "correct",
+            "text": "They weren’t mistaken: God was punishing Him for His own sins.",
+            "feedback": "Read verse 5. Whose transgressions does it say He was wounded for?"
+          }
+        ],
+        "correct": [
+          "punished"
+        ]
+      }
+    }
+  ]
+}

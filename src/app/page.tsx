@@ -1,51 +1,61 @@
-import { BookOpen, FlaskConical } from "lucide-react";
-import { DashboardOverview } from "@/components/dashboard/dashboard-overview";
-import { ProcessOverview } from "@/components/dashboard/process-overview";
 import { PageContainer } from "@/components/layout/app-shell";
-import { ButtonLink } from "@/components/ui/button";
-import { Eyebrow } from "@/components/ui/page-header";
-import { newInvestigationHref } from "@/lib/routes";
+import { StudyDashboard } from "@/components/study/dashboard/study-dashboard";
+import type { DashboardContent, InvestigationSummary } from "@/components/study/dashboard/types";
+import type { StudyInvestigation } from "@/domain/study/content-schema";
+import { parseNodeRef, type NodeRef } from "@/domain/study/vocabulary";
+import { getSource, listAttributes, listConnectSessions, listInvestigations, listPassages, STUDY_CONTENT } from "@/lib/study-content";
 
-export default function DashboardPage() {
+const RELATED_KINDS = new Set(["concept", "vocabulary", "attribute"]);
+
+/** Concept, vocabulary, and attribute nodes an investigation works with, for "related to your discoveries". */
+function relatedNodes(investigation: StudyInvestigation): NodeRef[] {
+  const refs = new Set<NodeRef>();
+  const localConcepts = new Map(investigation.concepts.map((concept) => [concept.id, concept.kind]));
+  const steps = [...investigation.steps, ...investigation.branches.flatMap((branch) => branch.steps)];
+  for (const step of steps) {
+    for (const id of step.concepts) {
+      const kind = localConcepts.get(id) ?? STUDY_CONTENT.concepts.get(id)?.kind ?? "concept";
+      refs.add(`${kind}:${id}`);
+    }
+    for (const connection of step.connections) {
+      for (const ref of [connection.from, connection.to]) {
+        const parsed = parseNodeRef(ref);
+        if (parsed && RELATED_KINDS.has(parsed.kind)) refs.add(ref);
+      }
+    }
+  }
+  return [...refs];
+}
+
+function summarize(investigation: StudyInvestigation): InvestigationSummary {
+  return {
+    id: investigation.id,
+    title: investigation.title,
+    question: investigation.question,
+    hook: investigation.hook,
+    theme: investigation.theme,
+    primaryQuestion: investigation.primaryQuestion.id,
+    estimatedMinutes: investigation.estimatedMinutes,
+    steps: investigation.steps.map((step) => ({ id: step.id, deep: step.depth === "deep" })),
+    branches: investigation.branches.length,
+    related: relatedNodes(investigation),
+  };
+}
+
+/** Only what the dashboard shows, so the full content stays out of the browser bundle. */
+function dashboardContent(): DashboardContent {
+  return {
+    investigations: listInvestigations().map(summarize),
+    attributes: listAttributes().map(({ id, name, summary }) => ({ id, name, summary })),
+    passages: listPassages().map(({ id, title, sourceId }) => ({ id, title, reference: getSource(sourceId)?.label ?? "" })),
+    connectSessions: listConnectSessions().map(({ id, format, title }) => ({ id, format, title })),
+  };
+}
+
+export default function HomePage() {
   return (
-    <PageContainer className="flex flex-col gap-10 sm:gap-12">
-      <section
-        aria-labelledby="dashboard-title"
-        className="relative overflow-hidden rounded-2xl border border-line bg-surface px-5 py-8 sm:px-10 sm:py-12"
-      >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-accent/10 blur-3xl"
-        />
-        <Eyebrow>Research notebook</Eyebrow>
-        <h1 id="dashboard-title" className="mt-3 max-w-xl text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
-          Question. Study. Discover.
-        </h1>
-        <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
-          Bring a gospel question, gather what the scriptures and Church resources say, and reach your own
-          understanding at your own pace.
-        </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={newInvestigationHref()} size="lg">
-            <FlaskConical aria-hidden />
-            Start an investigation
-          </ButtonLink>
-          <ButtonLink href="/questions" size="lg" variant="secondary">
-            <BookOpen aria-hidden />
-            Browse question bank
-          </ButtonLink>
-        </div>
-      </section>
-
-      <DashboardOverview />
-
-      <section aria-labelledby="process-heading">
-        <h2 id="process-heading" className="mb-1 text-sm font-semibold tracking-tight text-fg">
-          How an investigation works
-        </h2>
-        <p className="mb-4 text-sm text-muted">Move between stages freely. Nothing is required, and nothing is graded.</p>
-        <ProcessOverview />
-      </section>
+    <PageContainer>
+      <StudyDashboard content={dashboardContent()} />
     </PageContainer>
   );
 }

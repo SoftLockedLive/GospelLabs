@@ -74,7 +74,7 @@ test("explore a trail in any order, record discoveries, and resume where you lef
   const path = testInfo.outputPath("backup.json");
   await download.saveAs(path);
   const backup = JSON.parse(readFileSync(path, "utf8"));
-  expect(backup.version).toBe(2);
+  expect(backup.version).toBe(3);
   expect(backup.investigations[0].trailProgress).toEqual([
     {
       trailId: "forgiveness-before-the-atonement",

@@ -22,7 +22,7 @@ async function importBackup(page: Page, path: string) {
 
 const byId = (list: { id: string }[]) => [...list].sort((a, b) => a.id.localeCompare(b.id));
 
-test("a 1.0 backup imports into 1.1, and every 1.1 field survives export and import", async ({ page }, testInfo) => {
+test("a 1.0 backup imports, and every 1.1 field survives export and import", async ({ page }, testInfo) => {
   // A backup exported by Gospel Labs 1.0.
   const fromV1 = testInfo.outputPath("from-1.0.json");
   writeFileSync(fromV1, BACKUP_FROM_1_0);
@@ -60,7 +60,7 @@ test("a 1.0 backup imports into 1.1, and every 1.1 field survives export and imp
   await expectSaved(page);
 
   const first = await exportBackup(page, testInfo.outputPath("first.json"));
-  expect(first.version).toBe(2);
+  expect(first.version).toBe(3);
   const legacy = first.investigations.find((i: { id: string }) => i.id === RECORD_FROM_1_0.id);
   expect(legacy).toMatchObject({
     dataVersion: 2,
@@ -79,10 +79,13 @@ test("a 1.0 backup imports into 1.1, and every 1.1 field survives export and imp
   // Delete everything, restore from that export, and export again: nothing changes.
   await page.getByRole("button", { name: "Delete all data" }).click();
   const deleteDialog = page.getByRole("dialog", { name: "Delete all data?" });
-  await deleteDialog.getByRole("checkbox").check();
+  await deleteDialog.getByRole("checkbox", { name: /I understand/ }).check();
   await deleteDialog.getByRole("button", { name: "Delete everything" }).click();
-  await expect(page.getByText("0 investigations saved on this device.")).toBeVisible();
+  await expect(
+    page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem").first(),
+  ).toHaveText("0 research investigations");
   await importBackup(page, testInfo.outputPath("first.json"));
   const second = await exportBackup(page, testInfo.outputPath("second.json"));
   expect(byId(second.investigations)).toEqual(byId(first.investigations));
+  expect(second.study).toEqual(first.study);
 });

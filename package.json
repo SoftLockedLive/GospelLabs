@@ -1,6 +1,6 @@
 {
   "name": "gospellabs",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,9 +12,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "questions:schema": "UPDATE_QUESTION_SCHEMA=1 vitest run src/data/question-bank.test.ts",
-    "verify:references": "node scripts/verify-references.mjs",
+    "verify:references": "node scripts/verify-references.mjs && node scripts/verify-study-content.mjs",
     "verify:production": "node scripts/verify-production.mjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "verify:study": "node scripts/verify-study-content.mjs",
+    "learner-questions": "node scripts/import-learner-questions.mjs"
   },
   "dependencies": {
     "dexie": "^4.4.6",

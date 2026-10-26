@@ -1,0 +1,503 @@
+{
+  "id": "compassion",
+  "status": "ready",
+  "name": "Compassion",
+  "summary": "Literally, “to suffer with”: sharing others’ sorrows and reaching out to help, as the Savior did again and again.",
+  "definition": {
+    "text": "The Guide to the Scriptures explains that in the scriptures, compassion means literally “to suffer with.” It adds, “It also means to show sympathy, pity, and mercy for another.”",
+    "sourceIds": [
+      "gs-compassion"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "compassion-suffer-with",
+      "term": "Suffer with",
+      "meaning": "The literal meaning of ‘compassion’ in the scriptures, according to the Guide to the Scriptures: to share in another person’s suffering.",
+      "sourceIds": [
+        "gs-compassion"
+      ]
+    },
+    {
+      "id": "compassion-moved-with-compassion",
+      "term": "Moved with compassion",
+      "meaning": "Stirred by compassion to act. The Gospels use this phrase when the Savior saw people in need and then helped them (Mark 1:41; Matthew 9:36).",
+      "sourceIds": [
+        "mark-1-40-42",
+        "matthew-9-35-36"
+      ]
+    },
+    {
+      "id": "compassion-sympathy",
+      "term": "Sympathy",
+      "meaning": "Feeling sorrow and concern for someone else’s trouble—part of what the Guide to the Scriptures says compassion means.",
+      "sourceIds": [
+        "gs-compassion"
+      ]
+    },
+    {
+      "id": "compassion-mourn-with",
+      "term": "Mourn with those that mourn",
+      "meaning": "To share in others’ grief. Those baptized at the waters of Mormon were “willing to mourn with those that mourn” and “comfort those that stand in need of comfort” (Mosiah 18:9).",
+      "sourceIds": [
+        "mosiah-18-8-9"
+      ]
+    },
+    {
+      "id": "compassion-bear-burdens",
+      "term": "Bear one another’s burdens",
+      "meaning": "To help carry others’ hardships “that they may be light” (Mosiah 18:8).",
+      "sourceIds": [
+        "mosiah-18-8-9"
+      ]
+    },
+    {
+      "id": "compassion-pitiful",
+      "term": "Pitiful (King James Bible)",
+      "meaning": "Full of pity; tenderhearted. In 1 Peter 3:8, “be pitiful” is a call to compassion; the footnote in the Church’s edition gives the Greek meaning as tenderhearted and compassionate. It doesn’t mean ‘pathetic,’ as it often does today.",
+      "sourceIds": [
+        "1-peter-3-8"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "compassion-not-distant-pity",
+      "term": "Pity from a distance",
+      "title": "Compassion comes close",
+      "explanation": "The Guide to the Scriptures includes pity in the meaning of compassion, so pity isn’t wrong. Gospel Labs draws this contrast from the word’s literal meaning, “to suffer with,” and from the Savior’s life, where compassion moved Him to act. When a leper came to Him, Jesus, “moved with compassion, put forth his hand, and touched him” (Mark 1:41). Feeling sorry for someone in need while staying away to spare ourselves discomfort falls short of the compassion He showed.",
+      "sourceIds": [
+        "gs-compassion",
+        "mark-1-40-42"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "mosiah-18-8-9",
+      "note": "Part of the covenant at the waters of Mormon: to “bear one another’s burdens,” “mourn with those that mourn,” and “comfort those that stand in need of comfort.”"
+    },
+    {
+      "sourceId": "luke-10-33-35",
+      "note": "The good Samaritan “had compassion on him”—and then bound up his wounds, brought him to an inn, and paid for his care."
+    },
+    {
+      "sourceId": "1-peter-3-8",
+      "note": "Peter’s counsel to the Saints: “having compassion one of another, love as brethren.”"
+    },
+    {
+      "sourceId": "mosiah-15-9",
+      "note": "Abinadi describes the Savior as “filled with compassion towards the children of men,” standing “betwixt them and justice.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "compassion-touched-the-leper",
+      "title": "He touched the leper",
+      "sourceId": "mark-1-40-42",
+      "note": "A leper came “kneeling down to him.” Jesus, “moved with compassion, put forth his hand, and touched him,” and said, “I will; be thou clean.”"
+    },
+    {
+      "id": "compassion-widow-of-nain",
+      "title": "He had compassion on a grieving widow",
+      "sourceId": "luke-7-12-15",
+      "note": "Seeing a widow on her way to bury her only son, “he had compassion on her, and said unto her, Weep not”—then raised her son and “delivered him to his mother.”"
+    },
+    {
+      "id": "compassion-sheep-without-a-shepherd",
+      "title": "He saw the crowds as sheep without a shepherd",
+      "sourceId": "matthew-9-35-36",
+      "note": "After teaching and healing in every city and village, He looked at the multitudes and “was moved with compassion on them, because they fainted, and were scattered abroad, as sheep having no shepherd.”"
+    },
+    {
+      "id": "compassion-jesus-wept",
+      "title": "“Jesus wept”",
+      "sourceId": "john-11-33-36",
+      "note": "When He saw Mary and those with her weeping for Lazarus, He “groaned in the spirit, and was troubled,” and wept—though He was about to raise Lazarus from the dead. Those watching said, “Behold how he loved him!” John doesn’t use the word compassion here; Gospel Labs includes the account as one way to see what the Guide to the Scriptures means by “to suffer with.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "mercy",
+      "relation": "relates-to",
+      "note": "The Guide to the Scriptures uses each to explain the other: compassion means “to show sympathy, pity, and mercy for another,” and mercy is “The spirit of compassion, tenderness, and forgiveness.”",
+      "sourceIds": [
+        "gs-compassion",
+        "gs-merciful-mercy"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "compassion-mark-1-41",
+      "prompt": "Mark says Jesus was “moved with compassion.” Tap the phrases that show what His compassion moved Him to do.",
+      "sourceIds": [
+        "mark-1-40-42"
+      ],
+      "hints": [
+        "Look at verse 41, right after “moved with compassion.”",
+        "There are two actions and one thing He said."
+      ],
+      "explanation": "His compassion moved Him to reach out, to touch a man others kept away from, and to heal him: He “put forth his hand, and touched him,” and said, “I will; be thou clean.” In the Savior, compassion was never only a feeling.",
+      "passage": "mark-1-40-42",
+      "chunks": [
+        {
+          "verse": 40,
+          "text": "And there came a leper to him,"
+        },
+        {
+          "verse": 40,
+          "text": "beseeching him, and kneeling down to him,"
+        },
+        {
+          "verse": 40,
+          "text": "and saying unto him,"
+        },
+        {
+          "verse": 40,
+          "text": "If thou wilt, thou canst make me clean."
+        },
+        {
+          "verse": 41,
+          "text": "And Jesus, moved with compassion,"
+        },
+        {
+          "verse": 41,
+          "text": "put forth his hand,"
+        },
+        {
+          "verse": 41,
+          "text": "and touched him,"
+        },
+        {
+          "verse": 41,
+          "text": "and saith unto him,"
+        },
+        {
+          "verse": 41,
+          "text": "I will; be thou clean."
+        },
+        {
+          "verse": 42,
+          "text": "And as soon as he had spoken,"
+        },
+        {
+          "verse": 42,
+          "text": "immediately the leprosy departed from him,"
+        },
+        {
+          "verse": 42,
+          "text": "and he was cleansed."
+        }
+      ],
+      "targets": [
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "compassion-vocab",
+      "prompt": "Match each word or phrase with its meaning.",
+      "sourceIds": [
+        "gs-compassion",
+        "mosiah-18-8-9",
+        "mark-1-40-42",
+        "1-peter-3-8"
+      ],
+      "hints": [
+        "One phrase is the literal meaning of ‘compassion’ itself.",
+        "Two phrases come from the covenant at the waters of Mormon (Mosiah 18:8–9).",
+        "In the King James Bible, ‘pitiful’ describes the person who feels pity, not the one who is pitied."
+      ],
+      "explanation": "Compassion literally means to suffer with someone. Being moved with compassion leads to action; mourning with those that mourn shares their grief; bearing burdens helps carry them; and in the King James Bible, being ‘pitiful’ means being tenderhearted.",
+      "pairs": [
+        {
+          "id": "compassion-suffer-with",
+          "term": "Suffer with",
+          "meaning": "The literal meaning of compassion: to share in another’s suffering"
+        },
+        {
+          "id": "compassion-moved-with-compassion",
+          "term": "Moved with compassion",
+          "meaning": "Stirred by compassion to act"
+        },
+        {
+          "id": "compassion-mourn-with",
+          "term": "Mourn with those that mourn",
+          "meaning": "To share in others’ grief"
+        },
+        {
+          "id": "compassion-bear-burdens",
+          "term": "Bear one another’s burdens",
+          "meaning": "To help carry others’ hardships so they are lighter"
+        },
+        {
+          "id": "compassion-pitiful",
+          "term": "Pitiful (King James Bible)",
+          "meaning": "Tenderhearted; full of pity for others"
+        }
+      ],
+      "extraMeanings": [
+        "Feeling sorry for someone while staying out of it",
+        "Deserving of scorn or contempt"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "sort",
+      "id": "compassion-or-not",
+      "prompt": "Sort each response to someone who is hurting: does it show compassion as the scriptures describe it, or does it fall short?",
+      "sourceIds": [
+        "gs-compassion",
+        "mosiah-18-8-9",
+        "luke-10-33-35",
+        "mark-1-40-42"
+      ],
+      "hints": [
+        "Compassion means “to suffer with.” Does the response draw closer or stay away?",
+        "Compare each response with the Samaritan in Luke 10 and the covenant in Mosiah 18:8–9."
+      ],
+      "explanation": "Compassion draws near: it mourns with those who mourn, helps carry burdens, notices and acts, and helps without first asking whether the person deserves it. Feeling sorry while keeping our distance, or looking down on someone in trouble, falls short.",
+      "categories": [
+        {
+          "id": "compassion",
+          "label": "Shows compassion"
+        },
+        {
+          "id": "short",
+          "label": "Falls short of compassion"
+        }
+      ],
+      "items": [
+        {
+          "id": "sit-with-grieving",
+          "text": "Sitting with a grieving friend, even when you can’t fix anything",
+          "category": "compassion",
+          "why": "Mosiah 18:9: “mourn with those that mourn.”"
+        },
+        {
+          "id": "sorry-but-avoid",
+          "text": "Feeling sorry for someone but avoiding them so it isn’t awkward",
+          "category": "short",
+          "why": "The Savior “put forth his hand, and touched him” (Mark 1:41). Compassion comes close."
+        },
+        {
+          "id": "carry-load",
+          "text": "Helping someone carry a load that is too heavy for them",
+          "category": "compassion",
+          "why": "Mosiah 18:8: “bear one another’s burdens, that they may be light.”"
+        },
+        {
+          "id": "look-down",
+          "text": "Looking down on someone because they got themselves into trouble",
+          "category": "short",
+          "why": "The Samaritan didn’t ask how the man came to be hurt; he “had compassion on him” and helped (Luke 10:33–34)."
+        },
+        {
+          "id": "stop-for-stranger",
+          "text": "Stopping to help a stranger, as the Samaritan did",
+          "category": "compassion",
+          "why": "He “went to him, and bound up his wounds” (Luke 10:34)."
+        },
+        {
+          "id": "notice-left-out",
+          "text": "Noticing someone left out and inviting them in",
+          "category": "compassion",
+          "why": "Compassion sees a need and responds, as when the Savior saw the crowds “scattered abroad” and was moved with compassion."
+        }
+      ]
+    }
+  ],
+  "reflection": [
+    "The Savior wept with those who mourned Lazarus, though He knew He would raise him. What might that teach about compassion?",
+    "Who around you might be carrying a burden others don’t see?",
+    "What does it suggest about the Savior that He is “filled with compassion towards the children of men”?"
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "contrasts.compassion-not-distant-pity",
+        "note": "Interpretive contrast. The Guide includes pity in compassion’s meaning; the contrast distinguishes distant pity from compassion that draws near, based on the literal meaning and Mark 1:41.",
+        "resolution": "Qualified: the contrast now says Gospel Labs draws it from the literal meaning and Mark 1:41. Its last sentence now speaks of staying away ‘to spare ourselves discomfort’, so it can’t be read as faulting someone who keeps a safe distance from a person who hurts them."
+      },
+      {
+        "where": "saviorExamples.compassion-jesus-wept",
+        "note": "John 11:33–36 doesn’t use the word compassion; presenting His weeping as compassion is a common reading. The Guide to the Scriptures’ entry on compassion doesn’t list it.",
+        "resolution": "Qualified: the note now says John doesn’t use the word compassion and that Gospel Labs includes the account as one way to see what the Guide means by ‘to suffer with.’"
+      },
+      {
+        "where": "vocabulary.compassion-pitiful",
+        "note": "Uses the footnote to 1 Peter 3:8 in the Church’s edition (Greek: tenderhearted, compassionate).",
+        "resolution": "Resolved: footnote 8d to 1 Peter 3:8 in the Church’s edition reads ‘GR tenderhearted, compassionate’ (checked 26 October 2026)."
+      },
+      {
+        "where": "activities.compassion-or-not",
+        "note": "The item about noticing someone left out applies the pattern of Matthew 9:36; that wording is ours.",
+        "resolution": "Resolved: the item’s reason names the passage it applies (Matthew 9:36). It is an everyday application, not a doctrinal claim."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gs-compassion",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Compassion",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/compassion?lang=eng"
+    },
+    {
+      "id": "mark-1-40-42",
+      "kind": "scripture",
+      "label": "Mark 1:40–42",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p42#p40",
+      "verses": [
+        {
+          "number": 40,
+          "text": "And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean."
+        },
+        {
+          "number": 41,
+          "text": "And Jesus, moved with compassion, put forth his hand, and touched him, and saith unto him, I will; be thou clean."
+        },
+        {
+          "number": 42,
+          "text": "And as soon as he had spoken, immediately the leprosy departed from him, and he was cleansed."
+        }
+      ]
+    },
+    {
+      "id": "matthew-9-35-36",
+      "kind": "scripture",
+      "label": "Matthew 9:35–36",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng&id=p35-p36#p35",
+      "verses": [
+        {
+          "number": 35,
+          "text": "And Jesus went about all the cities and villages, teaching in their synagogues, and preaching the gospel of the kingdom, and healing every sickness and every disease among the people."
+        },
+        {
+          "number": 36,
+          "text": "¶ But when he saw the multitudes, he was moved with compassion on them, because they fainted, and were scattered abroad, as sheep having no shepherd."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-18-8-9",
+      "kind": "scripture",
+      "label": "Mosiah 18:8–9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p9#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "And it came to pass that he said unto them: Behold, here are the waters of Mormon (for thus were they called) and now, as ye are desirous to come into the fold of God, and to be called his people, and are willing to bear one another’s burdens, that they may be light;"
+        },
+        {
+          "number": 9,
+          "text": "Yea, and are willing to mourn with those that mourn; yea, and comfort those that stand in need of comfort, and to stand as witnesses of God at all times and in all things, and in all places that ye may be in, even until death, that ye may be redeemed of God, and be numbered with those of the first resurrection, that ye may have eternal life—"
+        }
+      ]
+    },
+    {
+      "id": "1-peter-3-8",
+      "kind": "scripture",
+      "label": "1 Peter 3:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/3?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "Finally, be ye all of one mind, having compassion one of another, love as brethren, be pitiful, be courteous:"
+        }
+      ]
+    },
+    {
+      "id": "luke-10-33-35",
+      "kind": "scripture",
+      "label": "Luke 10:33–35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p33-p35#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he had compassion on him,"
+        },
+        {
+          "number": 34,
+          "text": "And went to him, and bound up his wounds, pouring in oil and wine, and set him on his own beast, and brought him to an inn, and took care of him."
+        },
+        {
+          "number": 35,
+          "text": "And on the morrow when he departed, he took out two pence, and gave them to the host, and said unto him, Take care of him; and whatsoever thou spendest more, when I come again, I will repay thee."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-15-9",
+      "kind": "scripture",
+      "label": "Mosiah 15:9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/15?lang=eng&id=p9#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "Having ascended into heaven, having the bowels of mercy; being filled with compassion towards the children of men; standing betwixt them and justice; having broken the bands of death, taken upon himself their iniquity and their transgressions, having redeemed them, and satisfied the demands of justice."
+        }
+      ]
+    },
+    {
+      "id": "luke-7-12-15",
+      "kind": "scripture",
+      "label": "Luke 7:12–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p12-p15#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "Now when he came nigh to the gate of the city, behold, there was a dead man carried out, the only son of his mother, and she was a widow: and much people of the city was with her."
+        },
+        {
+          "number": 13,
+          "text": "And when the Lord saw her, he had compassion on her, and said unto her, Weep not."
+        },
+        {
+          "number": 14,
+          "text": "And he came and touched the bier: and they that bare him stood still. And he said, Young man, I say unto thee, Arise."
+        },
+        {
+          "number": 15,
+          "text": "And he that was dead sat up, and began to speak. And he delivered him to his mother."
+        }
+      ]
+    },
+    {
+      "id": "john-11-33-36",
+      "kind": "scripture",
+      "label": "John 11:33–36",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng&id=p33-p36#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "When Jesus therefore saw her weeping, and the Jews also weeping which came with her, he groaned in the spirit, and was troubled,"
+        },
+        {
+          "number": 34,
+          "text": "And said, Where have ye laid him? They said unto him, Lord, come and see."
+        },
+        {
+          "number": 35,
+          "text": "Jesus wept."
+        },
+        {
+          "number": 36,
+          "text": "Then said the Jews, Behold how he loved him!"
+        }
+      ]
+    },
+    {
+      "id": "gs-merciful-mercy",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Merciful, Mercy",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/merciful-mercy?lang=eng",
+      "excerpt": "The spirit of compassion, tenderness, and forgiveness. Mercy is one of the attributes of God. Jesus Christ offers mercy to us through His atoning sacrifice."
+    }
+  ]
+}

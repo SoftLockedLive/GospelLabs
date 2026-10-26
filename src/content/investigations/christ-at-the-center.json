@@ -1,0 +1,2673 @@
+{
+  "id": "christ-at-the-center",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "Christ at the Center",
+  "question": "Why does the gospel center on Jesus Christ?",
+  "hook": "When the risen Savior defined “my gospel,” He didn't list rules. He described what He came to do.",
+  "theme": "Jesus Christ",
+  "tags": [
+    "jesus-christ",
+    "doctrine-of-christ",
+    "godhead",
+    "plan-of-salvation"
+  ],
+  "primaryQuestion": {
+    "id": "christ",
+    "note": "This question sits right next to the primary question itself. If Jesus Christ is the Son of God and the Savior of the world, then everything else in the gospel takes its meaning from Him, which is what the Prophet Joseph Smith taught when he called all other things appendages to the testimony of Christ."
+  },
+  "commonQuestions": [
+    "Why is Jesus Christ at the heart of everything the gospel teaches?",
+    "Do Heavenly Father and Jesus Christ love us in different ways?",
+    "Why do we pray to the Father in the name of the Son?"
+  ],
+  "estimatedMinutes": {
+    "quick": 9,
+    "deep": 32
+  },
+  "intro": "Many people wonder why Jesus Christ is at the heart of everything the gospel teaches. This investigation lets the scriptures answer. You'll read how the Savior Himself defined His gospel, why witnesses on two continents said there is no other name, how the Son's role fits within the Father's plan, and how the other principles of the gospel connect to Him.",
+  "sources": [
+    {
+      "id": "3-nephi-27-13-21",
+      "kind": "scripture",
+      "label": "3 Nephi 27:13–21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng&id=p13-p21#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "Behold I have given unto you my gospel, and this is the gospel which I have given unto you—that I came into the world to do the will of my Father, because my Father sent me."
+        },
+        {
+          "number": 14,
+          "text": "And my Father sent me that I might be lifted up upon the cross; and after that I had been lifted up upon the cross, that I might draw all men unto me, that as I have been lifted up by men even so should men be lifted up by the Father, to stand before me, to be judged of their works, whether they be good or whether they be evil—"
+        },
+        {
+          "number": 15,
+          "text": "And for this cause have I been lifted up; therefore, according to the power of the Father I will draw all men unto me, that they may be judged according to their works."
+        },
+        {
+          "number": 16,
+          "text": "And it shall come to pass, that whoso repenteth and is baptized in my name shall be filled; and if he endureth to the end, behold, him will I hold guiltless before my Father at that day when I shall stand to judge the world."
+        },
+        {
+          "number": 17,
+          "text": "And he that endureth not unto the end, the same is he that is also hewn down and cast into the fire, from whence they can no more return, because of the justice of the Father."
+        },
+        {
+          "number": 18,
+          "text": "And this is the word which he hath given unto the children of men. And for this cause he fulfilleth the words which he hath given, and he lieth not, but fulfilleth all his words."
+        },
+        {
+          "number": 19,
+          "text": "And no unclean thing can enter into his kingdom; therefore nothing entereth into his rest save it be those who have washed their garments in my blood, because of their faith, and the repentance of all their sins, and their faithfulness unto the end."
+        },
+        {
+          "number": 20,
+          "text": "Now this is the commandment: Repent, all ye ends of the earth, and come unto me and be baptized in my name, that ye may be sanctified by the reception of the Holy Ghost, that ye may stand spotless before me at the last day."
+        },
+        {
+          "number": 21,
+          "text": "Verily, verily, I say unto you, this is my gospel; and ye know the things that ye must do in my church; for the works which ye have seen me do that shall ye also do; for that which ye have seen me do even that shall ye do;"
+        }
+      ]
+    },
+    {
+      "id": "dc-76-40-42",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 76:40–42",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p40-p42#p40",
+      "verses": [
+        {
+          "number": 40,
+          "text": "And this is the gospel, the glad tidings, which the voice out of the heavens bore record unto us—"
+        },
+        {
+          "number": 41,
+          "text": "That he came into the world, even Jesus, to be crucified for the world, and to bear the sins of the world, and to sanctify the world, and to cleanse it from all unrighteousness;"
+        },
+        {
+          "number": 42,
+          "text": "That through him all might be saved whom the Father had put into his power and made by him;"
+        }
+      ]
+    },
+    {
+      "id": "acts-4-10-12",
+      "kind": "scripture",
+      "label": "Acts 4:10–12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/4?lang=eng&id=p10-p12#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "Be it known unto you all, and to all the people of Israel, that by the name of Jesus Christ of Nazareth, whom ye crucified, whom God raised from the dead, even by him doth this man stand here before you whole."
+        },
+        {
+          "number": 11,
+          "text": "This is the stone which was set at nought of you builders, which is become the head of the corner."
+        },
+        {
+          "number": 12,
+          "text": "Neither is there salvation in any other: for there is none other name under heaven given among men, whereby we must be saved."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-3-17",
+      "kind": "scripture",
+      "label": "Mosiah 3:17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng&id=p17#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "And moreover, I say unto you, that there shall be no other name given nor any other way nor means whereby salvation can come unto the children of men, only in and through the name of Christ, the Lord Omnipotent."
+        }
+      ]
+    },
+    {
+      "id": "john-14-6",
+      "kind": "scripture",
+      "label": "John 14:6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p6#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-25-23-26",
+      "kind": "scripture",
+      "label": "2 Nephi 25:23–26",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=p23-p26#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "For we labor diligently to write, to persuade our children, and also our brethren, to believe in Christ, and to be reconciled to God; for we know that it is by grace that we are saved, after all we can do."
+        },
+        {
+          "number": 24,
+          "text": "And, notwithstanding we believe in Christ, we keep the law of Moses, and look forward with steadfastness unto Christ, until the law shall be fulfilled."
+        },
+        {
+          "number": 25,
+          "text": "For, for this end was the law given; wherefore the law hath become dead unto us, and we are made alive in Christ because of our faith; yet we keep the law because of the commandments."
+        },
+        {
+          "number": 26,
+          "text": "And we talk of Christ, we rejoice in Christ, we preach of Christ, we prophesy of Christ, and we write according to our prophecies, that our children may know to what source they may look for a remission of their sins."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-31-21",
+      "kind": "scripture",
+      "label": "2 Nephi 31:21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p21#p21",
+      "verses": [
+        {
+          "number": 21,
+          "text": "And now, behold, my beloved brethren, this is the way; and there is none other way nor name given under heaven whereby man can be saved in the kingdom of God. And now, behold, this is the doctrine of Christ, and the only and true doctrine of the Father, and of the Son, and of the Holy Ghost, which is one God, without end. Amen."
+        }
+      ]
+    },
+    {
+      "id": "john-3-16-17",
+      "kind": "scripture",
+      "label": "John 3:16–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=p16-p17#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "¶ For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."
+        },
+        {
+          "number": 17,
+          "text": "For God sent not his Son into the world to condemn the world; but that the world through him might be saved."
+        }
+      ]
+    },
+    {
+      "id": "moses-1-39",
+      "kind": "scripture",
+      "label": "Moses 1:39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39",
+      "verses": [
+        {
+          "number": 39,
+          "text": "For behold, this is my work and my glory—to bring to pass the immortality and eternal life of man."
+        }
+      ]
+    },
+    {
+      "id": "moses-4-1-2",
+      "kind": "scripture",
+      "label": "Moses 4:1–2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng&id=p1-p2#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "And I, the Lord God, spake unto Moses, saying: That Satan, whom thou hast commanded in the name of mine Only Begotten, is the same which was from the beginning, and he came before me, saying—Behold, here am I, send me, I will be thy son, and I will redeem all mankind, that one soul shall not be lost, and surely I will do it; wherefore give me thine honor."
+        },
+        {
+          "number": 2,
+          "text": "But, behold, my Beloved Son, which was my Beloved and Chosen from the beginning, said unto me—Father, thy will be done, and the glory be thine forever."
+        }
+      ]
+    },
+    {
+      "id": "john-17-1-3",
+      "kind": "scripture",
+      "label": "John 17:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p3#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "These words spake Jesus, and lifted up his eyes to heaven, and said, Father, the hour is come; glorify thy Son, that thy Son also may glorify thee:"
+        },
+        {
+          "number": 2,
+          "text": "As thou hast given him power over all flesh, that he should give eternal life to as many as thou hast given him."
+        },
+        {
+          "number": 3,
+          "text": "And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent."
+        }
+      ]
+    },
+    {
+      "id": "articles-of-faith-1-3-4",
+      "kind": "scripture",
+      "label": "Articles of Faith 1:3–4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng&id=p3-p4#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "We believe that through the Atonement of Christ, all mankind may be saved, by obedience to the laws and ordinances of the Gospel."
+        },
+        {
+          "number": 4,
+          "text": "We believe that the first principles and ordinances of the Gospel are: first, Faith in the Lord Jesus Christ; second, Repentance; third, Baptism by immersion for the remission of sins; fourth, Laying on of hands for the gift of the Holy Ghost."
+        }
+      ]
+    },
+    {
+      "id": "dc-20-77",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 20:77",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p77#p77",
+      "verses": [
+        {
+          "number": 77,
+          "text": "O God, the Eternal Father, we ask thee in the name of thy Son, Jesus Christ, to bless and sanctify this bread to the souls of all those who partake of it, that they may eat in remembrance of the body of thy Son, and witness unto thee, O God, the Eternal Father, that they are willing to take upon them the name of thy Son, and always remember him and keep his commandments which he has given them; that they may always have his Spirit to be with them. Amen."
+        }
+      ]
+    },
+    {
+      "id": "1-corinthians-15-20-22",
+      "kind": "scripture",
+      "label": "1 Corinthians 15:20–22",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=p20-p22#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "But now is Christ risen from the dead, and become the firstfruits of them that slept."
+        },
+        {
+          "number": 21,
+          "text": "For since by man came death, by man came also the resurrection of the dead."
+        },
+        {
+          "number": 22,
+          "text": "For as in Adam all die, even so in Christ shall all be made alive."
+        }
+      ]
+    },
+    {
+      "id": "moses-6-62-63",
+      "kind": "scripture",
+      "label": "Moses 6:62–63",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p62-p63#p62",
+      "verses": [
+        {
+          "number": 62,
+          "text": "And now, behold, I say unto you: This is the plan of salvation unto all men, through the blood of mine Only Begotten, who shall come in the meridian of time."
+        },
+        {
+          "number": 63,
+          "text": "And behold, all things have their likeness, and all things are created and made to bear record of me, both things which are temporal, and things which are spiritual; things which are in the heavens above, and things which are on the earth, and things which are in the earth, and things which are under the earth, both above and beneath: all things bear record of me."
+        }
+      ]
+    },
+    {
+      "id": "helaman-5-12",
+      "kind": "scripture",
+      "label": "Helaman 5:12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p12#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And now, my sons, remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirlwind, yea, when all his hail and his mighty storm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a foundation whereon if men build they cannot fall."
+        }
+      ]
+    },
+    {
+      "id": "matthew-7-24-27",
+      "kind": "scripture",
+      "label": "Matthew 7:24–27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng&id=p24-p27#p24",
+      "verses": [
+        {
+          "number": 24,
+          "text": "¶ Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock:"
+        },
+        {
+          "number": 25,
+          "text": "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell not: for it was founded upon a rock."
+        },
+        {
+          "number": 26,
+          "text": "And every one that heareth these sayings of mine, and doeth them not, shall be likened unto a foolish man, which built his house upon the sand:"
+        },
+        {
+          "number": 27,
+          "text": "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it."
+        }
+      ]
+    },
+    {
+      "id": "john-15-9-14",
+      "kind": "scripture",
+      "label": "John 15:9–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p9-p14#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "As the Father hath loved me, so have I loved you: continue ye in my love."
+        },
+        {
+          "number": 10,
+          "text": "If ye keep my commandments, ye shall abide in my love; even as I have kept my Father’s commandments, and abide in his love."
+        },
+        {
+          "number": 11,
+          "text": "These things have I spoken unto you, that my joy might remain in you, and that your joy might be full."
+        },
+        {
+          "number": 12,
+          "text": "This is my commandment, That ye love one another, as I have loved you."
+        },
+        {
+          "number": 13,
+          "text": "Greater love hath no man than this, that a man lay down his life for his friends."
+        },
+        {
+          "number": 14,
+          "text": "Ye are my friends, if ye do whatsoever I command you."
+        }
+      ]
+    },
+    {
+      "id": "john-16-23-27",
+      "kind": "scripture",
+      "label": "John 16:23–27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?lang=eng&id=p23-p27#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "And in that day ye shall ask me nothing. Verily, verily, I say unto you, Whatsoever ye shall ask the Father in my name, he will give it you."
+        },
+        {
+          "number": 24,
+          "text": "Hitherto have ye asked nothing in my name: ask, and ye shall receive, that your joy may be full."
+        },
+        {
+          "number": 25,
+          "text": "These things have I spoken unto you in proverbs: but the time cometh, when I shall no more speak unto you in proverbs, but I shall shew you plainly of the Father."
+        },
+        {
+          "number": 26,
+          "text": "At that day ye shall ask in my name: and I say not unto you, that I will pray the Father for you:"
+        },
+        {
+          "number": 27,
+          "text": "For the Father himself loveth you, because ye have loved me, and have believed that I came out from God."
+        }
+      ]
+    },
+    {
+      "id": "john-17-20-26",
+      "kind": "scripture",
+      "label": "John 17:20–26",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p20-p26#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "Neither pray I for these alone, but for them also which shall believe on me through their word;"
+        },
+        {
+          "number": 21,
+          "text": "That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me."
+        },
+        {
+          "number": 22,
+          "text": "And the glory which thou gavest me I have given them; that they may be one, even as we are one:"
+        },
+        {
+          "number": 23,
+          "text": "I in them, and thou in me, that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me."
+        },
+        {
+          "number": 24,
+          "text": "Father, I will that they also, whom thou hast given me, be with me where I am; that they may behold my glory, which thou hast given me: for thou lovedst me before the foundation of the world."
+        },
+        {
+          "number": 25,
+          "text": "O righteous Father, the world hath not known thee: but I have known thee, and these have known that thou hast sent me."
+        },
+        {
+          "number": 26,
+          "text": "And I have declared unto them thy name, and will declare it: that the love wherewith thou hast loved me may be in them, and I in them."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-18-19-21",
+      "kind": "scripture",
+      "label": "3 Nephi 18:19–21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng&id=p19-p21#p19",
+      "verses": [
+        {
+          "number": 19,
+          "text": "Therefore ye must always pray unto the Father in my name;"
+        },
+        {
+          "number": 20,
+          "text": "And whatsoever ye shall ask the Father in my name, which is right, believing that ye shall receive, behold it shall be given unto you."
+        },
+        {
+          "number": 21,
+          "text": "Pray in your families unto the Father, always in my name, that your wives and your children may be blessed."
+        }
+      ]
+    },
+    {
+      "id": "moses-5-6-8",
+      "kind": "scripture",
+      "label": "Moses 5:6–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p6-p8#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And after many days an angel of the Lord appeared unto Adam, saying: Why dost thou offer sacrifices unto the Lord? And Adam said unto him: I know not, save the Lord commanded me."
+        },
+        {
+          "number": 7,
+          "text": "And then the angel spake, saying: This thing is a similitude of the sacrifice of the Only Begotten of the Father, which is full of grace and truth."
+        },
+        {
+          "number": 8,
+          "text": "Wherefore, thou shalt do all that thou doest in the name of the Son, and thou shalt repent and call upon God in the name of the Son forevermore."
+        }
+      ]
+    },
+    {
+      "id": "dc-45-3-5",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 45:3–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45?lang=eng&id=p3-p5#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "Listen to him who is the advocate with the Father, who is pleading your cause before him—"
+        },
+        {
+          "number": 4,
+          "text": "Saying: Father, behold the sufferings and death of him who did no sin, in whom thou wast well pleased; behold the blood of thy Son which was shed, the blood of him whom thou gavest that thyself might be glorified;"
+        },
+        {
+          "number": 5,
+          "text": "Wherefore, Father, spare these my brethren that believe on my name, that they may come unto me and have everlasting life."
+        }
+      ]
+    },
+    {
+      "id": "teachings-joseph-smith-chapter-3",
+      "kind": "official",
+      "label": "Teachings of Presidents of the Church: Joseph Smith, chapter 3",
+      "title": "Jesus Christ, the Divine Redeemer of the World",
+      "author": "Joseph Smith",
+      "publication": "Teachings of Presidents of the Church: Joseph Smith (2011)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/chapter-3?lang=eng",
+      "excerpt": "The fundamental principles of our religion are the testimony of the Apostles and Prophets, concerning Jesus Christ, that He died, was buried, and rose again the third day, and ascended into heaven; and all other things which pertain to our religion are only appendages to it."
+    },
+    {
+      "id": "the-living-christ",
+      "kind": "official",
+      "label": "The Living Christ: The Testimony of the Apostles",
+      "publication": "The First Presidency and the Quorum of the Twelve Apostles, 1 January 2000",
+      "url": "https://www.churchofjesuschrist.org/study/manual/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+      "excerpt": "We solemnly testify that His life, which is central to all human history, neither began in Bethlehem nor concluded on Calvary. He was the Firstborn of the Father, the Only Begotten Son in the flesh, the Redeemer of the world."
+    },
+    {
+      "id": "gospel-topics-godhead",
+      "kind": "official",
+      "label": "Gospel Topics: Godhead",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng",
+      "excerpt": "Although the members of the Godhead are distinct beings with distinct roles, they are one in purpose and doctrine. They are perfectly united in bringing to pass Heavenly Father’s divine plan of salvation."
+    },
+    {
+      "id": "bible-dictionary-prayer",
+      "kind": "official",
+      "label": "Bible Dictionary: Prayer",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bd/prayer?lang=eng",
+      "excerpt": "We pray in Christ’s name when our mind is the mind of Christ, and our wishes the wishes of Christ—when His words abide in us"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "advocate",
+      "kind": "vocabulary",
+      "label": "Advocate",
+      "description": "One who pleads another's cause. In Doctrine and Covenants 45:3–5, Jesus Christ is “the advocate with the Father,” pleading for those who believe on His name.",
+      "sourceIds": [
+        "dc-45-3-5"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "my-gospel",
+      "title": "What He called “my gospel”",
+      "phase": "question",
+      "method": "academic",
+      "intro": "Start with how the gospel itself is defined. In 3 Nephi 27 the risen Savior tells His disciples, “this is my gospel.” A modern revelation, D&C 76, gives a second definition. Read both and notice what they focus on.",
+      "sourceIds": [
+        "3-nephi-27-13-21",
+        "dc-76-40-42"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "cc-sort-gospel",
+          "prompt": "In 3 Nephi 27:13–21 the Savior defines His gospel. As a study aid, sort each phrase: is it about what He did (or will do), or about what He invites us to do? The Savior doesn't divide His words into these two lists; the sort is a way to see their shape.",
+          "sourceIds": [
+            "3-nephi-27-13-21"
+          ],
+          "hints": [
+            "Ask who is acting in each phrase: the Savior (“I came,” “I will”), or us (“repent,” “come”).",
+            "Commands such as “Repent” and “come unto me” describe our part.",
+            "Four phrases describe what He did or will do, and four describe what He invites us to do."
+          ],
+          "explanation": "Half of the Savior's definition describes what He did. He came “to do the will of my Father,” was “lifted up upon the cross,” and will “draw all men unto me.” The other half describes our part. But look at the wording: we come “unto me,” are baptized “in my name,” and do “the works which ye have seen me do.” Even our part of the gospel is centered on Him. The two categories are Gospel Labs' organizing aid, not a division the Savior makes; verse 16, for example, joins our enduring with His promise.",
+          "categories": [
+            {
+              "id": "his",
+              "label": "What He did or will do"
+            },
+            {
+              "id": "ours",
+              "label": "What He invites us to do"
+            }
+          ],
+          "items": [
+            {
+              "id": "will",
+              "text": "“I came into the world to do the will of my Father” (verse 13)",
+              "category": "his",
+              "why": "He describes why He came into the world."
+            },
+            {
+              "id": "cross",
+              "text": "“that I might be lifted up upon the cross” (verse 14)",
+              "category": "his",
+              "why": "His Crucifixion is part of His own definition of the gospel."
+            },
+            {
+              "id": "draw",
+              "text": "“I will draw all men unto me” (verse 15)",
+              "category": "his",
+              "why": "He describes what He will do for all people."
+            },
+            {
+              "id": "guiltless",
+              "text": "“him will I hold guiltless before my Father” (verse 16)",
+              "category": "his",
+              "why": "He promises what He will do for those who repent and endure."
+            },
+            {
+              "id": "repent",
+              "text": "“Repent, all ye ends of the earth” (verse 20)",
+              "category": "ours",
+              "why": "A commandment addressed to us."
+            },
+            {
+              "id": "baptized",
+              "text": "“come unto me and be baptized in my name” (verse 20)",
+              "category": "ours",
+              "why": "Our part, and notice that it means coming to Him, in His name."
+            },
+            {
+              "id": "endure",
+              "text": "“if he endureth to the end” (verse 16)",
+              "category": "ours",
+              "why": "Enduring is something we do, with His promise attached."
+            },
+            {
+              "id": "works",
+              "text": "“the works which ye have seen me do that shall ye also do” (verse 21)",
+              "category": "ours",
+              "why": "We are invited to do what we have seen Him do."
+            }
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "cc-gospel-clue",
+          "prompt": "The Lord defines “the gospel” in two revelations given centuries apart. Examine the clues, then decide what the gospel is mainly about.",
+          "sourceIds": [
+            "3-nephi-27-13-21",
+            "dc-76-40-42"
+          ],
+          "hints": [
+            "Look at the first thing each definition says after “this is the gospel.”",
+            "Is it a rule, or something that happened?",
+            "Both definitions begin with what Jesus came into the world to do."
+          ],
+          "explanation": "Both definitions start with an event, not a rule. In 3 Nephi 27 it is “that I came into the world to do the will of my Father.” In D&C 76 it is “that he came into the world, even Jesus, to be crucified for the world.” The commandments in 3 Nephi 27:20 then describe our coming “unto me.” By these two definitions, the gospel is the good news about Jesus Christ.",
+          "clues": [
+            {
+              "id": "c-13",
+              "title": "3 Nephi 27:13",
+              "text": "“This is the gospel which I have given unto you—that I came into the world to do the will of my Father, because my Father sent me.”",
+              "sourceId": "3-nephi-27-13-21"
+            },
+            {
+              "id": "c-14",
+              "title": "3 Nephi 27:14",
+              "text": "“My Father sent me that I might be lifted up upon the cross … that I might draw all men unto me.”",
+              "sourceId": "3-nephi-27-13-21"
+            },
+            {
+              "id": "c-20",
+              "title": "3 Nephi 27:20–21",
+              "text": "“Come unto me and be baptized in my name” … “this is my gospel.”",
+              "sourceId": "3-nephi-27-13-21"
+            },
+            {
+              "id": "c-76",
+              "title": "Doctrine and Covenants 76:40–41",
+              "text": "“This is the gospel, the glad tidings … That he came into the world, even Jesus, to be crucified for the world, and to bear the sins of the world.”",
+              "sourceId": "dc-76-40-42"
+            }
+          ],
+          "question": {
+            "id": "q-about",
+            "prompt": "Both times the Lord defines the gospel, what is it mainly about?",
+            "options": [
+              {
+                "id": "christ",
+                "text": "Jesus Christ: what He came to do for us, and our coming to Him"
+              },
+              {
+                "id": "rules",
+                "text": "A list of rules for good behavior",
+                "feedback": "Look at the first thing each definition says. Is it a rule, or an event?"
+              },
+              {
+                "id": "history",
+                "text": "The history and organization of the Church",
+                "feedback": "Neither definition mentions Church history. What does each say “the gospel” is?"
+              },
+              {
+                "id": "father-only",
+                "text": "The Father's work, separate from the Son's",
+                "feedback": "3 Nephi 27:13 joins them: He came to do the will of the Father who sent Him."
+              }
+            ],
+            "correct": [
+              "christ"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "cc-compare-gospel",
+          "prompt": "Decide whether each statement is supported by 3 Nephi 27:13–21 and D&C 76:40–42, goes beyond them, or is contradicted by them.",
+          "sourceIds": [
+            "3-nephi-27-13-21",
+            "dc-76-40-42"
+          ],
+          "hints": [
+            "For each statement, find the verse that speaks to it.",
+            "3 Nephi 27:13–15 mentions the Father three times. 3 Nephi 27:21 says “ye know the things that ye must do.”",
+            "Three statements are contradicted, two are supported, and the one about ‘every detail’ goes beyond these verses."
+          ],
+          "explanation": "Both passages define the gospel as good news about what Jesus did, so treating Him as one topic among many is contradicted. The Father is central in the Son's own words: He came “to do the will of my Father, because my Father sent me.” Our actions matter: “ye know the things that ye must do in my church.” These passages define the heart of the gospel, but many details of living it are taught elsewhere.",
+          "perspectives": [
+            {
+              "id": "topic",
+              "voice": "A common idea",
+              "text": "The gospel is mainly a set of rules, and Jesus Christ is one important topic within it.",
+              "verdict": "contradicted",
+              "rationale": "Both definitions begin with what He did: “I came into the world to do the will of my Father” and “he came into the world, even Jesus, to be crucified for the world.”"
+            },
+            {
+              "id": "point-to-him",
+              "voice": "A classmate",
+              "text": "In the Savior's definition, even the commandments point to Him: come “unto me,” and be baptized “in my name.”",
+              "verdict": "supported",
+              "rationale": "3 Nephi 27:20: “come unto me and be baptized in my name.” Verse 21: do “the works which ye have seen me do.”"
+            },
+            {
+              "id": "glad",
+              "voice": "A friend",
+              "text": "The gospel is good news, not only instructions.",
+              "verdict": "supported",
+              "rationale": "D&C 76:40 calls it “the glad tidings,” and verse 42 gives the news: “That through him all might be saved.”"
+            },
+            {
+              "id": "father-less",
+              "voice": "A common idea",
+              "text": "Putting Christ at the center means the Father matters less.",
+              "verdict": "contradicted",
+              "rationale": "The Son came “to do the will of my Father, because my Father sent me,” and draws all men “according to the power of the Father.”"
+            },
+            {
+              "id": "works-dont-matter",
+              "voice": "A common idea",
+              "text": "Since the gospel is about what Christ did, what we do doesn't matter.",
+              "verdict": "contradicted",
+              "rationale": "3 Nephi 27:20–21 commands us to repent and be baptized and says “ye know the things that ye must do in my church.”"
+            },
+            {
+              "id": "every-detail",
+              "voice": "A classmate",
+              "text": "These two passages describe every detail of how to live the gospel.",
+              "verdict": "beyond",
+              "rationale": "They define the heart of the gospel, His mission and our coming to Him, but they don't claim to give every detail of living it."
+            }
+          ]
+        },
+        "complex": {
+          "type": "scripture-connect",
+          "id": "cc-two-definitions",
+          "prompt": "Read the two definitions side by side and answer what each shows.",
+          "sourceIds": [
+            "3-nephi-27-13-21",
+            "dc-76-40-42"
+          ],
+          "hints": [
+            "For the first question, read D&C 76:41–42 phrase by phrase.",
+            "For the second, look for commands to us in 3 Nephi 27:20–21. D&C 76:40–42 has none.",
+            "For the third, compare “because my Father sent me” (3 Nephi 27:13) with “whom the Father had put into his power” (D&C 76:42)."
+          ],
+          "explanation": "D&C 76:41–42 gives the glad tidings: Jesus came “to be crucified for the world, and to bear the sins of the world,” “that through him all might be saved.” 3 Nephi 27 adds our response: repent, be baptized in His name, receive the Holy Ghost, endure, and do His works. Both show the Father's role: He sent the Son and gave Him power, and the Son's work carries out the Father's will.",
+          "passages": [
+            "3-nephi-27-13-21",
+            "dc-76-40-42"
+          ],
+          "questions": [
+            {
+              "id": "q-glad",
+              "prompt": "D&C 76:40 calls the gospel “glad tidings.” According to verses 41–42, what is the good news?",
+              "options": [
+                {
+                  "id": "saved",
+                  "text": "Jesus came to be crucified for the world and bear its sins, to sanctify and cleanse it, so that through Him all might be saved."
+                },
+                {
+                  "id": "condemned",
+                  "text": "The world would be judged and condemned for its unrighteousness.",
+                  "feedback": "Read verse 42. What is the result of His coming?"
+                },
+                {
+                  "id": "themselves",
+                  "text": "People can make themselves clean if they try hard enough.",
+                  "feedback": "Verse 41 says who would “cleanse it from all unrighteousness.”"
+                },
+                {
+                  "id": "father-came",
+                  "text": "The Father Himself would come into the world.",
+                  "feedback": "Verse 41 names who came into the world: “even Jesus.”"
+                }
+              ],
+              "correct": [
+                "saved"
+              ]
+            },
+            {
+              "id": "q-response",
+              "prompt": "3 Nephi 27 includes something D&C 76:40–42 doesn't. What?",
+              "options": [
+                {
+                  "id": "our-part",
+                  "text": "Our response: repent, be baptized in His name, receive the Holy Ghost, endure, and do the works we have seen Him do."
+                },
+                {
+                  "id": "crucified",
+                  "text": "That He would be crucified.",
+                  "feedback": "D&C 76:41 says that too (“to be crucified for the world”). Look for what only 3 Nephi 27 asks of us."
+                },
+                {
+                  "id": "sent",
+                  "text": "That the Father had a role.",
+                  "feedback": "D&C 76:42 also mentions the Father. Look at 3 Nephi 27:20."
+                },
+                {
+                  "id": "cleanse",
+                  "text": "That He would cleanse the world from unrighteousness.",
+                  "feedback": "That is D&C 76:41. What does 3 Nephi 27:20 ask us to do?"
+                }
+              ],
+              "correct": [
+                "our-part"
+              ]
+            },
+            {
+              "id": "q-father",
+              "prompt": "Both passages mention the Father. What do they show about His role?",
+              "options": [
+                {
+                  "id": "sent-power",
+                  "text": "The Father sent the Son and gave Him power to save. The Son's work carries out the Father's will."
+                },
+                {
+                  "id": "no-part",
+                  "text": "The Father has no real part in the gospel.",
+                  "feedback": "Count the times 3 Nephi 27:13–15 mentions the Father."
+                },
+                {
+                  "id": "competing",
+                  "text": "The Father and the Son have competing plans.",
+                  "feedback": "3 Nephi 27:13: He came “to do the will of my Father.” Does that sound like competition?"
+                },
+                {
+                  "id": "replaces",
+                  "text": "At the judgment the Father replaces the Son.",
+                  "feedback": "Read 3 Nephi 27:16: who will “stand to judge the world”?"
+                }
+              ],
+              "correct": [
+                "sent-power"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "When the Savior defined His gospel, He didn't begin with a list of rules. He described Himself: “I came into the world to do the will of my Father … that I might be lifted up upon the cross.” D&C 76 calls the same news “glad tidings”: “that he came into the world, even Jesus, to be crucified for the world.” Even the commandments in 3 Nephi 27 are framed around Him: come “unto me,” and be baptized “in my name.” By the Lord's own definition, the gospel is the good news about Him.",
+      "concepts": [
+        "jesus-christ",
+        "doctrine-of-christ",
+        "atonement"
+      ],
+      "connections": [
+        {
+          "from": "scripture:3-nephi-27-13-21",
+          "to": "concept:doctrine-of-christ",
+          "relation": "teaches",
+          "sourceIds": [
+            "3-nephi-27-13-21"
+          ],
+          "note": "The Savior defines His gospel: He came to do the Father's will and be lifted up, and we come to Him through repentance, baptism in His name, the Holy Ghost, and enduring."
+        },
+        {
+          "from": "scripture:dc-76-40-42",
+          "to": "concept:atonement",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-76-40-42"
+          ],
+          "note": "The glad tidings are that Jesus came into the world to be crucified for it, bear its sins, and cleanse it, that through Him all might be saved."
+        }
+      ]
+    },
+    {
+      "id": "none-other-name",
+      "title": "“None other name”",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "Peter in Jerusalem, King Benjamin in the Americas (repeating an angel's words), and the prophet Nephi all said the same striking thing about Jesus Christ. Read what they claim, and what difference it made to how they taught their children.",
+      "sourceIds": [
+        "acts-4-10-12",
+        "mosiah-3-17",
+        "john-14-6",
+        "2-nephi-25-23-26",
+        "2-nephi-31-21"
+      ],
+      "activities": {
+        "easy": {
+          "type": "evidence-connect",
+          "id": "cc-match-name",
+          "prompt": "Connect each statement with the words of scripture that support it. One piece of evidence doesn't match any statement.",
+          "sourceIds": [
+            "acts-4-10-12",
+            "mosiah-3-17",
+            "john-14-6",
+            "2-nephi-25-23-26"
+          ],
+          "hints": [
+            "Look for a key word in each statement: healed, way, Father, children.",
+            "One piece of evidence is about keeping the law of Moses, which none of the statements mention.",
+            "Healed → Acts 4:10. Way or means → Mosiah 3:17. Father → John 14:6. Children → 2 Nephi 25:26."
+          ],
+          "explanation": "Peter says the healed man stood “whole” by the power of the crucified and risen Jesus. Mosiah 3:17 says there is no other “way nor means” of salvation. John 14:6 names the Father as where the way leads. 2 Nephi 25:26 explains why Nephi's people spoke of Christ: so their children would know where to look for forgiveness. The line about keeping the law of Moses is context for verse 26, not a match for any statement.",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "healed",
+                "text": "The power that healed a man came from the crucified and risen Jesus."
+              },
+              {
+                "id": "means",
+                "text": "There is no other name, way, or means of salvation."
+              },
+              {
+                "id": "father",
+                "text": "He is the way to the Father."
+              },
+              {
+                "id": "children",
+                "text": "Prophets centered their teaching on Him so their children would know where to turn for forgiveness."
+              }
+            ]
+          },
+          "right": {
+            "label": "Evidence",
+            "items": [
+              {
+                "id": "ev-healed",
+                "text": "“by the name of Jesus Christ of Nazareth, whom ye crucified, whom God raised from the dead, even by him doth this man stand here before you whole”",
+                "sourceId": "acts-4-10-12"
+              },
+              {
+                "id": "ev-means",
+                "text": "“there shall be no other name given nor any other way nor means whereby salvation can come unto the children of men”",
+                "sourceId": "mosiah-3-17"
+              },
+              {
+                "id": "ev-father",
+                "text": "“no man cometh unto the Father, but by me”",
+                "sourceId": "john-14-6"
+              },
+              {
+                "id": "ev-children",
+                "text": "“we talk of Christ, we rejoice in Christ, we preach of Christ … that our children may know to what source they may look for a remission of their sins”",
+                "sourceId": "2-nephi-25-23-26"
+              },
+              {
+                "id": "ev-law",
+                "text": "“notwithstanding we believe in Christ, we keep the law of Moses”",
+                "sourceId": "2-nephi-25-23-26"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "healed",
+              "right": "ev-healed",
+              "because": "Peter says the man stands “whole” “by the name of Jesus Christ of Nazareth, whom ye crucified, whom God raised from the dead.”",
+              "clue": "Which evidence mentions a man standing whole?"
+            },
+            {
+              "left": "means",
+              "right": "ev-means",
+              "because": "Mosiah 3:17 rules out any other “way nor means whereby salvation can come.”",
+              "clue": "Which evidence uses the words ‘way’ and ‘means’?"
+            },
+            {
+              "left": "father",
+              "right": "ev-father",
+              "because": "Jesus says “no man cometh unto the Father, but by me.”",
+              "clue": "Which evidence mentions the Father?"
+            },
+            {
+              "left": "children",
+              "right": "ev-children",
+              "because": "Nephi says they speak of Christ “that our children may know to what source they may look.”",
+              "clue": "Which evidence mentions children and forgiveness?"
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "cc-name-connect",
+          "prompt": "Compare the three passages and explain how they fit together.",
+          "sourceIds": [
+            "acts-4-10-12",
+            "mosiah-3-17",
+            "john-14-6"
+          ],
+          "hints": [
+            "Acts 4:12 and Mosiah 3:17 use almost the same words. Find them.",
+            "John 14:6 names a destination. Where does the way lead?",
+            "Christ is the way to the Father, not a replacement for Him."
+          ],
+          "explanation": "Peter (“none other name under heaven”) and King Benjamin (“no other name given nor any other way nor means”) make the same claim on different continents: salvation comes only through Jesus Christ. John 14:6 adds the destination. He is “the way,” and the way leads “unto the Father.”",
+          "passages": [
+            "acts-4-10-12",
+            "mosiah-3-17",
+            "john-14-6"
+          ],
+          "questions": [
+            {
+              "id": "q-shared",
+              "prompt": "Peter (Acts 4) and King Benjamin, repeating an angel's words (Mosiah 3), taught on different continents. What claim do they share?",
+              "options": [
+                {
+                  "id": "only-christ",
+                  "text": "Salvation comes only through Jesus Christ."
+                },
+                {
+                  "id": "believers",
+                  "text": "Healing comes only to those who already believe.",
+                  "feedback": "Acts 4:12 and Mosiah 3:17 aren't about healing. What do both say about salvation?"
+                },
+                {
+                  "id": "israel",
+                  "text": "Only Israelites can be saved.",
+                  "feedback": "Mosiah 3:17 says salvation comes to “the children of men,” and Acts 4:12 says “among men.”"
+                },
+                {
+                  "id": "word",
+                  "text": "The name ‘Jesus’ is powerful as a word, apart from Him.",
+                  "feedback": "Acts 4:10 says “even by him.” Is the power in a word, or in the Person?"
+                }
+              ],
+              "correct": [
+                "only-christ"
+              ]
+            },
+            {
+              "id": "q-destination",
+              "prompt": "John 14:6 says “no man cometh unto the Father, but by me.” What does this add to the ‘no other name’ passages?",
+              "options": [
+                {
+                  "id": "way-to-father",
+                  "text": "It names the destination: Christ is the way to the Father, not a replacement for Him."
+                },
+                {
+                  "id": "christ-destination",
+                  "text": "It means Christ is the final destination instead of the Father.",
+                  "feedback": "Read the verse again. Where does the way lead?"
+                },
+                {
+                  "id": "without",
+                  "text": "It means good people can reach the Father without Christ.",
+                  "feedback": "Read the words “but by me.”"
+                }
+              ],
+              "correct": [
+                "way-to-father"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "cc-source-clue",
+          "prompt": "Nephi explains why his people spoke of Christ so constantly. Examine the clues, then identify his reason.",
+          "sourceIds": [
+            "2-nephi-25-23-26",
+            "mosiah-3-17"
+          ],
+          "hints": [
+            "Verses 24–25 explain how Nephi's people saw the law of Moses. Did they abandon it?",
+            "Verse 26 ends with a purpose clause beginning “that our children may know…”.",
+            "They kept the law, but they wanted their children to know that the source of forgiveness is Christ, not the law itself."
+          ],
+          "explanation": "Nephi's people kept the law of Moses, but they understood that “for this end was the law given”: it pointed to Christ. So they talked, rejoiced, preached, and prophesied of Christ “that our children may know to what source they may look for a remission of their sins.” Mosiah 3:17 explains why that source is unique: there is no other name, way, or means.",
+          "clues": [
+            {
+              "id": "c-23",
+              "title": "2 Nephi 25:23",
+              "text": "They labor “to persuade our children … to believe in Christ, and to be reconciled to God; for we know that it is by grace that we are saved, after all we can do.”",
+              "sourceId": "2-nephi-25-23-26"
+            },
+            {
+              "id": "c-24",
+              "title": "2 Nephi 25:24–25",
+              "text": "“We keep the law of Moses, and look forward with steadfastness unto Christ … For, for this end was the law given.”",
+              "sourceId": "2-nephi-25-23-26"
+            },
+            {
+              "id": "c-26",
+              "title": "2 Nephi 25:26",
+              "text": "“We talk of Christ, we rejoice in Christ, we preach of Christ, we prophesy of Christ … that our children may know to what source they may look for a remission of their sins.”",
+              "sourceId": "2-nephi-25-23-26"
+            },
+            {
+              "id": "c-mosiah",
+              "title": "Mosiah 3:17",
+              "text": "There shall be “no other name given nor any other way nor means whereby salvation can come.”",
+              "sourceId": "mosiah-3-17"
+            }
+          ],
+          "question": {
+            "id": "q-reason",
+            "prompt": "Why did Nephi's people make Christ the center of everything they said and wrote?",
+            "options": [
+              {
+                "id": "source",
+                "text": "So their children would know that Christ, not the law itself, is the source of forgiveness."
+              },
+              {
+                "id": "law-wrong",
+                "text": "Because the law of Moses was wrong and they had stopped keeping it.",
+                "feedback": "Read verse 24 and the end of verse 25. Did they keep the law? What was it for?"
+              },
+              {
+                "id": "talking",
+                "text": "Because talking about Christ would itself bring forgiveness.",
+                "feedback": "Verse 26 says they talk of Christ so their children would know where to look. Who is the source?"
+              },
+              {
+                "id": "commanded",
+                "text": "Because they were forbidden to speak of anything else.",
+                "feedback": "The verses give a reason, not a rule. Look for “that our children may know.”"
+              }
+            ],
+            "correct": [
+              "source"
+            ]
+          }
+        },
+        "complex": {
+          "type": "compare",
+          "id": "cc-compare-exclusive",
+          "prompt": "Some people raise hard questions about ‘no other name.’ Decide whether each statement is supported by these passages, goes beyond them, or is contradicted by them.",
+          "sourceIds": [
+            "acts-4-10-12",
+            "mosiah-3-17",
+            "john-14-6",
+            "2-nephi-25-23-26",
+            "2-nephi-31-21"
+          ],
+          "hints": [
+            "Separate two questions: through whom salvation comes, and when or how each person learns of Him. Which one do these verses answer?",
+            "2 Nephi 31:21 names the Father, the Son, and the Holy Ghost together.",
+            "The statement about people who never heard of Him goes beyond these verses. They don't address it."
+          ],
+          "explanation": "These passages say salvation comes only through Christ, and that He is the way to the Father, whose doctrine it is: “the only and true doctrine of the Father, and of the Son, and of the Holy Ghost.” They don't say when or how every person will come to know Him, so concluding that those who never heard have no hope goes beyond them. Other revelations address that question.",
+          "perspectives": [
+            {
+              "id": "never-heard",
+              "voice": "A friend",
+              "text": "If salvation comes only through Christ, people who never heard of Him in this life have no hope.",
+              "verdict": "beyond",
+              "rationale": "These verses say salvation comes only through Christ. They don't say when or how each person will come to know Him. Other revelations (for example, Doctrine and Covenants 137 and 138) speak to that question; these passages don't."
+            },
+            {
+              "id": "center-because",
+              "voice": "A classmate",
+              "text": "Christ is the center because salvation from sin and death comes through Him and no one else.",
+              "verdict": "supported",
+              "rationale": "Acts 4:12: “Neither is there salvation in any other.” Mosiah 3:17: “only in and through the name of Christ.”"
+            },
+            {
+              "id": "father-uninvolved",
+              "voice": "A common idea",
+              "text": "Because salvation comes through the Son, the Father isn't really involved.",
+              "verdict": "contradicted",
+              "rationale": "John 14:6 says the way leads “unto the Father,” and 2 Nephi 31:21 calls it “the only and true doctrine of the Father, and of the Son, and of the Holy Ghost.”"
+            },
+            {
+              "id": "law-pointed",
+              "voice": "A classmate",
+              "text": "Nephi's people spoke of Christ constantly partly because they understood that the law of Moses pointed to Him.",
+              "verdict": "supported",
+              "rationale": "2 Nephi 25:24–25: they “look forward with steadfastness unto Christ,” for “for this end was the law given.”"
+            }
+          ]
+        }
+      },
+      "insight": "Witnesses on two continents said the same thing: “there is none other name under heaven given among men, whereby we must be saved” (Acts 4:12), and there is “no other name … nor any other way nor means” (Mosiah 3:17). That is why Nephi's people talked, rejoiced, preached, and prophesied of Christ, “that our children may know to what source they may look for a remission of their sins.” And Jesus said where the way leads: “no man cometh unto the Father, but by me.”",
+      "concepts": [
+        "jesus-christ",
+        "forgiveness-of-sins",
+        "grace"
+      ],
+      "connections": [
+        {
+          "from": "scripture:acts-4-10-12",
+          "to": "question:christ-at-the-center",
+          "relation": "answers",
+          "sourceIds": [
+            "acts-4-10-12",
+            "mosiah-3-17"
+          ],
+          "note": "Peter and King Benjamin both testify that salvation comes through no other name than Jesus Christ."
+        },
+        {
+          "from": "concept:forgiveness-of-sins",
+          "to": "concept:jesus-christ",
+          "relation": "rests-on",
+          "sourceIds": [
+            "2-nephi-25-23-26"
+          ],
+          "note": "Nephi's people spoke of Christ so their children would know to what source to look for a remission of their sins."
+        }
+      ],
+      "branchIds": [
+        "pray-in-his-name"
+      ]
+    },
+    {
+      "id": "sent-by-the-father",
+      "title": "Sent by the Father",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "If Jesus Christ is the center, where does Heavenly Father fit? These scriptures show the sending and the love beginning with the Father, and the Son coming to do His will. Gospel Labs suggests that centering on the Son is a way of honoring the Father. Test that idea against the sources.",
+      "sourceIds": [
+        "john-3-16-17",
+        "moses-1-39",
+        "3-nephi-27-13-21",
+        "moses-4-1-2",
+        "john-17-1-3",
+        "the-living-christ",
+        "gospel-topics-godhead"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "cc-find-glory",
+          "prompt": "Before the world was made, two voices spoke to the Father. Tap the phrase where one asks for honor for himself, and the phrase where the Beloved Son gives the glory to the Father.",
+          "sourceIds": [
+            "moses-4-1-2"
+          ],
+          "hints": [
+            "Look for the words “honor” and “glory.”",
+            "One voice ends by asking for something; the other ends by giving something.",
+            "Tap “wherefore give me thine honor.” and “said unto me—Father, thy will be done, and the glory be thine forever.”"
+          ],
+          "explanation": "Satan's offer ends “wherefore give me thine honor.” The Beloved Son answers “Father, thy will be done, and the glory be thine forever.” From the beginning, the Son's place at the center of the plan was not something He claimed for Himself. He sought the Father's will and the Father's glory.",
+          "passage": "moses-4-1-2",
+          "chunks": [
+            {
+              "verse": 1,
+              "text": "And I, the Lord God, spake unto Moses, saying:"
+            },
+            {
+              "verse": 1,
+              "text": "That Satan, whom thou hast commanded in the name of mine Only Begotten, is the same which was from the beginning,"
+            },
+            {
+              "verse": 1,
+              "text": "and he came before me, saying—Behold, here am I, send me,"
+            },
+            {
+              "verse": 1,
+              "text": "I will be thy son,"
+            },
+            {
+              "verse": 1,
+              "text": "and I will redeem all mankind, that one soul shall not be lost,"
+            },
+            {
+              "verse": 1,
+              "text": "and surely I will do it;"
+            },
+            {
+              "verse": 1,
+              "text": "wherefore give me thine honor."
+            },
+            {
+              "verse": 2,
+              "text": "But, behold, my Beloved Son,"
+            },
+            {
+              "verse": 2,
+              "text": "which was my Beloved and Chosen from the beginning,"
+            },
+            {
+              "verse": 2,
+              "text": "said unto me—Father, thy will be done, and the glory be thine forever."
+            }
+          ],
+          "targets": [
+            6,
+            9
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "cc-father-son-connect",
+          "prompt": "Read John 3, Moses 1, and 3 Nephi 27 together. How do the Father and the Son work together?",
+          "sourceIds": [
+            "john-3-16-17",
+            "moses-1-39",
+            "3-nephi-27-13-21"
+          ],
+          "hints": [
+            "John 3:16 begins with who acted first, and why.",
+            "Moses 1:39 calls something “my work and my glory.” Whose work is it, and what is it?",
+            "3 Nephi 27:13 says why the Son came: to do the will of the One whose work Moses 1:39 describes."
+          ],
+          "explanation": "“God so loved the world, that he gave his only begotten Son,” not “to condemn the world; but that the world through him might be saved.” The Father's work is “to bring to pass the immortality and eternal life of man,” and the Son “came into the world to do the will of my Father.” The Son's mission carries out the Father's work.",
+          "passages": [
+            "john-3-16-17",
+            "moses-1-39",
+            "3-nephi-27-13-21"
+          ],
+          "questions": [
+            {
+              "id": "q-why-gave",
+              "prompt": "In John 3:16–17, why did the Father give His Son?",
+              "options": [
+                {
+                  "id": "loved",
+                  "text": "Because He loved the world and wanted it saved, not condemned"
+                },
+                {
+                  "id": "son-asked",
+                  "text": "Because the Son asked to be sent in His place",
+                  "feedback": "Read the first words of John 3:16. Who acted, and why?"
+                },
+                {
+                  "id": "condemn",
+                  "text": "To condemn the world for its sins",
+                  "feedback": "Verse 17 says plainly what God did not send His Son to do."
+                },
+                {
+                  "id": "unable",
+                  "text": "Because the Father could no longer help the world Himself",
+                  "feedback": "The verses give love as the reason. Find the word."
+                }
+              ],
+              "correct": [
+                "loved"
+              ]
+            },
+            {
+              "id": "q-work",
+              "prompt": "Compare Moses 1:39 with 3 Nephi 27:13. How do the Father's work and the Son's mission relate?",
+              "options": [
+                {
+                  "id": "carries-out",
+                  "text": "The Son came to do the will of the Father, whose work is our immortality and eternal life. The Son's mission carries out the Father's work."
+                },
+                {
+                  "id": "separate",
+                  "text": "They describe two separate plans.",
+                  "feedback": "3 Nephi 27:13 says why the Son came. Whose will was He doing?"
+                },
+                {
+                  "id": "replaced",
+                  "text": "The Son's mission replaced the Father's work.",
+                  "feedback": "Moses 1:39 calls it “my work and my glory.” Does 3 Nephi 27 say the Son took it over, or came to do it?"
+                }
+              ],
+              "correct": [
+                "carries-out"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "cc-premortal-clue",
+          "prompt": "Examine scripture, the Apostles' testimony, and Gospel Topics. Then decide what they suggest about why the Son is at the center of the Father's plan.",
+          "sourceIds": [
+            "moses-4-1-2",
+            "john-17-1-3",
+            "the-living-christ",
+            "gospel-topics-godhead"
+          ],
+          "hints": [
+            "Compare what the Beloved Son asked for in Moses 4:2 with what Satan asked for in verse 1.",
+            "The Living Christ says when His life began. Gospel Topics says whom Latter-day Saints worship.",
+            "The Son sought the Father's will and glory, not His own, and the Father chose and sent Him."
+          ],
+          "explanation": "In Moses 4:2 the Son, “my Beloved and Chosen from the beginning,” sought the Father's will and glory. In John 17 the Son prays “glorify thy Son, that thy Son also may glorify thee,” and calls Himself the one “whom thou hast sent.” The Apostles testify that His life “neither began in Bethlehem nor concluded on Calvary.” Gospel Topics says Latter-day Saints “acknowledge the Father as the ultimate object of their worship, the Son as Lord and Redeemer.” From these, Gospel Labs draws a synthesis: centering our faith on the Son honors the Father. The sources don't say it in those words, so treat it as a conclusion to test.",
+          "clues": [
+            {
+              "id": "c-moses",
+              "title": "Moses 4:2",
+              "text": "The Beloved Son, “my Beloved and Chosen from the beginning,” said: “Father, thy will be done, and the glory be thine forever.”",
+              "sourceId": "moses-4-1-2"
+            },
+            {
+              "id": "c-john17",
+              "title": "John 17:1, 3",
+              "text": "“Glorify thy Son, that thy Son also may glorify thee” … “this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent.”",
+              "sourceId": "john-17-1-3"
+            },
+            {
+              "id": "c-living",
+              "title": "The Living Christ",
+              "text": "The Apostles testify that “His life, which is central to all human history, neither began in Bethlehem nor concluded on Calvary,” and that “under the direction of His Father, He was the creator of the earth.”",
+              "sourceId": "the-living-christ"
+            },
+            {
+              "id": "c-godhead",
+              "title": "Gospel Topics: Godhead",
+              "text": "Latter-day Saints “pray to God the Father in the name of Jesus Christ” and “acknowledge the Father as the ultimate object of their worship, the Son as Lord and Redeemer.”",
+              "sourceId": "gospel-topics-godhead"
+            }
+          ],
+          "question": {
+            "id": "q-center",
+            "prompt": "What do these sources suggest about why the Son is at the center of the Father's plan?",
+            "options": [
+              {
+                "id": "honors",
+                "text": "The Father chose and sent the Son, and from the beginning the Son sought the Father's will and glory, not His own."
+              },
+              {
+                "id": "claimed",
+                "text": "The Son took the center by claiming honor for Himself.",
+                "feedback": "Compare Moses 4:1 with 4:2. Who asked for honor?"
+              },
+              {
+                "id": "bethlehem",
+                "text": "The Son's role began when He was born in Bethlehem.",
+                "feedback": "Read the Living Christ clue. When did His life begin?"
+              },
+              {
+                "id": "instead",
+                "text": "Latter-day Saints worship the Son in place of the Father.",
+                "feedback": "Read the Gospel Topics clue. Whom do Latter-day Saints acknowledge as the ultimate object of worship?"
+              }
+            ],
+            "correct": [
+              "honors"
+            ]
+          }
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "cc-build-sent",
+          "prompt": "Build a principle that John 3, Moses 1, Moses 4, and 3 Nephi 27 support together. Leave out the fragments they don't support.",
+          "sourceIds": [
+            "john-3-16-17",
+            "moses-1-39",
+            "moses-4-1-2",
+            "3-nephi-27-13-21",
+            "gospel-topics-godhead"
+          ],
+          "hints": [
+            "Start with the claim of this investigation: Jesus Christ is at the center.",
+            "Add the Father's reason for sending Him (John 3:16) and the Son's purpose (3 Nephi 27:13; Moses 1:39).",
+            "End with whose glory the Son seeks (Moses 4:2). Leave out fragments that set the Father and Son against each other."
+          ],
+          "explanation": "John 3:16 gives the Father's love as the reason He gave His Son. 3 Nephi 27:13 and Moses 1:39 show the Son came to do the Father's will, whose work is our immortality and eternal life. In Moses 4:2 the Son gives the glory to the Father, and Gospel Topics says Latter-day Saints acknowledge the Father as “the ultimate object of their worship.” Gospel Labs suggests that, for these reasons, centering our faith on the Son honors the Father; that is a synthesis, not a quotation. The distractors pit the Father and the Son against each other, which these sources contradict.",
+          "fragments": [
+            {
+              "id": "center",
+              "text": "Jesus Christ is at the center of the gospel"
+            },
+            {
+              "id": "sent",
+              "text": "because the Father, out of love, sent Him"
+            },
+            {
+              "id": "will",
+              "text": "to do the Father's will and bring to pass our eternal life;"
+            },
+            {
+              "id": "honors",
+              "text": "and the Son gives the glory to the Father."
+            },
+            {
+              "id": "replaced",
+              "text": "because He replaced the Father as the One we worship;"
+            },
+            {
+              "id": "harder",
+              "text": "because the Father's love is harder to reach than His;"
+            },
+            {
+              "id": "claimed",
+              "text": "because He claimed the honor for Himself;"
+            }
+          ],
+          "solution": [
+            "center",
+            "sent",
+            "will",
+            "honors"
+          ],
+          "statement": "Jesus Christ is at the center of the gospel because the Father, out of love, sent Him to do the Father's will and bring to pass our eternal life; and the Son gives the glory to the Father."
+        }
+      },
+      "insight": "Christ at the center doesn't push the Father to the edge. “God so loved the world, that he gave his only begotten Son.” The Father's “work and … glory” is our “immortality and eternal life,” and the Son came “to do the will of my Father, because my Father sent me.” Before the world was made, the Son said, “Father, thy will be done, and the glory be thine forever.” Gospel Labs suggests that to center on the Son is to accept the Father's own plan for our salvation.",
+      "concepts": [
+        "heavenly-father",
+        "jesus-christ",
+        "godhead",
+        "love-of-god",
+        "plan-of-salvation"
+      ],
+      "connections": [
+        {
+          "from": "concept:jesus-christ",
+          "to": "concept:heavenly-father",
+          "relation": "relates-to",
+          "sourceIds": [
+            "john-3-16-17",
+            "3-nephi-27-13-21"
+          ],
+          "note": "The Father sent the Son out of love, and the Son came to do the Father's will."
+        },
+        {
+          "from": "scripture:john-3-16-17",
+          "to": "concept:love-of-god",
+          "relation": "teaches",
+          "sourceIds": [
+            "john-3-16-17"
+          ],
+          "note": "The Father's love for the world is the reason He gave His Only Begotten Son."
+        }
+      ],
+      "branchIds": [
+        "father-and-son-love"
+      ]
+    },
+    {
+      "id": "everything-connects",
+      "title": "The trunk and the branches",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "In an 1838 editorial, the Prophet Joseph Smith named the fundamental principles of the Latter-day Saints' religion in a single sentence, quoted here from Teachings of Presidents of the Church: Joseph Smith. Read it, then trace how other principles of the gospel connect to the testimony at its center.",
+      "sourceIds": [
+        "teachings-joseph-smith-chapter-3",
+        "articles-of-faith-1-3-4",
+        "dc-20-77",
+        "1-corinthians-15-20-22",
+        "moses-6-62-63",
+        "3-nephi-27-13-21"
+      ],
+      "activities": {
+        "easy": {
+          "type": "vocab-match",
+          "id": "cc-vocab-appendage",
+          "prompt": "Joseph Smith's statement and the passages in this step use some important words. Match each word with its meaning.",
+          "sourceIds": [
+            "teachings-joseph-smith-chapter-3",
+            "1-corinthians-15-20-22",
+            "articles-of-faith-1-3-4"
+          ],
+          "hints": [
+            "‘Fundamental’ describes a foundation. ‘Appendage’ describes something attached to it.",
+            "The Teachings manual compares an appendage to a branch connected to the trunk of a tree.",
+            "One distractor treats ‘appendage’ as something useless. The manual's explanation rules that out."
+          ],
+          "explanation": "The Teachings manual explains that “an appendage is something that is connected to something of greater importance, such as a branch that is connected to the trunk of a tree.” Fundamental principles are the foundation. A remission of sins is forgiveness. Christ is “the firstfruits of them that slept”: the first to rise, with all to follow. An appendage is connected, not unimportant. The meanings given for ‘fundamental,’ ‘remission,’ and ‘firstfruits’ are plain-English glosses by Gospel Labs.",
+          "pairs": [
+            {
+              "id": "fundamental",
+              "term": "Fundamental",
+              "meaning": "Basic; the foundation that other things rest on"
+            },
+            {
+              "id": "appendage",
+              "term": "Appendage",
+              "meaning": "Something connected to something of greater importance, like a branch connected to the trunk of a tree"
+            },
+            {
+              "id": "remission",
+              "term": "Remission of sins",
+              "meaning": "Forgiveness; release from the guilt of sins"
+            },
+            {
+              "id": "firstfruits",
+              "term": "Firstfruits",
+              "meaning": "The first of a harvest, a sign that the rest will follow"
+            }
+          ],
+          "extraMeanings": [
+            "Something unimportant that can be removed without loss",
+            "A rule that must be kept to earn salvation"
+          ],
+          "match": "meaning"
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "cc-connect-doctrines",
+          "prompt": "Trace each principle back to Christ. Connect it with the words that show how it depends on Him. One piece of evidence is left over.",
+          "sourceIds": [
+            "articles-of-faith-1-3-4",
+            "3-nephi-27-13-21",
+            "dc-20-77",
+            "1-corinthians-15-20-22",
+            "moses-6-62-63"
+          ],
+          "hints": [
+            "Look for the evidence that names each principle: faith, baptism, remembering (the sacrament), being made alive, the plan of salvation.",
+            "The leftover evidence states the whole idea of this step at once, rather than one principle.",
+            "Faith → Articles of Faith 1:4. Baptism → 3 Nephi 27:20. Sacrament → D&C 20:77. Resurrection → 1 Corinthians 15:22. Plan → Moses 6:62."
+          ],
+          "explanation": "Each principle is defined by its connection to Him: “Faith in the Lord Jesus Christ”; “come unto me and be baptized in my name”; the sacrament covenant to “take upon them the name of thy Son, and always remember him”; “in Christ shall all be made alive”; and “the plan of salvation unto all men, through the blood of mine Only Begotten.” The leftover verse, “all things bear record of me,” sums up the whole pattern.",
+          "left": {
+            "label": "Principle",
+            "items": [
+              {
+                "id": "faith",
+                "text": "Faith"
+              },
+              {
+                "id": "baptism",
+                "text": "Repentance and baptism"
+              },
+              {
+                "id": "sacrament",
+                "text": "The sacrament and covenants"
+              },
+              {
+                "id": "resurrection",
+                "text": "Resurrection"
+              },
+              {
+                "id": "plan",
+                "text": "The plan of salvation"
+              }
+            ]
+          },
+          "right": {
+            "label": "How it depends on Him",
+            "items": [
+              {
+                "id": "ev-faith",
+                "text": "“first, Faith in the Lord Jesus Christ”",
+                "sourceId": "articles-of-faith-1-3-4"
+              },
+              {
+                "id": "ev-baptism",
+                "text": "“Repent, all ye ends of the earth, and come unto me and be baptized in my name”",
+                "sourceId": "3-nephi-27-13-21"
+              },
+              {
+                "id": "ev-sacrament",
+                "text": "“willing to take upon them the name of thy Son, and always remember him”",
+                "sourceId": "dc-20-77"
+              },
+              {
+                "id": "ev-resurrection",
+                "text": "“even so in Christ shall all be made alive”",
+                "sourceId": "1-corinthians-15-20-22"
+              },
+              {
+                "id": "ev-plan",
+                "text": "“This is the plan of salvation unto all men, through the blood of mine Only Begotten”",
+                "sourceId": "moses-6-62-63"
+              },
+              {
+                "id": "ev-all",
+                "text": "“all things are created and made to bear record of me”",
+                "sourceId": "moses-6-62-63"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "faith",
+              "right": "ev-faith",
+              "because": "The fourth article of faith defines the first principle as “Faith in the Lord Jesus Christ.”",
+              "clue": "Which evidence names faith?"
+            },
+            {
+              "left": "baptism",
+              "right": "ev-baptism",
+              "because": "The Savior commands us to repent and be baptized “in my name.”",
+              "clue": "Which evidence mentions repenting and baptism?"
+            },
+            {
+              "left": "sacrament",
+              "right": "ev-sacrament",
+              "because": "The sacrament prayer asks us to witness that we will take His name and “always remember him.”",
+              "clue": "Which evidence is about remembering Him and taking His name?"
+            },
+            {
+              "left": "resurrection",
+              "right": "ev-resurrection",
+              "because": "Paul: “in Christ shall all be made alive.”",
+              "clue": "Which evidence is about being made alive?"
+            },
+            {
+              "left": "plan",
+              "right": "ev-plan",
+              "because": "Moses 6:62 calls it the plan of salvation “through the blood of mine Only Begotten.”",
+              "clue": "Which evidence names the plan of salvation?"
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "cc-compare-appendages",
+          "prompt": "Decide whether each statement is supported by Joseph Smith's teaching and the scriptures in this step, goes beyond them, or is contradicted by them.",
+          "sourceIds": [
+            "teachings-joseph-smith-chapter-3",
+            "articles-of-faith-1-3-4",
+            "dc-20-77"
+          ],
+          "hints": [
+            "Read Joseph Smith's whole statement, including the sentence that begins “But in connection with these.”",
+            "The sacrament prayer says what we remember.",
+            "Two statements are supported, two are contradicted, and the one about ranking every principle goes beyond the sources."
+          ],
+          "explanation": "Joseph Smith called the testimony of Christ's death, burial, Resurrection, and Ascension fundamental. He didn't say other things are worthless: “in connection with these, we believe in the gift of the Holy Ghost, the power of faith,” and more. The manual explains an appendage as “connected to something of greater importance.” The sacrament is “in remembrance of the body of thy Son.” He gave no complete ranking of every principle.",
+          "perspectives": [
+            {
+              "id": "dont-matter",
+              "voice": "A common misreading",
+              "text": "If everything else is an ‘appendage,’ then other principles and practices don't really matter.",
+              "verdict": "contradicted",
+              "rationale": "Joseph Smith went on: “in connection with these, we believe in the gift of the Holy Ghost, the power of faith.” The manual explains that an appendage is “connected to something of greater importance, such as a branch that is connected to the trunk of a tree.”"
+            },
+            {
+              "id": "draws-meaning",
+              "voice": "A classmate",
+              "text": "The principles and ordinances of the gospel draw their meaning from their connection to Jesus Christ.",
+              "verdict": "supported",
+              "rationale": "Articles of Faith 1:3: “through the Atonement of Christ, all mankind may be saved, by obedience to the laws and ordinances of the Gospel.” Joseph Smith called all other things “appendages to it.”"
+            },
+            {
+              "id": "fundamental",
+              "voice": "A friend",
+              "text": "Joseph Smith named the testimony of Christ's death, burial, Resurrection, and Ascension as fundamental.",
+              "verdict": "supported",
+              "rationale": "“The fundamental principles of our religion are the testimony of the Apostles and Prophets, concerning Jesus Christ, that He died, was buried, and rose again the third day, and ascended into heaven.”"
+            },
+            {
+              "id": "sacrament",
+              "voice": "A common idea",
+              "text": "The sacrament is mainly about belonging to a congregation.",
+              "verdict": "contradicted",
+              "rationale": "D&C 20:77: we eat “in remembrance of the body of thy Son” and witness that we will “always remember him.”"
+            },
+            {
+              "id": "ranking",
+              "voice": "A classmate",
+              "text": "Joseph Smith ranked every gospel principle in exact order of importance.",
+              "verdict": "beyond",
+              "rationale": "He identified what is fundamental and named some things connected to it, but he didn't rank every principle."
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "cc-build-trunk",
+          "prompt": "Build a statement that Joseph Smith's teaching and the scriptures in this step support together.",
+          "sourceIds": [
+            "teachings-joseph-smith-chapter-3",
+            "articles-of-faith-1-3-4",
+            "3-nephi-27-13-21",
+            "dc-20-77",
+            "1-corinthians-15-20-22"
+          ],
+          "hints": [
+            "Start with the principles you traced in this step.",
+            "Then use the manual's image of branches and a trunk, and say where their meaning comes from.",
+            "End with Articles of Faith 1:3. Leave out fragments that make the branches optional or independent of Him."
+          ],
+          "explanation": "Faith is “in the Lord Jesus Christ,” baptism is “in my name,” the sacrament is to “always remember him,” and resurrection is “in Christ.” Joseph Smith calls the testimony of Christ fundamental and all else “appendages,” and the manual explains that image as branches connected to a trunk. Articles of Faith 1:3 says all may be saved “through the Atonement of Christ.” The distractors cut the branches off from the trunk, which is the opposite of what an appendage is.",
+          "fragments": [
+            {
+              "id": "principles",
+              "text": "Faith, repentance, baptism, covenants, and the hope of resurrection"
+            },
+            {
+              "id": "branches",
+              "text": "are not separate topics but branches of one trunk:"
+            },
+            {
+              "id": "meaning",
+              "text": "each draws its meaning and power from Jesus Christ,"
+            },
+            {
+              "id": "atonement",
+              "text": "through whose Atonement all mankind may be saved."
+            },
+            {
+              "id": "sundays",
+              "text": "so they matter only on Sundays;"
+            },
+            {
+              "id": "without",
+              "text": "though each would work just as well without Him;"
+            },
+            {
+              "id": "aside",
+              "text": "which Joseph Smith said could be set aside."
+            }
+          ],
+          "solution": [
+            "principles",
+            "branches",
+            "meaning",
+            "atonement"
+          ],
+          "statement": "Faith, repentance, baptism, covenants, and the hope of resurrection are not separate topics but branches of one trunk: each draws its meaning and power from Jesus Christ, through whose Atonement all mankind may be saved."
+        }
+      },
+      "insight": "Joseph Smith taught that “the fundamental principles of our religion are the testimony of the Apostles and Prophets, concerning Jesus Christ,” and that “all other things which pertain to our religion are only appendages to it.” An appendage isn't unimportant; it is connected, like a branch to a trunk. Trace any principle back and you reach Him. Faith is “Faith in the Lord Jesus Christ,” we are baptized “in my name,” the sacrament asks us to “always remember him,” and “in Christ shall all be made alive.”",
+      "concepts": [
+        "faith",
+        "repentance",
+        "covenants",
+        "ordinances",
+        "resurrection",
+        "plan-of-salvation"
+      ],
+      "connections": [
+        {
+          "from": "concept:plan-of-salvation",
+          "to": "concept:jesus-christ",
+          "relation": "rests-on",
+          "sourceIds": [
+            "moses-6-62-63",
+            "articles-of-faith-1-3-4"
+          ],
+          "note": "The plan of salvation is “through the blood of mine Only Begotten,” and through His Atonement all mankind may be saved."
+        },
+        {
+          "from": "concept:covenants",
+          "to": "concept:jesus-christ",
+          "relation": "rests-on",
+          "sourceIds": [
+            "dc-20-77"
+          ],
+          "note": "In the sacrament we witness that we are willing to take upon us the name of the Son and always remember Him."
+        },
+        {
+          "from": "concept:resurrection",
+          "to": "concept:jesus-christ",
+          "relation": "rests-on",
+          "sourceIds": [
+            "1-corinthians-15-20-22"
+          ],
+          "note": "As in Adam all die, even so in Christ shall all be made alive."
+        }
+      ]
+    },
+    {
+      "id": "sure-foundation",
+      "title": "A sure foundation",
+      "phase": "understand",
+      "method": "academic",
+      "depth": "deep",
+      "intro": "Why does it matter, day to day, that Christ is the center? Helaman gave his sons an answer in the language of building. Gospel Labs sets it beside the parable that ends the Savior's Sermon on the Mount, which uses similar language, though Helaman doesn't quote it.",
+      "sourceIds": [
+        "helaman-5-12",
+        "matthew-7-24-27",
+        "2-nephi-25-23-26",
+        "teachings-joseph-smith-chapter-3",
+        "the-living-christ"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "cc-find-foundation",
+          "prompt": "Helaman doesn't promise his sons that storms won't come. Tap the phrases that tell what the foundation does when they come.",
+          "sourceIds": [
+            "helaman-5-12"
+          ],
+          "hints": [
+            "First find where Helaman describes the storm. The answer comes right after it.",
+            "Look for what the storm will have “no power” to do.",
+            "Tap “it shall have no power over you…” and the last phrase, “a foundation whereon if men build they cannot fall.”"
+          ],
+          "explanation": "Helaman says “when,” not ‘if’: the devil's winds, shafts, hail, and storm will come. But “it shall have no power over you to drag you down,” because Christ is “a foundation whereon if men build they cannot fall.”",
+          "passage": "helaman-5-12",
+          "chunks": [
+            {
+              "verse": 12,
+              "text": "And now, my sons, remember, remember"
+            },
+            {
+              "verse": 12,
+              "text": "that it is upon the rock of our Redeemer, who is Christ, the Son of God,"
+            },
+            {
+              "verse": 12,
+              "text": "that ye must build your foundation;"
+            },
+            {
+              "verse": 12,
+              "text": "that when the devil shall send forth his mighty winds,"
+            },
+            {
+              "verse": 12,
+              "text": "yea, his shafts in the whirlwind,"
+            },
+            {
+              "verse": 12,
+              "text": "yea, when all his hail and his mighty storm shall beat upon you,"
+            },
+            {
+              "verse": 12,
+              "text": "it shall have no power over you to drag you down to the gulf of misery and endless wo,"
+            },
+            {
+              "verse": 12,
+              "text": "because of the rock upon which ye are built,"
+            },
+            {
+              "verse": 12,
+              "text": "which is a sure foundation,"
+            },
+            {
+              "verse": 12,
+              "text": "a foundation whereon if men build they cannot fall."
+            }
+          ],
+          "targets": [
+            6,
+            9
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "cc-difference-clue",
+          "prompt": "Helaman, Nephi, Joseph Smith, and modern Apostles all put Jesus Christ at the center. Examine what they say, then decide what practical difference it makes.",
+          "sourceIds": [
+            "helaman-5-12",
+            "2-nephi-25-23-26",
+            "teachings-joseph-smith-chapter-3",
+            "the-living-christ"
+          ],
+          "hints": [
+            "Helaman speaks of storms; Nephi speaks of where to look.",
+            "Notice who these teachings were for: sons, children, all the world.",
+            "Built on Christ, a person still faces storms but has a foundation that holds and knows where to turn."
+          ],
+          "explanation": "Helaman promises a foundation that holds when storms “beat upon you.” Nephi wanted his children to “know to what source they may look.” Joseph Smith made the testimony of Christ the trunk to which all else connects, and the Apostles testify that “He is the light, the life, and the hope of the world.” Keeping Him at the center gives a person somewhere to stand and somewhere to turn.",
+          "clues": [
+            {
+              "id": "c-helaman",
+              "title": "Helaman 5:12",
+              "text": "“Remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation.”",
+              "sourceId": "helaman-5-12"
+            },
+            {
+              "id": "c-nephi",
+              "title": "2 Nephi 25:26",
+              "text": "Nephi's people spoke of Christ “that our children may know to what source they may look for a remission of their sins.”",
+              "sourceId": "2-nephi-25-23-26"
+            },
+            {
+              "id": "c-joseph",
+              "title": "Joseph Smith",
+              "text": "“All other things which pertain to our religion are only appendages to it.”",
+              "sourceId": "teachings-joseph-smith-chapter-3"
+            },
+            {
+              "id": "c-living",
+              "title": "The Living Christ",
+              "text": "“He is the light, the life, and the hope of the world.”",
+              "sourceId": "the-living-christ"
+            }
+          ],
+          "question": {
+            "id": "q-difference",
+            "prompt": "According to these sources, what practical difference does it make to keep Jesus Christ at the center?",
+            "options": [
+              {
+                "id": "holds",
+                "text": "When life is stormy or questions are hard, a person built on Christ has a foundation that holds, and knows where to turn."
+              },
+              {
+                "id": "no-storms",
+                "text": "A person built on Christ will never face storms.",
+                "feedback": "Helaman 5:12 says “when the devil shall send forth his mighty winds.” Is it ‘if’ or ‘when’?"
+              },
+              {
+                "id": "ignore",
+                "text": "Everything else in the gospel can be ignored.",
+                "feedback": "Joseph Smith called other things appendages: connected to the center, not cut off from it."
+              },
+              {
+                "id": "leaders",
+                "text": "It matters mainly for Church leaders.",
+                "feedback": "Helaman was speaking to his sons, and Nephi wrote for “our children.”"
+              }
+            ],
+            "correct": [
+              "holds"
+            ]
+          }
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "cc-two-foundations",
+          "prompt": "Read Helaman 5:12 beside the Savior's parable in Matthew 7:24–27.",
+          "sourceIds": [
+            "helaman-5-12",
+            "matthew-7-24-27"
+          ],
+          "hints": [
+            "In Matthew 7, compare verses 25 and 27. What is the same about the storm?",
+            "Then compare verses 24 and 26. What is different about the builders?",
+            "Matthew 7:24 adds how a person builds on the rock: by hearing His sayings and doing them."
+          ],
+          "explanation": "In both passages the storm comes regardless. The rain and floods “beat upon that house” in verses 25 and 27. The difference is the foundation: the wise man's house “fell not: for it was founded upon a rock.” Matthew 7:24 adds how we build there: by hearing “these sayings of mine” and doing them. Helaman doesn't cite the parable; reading them together is Gospel Labs' pairing.",
+          "passages": [
+            "helaman-5-12",
+            "matthew-7-24-27"
+          ],
+          "questions": [
+            {
+              "id": "q-storm",
+              "prompt": "In both Helaman 5:12 and Matthew 7:24–27, what happens with the storm?",
+              "options": [
+                {
+                  "id": "comes",
+                  "text": "It comes and beats on the house either way."
+                },
+                {
+                  "id": "stopped",
+                  "text": "It is stopped before it reaches those who build on the rock.",
+                  "feedback": "Matthew 7:25 says the rain, floods, and winds “beat upon that house.” Which house?"
+                },
+                {
+                  "id": "foolish-only",
+                  "text": "It comes only to the foolish builder.",
+                  "feedback": "Compare verses 25 and 27. Are the storms different?"
+                }
+              ],
+              "correct": [
+                "comes"
+              ]
+            },
+            {
+              "id": "q-difference",
+              "prompt": "What makes the difference between the house that stands and the one that falls?",
+              "options": [
+                {
+                  "id": "foundation",
+                  "text": "The foundation: the rock, which Helaman names as Christ"
+                },
+                {
+                  "id": "size",
+                  "text": "How large and well built the house is",
+                  "feedback": "Neither passage describes the house itself. What do both describe instead?"
+                },
+                {
+                  "id": "strength",
+                  "text": "How strong the storm happens to be",
+                  "feedback": "The storms in verses 25 and 27 are described in the same words."
+                }
+              ],
+              "correct": [
+                "foundation"
+              ]
+            },
+            {
+              "id": "q-how-build",
+              "prompt": "Helaman says Christ is “a foundation whereon if men build they cannot fall.” What does Matthew 7:24 add about how a person builds there?",
+              "options": [
+                {
+                  "id": "hear-do",
+                  "text": "By hearing the Savior's sayings and doing them"
+                },
+                {
+                  "id": "answers",
+                  "text": "By first knowing the answer to every question",
+                  "feedback": "Read Matthew 7:24. What two verbs describe the wise man?"
+                },
+                {
+                  "id": "avoid",
+                  "text": "By avoiding every storm",
+                  "feedback": "The wise man's house was still beaten by the storm (verse 25)."
+                }
+              ],
+              "correct": [
+                "hear-do"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "Helaman doesn't promise his sons calm weather. He promises a foundation: when “his mighty storm shall beat upon you, it shall have no power over you,” because “the rock of our Redeemer” is “a sure foundation, a foundation whereon if men build they cannot fall.” The Savior's parable makes a similar point. The rain came to both houses, but one “fell not: for it was founded upon a rock.” Keeping Christ at the center isn't only a matter of doctrine; it is what holds.",
+      "concepts": [
+        "jesus-christ",
+        "faith",
+        "adversity"
+      ],
+      "connections": [
+        {
+          "from": "scripture:helaman-5-12",
+          "to": "concept:adversity",
+          "relation": "relates-to",
+          "sourceIds": [
+            "helaman-5-12"
+          ],
+          "note": "Helaman promises that storms will beat upon those built on Christ but will have no power to drag them down."
+        }
+      ]
+    },
+    {
+      "id": "talk-of-christ",
+      "title": "Talk of Christ",
+      "phase": "understand",
+      "method": "divine",
+      "sourceIds": [
+        "2-nephi-25-23-26",
+        "3-nephi-18-19-21"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "cc-reflect",
+        "prompt": "Nephi wrote, “we talk of Christ, we rejoice in Christ, we preach of Christ.” If you'd like, consider what it might look like for Him to be at the center of your own week. Nothing you write is checked or shared.",
+        "sourceIds": [
+          "2-nephi-25-23-26",
+          "3-nephi-18-19-21"
+        ],
+        "suggestions": [
+          "Which principle or practice of the gospel would you like to trace back to Him more consciously?",
+          "What is one way you could ‘talk of Christ’ with someone you love?",
+          "If you pray this week, you might notice what it means to come to the Father in the name of His Son."
+        ]
+      },
+      "insight": "Reflection is personal and optional. Nephi's reason still applies: so that those we love “may know to what source they may look.”",
+      "concepts": []
+    }
+  ],
+  "branches": [
+    {
+      "id": "father-and-son-love",
+      "question": "Do Heavenly Father and Jesus Christ love us differently?",
+      "intro": "Some people wonder whether Heavenly Father and Jesus Christ love us in different ways. It is a thoughtful question about two distinct Beings. Look at what the Savior's own words in the Gospel of John show, and notice how often He describes His love and His Father's love together.",
+      "steps": [
+        {
+          "id": "one-love",
+          "title": "“As the Father hath loved me”",
+          "phase": "evidence",
+          "method": "academic",
+          "sourceIds": [
+            "john-3-16-17",
+            "john-15-9-14",
+            "john-16-23-27",
+            "john-17-20-26",
+            "gospel-topics-godhead"
+          ],
+          "activities": {
+            "easy": {
+              "type": "evidence-connect",
+              "id": "cc-love-match",
+              "prompt": "Connect each statement about love with the words of Jesus that support it. One piece of evidence is left over.",
+              "sourceIds": [
+                "john-3-16-17",
+                "john-15-9-14",
+                "john-16-23-27",
+                "john-17-20-26"
+              ],
+              "hints": [
+                "Notice who loves whom in each statement: the Father, the Son, the disciples, the world.",
+                "The leftover evidence describes the greatest love but doesn't compare the Father and the Son.",
+                "World → John 3:16. As the Father loves Him → John 15:9. Because ye have loved me → John 16:27. As thou hast loved me → John 17:23."
+              ],
+              "explanation": "The Father “so loved the world.” The Son says “As the Father hath loved me, so have I loved you.” The Father “himself loveth you, because ye have loved me.” And the Father has “loved them, as thou hast loved me.” John 15:13 describes the greatest love, laying down one's life for one's friends, but it doesn't compare the Father's love with the Son's.",
+              "left": {
+                "label": "Statement",
+                "items": [
+                  {
+                    "id": "world",
+                    "text": "The Father loves the whole world."
+                  },
+                  {
+                    "id": "as-father",
+                    "text": "The Son loves His disciples the way the Father loves Him."
+                  },
+                  {
+                    "id": "because",
+                    "text": "The Father loves those who love His Son."
+                  },
+                  {
+                    "id": "as-son",
+                    "text": "The Father loves the disciples as He loves the Son."
+                  }
+                ]
+              },
+              "right": {
+                "label": "Evidence",
+                "items": [
+                  {
+                    "id": "ev-world",
+                    "text": "“God so loved the world, that he gave his only begotten Son”",
+                    "sourceId": "john-3-16-17"
+                  },
+                  {
+                    "id": "ev-as-father",
+                    "text": "“As the Father hath loved me, so have I loved you”",
+                    "sourceId": "john-15-9-14"
+                  },
+                  {
+                    "id": "ev-because",
+                    "text": "“the Father himself loveth you, because ye have loved me”",
+                    "sourceId": "john-16-23-27"
+                  },
+                  {
+                    "id": "ev-as-son",
+                    "text": "“and hast loved them, as thou hast loved me”",
+                    "sourceId": "john-17-20-26"
+                  },
+                  {
+                    "id": "ev-greater",
+                    "text": "“Greater love hath no man than this, that a man lay down his life for his friends”",
+                    "sourceId": "john-15-9-14"
+                  }
+                ]
+              },
+              "pairs": [
+                {
+                  "left": "world",
+                  "right": "ev-world",
+                  "because": "John 3:16: “God so loved the world.”",
+                  "clue": "Which evidence mentions the world?"
+                },
+                {
+                  "left": "as-father",
+                  "right": "ev-as-father",
+                  "because": "John 15:9: “As the Father hath loved me, so have I loved you.”",
+                  "clue": "Which evidence has the Son speaking about His own love for the disciples?"
+                },
+                {
+                  "left": "because",
+                  "right": "ev-because",
+                  "because": "John 16:27: “the Father himself loveth you, because ye have loved me.”",
+                  "clue": "Which evidence gives a reason with the word ‘because’?"
+                },
+                {
+                  "left": "as-son",
+                  "right": "ev-as-son",
+                  "because": "John 17:23: the Father has “loved them, as thou hast loved me.”",
+                  "clue": "Which evidence is addressed to the Father in prayer?"
+                }
+              ]
+            },
+            "medium": {
+              "type": "scripture-connect",
+              "id": "cc-love-connect",
+              "prompt": "Read John 15, 16, and 17 together.",
+              "sourceIds": [
+                "john-15-9-14",
+                "john-16-23-27",
+                "john-17-20-26"
+              ],
+              "hints": [
+                "In John 16:26–27, look for the word “For”: it introduces His reason.",
+                "Compare the direction of love in John 15:9 (Father → Son → us) with John 17:23 (Father → us, as Father → Son).",
+                "Both verses describe love moving from the Father, through the Son, to us."
+              ],
+              "explanation": "In John 16:26–27 the Savior says He won't need to pray the Father on their behalf, “For the Father himself loveth you.” John 15:9 and John 17:23 describe one love: the Son loves us “as the Father hath loved me,” and the Father loves us “as thou hast loved me.” These passages present Their love as united; they don't describe two kinds to tell apart.",
+              "passages": [
+                "john-15-9-14",
+                "john-16-23-27",
+                "john-17-20-26"
+              ],
+              "questions": [
+                {
+                  "id": "q-pray-for-you",
+                  "prompt": "In John 16:26–27, the Savior says, “I say not unto you, that I will pray the Father for you.” What reason does He give?",
+                  "options": [
+                    {
+                      "id": "loves",
+                      "text": "The Father Himself loves them."
+                    },
+                    {
+                      "id": "busy",
+                      "text": "The Father is too busy to listen.",
+                      "feedback": "Read verse 27. What does He say about the Father?"
+                    },
+                    {
+                      "id": "no-prayer",
+                      "text": "They no longer need to pray at all.",
+                      "feedback": "Verses 23–24 invite them to ask the Father in His name."
+                    },
+                    {
+                      "id": "stop",
+                      "text": "The Son will no longer care for them.",
+                      "feedback": "Read the end of verse 27: they have loved Him and believed."
+                    }
+                  ],
+                  "correct": [
+                    "loves"
+                  ]
+                },
+                {
+                  "id": "q-united",
+                  "prompt": "Taken together, what do John 15:9 and John 17:23 suggest about the Father's love and the Son's love?",
+                  "options": [
+                    {
+                      "id": "united",
+                      "text": "They are united: the Son loves us as the Father loves Him, and the Father loves us as He loves the Son."
+                    },
+                    {
+                      "id": "stern-gentle",
+                      "text": "The Father's love is stern and the Son's love is gentle.",
+                      "feedback": "Read John 16:27. How does the Son describe the Father's love?"
+                    },
+                    {
+                      "id": "only-son",
+                      "text": "Only the Son loves us; the Father loves only the Son.",
+                      "feedback": "Read the end of John 17:23."
+                    }
+                  ],
+                  "correct": [
+                    "united"
+                  ]
+                }
+              ]
+            },
+            "hard": {
+              "type": "compare",
+              "id": "cc-love-compare",
+              "prompt": "Decide whether each statement is supported by these sources, goes beyond them, or is contradicted by them.",
+              "sourceIds": [
+                "john-3-16-17",
+                "john-15-9-14",
+                "john-16-23-27",
+                "john-17-20-26",
+                "gospel-topics-godhead"
+              ],
+              "hints": [
+                "John 16:27 speaks directly to one of these statements.",
+                "Gospel Topics says the members of the Godhead are “distinct beings with distinct roles” and “one in purpose.”",
+                "The statement about telling their love apart by feeling goes beyond these sources: none describes doing that."
+              ],
+              "explanation": "These sources describe two distinct Beings who are “one in purpose,” and whose love is shown in different roles (the Father gave His Son; the Son laid down His life for His friends). The Savior Himself contradicts the idea that He must persuade the Father: “the Father himself loveth you.” None of these sources describes a way to tell their love apart by how it feels.",
+              "perspectives": [
+                {
+                  "id": "persuade",
+                  "voice": "A common idea",
+                  "text": "Heavenly Father is strict, so Jesus has to talk Him into loving us.",
+                  "verdict": "contradicted",
+                  "rationale": "John 16:26–27: “I say not unto you, that I will pray the Father for you: For the Father himself loveth you.” John 3:16: “God so loved the world.”"
+                },
+                {
+                  "id": "distinct",
+                  "voice": "A classmate",
+                  "text": "The Father and the Son are two distinct Beings, and each of Them loves us.",
+                  "verdict": "supported",
+                  "rationale": "Gospel Topics: “distinct beings with distinct roles.” John 15:9 describes the Son's love, and John 17:23 the Father's."
+                },
+                {
+                  "id": "same-goal",
+                  "voice": "A friend",
+                  "text": "The Father's love and the Son's love point toward the same goal: our salvation.",
+                  "verdict": "supported",
+                  "rationale": "John 3:17: “that the world through him might be saved.” Gospel Topics: “perfectly united in bringing to pass Heavenly Father’s divine plan of salvation.”"
+                },
+                {
+                  "id": "roles",
+                  "voice": "A classmate",
+                  "text": "The Father showed His love by giving His Son; the Son showed His by laying down His life for His friends.",
+                  "verdict": "supported",
+                  "rationale": "John 3:16: He “gave his only begotten Son.” In John 15:13 Jesus speaks of the greatest love, to “lay down his life for his friends,” and in verse 14 tells His disciples “Ye are my friends.” Verse 13 speaks of “a man” in general; reading it as His own coming sacrifice is a common reading that verse 14 supports."
+                },
+                {
+                  "id": "feel-apart",
+                  "voice": "A common idea",
+                  "text": "With practice, you can learn to tell Their love apart by how it feels.",
+                  "verdict": "beyond",
+                  "rationale": "None of these sources describes distinguishing Their love by feeling. They describe the Father's love and the Son's love together."
+                }
+              ]
+            }
+          },
+          "insight": "In these passages Jesus doesn't describe two kinds of love to tell apart. He describes the love of two distinct Beings in terms of each other: “As the Father hath loved me, so have I loved you,” and the Father has “loved them, as thou hast loved me.” And in John 16:26–27 He tells His disciples, “I say not unto you, that I will pray the Father for you: For the Father himself loveth you.” In these passages Their love is shown in different roles (the Father gave His Son; the Son laid down His life), but it points the same direction.",
+          "concepts": [
+            "love-of-god",
+            "godhead",
+            "heavenly-father"
+          ],
+          "connections": [
+            {
+              "from": "scripture:john-17-20-26",
+              "to": "concept:love-of-god",
+              "relation": "teaches",
+              "sourceIds": [
+                "john-17-20-26",
+                "john-15-9-14"
+              ],
+              "note": "The Son loves His disciples as the Father loves Him, and the Father loves them as He loves the Son."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main path. In these passages the Father's love sent the Son, and the Son loves us “as the Father hath loved me.”"
+    },
+    {
+      "id": "pray-in-his-name",
+      "question": "Why do we pray to the Father in the name of Jesus Christ?",
+      "intro": "Many people wonder why prayers are addressed to Heavenly Father and offered in the name of Jesus Christ. The scriptures give a consistent pattern from Adam onward, and the reasons behind it say a lot about why Christ is at the center.",
+      "steps": [
+        {
+          "id": "in-my-name",
+          "title": "“Pray unto the Father in my name”",
+          "phase": "evidence",
+          "method": "academic",
+          "sourceIds": [
+            "3-nephi-18-19-21",
+            "moses-5-6-8",
+            "dc-45-3-5",
+            "john-16-23-27",
+            "bible-dictionary-prayer",
+            "gospel-topics-godhead"
+          ],
+          "activities": {
+            "easy": {
+              "type": "highlight",
+              "id": "cc-find-conditions",
+              "prompt": "The Savior gives a pattern for prayer and a promise. Tap the two phrases in verse 20 that describe what kind of asking the promise is for.",
+              "sourceIds": [
+                "3-nephi-18-19-21"
+              ],
+              "hints": [
+                "The promise is “behold it shall be given unto you.” Look at the phrases just before it.",
+                "One phrase is about what we ask for; the other is about how we ask.",
+                "Tap “which is right,” and “believing that ye shall receive,”."
+              ],
+              "explanation": "We pray “unto the Father in my name,” and the promise is for asking “which is right, believing that ye shall receive.” Praying in His name is more than a closing phrase. The Bible Dictionary explains that “we pray in Christ’s name when our mind is the mind of Christ, and our wishes the wishes of Christ.”",
+              "passage": "3-nephi-18-19-21",
+              "chunks": [
+                {
+                  "verse": 19,
+                  "text": "Therefore ye must always pray unto the Father in my name;"
+                },
+                {
+                  "verse": 20,
+                  "text": "And whatsoever ye shall ask the Father in my name,"
+                },
+                {
+                  "verse": 20,
+                  "text": "which is right,"
+                },
+                {
+                  "verse": 20,
+                  "text": "believing that ye shall receive,"
+                },
+                {
+                  "verse": 20,
+                  "text": "behold it shall be given unto you."
+                },
+                {
+                  "verse": 21,
+                  "text": "Pray in your families unto the Father,"
+                },
+                {
+                  "verse": 21,
+                  "text": "always in my name,"
+                },
+                {
+                  "verse": 21,
+                  "text": "that your wives and your children may be blessed."
+                }
+              ],
+              "targets": [
+                2,
+                3
+              ]
+            },
+            "medium": {
+              "type": "clue",
+              "id": "cc-name-clue",
+              "prompt": "Examine the clues from scripture and the Bible Dictionary. Then decide what it means to pray to the Father in the name of Jesus Christ.",
+              "sourceIds": [
+                "3-nephi-18-19-21",
+                "moses-5-6-8",
+                "dc-45-3-5",
+                "bible-dictionary-prayer"
+              ],
+              "hints": [
+                "Notice to whom prayers are addressed in 3 Nephi 18:19.",
+                "D&C 45:3 gives the Savior a title. What does an advocate do?",
+                "We come to the Father through the Son, our Advocate, and try to ask as He would ask."
+              ],
+              "explanation": "We address the Father: “ye must always pray unto the Father in my name.” The pattern is as old as Adam: “call upon God in the name of the Son forevermore.” The Son is “the advocate with the Father, who is pleading your cause before him.” And the Bible Dictionary explains that praying in His name means our “mind is the mind of Christ, and our wishes the wishes of Christ.”",
+              "clues": [
+                {
+                  "id": "c-3ne",
+                  "title": "3 Nephi 18:19",
+                  "text": "“Ye must always pray unto the Father in my name.”",
+                  "sourceId": "3-nephi-18-19-21"
+                },
+                {
+                  "id": "c-moses",
+                  "title": "Moses 5:8",
+                  "text": "Adam was taught: “thou shalt repent and call upon God in the name of the Son forevermore.”",
+                  "sourceId": "moses-5-6-8"
+                },
+                {
+                  "id": "c-dc45",
+                  "title": "Doctrine and Covenants 45:3",
+                  "text": "“Listen to him who is the advocate with the Father, who is pleading your cause before him.”",
+                  "sourceId": "dc-45-3-5"
+                },
+                {
+                  "id": "c-bd",
+                  "title": "Bible Dictionary: Prayer",
+                  "text": "“We pray in Christ’s name when our mind is the mind of Christ, and our wishes the wishes of Christ.”",
+                  "sourceId": "bible-dictionary-prayer"
+                }
+              ],
+              "question": {
+                "id": "q-in-name",
+                "prompt": "What do these sources suggest it means to pray to the Father “in the name of” Jesus Christ?",
+                "options": [
+                  {
+                    "id": "through",
+                    "text": "We come to the Father through the Son, our Advocate, and seek to ask as He would ask."
+                  },
+                  {
+                    "id": "words",
+                    "text": "It means only saying His name at the end of a prayer.",
+                    "feedback": "Read the Bible Dictionary clue. What does it say praying in Christ's name involves?"
+                  },
+                  {
+                    "id": "to-jesus",
+                    "text": "It means we pray to Jesus instead of the Father.",
+                    "feedback": "Read 3 Nephi 18:19 again. To whom do we pray?"
+                  },
+                  {
+                    "id": "new",
+                    "text": "It is a practice that began only after the Resurrection.",
+                    "feedback": "Look at Moses 5:8. When was Adam taught to call upon God in the name of the Son?"
+                  }
+                ],
+                "correct": [
+                  "through"
+                ]
+              }
+            },
+            "hard": {
+              "type": "compare",
+              "id": "cc-prayer-compare",
+              "prompt": "Decide whether each statement is supported by these sources, goes beyond them, or is contradicted by them.",
+              "sourceIds": [
+                "3-nephi-18-19-21",
+                "moses-5-6-8",
+                "dc-45-3-5",
+                "john-3-16-17",
+                "john-16-23-27",
+                "bible-dictionary-prayer",
+                "gospel-topics-godhead"
+              ],
+              "hints": [
+                "3 Nephi 18:19 and Gospel Topics both say to whom we pray.",
+                "Read D&C 45:3–4 and John 16:26–27 together. Who gave the Son, and how does the Father feel about us?",
+                "The statement about exact wording goes beyond these sources. The Bible Dictionary describes our mind and wishes, not a formula."
+              ],
+              "explanation": "We pray “unto the Father in my name,” a pattern taught to Adam. These passages hold two things together. Christ is our Advocate, “pleading your cause,” and “the Father himself loveth you.” One way to read them together is that His advocacy doesn't mean the Father is reluctant: in D&C 45:4 the Son speaks of “him whom thou gavest,” and John 3:16 says God “so loved the world, that he gave his only begotten Son.” These passages don't explain everything His advocacy involves. None of them says the exact closing words decide whether God hears.",
+              "perspectives": [
+                {
+                  "id": "relay",
+                  "voice": "A common idea",
+                  "text": "We pray to Jesus, and He passes our prayers on to the Father.",
+                  "verdict": "contradicted",
+                  "rationale": "3 Nephi 18:19: “pray unto the Father in my name.” Gospel Topics: Latter-day Saints “pray to God the Father in the name of Jesus Christ.”"
+                },
+                {
+                  "id": "advocate",
+                  "voice": "A classmate",
+                  "text": "Jesus Christ is our Advocate with the Father.",
+                  "verdict": "supported",
+                  "rationale": "D&C 45:3: “him who is the advocate with the Father, who is pleading your cause before him.” In verse 5 He asks the Father to spare “these my brethren that believe on my name.”"
+                },
+                {
+                  "id": "since-adam",
+                  "voice": "A friend",
+                  "text": "Praying in the name of the Son has been the pattern since Adam.",
+                  "verdict": "supported",
+                  "rationale": "Moses 5:8: “call upon God in the name of the Son forevermore.”"
+                },
+                {
+                  "id": "unwilling",
+                  "voice": "A common worry",
+                  "text": "We need Christ's name because the Father wouldn't love us otherwise.",
+                  "verdict": "contradicted",
+                  "rationale": "John 3:16: “God so loved the world, that he gave his only begotten Son”: the Father's love came first, and He gave the Son. In D&C 45:4 the Son speaks of “him whom thou gavest,” and in John 16:27 Jesus tells His disciples “the Father himself loveth you.”"
+                },
+                {
+                  "id": "wording",
+                  "voice": "A classmate",
+                  "text": "The exact wording of a prayer's closing decides whether God hears it.",
+                  "verdict": "beyond",
+                  "rationale": "None of these sources says that. The Bible Dictionary describes praying in Christ's name in terms of our “mind” and “wishes,” not exact words."
+                }
+              ]
+            }
+          },
+          "insight": "The pattern is consistent from Adam to today: “call upon God in the name of the Son forevermore,” and “ye must always pray unto the Father in my name.” We address the Father, the ultimate object of our worship, through the Son, our Advocate, who is “pleading your cause before him.” Praying in His name is more than a closing phrase; it means asking with His mind and wishes. Even in prayer, He is the center: the way to the Father.",
+          "concepts": [
+            "prayer",
+            "heavenly-father",
+            "advocate"
+          ],
+          "connections": [
+            {
+              "from": "concept:prayer",
+              "to": "concept:jesus-christ",
+              "relation": "rests-on",
+              "sourceIds": [
+                "3-nephi-18-19-21",
+                "moses-5-6-8"
+              ],
+              "note": "From Adam's day to the Savior's ministry in 3 Nephi, we are taught to pray to the Father in the name of the Son."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main path. Even in prayer, the Son is the way to the Father."
+    }
+  ],
+  "discovery": {
+    "summary": "The scriptures answer this question in the Savior's own words. When He defined His gospel, He described Himself: “I came into the world to do the will of my Father … that I might be lifted up upon the cross” (3 Nephi 27:13–14). A modern revelation calls the same news “glad tidings” (D&C 76:40). Witnesses on two continents testified that salvation comes through “none other name” (Acts 4:12; Mosiah 3:17). Christ at the center doesn't diminish the Father: “God so loved the world, that he gave his only begotten Son,” and the Son came to do the Father's will. Joseph Smith taught that the testimony of Christ's death, burial, Resurrection, and Ascension is fundamental and that all other things are “appendages to it.” Faith, repentance, baptism, the sacrament, and resurrection each connect back to Him. And Helaman explains why that matters: built on “the rock of our Redeemer,” we have “a sure foundation.”",
+    "keyIdeas": [
+      "By the Savior's own definition, the gospel is the good news of what He did: He came to do the Father's will and was lifted up on the cross to draw all people to Him (3 Nephi 27:13–15).",
+      "Even our part is centered on Him: we come “unto me,” are baptized “in my name,” and do the works we have seen Him do (3 Nephi 27:20–21).",
+      "Salvation comes through “none other name” (Acts 4:12), and He is the way to the Father: “no man cometh unto the Father, but by me” (John 14:6).",
+      "Putting Christ at the center doesn't push the Father aside. The Father gave His Son out of love, and the Son said, “Father, thy will be done, and the glory be thine forever” (John 3:16; Moses 4:2).",
+      "Other principles connect to Him as branches to a trunk: faith in Him, baptism in His name, remembering Him in the sacrament, and being made alive in Him."
+    ],
+    "christConnection": "Asking why Jesus Christ is at the center turns out to be asking who He is. He is the One the Father sent in love, who said “thy will be done” before the world was made, who was lifted up on the cross to draw all people to Him, and who is the way to the Father. The Apostles testify, “He is the light, the life, and the hope of the world.” Every principle traced in this investigation, followed far enough, leads to Him, and through Him to the Father.",
+    "openQuestions": [
+      "How will people who never heard of Jesus Christ in this life come to know Him? These verses say salvation is only through Him; other revelations, such as D&C 137 and 138, speak to that question.",
+      "What would it look like to “talk of Christ” and “rejoice in Christ” in an ordinary week?",
+      "The Father and the Son are distinct Beings, and these passages describe Their love together. What do you notice about each as you read John 17?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "Step my-gospel (sort)",
+        "note": "Dividing 3 Nephi 27:13–21 into ‘what He did’ and ‘what He invites us to do’ is the app's organization. Verse 16's promise (“him will I hold guiltless”) is sorted as His action, and enduring as ours.",
+        "resolution": "Qualified: the prompt now calls the sort a study aid and says the Savior doesn't divide His words into these two lists. The explanation calls the categories Gospel Labs' organizing aid and notes that verse 16 joins our enduring with His promise. Each item is placed by its grammar (‘I will hold’ is His action; ‘if he endureth’ is ours)."
+      },
+      {
+        "where": "Step none-other-name",
+        "note": "Mosiah 3:17 is an angel's message delivered by King Benjamin (Mosiah 3:2), and the step says so. The ‘goes beyond’ verdict about people who never heard of Christ mentions D&C 137 and 138 without quoting them. They aren't declared sources here; consider linking to the families-beyond-the-veil investigation. “After all we can do” (2 Nephi 25:23) appears in a clue without interpretation, since its meaning is discussed in many talks.",
+        "resolution": "Resolved: checked Mosiah 3:2 (the words are ‘made known unto me by an angel from God’), so the step's wording stands. D&C 137:7–9 and 138:32–33 both speak of people who died without a knowledge of the gospel, so the cross-reference is accurate. The rationale and open question now say these revelations ‘speak to that question,’ without quoting them. Linking to the families-beyond-the-veil investigation is left to the owner, since that file is under separate review. Qualified: ‘after all we can do’ (2 Nephi 25:23) is only quoted inside a clue; no interpretation or answer depends on it."
+      },
+      {
+        "where": "Step sent-by-the-father",
+        "note": "The highlight contrasts Satan's and the Son's words before the world was made (Moses 4:1–2). Premortal topics can be tender for some learners; the step stays with what the verses say and draws no lesson about anyone's own premortal life. ‘Centering our faith on the Son honors the Father’ is the app's synthesis of John 3:16, Moses 1:39, Moses 4:2, 3 Nephi 27:13, and Gospel Topics.",
+        "resolution": "Qualified: the synthesis is no longer rewarded as a correct answer. The clue's correct option and the build-principle now state only what the sources say: the Father chose and sent the Son, and the Son sought the Father's will and glory and gives the glory to Him. The intro, explanations, and insight present ‘centering on the Son honors the Father’ as Gospel Labs' suggestion to test. The key idea now says putting Christ at the center doesn't push the Father aside. Survey references were removed from this note."
+      },
+      {
+        "where": "Step everything-connects",
+        "note": "Joseph Smith's statement is quoted from Teachings of Presidents of the Church: Joseph Smith, chapter 3 (which cites Elders' Journal, July 1838). Gospel Topics (Jesus Christ) quotes it with slightly different wording; this file uses the manual's. The branch-and-trunk image comes from the manual's study helps. The meanings of ‘fundamental,’ ‘remission,’ and ‘firstfruits’ are plain-English glosses by Gospel Labs.",
+        "resolution": "Resolved: checked the manual. It quotes the statement from an editorial in Elders' Journal, July 1838 (via History of the Church 3:30), and its study helps explain an appendage as connected to something of greater importance, ‘such as a branch that is connected to the trunk of a tree.’ The intro now names the 1838 editorial and the manual. The vocabulary explanation now labels the meanings of ‘fundamental,’ ‘remission,’ and ‘firstfruits’ as Gospel Labs' plain-English glosses."
+      },
+      {
+        "where": "Step sure-foundation (deep)",
+        "note": "Pairing Helaman 5:12 with Matthew 7:24–27 is the app's choice; Helaman doesn't cite the Sermon on the Mount.",
+        "resolution": "Qualified: the intro and the scripture-connect explanation now say Gospel Labs pairs Helaman 5:12 with the parable that ends the Sermon on the Mount, and that Helaman doesn't quote it. The insight says the parable ‘makes a similar point’ instead of ‘taught the same thing.’"
+      },
+      {
+        "where": "Branch father-and-son-love",
+        "note": "Says these passages present the Father's and the Son's love as united and give no way to tell Them apart by feeling. That's an interpretive summary. The ‘roles’ perspective reads John 15:13 as Jesus describing His own coming sacrifice, a common reading supported by verse 14 (“Ye are my friends”).",
+        "resolution": "Qualified: the intro, explanations, insight, return note, and open question now present the answer as what these passages show, not as definitive doctrine (‘These passages present Their love as united’). The hard explanation no longer applies Gospel Topics' ‘one in purpose’ to love itself. The ‘roles’ rationale now says verse 13 speaks of ‘a man’ in general and that reading it as His own sacrifice is a common reading supported by verse 14. ‘Tell Their love apart by feeling’ stays ‘goes beyond.’ The survey reference was removed from this note."
+      },
+      {
+        "where": "Branch pray-in-his-name",
+        "note": "Holds D&C 45:3–5 (the Advocate pleading) together with John 16:26–27 (“I say not unto you, that I will pray the Father for you”) and concludes that His advocacy doesn't mean the Father is reluctant. That conclusion is interpretive. The branch takes up the general question of why prayers are addressed to the Father in the name of the Son.",
+        "resolution": "Qualified: the explanation now offers ‘His advocacy doesn't mean the Father is reluctant’ as one way to read the passages together, and says they don't explain everything His advocacy involves. The ‘Father wouldn't love us otherwise’ verdict (contradicted) now rests first on John 3:16, which plainly says God loved the world and gave His Son; John 3:16–17 was added to the activity's evidence. The Advocate rationale and concept now follow D&C 45 closely, including verse 5 (‘these my brethren that believe on my name’). The survey reference was removed from this note."
+      }
+    ]
+  }
+}

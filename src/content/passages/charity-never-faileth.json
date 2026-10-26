@@ -1,0 +1,541 @@
+{
+  "id": "charity-never-faileth",
+  "status": "ready",
+  "title": "Charity never faileth",
+  "sourceId": "moroni-7-45-48",
+  "context": {
+    "setting": "Moroni copied “a few of the words of my father Mormon, which he spake concerning faith, hope, and charity,” taught in a synagogue the people had built for worship (Moroni 7:1). After speaking of faith and hope, Mormon turns to charity.",
+    "speaker": "Mormon, as recorded by his son Moroni",
+    "audience": "Members of the church whom Mormon calls “the peaceable followers of Christ” (Moroni 7:3)"
+  },
+  "themes": [
+    {
+      "conceptId": "charity",
+      "note": "Mormon describes what charity does and doesn't do, calls it “the pure love of Christ,” and says it “endureth forever.”",
+      "verses": [
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    {
+      "conceptId": "love-of-god",
+      "note": "Charity is Christ's love, and it is given: the Father “hath bestowed” it “upon all who are true followers of his Son.”",
+      "verses": [
+        47,
+        48
+      ]
+    },
+    {
+      "conceptId": "prayer",
+      "note": "Mormon invites us to “pray unto the Father with all the energy of heart” to be filled with this love.",
+      "verses": [
+        48
+      ]
+    },
+    {
+      "conceptId": "hope",
+      "note": "Being filled with this love leads to becoming like Him when He appears, “that we may have this hope.”",
+      "verses": [
+        48
+      ]
+    },
+    {
+      "conceptId": "long-suffering",
+      "note": "The first thing Mormon says of charity is that it “suffereth long.”",
+      "verses": [
+        45
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "suffereth-long",
+      "verse": 45,
+      "phrase": "charity suffereth long",
+      "meaning": "To ‘suffer long’ is to bear with others patiently over time. The Guide to the Scriptures describes patience as “Calm endurance; the ability to endure affliction, insult, or injury without complaint or retaliation.” Paul's description of charity begins the same way.",
+      "sourceIds": [
+        "gs-patience",
+        "1-corinthians-13-4-8"
+      ]
+    },
+    {
+      "id": "seeketh-not",
+      "verse": 45,
+      "phrase": "seeketh not her own",
+      "meaning": "Charity (spoken of as ‘her’) isn't self-seeking: it doesn't insist on its own way or advantage.",
+      "sourceIds": []
+    },
+    {
+      "id": "ye-are-nothing",
+      "verse": 46,
+      "phrase": "if ye have not charity, ye are nothing",
+      "meaning": "Strong words, echoing Nephi: “except they should have charity they were nothing.”",
+      "sourceIds": [
+        "2-nephi-26-30"
+      ]
+    },
+    {
+      "id": "cleave",
+      "verse": 46,
+      "phrase": "cleave unto charity",
+      "meaning": "To ‘cleave’ is to cling or hold fast. Because “all things must fail,” Mormon urges holding to the one thing that never does.",
+      "sourceIds": []
+    },
+    {
+      "id": "pure-love",
+      "verse": 47,
+      "phrase": "charity is the pure love of Christ",
+      "meaning": "The Guide to the Scriptures defines charity with this phrase, and adds that it is “the love that Christ has for the children of men and that the children of men should have for one another.”",
+      "sourceIds": [
+        "gs-charity",
+        "ether-12-33-34"
+      ]
+    },
+    {
+      "id": "energy-of-heart",
+      "verse": 48,
+      "phrase": "pray unto the Father with all the energy of heart",
+      "meaning": "Charity is something to pray for, earnestly. Mormon says the Father bestows it, gives it as a gift, on true followers of His Son.",
+      "sourceIds": []
+    },
+    {
+      "id": "like-him",
+      "verse": 48,
+      "phrase": "we shall be like him, for we shall see him as he is",
+      "meaning": "These words closely match 1 John 3:2, and the footnote points there: “when he shall appear, we shall be like him; for we shall see him as he is.”",
+      "sourceIds": [
+        "1-john-3-2-3"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "1-corinthians-13-4-8",
+      "relation": "relates-to",
+      "note": "Paul's description of charity runs nearly word for word with Mormon's, and Paul also says, “Charity never faileth.” The footnote to verse 45 points here."
+    },
+    {
+      "sourceId": "ether-12-33-34",
+      "relation": "supports",
+      "note": "Moroni tells the Lord, “this love which thou hast had for the children of men is charity,” after speaking of Him laying down His life for the world."
+    },
+    {
+      "sourceId": "2-nephi-26-30",
+      "relation": "supports",
+      "note": "Nephi records that “the Lord God hath given a commandment that all men should have charity, which charity is love.”"
+    },
+    {
+      "sourceId": "1-john-3-2-3",
+      "relation": "relates-to",
+      "note": "John writes that “we shall be like him; for we shall see him as he is,” and that everyone with this hope “purifieth himself, even as he is pure.”"
+    }
+  ],
+  "questions": [
+    {
+      "id": "who-to-whom",
+      "question": "Who first spoke these words, and to whom?",
+      "answer": "Mormon. His son Moroni recorded “a few of the words of my father Mormon,” which he taught “in the synagogue which they had built for the place of worship” (Moroni 7:1). Mormon addressed “the peaceable followers of Christ” (Moroni 7:3).",
+      "sourceIds": [
+        "moroni-7-1-3"
+      ]
+    },
+    {
+      "id": "like-paul",
+      "question": "Why are Mormon's words so similar to Paul's in 1 Corinthians 13?",
+      "answer": "The two descriptions are strikingly parallel, and the footnote to verse 45 points to 1 Corinthians 13. The scriptures don't explain how they came to be so alike, and Gospel Labs doesn't try to. What they do show is two servants of the Lord, Paul and Mormon, in different lands and times, describing charity in nearly the same words.",
+      "sourceIds": [
+        "moroni-7-45-48",
+        "1-corinthians-13-4-8"
+      ]
+    },
+    {
+      "id": "do-or-given",
+      "question": "Is charity something we do, or something God gives?",
+      "answer": "Both appear here. Verse 45 describes how charity acts: it “suffereth long, and is kind.” Verse 46 says to “cleave unto charity.” Verse 48 says to pray “that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son.” Mormon presents charity as a gift we pray for and a way of living we hold to.",
+      "sourceIds": [
+        "moroni-7-45-48"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "charity-in-life",
+      "prompt": "These everyday situations are Gospel Labs' examples, not scripture's. Sort each one under the description of charity from verse 45 that it fits best.",
+      "sourceIds": [
+        "moroni-7-45-48"
+      ],
+      "hints": [
+        "‘Suffereth long’ is about patience over time. ‘Envieth not’ is about not resenting what others have.",
+        "‘Seeketh not her own’ is about not putting yourself first. ‘Not easily provoked’ is about not being quick to anger."
+      ],
+      "explanation": "Each phrase in verse 45 describes how charity behaves toward others. Suffering long is patience over time; not envying is gladness for others; not seeking its own is putting others first; not being easily provoked is slowness to anger. Mormon says to pray to be filled with this love; it is given, not only practiced.",
+      "categories": [
+        {
+          "id": "suffereth-long",
+          "label": "Suffereth long"
+        },
+        {
+          "id": "envieth-not",
+          "label": "Envieth not"
+        },
+        {
+          "id": "seeketh-not",
+          "label": "Seeketh not her own"
+        },
+        {
+          "id": "not-provoked",
+          "label": "Is not easily provoked"
+        }
+      ],
+      "items": [
+        {
+          "id": "younger-sibling",
+          "text": "You keep patiently helping a younger sibling who asks the same question again and again.",
+          "category": "suffereth-long",
+          "why": "Patience that lasts over time is what ‘suffereth long’ describes."
+        },
+        {
+          "id": "award",
+          "text": "A classmate wins the award you hoped for, and you are glad for her instead of resentful.",
+          "category": "envieth-not",
+          "why": "Not resenting someone else's good is what ‘envieth not’ describes."
+        },
+        {
+          "id": "group-role",
+          "text": "In a group project you take the role that helps the team most, not the one that makes you look best.",
+          "category": "seeketh-not",
+          "why": "Putting others' good ahead of your own advantage is what ‘seeketh not her own’ describes."
+        },
+        {
+          "id": "bumped",
+          "text": "Someone bumps you hard in the hallway, and you answer calmly instead of snapping back.",
+          "category": "not-provoked",
+          "why": "Not being quick to anger is what ‘not easily provoked’ describes."
+        },
+        {
+          "id": "long-illness",
+          "text": "You keep visiting a neighbor through a long illness, week after week.",
+          "category": "suffereth-long",
+          "why": "Bearing with a hard situation for a long time is what ‘suffereth long’ describes."
+        },
+        {
+          "id": "new-phone",
+          "text": "A friend gets something you wanted, and you are happy for him.",
+          "category": "envieth-not",
+          "why": "Gladness for another's blessing, without jealousy, is what ‘envieth not’ describes."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "id": "what-it-leads-to",
+      "prompt": "Verse 48 names one thing to pray for and then what it leads to. Tap the phrases that describe what being filled with this love leads to.",
+      "sourceIds": [
+        "moroni-7-45-48"
+      ],
+      "hints": [
+        "The results begin with ‘that.’ But the first ‘that’ phrase is what we pray for, not what it leads to.",
+        "Look after the words “Jesus Christ;” for the results.",
+        "There are four: becoming sons of God, being like Him, having this hope, and being purified."
+      ],
+      "explanation": "Mormon asks us to pray with all the energy of heart to be filled with this love, which the Father bestows on true followers of His Son. Being filled with it leads to becoming “the sons of God,” being “like him” when He appears, having “this hope,” and being “purified even as he is pure.”",
+      "passage": "moroni-7-45-48",
+      "chunks": [
+        {
+          "verse": 48,
+          "text": "Wherefore, my beloved brethren,"
+        },
+        {
+          "verse": 48,
+          "text": "pray unto the Father with all the energy of heart,"
+        },
+        {
+          "verse": 48,
+          "text": "that ye may be filled with this love,"
+        },
+        {
+          "verse": 48,
+          "text": "which he hath bestowed upon all who are true followers of his Son, Jesus Christ;"
+        },
+        {
+          "verse": 48,
+          "text": "that ye may become the sons of God;"
+        },
+        {
+          "verse": 48,
+          "text": "that when he shall appear we shall be like him, for we shall see him as he is;"
+        },
+        {
+          "verse": 48,
+          "text": "that we may have this hope;"
+        },
+        {
+          "verse": 48,
+          "text": "that we may be purified even as he is pure. Amen."
+        }
+      ],
+      "targets": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "minTargets": 3
+    },
+    {
+      "type": "scripture-connect",
+      "id": "two-witnesses",
+      "prompt": "Compare Moroni 7:45–48 with 1 Corinthians 13:4–8 and Ether 12:33–34.",
+      "sourceIds": [
+        "moroni-7-45-48",
+        "1-corinthians-13-4-8",
+        "ether-12-33-34"
+      ],
+      "hints": [
+        "Read the two lists of what charity does side by side. Look for a phrase that appears only in Moroni 7.",
+        "In Ether 12:33, what had the Lord done for the world?"
+      ],
+      "explanation": "Mormon's list of what charity does matches Paul's closely; both say charity “suffereth long” and “never faileth.” Mormon adds that charity is “the pure love of Christ,” and Ether 12:33–34 shows why: Moroni calls the Savior's love, shown in laying down His life for the world, charity.",
+      "passages": [
+        "moroni-7-45-48",
+        "1-corinthians-13-4-8",
+        "ether-12-33-34"
+      ],
+      "questions": [
+        {
+          "id": "only-mormon",
+          "prompt": "Which of these does Mormon say in Moroni 7:45–48 that Paul does not say in 1 Corinthians 13:4–8?",
+          "options": [
+            {
+              "id": "pure-love",
+              "text": "That charity is “the pure love of Christ”"
+            },
+            {
+              "id": "suffereth",
+              "text": "That charity suffers long",
+              "feedback": "Paul says this too, in 1 Corinthians 13:4."
+            },
+            {
+              "id": "never-faileth",
+              "text": "That charity never fails",
+              "feedback": "Paul says this too, in 1 Corinthians 13:8."
+            },
+            {
+              "id": "kind",
+              "text": "That charity is kind",
+              "feedback": "Both lists say charity is kind."
+            }
+          ],
+          "correct": [
+            "pure-love"
+          ]
+        },
+        {
+          "id": "christs-love",
+          "prompt": "What does Ether 12:33–34 connect charity with?",
+          "options": [
+            {
+              "id": "laid-down",
+              "text": "The Savior's love for the world, shown in laying down His life"
+            },
+            {
+              "id": "feeling",
+              "text": "A feeling that comes and goes",
+              "feedback": "Moroni 7:47 says charity “endureth forever.”"
+            },
+            {
+              "id": "kind-back",
+              "text": "Being kind only to those who are kind to us",
+              "feedback": "Ether 12:33 speaks of love for “the world.”"
+            }
+          ],
+          "correct": [
+            "laid-down"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:moroni-7-45-48",
+      "to": "attribute:charity",
+      "relation": "teaches",
+      "sourceIds": [
+        "moroni-7-45-48"
+      ],
+      "note": "Mormon describes charity and calls it “the pure love of Christ.”"
+    },
+    {
+      "from": "concept:prayer",
+      "to": "attribute:charity",
+      "relation": "leads-to",
+      "sourceIds": [
+        "moroni-7-45-48"
+      ],
+      "note": "Mormon says to pray with all the energy of heart to be filled with this love."
+    },
+    {
+      "from": "scripture:ether-12-33-34",
+      "to": "attribute:charity",
+      "relation": "teaches",
+      "sourceIds": [
+        "ether-12-33-34"
+      ],
+      "note": "Moroni calls the Savior's love for the children of men charity."
+    }
+  ],
+  "sources": [
+    {
+      "id": "moroni-7-45-48",
+      "kind": "scripture",
+      "label": "Moroni 7:45–48",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p48#p45",
+      "verses": [
+        {
+          "number": 45,
+          "text": "And charity suffereth long, and is kind, and envieth not, and is not puffed up, seeketh not her own, is not easily provoked, thinketh no evil, and rejoiceth not in iniquity but rejoiceth in the truth, beareth all things, believeth all things, hopeth all things, endureth all things."
+        },
+        {
+          "number": 46,
+          "text": "Wherefore, my beloved brethren, if ye have not charity, ye are nothing, for charity never faileth. Wherefore, cleave unto charity, which is the greatest of all, for all things must fail—"
+        },
+        {
+          "number": 47,
+          "text": "But charity is the pure love of Christ, and it endureth forever; and whoso is found possessed of it at the last day, it shall be well with him."
+        },
+        {
+          "number": 48,
+          "text": "Wherefore, my beloved brethren, pray unto the Father with all the energy of heart, that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son, Jesus Christ; that ye may become the sons of God; that when he shall appear we shall be like him, for we shall see him as he is; that we may have this hope; that we may be purified even as he is pure. Amen."
+        }
+      ]
+    },
+    {
+      "id": "moroni-7-1-3",
+      "kind": "scripture",
+      "label": "Moroni 7:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p1-p3#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "And now I, Moroni, write a few of the words of my father Mormon, which he spake concerning faith, hope, and charity; for after this manner did he speak unto the people, as he taught them in the synagogue which they had built for the place of worship."
+        },
+        {
+          "number": 2,
+          "text": "And now I, Mormon, speak unto you, my beloved brethren; and it is by the grace of God the Father, and our Lord Jesus Christ, and his holy will, because of the gift of his calling unto me, that I am permitted to speak unto you at this time."
+        },
+        {
+          "number": 3,
+          "text": "Wherefore, I would speak unto you that are of the church, that are the peaceable followers of Christ, and that have obtained a sufficient hope by which ye can enter into the rest of the Lord, from this time henceforth until ye shall rest with him in heaven."
+        }
+      ]
+    },
+    {
+      "id": "1-corinthians-13-4-8",
+      "kind": "scripture",
+      "label": "1 Corinthians 13:4–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/13?lang=eng&id=p4-p8#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,"
+        },
+        {
+          "number": 5,
+          "text": "Doth not behave itself unseemly, seeketh not her own, is not easily provoked, thinketh no evil;"
+        },
+        {
+          "number": 6,
+          "text": "Rejoiceth not in iniquity, but rejoiceth in the truth;"
+        },
+        {
+          "number": 7,
+          "text": "Beareth all things, believeth all things, hopeth all things, endureth all things."
+        },
+        {
+          "number": 8,
+          "text": "Charity never faileth: but whether there be prophecies, they shall fail; whether there be tongues, they shall cease; whether there be knowledge, it shall vanish away."
+        }
+      ]
+    },
+    {
+      "id": "ether-12-33-34",
+      "kind": "scripture",
+      "label": "Ether 12:33–34",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p33-p34#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "And again, I remember that thou hast said that thou hast loved the world, even unto the laying down of thy life for the world, that thou mightest take it again to prepare a place for the children of men."
+        },
+        {
+          "number": 34,
+          "text": "And now I know that this love which thou hast had for the children of men is charity; wherefore, except men shall have charity they cannot inherit that place which thou hast prepared in the mansions of thy Father."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-26-30",
+      "kind": "scripture",
+      "label": "2 Nephi 26:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "Behold, the Lord hath forbidden this thing; wherefore, the Lord God hath given a commandment that all men should have charity, which charity is love. And except they should have charity they were nothing. Wherefore, if they should have charity they would not suffer the laborer in Zion to perish."
+        }
+      ]
+    },
+    {
+      "id": "1-john-3-2-3",
+      "kind": "scripture",
+      "label": "1 John 3:2–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/3?lang=eng&id=p2-p3#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "Beloved, now are we the sons of God, and it doth not yet appear what we shall be: but we know that, when he shall appear, we shall be like him; for we shall see him as he is."
+        },
+        {
+          "number": 3,
+          "text": "And every man that hath this hope in him purifieth himself, even as he is pure."
+        }
+      ]
+    },
+    {
+      "id": "gs-charity",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Charity",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/charity?lang=eng"
+    },
+    {
+      "id": "gs-patience",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Patience",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/patience?lang=eng"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "questions.like-paul",
+        "note": "The relationship between Moroni 7:45 and 1 Corinthians 13 is discussed by scholars; the answer deliberately says only what the scriptures show.",
+        "resolution": "Qualified: the answer still says only what the scriptures show: the parallel wording, and the footnote to verse 45 (checked 26 October 2026: it points to 1 Corinthians 13:4). It now says Gospel Labs doesn't explain the similarity, calls Paul and Mormon servants of the Lord rather than ‘two prophets’, and says ‘nearly the same words’ rather than ‘the same description’."
+      },
+      {
+        "where": "activities.charity-in-life",
+        "note": "The everyday situations are Gospel Labs' applications of verse 45, not scriptural examples.",
+        "resolution": "Qualified: the prompt now tells learners that the situations are Gospel Labs' examples, not scripture's, and asks which description each fits best."
+      },
+      {
+        "where": "themes",
+        "note": "Uses the Character of Christ attributes ‘charity’ and ‘long-suffering’ as themes and Map nodes.",
+        "resolution": "Resolved: both attributes exist (src/content/attributes/charity.json and long-suffering.json), and each theme note quotes verse 45 or 47."
+      }
+    ]
+  }
+}

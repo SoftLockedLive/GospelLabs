@@ -2,15 +2,19 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { RECORD_DATA_VERSION } from "@/domain/investigation";
 import { richInvestigation } from "@/domain/test-fixtures";
-import { parseBackup, serializeBackup } from "./backup";
+import { parseBackup, serializeBackup, type StudyData } from "./backup";
+import { readStoredPreferences } from "./backup-preferences";
 import {
   BACKUP_FROM_1_0,
+  PREFERENCES_FROM_2_0,
+  STUDY_FROM_2_0,
   BACKUP_V2_BEFORE_TRAILS,
   RECORD_BEFORE_TRAILS,
   RECORD_BEFORE_TRAILS_AS_READ,
   RECORD_FROM_1_0,
   RECORD_FROM_1_0_AS_READ,
 } from "./legacy-fixtures";
+import { createStudyRepository } from "./study-repository";
 import { createTestRepository } from "./test-utils";
 
 afterEach(() => vi.restoreAllMocks());
@@ -179,5 +183,48 @@ describe("replace", () => {
       kind: "invalid-data",
     });
     expect((await repository.list()).investigations.map((i) => i.id)).toEqual(["keep-me"]);
+  });
+});
+
+describe("whole backups between devices (format 3)", () => {
+  it("move investigations, study data, and preferences to a fresh database exactly", async () => {
+    const source = createTestRepository();
+    await source.repository.save(richInvestigation("a"), null);
+    const study = createStudyRepository(source.db);
+    const fixture = structuredClone(STUDY_FROM_2_0) as unknown as StudyData;
+    await study.completeInvestigation(fixture.progress[0], fixture.discoveries[0]);
+    await study.personalConnections.put(fixture.personalConnections[0]);
+    for (const exploration of fixture.explorations) await study.explorations.put(exploration);
+
+    // Preferences come from localStorage on the exporting device.
+    const preferences = readStoredPreferences({
+      getItem: (key) =>
+        ({ "gospel-labs:theme": "dawn", "gospel-labs:preferences": JSON.stringify(PREFERENCES_FROM_2_0) })[key] ?? null,
+    });
+    const { backup } = await source.repository.exportBackup("2026-10-26T12:00:00.000Z", { preferences });
+    const text = serializeBackup(backup);
+    expect(JSON.parse(text)).toMatchObject({ version: 3, preferences: PREFERENCES_FROM_2_0 });
+
+    const target = createTestRepository();
+    const result = parseBackup(text);
+    if (!result.ok) throw new Error(result.error.message);
+    expect(result.backup.preferences).toEqual(PREFERENCES_FROM_2_0);
+    await target.repository.importBackup(result.backup, "merge");
+
+    expect(await target.repository.list()).toEqual(await source.repository.list());
+    const [sourceStudy, targetStudy] = await Promise.all(
+      [source.db, target.db].map((db) => createStudyRepository(db).snapshot()),
+    );
+    expect(targetStudy).toEqual(sourceStudy);
+    expect(targetStudy.snapshot.discoveries).toEqual(fixture.discoveries);
+  });
+
+  it("an older (investigations-only) import leaves study data alone", async () => {
+    const { db, repository } = createTestRepository();
+    const study = createStudyRepository(db);
+    const fixture = structuredClone(STUDY_FROM_2_0) as unknown as StudyData;
+    await study.discoveries.put(fixture.discoveries[0]);
+    await repository.importInvestigations([richInvestigation("new")], "replace");
+    expect((await study.discoveries.list()).records).toHaveLength(1);
   });
 });

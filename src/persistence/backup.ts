@@ -1,13 +1,22 @@
 /**
  * Backup file format and import planning. Everything here is pure; the
- * repository applies plans to the database inside a transaction.
+ * database side (reading, and applying plans inside one transaction) is in
+ * full-backup.ts.
  *
- * Format (version 2):
+ * Format (version 3):
  *   {
  *     "format": "gospel-labs-backup",
- *     "version": 2,
- *     "exportedAt": "2026-10-20T12:00:00.000Z",
- *     "investigations": [ …Investigation records… ]
+ *     "version": 3,
+ *     "exportedAt": "2026-10-26T12:00:00.000Z",
+ *     "investigations": [ …Investigation records (1.x research notebooks)… ],
+ *     "study": {
+ *       "progress": [ …StudyProgress… ],
+ *       "discoveries": [ …DiscoveryCard… ],
+ *       "personalConnections": [ …PersonalConnection… ],
+ *       "explorations": [ …Exploration… ]
+ *     },
+ *     "preferences": { "theme": "dawn", "motion": "subtle", "studyLength": "quick",
+ *                      "difficulty": "medium", "activity": { "offerBranches": true, … } }
  *   }
  *
  * Version history:
@@ -19,24 +28,227 @@
  *      user to update instead. (Pre-release 1.1 builds wrote version 2 without
  *      some of these fields; they default to empty, so those files import
  *      unchanged.)
+ *   3  Gospel Labs 2.0: adds `study` (the four 2.0 study tables: guided
+ *      investigation progress, Discovery Cards, personal Map connections, and
+ *      explorations) and `preferences` (theme, motion, study length, default
+ *      difficulty, activity options). Investigations are unchanged. Bumped so
+ *      that 1.1 (which accepts up to version 2) refuses these files as "made
+ *      by a newer version" instead of importing the investigations and
+ *      silently leaving the study data out, which in Replace mode would look
+ *      like a complete restore. Older files are upgraded with an empty `study`
+ *      and no preferences.
+ *
+ * Every record in a backup is written exactly as stored, so fields added by
+ * a newer version survive a round trip through an older one.
  */
 import { z } from "zod";
-import { investigationSchema, isFromNewerVersion, type Investigation } from "@/domain/investigation";
+import { investigationSchema, RECORD_DATA_VERSION, type Investigation } from "@/domain/investigation";
+import {
+  discoveryCardSchema,
+  explorationSchema,
+  personalConnectionSchema,
+  STUDY_DATA_VERSION,
+  studyProgressSchema,
+  type DiscoveryCard,
+  type Exploration,
+  type PersonalConnection,
+  type StudyProgress,
+} from "@/domain/study/user-data";
+import { DIFFICULTIES, STUDY_LENGTHS, type Difficulty, type StudyLength } from "@/domain/study/vocabulary";
+import { DEFAULT_PREFERENCES, MOTION_PREFERENCES, type MotionPreference, type Preferences } from "@/lib/preferences";
+import { isThemePreference, type ThemePreference } from "@/lib/theme";
 
 export const BACKUP_FORMAT = "gospel-labs-backup";
-export const BACKUP_VERSION = 2;
+export const BACKUP_VERSION = 3;
 /** Larger files are refused before parsing so the page doesn't freeze. */
 export const MAX_BACKUP_BYTES = 50 * 1024 * 1024;
+
+// --- Kinds of data -------------------------------------------------------------
+
+/** The study tables, by their key in a backup's `study` section. */
+export const STUDY_KINDS = ["progress", "discoveries", "personalConnections", "explorations"] as const;
+export type StudyKind = (typeof STUDY_KINDS)[number];
+
+/** Everything a backup holds records of, one entry per IndexedDB table. */
+export const DATA_KINDS = ["investigations", ...STUDY_KINDS] as const;
+export type DataKind = (typeof DATA_KINDS)[number];
+
+export interface StudyData {
+  progress: StudyProgress[];
+  discoveries: DiscoveryCard[];
+  personalConnections: PersonalConnection[];
+  explorations: Exploration[];
+}
+
+export const emptyStudyData = (): StudyData => ({ progress: [], discoveries: [], personalConnections: [], explorations: [] });
+
+/** Words for each kind in messages: "1 Discovery Card", "Discovery Cards: 2 new". */
+export const DATA_KIND_LABELS: Record<DataKind, { one: string; many: string; heading: string }> = {
+  investigations: { one: "research investigation", many: "research investigations", heading: "Research investigations" },
+  progress: { one: "guided investigation", many: "guided investigations", heading: "Guided investigation progress" },
+  discoveries: { one: "Discovery Card", many: "Discovery Cards", heading: "Discovery Cards" },
+  personalConnections: { one: "Map connection", many: "Map connections", heading: "Your Map connections" },
+  explorations: { one: "exploration", many: "explorations", heading: "Explorations" },
+};
+
+/** "1 Discovery Card", "3 explorations". */
+export function countOf(kind: DataKind, count: number): string {
+  const label = DATA_KIND_LABELS[kind];
+  return `${count} ${count === 1 ? label.one : label.many}`;
+}
+
+export type DataCounts = Record<DataKind, number>;
+
+export const zeroCounts = (): DataCounts => ({
+  investigations: 0,
+  progress: 0,
+  discoveries: 0,
+  personalConnections: 0,
+  explorations: 0,
+});
+
+export const totalCount = (counts: DataCounts): number => DATA_KINDS.reduce((sum, kind) => sum + counts[kind], 0);
+
+/**
+ * The kinds with any records, as a phrase: "2 research investigations and 1
+ * Discovery Card". Returns `none` when every count is zero.
+ */
+export function describeCounts(counts: DataCounts, none = "nothing"): string {
+  const parts = DATA_KINDS.filter((kind) => counts[kind] > 0).map((kind) => countOf(kind, counts[kind]));
+  if (parts.length === 0) return none;
+  if (parts.length === 1) return parts[0];
+  return `${parts.slice(0, -1).join(", ")}${parts.length > 2 ? "," : ""} and ${parts[parts.length - 1]}`;
+}
+
+/** How many records of each kind a backup (or parsed backup) holds. */
+export function countContents(contents: { investigations: readonly unknown[]; study: StudyData }): DataCounts {
+  return {
+    investigations: contents.investigations.length,
+    progress: contents.study.progress.length,
+    discoveries: contents.study.discoveries.length,
+    personalConnections: contents.study.personalConnections.length,
+    explorations: contents.study.explorations.length,
+  };
+}
+
+/** How each kind is validated, and the record format this version writes for it. */
+export const RECORD_RULES: Record<DataKind, { schema: z.ZodType; dataVersion: number }> = {
+  investigations: { schema: investigationSchema, dataVersion: RECORD_DATA_VERSION },
+  progress: { schema: studyProgressSchema, dataVersion: STUDY_DATA_VERSION },
+  discoveries: { schema: discoveryCardSchema, dataVersion: STUDY_DATA_VERSION },
+  personalConnections: { schema: personalConnectionSchema, dataVersion: STUDY_DATA_VERSION },
+  explorations: { schema: explorationSchema, dataVersion: STUDY_DATA_VERSION },
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+/**
+ * True when a record, read without validation, is stamped with a newer
+ * record format than `current`. Checked before validation, because a newer
+ * version's records may not pass this version's schema.
+ */
+export function isNewerStamp(record: unknown, current: number): boolean {
+  if (!isRecord(record)) return false;
+  return typeof record.dataVersion === "number" && record.dataVersion > current;
+}
+
+// --- Preferences -----------------------------------------------------------------
+
+export type ActivityPreferences = Preferences["activity"];
+
+/**
+ * Appearance and study preferences in a backup. Every field is optional: a
+ * backup carries only what was stored on the exporting device, and restoring
+ * changes only the fields it carries. `lastMapVisit` is deliberately left
+ * out: it records when the Map was last opened on that device, which isn't a
+ * preference and would hide "new" markers on another device.
+ */
+export interface BackupPreferences {
+  theme?: ThemePreference;
+  motion?: MotionPreference;
+  studyLength?: StudyLength;
+  difficulty?: Difficulty;
+  activity?: Partial<ActivityPreferences>;
+}
+
+const ACTIVITY_OPTIONS = Object.keys(DEFAULT_PREFERENCES.activity) as (keyof ActivityPreferences)[];
+
+const PREFERENCE_CHECKS = {
+  theme: isThemePreference,
+  motion: (value: unknown) => MOTION_PREFERENCES.includes(value as MotionPreference),
+  studyLength: (value: unknown) => STUDY_LENGTHS.includes(value as StudyLength),
+  difficulty: (value: unknown) => DIFFICULTIES.includes(value as Difficulty),
+} satisfies Record<Exclude<keyof BackupPreferences, "activity">, (value: unknown) => boolean>;
+
+const PREFERENCE_NAMES: Record<keyof BackupPreferences, string> = {
+  theme: "theme",
+  motion: "motion",
+  studyLength: "study length",
+  difficulty: "difficulty",
+  activity: "activity options",
+};
+
+/**
+ * Keeps the preference fields that are present and valid. `invalid` names
+ * the fields that were present but unusable. Unknown fields (from a newer
+ * version, or `lastMapVisit`) are dropped without comment.
+ */
+export function sanitizePreferences(value: Record<string, unknown>): { preferences: BackupPreferences; invalid: string[] } {
+  const preferences: Record<string, unknown> = {};
+  const invalid: string[] = [];
+  for (const [field, isValid] of Object.entries(PREFERENCE_CHECKS) as [keyof typeof PREFERENCE_CHECKS, (v: unknown) => boolean][]) {
+    if (value[field] === undefined) continue;
+    if (isValid(value[field])) preferences[field] = value[field];
+    else invalid.push(PREFERENCE_NAMES[field]);
+  }
+  if (value.activity !== undefined) {
+    const activity: Partial<ActivityPreferences> = {};
+    let damaged = !isRecord(value.activity);
+    if (isRecord(value.activity)) {
+      for (const option of ACTIVITY_OPTIONS) {
+        const setting = value.activity[option];
+        if (typeof setting === "boolean") activity[option] = setting;
+        else if (setting !== undefined) damaged = true;
+      }
+    }
+    if (Object.keys(activity).length > 0) preferences.activity = activity;
+    if (damaged) invalid.push(PREFERENCE_NAMES.activity);
+  }
+  return { preferences: preferences as BackupPreferences, invalid };
+}
+
+export const hasPreferences = (preferences: BackupPreferences): boolean => Object.keys(preferences).length > 0;
+
+// --- Creating backups ------------------------------------------------------------
 
 export interface Backup {
   format: typeof BACKUP_FORMAT;
   version: typeof BACKUP_VERSION;
   exportedAt: string;
   investigations: Investigation[];
+  study: StudyData;
+  preferences: BackupPreferences;
 }
 
-export function createBackup(investigations: readonly Investigation[], exportedAt: string): Backup {
-  return { format: BACKUP_FORMAT, version: BACKUP_VERSION, exportedAt, investigations: [...investigations] };
+export function createBackup(
+  investigations: readonly Investigation[],
+  exportedAt: string,
+  { study = emptyStudyData(), preferences = {} }: { study?: StudyData; preferences?: BackupPreferences } = {},
+): Backup {
+  return {
+    format: BACKUP_FORMAT,
+    version: BACKUP_VERSION,
+    exportedAt,
+    investigations: [...investigations],
+    study: {
+      progress: [...study.progress],
+      discoveries: [...study.discoveries],
+      personalConnections: [...study.personalConnections],
+      explorations: [...study.explorations],
+    },
+    preferences: { ...preferences },
+  };
 }
 
 export function serializeBackup(backup: Backup): string {
@@ -46,6 +258,8 @@ export function serializeBackup(backup: Backup): string {
 export function backupFileName(exportedAt: string): string {
   return `gospel-labs-backup-${exportedAt.slice(0, 10)}.json`;
 }
+
+// --- Parsing ---------------------------------------------------------------------
 
 export type BackupErrorKind =
   | "empty"
@@ -62,19 +276,37 @@ export interface BackupError {
 }
 
 export interface SkippedEntry {
-  /** Position in the backup's investigations array. */
+  /** Position in the backup's list (of investigations, or of the study kind). */
   index: number;
   id?: string;
+  /** A title or label, where the record has one. */
   title?: string;
   reason: string;
+}
+
+/** A skipped study record. `kind` says which list it came from. */
+export interface SkippedStudyEntry extends SkippedEntry {
+  kind: StudyKind;
 }
 
 export interface ParsedBackup {
   version: number;
   exportedAt?: string;
   investigations: Investigation[];
-  /** Entries that were invalid or duplicated and will not be imported. */
+  /** Investigations that were invalid, duplicated, or from a newer version, and will not be imported. */
   skipped: SkippedEntry[];
+  /** Valid study records. Empty for version 1 and 2 files. */
+  study: StudyData;
+  /** Study records that will not be imported, and why. */
+  studySkipped: SkippedStudyEntry[];
+  /** Valid preferences in the file. Empty for version 1 and 2 files. */
+  preferences: BackupPreferences;
+  /**
+   * Things the user should know that didn't stop the import: a damaged study
+   * or preferences section, invalid preferences, or a progress record that
+   * links to a Discovery Card the file doesn't contain.
+   */
+  notes: string[];
 }
 
 export type BackupParseResult = { ok: true; backup: ParsedBackup } | { ok: false; error: BackupError };
@@ -90,9 +322,6 @@ const addedInVersion2 = () => ({
   christReflection: {},
 });
 
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === "object" && value !== null && !Array.isArray(value);
-
 /**
  * Upgrades older backup versions to the current shape, one step at a time.
  * Key = the version being upgraded from. Migrations run before validation,
@@ -107,6 +336,14 @@ const MIGRATIONS: Record<number, Migration> = {
       ? data.investigations.map((entry: unknown) => (isRecord(entry) ? { ...addedInVersion2(), ...entry } : entry))
       : data.investigations,
   }),
+  // 2 → 3: no study data and no preferences. Versions 1 and 2 never had
+  // these sections, so anything under those keys isn't Gospel Labs data.
+  2: (data) => {
+    const { study: _study, preferences: _preferences, ...rest } = data;
+    void _study;
+    void _preferences;
+    return { ...rest, version: 3, study: emptyStudyData() };
+  },
 };
 
 const envelopeSchema = z.object({
@@ -119,6 +356,110 @@ const fail = (kind: BackupErrorKind, message: string): BackupParseResult => ({ o
 function describeIssue(issue: z.core.$ZodIssue): string {
   const path = issue.path.map(String).join(".");
   return path ? `${path}: ${issue.message}` : issue.message;
+}
+
+const NEWER_RECORD_REASON = "Saved by a newer version of Gospel Labs. Update the app, then import it.";
+
+const text = (value: unknown) => (typeof value === "string" && value ? value : undefined);
+
+/** How a record is named in the list of skipped entries. */
+const TITLES: Record<DataKind, (raw: Record<string, unknown>) => string | undefined> = {
+  investigations: (raw) => text(raw.title),
+  progress: () => undefined, // the id is the investigation's content id, which names it
+  discoveries: (raw) => text(raw.title),
+  personalConnections: (raw) => {
+    const from = isRecord(raw.from) ? text(raw.from.label) : undefined;
+    const to = isRecord(raw.to) ? text(raw.to.label) : undefined;
+    return from && to ? `${from} → ${to}` : undefined;
+  },
+  explorations: () => undefined, // the id ("passage:alma-7") names it
+};
+
+/**
+ * Validates each entry of one list. Entries from a newer version, invalid
+ * entries, and later copies of an id already used (first wins) are skipped
+ * with a reason; nothing is repaired.
+ */
+function validateEntries<T extends { id: string }>(kind: DataKind, entries: readonly unknown[]): { records: T[]; skipped: SkippedEntry[] } {
+  const { schema, dataVersion } = RECORD_RULES[kind];
+  const records: T[] = [];
+  const skipped: SkippedEntry[] = [];
+  const seen = new Map<string, number>();
+
+  entries.forEach((entry, index) => {
+    const raw = isRecord(entry) ? entry : {};
+    const id = typeof raw.id === "string" ? raw.id : undefined;
+    const title = TITLES[kind](raw);
+    if (isNewerStamp(entry, dataVersion)) {
+      skipped.push({ index, id, title, reason: NEWER_RECORD_REASON });
+      return;
+    }
+    const result = schema.safeParse(entry);
+    if (!result.success) {
+      skipped.push({ index, id, title, reason: describeIssue(result.error.issues[0]) });
+      return;
+    }
+    const record = result.data as T;
+    const firstIndex = seen.get(record.id);
+    if (firstIndex !== undefined) {
+      skipped.push({ index, id, title, reason: `Duplicate id; the copy at position ${firstIndex + 1} is used` });
+      return;
+    }
+    seen.set(record.id, index);
+    records.push(record);
+  });
+  return { records, skipped };
+}
+
+function parseStudySection(section: unknown, notes: string[]): { study: StudyData; skipped: SkippedStudyEntry[] } {
+  const study = emptyStudyData();
+  const skipped: SkippedStudyEntry[] = [];
+  if (section === undefined) {
+    notes.push("This file has no study data section, so it contains no study data to import.");
+    return { study, skipped };
+  }
+  if (!isRecord(section)) {
+    notes.push("The file's study data is damaged and can't be read, so none of it will be imported.");
+    return { study, skipped };
+  }
+  for (const kind of STUDY_KINDS) {
+    const list = section[kind];
+    if (list === undefined) continue;
+    if (!Array.isArray(list)) {
+      notes.push(`The file's list of ${DATA_KIND_LABELS[kind].many} is damaged and can't be read, so none will be imported.`);
+      continue;
+    }
+    const result = validateEntries<StudyData[typeof kind][number]>(kind, list);
+    (study as Record<StudyKind, unknown[]>)[kind] = result.records;
+    skipped.push(...result.skipped.map((entry) => ({ kind, ...entry })));
+  }
+
+  // A progress record may link to a card the file doesn't hold (the card was
+  // damaged and skipped, or the file was edited). The link is kept as it is,
+  // never repaired, and the user is told.
+  const cardIds = new Set(study.discoveries.map((card) => card.id));
+  for (const record of study.progress) {
+    if (record.discoveryId && !cardIds.has(record.discoveryId)) {
+      notes.push(
+        `Progress in “${record.id}” links to Discovery Card “${record.discoveryId}”, which isn't in this file. ` +
+          "The progress is imported unchanged; the link works only if that card is already on this device.",
+      );
+    }
+  }
+  return { study, skipped };
+}
+
+function parsePreferencesSection(section: unknown, notes: string[]): BackupPreferences {
+  if (section === undefined) return {};
+  if (!isRecord(section)) {
+    notes.push("The file's appearance and study preferences are damaged, so they can't be restored.");
+    return {};
+  }
+  const { preferences, invalid } = sanitizePreferences(section);
+  if (invalid.length > 0) {
+    notes.push(`Some preferences in the file aren't valid and won't be restored: ${invalid.join(", ")}.`);
+  }
+  return preferences;
 }
 
 export function parseBackup(text: string): BackupParseResult {
@@ -159,48 +500,57 @@ export function parseBackup(text: string): BackupParseResult {
   const envelope = envelopeSchema.safeParse(record);
   if (!envelope.success) return fail("malformed", "The backup doesn't contain a list of investigations.");
 
-  const investigations: Investigation[] = [];
-  const skipped: SkippedEntry[] = [];
-  const seen = new Map<string, number>();
+  const notes: string[] = [];
+  const { records: investigations, skipped } = validateEntries<Investigation>("investigations", envelope.data.investigations);
+  const { study, skipped: studySkipped } = parseStudySection(record.study, notes);
+  const preferences = parsePreferencesSection(record.preferences, notes);
 
-  envelope.data.investigations.forEach((entry, index) => {
-    const raw = (entry ?? {}) as { id?: unknown; title?: unknown };
-    const id = typeof raw.id === "string" ? raw.id : undefined;
-    const title = typeof raw.title === "string" && raw.title ? raw.title : undefined;
-    const result = investigationSchema.safeParse(entry);
-    if (!result.success) {
-      skipped.push({ index, id, title, reason: describeIssue(result.error.issues[0]) });
-      return;
-    }
-    if (isFromNewerVersion(result.data)) {
-      skipped.push({ index, id, title, reason: "Saved by a newer version of Gospel Labs. Update the app, then import it." });
-      return;
-    }
-    const firstIndex = seen.get(result.data.id);
-    if (firstIndex !== undefined) {
-      skipped.push({ index, id, title, reason: `Duplicate id; the copy at position ${firstIndex + 1} is used` });
-      return;
-    }
-    seen.set(result.data.id, index);
-    investigations.push(result.data);
-  });
-
-  return { ok: true, backup: { version, exportedAt: envelope.data.exportedAt, investigations, skipped } };
+  return {
+    ok: true,
+    backup: { version, exportedAt: envelope.data.exportedAt, investigations, skipped, study, studySkipped, preferences, notes },
+  };
 }
+
+// --- Planning imports ------------------------------------------------------------
 
 export type ImportMode = "merge" | "replace";
 
-export interface ImportPlan {
-  mode: ImportMode;
+/**
+ * A stored record as an import sees it, read without trusting it.
+ * `readable`: passes this version's schema. `newer`: stamped with a newer
+ * record format than this version writes (whether or not it's readable).
+ */
+export interface StoredRecord {
+  id: string;
+  updatedAt?: string;
+  readable: boolean;
+  newer: boolean;
+  /** The record exactly as stored. */
+  record: unknown;
+}
+
+/** Describes a raw stored record for planning. */
+export function describeStored(record: unknown, readable: boolean, currentDataVersion: number): StoredRecord {
+  const raw = isRecord(record) ? record : {};
+  return {
+    id: String(raw.id),
+    updatedAt: typeof raw.updatedAt === "string" ? raw.updatedAt : undefined,
+    readable,
+    newer: isNewerStamp(record, currentDataVersion),
+    record,
+  };
+}
+
+export interface RecordPlan<T> {
   /** Records to write. */
-  toWrite: Investigation[];
-  /** New investigations not currently stored. */
+  toWrite: T[];
+  /** New records not currently stored. */
   added: number;
-  /** Stored investigations replaced by a more recently edited copy from the backup. */
+  /** Stored records replaced by a more recently edited copy (or replacing a damaged copy). */
   updated: number;
-  /** Merge: backup copies ignored because the stored copy is the same or newer. */
+  /** Merge: backup copies ignored because the stored copy is the same, newer, or from a newer version. */
   kept: number;
-  /** Replace: stored investigations that will be deleted first. */
+  /** Replace: stored records that will be deleted first (every stored record, readable or not). */
   removed: number;
 }
 
@@ -220,33 +570,52 @@ export function sameContent(a: unknown, b: unknown): boolean {
 }
 
 /**
- * Merge: add new investigations; when an id exists on both sides, keep the
- * copy edited most recently (ties keep the stored copy).
- * Replace: delete everything stored, then write the backup's investigations.
+ * The import rules, the same for every kind of record:
+ *
+ * Merge: add records that aren't stored. When an id exists on both sides,
+ * keep the copy updated most recently; ties keep the stored copy. A stored
+ * record saved by a newer version is never replaced. A stored record this
+ * version can't read (damaged) is replaced by the backup's valid copy and
+ * counted as updated. Nothing is deleted.
+ *
+ * Replace: delete every stored record, then write the backup's records.
+ *
+ * Within `incoming`, the first record with an id wins (parseBackup has
+ * already reported any duplicates).
  */
-export function planImport(
-  existing: readonly Investigation[],
-  incoming: readonly Investigation[],
+export function planRecords<T extends { id: string; updatedAt: string }>(
+  stored: readonly StoredRecord[],
+  incoming: readonly T[],
   mode: ImportMode,
-): ImportPlan {
-  const stored = new Map(existing.map((investigation) => [investigation.id, investigation]));
-
-  if (mode === "replace") {
-    return { mode, toWrite: [...incoming], added: incoming.length, updated: 0, kept: 0, removed: existing.length };
+): RecordPlan<T> {
+  const candidates: T[] = [];
+  const seen = new Set<string>();
+  for (const record of incoming) {
+    if (seen.has(record.id)) continue;
+    seen.add(record.id);
+    candidates.push(record);
   }
 
-  const plan: ImportPlan = { mode, toWrite: [], added: 0, updated: 0, kept: 0, removed: 0 };
-  for (const candidate of incoming) {
-    const current = stored.get(candidate.id);
-    if (current && isFromNewerVersion(current)) {
-      // Never replace data saved by a newer version of the app.
-      plan.kept++;
-    } else if (!current) {
+  if (mode === "replace") {
+    return { toWrite: candidates, added: candidates.length, updated: 0, kept: 0, removed: stored.length };
+  }
+
+  const byId = new Map(stored.map((entry) => [entry.id, entry]));
+  const plan: RecordPlan<T> = { toWrite: [], added: 0, updated: 0, kept: 0, removed: 0 };
+  for (const candidate of candidates) {
+    const current = byId.get(candidate.id);
+    if (!current) {
       plan.toWrite.push(candidate);
       plan.added++;
+    } else if (current.newer) {
+      // Never replace data saved by a newer version of the app.
+      plan.kept++;
+    } else if (!current.readable) {
+      plan.toWrite.push(candidate);
+      plan.updated++;
     } else if (
-      Date.parse(candidate.updatedAt) > Date.parse(current.updatedAt) &&
-      stableStringify(candidate) !== stableStringify(current)
+      Date.parse(candidate.updatedAt) > Date.parse(current.updatedAt ?? "") &&
+      stableStringify(candidate) !== stableStringify(current.record)
     ) {
       plan.toWrite.push(candidate);
       plan.updated++;
@@ -255,4 +624,24 @@ export function planImport(
     }
   }
   return plan;
+}
+
+/** An import plan for investigations alone (the 1.1 API; see planRecords). */
+export interface ImportPlan extends RecordPlan<Investigation> {
+  mode: ImportMode;
+}
+
+/**
+ * Plans an investigations-only import against valid stored investigations.
+ * Merge keeps the copy edited most recently (ties keep the stored copy) and
+ * never replaces a record saved by a newer version; replace deletes
+ * everything stored, then writes the backup's investigations.
+ */
+export function planImport(
+  existing: readonly Investigation[],
+  incoming: readonly Investigation[],
+  mode: ImportMode,
+): ImportPlan {
+  const stored = existing.map((record) => describeStored(record, true, RECORD_DATA_VERSION));
+  return { mode, ...planRecords(stored, incoming, mode) };
 }

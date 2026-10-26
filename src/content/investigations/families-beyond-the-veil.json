@@ -1,0 +1,2414 @@
+{
+  "id": "families-beyond-the-veil",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "Loved Ones Beyond the Veil",
+  "question": "Will I see my family and friends again if they aren’t members of the Church?",
+  "hook": "Scripture doesn’t map out anyone’s future, but it says a great deal about God’s love, His work beyond death, and how He judges.",
+  "theme": "Plan of salvation",
+  "tags": [
+    "eternal-families",
+    "spirit-world",
+    "salvation-for-the-dead",
+    "judgment",
+    "plan-of-salvation"
+  ],
+  "primaryQuestion": {
+    "id": "christ",
+    "note": "Hope for loved ones who have died rests on Jesus Christ: through His Resurrection all will live again, and He opened the preaching of His gospel to the dead. Knowing who He is gives a foundation for trusting Him with the people we love."
+  },
+  "commonQuestions": [
+    "Will I be with my family after this life?",
+    "What about loved ones who weren’t members of the Church?",
+    "Where are family members who have already died?"
+  ],
+  "estimatedMinutes": {
+    "quick": 10,
+    "deep": 35
+  },
+  "intro": "Many people wonder about this, especially when they think of someone they love. It’s a tender question, and it deserves careful answers. In this investigation you’ll look at what scripture and official Church teaching actually say about life after death, the gospel taught to those who have died, ordinances for the dead, and how God judges. You’ll also notice where the sources stop, because some answers belong to God alone.",
+  "sources": [
+    {
+      "id": "gt-spirit-world",
+      "kind": "official",
+      "label": "Topics and Questions: Spirit World",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/spirit-world?lang=eng",
+      "excerpt": "Family relationships are also important in the spirit world. Those who were faithful and kept their covenants in mortality will be able to be with their families there."
+    },
+    {
+      "id": "gt-baptisms-for-the-dead",
+      "kind": "official",
+      "label": "Topics and Questions: Baptisms for the Dead",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/baptisms-for-the-dead?lang=eng",
+      "excerpt": "Because God is merciful, He has prepared a way for all people to receive the blessings of baptism. By performing proxy baptisms on behalf of those who have died, Church members offer these blessings to deceased ancestors. Individuals can then choose to accept or reject the ordinances that have been performed on their behalf."
+    },
+    {
+      "id": "gt-sealing",
+      "kind": "official",
+      "label": "Topics and Questions: Sealing",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sealing?lang=eng",
+      "excerpt": "An ordinance performed in the temple eternally uniting a husband and wife, or children and their parents."
+    },
+    {
+      "id": "gt-family-history",
+      "kind": "official",
+      "label": "Topics and Questions: Family History",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/family-history?lang=eng",
+      "excerpt": "Families are central to Heavenly Father’s plan of happiness. He has prepared a way for family relationships to continue throughout eternity."
+    },
+    {
+      "id": "gt-plan-of-salvation",
+      "kind": "official",
+      "label": "Topics and Questions: Plan of Salvation",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng",
+      "excerpt": "Because of Christ’s Atonement, all of God’s children will be resurrected and our bodies and spirits will be reunited. Resurrection will be followed by the Final Judgment, where God will judge us according to our desires and our obedience to the commandments."
+    },
+    {
+      "id": "family-proclamation",
+      "kind": "official",
+      "label": "The Family: A Proclamation to the World",
+      "author": "The First Presidency and Council of the Twelve Apostles",
+      "publication": "September 23, 1995",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/the-family-a-proclamation-to-the-world/the-family-a-proclamation-to-the-world?lang=eng",
+      "excerpt": "The divine plan of happiness enables family relationships to be perpetuated beyond the grave. Sacred ordinances and covenants available in holy temples make it possible for individuals to return to the presence of God and for families to be united eternally."
+    },
+    {
+      "id": "oaks-trust-in-the-lord-2019",
+      "kind": "speaker",
+      "label": "Trust in the Lord",
+      "title": "Trust in the Lord",
+      "author": "President Dallin H. Oaks",
+      "publication": "General Conference, October 2019",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2019/10/17oaks?lang=eng",
+      "excerpt": "For all questions about the spirit world, I suggest two answers. First, remember that God loves His children and will surely do what is best for each of us."
+    },
+    {
+      "id": "christofferson-redemption-of-the-dead-2000",
+      "kind": "speaker",
+      "label": "The Redemption of the Dead and the Testimony of Jesus",
+      "title": "The Redemption of the Dead and the Testimony of Jesus",
+      "author": "Elder D. Todd Christofferson",
+      "publication": "General Conference, October 2000",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/10/the-redemption-of-the-dead-and-the-testimony-of-jesus?lang=eng",
+      "excerpt": "By identifying our ancestors and performing for them the saving ordinances they could not themselves perform, we are testifying of the infinite reach of the Atonement of Jesus Christ."
+    },
+    {
+      "id": "alma-40-11-12",
+      "kind": "scripture",
+      "label": "Alma 40:11–12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng&id=p11-p12#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "Now, concerning the state of the soul between death and the resurrection—Behold, it has been made known unto me by an angel, that the spirits of all men, as soon as they are departed from this mortal body, yea, the spirits of all men, whether they be good or evil, are taken home to that God who gave them life."
+        },
+        {
+          "number": 12,
+          "text": "And then shall it come to pass, that the spirits of those who are righteous are received into a state of happiness, which is called paradise, a state of rest, a state of peace, where they shall rest from all their troubles and from all care, and sorrow."
+        }
+      ]
+    },
+    {
+      "id": "alma-11-42-44",
+      "kind": "scripture",
+      "label": "Alma 11:42–44",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/11?lang=eng&id=p42-p44#p42",
+      "verses": [
+        {
+          "number": 42,
+          "text": "Now, there is a death which is called a temporal death; and the death of Christ shall loose the bands of this temporal death, that all shall be raised from this temporal death."
+        },
+        {
+          "number": 43,
+          "text": "The spirit and the body shall be reunited again in its perfect form; both limb and joint shall be restored to its proper frame, even as we now are at this time; and we shall be brought to stand before God, knowing even as we know now, and have a bright recollection of all our guilt."
+        },
+        {
+          "number": 44,
+          "text": "Now, this restoration shall come to all, both old and young, both bond and free, both male and female, both the wicked and the righteous; and even there shall not so much as a hair of their heads be lost; but every thing shall be restored to its perfect frame, as it is now, or in the body, and shall be brought and be arraigned before the bar of Christ the Son, and God the Father, and the Holy Spirit, which is one Eternal God, to be judged according to their works, whether they be good or whether they be evil."
+        }
+      ]
+    },
+    {
+      "id": "1-corinthians-15-20-22",
+      "kind": "scripture",
+      "label": "1 Corinthians 15:20–22",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=p20-p22#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "But now is Christ risen from the dead, and become the firstfruits of them that slept."
+        },
+        {
+          "number": 21,
+          "text": "For since by man came death, by man came also the resurrection of the dead."
+        },
+        {
+          "number": 22,
+          "text": "For as in Adam all die, even so in Christ shall all be made alive."
+        }
+      ]
+    },
+    {
+      "id": "1-peter-3-18-20",
+      "kind": "scripture",
+      "label": "1 Peter 3:18–20",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/3?lang=eng&id=p18-p20#p18",
+      "verses": [
+        {
+          "number": 18,
+          "text": "For Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God, being put to death in the flesh, but quickened by the Spirit:"
+        },
+        {
+          "number": 19,
+          "text": "By which also he went and preached unto the spirits in prison;"
+        },
+        {
+          "number": 20,
+          "text": "Which sometime were disobedient, when once the longsuffering of God waited in the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water."
+        }
+      ]
+    },
+    {
+      "id": "1-peter-4-6",
+      "kind": "scripture",
+      "label": "1 Peter 4:6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/4?lang=eng&id=p6#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "For for this cause was the gospel preached also to them that are dead, that they might be judged according to men in the flesh, but live according to God in the spirit."
+        }
+      ]
+    },
+    {
+      "id": "dc-138-29-34",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 138:29–34",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p29-p34#p29",
+      "verses": [
+        {
+          "number": 29,
+          "text": "And as I wondered, my eyes were opened, and my understanding quickened, and I perceived that the Lord went not in person among the wicked and the disobedient who had rejected the truth, to teach them;"
+        },
+        {
+          "number": 30,
+          "text": "But behold, from among the righteous, he organized his forces and appointed messengers, clothed with power and authority, and commissioned them to go forth and carry the light of the gospel to them that were in darkness, even to all the spirits of men; and thus was the gospel preached to the dead."
+        },
+        {
+          "number": 31,
+          "text": "And the chosen messengers went forth to declare the acceptable day of the Lord and proclaim liberty to the captives who were bound, even unto all who would repent of their sins and receive the gospel."
+        },
+        {
+          "number": 32,
+          "text": "Thus was the gospel preached to those who had died in their sins, without a knowledge of the truth, or in transgression, having rejected the prophets."
+        },
+        {
+          "number": 33,
+          "text": "These were taught faith in God, repentance from sin, vicarious baptism for the remission of sins, the gift of the Holy Ghost by the laying on of hands,"
+        },
+        {
+          "number": 34,
+          "text": "And all other principles of the gospel that were necessary for them to know in order to qualify themselves that they might be judged according to men in the flesh, but live according to God in the spirit."
+        }
+      ]
+    },
+    {
+      "id": "dc-138-58-59",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 138:58–59",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p58-p59#p58",
+      "verses": [
+        {
+          "number": 58,
+          "text": "The dead who repent will be redeemed, through obedience to the ordinances of the house of God,"
+        },
+        {
+          "number": 59,
+          "text": "And after they have paid the penalty of their transgressions, and are washed clean, shall receive a reward according to their works, for they are heirs of salvation."
+        }
+      ]
+    },
+    {
+      "id": "1-corinthians-15-29",
+      "kind": "scripture",
+      "label": "1 Corinthians 15:29",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=p29#p29",
+      "verses": [
+        {
+          "number": 29,
+          "text": "Else what shall they do which are baptized for the dead, if the dead rise not at all? why are they then baptized for the dead?"
+        }
+      ]
+    },
+    {
+      "id": "malachi-4-5-6",
+      "kind": "scripture",
+      "label": "Malachi 4:5–6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/mal/4?lang=eng&id=p5-p6#p5",
+      "verses": [
+        {
+          "number": 5,
+          "text": "¶ Behold, I will send you Elijah the prophet before the coming of the great and dreadful day of the Lord:"
+        },
+        {
+          "number": 6,
+          "text": "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with a curse."
+        }
+      ]
+    },
+    {
+      "id": "dc-2-1-3",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 2:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/2?lang=eng&id=p1-p3#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Behold, I will reveal unto you the Priesthood, by the hand of Elijah the prophet, before the coming of the great and dreadful day of the Lord."
+        },
+        {
+          "number": 2,
+          "text": "And he shall plant in the hearts of the children the promises made to the fathers, and the hearts of the children shall turn to their fathers."
+        },
+        {
+          "number": 3,
+          "text": "If it were not so, the whole earth would be utterly wasted at his coming."
+        }
+      ]
+    },
+    {
+      "id": "dc-128-15",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 128:15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng&id=p15#p15",
+      "verses": [
+        {
+          "number": 15,
+          "text": "And now, my dearly beloved brethren and sisters, let me assure you that these are principles in relation to the dead and the living that cannot be lightly passed over, as pertaining to our salvation. For their salvation is necessary and essential to our salvation, as Paul says concerning the fathers—that they without us cannot be made perfect—neither can we without our dead be made perfect."
+        }
+      ]
+    },
+    {
+      "id": "dc-137-5-10",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 137:5–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng&id=p5-p10#p5",
+      "verses": [
+        {
+          "number": 5,
+          "text": "I saw Father Adam and Abraham; and my father and my mother; my brother Alvin, that has long since slept;"
+        },
+        {
+          "number": 6,
+          "text": "And marveled how it was that he had obtained an inheritance in that kingdom, seeing that he had departed this life before the Lord had set his hand to gather Israel the second time, and had not been baptized for the remission of sins."
+        },
+        {
+          "number": 7,
+          "text": "Thus came the voice of the Lord unto me, saying: All who have died without a knowledge of this gospel, who would have received it if they had been permitted to tarry, shall be heirs of the celestial kingdom of God;"
+        },
+        {
+          "number": 8,
+          "text": "Also all that shall die henceforth without a knowledge of it, who would have received it with all their hearts, shall be heirs of that kingdom;"
+        },
+        {
+          "number": 9,
+          "text": "For I, the Lord, will judge all men according to their works, according to the desire of their hearts."
+        },
+        {
+          "number": 10,
+          "text": "And I also beheld that all children who die before they arrive at the years of accountability are saved in the celestial kingdom of heaven."
+        }
+      ]
+    },
+    {
+      "id": "acts-10-34-35",
+      "kind": "scripture",
+      "label": "Acts 10:34–35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/10?lang=eng&id=p34-p35#p34",
+      "verses": [
+        {
+          "number": 34,
+          "text": "¶ Then Peter opened his mouth, and said, Of a truth I perceive that God is no respecter of persons:"
+        },
+        {
+          "number": 35,
+          "text": "But in every nation he that feareth him, and worketh righteousness, is accepted with him."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-26-33",
+      "kind": "scripture",
+      "label": "2 Nephi 26:33",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "For none of these iniquities come of the Lord; for he doeth that which is good among the children of men; and he doeth nothing save it be plain unto the children of men; and he inviteth them all to come unto him and partake of his goodness; and he denieth none that come unto him, black and white, bond and free, male and female; and he remembereth the heathen; and all are alike unto God, both Jew and Gentile."
+        }
+      ]
+    },
+    {
+      "id": "moses-1-39",
+      "kind": "scripture",
+      "label": "Moses 1:39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39",
+      "verses": [
+        {
+          "number": 39,
+          "text": "For behold, this is my work and my glory—to bring to pass the immortality and eternal life of man."
+        }
+      ]
+    },
+    {
+      "id": "1-nephi-11-17",
+      "kind": "scripture",
+      "label": "1 Nephi 11:17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng&id=p17#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "And I said unto him: I know that he loveth his children; nevertheless, I do not know the meaning of all things."
+        }
+      ]
+    },
+    {
+      "id": "romans-8-38-39",
+      "kind": "scripture",
+      "label": "Romans 8:38–39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng&id=p38-p39#p38",
+      "verses": [
+        {
+          "number": 38,
+          "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"
+        },
+        {
+          "number": 39,
+          "text": "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."
+        }
+      ]
+    },
+    {
+      "id": "moroni-7-16",
+      "kind": "scripture",
+      "label": "Moroni 7:16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p16#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "For behold, the Spirit of Christ is given to every man, that he may know good from evil; wherefore, I show unto you the way to judge; for every thing which inviteth to do good, and to persuade to believe in Christ, is sent forth by the power and gift of Christ; wherefore ye may know with a perfect knowledge it is of God."
+        }
+      ]
+    },
+    {
+      "id": "alma-29-8",
+      "kind": "scripture",
+      "label": "Alma 29:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/29?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "For behold, the Lord doth grant unto all nations, of their own nation and tongue, to teach his word, yea, in wisdom, all that he seeth fit that they should have; therefore we see that the Lord doth counsel in wisdom, according to that which is just and true."
+        }
+      ]
+    },
+    {
+      "id": "articles-of-faith-1-11",
+      "kind": "scripture",
+      "label": "Articles of Faith 1:11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng&id=p11#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "We claim the privilege of worshiping Almighty God according to the dictates of our own conscience, and allow all men the same privilege, let them worship how, where, or what they may."
+        }
+      ]
+    },
+    {
+      "id": "dc-1-30",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 1:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "And also those to whom these commandments were given, might have power to lay the foundation of this church, and to bring it forth out of obscurity and out of darkness, the only true and living church upon the face of the whole earth, with which I, the Lord, am well pleased, speaking unto the church collectively and not individually—"
+        }
+      ]
+    }
+  ],
+  "concepts": [],
+  "steps": [
+    {
+      "id": "all-will-live-again",
+      "title": "Everyone lives on",
+      "phase": "question",
+      "method": "academic",
+      "intro": "Before asking where our loved ones will be, start with what scripture says happens to every person at death and afterward. Alma learned about it from an angel; Amulek and Paul taught about the Resurrection.",
+      "sourceIds": [
+        "alma-40-11-12",
+        "alma-11-42-44",
+        "1-corinthians-15-20-22"
+      ],
+      "branchIds": [
+        "loved-ones-now"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "sort-everyone-righteous",
+          "prompt": "Sort each statement by whom these verses say it applies to: all people, or specifically the righteous.",
+          "sourceIds": [
+            "alma-40-11-12",
+            "alma-11-42-44",
+            "1-corinthians-15-20-22"
+          ],
+          "hints": [
+            "Alma 40:11 and Alma 11:44 use the word ‘all.’ Alma 40:12 names a specific group.",
+            "Living on as a spirit, resurrection, and judgment come to everyone; paradise and rest are described for the righteous."
+          ],
+          "explanation": "Alma learned that “the spirits of all men … whether they be good or evil” return to God at death, and Amulek taught that the Resurrection “shall come to all, both old and young, both bond and free, both male and female, both the wicked and the righteous,” followed by judgment. Paradise, “a state of rest, a state of peace,” is described for “the spirits of those who are righteous.” Everyone lives again; the next steps look at what God offers those who didn’t receive the gospel in life.",
+          "categories": [
+            {
+              "id": "all",
+              "label": "All people",
+              "description": "These verses say it happens to everyone"
+            },
+            {
+              "id": "righteous",
+              "label": "The righteous",
+              "description": "These verses describe it for the righteous"
+            }
+          ],
+          "items": [
+            {
+              "id": "spirit",
+              "text": "At death their spirit is “taken home to that God who gave them life.”",
+              "category": "all",
+              "why": "Alma 40:11 says this of “the spirits of all men … whether they be good or evil.”"
+            },
+            {
+              "id": "resurrected",
+              "text": "They will be resurrected, with body and spirit reunited.",
+              "category": "all",
+              "why": "Alma 11:44: “this restoration shall come to all … both the wicked and the righteous.”"
+            },
+            {
+              "id": "alive",
+              "text": "Because of Christ, they will be “made alive.”",
+              "category": "all",
+              "why": "1 Corinthians 15:22: “as in Adam all die, even so in Christ shall all be made alive.”"
+            },
+            {
+              "id": "judged",
+              "text": "They will stand before God to be judged according to their works.",
+              "category": "all",
+              "why": "Alma 11:44 describes everyone who is restored being brought before God to be judged."
+            },
+            {
+              "id": "paradise",
+              "text": "They are received into “a state of happiness, which is called paradise.”",
+              "category": "righteous",
+              "why": "Alma 40:12 describes paradise for “the spirits of those who are righteous.”"
+            },
+            {
+              "id": "rest",
+              "text": "They “rest from all their troubles and from all care, and sorrow.”",
+              "category": "righteous",
+              "why": "Alma 40:12 describes this rest for the righteous."
+            }
+          ]
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "connect-after-death",
+          "prompt": "Connect each statement with the phrase that supports it.",
+          "sourceIds": [
+            "alma-40-11-12",
+            "alma-11-42-44",
+            "1-corinthians-15-20-22"
+          ],
+          "hints": [
+            "Two phrases come from Alma 40, one from Alma 11, and one from 1 Corinthians 15.",
+            "Look for the phrase about ‘the spirit and the body’ to match the statement about resurrection bodies."
+          ],
+          "explanation": "Alma learned that the spirits of all people return to God at death, and that the righteous enter “a state of rest, a state of peace.” Paul and Amulek teach that everyone will be resurrected because of Christ, with spirit and body “reunited again in its perfect form.” Death separates body and spirit for a time; it doesn’t end anyone.",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "continues",
+                "text": "At death the spirit doesn’t stop existing; it goes on."
+              },
+              {
+                "id": "christ",
+                "text": "Resurrection comes to everyone because of Jesus Christ."
+              },
+              {
+                "id": "peace",
+                "text": "The righteous find rest and peace after death."
+              },
+              {
+                "id": "reunited",
+                "text": "In the Resurrection, body and spirit are joined again."
+              }
+            ]
+          },
+          "right": {
+            "label": "Evidence",
+            "items": [
+              {
+                "id": "r-home",
+                "text": "“the spirits of all men … are taken home to that God who gave them life” (Alma 40:11)",
+                "sourceId": "alma-40-11-12"
+              },
+              {
+                "id": "r-adam",
+                "text": "“as in Adam all die, even so in Christ shall all be made alive” (1 Corinthians 15:22)",
+                "sourceId": "1-corinthians-15-20-22"
+              },
+              {
+                "id": "r-rest",
+                "text": "“a state of rest, a state of peace” (Alma 40:12)",
+                "sourceId": "alma-40-11-12"
+              },
+              {
+                "id": "r-frame",
+                "text": "“The spirit and the body shall be reunited again in its perfect form” (Alma 11:43)",
+                "sourceId": "alma-11-42-44"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "continues",
+              "right": "r-home",
+              "because": "Alma 40:11 says the spirits of all people are “taken home to that God who gave them life.”",
+              "clue": "Which phrase describes where spirits go at death?"
+            },
+            {
+              "left": "christ",
+              "right": "r-adam",
+              "because": "Paul says “in Christ shall all be made alive.”",
+              "clue": "Which phrase names Christ and the word ‘all’?"
+            },
+            {
+              "left": "peace",
+              "right": "r-rest",
+              "because": "Alma 40:12 describes paradise as “a state of rest, a state of peace.”",
+              "clue": "Which phrase describes rest?"
+            },
+            {
+              "left": "reunited",
+              "right": "r-frame",
+              "because": "Alma 11:43: “The spirit and the body shall be reunited again in its perfect form.”",
+              "clue": "Which phrase mentions both the spirit and the body?"
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "compare-after-death",
+          "prompt": "Decide how well each statement fits Alma 40:11–12, Alma 11:42–44, and 1 Corinthians 15:20–22.",
+          "sourceIds": [
+            "alma-40-11-12",
+            "alma-11-42-44",
+            "1-corinthians-15-20-22"
+          ],
+          "hints": [
+            "Alma 40:11 talks about ‘the state of the soul between death and the resurrection.’ What does that tell you about timing?",
+            "If a statement describes details the verses don’t mention, it goes beyond them."
+          ],
+          "explanation": "These verses are clear that everyone, member or not, lives on as a spirit and will be resurrected because of Christ. Alma describes a state “between death and the resurrection,” so death isn’t the final step: resurrection and judgment come later. The verses describe general conditions, not each person’s experience.",
+          "perspectives": [
+            {
+              "id": "members-only",
+              "voice": "A common idea",
+              "text": "Only members of the Church will be resurrected.",
+              "verdict": "contradicted",
+              "rationale": "Alma 11:44 says the restoration “shall come to all … both the wicked and the righteous,” and 1 Corinthians 15:22 says “in Christ shall all be made alive.”"
+            },
+            {
+              "id": "loved-one",
+              "voice": "A classmate",
+              "text": "A loved one who has died still exists as a spirit.",
+              "verdict": "supported",
+              "rationale": "Alma 40:11 says the spirits of all people, at death, “are taken home to that God who gave them life.”"
+            },
+            {
+              "id": "final-state",
+              "voice": "A friend",
+              "text": "At death, people go straight into their final, eternal state.",
+              "verdict": "contradicted",
+              "rationale": "Alma 40:11 describes “the state of the soul between death and the resurrection,” and Alma 11:44 places judgment after the Resurrection."
+            },
+            {
+              "id": "exact",
+              "voice": "A common idea",
+              "text": "These verses describe exactly what each person’s experience after death will be like.",
+              "verdict": "beyond",
+              "rationale": "Alma describes general states for the righteous; he doesn’t describe any individual’s experience."
+            },
+            {
+              "id": "temporary",
+              "voice": "A classmate",
+              "text": "Because of Jesus Christ, death is temporary for everyone.",
+              "verdict": "supported",
+              "rationale": "Alma 11:42: “the death of Christ shall loose the bands of this temporal death, that all shall be raised.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "build-everyone-lives",
+          "prompt": "Build a statement that Alma 40, Alma 11, and 1 Corinthians 15 support together.",
+          "sourceIds": [
+            "alma-40-11-12",
+            "alma-11-42-44",
+            "1-corinthians-15-20-22"
+          ],
+          "hints": [
+            "Start with who this applies to, then what happens, then why.",
+            "Leave out any fragment that limits resurrection to some people or skips the time between death and resurrection."
+          ],
+          "explanation": "Alma 40:11 teaches that every spirit lives on and returns to God; Alma 11:44 and 1 Corinthians 15:22 teach that all will be resurrected; and both Amulek and Paul credit Jesus Christ: “the death of Christ shall loose the bands of this temporal death,” and “in Christ shall all be made alive.” Death is a separation for a time, not an ending.",
+          "fragments": [
+            {
+              "id": "everyone",
+              "text": "Every person who dies, member or not,"
+            },
+            {
+              "id": "spirit",
+              "text": "lives on as a spirit"
+            },
+            {
+              "id": "resurrected",
+              "text": "and will be resurrected"
+            },
+            {
+              "id": "christ",
+              "text": "because of Jesus Christ,"
+            },
+            {
+              "id": "not-ending",
+              "text": "so death is a separation for a time, not an ending."
+            },
+            {
+              "id": "x-baptized",
+              "text": "if they were baptized during their life,"
+            },
+            {
+              "id": "x-final",
+              "text": "and immediately receives a final reward"
+            },
+            {
+              "id": "x-works",
+              "text": "because of their own good works,"
+            }
+          ],
+          "solution": [
+            "everyone",
+            "spirit",
+            "resurrected",
+            "christ",
+            "not-ending"
+          ],
+          "statement": "Every person who dies, member or not, lives on as a spirit and will be resurrected because of Jesus Christ, so death is a separation for a time, not an ending."
+        }
+      },
+      "insight": "Scripture’s first answer to this question is that death doesn’t end anyone. Every spirit returns to God, and because of Jesus Christ every person, “both the wicked and the righteous,” will be resurrected. Whatever else we learn, the people we love still live.",
+      "concepts": [
+        "resurrection",
+        "spirit-world"
+      ],
+      "connections": [
+        {
+          "from": "scripture:1-corinthians-15-20-22",
+          "to": "concept:resurrection",
+          "relation": "teaches",
+          "sourceIds": [
+            "1-corinthians-15-20-22"
+          ],
+          "note": "Paul teaches that as in Adam all die, so in Christ all shall be made alive."
+        },
+        {
+          "from": "scripture:alma-40-11-12",
+          "to": "concept:spirit-world",
+          "relation": "teaches",
+          "sourceIds": [
+            "alma-40-11-12"
+          ],
+          "note": "Alma learned that all spirits return to God at death and that the righteous are received into paradise."
+        }
+      ]
+    },
+    {
+      "id": "gospel-beyond-death",
+      "title": "The gospel reaches beyond death",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "Peter wrote that Jesus Christ Himself preached to spirits who had died. In 1918, President Joseph F. Smith saw in vision how that work was organized; his account is now Doctrine and Covenants 138. Read both closely.",
+      "sourceIds": [
+        "1-peter-3-18-20",
+        "1-peter-4-6",
+        "dc-138-29-34"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "highlight-who-hears",
+          "prompt": "The Lord did not go in person among those who had rejected the truth (verse 29). Did that leave them without the gospel? Tap the phrases that show how far the messengers’ preaching reached.",
+          "sourceIds": [
+            "dc-138-29-34"
+          ],
+          "hints": [
+            "Verse 30 begins with ‘But behold’: read what the Lord did instead of going in person.",
+            "Look for the word ‘all’ in verse 30, and the three kinds of people listed in verse 32."
+          ],
+          "explanation": "Though the Lord did not go in person among the disobedient (verse 29), He sent messengers “to them that were in darkness, even to all the spirits of men” (verse 30). Verse 32 names the range: those who “died in their sins, without a knowledge of the truth, or in transgression, having rejected the prophets.” The gospel reaches people who never knew it, and even people who once turned it down.",
+          "passage": "dc-138-29-34",
+          "chunks": [
+            {
+              "verse": 29,
+              "text": "And as I wondered, my eyes were opened, and my understanding quickened,"
+            },
+            {
+              "verse": 29,
+              "text": "and I perceived that the Lord went not in person among the wicked and the disobedient who had rejected the truth, to teach them;"
+            },
+            {
+              "verse": 30,
+              "text": "But behold, from among the righteous, he organized his forces and appointed messengers, clothed with power and authority,"
+            },
+            {
+              "verse": 30,
+              "text": "and commissioned them to go forth and carry the light of the gospel to them that were in darkness,"
+            },
+            {
+              "verse": 30,
+              "text": "even to all the spirits of men; and thus was the gospel preached to the dead."
+            },
+            {
+              "verse": 32,
+              "text": "Thus was the gospel preached to those who had died in their sins,"
+            },
+            {
+              "verse": 32,
+              "text": "without a knowledge of the truth,"
+            },
+            {
+              "verse": 32,
+              "text": "or in transgression, having rejected the prophets."
+            }
+          ],
+          "targets": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "minTargets": 3
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "connect-peter-dc138",
+          "prompt": "Read Peter’s words beside President Joseph F. Smith’s vision.",
+          "passages": [
+            "1-peter-3-18-20",
+            "1-peter-4-6",
+            "dc-138-29-34"
+          ],
+          "hints": [
+            "1 Peter 3:19–20 describes who heard Christ preach. Who were they in Noah’s day?",
+            "1 Peter 4:6 and Doctrine and Covenants 138:34 end with almost the same words. Read the end of the phrase."
+          ],
+          "explanation": "Peter testifies that Christ “went and preached unto the spirits in prison,” including those who had been disobedient in Noah’s day, and that the gospel was “preached also to them that are dead, that they might be judged according to men in the flesh, but live according to God in the spirit.” President Smith’s vision repeats that phrase and adds that the dead were taught faith, repentance, “vicarious baptism for the remission of sins,” and the gift of the Holy Ghost.",
+          "questions": [
+            {
+              "id": "agree",
+              "prompt": "What do 1 Peter 3:18–20 and Doctrine and Covenants 138:29–30 agree on?",
+              "options": [
+                {
+                  "id": "taken",
+                  "text": "After His death, the gospel of Jesus Christ was taken to the spirits of the dead."
+                },
+                {
+                  "id": "righteous-only",
+                  "text": "Only the righteous dead heard the gospel.",
+                  "feedback": "1 Peter 3:20 describes the spirits as those “which sometime were disobedient.”"
+                },
+                {
+                  "id": "after-resurrection",
+                  "text": "The dead must wait until their own resurrection to hear the gospel.",
+                  "feedback": "Both passages describe spirits being taught in the spirit world. Doctrine and Covenants 138:30 says “thus was the gospel preached to the dead.”"
+                }
+              ],
+              "correct": [
+                "taken"
+              ]
+            },
+            {
+              "id": "purpose",
+              "prompt": "1 Peter 4:6 and Doctrine and Covenants 138:34 share a phrase. What purpose does it give for preaching to the dead?",
+              "options": [
+                {
+                  "id": "fair",
+                  "text": "So they could be judged as people in the flesh are, and live according to God in the spirit."
+                },
+                {
+                  "id": "punished",
+                  "text": "So they would be punished for not hearing it in life.",
+                  "feedback": "Read the end of the phrase: “live according to God in the spirit.” The goal is life."
+                },
+                {
+                  "id": "nothing-needed",
+                  "text": "So the living would never need to do anything for them.",
+                  "feedback": "Doctrine and Covenants 138:33 mentions “vicarious baptism,” an ordinance done on someone else’s behalf."
+                }
+              ],
+              "correct": [
+                "fair"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "clue-why-preach",
+          "prompt": "Why would God send His gospel to those who have died? Examine the clues.",
+          "sourceIds": [
+            "1-peter-3-18-20",
+            "2-nephi-26-33",
+            "moses-1-39",
+            "christofferson-redemption-of-the-dead-2000"
+          ],
+          "hints": [
+            "Look for purpose words in each clue: ‘that he might,’ ‘to bring to pass.’",
+            "Clues 1–3 describe God’s own purposes. Clue 4 is a Church leader applying them to people who never heard the gospel in life."
+          ],
+          "explanation": "Peter says Christ suffered “that he might bring us to God”; Nephi says the Lord “inviteth them all”; and the Lord’s stated work is “the immortality and eternal life of man.” Elder Christofferson reasons from those truths that the invitation wouldn’t be withdrawn from those who never heard it in life. Preaching to the dead fits who God is.",
+          "clues": [
+            {
+              "id": "why-suffered",
+              "title": "Why Christ suffered",
+              "text": "1 Peter 3:18: “Christ also hath once suffered for sins, the just for the unjust, that he might bring us to God.”",
+              "sourceId": "1-peter-3-18-20"
+            },
+            {
+              "id": "whom",
+              "title": "Whom He invites",
+              "text": "2 Nephi 26:33: the Lord “inviteth them all to come unto him and partake of his goodness; and he denieth none that come unto him.”",
+              "sourceId": "2-nephi-26-33"
+            },
+            {
+              "id": "work",
+              "title": "God’s work",
+              "text": "Moses 1:39: “this is my work and my glory—to bring to pass the immortality and eternal life of man.”",
+              "sourceId": "moses-1-39"
+            },
+            {
+              "id": "reasoning",
+              "title": "A Church leader’s reasoning",
+              "text": "Elder D. Todd Christofferson, then of the Presidency of the Seventy: “It is inconceivable that this invitation, universally extended in life, would be rescinded for those who had not heard it before they died.”",
+              "sourceId": "christofferson-redemption-of-the-dead-2000"
+            }
+          ],
+          "question": {
+            "id": "q-why",
+            "prompt": "What do the clues suggest together?",
+            "options": [
+              {
+                "id": "invitation",
+                "text": "Christ’s purpose is to bring all of God’s children to Him, and death doesn’t cancel His invitation."
+              },
+              {
+                "id": "blame",
+                "text": "God offers the gospel after death only because the living failed to share it.",
+                "feedback": "None of the clues assigns blame. Look at what clues 1 and 3 say about God’s own purpose."
+              },
+              {
+                "id": "too-late",
+                "text": "The dead are taught so they can learn they missed their chance.",
+                "feedback": "Clue 2 says He ‘denieth none that come unto him.’ What would be the point of preaching to people who couldn’t respond?"
+              },
+              {
+                "id": "this-life",
+                "text": "God’s invitation is for this life only.",
+                "feedback": "Doctrine and Covenants 138:30 says “thus was the gospel preached to the dead.” The invitation continues after death."
+              }
+            ],
+            "correct": [
+              "invitation"
+            ]
+          }
+        },
+        "complex": {
+          "type": "compare",
+          "id": "compare-gospel-dead",
+          "prompt": "Weigh these statements against 1 Peter 3–4, Doctrine and Covenants 138:29–34, and the Church’s Topics and Questions entry on the spirit world.",
+          "sourceIds": [
+            "1-peter-3-18-20",
+            "1-peter-4-6",
+            "dc-138-29-34",
+            "gt-spirit-world"
+          ],
+          "hints": [
+            "Verse 32 tells you who is taught. Verse 31 hints that a response is needed.",
+            "Peter speaks of ‘spirits in prison.’ The Topics and Questions entry explains what that means and whether those spirits can progress."
+          ],
+          "explanation": "The passages are clear that the gospel is preached to all the spirits of the dead, including those who rejected the prophets, and that Christ Himself began the work. They describe a real choice: the messengers preach to “all who would repent of their sins and receive the gospel,” without saying who will choose it. The Topics and Questions entry describes spirit prison as the place of those who died without knowing the gospel or without repenting, and explains: “In a figurative sense, it is a prison for those who have not received the restored gospel of Jesus Christ.” Spirits there have agency and “may progress as they learn gospel principles and follow them.” The entry also describes a separate condition for those who ultimately choose to reject the gospel after it is taught to them. No source says how any particular person will choose.",
+          "perspectives": [
+            {
+              "id": "never-again",
+              "voice": "A classmate",
+              "text": "If someone rejected the gospel in life, they can never be taught again.",
+              "verdict": "contradicted",
+              "rationale": "Doctrine and Covenants 138:32 says the gospel was preached even to those “in transgression, having rejected the prophets.”"
+            },
+            {
+              "id": "all-accept",
+              "voice": "A common idea",
+              "text": "Everyone in the spirit world will accept the gospel.",
+              "verdict": "beyond",
+              "rationale": "Verse 31 describes preaching to “all who would repent of their sins and receive the gospel.” That implies a choice, and the verses don’t say how each person will choose."
+            },
+            {
+              "id": "same-principles",
+              "voice": "A friend",
+              "text": "People in the spirit world are taught the same first principles of the gospel taught on earth.",
+              "verdict": "supported",
+              "rationale": "Verse 33 lists “faith in God, repentance from sin, vicarious baptism for the remission of sins, the gift of the Holy Ghost by the laying on of hands.”"
+            },
+            {
+              "id": "no-progress",
+              "voice": "A classmate",
+              "text": "Being among the ‘spirits in prison’ means a person can never progress.",
+              "verdict": "contradicted",
+              "rationale": "Topics and Questions teaches that these spirits have agency and “may progress as they learn gospel principles and follow them,” and that if they accept the gospel and its ordinances “they may leave spirit prison and dwell in paradise.”"
+            },
+            {
+              "id": "christ-began",
+              "voice": "A common idea",
+              "text": "Jesus Christ Himself began this work.",
+              "verdict": "supported",
+              "rationale": "1 Peter 3:19 says He “went and preached unto the spirits in prison,” and Doctrine and Covenants 138:30 says He “organized his forces and appointed messengers.”"
+            }
+          ]
+        }
+      },
+      "insight": "Jesus Christ opened the preaching of the gospel to the dead, and it reaches “all the spirits of men,” including people who never knew it and people who once rejected it. The dead are taught the same gospel, and they choose for themselves. Death doesn’t end His invitation.",
+      "concepts": [
+        "salvation-for-the-dead",
+        "spirit-world",
+        "jesus-christ"
+      ],
+      "connections": [
+        {
+          "from": "scripture:dc-138-29-34",
+          "to": "concept:salvation-for-the-dead",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-138-29-34"
+          ],
+          "note": "President Joseph F. Smith saw messengers carry the gospel to all the spirits of the dead."
+        },
+        {
+          "from": "concept:atonement",
+          "to": "concept:salvation-for-the-dead",
+          "relation": "leads-to",
+          "sourceIds": [
+            "1-peter-3-18-20",
+            "christofferson-redemption-of-the-dead-2000"
+          ],
+          "note": "Christ suffered “that he might bring us to God,” and then preached to the spirits in prison."
+        }
+      ]
+    },
+    {
+      "id": "ordinances-for-the-dead",
+      "title": "Ordinances for those who have died",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "A common question is whether people who die without being sealed in the temple, including those who weren’t members of the Church, are cut off from their families forever. Scripture and official Church teaching speak to this directly.",
+      "sourceIds": [
+        "1-corinthians-15-29",
+        "dc-138-58-59",
+        "gt-baptisms-for-the-dead",
+        "gt-sealing",
+        "family-proclamation",
+        "christofferson-redemption-of-the-dead-2000"
+      ],
+      "activities": {
+        "easy": {
+          "type": "vocab-match",
+          "id": "match-ordinance-terms",
+          "prompt": "Match each term with its meaning, using the Topics and Questions entries.",
+          "sourceIds": [
+            "gt-baptisms-for-the-dead",
+            "gt-sealing",
+            "gt-family-history"
+          ],
+          "hints": [
+            "The Sealing entry is a single sentence about the temple.",
+            "The Baptisms for the Dead entry says, “Each individual has agency, or the right to choose.”"
+          ],
+          "explanation": "In a proxy ordinance, “a living person … is baptized on behalf of a deceased person.” A sealing is “an ordinance performed in the temple eternally uniting a husband and wife, or children and their parents.” The dead keep their agency: “Each individual has agency, or the right to choose.” And family history is “discovering and learning more about our family members” and “performing saving ordinances for them in temples.”",
+          "pairs": [
+            {
+              "id": "proxy",
+              "term": "Proxy (vicarious) ordinance",
+              "meaning": "An ordinance a living person receives on behalf of someone who has died"
+            },
+            {
+              "id": "sealing",
+              "term": "Sealing",
+              "meaning": "A temple ordinance that eternally unites a husband and wife, or children and their parents"
+            },
+            {
+              "id": "agency",
+              "term": "Agency",
+              "meaning": "The right to choose, which those who have died keep: they may accept or reject ordinances done for them"
+            },
+            {
+              "id": "family-history",
+              "term": "Family history",
+              "meaning": "Discovering and learning about family members, and performing saving ordinances for them in temples"
+            }
+          ],
+          "extraMeanings": [
+            "An ordinance that makes a person a Church member without their consent",
+            "A promise that every ordinance done for the dead will be accepted"
+          ]
+        },
+        "medium": {
+          "type": "sort",
+          "id": "sort-taught-misunderstood",
+          "prompt": "Sort each statement: is it taught by these sources, or is it a misunderstanding they correct?",
+          "sourceIds": [
+            "1-corinthians-15-29",
+            "dc-138-58-59",
+            "gt-baptisms-for-the-dead",
+            "family-proclamation"
+          ],
+          "hints": [
+            "The Baptisms for the Dead entry names one common misunderstanding directly: “Some people have misunderstood…”",
+            "Check what the entry says about agency and about membership records."
+          ],
+          "explanation": "The Topics and Questions entry explains that proxy baptism doesn’t force anyone: “Individuals can then choose to accept or reject the ordinances that have been performed on their behalf,” and “The names of deceased persons are not added to the membership records of the Church.” Paul mentions those “baptized for the dead” (1 Corinthians 15:29); Doctrine and Covenants 138:58 teaches that “the dead who repent will be redeemed, through obedience to the ordinances of the house of God”; and the family proclamation says temple ordinances make it possible “for families to be united eternally.”",
+          "categories": [
+            {
+              "id": "taught",
+              "label": "Taught by these sources"
+            },
+            {
+              "id": "misunderstanding",
+              "label": "A misunderstanding they correct"
+            }
+          ],
+          "items": [
+            {
+              "id": "paul",
+              "text": "Baptisms for the dead were known in New Testament times.",
+              "category": "taught",
+              "why": "Paul asks, “why are they then baptized for the dead?” (1 Corinthians 15:29), and the Topics and Questions entry says the New Testament indicates the practice in Paul’s day."
+            },
+            {
+              "id": "forced",
+              "text": "A proxy baptism makes someone who has died join the Church against their will.",
+              "category": "misunderstanding",
+              "why": "The entry says this is a misunderstanding: “This is not the case. Each individual has agency, or the right to choose.”"
+            },
+            {
+              "id": "choose",
+              "text": "Each person who has died can choose to accept or reject ordinances done for them.",
+              "category": "taught",
+              "why": "The entry: “Individuals can then choose to accept or reject the ordinances that have been performed on their behalf.”"
+            },
+            {
+              "id": "united",
+              "text": "Temple ordinances and covenants make it possible for families to be united eternally.",
+              "category": "taught",
+              "why": "The family proclamation says this directly."
+            },
+            {
+              "id": "members-only",
+              "text": "Ordinances for the dead are only for people who were Church members.",
+              "category": "misunderstanding",
+              "why": "The entry says God “has prepared a way for all people to receive the blessings of baptism,” including those who never heard the gospel."
+            },
+            {
+              "id": "records",
+              "text": "People baptized by proxy are added to the Church’s membership records.",
+              "category": "misunderstanding",
+              "why": "The entry: “The names of deceased persons are not added to the membership records of the Church.”"
+            },
+            {
+              "id": "redeemed",
+              "text": "The dead who repent can be redeemed through the ordinances of the house of God.",
+              "category": "taught",
+              "why": "Doctrine and Covenants 138:58 teaches this."
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "clue-not-sealed",
+          "prompt": "Does dying without being sealed in the temple mean being cut off from family forever? Examine the clues.",
+          "sourceIds": [
+            "family-proclamation",
+            "christofferson-redemption-of-the-dead-2000",
+            "gt-baptisms-for-the-dead",
+            "dc-138-58-59",
+            "gt-family-history"
+          ],
+          "hints": [
+            "Clue 2 describes what can happen for spirits who are waiting for the Resurrection.",
+            "Clue 3 adds that each person chooses. Put clues 2 and 3 together."
+          ],
+          "explanation": "The family proclamation teaches that temple ordinances make it possible “for families to be united eternally.” Elder Christofferson explains that spirits awaiting resurrection “can be bound in heaven as husband and wife and be sealed to their fathers and mothers,” and the Topics and Questions entry adds that each person chooses whether to accept the ordinances. So dying without being sealed doesn’t have to mean being separated forever: the ordinances can be offered, and the choice remains theirs.",
+          "clues": [
+            {
+              "id": "proclamation",
+              "title": "The family proclamation",
+              "text": "“Sacred ordinances and covenants available in holy temples make it possible for individuals to return to the presence of God and for families to be united eternally.”",
+              "sourceId": "family-proclamation"
+            },
+            {
+              "id": "sealed-after",
+              "title": "Sealing for those who have died",
+              "text": "Elder D. Todd Christofferson, then of the Presidency of the Seventy, explained that spirits awaiting resurrection “can be bound in heaven as husband and wife and be sealed to their fathers and mothers of all generations past.”",
+              "sourceId": "christofferson-redemption-of-the-dead-2000"
+            },
+            {
+              "id": "choice",
+              "title": "Their choice",
+              "text": "Topics and Questions: “Individuals can then choose to accept or reject the ordinances that have been performed on their behalf.”",
+              "sourceId": "gt-baptisms-for-the-dead"
+            },
+            {
+              "id": "redeemed",
+              "title": "Redeemed through ordinances",
+              "text": "Doctrine and Covenants 138:58: “The dead who repent will be redeemed, through obedience to the ordinances of the house of God.”",
+              "sourceId": "dc-138-58-59"
+            },
+            {
+              "id": "a-way",
+              "title": "A way prepared",
+              "text": "Topics and Questions: Heavenly Father “has prepared a way for family relationships to continue throughout eternity.”",
+              "sourceId": "gt-family-history"
+            }
+          ],
+          "question": {
+            "id": "q-sealed",
+            "prompt": "What do the clues suggest is the most accurate answer?",
+            "options": [
+              {
+                "id": "not-necessarily",
+                "text": "Not necessarily. Sealings and other ordinances can be performed for those who have died, and they can choose to accept them, so dying unsealed doesn’t have to mean being separated forever."
+              },
+              {
+                "id": "permanent",
+                "text": "Yes. If someone dies without being sealed, the separation is permanent.",
+                "feedback": "Look at clue 2: spirits awaiting resurrection can be sealed to their families."
+              },
+              {
+                "id": "automatic",
+                "text": "No one needs to be sealed; families stay together automatically.",
+                "feedback": "Clue 1 says temple ordinances and covenants are what make it possible for families to be united eternally."
+              },
+              {
+                "id": "no-choice",
+                "text": "Once the living do the temple work, the person has no choice in the matter.",
+                "feedback": "Clue 3: each person can choose to accept or reject the ordinances."
+              }
+            ],
+            "correct": [
+              "not-necessarily"
+            ]
+          }
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "build-ordinances",
+          "prompt": "Build a principle about ordinances for the dead that these sources support together.",
+          "sourceIds": [
+            "gt-baptisms-for-the-dead",
+            "family-proclamation",
+            "christofferson-redemption-of-the-dead-2000",
+            "dc-138-58-59"
+          ],
+          "hints": [
+            "The Baptisms for the Dead entry begins its reason with “Because God is merciful.”",
+            "Keep each person’s agency in the statement, and end with what the proclamation says ordinances make possible."
+          ],
+          "explanation": "Topics and Questions explains, “Because God is merciful, He has prepared a way for all people to receive the blessings of baptism,” and that individuals “choose to accept or reject” what is done for them. Elder Christofferson teaches that sealings can be performed for the dead, and the family proclamation says temple ordinances make it possible “for families to be united eternally.”",
+          "fragments": [
+            {
+              "id": "merciful",
+              "text": "Because God is merciful,"
+            },
+            {
+              "id": "performed",
+              "text": "ordinances like baptism and sealing can be performed for those who have died,"
+            },
+            {
+              "id": "choose",
+              "text": "and each person may freely accept or reject them,"
+            },
+            {
+              "id": "united",
+              "text": "so that families can be united eternally."
+            },
+            {
+              "id": "x-will",
+              "text": "whether or not they want them,"
+            },
+            {
+              "id": "x-members",
+              "text": "but only for those who were members in life,"
+            },
+            {
+              "id": "x-earn",
+              "text": "so that the living can earn their own salvation."
+            }
+          ],
+          "solution": [
+            "merciful",
+            "performed",
+            "choose",
+            "united"
+          ],
+          "statement": "Because God is merciful, ordinances like baptism and sealing can be performed for those who have died, and each person may freely accept or reject them, so that families can be united eternally."
+        }
+      },
+      "insight": "Not being sealed in this life doesn’t have to mean being separated forever. Because God is merciful, baptism, sealing, and other ordinances can be performed for those who have died, and each person is free to accept them. The family proclamation teaches that these ordinances make it possible for families to be united eternally.",
+      "concepts": [
+        "ordinances",
+        "eternal-families",
+        "salvation-for-the-dead",
+        "agency"
+      ],
+      "connections": [
+        {
+          "from": "concept:ordinances",
+          "to": "concept:eternal-families",
+          "relation": "leads-to",
+          "sourceIds": [
+            "family-proclamation",
+            "gt-sealing"
+          ],
+          "note": "Temple ordinances and covenants make it possible for families to be united eternally."
+        },
+        {
+          "from": "scripture:dc-138-58-59",
+          "to": "concept:salvation-for-the-dead",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-138-58-59"
+          ],
+          "note": "The dead who repent will be redeemed through obedience to the ordinances of the house of God."
+        }
+      ]
+    },
+    {
+      "id": "hearts-turned",
+      "title": "Hearts turned to the fathers",
+      "phase": "discover",
+      "method": "academic",
+      "depth": "deep",
+      "intro": "The last verses of the Old Testament promise that Elijah would come to turn the hearts of fathers and children to each other. Modern revelation repeats the promise, and Joseph Smith explained why it matters for the living and the dead.",
+      "sourceIds": [
+        "malachi-4-5-6",
+        "dc-2-1-3",
+        "dc-128-15"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "highlight-need-each-other",
+          "prompt": "Tap the phrases in Doctrine and Covenants 128:15 that explain why the living and the dead need each other.",
+          "sourceIds": [
+            "dc-128-15"
+          ],
+          "hints": [
+            "The first half of the verse says these principles are important. The second half says why.",
+            "Look for ‘For their salvation…’ and for the phrase about being ‘made perfect.’"
+          ],
+          "explanation": "Joseph Smith wrote that “their salvation is necessary and essential to our salvation,” and that “they without us cannot be made perfect—neither can we without our dead be made perfect.” The living and the dead are bound up in each other’s salvation.",
+          "passage": "dc-128-15",
+          "chunks": [
+            {
+              "verse": 15,
+              "text": "And now, my dearly beloved brethren and sisters,"
+            },
+            {
+              "verse": 15,
+              "text": "let me assure you that these are principles in relation to the dead and the living that cannot be lightly passed over,"
+            },
+            {
+              "verse": 15,
+              "text": "as pertaining to our salvation."
+            },
+            {
+              "verse": 15,
+              "text": "For their salvation is necessary and essential to our salvation,"
+            },
+            {
+              "verse": 15,
+              "text": "as Paul says concerning the fathers—that they without us cannot be made perfect—neither can we without our dead be made perfect."
+            }
+          ],
+          "targets": [
+            3,
+            4
+          ]
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "connect-elijah",
+          "prompt": "Compare Malachi 4:5–6 with Doctrine and Covenants 2:1–3, then read Doctrine and Covenants 128:15.",
+          "passages": [
+            "malachi-4-5-6",
+            "dc-2-1-3",
+            "dc-128-15"
+          ],
+          "hints": [
+            "Malachi speaks of turning hearts; Doctrine and Covenants 2:2 speaks of something planted in hearts.",
+            "Doctrine and Covenants 128:15 explains why these principles “cannot be lightly passed over.”"
+          ],
+          "explanation": "Malachi says Elijah will “turn the heart of the fathers to the children, and the heart of the children to their fathers.” Doctrine and Covenants 2 adds that he will “plant in the hearts of the children the promises made to the fathers.” Joseph Smith explained why this matters so much: neither the living nor the dead can be made perfect without the other.",
+          "questions": [
+            {
+              "id": "adds",
+              "prompt": "What does Doctrine and Covenants 2:2 add to Malachi 4:6?",
+              "options": [
+                {
+                  "id": "promises",
+                  "text": "It speaks of planting in the children’s hearts the promises made to the fathers."
+                },
+                {
+                  "id": "no-children",
+                  "text": "It removes any mention of children.",
+                  "feedback": "Read verse 2 again: “in the hearts of the children.”"
+                },
+                {
+                  "id": "after",
+                  "text": "It says Elijah would come after the Second Coming.",
+                  "feedback": "Both passages say “before the coming of the great and dreadful day of the Lord.”"
+                }
+              ],
+              "correct": [
+                "promises"
+              ]
+            },
+            {
+              "id": "why-matters",
+              "prompt": "According to Doctrine and Covenants 128:15, why do these principles matter so much?",
+              "options": [
+                {
+                  "id": "together",
+                  "text": "The salvation of the dead is essential to our own: neither the living nor the dead can be made perfect without the other."
+                },
+                {
+                  "id": "records",
+                  "text": "Because keeping accurate family records is required for baptism.",
+                  "feedback": "The verse doesn’t mention records. Look for what it says about salvation and being made perfect."
+                },
+                {
+                  "id": "living-only",
+                  "text": "Because only the living can be made perfect.",
+                  "feedback": "The verse says “they without us cannot be made perfect—neither can we without our dead be made perfect.”"
+                }
+              ],
+              "correct": [
+                "together"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "Malachi’s promise, repeated in modern revelation, describes hearts turning between generations. Joseph Smith taught that the living and the dead need each other: “they without us cannot be made perfect—neither can we without our dead be made perfect.” Family history and temple work are one way that turning happens.",
+      "concepts": [
+        "eternal-families",
+        "salvation-for-the-dead"
+      ],
+      "connections": [
+        {
+          "from": "scripture:malachi-4-5-6",
+          "to": "concept:eternal-families",
+          "relation": "relates-to",
+          "sourceIds": [
+            "malachi-4-5-6",
+            "dc-2-1-3"
+          ],
+          "note": "Malachi foretold Elijah’s coming to turn the hearts of fathers and children to each other."
+        }
+      ]
+    },
+    {
+      "id": "desires-of-the-heart",
+      "title": "Judged by works and the desires of the heart",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "In January 1836, in the Kirtland Temple, Joseph Smith received a vision in which he saw his brother Alvin, and he marveled. Alvin had died years earlier without being baptized. The Lord’s explanation teaches how He judges all people. It describes how He judges, not how He will judge any particular person.",
+      "sourceIds": [
+        "dc-137-5-10",
+        "dc-138-29-34",
+        "acts-10-34-35",
+        "2-nephi-26-33"
+      ],
+      "branchIds": [
+        "other-faiths"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "highlight-desires",
+          "prompt": "Joseph marveled that Alvin was there without having been baptized. Tap the phrases in the Lord’s answer that focus on what a person does and desires.",
+          "sourceIds": [
+            "dc-137-5-10",
+            "dc-138-29-34"
+          ],
+          "hints": [
+            "The Lord’s answer begins in verse 7: “Thus came the voice of the Lord unto me.”",
+            "Look for ‘would have received it’ in verses 7 and 8, and read all of verse 9."
+          ],
+          "explanation": "Joseph “marveled” because Alvin “had not been baptized for the remission of sins.” The Lord’s answer speaks of those who died “without a knowledge of this gospel” but “would have received it,” and verse 9 gives the principle for everyone: “For I, the Lord, will judge all men according to their works, according to the desire of their hearts.” These verses describe how the Lord judges; they don’t tell us how He will judge any particular person. Doctrine and Covenants 138:32 adds that the gospel is preached even to those who rejected the prophets.",
+          "passage": "dc-137-5-10",
+          "chunks": [
+            {
+              "verse": 6,
+              "text": "And marveled how it was that he had obtained an inheritance in that kingdom,"
+            },
+            {
+              "verse": 6,
+              "text": "seeing that he had departed this life before the Lord had set his hand to gather Israel the second time,"
+            },
+            {
+              "verse": 6,
+              "text": "and had not been baptized for the remission of sins."
+            },
+            {
+              "verse": 7,
+              "text": "Thus came the voice of the Lord unto me, saying:"
+            },
+            {
+              "verse": 7,
+              "text": "All who have died without a knowledge of this gospel,"
+            },
+            {
+              "verse": 7,
+              "text": "who would have received it if they had been permitted to tarry,"
+            },
+            {
+              "verse": 7,
+              "text": "shall be heirs of the celestial kingdom of God;"
+            },
+            {
+              "verse": 8,
+              "text": "Also all that shall die henceforth without a knowledge of it,"
+            },
+            {
+              "verse": 8,
+              "text": "who would have received it with all their hearts,"
+            },
+            {
+              "verse": 8,
+              "text": "shall be heirs of that kingdom;"
+            },
+            {
+              "verse": 9,
+              "text": "For I, the Lord, will judge all men according to their works,"
+            },
+            {
+              "verse": 9,
+              "text": "according to the desire of their hearts."
+            }
+          ],
+          "targets": [
+            5,
+            8,
+            10,
+            11
+          ]
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "connect-how-god-judges",
+          "prompt": "Connect each statement with the scripture that supports it.",
+          "sourceIds": [
+            "dc-137-5-10",
+            "acts-10-34-35",
+            "2-nephi-26-33"
+          ],
+          "hints": [
+            "Two statements come from Acts 10, one from 2 Nephi 26, and two from Doctrine and Covenants 137.",
+            "‘No respecter of persons’ means God doesn’t play favorites."
+          ],
+          "explanation": "Peter learned that “God is no respecter of persons” and that “in every nation he that feareth him, and worketh righteousness, is accepted with him.” Nephi taught that the Lord “inviteth them all” and “denieth none that come unto him.” And the Lord told Joseph Smith that He judges “according to their works, according to the desire of their hearts,” and spoke of those who died without a knowledge of the gospel but “would have received it.”",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "favorites",
+                "text": "God doesn’t play favorites."
+              },
+              {
+                "id": "every-nation",
+                "text": "People in every nation who fear God and do right are accepted by Him."
+              },
+              {
+                "id": "invites",
+                "text": "The Lord invites everyone and turns away no one who comes to Him."
+              },
+              {
+                "id": "desires",
+                "text": "God judges by what people do and what they truly desire."
+              },
+              {
+                "id": "chance",
+                "text": "Those who died without a knowledge of the gospel, but would have received it, are not shut out."
+              }
+            ]
+          },
+          "right": {
+            "label": "Scripture",
+            "items": [
+              {
+                "id": "r-respecter",
+                "text": "“God is no respecter of persons” (Acts 10:34)",
+                "sourceId": "acts-10-34-35"
+              },
+              {
+                "id": "r-nation",
+                "text": "“in every nation he that feareth him, and worketh righteousness, is accepted with him” (Acts 10:35)",
+                "sourceId": "acts-10-34-35"
+              },
+              {
+                "id": "r-invites",
+                "text": "“he inviteth them all to come unto him … and he denieth none that come unto him” (2 Nephi 26:33)",
+                "sourceId": "2-nephi-26-33"
+              },
+              {
+                "id": "r-desire",
+                "text": "“according to their works, according to the desire of their hearts” (Doctrine and Covenants 137:9)",
+                "sourceId": "dc-137-5-10"
+              },
+              {
+                "id": "r-tarry",
+                "text": "“who would have received it if they had been permitted to tarry” (Doctrine and Covenants 137:7)",
+                "sourceId": "dc-137-5-10"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "favorites",
+              "right": "r-respecter",
+              "because": "Acts 10:34: “God is no respecter of persons.”",
+              "clue": "Which phrase is about God not favoring some people over others?"
+            },
+            {
+              "left": "every-nation",
+              "right": "r-nation",
+              "because": "Acts 10:35 says those in every nation who fear Him and work righteousness are accepted.",
+              "clue": "Which phrase mentions ‘every nation’?"
+            },
+            {
+              "left": "invites",
+              "right": "r-invites",
+              "because": "2 Nephi 26:33: the Lord “inviteth them all” and “denieth none that come unto him.”",
+              "clue": "Which phrase is about an invitation?"
+            },
+            {
+              "left": "desires",
+              "right": "r-desire",
+              "because": "Doctrine and Covenants 137:9 names both works and the desires of the heart.",
+              "clue": "Which phrase mentions both works and the heart?"
+            },
+            {
+              "left": "chance",
+              "right": "r-tarry",
+              "because": "Doctrine and Covenants 137:7 speaks of those who “would have received it if they had been permitted to tarry.”",
+              "clue": "Which phrase is about what someone would have done with more time?"
+            }
+          ]
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "connect-judgment",
+          "prompt": "Read Doctrine and Covenants 137:5–10 beside Acts 10:34–35, where Peter speaks after being sent to teach Cornelius, a Gentile.",
+          "passages": [
+            "dc-137-5-10",
+            "acts-10-34-35"
+          ],
+          "hints": [
+            "Acts 10:35 and Doctrine and Covenants 137:9 each name what God looks at. Compare the two lists.",
+            "Joseph “marveled” for a reason given at the end of verse 6."
+          ],
+          "explanation": "Acts 10:35 describes those who fear God and work righteousness; Doctrine and Covenants 137:9 describes judgment by works and the desires of the heart. Both look past outward labels to what a person does and is. Joseph marveled because Alvin “had not been baptized”; the Lord’s answer didn’t make baptism unimportant (Doctrine and Covenants 138:33 shows baptism taught even to the dead). It showed that He takes into account what a person would have done with the chance, and it gave the principle: He judges “according to their works, according to the desire of their hearts.”",
+          "questions": [
+            {
+              "id": "common",
+              "prompt": "What do Acts 10:35 and Doctrine and Covenants 137:9 have in common?",
+              "options": [
+                {
+                  "id": "inside",
+                  "text": "Both focus on what a person does and desires: fearing God and working righteousness; works and the desire of the heart."
+                },
+                {
+                  "id": "church",
+                  "text": "Both say God looks mainly at which church a person attended.",
+                  "feedback": "Look at what each verse actually names. Neither mentions a church."
+                },
+                {
+                  "id": "no-works",
+                  "text": "Both say actions don’t matter at all.",
+                  "feedback": "Acts 10:35 says “worketh righteousness,” and Doctrine and Covenants 137:9 says “according to their works.”"
+                }
+              ],
+              "correct": [
+                "inside"
+              ]
+            },
+            {
+              "id": "marveled",
+              "prompt": "Why did Joseph marvel, and what did the Lord’s answer add?",
+              "options": [
+                {
+                  "id": "baptism",
+                  "text": "Alvin had died unbaptized; the Lord explained that He judges by works and the desires of the heart, and knows who would have received the gospel."
+                },
+                {
+                  "id": "secret",
+                  "text": "Joseph thought Alvin had been wicked; the Lord said Alvin had been baptized in secret.",
+                  "feedback": "Verse 6 says plainly that Alvin “had not been baptized for the remission of sins.”"
+                },
+                {
+                  "id": "unimportant",
+                  "text": "Joseph thought baptism didn’t matter; the Lord agreed.",
+                  "feedback": "Joseph marveled because baptism does matter. Doctrine and Covenants 138:33 shows “vicarious baptism” being taught to the dead."
+                }
+              ],
+              "correct": [
+                "baptism"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "clue",
+          "id": "clue-how-judged",
+          "prompt": "Examine the clues. What can we say about how God will judge a loved one who wasn’t a member of the Church?",
+          "sourceIds": [
+            "dc-137-5-10",
+            "acts-10-34-35",
+            "gt-plan-of-salvation",
+            "dc-138-29-34",
+            "christofferson-redemption-of-the-dead-2000"
+          ],
+          "hints": [
+            "Clues 1–3 describe what God looks at. Clue 4 describes who is given the gospel. Clue 5 connects fairness to Christ.",
+            "Do any of the clues tell us the outcome for a particular person?"
+          ],
+          "explanation": "God judges “according to their works, according to the desire of their hearts,” He “is no respecter of persons,” and the gospel is preached even to those who rejected the prophets. Elder Christofferson adds that there is no injustice in salvation coming through one Savior when “that One and His salvation are offered to every soul, without exception.” These clues describe how God judges; none of them tells us the outcome for any individual. That is in His hands.",
+          "clues": [
+            {
+              "id": "desire",
+              "title": "Works and desires",
+              "text": "Doctrine and Covenants 137:9: “For I, the Lord, will judge all men according to their works, according to the desire of their hearts.”",
+              "sourceId": "dc-137-5-10"
+            },
+            {
+              "id": "respecter",
+              "title": "No favorites",
+              "text": "Acts 10:34–35: “God is no respecter of persons: But in every nation he that feareth him, and worketh righteousness, is accepted with him.”",
+              "sourceId": "acts-10-34-35"
+            },
+            {
+              "id": "plan",
+              "title": "Desires and obedience",
+              "text": "Topics and Questions: “God will judge us according to our desires and our obedience to the commandments.”",
+              "sourceId": "gt-plan-of-salvation"
+            },
+            {
+              "id": "rejected",
+              "title": "Taught after death",
+              "text": "Doctrine and Covenants 138:32: the gospel was preached to those who died “without a knowledge of the truth, or in transgression, having rejected the prophets.”",
+              "sourceId": "dc-138-29-34"
+            },
+            {
+              "id": "every-soul",
+              "title": "Offered to every soul",
+              "text": "Elder D. Todd Christofferson, then of the Presidency of the Seventy: “There is no injustice in there being but One through whom salvation may come, when that One and His salvation are offered to every soul, without exception.”",
+              "sourceId": "christofferson-redemption-of-the-dead-2000"
+            }
+          ],
+          "question": {
+            "id": "q-judged",
+            "prompt": "What do the clues suggest together?",
+            "options": [
+              {
+                "id": "fair-personal",
+                "text": "God will offer them His gospel and judge them fairly and personally, by their works and the desires of their heart; the outcome is in His hands."
+              },
+              {
+                "id": "label",
+                "text": "They will be judged only by which church they belonged to.",
+                "feedback": "Clues 1 and 2 describe what God looks at: works and the desires of the heart, in every nation."
+              },
+              {
+                "id": "same-outcome",
+                "text": "Because God is fair, the outcome will be the same for everyone, whatever they choose.",
+                "feedback": "Clue 3 mentions our desires and obedience, and Doctrine and Covenants 138:31 speaks of those “who would repent of their sins and receive the gospel.” Choices matter."
+              },
+              {
+                "id": "work-out",
+                "text": "From these clues we can work out exactly what each person will receive.",
+                "feedback": "The clues describe how God judges, not the result for any individual. Only He knows each heart."
+              }
+            ],
+            "correct": [
+              "fair-personal"
+            ]
+          }
+        }
+      },
+      "insight": "The Lord judges “according to their works, according to the desire of their hearts,” and He is no respecter of persons. His gospel is preached even to those who rejected the prophets (Doctrine and Covenants 138:32), and He offers it to everyone. Scripture describes how He judges, not the outcome for any individual; that is His to decide.",
+      "concepts": [
+        "judgment",
+        "love-of-god",
+        "salvation-for-the-dead"
+      ],
+      "connections": [
+        {
+          "from": "scripture:dc-137-5-10",
+          "to": "concept:judgment",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-137-5-10"
+          ],
+          "note": "The Lord told Joseph Smith that He judges all people by their works and the desires of their hearts."
+        },
+        {
+          "from": "concept:judgment",
+          "to": "concept:salvation-for-the-dead",
+          "relation": "relates-to",
+          "sourceIds": [
+            "dc-137-5-10"
+          ],
+          "note": "The summary of Doctrine and Covenants 137 says verses 7–9 reveal the doctrine of salvation for the dead; verse 9 gives the reason: the Lord judges by works and the desires of the heart."
+        }
+      ]
+    },
+    {
+      "id": "trust-in-his-love",
+      "title": "What we know, and what we leave to God",
+      "phase": "understand",
+      "method": "analytical",
+      "intro": "Some questions about loved ones, like exactly where they are, who they are with, or what they will choose, scripture doesn’t answer. President Dallin H. Oaks, then First Counselor in the First Presidency, taught in 2019 how to approach questions like these, and Nephi showed the same attitude centuries earlier.",
+      "sourceIds": [
+        "oaks-trust-in-the-lord-2019",
+        "1-nephi-11-17",
+        "romans-8-38-39",
+        "moses-1-39",
+        "gt-spirit-world"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "sort-known-unknown",
+          "prompt": "Sort each statement: is it revealed in scripture or official teaching you’ve studied, or is it something not revealed that is left to God?",
+          "sourceIds": [
+            "alma-40-11-12",
+            "dc-138-29-34",
+            "dc-137-5-10",
+            "family-proclamation",
+            "oaks-trust-in-the-lord-2019"
+          ],
+          "hints": [
+            "Ask: does a verse or official teaching you’ve read state this, or would we need to know one person’s heart and future?",
+            "Anything about a specific person’s choices, location, or eternal reward is in God’s hands."
+          ],
+          "explanation": "Scripture and official teaching reveal a lot about how God works: spirits live on, the gospel is preached to the dead, ordinances can be offered, and God judges by works and desires. But President Oaks noted that “our canon of scripture contains very little about the spirit world,” and no source tells us any one person’s choices or final reward. Those belong to God, who knows each heart.",
+          "categories": [
+            {
+              "id": "revealed",
+              "label": "Revealed",
+              "description": "Taught in scripture or official teaching"
+            },
+            {
+              "id": "not-revealed",
+              "label": "Left to God",
+              "description": "Not revealed for any individual"
+            }
+          ],
+          "items": [
+            {
+              "id": "spirits-live",
+              "text": "Spirits continue to live after death.",
+              "category": "revealed",
+              "why": "Alma 40:11."
+            },
+            {
+              "id": "preached",
+              "text": "The gospel is preached in the spirit world.",
+              "category": "revealed",
+              "why": "Doctrine and Covenants 138:30."
+            },
+            {
+              "id": "judge",
+              "text": "God judges each person by their works and the desires of their heart.",
+              "category": "revealed",
+              "why": "Doctrine and Covenants 137:9."
+            },
+            {
+              "id": "united",
+              "text": "Temple ordinances make it possible for families to be united eternally.",
+              "category": "revealed",
+              "why": "The family proclamation."
+            },
+            {
+              "id": "doing-now",
+              "text": "Exactly what a loved one who has died is doing in the spirit world right now.",
+              "category": "not-revealed",
+              "why": "President Oaks taught that beyond the basics, scripture says very little about conditions in the spirit world."
+            },
+            {
+              "id": "accept",
+              "text": "Whether a particular person will accept the gospel after this life.",
+              "category": "not-revealed",
+              "why": "Each person chooses, and only God knows each heart."
+            },
+            {
+              "id": "reward",
+              "text": "What eternal reward a particular person will receive.",
+              "category": "not-revealed",
+              "why": "Scripture teaches how God judges, not the outcome for any individual."
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "connect-trust",
+          "prompt": "Read Nephi’s answer to an angel’s question, Paul’s words to the Romans, and the Lord’s words to Moses.",
+          "passages": [
+            "1-nephi-11-17",
+            "romans-8-38-39",
+            "moses-1-39"
+          ],
+          "hints": [
+            "Nephi uses the word ‘nevertheless.’ What does he know, and what doesn’t he know?",
+            "The first thing Paul lists in Romans 8:38 is ‘death.’"
+          ],
+          "explanation": "Nephi models honest faith: “I know that he loveth his children; nevertheless, I do not know the meaning of all things.” Paul adds that neither “death, nor life” can “separate us from the love of God, which is in Christ Jesus our Lord.” And the Lord declares that His work is “to bring to pass the immortality and eternal life of man.” We may not know every detail, but we know whose hands our loved ones are in.",
+          "questions": [
+            {
+              "id": "nephi",
+              "prompt": "Nephi admits he doesn’t know “the meaning of all things.” What does he say he does know?",
+              "options": [
+                {
+                  "id": "loves",
+                  "text": "That God loves His children."
+                },
+                {
+                  "id": "everything",
+                  "text": "Exactly how every question will be answered.",
+                  "feedback": "Nephi says the opposite: “I do not know the meaning of all things.”"
+                },
+                {
+                  "id": "first",
+                  "text": "That knowing God’s love requires understanding everything first.",
+                  "feedback": "Nephi says “nevertheless”: he knows God’s love even without knowing everything."
+                }
+              ],
+              "correct": [
+                "loves"
+              ]
+            },
+            {
+              "id": "paul",
+              "prompt": "What does Romans 8:38–39 offer someone whose loved one has died?",
+              "options": [
+                {
+                  "id": "not-separated",
+                  "text": "Not even death can separate us from the love of God, which is in Christ Jesus."
+                },
+                {
+                  "id": "ends",
+                  "text": "Death ends God’s ability to reach a person.",
+                  "feedback": "The first thing Paul lists is “death,” and he says it cannot separate us from God’s love."
+                },
+                {
+                  "id": "perfect-only",
+                  "text": "Only people who are perfect stay within God’s love.",
+                  "feedback": "Paul lists every power he can think of, and none of them can separate us from God’s love."
+                }
+              ],
+              "correct": [
+                "not-separated"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "compare-speculation",
+          "prompt": "Decide how well each statement fits the sources in this step, including President Oaks’s counsel and the Topics and Questions entry on the spirit world.",
+          "sourceIds": [
+            "oaks-trust-in-the-lord-2019",
+            "gt-spirit-world",
+            "1-nephi-11-17"
+          ],
+          "hints": [
+            "President Oaks distinguishes official doctrine from personal experiences and speculation.",
+            "A statement about one particular person usually goes beyond what any source can tell us."
+          ],
+          "explanation": "Church teaching says family relationships matter in the spirit world, and President Oaks reported Joseph Smith’s teaching that righteous family members will be together there. But no source can tell us about one person’s situation, and President Oaks warned against treating personal accounts as doctrine. His counsel for unanswered questions is to “remember that God loves His children and will surely do what is best for each of us.”",
+          "perspectives": [
+            {
+              "id": "definitely",
+              "voice": "A common hope",
+              "text": "A loved one who has died is definitely with certain family members in the spirit world right now.",
+              "verdict": "beyond",
+              "rationale": "Topics and Questions teaches that the faithful “will be able to be with their families there,” and President Oaks reported Joseph Smith’s teaching that righteous family members will be together. But no source tells us about one specific person; that is left to God."
+            },
+            {
+              "id": "matter",
+              "voice": "A friend",
+              "text": "Family relationships matter in the spirit world.",
+              "verdict": "supported",
+              "rationale": "Topics and Questions: “Family relationships are also important in the spirit world.”"
+            },
+            {
+              "id": "personal-accounts",
+              "voice": "A common idea",
+              "text": "Personal accounts of the spirit world are official Church doctrine.",
+              "verdict": "contradicted",
+              "rationale": "President Oaks said such personal spiritual experiences “are not to be understood or taught as the official doctrine of the Church.”"
+            },
+            {
+              "id": "trust",
+              "voice": "A classmate",
+              "text": "When we don’t know an answer, we can trust that God loves His children and will do what is best for each one.",
+              "verdict": "supported",
+              "rationale": "President Oaks: “remember that God loves His children and will surely do what is best for each of us.”"
+            },
+            {
+              "id": "doesnt-care",
+              "voice": "A common idea",
+              "text": "If scripture doesn’t explain something, God must not care about it.",
+              "verdict": "contradicted",
+              "rationale": "Nephi knew God loves His children even though he didn’t know the meaning of all things, and President Oaks taught that “our only sure reliance is to trust in the Lord and His love for His children.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "build-trust",
+          "prompt": "Build a statement that brings together what you’ve found in this investigation.",
+          "sourceIds": [
+            "oaks-trust-in-the-lord-2019",
+            "dc-137-5-10",
+            "1-nephi-11-17",
+            "dc-138-29-34"
+          ],
+          "hints": [
+            "Begin with what we don’t know, then list what we do know.",
+            "The extra fragments either assume the worst, take away people’s choices, or make this life unimportant."
+          ],
+          "explanation": "President Oaks taught that what we do know is that “the Father’s and the Son’s work of salvation continues” in the spirit world, and that we can trust “the Lord and His love for His children.” Nephi knew “that he loveth his children,” and the Lord judges “according to their works, according to the desire of their hearts.” Trusting Him isn’t giving up on the question; it’s placing our loved ones with the One who knows them best.",
+          "fragments": [
+            {
+              "id": "dont-know",
+              "text": "We may not know where each loved one is or what they will choose,"
+            },
+            {
+              "id": "loves",
+              "text": "but we know that God loves His children,"
+            },
+            {
+              "id": "continues",
+              "text": "that His work of salvation continues beyond death,"
+            },
+            {
+              "id": "judges",
+              "text": "and that He judges each person by their works and the desires of their heart,"
+            },
+            {
+              "id": "trust",
+              "text": "so we can trust Him with the people we love."
+            },
+            {
+              "id": "x-worst",
+              "text": "so we should expect the worst for those who weren’t members."
+            },
+            {
+              "id": "x-decided",
+              "text": "and that He has already decided every outcome without their choice,"
+            },
+            {
+              "id": "x-matter",
+              "text": "so it doesn’t matter what anyone does in this life."
+            }
+          ],
+          "solution": [
+            "dont-know",
+            "loves",
+            "continues",
+            "judges",
+            "trust"
+          ],
+          "statement": "We may not know where each loved one is or what they will choose, but we know that God loves His children, that His work of salvation continues beyond death, and that He judges each person by their works and the desires of their heart, so we can trust Him with the people we love."
+        }
+      },
+      "insight": "Scripture reveals how God works without revealing every person’s future. For questions about the spirit world, President Oaks counseled us to “remember that God loves His children and will surely do what is best for each of us.” Trusting Him isn’t giving up on the question; it’s placing our loved ones in the hands of the One who knows them best.",
+      "concepts": [
+        "love-of-god",
+        "judgment"
+      ],
+      "connections": [
+        {
+          "from": "concept:love-of-god",
+          "to": "question:families-beyond-the-veil",
+          "relation": "answers",
+          "sourceIds": [
+            "1-nephi-11-17",
+            "oaks-trust-in-the-lord-2019"
+          ],
+          "note": "Where details aren’t revealed, scripture and prophets point to God’s love for His children as the sure foundation."
+        },
+        {
+          "from": "question:families-beyond-the-veil",
+          "to": "question:primary-christ",
+          "relation": "rests-on",
+          "sourceIds": [
+            "1-corinthians-15-20-22",
+            "1-peter-3-18-20"
+          ],
+          "note": "Hope for loved ones who have died rests on Jesus Christ, in whom all shall be made alive and who preached to the spirits of the dead."
+        }
+      ]
+    },
+    {
+      "id": "reflect-loved-ones",
+      "title": "In His hands",
+      "phase": "understand",
+      "method": "divine",
+      "intro": "This reflection is optional and private. Write as much or as little as you like, or simply think about it.",
+      "sourceIds": [
+        "1-corinthians-15-20-22",
+        "romans-8-38-39",
+        "1-nephi-11-17"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "reflect-families",
+        "prompt": "If you’d like, think of someone you love who has died, or who belongs to another faith. What from this investigation would you want to remember about God’s love for them?",
+        "sourceIds": [
+          "1-corinthians-15-20-22",
+          "romans-8-38-39",
+          "1-nephi-11-17"
+        ],
+        "suggestions": [
+          "Which verse in this investigation would you most want to remember, and why?",
+          "Is there an ancestor whose story you could learn more about, or whose name you could take to the temple?",
+          "Romans 8:38–39 says nothing can separate us from God’s love. What might that mean for the people you’re thinking of?",
+          "If you wish, you could pray for the people you love and place them in the Savior’s care."
+        ]
+      },
+      "insight": "Because of Jesus Christ’s Resurrection, everyone you love will live again, and His gospel reaches across the veil. You can trust Him with them.",
+      "concepts": [
+        "jesus-christ",
+        "resurrection",
+        "love-of-god"
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "loved-ones-now",
+      "question": "Where are loved ones who have died right now?",
+      "intro": "Many people wonder where loved ones who have died are now, and whether they are with family members who died before them. Scripture and Church teaching describe a spirit world where people await the Resurrection. Here is what they say, and what they leave open.",
+      "steps": [
+        {
+          "id": "spirit-world-now",
+          "title": "The spirit world",
+          "phase": "evidence",
+          "method": "academic",
+          "sourceIds": [
+            "alma-40-11-12",
+            "gt-spirit-world",
+            "oaks-trust-in-the-lord-2019",
+            "dc-138-29-34"
+          ],
+          "activities": {
+            "medium": {
+              "type": "clue",
+              "id": "clue-spirit-world",
+              "prompt": "Examine the clues. What can we say about a loved one who has died?",
+              "sourceIds": [
+                "alma-40-11-12",
+                "gt-spirit-world",
+                "oaks-trust-in-the-lord-2019",
+                "dc-137-5-10",
+                "dc-138-29-34"
+              ],
+              "hints": [
+                "Clues 1–3 describe what is revealed; clue 4 describes how much is revealed.",
+                "In clue 5, compare the word ‘slept’ with what the other sources describe spirits doing."
+              ],
+              "explanation": "Alma teaches that every spirit returns to God at death and that the righteous enter “a state of happiness, which is called paradise.” The Church teaches that “Family relationships are also important in the spirit world.” And President Oaks reminds us that beyond these basics, scripture says very little. We can be confident our loved ones live, and leave the details of their situation with a loving God.",
+              "clues": [
+                {
+                  "id": "home",
+                  "title": "Alma 40:11",
+                  "text": "At death, “the spirits of all men … are taken home to that God who gave them life.”",
+                  "sourceId": "alma-40-11-12"
+                },
+                {
+                  "id": "paradise",
+                  "title": "Alma 40:12",
+                  "text": "The righteous are received into “a state of happiness, which is called paradise, a state of rest, a state of peace.”",
+                  "sourceId": "alma-40-11-12"
+                },
+                {
+                  "id": "family",
+                  "title": "Topics and Questions: Spirit World",
+                  "text": "“Family relationships are also important in the spirit world. Those who were faithful and kept their covenants in mortality will be able to be with their families there.”",
+                  "sourceId": "gt-spirit-world"
+                },
+                {
+                  "id": "little",
+                  "title": "President Dallin H. Oaks",
+                  "text": "President Oaks, then First Counselor in the First Presidency, said in 2019: “Beyond these basics, our canon of scripture contains very little about the spirit world that follows death and precedes the Final Judgment.”",
+                  "sourceId": "oaks-trust-in-the-lord-2019"
+                },
+                {
+                  "id": "slept",
+                  "title": "Slept?",
+                  "text": "Doctrine and Covenants 137:5 says Alvin “has long since slept.” Yet Alma 40:12 describes the righteous in “a state of happiness,” Topics and Questions says righteous spirits “are still occupied in doing the work of the Lord,” and Doctrine and Covenants 138:30–33 shows spirits teaching and being taught. So ‘slept’ seems to be a way of speaking about death.",
+                  "sourceId": "dc-137-5-10"
+                }
+              ],
+              "question": {
+                "id": "q-now",
+                "prompt": "Based on these clues, what can we say?",
+                "options": [
+                  {
+                    "id": "lives-on",
+                    "text": "Their spirit lives on in the spirit world, where the righteous find rest and peace and family relationships matter, though the details of any one person’s situation are in God’s hands."
+                  },
+                  {
+                    "id": "asleep",
+                    "text": "They are asleep and unaware until the Resurrection.",
+                    "feedback": "Look at clue 5. Alma 40:12 describes a state of happiness, and Church teaching says righteous spirits are still occupied in the Lord’s work, so ‘slept’ is best read as a way of speaking about death."
+                  },
+                  {
+                    "id": "final",
+                    "text": "They have already received their final, eternal reward.",
+                    "feedback": "Alma 40:11 describes “the state of the soul between death and the resurrection.” Resurrection and judgment are still ahead."
+                  },
+                  {
+                    "id": "exactly",
+                    "text": "Scripture tells us exactly who each person is with right now.",
+                    "feedback": "Clue 4: President Oaks says that beyond the basics, scripture contains very little about the spirit world."
+                  }
+                ],
+                "correct": [
+                  "lives-on"
+                ]
+              }
+            }
+          },
+          "insight": "Scripture teaches that our loved ones live on as spirits, and that the righteous enter a state of rest and peace called paradise. The Church teaches that family relationships matter there. Beyond those basics, President Oaks counseled that little is revealed, so the details of each person’s situation are best left with a loving God.",
+          "concepts": [
+            "spirit-world",
+            "eternal-families"
+          ],
+          "connections": [
+            {
+              "from": "concept:spirit-world",
+              "to": "concept:eternal-families",
+              "relation": "relates-to",
+              "sourceIds": [
+                "gt-spirit-world"
+              ],
+              "note": "Church teaching says family relationships are important in the spirit world."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main path: what does scripture say about the gospel reaching those who have died?"
+    },
+    {
+      "id": "other-faiths",
+      "question": "What about loved ones of other faiths?",
+      "intro": "Many Latter-day Saints have family members and close friends who are devoted Christians of other faiths. In Doctrine and Covenants 1:30 the Lord describes the restored Church as “the only true and living church upon the face of the whole earth.” Scripture also teaches that the Spirit of Christ is given to every person, and that whatever invites people to do good and believe in Christ comes from Him. Look at what these sources say, and notice what they leave with God.",
+      "steps": [
+        {
+          "id": "light-for-everyone",
+          "title": "Light given to every person",
+          "phase": "discover",
+          "method": "analytical",
+          "sourceIds": [
+            "dc-1-30",
+            "moroni-7-16",
+            "alma-29-8",
+            "articles-of-faith-1-11",
+            "2-nephi-26-33",
+            "acts-10-34-35",
+            "gt-baptisms-for-the-dead"
+          ],
+          "activities": {
+            "medium": {
+              "type": "compare",
+              "id": "compare-other-faiths",
+              "prompt": "Decide how well each statement fits these scriptures and the Topics and Questions entry on baptisms for the dead.",
+              "sourceIds": [
+                "dc-1-30",
+                "moroni-7-16",
+                "alma-29-8",
+                "articles-of-faith-1-11",
+                "2-nephi-26-33",
+                "acts-10-34-35",
+                "gt-baptisms-for-the-dead"
+              ],
+              "hints": [
+                "Moroni 7:16 describes where everything that invites us to do good and believe in Christ comes from.",
+                "2 Nephi 26:33 and Acts 10:34 describe how the Lord sees all His children.",
+                "The Topics and Questions entry describes people who were baptized without proper authority, and what God has prepared for them."
+              ],
+              "explanation": "Doctrine and Covenants 1:30 describes the restored Church as “the only true and living church upon the face of the whole earth.” The verse speaks about the Church; it doesn’t speak about the goodness, or the future, of any person. Scripture also teaches that “the Spirit of Christ is given to every man,” that whatever “inviteth to do good, and to persuade to believe in Christ” comes from Christ, and that “all are alike unto God.” Latter-day Saints “allow all men the same privilege” of worship. Church teaching adds that God “has prepared a way for all people to receive the blessings of baptism.” What each person will choose, and receive, is left with God.",
+              "perspectives": [
+                {
+                  "id": "nothing-good",
+                  "voice": "A common worry",
+                  "text": "Because the Lord calls this Church “the only true and living church,” other churches can’t have anything good in them.",
+                  "verdict": "contradicted",
+                  "rationale": "Moroni 7:16: “every thing which inviteth to do good, and to persuade to believe in Christ, is sent forth by the power and gift of Christ.” Alma 29:8 says the Lord grants “all nations” to teach His word."
+                },
+                {
+                  "id": "less-loved",
+                  "voice": "A common worry",
+                  "text": "God loves people of other faiths less than He loves Latter-day Saints.",
+                  "verdict": "contradicted",
+                  "rationale": "2 Nephi 26:33 says the Lord “inviteth them all to come unto him” and that “all are alike unto God,” and Peter taught that “God is no respecter of persons” (Acts 10:34)."
+                },
+                {
+                  "id": "respect",
+                  "voice": "A common idea",
+                  "text": "Latter-day Saints should respect how others worship.",
+                  "verdict": "supported",
+                  "rationale": "Articles of Faith 1:11: we “allow all men the same privilege, let them worship how, where, or what they may.”"
+                },
+                {
+                  "id": "unique-and-wide",
+                  "voice": "A classmate",
+                  "text": "Both can be true: the Lord calls this Church “the only true and living church,” and the Spirit of Christ is given to every person.",
+                  "verdict": "supported",
+                  "rationale": "Doctrine and Covenants 1:30 calls it “the only true and living church,” and Moroni 7:16 says “the Spirit of Christ is given to every man.”"
+                },
+                {
+                  "id": "ordinances-irrelevant",
+                  "voice": "A common idea",
+                  "text": "Priesthood ordinances like baptism only matter for people who were Latter-day Saints in life.",
+                  "verdict": "contradicted",
+                  "rationale": "Topics and Questions teaches that baptism is essential to the salvation of “all who have lived on earth,” including those who died without it and those who were “baptized, but without proper authority,” and that God “has prepared a way for all people to receive the blessings of baptism.”"
+                },
+                {
+                  "id": "know-choice",
+                  "voice": "A common idea",
+                  "text": "We can know what people of other faiths will choose, or receive, after this life.",
+                  "verdict": "beyond",
+                  "rationale": "These sources describe God’s love and the opportunities He gives; none of them tells us what any person will choose or receive. That is left with God."
+                }
+              ]
+            }
+          },
+          "insight": "Latter-day Saints believe the Lord restored His Church with His authority, and Church teaching explains that the blessings of baptism are offered to everyone, in this life or the next. Scripture also teaches that the Spirit of Christ is given to every person, that whatever invites us to do good and believe in Christ comes from Him, and that all are alike unto God. Respecting the faith of people we love fits all of these, and each person’s future is in God’s hands.",
+          "concepts": [
+            "love-of-god",
+            "ordinances",
+            "restoration"
+          ],
+          "connections": [
+            {
+              "from": "scripture:alma-29-8",
+              "to": "concept:love-of-god",
+              "relation": "illustrates",
+              "sourceIds": [
+                "alma-29-8",
+                "moroni-7-16"
+              ],
+              "note": "Alma and Mormon teach that the Lord gives His word and His Spirit to people of every nation."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main path: what can we know, and what do we leave with God?"
+    }
+  ],
+  "discovery": {
+    "summary": "Scripture’s answers to this question begin with Jesus Christ. Because of Him, everyone, member or not, will be resurrected, and every spirit lives on after death. Peter testified that Christ preached to the spirits of the dead, and President Joseph F. Smith saw messengers carry the gospel “even to all the spirits of men,” including those who had rejected the prophets. Ordinances like baptism and sealing can be performed for those who have died, and each person is free to accept them; the family proclamation teaches that temple ordinances make it possible “for families to be united eternally.” The Lord judges “according to their works, according to the desire of their hearts.” What scripture doesn’t reveal is any individual’s choices or final reward. As President Oaks counseled, we can trust that God loves His children and will do what is best for each one.",
+    "keyIdeas": [
+      "Because of Jesus Christ, everyone will be resurrected, and every spirit lives on after death (Alma 11:44; Alma 40:11).",
+      "The gospel is preached in the spirit world to all who have died, including those who never heard it and those who rejected it (Doctrine and Covenants 138:30–32).",
+      "Ordinances can be performed for the dead, each person chooses whether to accept them, and temple ordinances make it possible for families to be united eternally.",
+      "God judges by works and the desires of the heart, and He is no respecter of persons (Doctrine and Covenants 137:9; Acts 10:34–35).",
+      "Scripture doesn’t reveal any individual’s future. We can trust God, who loves His children."
+    ],
+    "christConnection": "Every hope in this investigation rests on Jesus Christ. “As in Adam all die, even so in Christ shall all be made alive.” He suffered “that he might bring us to God,” and He Himself opened the preaching of the gospel to the dead. As Elder D. Todd Christofferson, then of the Presidency of the Seventy, taught in 2000, “His grace and promises reach even those who in life do not find Him.”",
+    "openQuestions": [
+      "Scripture says little about daily life in the spirit world. What would you most like to understand, and how might you seek it?",
+      "How might learning your family’s history change the way you think about ancestors you never met?",
+      "What might it mean that neither we nor our dead can “be made perfect” without each other?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "Whole investigation",
+        "note": "Flagged for the project owner’s doctrinal review, as requested. People asking this are often thinking of particular relatives and friends. The content teaches only what scripture and official sources state, speaks respectfully of other faiths, and leaves every individual’s future with God. It deliberately says nothing about kingdoms of glory or anyone’s placement, so questions about being in a different kingdom from one’s family aren’t answered here.",
+        "resolution": "Qualified: survey references were removed throughout. Intros, prompts, perspectives and this note now use general framing with no personal details. App-written text no longer mentions kingdoms of glory: the D&C 137 intro no longer calls the vision a vision of the celestial kingdom, and a vocabulary distractor about which kingdom each person receives was replaced. Scripture text is unchanged. The owner should confirm the overall framing."
+      },
+      {
+        "where": "steps.desires-of-the-heart (Doctrine and Covenants 137:7–9)",
+        "note": "Verses 7–8 speak of those who died “without a knowledge of this gospel” who would have received it. The investigation doesn’t apply this to any person, or to people who knew of the restored gospel in life. It emphasizes verse 9 (judged by works and desires) and Doctrine and Covenants 138:32 (the gospel is preached even to those who rejected the prophets). Please confirm the framing.",
+        "resolution": "Qualified: the intro and highlight explanation now say these verses describe how the Lord judges, not how He will judge any particular person, and that verses 7–8 speak of those who died without a knowledge of the gospel. The highlight now also targets verse 9’s ‘works,’ and the explanation and insight cite D&C 138:32. ‘He knows what each person would have chosen’ was removed. A Map note saying the doctrine was ‘first revealed’ here now follows the section summary. No wording promises or denies any outcome. Owner to confirm."
+      },
+      {
+        "where": "steps.gospel-beyond-death (compare-gospel-dead) and gt-spirit-world",
+        "note": "The Topics and Questions entry on the spirit world describes paradise and spirit prison, says spirit prison includes those who did not know the gospel, and also describes a condition ‘that is a type of hell’ for those who ultimately reject the gospel. The investigation quotes only its teaching that ‘spirit prison’ is figurative for those who haven’t received the restored gospel and that those spirits can progress, accept ordinances, and dwell in paradise. It neither denies nor dwells on the rest. Please check that this selection is balanced.",
+        "resolution": "Qualified: rechecked 26 October 2026. The explanation now describes spirit prison as the entry does (those who died without knowing the gospel or without repenting). It quotes the ‘figurative sense’ sentence in full, keeps agency and progress, and briefly notes the separate condition for those who ultimately reject the gospel after being taught. It ends: no source says how any person will choose. The branch clue adds that righteous spirits ‘are still occupied in doing the work of the Lord.’ Owner to confirm the balance."
+      },
+      {
+        "where": "President Oaks (steps.trust-in-his-love, branch loved-ones-now)",
+        "note": "Speaker-dependent: President Oaks’s counsel for unanswered questions, and his report of Joseph Smith’s teaching (King Follett sermon) that righteous family members will be together in the spirit world, are presented as his. The original King Follett sermon isn’t quoted.",
+        "resolution": "Qualified: checked against the talk on 26 October 2026. He is introduced as then First Counselor in the First Presidency (2019) in the step intro and the branch clue. His report that, in the King Follett sermon, Joseph Smith taught that righteous family members will be together in the world of spirits is accurately paraphrased and presented as his report. The sermon itself isn’t quoted."
+      },
+      {
+        "where": "Elder Christofferson (steps.gospel-beyond-death, steps.ordinances-for-the-dead, steps.desires-of-the-heart, discovery)",
+        "note": "Speaker-dependent: his reasoning that the invitation wouldn’t be rescinded for those who never heard it, and his explanation that spirits awaiting resurrection can be sealed to their families, are presented as his teaching (given in 2000 as a member of the Presidency of the Seventy).",
+        "resolution": "Qualified: checked against the talk on 26 October 2026. Every quotation is attributed to him, now with ‘then of the Presidency of the Seventy’ (2000) in each clue and in the discovery’s Christ connection. The sealing statement is his summary of what Joseph Smith learned, and it is presented as his explanation."
+      },
+      {
+        "where": "branches.other-faiths",
+        "note": "Sensitive. Places Doctrine and Covenants 1:30 (‘the only true and living church’) beside Moroni 7:16, Alma 29:8, 2 Nephi 26:33, Acts 10:34, and Articles of Faith 1:11, and says the blessings of baptism are offered to all, including those ‘baptized, but without proper authority.’ Written in general terms for the common question about family and friends in other Christian churches.",
+        "resolution": "Qualified: rewritten for tone and accuracy. The question, intro and perspectives are general, with no personal details. The explanation says D&C 1:30 speaks about the Church, not about the goodness or future of any person. A new perspective from 2 Nephi 26:33 and Acts 10:34 rejects the idea that God loves people of other faiths less. The ‘know what they will choose’ perspective now covers choosing and receiving, and leaves both with God. The owner should confirm the tone."
+      },
+      {
+        "where": "branches.loved-ones-now (clue-spirit-world)",
+        "note": "Interpretive: treats ‘slept’ (Doctrine and Covenants 137:5) as a figure of speech for death, based on Alma 40:12 and Doctrine and Covenants 138.",
+        "resolution": "Qualified: the clue now sets ‘slept’ beside plainly stated evidence: Alma 40:12’s ‘state of happiness,’ Topics and Questions’ statement that righteous spirits ‘are still occupied in doing the work of the Lord,’ and D&C 138:30–33. It concludes that ‘slept’ ‘seems to be’ a way of speaking about death; the hint and feedback say ‘best read as.’ D&C 138 was added to the clue’s evidence."
+      },
+      {
+        "where": "sources (Topics and Questions)",
+        "note": "The Gospel Topics pages now title themselves ‘Topics and Questions,’ so the labels use that name. URLs are the /manual/gospel-topics/ pages, checked on 26 October 2026.",
+        "resolution": "Resolved: all five Topics and Questions links were rechecked on 26 October 2026. Each canonical URL matches the declared /manual/gospel-topics/ URL, and each page titles itself Topics and Questions. Source declarations are unchanged."
+      }
+    ]
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "id": "weak-things-become-strong",
+  "status": "ready",
+  "title": "Weak things become strong",
+  "sourceId": "ether-12-25-27",
+  "context": {
+    "setting": "In Ether 12, Moroni pauses his account of the Jaredites to write about faith. He tells the Lord he fears the Gentiles will mock his words, because he and his people were not ‘mighty in writing’ (verses 23–25). Verses 26–27 record the Lord's answer.",
+    "speaker": "Moroni, recording the Lord's words to him",
+    "audience": "Moroni; in verse 27 the Lord speaks of all people (‘if men come unto me’)"
+  },
+  "themes": [
+    {
+      "conceptId": "weakness",
+      "note": "Moroni sees his own weakness in writing; the Lord says He gives men weakness and will show it to those who come to Him.",
+      "verses": [
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "conceptId": "grace",
+      "note": "Twice the Lord says “my grace is sufficient”: for the meek, and “for all men that humble themselves before me.”",
+      "verses": [
+        26,
+        27
+      ]
+    },
+    {
+      "conceptId": "humility",
+      "note": "Weakness is given “that they may be humble,” and humbling themselves is one of the conditions for weak things to become strong.",
+      "verses": [
+        27
+      ]
+    },
+    {
+      "conceptId": "faith",
+      "note": "The second condition: “and have faith in me.”",
+      "verses": [
+        27
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "behold-our-weakness",
+      "verse": 25,
+      "phrase": "when we write we behold our weakness",
+      "meaning": "Moroni's worry was specific: his writing. The Guide to the Scriptures lists these verses under Weakness, which it defines as “The condition of being mortal and lacking ability, strength, or skill.”",
+      "sourceIds": [
+        "gs-weakness"
+      ]
+    },
+    {
+      "id": "grace-for-the-meek",
+      "verse": 26,
+      "phrase": "my grace is sufficient for the meek",
+      "meaning": "‘Sufficient’ means enough. Grace is divine “help or strength” given “through the mercy and love of God.” The Lord promises that the mockers “shall take no advantage of your weakness.”",
+      "sourceIds": [
+        "gs-grace",
+        "gs-meek-meekness"
+      ]
+    },
+    {
+      "id": "show-weakness",
+      "verse": 27,
+      "phrase": "I will show unto them their weakness",
+      "meaning": "Coming to Christ doesn't hide weakness; He shows it. Jacob gives a reason: so “that we may know that it is by his grace … that we have power to do these things.”",
+      "sourceIds": [
+        "jacob-4-7"
+      ]
+    },
+    {
+      "id": "give-weakness",
+      "verse": 27,
+      "phrase": "I give unto men weakness that they may be humble",
+      "meaning": "The Lord says He gives weakness, and He names its purpose: humility. The word here is singular, ‘weakness.’ Gospel Labs points this out because the Guide to the Scriptures calls weakness “a state of being,” “manifest in part in the individual weaknesses or frailties that each person has.” The verse itself doesn't explain the singular.",
+      "sourceIds": [
+        "gs-weakness",
+        "gs-humble-humility"
+      ]
+    },
+    {
+      "id": "all-men",
+      "verse": 27,
+      "phrase": "my grace is sufficient for all men that humble themselves before me",
+      "meaning": "The promise widens from ‘the meek’ (verse 26) to ‘all men’ who humble themselves. Humility, in the Guide to the Scriptures, “includes recognizing our dependence upon God.”",
+      "sourceIds": [
+        "gs-humble-humility"
+      ]
+    },
+    {
+      "id": "weak-things-strong",
+      "verse": 27,
+      "phrase": "make weak things become strong unto them",
+      "meaning": "The promise follows two conditions: humility and faith in Him. It says weak things ‘become’ strong, not that weakness disappears at once. A latter-day revelation makes a similar promise: “inasmuch as they were humble they might be made strong.”",
+      "sourceIds": [
+        "dc-1-28"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "jacob-4-7",
+      "relation": "supports",
+      "note": "Jacob says “the Lord God showeth us our weakness that we may know that it is by his grace” that we have power to do His work."
+    },
+    {
+      "sourceId": "2-corinthians-12-9-10",
+      "relation": "illustrates",
+      "note": "Paul received a similar answer about his own weakness: “My grace is sufficient for thee: for my strength is made perfect in weakness.” The footnotes in Ether 12:27 point here."
+    },
+    {
+      "sourceId": "ether-12-37",
+      "relation": "illustrates",
+      "note": "Later in the same chapter the Lord tells Moroni: “because thou hast seen thy weakness thou shalt be made strong.”"
+    },
+    {
+      "sourceId": "dc-1-28",
+      "relation": "supports",
+      "note": "The Lord's servants were promised that “inasmuch as they were humble they might be made strong.”"
+    }
+  ],
+  "questions": [
+    {
+      "id": "what-weakness",
+      "question": "What weakness was Moroni worried about?",
+      "answer": "His writing. He told the Lord, “the Gentiles will mock at these things, because of our weakness in writing” (verse 23), and in verse 25 he says that when they write they “stumble because of the placing of our words.”",
+      "sourceIds": [
+        "ether-12-23-24",
+        "ether-12-25-27"
+      ]
+    },
+    {
+      "id": "how-did-he-respond",
+      "question": "How did Moroni respond to the Lord's answer?",
+      "answer": "Verse 29 records: “I, Moroni, having heard these words, was comforted,” and he said, “O Lord, thy righteous will be done.”",
+      "sourceIds": [
+        "ether-12-29"
+      ]
+    },
+    {
+      "id": "weakness-sin",
+      "question": "Is weakness the same as sin?",
+      "answer": "Verse 27 doesn't call weakness sin; the Lord says He gives weakness so that people may be humble. The Guide to the Scriptures describes weakness as “The condition of being mortal and lacking ability, strength, or skill,” and sin as “Willful disobedience to God’s commandments.” It also says every mortal needs divine grace “because of Adam’s Fall and also because of man’s weaknesses.”",
+      "sourceIds": [
+        "ether-12-25-27",
+        "gs-weakness",
+        "gs-sin",
+        "gs-grace"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "what-people-do",
+      "prompt": "Verse 27 moves back and forth between what the Lord does and what people do. Tap the phrases that describe what people do.",
+      "sourceIds": [
+        "ether-12-25-27"
+      ],
+      "hints": [
+        "Look for ‘if’: it often introduces something people do.",
+        "The Lord shows, gives, and makes strong. Look for coming, humbling, and believing.",
+        "Three actions, one of them mentioned twice: come unto Him, humble themselves, and have faith in Him."
+      ],
+      "explanation": "People come unto Him, humble themselves before Him, and have faith in Him. Everything else is what the Lord does: He shows weakness, gives weakness that they may be humble, gives grace, and makes weak things become strong. The promise rests on His grace, received through humility and faith.",
+      "passage": "ether-12-25-27",
+      "chunks": [
+        {
+          "verse": 27,
+          "text": "And if men come unto me"
+        },
+        {
+          "verse": 27,
+          "text": "I will show unto them their weakness."
+        },
+        {
+          "verse": 27,
+          "text": "I give unto men weakness"
+        },
+        {
+          "verse": 27,
+          "text": "that they may be humble;"
+        },
+        {
+          "verse": 27,
+          "text": "and my grace is sufficient for all men"
+        },
+        {
+          "verse": 27,
+          "text": "that humble themselves before me;"
+        },
+        {
+          "verse": 27,
+          "text": "for if they humble themselves before me,"
+        },
+        {
+          "verse": 27,
+          "text": "and have faith in me,"
+        },
+        {
+          "verse": 27,
+          "text": "then will I make weak things become strong unto them."
+        }
+      ],
+      "targets": [
+        0,
+        5,
+        6,
+        7
+      ],
+      "minTargets": 3
+    },
+    {
+      "type": "scripture-connect",
+      "id": "grace-in-weakness",
+      "prompt": "Read Ether 12:27 beside 2 Corinthians 12:9–10 and Jacob 4:7. How do they fit together?",
+      "sourceIds": [
+        "ether-12-25-27",
+        "2-corinthians-12-9-10",
+        "jacob-4-7"
+      ],
+      "hints": [
+        "Find the words ‘weakness’ and ‘grace’ in each passage.",
+        "Jacob 4:7 has a ‘that’ phrase giving a reason. What is it?"
+      ],
+      "explanation": "All three tie weakness to grace. The Lord tells Moroni His grace is sufficient; He tells Paul “my strength is made perfect in weakness”; and Jacob says the Lord shows us our weakness “that we may know that it is by his grace … that we have power to do these things.”",
+      "passages": [
+        "ether-12-25-27",
+        "2-corinthians-12-9-10",
+        "jacob-4-7"
+      ],
+      "questions": [
+        {
+          "id": "in-common",
+          "prompt": "What do the three passages have in common?",
+          "options": [
+            {
+              "id": "grace",
+              "text": "Each connects human weakness with the Lord's grace."
+            },
+            {
+              "id": "removed",
+              "text": "Each promises that weakness will be taken away at once.",
+              "feedback": "Paul says he will “glory in my infirmities.” Does that sound like they vanished?"
+            },
+            {
+              "id": "punishment",
+              "text": "Each says weakness is a punishment for sin.",
+              "feedback": "Ether 12:27 gives a purpose for weakness. Is it punishment?"
+            },
+            {
+              "id": "writing",
+              "text": "Each is about writing.",
+              "feedback": "Only Moroni was worried about writing. Look for a broader idea."
+            }
+          ],
+          "correct": [
+            "grace"
+          ]
+        },
+        {
+          "id": "why-show",
+          "prompt": "Jacob 4:7 gives a reason the Lord shows us our weakness. What is it?",
+          "options": [
+            {
+              "id": "know-grace",
+              "text": "So that we may know our power comes by His grace"
+            },
+            {
+              "id": "stop-trying",
+              "text": "So that we will stop trying",
+              "feedback": "Jacob says we “have power to do these things.” Where does that power come from?"
+            },
+            {
+              "id": "others-see",
+              "text": "So that others will see our faults",
+              "feedback": "Read the ‘that’ phrase in Jacob 4:7 again: who comes to know what?"
+            }
+          ],
+          "correct": [
+            "know-grace"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "weakness-words",
+      "prompt": "Match each word with its meaning from the Guide to the Scriptures.",
+      "sourceIds": [
+        "ether-12-25-27",
+        "gs-weakness",
+        "gs-grace",
+        "gs-humble-humility",
+        "gs-meek-meekness"
+      ],
+      "hints": [
+        "One word names a condition all mortals share; another names help that comes from God.",
+        "Two meanings are traps: neither describes something the Guide to the Scriptures says."
+      ],
+      "explanation": "The Guide to the Scriptures defines weakness as a mortal condition of lacking ability, strength, or skill; grace as enabling power from God given through His mercy and love; humility as being meek and teachable and recognizing our dependence on God; and meekness as being godfearing, righteous, humble, teachable, and patient under suffering. The Guide defines sin separately, as willful disobedience to God's commandments.",
+      "pairs": [
+        {
+          "id": "weakness",
+          "term": "Weakness",
+          "meaning": "The condition of being mortal and lacking ability, strength, or skill"
+        },
+        {
+          "id": "grace",
+          "term": "Grace",
+          "meaning": "Enabling power and help from God, given through His mercy and love"
+        },
+        {
+          "id": "humble",
+          "term": "Humble",
+          "meaning": "Meek and teachable, recognizing our dependence on God"
+        },
+        {
+          "id": "meek",
+          "term": "Meek",
+          "meaning": "Godfearing, righteous, humble, teachable, and patient under suffering"
+        }
+      ],
+      "extraMeanings": [
+        "A sin that must be overcome before the Lord will help",
+        "Strength that comes from trying harder on our own"
+      ],
+      "match": "meaning"
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:ether-12-25-27",
+      "to": "concept:grace",
+      "relation": "teaches",
+      "sourceIds": [
+        "ether-12-25-27"
+      ],
+      "note": "The Lord tells Moroni His grace is sufficient for all who humble themselves before Him."
+    },
+    {
+      "from": "scripture:ether-12-25-27",
+      "to": "concept:weakness",
+      "relation": "teaches",
+      "sourceIds": [
+        "ether-12-25-27"
+      ],
+      "note": "The Lord gives weakness that people may be humble, and makes weak things strong for those who humble themselves and have faith."
+    },
+    {
+      "from": "concept:weakness",
+      "to": "attribute:humility",
+      "relation": "leads-to",
+      "sourceIds": [
+        "ether-12-25-27",
+        "gs-humble-humility"
+      ],
+      "note": "“I give unto men weakness that they may be humble.”"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ether-12-25-27",
+      "kind": "scripture",
+      "label": "Ether 12:25–27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p25-p27#p25",
+      "verses": [
+        {
+          "number": 25,
+          "text": "Thou hast also made our words powerful and great, even that we cannot write them; wherefore, when we write we behold our weakness, and stumble because of the placing of our words; and I fear lest the Gentiles shall mock at our words."
+        },
+        {
+          "number": 26,
+          "text": "And when I had said this, the Lord spake unto me, saying: Fools mock, but they shall mourn; and my grace is sufficient for the meek, that they shall take no advantage of your weakness;"
+        },
+        {
+          "number": 27,
+          "text": "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them."
+        }
+      ]
+    },
+    {
+      "id": "ether-12-23-24",
+      "kind": "scripture",
+      "label": "Ether 12:23–24",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p23-p24#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "And I said unto him: Lord, the Gentiles will mock at these things, because of our weakness in writing; for Lord thou hast made us mighty in word by faith, but thou hast not made us mighty in writing; for thou hast made all this people that they could speak much, because of the Holy Ghost which thou hast given them;"
+        },
+        {
+          "number": 24,
+          "text": "And thou hast made us that we could write but little, because of the awkwardness of our hands. Behold, thou hast not made us mighty in writing like unto the brother of Jared, for thou madest him that the things which he wrote were mighty even as thou art, unto the overpowering of man to read them."
+        }
+      ]
+    },
+    {
+      "id": "ether-12-29",
+      "kind": "scripture",
+      "label": "Ether 12:29",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p29#p29",
+      "verses": [
+        {
+          "number": 29,
+          "text": "And I, Moroni, having heard these words, was comforted, and said: O Lord, thy righteous will be done, for I know that thou workest unto the children of men according to their faith;"
+        }
+      ]
+    },
+    {
+      "id": "ether-12-37",
+      "kind": "scripture",
+      "label": "Ether 12:37",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p37#p37",
+      "verses": [
+        {
+          "number": 37,
+          "text": "And it came to pass that the Lord said unto me: If they have not charity it mattereth not unto thee, thou hast been faithful; wherefore, thy garments shall be made clean. And because thou hast seen thy weakness thou shalt be made strong, even unto the sitting down in the place which I have prepared in the mansions of my Father."
+        }
+      ]
+    },
+    {
+      "id": "jacob-4-7",
+      "kind": "scripture",
+      "label": "Jacob 4:7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/4?lang=eng&id=p7#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "Nevertheless, the Lord God showeth us our weakness that we may know that it is by his grace, and his great condescensions unto the children of men, that we have power to do these things."
+        }
+      ]
+    },
+    {
+      "id": "2-corinthians-12-9-10",
+      "kind": "scripture",
+      "label": "2 Corinthians 12:9–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/12?lang=eng&id=p9-p10#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me."
+        },
+        {
+          "number": 10,
+          "text": "Therefore I take pleasure in infirmities, in reproaches, in necessities, in persecutions, in distresses for Christ’s sake: for when I am weak, then am I strong."
+        }
+      ]
+    },
+    {
+      "id": "dc-1-28",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 1:28",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng&id=p28#p28",
+      "verses": [
+        {
+          "number": 28,
+          "text": "And inasmuch as they were humble they might be made strong, and blessed from on high, and receive knowledge from time to time."
+        }
+      ]
+    },
+    {
+      "id": "gs-weakness",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Weakness",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/weakness?lang=eng"
+    },
+    {
+      "id": "gs-grace",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Grace",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/grace?lang=eng"
+    },
+    {
+      "id": "gs-humble-humility",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Humble, Humility",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/humble-humility?lang=eng"
+    },
+    {
+      "id": "gs-meek-meekness",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Meek, Meekness",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/meek-meekness?lang=eng"
+    },
+    {
+      "id": "gs-sin",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Sin",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/sin?lang=eng",
+      "excerpt": "Willful disobedience to God’s commandments."
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "sourceId",
+        "note": "The passage is Ether 12:25–27 rather than 27 alone, so learners see Moroni's concern (verse 25) and the Lord's first answer (verse 26) beside verse 27.",
+        "resolution": "Resolved: confirmed. Ether 12:25–27 is three verses, within the limit; the questions draw on verses 23–24 and 29, which are declared as separate sources."
+      },
+      {
+        "where": "keyPhrases.give-weakness",
+        "note": "The note on singular ‘weakness’ follows the Guide to the Scriptures entry (“Weakness is a state of being”); please confirm the emphasis is appropriate.",
+        "resolution": "Qualified: the meaning now says that Gospel Labs points out the singular ‘weakness’, gives the Guide to the Scriptures' wording (checked 26 October 2026) as the reason, and says the verse itself doesn't explain the singular."
+      },
+      {
+        "where": "themes.humility",
+        "note": "Uses the Character of Christ attribute ‘humility’ as a theme, so it links to that page and Map node.",
+        "resolution": "Resolved: the attribute exists (src/content/attributes/humility.json), and the theme note quotes verse 27."
+      },
+      {
+        "where": "questions.weakness-sin; activities.weakness-words",
+        "note": "Doctrine: whether weakness is itself sin. The answer and the vocabulary explanation concluded in Gospel Labs' own words that weakness ‘is not the same’ as sin. The again-and-again investigation flags the same synthesis for the owner.",
+        "resolution": "Qualified: both now report only what Ether 12:27 and the Guide to the Scriptures say (the Lord gives weakness; the Guide defines weakness and sin separately, and says every mortal needs grace partly ‘because of man's weaknesses’), with no conclusion of Gospel Labs' own. Kept verified because only scripture and official definitions are stated."
+      }
+    ]
+  }
+}

@@ -1,0 +1,613 @@
+{
+  "id": "mercy",
+  "status": "ready",
+  "name": "Mercy",
+  "summary": "Compassion, tenderness, and forgiveness—which Jesus Christ offers to every one of us through His Atonement.",
+  "definition": {
+    "text": "The Guide to the Scriptures defines mercy as “The spirit of compassion, tenderness, and forgiveness,” and explains, “Mercy is one of the attributes of God. Jesus Christ offers mercy to us through His atoning sacrifice.”",
+    "sourceIds": [
+      "gs-merciful-mercy"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "mercy-merciful",
+      "term": "Merciful",
+      "meaning": "Showing mercy: compassionate and forgiving toward others. The Savior taught, “Be ye therefore merciful, as your Father also is merciful” (Luke 6:36).",
+      "sourceIds": [
+        "luke-6-36"
+      ]
+    },
+    {
+      "id": "mercy-justice",
+      "term": "Justice",
+      "meaning": "The Guide to the Scriptures: “The unfailing consequence of blessings for righteous thoughts and acts, and punishment for unrepented sin.” Mercy works with justice, not against it.",
+      "sourceIds": [
+        "gs-justice"
+      ]
+    },
+    {
+      "id": "mercy-tender-mercies",
+      "term": "Tender mercies",
+      "meaning": "Elder David A. Bednar taught that they are “the very personal and individualized blessings, strength, protection, assurances, guidance, loving-kindness, consolation, support, and spiritual gifts” we receive through Jesus Christ (see 1 Nephi 1:20).",
+      "sourceIds": [
+        "bednar-tender-mercies-of-the-lord",
+        "1-nephi-1-20"
+      ]
+    },
+    {
+      "id": "mercy-arm-of-mercy",
+      "term": "Arm of mercy",
+      "meaning": "An image of the Savior reaching out to receive us: “mine arm of mercy is extended towards you, and whosoever will come, him will I receive” (3 Nephi 9:14).",
+      "sourceIds": [
+        "3-nephi-9-14"
+      ]
+    },
+    {
+      "id": "mercy-penitent",
+      "term": "Penitent",
+      "meaning": "Truly sorry for sin and turning from it; repentant. Alma taught that “mercy claimeth the penitent” (Alma 42:23).",
+      "sourceIds": [
+        "alma-42-22-25"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "mercy-not-ignoring-justice",
+      "term": "Ignoring justice",
+      "title": "Mercy does not cancel justice",
+      "explanation": "It can seem that mercy simply means letting wrongdoing go. Alma asked, “What, do ye suppose that mercy can rob justice? I say unto you, Nay; not one whit” (Alma 42:25). Instead, “God himself atoneth for the sins of the world, to bring about the plan of mercy, to appease the demands of justice” (Alma 42:15). The Guide to the Scriptures explains that when a person repents, “the Savior pays the penalty through the Atonement, invoking mercy.”",
+      "sourceIds": [
+        "alma-42-22-25",
+        "alma-42-13-15",
+        "gs-justice"
+      ]
+    },
+    {
+      "id": "mercy-not-approving-sin",
+      "term": "Approving of sin",
+      "title": "Mercy is not the same as saying sin doesn’t matter",
+      "explanation": "When the Savior showed mercy to the woman brought before Him, He said, “Neither do I condemn thee: go, and sin no more” (John 8:11). His mercy came with an invitation to change. Alma likewise teaches that “mercy claimeth the penitent” (Alma 42:23).",
+      "sourceIds": [
+        "john-8-3-11",
+        "alma-42-22-25"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "matthew-5-7",
+      "note": "“Blessed are the merciful: for they shall obtain mercy.”"
+    },
+    {
+      "sourceId": "luke-6-36",
+      "note": "The Savior invites us to be merciful “as your Father also is merciful.”"
+    },
+    {
+      "sourceId": "alma-42-13-15",
+      "note": "Alma explains why an atonement was needed: so that God could be “a perfect, just God, and a merciful God also.”"
+    },
+    {
+      "sourceId": "alma-34-15-16",
+      "note": "Amulek teaches that through the Savior’s sacrifice, “mercy can satisfy the demands of justice” for those who have “faith unto repentance.”"
+    },
+    {
+      "sourceId": "3-nephi-9-14",
+      "note": "The Savior’s invitation: “mine arm of mercy is extended towards you, and whosoever will come, him will I receive.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "mercy-neither-do-i-condemn",
+      "title": "“Neither do I condemn thee”",
+      "sourceId": "john-8-3-11",
+      "note": "When the scribes and Pharisees brought a woman taken in adultery, the Savior turned them to their own consciences, and they left “one by one.” Then He told her, “Neither do I condemn thee: go, and sin no more.”"
+    },
+    {
+      "id": "mercy-bowels-filled-with-mercy",
+      "title": "“My bowels are filled with mercy”",
+      "sourceId": "3-nephi-17-6-7",
+      "note": "Among the Nephites, the risen Lord invited them to bring all who were sick or afflicted “in any manner,” saying, “I will heal them, for I have compassion upon you; my bowels are filled with mercy.”"
+    },
+    {
+      "id": "mercy-ten-lepers",
+      "title": "“Jesus, Master, have mercy on us”",
+      "sourceId": "luke-17-12-14",
+      "note": "Ten lepers, who “stood afar off,” cried out for mercy. He answered their plea, and “as they went, they were cleansed.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "forgiveness",
+      "relation": "relates-to",
+      "note": "The Guide to the Scriptures defines mercy as “The spirit of compassion, tenderness, and forgiveness.”",
+      "sourceIds": [
+        "gs-merciful-mercy"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "vocab-match",
+      "id": "mercy-vocab",
+      "prompt": "Match each word or phrase with its meaning.",
+      "sourceIds": [
+        "gs-justice",
+        "bednar-tender-mercies-of-the-lord",
+        "3-nephi-9-14",
+        "alma-42-22-25"
+      ],
+      "hints": [
+        "One word names what mercy works together with, not against.",
+        "One phrase pictures the Savior reaching out to receive us.",
+        "‘Penitent’ is related to the word ‘repentance.’"
+      ],
+      "explanation": "To be merciful is to show compassion and forgiveness; justice brings consequences for unrepented sin; tender mercies are personal blessings from the Lord; His “arm of mercy” reaches out to receive all who come; and mercy claims the penitent—those who truly repent.",
+      "pairs": [
+        {
+          "id": "mercy-merciful",
+          "term": "Merciful",
+          "meaning": "Compassionate and forgiving toward others"
+        },
+        {
+          "id": "mercy-justice",
+          "term": "Justice",
+          "meaning": "Blessings for righteousness and punishment for unrepented sin"
+        },
+        {
+          "id": "mercy-tender-mercies",
+          "term": "Tender mercies",
+          "meaning": "Personal, individual blessings and help from the Lord"
+        },
+        {
+          "id": "mercy-arm-of-mercy",
+          "term": "Arm of mercy",
+          "meaning": "The Savior reaching out to receive all who come to Him"
+        },
+        {
+          "id": "mercy-penitent",
+          "term": "Penitent",
+          "meaning": "Truly sorry for sin and turning from it"
+        }
+      ],
+      "extraMeanings": [
+        "Overlooking wrongdoing so that no one feels uncomfortable",
+        "A reward earned by doing enough good works"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "sort",
+      "id": "mercy-or-not",
+      "prompt": "Sort each example: does it show mercy as these scriptures describe it, or not?",
+      "sourceIds": [
+        "gs-merciful-mercy",
+        "john-8-3-11",
+        "matthew-5-7",
+        "alma-42-22-25"
+      ],
+      "hints": [
+        "The Guide to the Scriptures describes mercy as compassion, tenderness, and forgiveness.",
+        "Mercy doesn’t pretend wrong is right: the Savior said, “go, and sin no more.”",
+        "Read Matthew 5:7 for how receiving mercy and showing it go together."
+      ],
+      "explanation": "Mercy forgives, treats people tenderly in their shame, and points to the way back through repentance, as the Savior did. It doesn’t pretend sin doesn’t matter, withhold forgiveness until someone has suffered enough, or expect mercy while refusing to give it.",
+      "categories": [
+        {
+          "id": "mercy",
+          "label": "Shows mercy"
+        },
+        {
+          "id": "not-mercy",
+          "label": "Not mercy"
+        }
+      ],
+      "items": [
+        {
+          "id": "forgive-apology",
+          "text": "Forgiving a friend who apologizes, and staying kind to them",
+          "category": "mercy",
+          "why": "Mercy is “The spirit of compassion, tenderness, and forgiveness” (Guide to the Scriptures)."
+        },
+        {
+          "id": "pretend-no-matter",
+          "text": "Telling someone a serious wrong doesn’t matter at all",
+          "category": "not-mercy",
+          "why": "The Savior showed mercy and also said, “go, and sin no more” (John 8:11)."
+        },
+        {
+          "id": "gentle-with-shame",
+          "text": "Treating someone gently when they are ashamed of a mistake",
+          "category": "mercy",
+          "why": "When her accusers had gone, the Savior told the woman, “Neither do I condemn thee” (John 8:11)."
+        },
+        {
+          "id": "suffer-enough",
+          "text": "Refusing to forgive until someone has suffered enough",
+          "category": "not-mercy",
+          "why": "Mercy is a spirit of forgiveness, not of making people pay."
+        },
+        {
+          "id": "expect-not-give",
+          "text": "Expecting mercy for yourself while refusing to show it to others",
+          "category": "not-mercy",
+          "why": "“Blessed are the merciful: for they shall obtain mercy” (Matthew 5:7)."
+        },
+        {
+          "id": "way-back",
+          "text": "Reminding a friend who made a mistake that they can still change and come back",
+          "category": "mercy",
+          "why": "Alma teaches that “mercy claimeth the penitent” (Alma 42:23): mercy opens the way back through repentance."
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "id": "mercy-3-nephi-17-7",
+      "prompt": "Tap the phrase that shows how many kinds of affliction the Savior invited the people to bring, and the phrases that tell why He would heal them.",
+      "sourceIds": [
+        "3-nephi-17-6-7"
+      ],
+      "hints": [
+        "Look for the phrase that includes every kind of affliction.",
+        "The reasons come after “I will heal them.”"
+      ],
+      "explanation": "He invited all who were “afflicted in any manner,” and gave His reasons: “for I have compassion upon you; my bowels are filled with mercy.” His mercy reached everyone who was brought.",
+      "passage": "3-nephi-17-6-7",
+      "chunks": [
+        {
+          "verse": 7,
+          "text": "Have ye any that are sick among you?"
+        },
+        {
+          "verse": 7,
+          "text": "Bring them hither."
+        },
+        {
+          "verse": 7,
+          "text": "Have ye any that are lame, or blind, or halt, or maimed, or leprous, or that are withered, or that are deaf,"
+        },
+        {
+          "verse": 7,
+          "text": "or that are afflicted in any manner?"
+        },
+        {
+          "verse": 7,
+          "text": "Bring them hither and I will heal them,"
+        },
+        {
+          "verse": 7,
+          "text": "for I have compassion upon you;"
+        },
+        {
+          "verse": 7,
+          "text": "my bowels are filled with mercy."
+        }
+      ],
+      "targets": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "type": "compare",
+      "id": "mercy-and-justice",
+      "prompt": "Read Alma 42:13–15 and 22–25. Decide how well each statement fits these verses.",
+      "sourceIds": [
+        "alma-42-13-15",
+        "alma-42-22-25"
+      ],
+      "hints": [
+        "Verse 15 tells what the Atonement accomplished; verse 25 asks a question and answers it.",
+        "If the verses state it, it’s supported. If they leave it open, it goes beyond them. If they say the opposite, it’s contradicted.",
+        "Look for whom “mercy claimeth” in verse 23, and who is saved in verse 24."
+      ],
+      "explanation": "Alma teaches that God is both just and merciful, that “mercy cometh because of the atonement,” that mercy claims the penitent, and that mercy cannot rob justice. He doesn’t explain how the Atonement satisfies justice—that goes beyond these verses.",
+      "perspectives": [
+        {
+          "id": "both",
+          "text": "God is both perfectly just and perfectly merciful.",
+          "voice": "A classmate",
+          "verdict": "supported",
+          "rationale": "Verse 15: “that God might be a perfect, just God, and a merciful God also.”"
+        },
+        {
+          "id": "justice-gone",
+          "text": "Because God is merciful, justice no longer matters.",
+          "voice": "A common idea",
+          "verdict": "contradicted",
+          "rationale": "Verse 25: “do ye suppose that mercy can rob justice? I say unto you, Nay; not one whit.”"
+        },
+        {
+          "id": "through-atonement",
+          "text": "Mercy reaches us because of the Atonement of Jesus Christ.",
+          "voice": "A teacher",
+          "verdict": "supported",
+          "rationale": "Verse 23: “mercy cometh because of the atonement.”"
+        },
+        {
+          "id": "how-exactly",
+          "text": "These verses explain in detail how the Savior’s suffering satisfied justice.",
+          "voice": "A friend",
+          "verdict": "beyond",
+          "rationale": "Alma says God atoned “to appease the demands of justice,” but he doesn’t describe how the Atonement accomplishes this."
+        },
+        {
+          "id": "without-repentance",
+          "text": "Mercy saves everyone, whether or not they repent.",
+          "voice": "A common idea",
+          "verdict": "contradicted",
+          "rationale": "Verse 24: “none but the truly penitent are saved.”"
+        }
+      ]
+    }
+  ],
+  "reflection": [
+    "The Savior said, “Neither do I condemn thee: go, and sin no more.” How do mercy and the invitation to change fit together?",
+    "What would it look like to be merciful “as your Father also is merciful”?",
+    "Why might it matter that His “arm of mercy is extended” to everyone who will come?"
+  ],
+  "safety": {
+    "text": "Being merciful never means letting someone keep hurting you, or keeping quiet about it. Alma teaches that mercy cannot “rob justice” (Alma 42:25). The Church teaches that “No one is expected to endure abusive behavior” and that victims “are never to blame for the harmful behavior of others.” The Church also “encourages the reporting of abuse to civil authorities.” If someone is hurting you, seeking safety and telling a trusted adult or leader is right, and it is not a failure of mercy. The Church’s abuse help site, linked below, shows where to turn.",
+    "sourceIds": [
+      "church-abuse-help",
+      "gospel-topics-abuse",
+      "alma-42-22-25"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "saviorExamples.mercy-neither-do-i-condemn",
+        "note": "John 8:3–11 is presented as mercy joined with a call to change. The account doesn’t say whether the woman repented or was forgiven, so we don’t claim either.",
+        "resolution": "Resolved: checked again; the note, contrast, and sort quote only verses 9–11 and claim neither repentance nor forgiveness. ‘His mercy came with an invitation to change’ describes ‘go, and sin no more’ (verse 11)."
+      },
+      {
+        "where": "vocabulary.mercy-tender-mercies",
+        "note": "The meaning of “tender mercies” is Elder Bednar’s (General Conference, April 2005), shown as a speaker’s teaching.",
+        "resolution": "Resolved: the excerpt was checked against Elder Bednar’s talk on 26 October 2026 and is shown as his teaching, beside 1 Nephi 1:20, the verse he explains."
+      },
+      {
+        "where": "activities.mercy-and-justice (without-repentance)",
+        "note": "Doctrine. The perspective ‘Everyone receives mercy, whether or not they repent’ was marked contradicted. That goes further than the verses plainly state: Alma 42:23 says the Atonement brings the resurrection, and 2 Nephi 9:25 says the mercies of the Holy One of Israel have claim on those to whom no law is given.",
+        "resolution": "Resolved: reworded to ‘Mercy saves everyone, whether or not they repent’, which verse 24 plainly contradicts (‘none but the truly penitent are saved’). Verdict, rationale, and id are unchanged."
+      },
+      {
+        "where": "safety; activities.mercy-or-not",
+        "note": "Sensitive. Mercy is defined as compassion, tenderness, and forgiveness, and the sort marks ‘refusing to forgive until someone has suffered enough’ as not mercy and rewarded ‘helping someone who has done wrong find a way to make things right’. A learner who is being hurt could read this as meaning that seeking help, accountability, or distance is unmerciful.",
+        "resolution": "Qualified: added a safety note, shown right after the definition, that links the Church’s abuse help site and quotes Alma 42:25 and Gospel Topics: Abuse, including that the Church encourages reporting abuse to civil authorities. The way-back item now reads ‘Reminding a friend who made a mistake that they can still change and come back’ (id unchanged). Owner: please confirm the wording."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gs-merciful-mercy",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Merciful, Mercy",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/merciful-mercy?lang=eng",
+      "excerpt": "The spirit of compassion, tenderness, and forgiveness. Mercy is one of the attributes of God. Jesus Christ offers mercy to us through His atoning sacrifice."
+    },
+    {
+      "id": "luke-6-36",
+      "kind": "scripture",
+      "label": "Luke 6:36",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p36#p36",
+      "verses": [
+        {
+          "number": 36,
+          "text": "Be ye therefore merciful, as your Father also is merciful."
+        }
+      ]
+    },
+    {
+      "id": "gs-justice",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Justice",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/justice?lang=eng",
+      "excerpt": "The unfailing consequence of blessings for righteous thoughts and acts, and punishment for unrepented sin. Justice is an eternal law that requires a penalty each time a law of God is broken (Alma 42:13–24). The sinner must pay the penalty if he does not repent (Mosiah 2:38–39; D&C 19:17). If he does repent, the Savior pays the penalty through the Atonement, invoking mercy (Alma 34:16)."
+    },
+    {
+      "id": "bednar-tender-mercies-of-the-lord",
+      "kind": "speaker",
+      "label": "The Tender Mercies of the Lord",
+      "author": "Elder David A. Bednar",
+      "publication": "General Conference, April 2005",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2005/04/the-tender-mercies-of-the-lord?lang=eng",
+      "excerpt": "the Lord’s tender mercies are the very personal and individualized blessings, strength, protection, assurances, guidance, loving-kindness, consolation, support, and spiritual gifts which we receive from and because of and through the Lord Jesus Christ."
+    },
+    {
+      "id": "1-nephi-1-20",
+      "kind": "scripture",
+      "label": "1 Nephi 1:20",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng&id=p20#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "And when the Jews heard these things they were angry with him; yea, even as with the prophets of old, whom they had cast out, and stoned, and slain; and they also sought his life, that they might take it away. But behold, I, Nephi, will show unto you that the tender mercies of the Lord are over all those whom he hath chosen, because of their faith, to make them mighty even unto the power of deliverance."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-9-14",
+      "kind": "scripture",
+      "label": "3 Nephi 9:14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng&id=p14#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "Yea, verily I say unto you, if ye will come unto me ye shall have eternal life. Behold, mine arm of mercy is extended towards you, and whosoever will come, him will I receive; and blessed are those who come unto me."
+        }
+      ]
+    },
+    {
+      "id": "alma-42-22-25",
+      "kind": "scripture",
+      "label": "Alma 42:22–25",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p22-p25#p22",
+      "verses": [
+        {
+          "number": 22,
+          "text": "But there is a law given, and a punishment affixed, and a repentance granted; which repentance, mercy claimeth; otherwise, justice claimeth the creature and executeth the law, and the law inflicteth the punishment; if not so, the works of justice would be destroyed, and God would cease to be God."
+        },
+        {
+          "number": 23,
+          "text": "But God ceaseth not to be God, and mercy claimeth the penitent, and mercy cometh because of the atonement; and the atonement bringeth to pass the resurrection of the dead; and the resurrection of the dead bringeth back men into the presence of God; and thus they are restored into his presence, to be judged according to their works, according to the law and justice."
+        },
+        {
+          "number": 24,
+          "text": "For behold, justice exerciseth all his demands, and also mercy claimeth all which is her own; and thus, none but the truly penitent are saved."
+        },
+        {
+          "number": 25,
+          "text": "What, do ye suppose that mercy can rob justice? I say unto you, Nay; not one whit. If so, God would cease to be God."
+        }
+      ]
+    },
+    {
+      "id": "alma-42-13-15",
+      "kind": "scripture",
+      "label": "Alma 42:13–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p13-p15#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "Therefore, according to justice, the plan of redemption could not be brought about, only on conditions of repentance of men in this probationary state, yea, this preparatory state; for except it were for these conditions, mercy could not take effect except it should destroy the work of justice. Now the work of justice could not be destroyed; if so, God would cease to be God."
+        },
+        {
+          "number": 14,
+          "text": "And thus we see that all mankind were fallen, and they were in the grasp of justice; yea, the justice of God, which consigned them forever to be cut off from his presence."
+        },
+        {
+          "number": 15,
+          "text": "And now, the plan of mercy could not be brought about except an atonement should be made; therefore God himself atoneth for the sins of the world, to bring about the plan of mercy, to appease the demands of justice, that God might be a perfect, just God, and a merciful God also."
+        }
+      ]
+    },
+    {
+      "id": "john-8-3-11",
+      "kind": "scripture",
+      "label": "John 8:3–11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/8?lang=eng&id=p3-p11#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "And the scribes and Pharisees brought unto him a woman taken in adultery; and when they had set her in the midst,"
+        },
+        {
+          "number": 4,
+          "text": "They say unto him, Master, this woman was taken in adultery, in the very act."
+        },
+        {
+          "number": 5,
+          "text": "Now Moses in the law commanded us, that such should be stoned: but what sayest thou?"
+        },
+        {
+          "number": 6,
+          "text": "This they said, tempting him, that they might have to accuse him. But Jesus stooped down, and with his finger wrote on the ground, as though he heard them not."
+        },
+        {
+          "number": 7,
+          "text": "So when they continued asking him, he lifted up himself, and said unto them, He that is without sin among you, let him first cast a stone at her."
+        },
+        {
+          "number": 8,
+          "text": "And again he stooped down, and wrote on the ground."
+        },
+        {
+          "number": 9,
+          "text": "And they which heard it, being convicted by their own conscience, went out one by one, beginning at the eldest, even unto the last: and Jesus was left alone, and the woman standing in the midst."
+        },
+        {
+          "number": 10,
+          "text": "When Jesus had lifted up himself, and saw none but the woman, he said unto her, Woman, where are those thine accusers? hath no man condemned thee?"
+        },
+        {
+          "number": 11,
+          "text": "She said, No man, Lord. And Jesus said unto her, Neither do I condemn thee: go, and sin no more."
+        }
+      ]
+    },
+    {
+      "id": "matthew-5-7",
+      "kind": "scripture",
+      "label": "Matthew 5:7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p7#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "Blessed are the merciful: for they shall obtain mercy."
+        }
+      ]
+    },
+    {
+      "id": "alma-34-15-16",
+      "kind": "scripture",
+      "label": "Alma 34:15–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng&id=p15-p16#p15",
+      "verses": [
+        {
+          "number": 15,
+          "text": "And thus he shall bring salvation to all those who shall believe on his name; this being the intent of this last sacrifice, to bring about the bowels of mercy, which overpowereth justice, and bringeth about means unto men that they may have faith unto repentance."
+        },
+        {
+          "number": 16,
+          "text": "And thus mercy can satisfy the demands of justice, and encircles them in the arms of safety, while he that exercises no faith unto repentance is exposed to the whole law of the demands of justice; therefore only unto him that has faith unto repentance is brought about the great and eternal plan of redemption."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-6-7",
+      "kind": "scripture",
+      "label": "3 Nephi 17:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And he said unto them: Behold, my bowels are filled with compassion towards you."
+        },
+        {
+          "number": 7,
+          "text": "Have ye any that are sick among you? Bring them hither. Have ye any that are lame, or blind, or halt, or maimed, or leprous, or that are withered, or that are deaf, or that are afflicted in any manner? Bring them hither and I will heal them, for I have compassion upon you; my bowels are filled with mercy."
+        }
+      ]
+    },
+    {
+      "id": "luke-17-12-14",
+      "kind": "scripture",
+      "label": "Luke 17:12–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/17?lang=eng&id=p12-p14#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And as he entered into a certain village, there met him ten men that were lepers, which stood afar off:"
+        },
+        {
+          "number": 13,
+          "text": "And they lifted up their voices, and said, Jesus, Master, have mercy on us."
+        },
+        {
+          "number": 14,
+          "text": "And when he saw them, he said unto them, Go shew yourselves unto the priests. And it came to pass, that, as they went, they were cleansed."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "church-abuse-help",
+      "kind": "official",
+      "label": "Abuse help (ChurchofJesusChrist.org)",
+      "url": "https://abuse.churchofjesuschrist.org/",
+      "summary": "The Church’s official help for people affected by abuse and for those who want to help them, including where to turn for safety and support."
+    }
+  ]
+}

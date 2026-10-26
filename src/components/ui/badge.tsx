@@ -2,13 +2,16 @@ import type { ComponentProps } from "react";
 import { STATUS_LABELS, type InvestigationStatus } from "@/domain/investigation";
 import { cn } from "@/lib/cn";
 
-type Tone = "neutral" | "accent" | "amber" | "green";
+type Tone = "neutral" | "accent" | "amber" | "green" | "danger" | "sacred";
 
 const tones: Record<Tone, string> = {
   neutral: "border-line-strong text-muted",
   accent: "border-accent/30 bg-accent-soft text-accent",
   amber: "border-amber/30 bg-amber-soft text-amber",
   green: "border-green/30 bg-green-soft text-green",
+  danger: "border-danger/30 bg-danger-soft text-danger",
+  /** For reflective content on bg-sacred. */
+  sacred: "border-sacred-line bg-sacred text-sacred-accent",
 };
 
 export function Badge({ tone = "neutral", className, ...props }: ComponentProps<"span"> & { tone?: Tone }) {

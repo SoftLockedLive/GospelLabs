@@ -1,0 +1,598 @@
+{
+  "id": "humility",
+  "status": "ready",
+  "name": "Humility",
+  "summary": "Recognizing our dependence on God, being teachable, and desiring to do His will.",
+  "definition": {
+    "text": "The Guide to the Scriptures describes humility as the condition of being “meek and teachable” and explains, “Humility includes recognizing our dependence upon God and desiring to submit to His will.” Preach My Gospel adds that humility “is willingness to give Him the honor for what is accomplished” and that it “is a sign of spiritual strength, not of weakness.”",
+    "sourceIds": [
+      "gs-humble-humility",
+      "preach-my-gospel-chapter-6"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "humility-teachable",
+      "term": "Teachable",
+      "meaning": "Willing to learn and to be corrected—by the Lord and by others. Both the Guide to the Scriptures and Preach My Gospel use this word to describe humility.",
+      "sourceIds": [
+        "gs-humble-humility",
+        "preach-my-gospel-chapter-6"
+      ]
+    },
+    {
+      "id": "humility-lowly",
+      "term": "Lowly in heart",
+      "meaning": "Humble in spirit rather than proud. The Savior used this phrase to describe Himself: “I am meek and lowly in heart” (Matthew 11:29).",
+      "sourceIds": [
+        "matthew-11-28-30"
+      ]
+    },
+    {
+      "id": "humility-dependence",
+      "term": "Dependence on God",
+      "meaning": "Knowing that we need the Lord’s help constantly and that our talents and abilities are gifts from Him (Gospel Topics: Humility).",
+      "sourceIds": [
+        "gospel-topics-humility"
+      ]
+    },
+    {
+      "id": "humility-submit",
+      "term": "Submit",
+      "meaning": "To yield your will to God’s will. King Benjamin describes a saint as “willing to submit to all things which the Lord seeth fit to inflict upon him” (Mosiah 3:19). It never means accepting abuse: “No one is expected to endure abusive behavior” (Gospel Topics: Abuse).",
+      "sourceIds": [
+        "mosiah-3-19",
+        "gospel-topics-abuse"
+      ]
+    },
+    {
+      "id": "humility-gratitude",
+      "term": "Gratitude",
+      "meaning": "Thankfulness to God. Preach My Gospel teaches that humility “includes gratitude for God’s blessings.”",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6"
+      ]
+    },
+    {
+      "id": "humility-pride",
+      "term": "Pride",
+      "meaning": "The opposite of humility. The Guide to the Scriptures calls it “A lack or absence of humility or teachableness” in which a person “follows his own will rather than God’s will.”",
+      "sourceIds": [
+        "gs-pride"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "humility-not-timidity",
+      "term": "Weakness or timidity",
+      "title": "Humble is not the same as timid",
+      "explanation": "Gospel Topics teaches that humility “is not a sign of weakness, timidity, or fear; it is an indication that we know where our true strength lies,” and adds, “We can be both humble and courageous.” Humble people can still speak up for what is right; they simply know their strength comes from the Lord.",
+      "sourceIds": [
+        "gospel-topics-humility"
+      ]
+    },
+    {
+      "id": "humility-not-worthlessness",
+      "term": "Thinking you have no worth",
+      "title": "Humble is not the same as thinking you don’t matter",
+      "explanation": "King Benjamin asks us to remember “the greatness of God, and your own nothingness” (Mosiah 4:11). Gospel Labs reads this as recognizing how much we depend on God, not as denying our worth to Him: the Lord declared that “the worth of souls is great in the sight of God” (Doctrine and Covenants 18:10). Gospel Topics describes humility as “an acknowledgment that our talents and abilities are gifts from God”—it gives Him the credit for our gifts rather than pretending we have none.",
+      "sourceIds": [
+        "mosiah-4-11",
+        "dc-18-10",
+        "gospel-topics-humility"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "ether-12-27",
+      "note": "The Lord gives weakness “that they may be humble,” and promises that His grace is sufficient for all who humble themselves before Him."
+    },
+    {
+      "sourceId": "dc-112-10",
+      "note": "A promise to the humble: the Lord will “lead thee by the hand, and give thee answer to thy prayers.”"
+    },
+    {
+      "sourceId": "james-4-6-10",
+      "note": "“God resisteth the proud, but giveth grace unto the humble.” James adds, “Humble yourselves in the sight of the Lord, and he shall lift you up.”"
+    },
+    {
+      "sourceId": "matthew-18-3-4",
+      "note": "The Savior taught that whoever will “humble himself as this little child” is greatest in the kingdom of heaven."
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "humility-sought-the-fathers-will",
+      "title": "He sought His Father’s will",
+      "sourceId": "john-5-30",
+      "note": "Jesus said, “I can of mine own self do nothing … because I seek not mine own will, but the will of the Father which hath sent me.” Gospel Topics calls Him “our greatest example of humility.”"
+    },
+    {
+      "id": "humility-not-as-i-will",
+      "title": "“Not as I will, but as thou wilt”",
+      "sourceId": "matthew-26-39",
+      "note": "In Gethsemane the Savior “fell on his face, and prayed,” submitting His will to the Father’s. Preach My Gospel lists this verse among the scriptures that show what it means to be humble."
+    },
+    {
+      "id": "humility-washed-their-feet",
+      "title": "Their Lord and Master washed their feet",
+      "sourceId": "john-13-12-15",
+      "note": "After washing His disciples’ feet, the One they rightly called “Master and Lord” told them, “I have given you an example, that ye should do as I have done to you.” John doesn’t name the quality; Gospel Labs presents it here as humility, their Lord and Master serving them. (Elder Bednar presents the same account as meekness.)"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "meekness",
+      "relation": "relates-to",
+      "note": "The Guide to the Scriptures defines humility as being “meek and teachable.” Elder David A. Bednar distinguished the two: humility “generally denotes dependence upon God,” while meekness includes “a particular spiritual receptivity to learning.”",
+      "sourceIds": [
+        "gs-humble-humility",
+        "bednar-meek-and-lowly-of-heart"
+      ]
+    },
+    {
+      "attributeId": "obedience",
+      "relation": "supports",
+      "note": "Preach My Gospel teaches, “Humility will help you be obedient.” Nephi says the Savior’s baptism showed that “he humbleth himself before the Father” and would be “obedient unto him” (2 Nephi 31:7).",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6",
+        "2-nephi-31-6-7",
+        "philippians-2-8"
+      ]
+    },
+    {
+      "attributeId": "patience",
+      "relation": "relates-to",
+      "note": "King Benjamin lists the qualities of a saint together: “submissive, meek, humble, patient, full of love” (Mosiah 3:19).",
+      "sourceIds": [
+        "mosiah-3-19"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "humility-or-not",
+      "prompt": "Sort each example: does it show humility as the scriptures and Church teachings describe it, or not?",
+      "sourceIds": [
+        "gospel-topics-humility",
+        "gs-pride",
+        "dc-18-10"
+      ],
+      "hints": [
+        "Humility gives God the credit, stays teachable, and relies on Him.",
+        "Some examples look modest but are really fear or self-contempt; Gospel Topics says humility is not timidity.",
+        "Pride trusts its own will over God’s."
+      ],
+      "explanation": "Humility thanks God for our gifts, stays teachable, relies on the Lord, and chooses His will when it is hard. Pride trusts its own judgment over His. Timidity and believing we have no worth can look like humility, but Gospel Topics teaches that humility is “not a sign of weakness, timidity, or fear,” and the Lord says “the worth of souls is great.”",
+      "categories": [
+        {
+          "id": "humble",
+          "label": "Shows humility"
+        },
+        {
+          "id": "not-humble",
+          "label": "Not humility",
+          "description": "Pride, or timidity or self-contempt mistaken for humility"
+        }
+      ],
+      "items": [
+        {
+          "id": "thank-god",
+          "text": "Thanking God for a talent instead of taking all the credit",
+          "category": "humble",
+          "why": "Preach My Gospel: humility is “willingness to give Him the honor for what is accomplished.”"
+        },
+        {
+          "id": "worthless",
+          "text": "Refusing to share an idea because you believe you’re worthless",
+          "category": "not-humble",
+          "why": "Humility isn’t self-contempt: “the worth of souls is great in the sight of God” (Doctrine and Covenants 18:10)."
+        },
+        {
+          "id": "correction",
+          "text": "Accepting correction and trying to learn from it",
+          "category": "humble",
+          "why": "Humility is being “meek and teachable” (Guide to the Scriptures)."
+        },
+        {
+          "id": "own-judgment",
+          "text": "Trusting your own judgment over the Lord’s counsel",
+          "category": "not-humble",
+          "why": "That is pride, which “follows his own will rather than God’s will” (Guide to the Scriptures: Pride)."
+        },
+        {
+          "id": "too-scared",
+          "text": "Staying silent when a friend is mocked because speaking up feels scary",
+          "category": "not-humble",
+          "why": "Gospel Topics: “We can be both humble and courageous.” Humility is not timidity."
+        },
+        {
+          "id": "not-my-will",
+          "text": "Saying “not as I will, but as thou wilt” when God’s will is hard",
+          "category": "humble",
+          "why": "The Savior’s prayer in Gethsemane (Matthew 26:39)."
+        },
+        {
+          "id": "pray-for-help",
+          "text": "Praying for help with something you can’t do alone",
+          "category": "humble",
+          "why": "Humility recognizes “our dependence on the Lord” (Gospel Topics: Humility)."
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "humility-vocab",
+      "prompt": "Match each word with its meaning.",
+      "sourceIds": [
+        "gs-humble-humility",
+        "gospel-topics-humility",
+        "gs-pride"
+      ],
+      "hints": [
+        "Two of the words describe what humility does with our will.",
+        "One word is humility’s opposite.",
+        "One of the extra meanings describes timidity, which Gospel Topics says humility is not."
+      ],
+      "explanation": "A humble person is teachable, depends on God, submits to His will, and is grateful; pride is the absence of these. Thinking poorly of yourself and avoiding all attention are not what the scriptures mean by humility.",
+      "pairs": [
+        {
+          "id": "humility-teachable",
+          "term": "Teachable",
+          "meaning": "Willing to learn and to be corrected"
+        },
+        {
+          "id": "humility-dependence",
+          "term": "Dependence on God",
+          "meaning": "Knowing that we constantly need the Lord’s help"
+        },
+        {
+          "id": "humility-submit",
+          "term": "Submit",
+          "meaning": "To yield your will to God’s will"
+        },
+        {
+          "id": "humility-gratitude",
+          "term": "Gratitude",
+          "meaning": "Thankfulness to God for His blessings"
+        },
+        {
+          "id": "humility-pride",
+          "term": "Pride",
+          "meaning": "Following your own will rather than God’s; the opposite of humility"
+        }
+      ],
+      "extraMeanings": [
+        "Believing your abilities are worthless",
+        "Never speaking up, even for what is right"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "highlight",
+      "id": "humility-ether-12-27",
+      "prompt": "Tap the phrases that tell what the Lord promises to those who humble themselves before Him.",
+      "sourceIds": [
+        "ether-12-27"
+      ],
+      "hints": [
+        "Look past the description of weakness to what the Lord says He will do.",
+        "There are two promises: one about grace and one about weakness."
+      ],
+      "explanation": "The Lord promises that “my grace is sufficient for all men that humble themselves before me,” and that if they humble themselves and have faith, “then will I make weak things become strong unto them.” Humility opens the way for His strength.",
+      "passage": "ether-12-27",
+      "chunks": [
+        {
+          "verse": 27,
+          "text": "And if men come unto me"
+        },
+        {
+          "verse": 27,
+          "text": "I will show unto them their weakness."
+        },
+        {
+          "verse": 27,
+          "text": "I give unto men weakness that they may be humble;"
+        },
+        {
+          "verse": 27,
+          "text": "and my grace is sufficient for all men that humble themselves before me;"
+        },
+        {
+          "verse": 27,
+          "text": "for if they humble themselves before me, and have faith in me,"
+        },
+        {
+          "verse": 27,
+          "text": "then will I make weak things become strong unto them."
+        }
+      ],
+      "targets": [
+        3,
+        5
+      ]
+    }
+  ],
+  "reflection": [
+    "The Savior said, “I can of mine own self do nothing.” What does His example teach about where strength comes from?",
+    "When has learning from someone else helped you see something more clearly?",
+    "What might it look like to be both humble and courageous?"
+  ],
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "contrasts.humility-not-worthlessness",
+        "note": "Interpretive contrast. Scripture also speaks of human ‘nothingness’ before God (e.g., Mosiah 4:11; Moses 1:10). The contrast distinguishes recognizing dependence on God from denying one’s worth to Him (D&C 18:10). Please confirm the framing.",
+        "resolution": "Qualified: the contrast now presents the distinction as Gospel Labs’ reading. It quotes King Benjamin’s ‘your own nothingness’ (Mosiah 4:11, which Preach My Gospel lists under what it means to be humble) beside Doctrine and Covenants 18:10, reading it as dependence on God rather than lack of worth. Moses 1:10 isn’t quoted. Owner: please confirm this framing, which the humility sort also rewards (the ‘worthless’ item, supported by D&C 18:10 and Gospel Topics)."
+      },
+      {
+        "where": "saviorExamples.humility-washed-their-feet",
+        "note": "Presenting the foot washing (John 13:12–15) as an example of humility is a common reading; the text itself calls it “an example.” Elder Bednar presents John 13:4–5 as meekness (see the meekness file).",
+        "resolution": "Qualified: the note now says John doesn’t name the quality, that Gospel Labs presents the account as humility, and that Elder Bednar presents it as meekness. Preach My Gospel lists John 13:1–16 among scriptures about following the Savior’s example without naming an attribute (checked 26 October 2026)."
+      },
+      {
+        "where": "relationships.obedience",
+        "note": "Uses Preach My Gospel and 2 Nephi 31:7, which pairs “humbleth himself” with obedience.",
+        "resolution": "Resolved: checked 26 October 2026. Preach My Gospel, chapter 6, says “Humility will help you be obedient”; 2 Nephi 31:7 pairs ‘humbleth himself’ with ‘obedient unto him’; Philippians 2:8 (cited) says he ‘humbled himself, and became obedient unto death’, and the Guide to the Scriptures entry Humble, Humility lists it."
+      },
+      {
+        "where": "vocabulary.humility-submit",
+        "note": "Sensitive. Mosiah 3:19 (‘willing to submit to all things which the Lord seeth fit to inflict upon him’) could be read by someone who is being hurt as meaning they must accept it.",
+        "resolution": "Qualified: the meaning now adds that submitting to God never means accepting abuse, quoting Gospel Topics: Abuse (declared exactly as in forgiveness.json)."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gs-humble-humility",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Humble, Humility",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/humble-humility?lang=eng"
+    },
+    {
+      "id": "preach-my-gospel-chapter-6",
+      "kind": "official",
+      "label": "Preach My Gospel, chapter 6",
+      "title": "Chapter 6: Seek Christlike Attributes",
+      "publication": "Preach My Gospel: A Guide to Sharing the Gospel of Jesus Christ (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/14-chapter-6?lang=eng",
+      "excerpt": "A Christlike attribute is a quality or trait of the Savior’s nature and character."
+    },
+    {
+      "id": "matthew-11-28-30",
+      "kind": "scripture",
+      "label": "Matthew 11:28–30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28",
+      "verses": [
+        {
+          "number": 28,
+          "text": "¶ Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+        },
+        {
+          "number": 29,
+          "text": "Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls."
+        },
+        {
+          "number": 30,
+          "text": "For my yoke is easy, and my burden is light."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-humility",
+      "kind": "official",
+      "label": "Gospel Topics: Humility",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/humility?lang=eng",
+      "excerpt": "To be humble is to recognize gratefully our dependence on the Lord—to understand that we have constant need for His support. Humility is an acknowledgment that our talents and abilities are gifts from God. It is not a sign of weakness, timidity, or fear; it is an indication that we know where our true strength lies."
+    },
+    {
+      "id": "mosiah-3-19",
+      "kind": "scripture",
+      "label": "Mosiah 3:19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng&id=p19#p19",
+      "verses": [
+        {
+          "number": 19,
+          "text": "For the natural man is an enemy to God, and has been from the fall of Adam, and will be, forever and ever, unless he yields to the enticings of the Holy Spirit, and putteth off the natural man and becometh a saint through the atonement of Christ the Lord, and becometh as a child, submissive, meek, humble, patient, full of love, willing to submit to all things which the Lord seeth fit to inflict upon him, even as a child doth submit to his father."
+        }
+      ]
+    },
+    {
+      "id": "gs-pride",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Pride",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/pride?lang=eng",
+      "excerpt": "A lack or absence of humility or teachableness. Pride sets people in opposition to each other and to God. A proud person sets himself above those around him and follows his own will rather than God’s will."
+    },
+    {
+      "id": "mosiah-4-11",
+      "kind": "scripture",
+      "label": "Mosiah 4:11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p11#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "And again I say unto you as I have said before, that as ye have come to the knowledge of the glory of God, or if ye have known of his goodness and have tasted of his love, and have received a remission of your sins, which causeth such exceedingly great joy in your souls, even so I would that ye should remember, and always retain in remembrance, the greatness of God, and your own nothingness, and his goodness and long-suffering towards you, unworthy creatures, and humble yourselves even in the depths of humility, calling on the name of the Lord daily, and standing steadfastly in the faith of that which is to come, which was spoken by the mouth of the angel."
+        }
+      ]
+    },
+    {
+      "id": "dc-18-10",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 18:10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng&id=p10#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "Remember the worth of souls is great in the sight of God;"
+        }
+      ]
+    },
+    {
+      "id": "ether-12-27",
+      "kind": "scripture",
+      "label": "Ether 12:27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27",
+      "verses": [
+        {
+          "number": 27,
+          "text": "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them."
+        }
+      ]
+    },
+    {
+      "id": "dc-112-10",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 112:10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/112?lang=eng&id=p10#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "Be thou humble; and the Lord thy God shall lead thee by the hand, and give thee answer to thy prayers."
+        }
+      ]
+    },
+    {
+      "id": "james-4-6-10",
+      "kind": "scripture",
+      "label": "James 4:6–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/4?lang=eng&id=p6-p10#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "But he giveth more grace. Wherefore he saith, God resisteth the proud, but giveth grace unto the humble."
+        },
+        {
+          "number": 7,
+          "text": "Submit yourselves therefore to God. Resist the devil, and he will flee from you."
+        },
+        {
+          "number": 8,
+          "text": "Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded."
+        },
+        {
+          "number": 9,
+          "text": "Be afflicted, and mourn, and weep: let your laughter be turned to mourning, and your joy to heaviness."
+        },
+        {
+          "number": 10,
+          "text": "Humble yourselves in the sight of the Lord, and he shall lift you up."
+        }
+      ]
+    },
+    {
+      "id": "matthew-18-3-4",
+      "kind": "scripture",
+      "label": "Matthew 18:3–4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p3-p4#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "And said, Verily I say unto you, Except ye be converted, and become as little children, ye shall not enter into the kingdom of heaven."
+        },
+        {
+          "number": 4,
+          "text": "Whosoever therefore shall humble himself as this little child, the same is greatest in the kingdom of heaven."
+        }
+      ]
+    },
+    {
+      "id": "john-5-30",
+      "kind": "scripture",
+      "label": "John 5:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "I can of mine own self do nothing: as I hear, I judge: and my judgment is just; because I seek not mine own will, but the will of the Father which hath sent me."
+        }
+      ]
+    },
+    {
+      "id": "matthew-26-39",
+      "kind": "scripture",
+      "label": "Matthew 26:39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=p39#p39",
+      "verses": [
+        {
+          "number": 39,
+          "text": "And he went a little further, and fell on his face, and prayed, saying, O my Father, if it be possible, let this cup pass from me: nevertheless not as I will, but as thou wilt."
+        }
+      ]
+    },
+    {
+      "id": "john-13-12-15",
+      "kind": "scripture",
+      "label": "John 13:12–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p12-p15#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "So after he had washed their feet, and had taken his garments, and was set down again, he said unto them, Know ye what I have done to you?"
+        },
+        {
+          "number": 13,
+          "text": "Ye call me Master and Lord: and ye say well; for so I am."
+        },
+        {
+          "number": 14,
+          "text": "If I then, your Lord and Master, have washed your feet; ye also ought to wash one another’s feet."
+        },
+        {
+          "number": 15,
+          "text": "For I have given you an example, that ye should do as I have done to you."
+        }
+      ]
+    },
+    {
+      "id": "bednar-meek-and-lowly-of-heart",
+      "kind": "speaker",
+      "label": "Meek and Lowly of Heart",
+      "author": "Elder David A. Bednar",
+      "publication": "General Conference, April 2018",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/04/meek-and-lowly-of-heart?lang=eng",
+      "excerpt": "Meekness is strong, not weak; active, not passive; courageous, not timid; restrained, not excessive; modest, not self-aggrandizing; and gracious, not brash."
+    },
+    {
+      "id": "2-nephi-31-6-7",
+      "kind": "scripture",
+      "label": "2 Nephi 31:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And now, I would ask of you, my beloved brethren, wherein the Lamb of God did fulfil all righteousness in being baptized by water?"
+        },
+        {
+          "number": 7,
+          "text": "Know ye not that he was holy? But notwithstanding he being holy, he showeth unto the children of men that, according to the flesh he humbleth himself before the Father, and witnesseth unto the Father that he would be obedient unto him in keeping his commandments."
+        }
+      ]
+    },
+    {
+      "id": "philippians-2-8",
+      "kind": "scripture",
+      "label": "Philippians 2:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/2?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    }
+  ]
+}

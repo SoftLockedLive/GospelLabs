@@ -93,6 +93,28 @@ To keep that window small:
 
 From 1.1 onward, these risks are handled in the app: older tabs are told about updates, keep data they don't recognise, and refuse to save over newer records.
 
+### Rolling out 2.0 over 1.1
+
+2.0 adds four IndexedDB tables (database version 2) and never changes 1.x research-notebook records, which keep `RECORD_DATA_VERSION` 2. Open 1.1 tabs see the update notice within minutes, and keep working on research notebooks meanwhile. Two caveats while a 1.1 tab is still open:
+- its "Delete all data" and replace-import clear only research notebooks, not 2.0 study data;
+- 1.1 refuses version 3 backups as "made by a newer version", rather than dropping data.
+
+Before the 2.0 deployment, the live 1.1 build was also copied on Atlas to a dated, never-served folder, so it survives later deploys (which keep only one `.gospellabs-previous`):
+
+```bash
+ssh atlas 'cd /srv/www && cp -a gospellabs.softlockedlive.com .gospellabs-1.1-20261021044420'
+```
+
+To roll back to 1.1 from that copy (data-safe: 1.1 opens the version 2 database and ignores the study tables):
+
+```bash
+ssh atlas 'cd /srv/www && test -d .gospellabs-1.1-20261021044420 \
+  && mv gospellabs.softlockedlive.com .gospellabs-rolled-back \
+  && cp -a .gospellabs-1.1-20261021044420 gospellabs.softlockedlive.com'
+```
+
+Or rebuild it from git: `git switch --detach v1.1.0 && npm ci && npm run deploy`. Study data made in 2.0 stays in each browser and reappears if 2.0 is redeployed.
+
 ## Rolling back
 
 The previous build stays on Atlas next to the live site as `.gospellabs-previous`. Folders whose names start with a dot are never served. To put it back:
@@ -128,7 +150,7 @@ Browsers pick up a rollback like any other deployment: the restored build has a 
 
 Rolling back changes only the app's files, but the older app then reads and saves data written by the newer one:
 
-- **Back to 1.1 or later:** safe for data. From 1.1 on, the app keeps top-level fields it doesn't recognise when it saves an investigation. If the newer release raised `RECORD_DATA_VERSION`, investigations it saved open with a "saved by a newer version" notice in the older one and can't be edited until you fix forward. Nothing is overwritten.
+- **Back to 1.1 or later:** safe for data, including from 2.0 (1.1 opens 2.0's version 2 database; tested). From 1.1 on, the app keeps top-level fields it doesn't recognise when it saves an investigation. If the newer release raised `RECORD_DATA_VERSION`, investigations it saved open with a "saved by a newer version" notice in the older one and can't be edited until you fix forward. Nothing is overwritten.
 - **Back to 1.0** (the first build on Atlas): **avoid this once 1.1 has been live.** 1.0 drops evidence connections, saved discoveries, Come unto Christ reflections, challenge responses, and discovery-trail notes from any investigation it saves, and refuses backups in format version 2. Fix forward instead. If you must roll back to 1.0, do it immediately after a bad deploy, before people have used the new features.
 
 ## How Atlas serves the site

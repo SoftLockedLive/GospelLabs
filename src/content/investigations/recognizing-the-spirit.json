@@ -1,0 +1,2244 @@
+{
+  "id": "recognizing-the-spirit",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "Recognizing the Spirit",
+  "question": "Why don't I feel the Spirit — and how would I recognize Him?",
+  "hook": "Many people expect a powerful feeling. Scripture describes a voice that is usually quieter, more varied, and more easily missed than that.",
+  "theme": "The Holy Ghost",
+  "tags": [
+    "holy-ghost",
+    "personal-revelation",
+    "still-small-voice"
+  ],
+  "primaryQuestion": {
+    "id": "christ",
+    "note": "The Savior said the Comforter “shall testify of me” (John 15:26). Learning to recognize the Holy Ghost helps a person receive their own witness that Jesus is the Christ."
+  },
+  "commonQuestions": [
+    "What if I don’t think I’ve ever felt the Spirit?",
+    "Does the Spirit always come as a strong feeling?",
+    "How can I tell my own thoughts from inspiration?"
+  ],
+  "estimatedMinutes": {
+    "quick": 9,
+    "deep": 30
+  },
+  "intro": "Many people wonder why they don't seem to feel the Spirit, or how they would recognize Him if He spoke to them. Behind many of these questions is an assumption: that the Spirit always arrives as a strong, unmistakable emotion. In this investigation you'll test that assumption against scripture: Elijah on the mount, a still voice in the Book of Mormon, the Lord's words to Oliver Cowdery, and Mormon's way of judging what is of God. Scripture won't hand you a formula, and it doesn't say everyone's experiences will feel the same. But it describes how the Spirit often speaks, how to recognize Him, and what He testifies of above all.",
+  "sources": [
+    {
+      "id": "1-kings-19-11-12",
+      "kind": "scripture",
+      "label": "1 Kings 19:11–12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng&id=p11-p12#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "And he said, Go forth, and stand upon the mount before the Lord. And, behold, the Lord passed by, and a great and strong wind rent the mountains, and brake in pieces the rocks before the Lord; but the Lord was not in the wind: and after the wind an earthquake; but the Lord was not in the earthquake:"
+        },
+        {
+          "number": 12,
+          "text": "And after the earthquake a fire; but the Lord was not in the fire: and after the fire a still small voice."
+        }
+      ]
+    },
+    {
+      "id": "helaman-5-30",
+      "kind": "scripture",
+      "label": "Helaman 5:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "And it came to pass when they heard this voice, and beheld that it was not a voice of thunder, neither was it a voice of a great tumultuous noise, but behold, it was a still voice of perfect mildness, as if it had been a whisper, and it did pierce even to the very soul—"
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-9-20",
+      "kind": "scripture",
+      "label": "3 Nephi 9:20",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng&id=p20#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "And ye shall offer for a sacrifice unto me a broken heart and a contrite spirit. And whoso cometh unto me with a broken heart and a contrite spirit, him will I baptize with fire and with the Holy Ghost, even as the Lamanites, because of their faith in me at the time of their conversion, were baptized with fire and with the Holy Ghost, and they knew it not."
+        }
+      ]
+    },
+    {
+      "id": "dc-8-2-3",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 8:2–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng&id=p2-p3#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "Yea, behold, I will tell you in your mind and in your heart, by the Holy Ghost, which shall come upon you and which shall dwell in your heart."
+        },
+        {
+          "number": 3,
+          "text": "Now, behold, this is the spirit of revelation; behold, this is the spirit by which Moses brought the children of Israel through the Red Sea on dry ground."
+        }
+      ]
+    },
+    {
+      "id": "dc-6-14-15",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 6:14–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p14-p15#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "Verily, verily, I say unto thee, blessed art thou for what thou hast done; for thou hast inquired of me, and behold, as often as thou hast inquired thou hast received instruction of my Spirit. If it had not been so, thou wouldst not have come to the place where thou art at this time."
+        },
+        {
+          "number": 15,
+          "text": "Behold, thou knowest that thou hast inquired of me and I did enlighten thy mind; and now I tell thee these things that thou mayest know that thou hast been enlightened by the Spirit of truth;"
+        }
+      ]
+    },
+    {
+      "id": "dc-6-22-23",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 6:22–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p22-p23#p22",
+      "verses": [
+        {
+          "number": 22,
+          "text": "Verily, verily, I say unto you, if you desire a further witness, cast your mind upon the night that you cried unto me in your heart, that you might know concerning the truth of these things."
+        },
+        {
+          "number": 23,
+          "text": "Did I not speak peace to your mind concerning the matter? What greater witness can you have than from God?"
+        }
+      ]
+    },
+    {
+      "id": "dc-9-7-9",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 9:7–9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng&id=p7-p9#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "Behold, you have not understood; you have supposed that I would give it unto you, when you took no thought save it was to ask me."
+        },
+        {
+          "number": 8,
+          "text": "But, behold, I say unto you, that you must study it out in your mind; then you must ask me if it be right, and if it is right I will cause that your bosom shall burn within you; therefore, you shall feel that it is right."
+        },
+        {
+          "number": 9,
+          "text": "But if it be not right you shall have no such feelings, but you shall have a stupor of thought that shall cause you to forget the thing which is wrong; therefore, you cannot write that which is sacred save it be given you from me."
+        }
+      ]
+    },
+    {
+      "id": "dc-11-12-13",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 11:12–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/11?lang=eng&id=p12-p13#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And now, verily, verily, I say unto thee, put your trust in that Spirit which leadeth to do good—yea, to do justly, to walk humbly, to judge righteously; and this is my Spirit."
+        },
+        {
+          "number": 13,
+          "text": "Verily, verily, I say unto you, I will impart unto you of my Spirit, which shall enlighten your mind, which shall fill your soul with joy;"
+        }
+      ]
+    },
+    {
+      "id": "galatians-5-22-23",
+      "kind": "scripture",
+      "label": "Galatians 5:22–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/5?lang=eng&id=p22-p23#p22",
+      "verses": [
+        {
+          "number": 22,
+          "text": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,"
+        },
+        {
+          "number": 23,
+          "text": "Meekness, temperance: against such there is no law."
+        }
+      ]
+    },
+    {
+      "id": "moroni-7-12-17",
+      "kind": "scripture",
+      "label": "Moroni 7:12–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p12-p17#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "Wherefore, all things which are good cometh of God; and that which is evil cometh of the devil; for the devil is an enemy unto God, and fighteth against him continually, and inviteth and enticeth to sin, and to do that which is evil continually."
+        },
+        {
+          "number": 13,
+          "text": "But behold, that which is of God inviteth and enticeth to do good continually; wherefore, every thing which inviteth and enticeth to do good, and to love God, and to serve him, is inspired of God."
+        },
+        {
+          "number": 14,
+          "text": "Wherefore, take heed, my beloved brethren, that ye do not judge that which is evil to be of God, or that which is good and of God to be of the devil."
+        },
+        {
+          "number": 15,
+          "text": "For behold, my brethren, it is given unto you to judge, that ye may know good from evil; and the way to judge is as plain, that ye may know with a perfect knowledge, as the daylight is from the dark night."
+        },
+        {
+          "number": 16,
+          "text": "For behold, the Spirit of Christ is given to every man, that he may know good from evil; wherefore, I show unto you the way to judge; for every thing which inviteth to do good, and to persuade to believe in Christ, is sent forth by the power and gift of Christ; wherefore ye may know with a perfect knowledge it is of God."
+        },
+        {
+          "number": 17,
+          "text": "But whatsoever thing persuadeth men to do evil, and believe not in Christ, and deny him, and serve not God, then ye may know with a perfect knowledge it is of the devil; for after this manner doth the devil work, for he persuadeth no man to do good, no, not one; neither do his angels; neither do they who subject themselves unto him."
+        }
+      ]
+    },
+    {
+      "id": "john-3-8",
+      "kind": "scripture",
+      "label": "John 3:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit."
+        }
+      ]
+    },
+    {
+      "id": "john-14-26-27",
+      "kind": "scripture",
+      "label": "John 14:26–27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p26-p27#p26",
+      "verses": [
+        {
+          "number": 26,
+          "text": "But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you."
+        },
+        {
+          "number": 27,
+          "text": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid."
+        }
+      ]
+    },
+    {
+      "id": "john-15-26",
+      "kind": "scripture",
+      "label": "John 15:26",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p26#p26",
+      "verses": [
+        {
+          "number": 26,
+          "text": "But when the Comforter is come, whom I will send unto you from the Father, even the Spirit of truth, which proceedeth from the Father, he shall testify of me:"
+        }
+      ]
+    },
+    {
+      "id": "moroni-10-3-5",
+      "kind": "scripture",
+      "label": "Moroni 10:3–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p3-p5#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "Behold, I would exhort you that when ye shall read these things, if it be wisdom in God that ye should read them, that ye would remember how merciful the Lord hath been unto the children of men, from the creation of Adam even down until the time that ye shall receive these things, and ponder it in your hearts."
+        },
+        {
+          "number": 4,
+          "text": "And when ye shall receive these things, I would exhort you that ye would ask God, the Eternal Father, in the name of Christ, if these things are not true; and if ye shall ask with a sincere heart, with real intent, having faith in Christ, he will manifest the truth of it unto you, by the power of the Holy Ghost."
+        },
+        {
+          "number": 5,
+          "text": "And by the power of the Holy Ghost ye may know the truth of all things."
+        }
+      ]
+    },
+    {
+      "id": "enos-1-10",
+      "kind": "scripture",
+      "label": "Enos 1:10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng&id=p10#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "And while I was thus struggling in the spirit, behold, the voice of the Lord came into my mind again, saying: I will visit thy brethren according to their diligence in keeping my commandments. I have given unto them this land, and it is a holy land; and I curse it not save it be for the cause of iniquity; wherefore, I will visit thy brethren according as I have said; and their transgressions will I bring down with sorrow upon their own heads."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-28-30",
+      "kind": "scripture",
+      "label": "2 Nephi 28:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/28?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "For behold, thus saith the Lord God: I will give unto the children of men line upon line, precept upon precept, here a little and there a little; and blessed are those who hearken unto my precepts, and lend an ear unto my counsel, for they shall learn wisdom; for unto him that receiveth I will give more; and from them that shall say, We have enough, from them shall be taken away even that which they have."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-holy-ghost",
+      "kind": "official",
+      "label": "Gospel Topics: Holy Ghost",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/holy-ghost?lang=eng",
+      "excerpt": "We can receive a sure testimony of Heavenly Father and Jesus Christ only by the power of the Holy Ghost.",
+      "summary": "An overview of the Holy Ghost: the third member of the Godhead, who witnesses of the Father and the Son, teaches truth, guides, and comforts; and the difference between His influence and the gift of the Holy Ghost."
+    },
+    {
+      "id": "preach-my-gospel-2023-chapter-4",
+      "kind": "official",
+      "label": "Preach My Gospel (2023), chapter 4",
+      "title": "Chapter 4: Seek and Rely on the Spirit",
+      "publication": "Preach My Gospel: A Guide to Sharing the Gospel of Jesus Christ (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/12-chapter-4?lang=eng",
+      "excerpt": "Communications from the Spirit can feel different to different people. Regardless of how these communications feel, the scriptures teach how to recognize them.",
+      "summary": "A chapter on seeking the Holy Ghost: His roles, how He usually communicates (quietly, through feelings, mind, and heart), how to recognize His promptings, and cautions, including not confusing strong emotion with the Spirit itself."
+    },
+    {
+      "id": "bednar-spirit-of-revelation-2011",
+      "kind": "speaker",
+      "label": "Elder David A. Bednar, “The Spirit of Revelation”",
+      "title": "The Spirit of Revelation",
+      "author": "Elder David A. Bednar",
+      "publication": "General Conference, April 2011",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2011/04/the-spirit-of-revelation?lang=eng",
+      "excerpt": "Most frequently, revelation comes in small increments over time and is granted according to our desire, worthiness, and preparation.",
+      "summary": "Elder Bednar compares two patterns of revelation to light: a light switched on in a dark room (immediate, more rare) and a sunrise (gradual, more common). He adds that, as on a cloudy morning, we may receive revelation without recognizing how or when."
+    },
+    {
+      "id": "nelson-revelation-for-our-lives-2018",
+      "kind": "speaker",
+      "label": "President Russell M. Nelson, “Revelation for the Church, Revelation for Our Lives”",
+      "title": "Revelation for the Church, Revelation for Our Lives",
+      "author": "President Russell M. Nelson",
+      "publication": "General Conference, April 2018",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng",
+      "excerpt": "The most important truth the Holy Ghost will ever witness to you is that Jesus is the Christ, the Son of the living God.",
+      "summary": "President Nelson testifies that God speaks to His children, invites listeners to pray, listen, and record the thoughts that come, and acknowledges times when the heavens may feel closed."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "spiritual-discernment",
+      "kind": "concept",
+      "label": "Spiritual discernment",
+      "description": "Recognizing what comes from God by what it invites and leads to. Mormon taught that whatever invites to do good and persuades to believe in Christ is of God (Moroni 7:13–17).",
+      "sourceIds": [
+        "moroni-7-12-17"
+      ]
+    },
+    {
+      "id": "spirit-of-revelation",
+      "kind": "vocabulary",
+      "label": "Spirit of revelation",
+      "description": "The Lord's name in Doctrine and Covenants 8:3 for revelation that comes to the mind and heart by the Holy Ghost.",
+      "sourceIds": [
+        "dc-8-2-3"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "wind-earthquake-fire",
+      "title": "Wind, earthquake, fire — or a still small voice?",
+      "phase": "question",
+      "method": "analytical",
+      "intro": "Questions about not feeling the Spirit often carry an expectation: that He always comes as a strong, unmistakable feeling. Before looking for an answer, test that expectation. Here are three scriptural accounts of how the Lord's voice and Spirit came to people, and one note from a Church manual.",
+      "sourceIds": [
+        "1-kings-19-11-12",
+        "helaman-5-30",
+        "3-nephi-9-20",
+        "preach-my-gospel-2023-chapter-4"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "where-the-lord-was-not",
+          "prompt": "Elijah witnessed three powerful events. Tap each phrase that says whether the Lord was in them, and the phrase that names what came after the fire.",
+          "sourceIds": [
+            "1-kings-19-11-12"
+          ],
+          "hints": [
+            "Look for a phrase that repeats three times.",
+            "Each repeated phrase begins “but the Lord was not in.” One more phrase comes at the very end of verse 12.",
+            "Tap the three phrases beginning “but the Lord was not in…” and the last phrase, “and after the fire a still small voice.”"
+          ],
+          "explanation": "Three times the text says “the Lord was not in” the wind, the earthquake, or the fire. Then came “a still small voice.” Preach My Gospel reads this as Elijah finding that the voice of the Lord was not in the dramatic events but was “a still small voice.” The loudest moments in the account were not where the Lord was found.",
+          "passage": "1-kings-19-11-12",
+          "chunks": [
+            {
+              "verse": 11,
+              "text": "And he said, Go forth, and stand upon the mount before the Lord."
+            },
+            {
+              "verse": 11,
+              "text": "And, behold, the Lord passed by,"
+            },
+            {
+              "verse": 11,
+              "text": "and a great and strong wind rent the mountains,"
+            },
+            {
+              "verse": 11,
+              "text": "and brake in pieces the rocks before the Lord;"
+            },
+            {
+              "verse": 11,
+              "text": "but the Lord was not in the wind:"
+            },
+            {
+              "verse": 11,
+              "text": "and after the wind an earthquake;"
+            },
+            {
+              "verse": 11,
+              "text": "but the Lord was not in the earthquake:"
+            },
+            {
+              "verse": 12,
+              "text": "And after the earthquake a fire;"
+            },
+            {
+              "verse": 12,
+              "text": "but the Lord was not in the fire:"
+            },
+            {
+              "verse": 12,
+              "text": "and after the fire a still small voice."
+            }
+          ],
+          "targets": [
+            4,
+            6,
+            8,
+            9
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "four-witnesses",
+          "prompt": "Examine each clue. Then decide what the clues show together about how the Spirit can come.",
+          "sourceIds": [
+            "1-kings-19-11-12",
+            "helaman-5-30",
+            "3-nephi-9-20",
+            "preach-my-gospel-2023-chapter-4"
+          ],
+          "hints": [
+            "Read each clue for how the voice or influence is described, not only for whether it was loud.",
+            "One clue describes a voice that was mild yet piercing. Another describes people who received the Holy Ghost without knowing it.",
+            "The answer has to fit all four clues: usually quiet, still deep, varied, and sometimes unrecognized."
+          ],
+          "explanation": "Each clue adds something. Elijah found the Lord was not in the dramatic events. Helaman 5:30 describes a voice of “perfect mildness” that still pierced the soul. 3 Nephi 9:20 says people received the Holy Ghost “and they knew it not.” Preach My Gospel says the Spirit's communications “can feel different to different people.” Together they describe a Spirit who is usually quiet but not weak, and whose influence a person may not recognize at first.",
+          "clues": [
+            {
+              "id": "elijah",
+              "title": "Elijah on the mount",
+              "text": "The Lord was not in the wind, the earthquake, or the fire. After the fire came “a still small voice.”",
+              "sourceId": "1-kings-19-11-12"
+            },
+            {
+              "id": "prison",
+              "title": "A voice of perfect mildness",
+              "text": "The people heard a voice that was “not a voice of thunder” but “a still voice of perfect mildness, as if it had been a whisper,” and it “did pierce even to the very soul.”",
+              "sourceId": "helaman-5-30"
+            },
+            {
+              "id": "knew-it-not",
+              "title": "They knew it not",
+              "text": "The Savior said that Lamanites who came to Him in faith “were baptized with fire and with the Holy Ghost, and they knew it not.”",
+              "sourceId": "3-nephi-9-20"
+            },
+            {
+              "id": "manual",
+              "title": "A Church manual",
+              "text": "Preach My Gospel: “The Spirit usually communicates quietly, through your feelings, mind, and heart.” It adds that “communications from the Spirit can feel different to different people.”",
+              "sourceId": "preach-my-gospel-2023-chapter-4"
+            }
+          ],
+          "question": {
+            "id": "together",
+            "prompt": "What do these clues show together?",
+            "options": [
+              {
+                "id": "quiet-deep-varied",
+                "text": "The Spirit usually comes quietly, can still reach deeply, can feel different to different people, and can be at work before a person recognizes Him."
+              },
+              {
+                "id": "no-emotion",
+                "text": "If there's no strong emotion, the Spirit isn't present.",
+                "feedback": "Look at the third clue. These people received the Holy Ghost, yet the verse says “they knew it not.”"
+              },
+              {
+                "id": "always-faint",
+                "text": "Because the Spirit is quiet, His influence is always faint and easy to dismiss.",
+                "feedback": "Look again at the second clue. The voice was mild, but it “did pierce even to the very soul.”"
+              },
+              {
+                "id": "prophets-only",
+                "text": "Only prophets like Elijah hear the still small voice.",
+                "feedback": "Look at who heard the voice in the second clue and who received the Holy Ghost in the third: a group of people and new converts."
+              }
+            ],
+            "correct": [
+              "quiet-deep-varied"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "test-the-assumption",
+          "prompt": "Decide whether each statement is supported by these sources, goes beyond them, or is contradicted by them.",
+          "sourceIds": [
+            "1-kings-19-11-12",
+            "helaman-5-30",
+            "3-nephi-9-20",
+            "preach-my-gospel-2023-chapter-4"
+          ],
+          "hints": [
+            "For each statement, ask: do these sources say it, leave it open, or say the opposite?",
+            "Watch for absolute words like ‘always’ and ‘nothing at all,’ and check them against Helaman 5:30 and 3 Nephi 9:20.",
+            "Two statements are supported, two are contradicted, and one goes beyond what 3 Nephi 9:20 actually says."
+          ],
+          "explanation": "The sources reject the idea that the Spirit always comes as a strong emotion, but they don't swing to the opposite extreme: the Spirit can bring strong feelings, and a whisper can pierce the soul. The subtle one is 3 Nephi 9:20. It says these people didn't know they had received the Holy Ghost; it doesn't say they felt nothing. Reading carefully keeps us from adding to scripture.",
+          "perspectives": [
+            {
+              "id": "always-strong",
+              "voice": "A common idea",
+              "text": "The Spirit always comes as a strong emotion, like tears or chills.",
+              "verdict": "contradicted",
+              "rationale": "The Lord was not in the wind, earthquake, or fire, and Helaman 5:30 describes a voice of “perfect mildness.” In Preach My Gospel, President Howard W. Hunter cautions that strong emotion “ought not to be confused with the presence of the Spirit itself.”"
+            },
+            {
+              "id": "without-realizing",
+              "voice": "A classmate",
+              "text": "Someone can receive the Holy Ghost without realizing it at the time.",
+              "verdict": "supported",
+              "rationale": "3 Nephi 9:20 says these Lamanites were baptized with fire and with the Holy Ghost, “and they knew it not.” The verse describes particular people, but it shows that this can happen."
+            },
+            {
+              "id": "quiet-is-weak",
+              "voice": "A friend",
+              "text": "A quiet voice can't make much of a difference.",
+              "verdict": "contradicted",
+              "rationale": "The voice in Helaman 5:30 was like a whisper, yet it “did pierce even to the very soul.”"
+            },
+            {
+              "id": "felt-nothing",
+              "voice": "A classmate",
+              "text": "The Lamanites in 3 Nephi 9:20 felt nothing at all when they received the Holy Ghost.",
+              "verdict": "beyond",
+              "rationale": "The verse says “they knew it not”: they didn't recognize what had happened. It doesn't describe what they did or didn't feel."
+            },
+            {
+              "id": "can-bring-tears",
+              "voice": "A youth leader",
+              "text": "The Spirit can sometimes bring strong feelings, including tears.",
+              "verdict": "supported",
+              "rationale": "In the quotation in Preach My Gospel, President Hunter said, “Certainly the Spirit of the Lord can bring strong emotional feelings, including tears,” while cautioning against equating emotion with the Spirit's presence."
+            }
+          ]
+        },
+        "complex": {
+          "type": "scripture-connect",
+          "id": "three-accounts",
+          "prompt": "Compare the three accounts side by side, then answer each question.",
+          "sourceIds": [
+            "1-kings-19-11-12",
+            "helaman-5-30",
+            "3-nephi-9-20",
+            "preach-my-gospel-2023-chapter-4"
+          ],
+          "hints": [
+            "Compare how each passage describes the Lord's voice or Spirit, and what the people noticed.",
+            "Helaman 5:30 describes both mildness and power. 3 Nephi 9:20 describes receiving without recognizing.",
+            "The careful answers keep what the verses say and avoid adding what they don't."
+          ],
+          "explanation": "Read together, the passages correct two opposite mistakes. The Spirit isn't measured by drama: the Lord was not in the wind, and the voice in Helaman 5 was “not a voice of thunder.” But quiet doesn't mean weak, since that same voice pierced “even to the very soul.” And 3 Nephi 9:20 shows that receiving the Spirit and recognizing Him are not always the same moment. Applying that to people today is an application, not something the verse states. But it suggests that someone who isn't sure they've ever felt the Spirit may still have experienced His influence, though only they and the Lord can know.",
+          "passages": [
+            "1-kings-19-11-12",
+            "helaman-5-30",
+            "3-nephi-9-20"
+          ],
+          "questions": [
+            {
+              "id": "common-thread",
+              "prompt": "What do 1 Kings 19:11–12 and Helaman 5:30 have in common?",
+              "options": [
+                {
+                  "id": "not-loud",
+                  "text": "Both contrast the Lord's voice with loud, forceful things."
+                },
+                {
+                  "id": "both-elijah",
+                  "text": "Both describe the same event.",
+                  "feedback": "One is Elijah on the mount; the other is a voice heard by a group of people in the Book of Mormon. Look at how each describes the voice."
+                },
+                {
+                  "id": "both-thunder",
+                  "text": "Both say the Lord spoke through thunder.",
+                  "feedback": "Helaman 5:30 says it was “not a voice of thunder.”"
+                }
+              ],
+              "correct": [
+                "not-loud"
+              ]
+            },
+            {
+              "id": "mild-and-powerful",
+              "prompt": "What does Helaman 5:30 add that 1 Kings 19:12 doesn't say?",
+              "options": [
+                {
+                  "id": "pierce",
+                  "text": "That a mild, whisper-like voice can still pierce to the very soul."
+                },
+                {
+                  "id": "louder",
+                  "text": "That the voice grew louder until people listened.",
+                  "feedback": "Read to the end of the verse. The voice stayed mild; what did it do?"
+                },
+                {
+                  "id": "no-effect",
+                  "text": "That the people weren't affected by it.",
+                  "feedback": "The verse ends: it “did pierce even to the very soul.”"
+                }
+              ],
+              "correct": [
+                "pierce"
+              ]
+            },
+            {
+              "id": "receiving-recognizing",
+              "prompt": "3 Nephi 9:20 describes particular people. If you apply it to someone today who isn't sure they've ever felt the Spirit, which conclusion is most careful?",
+              "options": [
+                {
+                  "id": "may-not-recognize",
+                  "text": "They may have received His influence without recognizing it, so not recognizing Him isn't proof He was absent."
+                },
+                {
+                  "id": "proves-unworthy",
+                  "text": "It proves they haven't been faithful.",
+                  "feedback": "The Lamanites in this verse had “faith in me at the time of their conversion,” and still “knew it not.”"
+                },
+                {
+                  "id": "proves-received",
+                  "text": "It proves they have definitely received the Holy Ghost.",
+                  "feedback": "The verse describes particular people. It shows that receiving without recognizing can happen, not that it happened to any one person."
+                }
+              ],
+              "correct": [
+                "may-not-recognize"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "The passages in this step describe a Spirit who usually comes quietly but not weakly, and whose influence people sometimes don't recognize at first. That doesn't explain every experience, but it does challenge the assumption that if there's no strong emotion, the Spirit isn't there.",
+      "concepts": [
+        "holy-ghost",
+        "still-small-voice"
+      ],
+      "connections": [
+        {
+          "from": "scripture:1-kings-19-11-12",
+          "to": "vocabulary:still-small-voice",
+          "relation": "teaches",
+          "sourceIds": [
+            "1-kings-19-11-12"
+          ],
+          "note": "The Lord was not in the wind, earthquake, or fire; after the fire came “a still small voice.”"
+        },
+        {
+          "from": "scripture:3-nephi-9-20",
+          "to": "concept:holy-ghost",
+          "relation": "illustrates",
+          "sourceIds": [
+            "3-nephi-9-20"
+          ],
+          "note": "These Lamanites received the Holy Ghost “and they knew it not”: His influence can come before it is recognized."
+        }
+      ]
+    },
+    {
+      "id": "mind-and-heart",
+      "title": "In your mind and in your heart",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "In 1829 the Lord taught Oliver Cowdery, and then Hyrum Smith, how revelation would come to them. These verses are some of the clearest descriptions in scripture of what the Spirit's voice can be like. Read them closely.",
+      "sourceIds": [
+        "dc-8-2-3",
+        "dc-6-14-15",
+        "dc-6-22-23",
+        "dc-9-7-9",
+        "dc-11-12-13"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "mind-or-heart",
+          "prompt": "Sort each phrase by what the Lord says He speaks to or affects: the mind, the heart and soul, or both.",
+          "sourceIds": [
+            "dc-8-2-3",
+            "dc-6-14-15",
+            "dc-6-22-23",
+            "dc-9-7-9",
+            "dc-11-12-13"
+          ],
+          "hints": [
+            "Look for the words ‘mind,’ ‘heart,’ ‘soul,’ and ‘bosom’ in each phrase.",
+            "Only one phrase names both the mind and the heart.",
+            "Enlightenment and even peace are spoken to the mind in these verses; joy fills the soul; the bosom burns."
+          ],
+          "explanation": "The Lord describes revelation reaching both the mind and the heart. Some of the descriptions are about the mind: enlightenment, and even peace (“Did I not speak peace to your mind…?”). Others are about the heart and soul: joy, and a bosom that burns. If you've been watching only for strong feelings, these verses suggest also paying attention to your thoughts and to a settled mind.",
+          "categories": [
+            {
+              "id": "mind",
+              "label": "The mind",
+              "description": "Thoughts, understanding, and enlightenment"
+            },
+            {
+              "id": "heart",
+              "label": "The heart and soul",
+              "description": "Feelings and the inner self"
+            },
+            {
+              "id": "both",
+              "label": "Both",
+              "description": "The mind and the heart together"
+            }
+          ],
+          "items": [
+            {
+              "id": "tell-mind-heart",
+              "text": "“I will tell you in your mind and in your heart” (D&C 8:2)",
+              "category": "both",
+              "why": "The Lord names both at once: revelation can come as thoughts and as feelings."
+            },
+            {
+              "id": "enlighten-thy-mind",
+              "text": "“I did enlighten thy mind” (D&C 6:15)",
+              "category": "mind",
+              "why": "Enlightenment is described as something the Lord did to Oliver's mind."
+            },
+            {
+              "id": "peace-to-mind",
+              "text": "“Did I not speak peace to your mind…?” (D&C 6:23)",
+              "category": "mind",
+              "why": "Notice where the Lord says He spoke peace: “to your mind.”"
+            },
+            {
+              "id": "soul-with-joy",
+              "text": "“Which shall fill your soul with joy” (D&C 11:13)",
+              "category": "heart",
+              "why": "Joy is described as filling the soul."
+            },
+            {
+              "id": "dwell-in-heart",
+              "text": "“Which shall dwell in your heart” (D&C 8:2)",
+              "category": "heart",
+              "why": "The Holy Ghost is described as dwelling in the heart."
+            },
+            {
+              "id": "bosom-burn",
+              "text": "“Your bosom shall burn within you” (D&C 9:8)",
+              "category": "heart",
+              "why": "The verse ties the burning to feeling: “you shall feel that it is right.” It doesn't describe the sensation itself."
+            },
+            {
+              "id": "enlighten-your-mind",
+              "text": "“Which shall enlighten your mind” (D&C 11:13)",
+              "category": "mind",
+              "why": "The Lord promised Hyrum that His Spirit would enlighten his mind."
+            },
+            {
+              "id": "study-it-out",
+              "text": "“You must study it out in your mind” (D&C 9:8)",
+              "category": "mind",
+              "why": "Here the mind is where Oliver does his own work before asking. Revelation involves effort too."
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "oliver-had-been-receiving",
+          "prompt": "Read what the Lord told Oliver Cowdery in Doctrine and Covenants 6. Answer each question from the verses.",
+          "sourceIds": [
+            "dc-6-14-15",
+            "dc-6-22-23",
+            "bednar-spirit-of-revelation-2011"
+          ],
+          "hints": [
+            "Each answer is in the verses. Read them slowly.",
+            "Verse 15 ends with a purpose: “that thou mayest know…”",
+            "The Lord was helping Oliver recognize revelation he had already received: instruction, an enlightened mind, and peace."
+          ],
+          "explanation": "Oliver had been receiving revelation all along: instruction “as often as” he inquired, an enlightened mind, and peace to his mind. The Lord told him so “that thou mayest know.” Elder David A. Bednar pointed to these verses as an example of receiving revelation without recognizing precisely how or when. Learning to recognize the Spirit can be part of what the Lord teaches us.",
+          "passages": [
+            "dc-6-14-15",
+            "dc-6-22-23"
+          ],
+          "questions": [
+            {
+              "id": "as-often-as",
+              "prompt": "According to verse 14, what had Oliver received “as often as” he inquired?",
+              "options": [
+                {
+                  "id": "instruction",
+                  "text": "Instruction from the Lord's Spirit"
+                },
+                {
+                  "id": "vision",
+                  "text": "A vision",
+                  "feedback": "Read verse 14 again. What does it say he received each time he inquired?"
+                },
+                {
+                  "id": "nothing-yet",
+                  "text": "Nothing, until he finally felt something strong",
+                  "feedback": "Verse 14 says he received something every time he inquired."
+                }
+              ],
+              "correct": [
+                "instruction"
+              ]
+            },
+            {
+              "id": "why-tell-him",
+              "prompt": "Why did the Lord tell Oliver these things (verse 15)?",
+              "options": [
+                {
+                  "id": "so-he-would-know",
+                  "text": "So Oliver would know he had been enlightened by the Spirit of truth"
+                },
+                {
+                  "id": "to-scold",
+                  "text": "To scold Oliver for not noticing",
+                  "feedback": "Verse 14 begins “blessed art thou for what thou hast done.” Look at the end of verse 15 for the purpose."
+                },
+                {
+                  "id": "no-more",
+                  "text": "To tell Oliver he wouldn't need revelation anymore",
+                  "feedback": "Look for the phrase beginning “that thou mayest know.”"
+                }
+              ],
+              "correct": [
+                "so-he-would-know"
+              ]
+            },
+            {
+              "id": "witness-of-peace",
+              "prompt": "In verses 22–23, how does the Lord describe the witness He had already given Oliver?",
+              "options": [
+                {
+                  "id": "peace",
+                  "text": "He had spoken peace to Oliver's mind, a witness from God."
+                },
+                {
+                  "id": "angel",
+                  "text": "He had sent an angel.",
+                  "feedback": "Verse 23 describes something quieter. What did the Lord speak, and to where?"
+                },
+                {
+                  "id": "first-time",
+                  "text": "He was about to give Oliver a witness for the first time.",
+                  "feedback": "Verse 22 asks Oliver to “cast your mind upon the night” he had already prayed. The witness had already come."
+                }
+              ],
+              "correct": [
+                "peace"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "how-revelation-comes",
+          "prompt": "Each clue is a description of revelation from these verses. Which conclusion do they best support?",
+          "sourceIds": [
+            "dc-8-2-3",
+            "dc-6-22-23",
+            "dc-11-12-13",
+            "dc-9-7-9"
+          ],
+          "hints": [
+            "List the different ways revelation is described across the four clues.",
+            "Notice that the last clue begins with something Oliver does himself.",
+            "The best answer includes several forms of revelation and the role of our own effort."
+          ],
+          "explanation": "Across these verses the Lord describes thoughts in the mind, feelings in the heart, an enlightened mind, peace, joy, a burning bosom, and, by contrast, a stupor of thought. He also asked Oliver to “study it out” first. No single sensation is presented as the only sign. That variety matters for anyone wondering why they don't feel the Spirit: they may be watching for one form while He is speaking in another.",
+          "clues": [
+            {
+              "id": "mind-heart",
+              "title": "Mind and heart",
+              "text": "The Lord tells Oliver He will speak “in your mind and in your heart, by the Holy Ghost,” and calls this “the spirit of revelation.”",
+              "sourceId": "dc-8-2-3"
+            },
+            {
+              "id": "peace",
+              "title": "Peace",
+              "text": "“Did I not speak peace to your mind concerning the matter? What greater witness can you have than from God?”",
+              "sourceId": "dc-6-22-23"
+            },
+            {
+              "id": "light-joy",
+              "title": "Light and joy",
+              "text": "The Lord's Spirit “leadeth to do good,” and “shall enlighten your mind” and “fill your soul with joy.”",
+              "sourceId": "dc-11-12-13"
+            },
+            {
+              "id": "study-then-ask",
+              "title": "Study, then ask",
+              "text": "Oliver was told, “You must study it out in your mind; then you must ask me if it be right.” If right, “your bosom shall burn within you”; if not, “you shall have a stupor of thought.”",
+              "sourceId": "dc-9-7-9"
+            }
+          ],
+          "question": {
+            "id": "best-conclusion",
+            "prompt": "Which conclusion do the clues best support?",
+            "options": [
+              {
+                "id": "many-forms",
+                "text": "Revelation can come in several ways (thoughts, enlightenment, peace, joy, and feelings), and it often works together with our own effort to think things through."
+              },
+              {
+                "id": "feeling-first",
+                "text": "Revelation always begins as a feeling in the heart and only later reaches the mind.",
+                "feedback": "Look at the first clue and the first step in the last clue. Neither puts feelings first."
+              },
+              {
+                "id": "peace-not-answer",
+                "text": "Peace is only an emotion, so it isn't really an answer.",
+                "feedback": "Read the second clue again. After speaking peace to Oliver's mind, the Lord asks, “What greater witness can you have than from God?”"
+              },
+              {
+                "id": "only-burning",
+                "text": "The only true sign of revelation is a burning in the chest.",
+                "feedback": "D&C 9:8 is one description among several. Compare it with the peace, enlightenment, and joy in the other clues."
+              }
+            ],
+            "correct": [
+              "many-forms"
+            ]
+          }
+        },
+        "complex": {
+          "type": "compare",
+          "id": "weigh-the-descriptions",
+          "prompt": "Weigh each statement against Doctrine and Covenants 6, 8, 9, and 11. Is it supported, does it go beyond these verses, or is it contradicted?",
+          "sourceIds": [
+            "dc-8-2-3",
+            "dc-6-14-15",
+            "dc-6-22-23",
+            "dc-9-7-9",
+            "dc-11-12-13"
+          ],
+          "hints": [
+            "Look for exact words in the verses before deciding.",
+            "For the ‘burning’ statement, ask whether D&C 9:8 actually describes what the burning feels like.",
+            "Two statements are supported, one is contradicted by D&C 6:14–15, and two claim more than these verses say."
+          ],
+          "explanation": "The verses clearly teach that revelation can come as thoughts in the mind and that God asks us to study things out. They contradict the idea that we always recognize revelation at the time, since Oliver had to be told. Two statements go beyond the text: D&C 9:8 doesn't describe what the burning feels like, and none of these verses claims to list every way the Spirit speaks. Keeping those lines clear helps us avoid turning one description into a rule.",
+          "perspectives": [
+            {
+              "id": "literal-heat",
+              "voice": "A classmate",
+              "text": "A ‘burning in the bosom’ must be a physical feeling of heat.",
+              "verdict": "beyond",
+              "rationale": "D&C 9:8 says “your bosom shall burn within you; therefore, you shall feel that it is right,” but it doesn't describe what the burning feels like. Treating it as literal heat is an interpretation the verse doesn't settle."
+            },
+            {
+              "id": "thoughts-can-be-revelation",
+              "voice": "A seminary student",
+              "text": "Thoughts that come into the mind can be revelation.",
+              "verdict": "supported",
+              "rationale": "The Lord said, “I will tell you in your mind,” and told Oliver, “I did enlighten thy mind.”"
+            },
+            {
+              "id": "always-know",
+              "voice": "A friend",
+              "text": "If I've received revelation, I'll always know it at the time.",
+              "verdict": "contradicted",
+              "rationale": "The Lord had to tell Oliver about revelation he had already received, “that thou mayest know that thou hast been enlightened by the Spirit of truth.”"
+            },
+            {
+              "id": "think-it-through",
+              "voice": "A common idea",
+              "text": "God expects me to think a question through, not only to ask.",
+              "verdict": "supported",
+              "rationale": "“You have supposed that I would give it unto you, when you took no thought save it was to ask me. But, behold, I say unto you, that you must study it out in your mind.”"
+            },
+            {
+              "id": "complete-list",
+              "voice": "A classmate",
+              "text": "These verses list every way the Spirit can ever speak.",
+              "verdict": "beyond",
+              "rationale": "The verses describe several ways, but none claims to be a complete list. Saying they are goes beyond what they state."
+            }
+          ]
+        }
+      },
+      "insight": "The Lord taught Oliver Cowdery that revelation can come to the mind and to the heart: enlightenment, peace, joy, and feelings that confirm. He also showed Oliver that he had already been receiving revelation without fully realizing it. These verses suggest that learning to recognize the Spirit is something the Lord Himself helps us do.",
+      "concepts": [
+        "personal-revelation",
+        "spirit-of-revelation"
+      ],
+      "connections": [
+        {
+          "from": "scripture:dc-8-2-3",
+          "to": "vocabulary:spirit-of-revelation",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-8-2-3"
+          ],
+          "note": "The Lord promised to speak “in your mind and in your heart, by the Holy Ghost,” and called this “the spirit of revelation.”"
+        },
+        {
+          "from": "scripture:dc-6-22-23",
+          "to": "concept:personal-revelation",
+          "relation": "illustrates",
+          "sourceIds": [
+            "dc-6-22-23"
+          ],
+          "note": "The Lord reminded Oliver that He had spoken “peace to your mind” as a witness."
+        }
+      ]
+    },
+    {
+      "id": "what-it-leads-to",
+      "title": "What does it invite you to do?",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "Recognizing the Spirit isn't only about how something feels. Mormon gave a way to judge based on what an influence invites and persuades us to do, and Paul described the ‘fruit’ the Spirit produces in a person. Mormon was writing about “the Spirit of Christ,” which Preach My Gospel calls the Light of Christ. Preach My Gospel also shows President Gordon B. Hinckley using these same verses to answer how we recognize the promptings of the Spirit.",
+      "sourceIds": [
+        "moroni-7-12-17",
+        "dc-11-12-13",
+        "galatians-5-22-23",
+        "preach-my-gospel-2023-chapter-4"
+      ],
+      "branchIds": [
+        "spirit-thoughts-or-inspiration"
+      ],
+      "activities": {
+        "easy": {
+          "type": "vocab-match",
+          "id": "words-of-the-test",
+          "prompt": "Match each phrase from these verses with its meaning.",
+          "sourceIds": [
+            "moroni-7-12-17",
+            "dc-11-12-13",
+            "galatians-5-22-23"
+          ],
+          "hints": [
+            "Each phrase appears in Moroni 7, D&C 11, or Galatians 5. Read it in context.",
+            "Moroni 7:16 says who receives the Spirit of Christ, and why.",
+            "Two of the meanings describe ideas these verses don't teach."
+          ],
+          "explanation": "Mormon taught that “every thing which inviteth and enticeth to do good, and to love God, and to serve him, is inspired of God,” and that “the Spirit of Christ is given to every man, that he may know good from evil.” (Preach My Gospel identifies this with the Light of Christ.) The Lord told Hyrum Smith that His Spirit “leadeth to do good,” and Paul listed the Spirit's fruit: love, joy, peace, and more. None of these verses makes the strength of an emotion the test.",
+          "pairs": [
+            {
+              "id": "fruit",
+              "term": "Fruit of the Spirit",
+              "meaning": "Qualities the Spirit produces in a person, such as love, joy, and peace"
+            },
+            {
+              "id": "enticeth",
+              "term": "Inviteth and enticeth to do good",
+              "meaning": "Draws a person toward goodness, love of God, and service"
+            },
+            {
+              "id": "spirit-of-christ",
+              "term": "The Spirit of Christ",
+              "meaning": "Given to every person so they may know good from evil"
+            },
+            {
+              "id": "leadeth",
+              "term": "Leadeth to do good",
+              "meaning": "Guides a person to do justly, walk humbly, and judge righteously"
+            },
+            {
+              "id": "perfect-knowledge",
+              "term": "A perfect knowledge (Moroni 7:15–17)",
+              "meaning": "Telling good from evil as plainly as daylight from the dark night"
+            }
+          ],
+          "extraMeanings": [
+            "A strong emotion that proves a message is true",
+            "A feeling that comes only to people who never make mistakes"
+          ],
+          "match": "meaning"
+        },
+        "medium": {
+          "type": "sort",
+          "id": "apply-mormons-test",
+          "prompt": "Mormon gave a way to judge (Moroni 7:16–17). Sort each thought by where his test points.",
+          "sourceIds": [
+            "moroni-7-12-17",
+            "dc-11-12-13"
+          ],
+          "hints": [
+            "Ask of each thought: where would it lead me if I followed it?",
+            "Moroni 7:13 and 16 describe what invites to do good, to love and serve God, and to believe in Christ. Verse 17 describes the opposite.",
+            "Thoughts that lead toward kindness, prayer, gratitude, and Christ belong in the first group. Thoughts that lead to cruelty or away from God belong in the second."
+          ],
+          "explanation": "Mormon's test looks at direction: what does the thought invite and persuade you to do? Whatever leads to doing good, loving and serving God, and believing in Christ “is inspired of God” (Moroni 7:13). Whatever persuades to do evil or to turn from Christ is not (verse 17). Notice that a discouraging thought like ‘God has given up on you’ fails the test: it pulls a person away from Him.",
+          "categories": [
+            {
+              "id": "of-god",
+              "label": "Invites to do good and believe in Christ",
+              "description": "Moroni 7:13, 16: inspired of God"
+            },
+            {
+              "id": "not-of-god",
+              "label": "Persuades to do evil or turn from Christ",
+              "description": "Moroni 7:17: not of God"
+            }
+          ],
+          "items": [
+            {
+              "id": "text-a-friend",
+              "text": "Text a friend who seemed left out today.",
+              "category": "of-god",
+              "why": "It invites to do good and to serve. Moroni 7:13 calls every such thing “inspired of God.”"
+            },
+            {
+              "id": "read-about-savior",
+              "text": "Read about the Savior tonight, even for a few minutes.",
+              "category": "of-god",
+              "why": "It persuades to believe in Christ (Moroni 7:16)."
+            },
+            {
+              "id": "apologize",
+              "text": "Apologize to your brother, even though he started it.",
+              "category": "of-god",
+              "why": "It invites to do good and to love. D&C 11:12 says the Lord's Spirit leads “to do justly, to walk humbly.”"
+            },
+            {
+              "id": "give-thanks",
+              "text": "Thank Heavenly Father for something good that happened today.",
+              "category": "of-god",
+              "why": "It invites to love God (Moroni 7:13)."
+            },
+            {
+              "id": "given-up",
+              "text": "God has given up on you, so don't bother praying.",
+              "category": "not-of-god",
+              "why": "It persuades a person to stop serving God and turn from Christ, which Moroni 7:17 says is not of God. It is the opposite of a Spirit that “leadeth to do good.”"
+            },
+            {
+              "id": "mock-someone",
+              "text": "Make fun of someone so the group will like you.",
+              "category": "not-of-god",
+              "why": "It persuades to do evil, the opposite of what Moroni 7:13 calls inspired of God."
+            }
+          ]
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "direction-and-fruit",
+          "prompt": "Compare Mormon's test, the Lord's words to Hyrum Smith, and Paul's list. Answer each question.",
+          "sourceIds": [
+            "moroni-7-12-17",
+            "galatians-5-22-23",
+            "dc-11-12-13"
+          ],
+          "hints": [
+            "Read each passage for what the Spirit does or produces, not for how it feels.",
+            "Galatians 5:22–23 is a list of qualities; Moroni 7:16–17 is a test of direction.",
+            "Mormon's test asks whether something leads to good and to Christ; Paul's list describes what the Spirit produces."
+          ],
+          "explanation": "These passages shift the question from ‘How strong was the feeling?’ to ‘Where is this leading, and what is it producing?’ Mormon's test looks at direction: toward good and toward Christ. Paul's list looks at fruit: love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, and temperance. Both can be noticed even when no single moment feels dramatic.",
+          "passages": [
+            "moroni-7-12-17",
+            "galatians-5-22-23",
+            "dc-11-12-13"
+          ],
+          "questions": [
+            {
+              "id": "shared-direction",
+              "prompt": "Moroni 7:16 and D&C 11:12 both describe the Spirit's influence by its direction. What do they share?",
+              "options": [
+                {
+                  "id": "toward-good",
+                  "text": "Both describe an influence that leads toward doing good."
+                },
+                {
+                  "id": "burning",
+                  "text": "Both say the Spirit is felt as a burning.",
+                  "feedback": "Look for what each verse says the Spirit leads or invites a person to do."
+                },
+                {
+                  "id": "members-only",
+                  "text": "Both say only Church members can know good from evil.",
+                  "feedback": "Moroni 7:16 says the Spirit of Christ “is given to every man.”"
+                }
+              ],
+              "correct": [
+                "toward-good"
+              ]
+            },
+            {
+              "id": "results-not-sensations",
+              "prompt": "Someone isn't sure whether they have ever felt the Spirit. Which passage could help them look at qualities growing in their life rather than at a single sensation?",
+              "options": [
+                {
+                  "id": "galatians",
+                  "text": "Galatians 5:22–23, which lists the fruit of the Spirit"
+                },
+                {
+                  "id": "moroni-17",
+                  "text": "Moroni 7:17, which describes what persuades to do evil",
+                  "feedback": "That verse describes the opposite influence. Which passage lists good qualities the Spirit produces?"
+                },
+                {
+                  "id": "joy-only",
+                  "text": "D&C 11:13, because joy is the only fruit that counts",
+                  "feedback": "D&C 11:13 mentions joy, but Galatians 5:22–23 names many fruits, from love to temperance."
+                }
+              ],
+              "correct": [
+                "galatians"
+              ]
+            },
+            {
+              "id": "as-plain-as-daylight",
+              "prompt": "Moroni 7:15 says the way to judge is “as plain… as the daylight is from the dark night.” According to verses 16–17, what makes it plain?",
+              "options": [
+                {
+                  "id": "direction",
+                  "text": "Whether something invites to do good and to believe in Christ, or persuades to do evil and deny Him"
+                },
+                {
+                  "id": "intensity",
+                  "text": "How intense the feeling is",
+                  "feedback": "Verses 16–17 never mention intensity. What do they look at instead?"
+                },
+                {
+                  "id": "agreement",
+                  "text": "Whether other people agree",
+                  "feedback": "Read verse 16: “I show unto you the way to judge.” What follows?"
+                }
+              ],
+              "correct": [
+                "direction"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "clue",
+          "id": "how-to-recognize",
+          "prompt": "Examine all five clues, from scripture and from Preach My Gospel. Then choose the approach to recognizing the Spirit that fits them best.",
+          "sourceIds": [
+            "moroni-7-12-17",
+            "galatians-5-22-23",
+            "dc-11-12-13",
+            "preach-my-gospel-2023-chapter-4"
+          ],
+          "hints": [
+            "No single clue is the whole answer. Look for the option that respects all five.",
+            "Two options lean on intensity or on peace alone; one dismisses feelings entirely.",
+            "The best answer combines direction (Moroni 7), fruit (Galatians 5; D&C 11), confirmation by scripture and prophets, and caution about intensity."
+          ],
+          "explanation": "Each source guards against a different mistake. Moroni 7 looks at where an influence leads; Galatians 5 and D&C 11 describe what it produces. Preach My Gospel adds two safeguards: impressions from the Spirit align with scripture and living prophets, and strong emotion isn't the same as the Spirit's presence. Feelings matter, since peace and joy are fruits of the Spirit, but they are recognized in context, not measured by intensity.",
+          "clues": [
+            {
+              "id": "inviteth",
+              "title": "Mormon's test",
+              "text": "“Every thing which inviteth and enticeth to do good, and to love God, and to serve him, is inspired of God.”",
+              "sourceId": "moroni-7-12-17"
+            },
+            {
+              "id": "fruit",
+              "title": "The fruit of the Spirit",
+              "text": "“Love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, temperance.”",
+              "sourceId": "galatians-5-22-23"
+            },
+            {
+              "id": "enlighten",
+              "title": "Light and joy",
+              "text": "The Lord's Spirit “shall enlighten your mind” and “fill your soul with joy.”",
+              "sourceId": "dc-11-12-13"
+            },
+            {
+              "id": "align",
+              "title": "A safeguard",
+              "text": "Preach My Gospel: “Compare your spiritual impressions with the scriptures and the teachings of the living prophets. Impressions from the Spirit will align with these sources.”",
+              "sourceId": "preach-my-gospel-2023-chapter-4"
+            },
+            {
+              "id": "caution",
+              "title": "A caution",
+              "text": "President Howard W. Hunter, quoted in Preach My Gospel, cautioned that strong emotion “ought not to be confused with the presence of the Spirit itself.”",
+              "sourceId": "preach-my-gospel-2023-chapter-4"
+            }
+          ],
+          "question": {
+            "id": "best-approach",
+            "prompt": "Which approach to recognizing the Spirit fits all five clues best?",
+            "options": [
+              {
+                "id": "context",
+                "text": "Notice what an impression invites and produces (goodness, love of God, peace, an enlightened mind) and check it against scripture and living prophets, rather than relying on how intense a feeling is."
+              },
+              {
+                "id": "wait-for-certainty",
+                "text": "Wait for an emotion strong enough to be certain, and treat anything less as imagination.",
+                "feedback": "The last clue cautions against equating strong emotion with the Spirit, and the first says every thing that invites to good is inspired of God."
+              },
+              {
+                "id": "peace-overrides",
+                "text": "Trust any impression that feels peaceful, even if it contradicts scripture.",
+                "feedback": "The fourth clue says impressions from the Spirit “will align” with scripture and living prophets."
+              },
+              {
+                "id": "ignore-feelings",
+                "text": "Ignore feelings entirely; only reasoning can be trusted.",
+                "feedback": "The second and third clues name joy and peace among the Spirit's fruit. The sources don't dismiss feelings; they put them in context."
+              }
+            ],
+            "correct": [
+              "context"
+            ]
+          }
+        }
+      },
+      "insight": "Mormon's test and Paul's list both look at direction and fruit: does this lead toward good and toward Christ, and does it produce love, peace, and goodness? These are things a person can notice even when no single moment feels dramatic. Preach My Gospel adds that true impressions align with scripture and the teachings of living prophets.",
+      "concepts": [
+        "spiritual-discernment",
+        "fruits-of-the-spirit"
+      ],
+      "connections": [
+        {
+          "from": "scripture:moroni-7-12-17",
+          "to": "concept:spiritual-discernment",
+          "relation": "teaches",
+          "sourceIds": [
+            "moroni-7-12-17"
+          ],
+          "note": "Mormon taught that whatever invites to do good and persuades to believe in Christ is of God."
+        },
+        {
+          "from": "scripture:galatians-5-22-23",
+          "to": "concept:fruits-of-the-spirit",
+          "relation": "teaches",
+          "sourceIds": [
+            "galatians-5-22-23"
+          ],
+          "note": "Paul names the fruit of the Spirit: love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, and temperance."
+        }
+      ]
+    },
+    {
+      "id": "he-shall-testify-of-me",
+      "title": "He shall testify of me",
+      "phase": "understand",
+      "method": "academic",
+      "intro": "Shortly before His death, the Savior promised His disciples the Comforter. What He said about the Holy Ghost's work points to the most important thing the Spirit testifies of, and gives one more way to recognize Him.",
+      "sourceIds": [
+        "john-14-26-27",
+        "john-15-26",
+        "moroni-10-3-5",
+        "gospel-topics-holy-ghost",
+        "nelson-revelation-for-our-lives-2018"
+      ],
+      "activities": {
+        "easy": {
+          "type": "evidence-connect",
+          "id": "roles-of-the-comforter",
+          "prompt": "Connect each thing the Holy Ghost does with the source that teaches it.",
+          "sourceIds": [
+            "john-15-26",
+            "john-14-26-27",
+            "moroni-10-3-5",
+            "gospel-topics-holy-ghost"
+          ],
+          "hints": [
+            "Each statement on the left uses words close to its source.",
+            "John 15:26 ends with three words about the Savior.",
+            "One evidence item, 1 Kings 19:12, describes how the Lord's voice came to Elijah. It matches none of these roles."
+          ],
+          "explanation": "The Savior described the Holy Ghost as a teacher and a witness: He teaches, brings the Savior's words to remembrance, and testifies of Christ (John 14:26; 15:26). Moroni promised that by His power we “may know the truth of all things” (Moroni 10:5), and Gospel Topics summarizes that He “witnesses of the Father and the Son.”",
+          "left": {
+            "label": "What the Holy Ghost does",
+            "items": [
+              {
+                "id": "testifies",
+                "text": "Testifies of Jesus Christ"
+              },
+              {
+                "id": "teaches",
+                "text": "Teaches and brings the Savior's words to remembrance"
+              },
+              {
+                "id": "truth",
+                "text": "Can make known the truth of all things"
+              },
+              {
+                "id": "witness",
+                "text": "Witnesses of the Father and the Son"
+              }
+            ]
+          },
+          "right": {
+            "label": "Evidence",
+            "items": [
+              {
+                "id": "john-15",
+                "text": "John 15:26",
+                "sourceId": "john-15-26"
+              },
+              {
+                "id": "john-14",
+                "text": "John 14:26",
+                "sourceId": "john-14-26-27"
+              },
+              {
+                "id": "moroni-10",
+                "text": "Moroni 10:5",
+                "sourceId": "moroni-10-3-5"
+              },
+              {
+                "id": "topics",
+                "text": "Gospel Topics: Holy Ghost",
+                "sourceId": "gospel-topics-holy-ghost"
+              },
+              {
+                "id": "kings",
+                "text": "1 Kings 19:12",
+                "sourceId": "1-kings-19-11-12"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "testifies",
+              "right": "john-15",
+              "because": "The Savior said the Comforter, “even the Spirit of truth,” “shall testify of me.”",
+              "clue": "Look for a verse in which the Savior says ‘of me.’"
+            },
+            {
+              "left": "teaches",
+              "right": "john-14",
+              "because": "“He shall teach you all things, and bring all things to your remembrance, whatsoever I have said unto you.”",
+              "clue": "Which verse mentions remembrance?"
+            },
+            {
+              "left": "truth",
+              "right": "moroni-10",
+              "because": "“By the power of the Holy Ghost ye may know the truth of all things.”",
+              "clue": "Look for the words ‘truth of all things.’"
+            },
+            {
+              "left": "witness",
+              "right": "topics",
+              "because": "Gospel Topics says He “witnesses of the Father and the Son.”",
+              "clue": "This one names both the Father and the Son. Check the Church resource."
+            }
+          ]
+        },
+        "medium": {
+          "type": "highlight",
+          "id": "in-my-name",
+          "prompt": "Tap the phrases that tie the Comforter's work, and the peace that follows, to Jesus Christ: whose name He is sent in, whose words He brings to remembrance, and whose peace is given.",
+          "sourceIds": [
+            "john-14-26-27"
+          ],
+          "hints": [
+            "Look for the words ‘my’ and ‘I’ in the Savior's sentences.",
+            "In verse 26, one phrase names whose name the Comforter is sent in; another names whose words He brings back to mind.",
+            "Tap “whom the Father will send in my name,” “whatsoever I have said unto you,” and “Peace I leave with you, my peace I give unto you.”"
+          ],
+          "explanation": "The Comforter is sent “in my name” and brings to remembrance “whatsoever I have said unto you,” and the Savior follows the promise with “my peace I give unto you.” The Holy Ghost's work is woven through with Jesus Christ: His name, His words, His peace. That's one reason recognizing the Spirit and coming to know the Savior go together.",
+          "passage": "john-14-26-27",
+          "chunks": [
+            {
+              "verse": 26,
+              "text": "But the Comforter, which is the Holy Ghost,"
+            },
+            {
+              "verse": 26,
+              "text": "whom the Father will send in my name,"
+            },
+            {
+              "verse": 26,
+              "text": "he shall teach you all things,"
+            },
+            {
+              "verse": 26,
+              "text": "and bring all things to your remembrance,"
+            },
+            {
+              "verse": 26,
+              "text": "whatsoever I have said unto you."
+            },
+            {
+              "verse": 27,
+              "text": "Peace I leave with you, my peace I give unto you:"
+            },
+            {
+              "verse": 27,
+              "text": "not as the world giveth, give I unto you."
+            },
+            {
+              "verse": 27,
+              "text": "Let not your heart be troubled, neither let it be afraid."
+            }
+          ],
+          "targets": [
+            1,
+            4,
+            5
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "witness-of-christ",
+          "prompt": "Weigh each statement against John 14–15, Moroni 10:3–5, Gospel Topics, and President Russell M. Nelson's teaching.",
+          "sourceIds": [
+            "john-14-26-27",
+            "john-15-26",
+            "moroni-10-3-5",
+            "gospel-topics-holy-ghost",
+            "nelson-revelation-for-our-lives-2018"
+          ],
+          "hints": [
+            "Check each statement against the exact wording of the sources.",
+            "Moroni 10:4 sets conditions for asking. Does it describe the experience itself?",
+            "Two statements are supported, two are contradicted, and one goes beyond what Moroni 10:4 describes."
+          ],
+          "explanation": "The sources agree that the Holy Ghost testifies of Jesus Christ and that honest seekers can feel His influence. Moroni's promise has conditions (a sincere heart, real intent, and faith in Christ), but it doesn't describe how the witness will feel or when it will come. That silence matters: it leaves room for the many ways, and the varied timing, in which the Spirit speaks.",
+          "perspectives": [
+            {
+              "id": "most-important",
+              "voice": "A classmate",
+              "text": "President Nelson taught that the most important truth the Holy Ghost testifies of is that Jesus is the Christ.",
+              "verdict": "supported",
+              "rationale": "The Savior said the Comforter “shall testify of me,” and President Nelson taught, “The most important truth the Holy Ghost will ever witness to you is that Jesus is the Christ, the Son of the living God.”"
+            },
+            {
+              "id": "members-only",
+              "voice": "A common idea",
+              "text": "Only people who are already members of the Church can feel the influence of the Holy Ghost.",
+              "verdict": "contradicted",
+              "rationale": "Gospel Topics: “All honest seekers of the truth can feel the influence of the Holy Ghost, leading them to Jesus Christ and His gospel.” It also explains, “The gift of the Holy Ghost is different from the influence of the Holy Ghost.”"
+            },
+            {
+              "id": "no-conditions",
+              "voice": "A friend",
+              "text": "Moroni promises a witness to anyone who asks, whether or not they mean it.",
+              "verdict": "contradicted",
+              "rationale": "Moroni 10:4 says to ask “with a sincere heart, with real intent, having faith in Christ.”"
+            },
+            {
+              "id": "how-and-when",
+              "voice": "A classmate",
+              "text": "Moroni 10:4 describes exactly how the witness will feel and when it will come.",
+              "verdict": "beyond",
+              "rationale": "Moroni promises that God “will manifest the truth of it unto you, by the power of the Holy Ghost,” but he doesn't describe what the manifestation will feel like or when it will come."
+            },
+            {
+              "id": "not-as-the-world",
+              "voice": "A seminary teacher",
+              "text": "The peace the Savior gives is different from the world's peace.",
+              "verdict": "supported",
+              "rationale": "“My peace I give unto you: not as the world giveth, give I unto you.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "principle-recognize-him",
+          "prompt": "Build a principle that draws together this whole investigation. Leave out any fragment the sources don't support.",
+          "sourceIds": [
+            "1-kings-19-11-12",
+            "dc-8-2-3",
+            "moroni-7-12-17",
+            "galatians-5-22-23",
+            "john-15-26"
+          ],
+          "hints": [
+            "Begin with how the Spirit often speaks.",
+            "Then add how to recognize Him (Moroni 7; Galatians 5) and what He testifies of (John 15:26).",
+            "Leave out the fragments about strong emotion and never doubting. The sources in this investigation teach neither."
+          ],
+          "explanation": "This principle gathers each step: the still small voice and revelation to mind and heart (1 Kings 19; D&C 8), Mormon's test and Paul's fruit (Moroni 7; Galatians 5), and the Savior's promise that the Comforter “shall testify of me” (John 15:26). The last fragment is an inference rather than a quotation: if the Spirit's central work is to testify of Christ, then drawing near to the Savior and learning His Spirit's voice go together. ‘Above all’ reflects President Nelson's teaching that this is the most important truth the Holy Ghost will ever witness.",
+          "fragments": [
+            {
+              "id": "quietly",
+              "text": "The Holy Ghost often speaks quietly, to both mind and heart,"
+            },
+            {
+              "id": "recognized-by",
+              "text": "and is recognized by what He invites and produces:"
+            },
+            {
+              "id": "fruits",
+              "text": "goodness, peace, an enlightened mind, and faith in Christ."
+            },
+            {
+              "id": "above-all",
+              "text": "Above all, He testifies of Jesus Christ,"
+            },
+            {
+              "id": "go-together",
+              "text": "so coming to know the Savior and learning to recognize His Spirit go together."
+            },
+            {
+              "id": "stronger-emotion",
+              "text": "so the stronger the emotion, the more certain the answer."
+            },
+            {
+              "id": "never-doubt",
+              "text": "and He speaks only to those who never doubt."
+            }
+          ],
+          "solution": [
+            "quietly",
+            "recognized-by",
+            "fruits",
+            "above-all",
+            "go-together"
+          ],
+          "statement": "The Holy Ghost often speaks quietly, to both mind and heart, and is recognized by what He invites and produces: goodness, peace, an enlightened mind, and faith in Christ. Above all, He testifies of Jesus Christ, so coming to know the Savior and learning to recognize His Spirit go together."
+        }
+      },
+      "insight": "The Savior described the Holy Ghost as One sent in His name, who teaches His words and testifies of Him. So one of the clearest ways to recognize the Spirit is to notice what draws you toward Jesus Christ. President Nelson called that witness, that Jesus is the Christ, the most important truth the Holy Ghost will ever give.",
+      "concepts": [
+        "holy-ghost",
+        "jesus-christ",
+        "testimony"
+      ],
+      "connections": [
+        {
+          "from": "concept:holy-ghost",
+          "to": "concept:jesus-christ",
+          "relation": "leads-to",
+          "sourceIds": [
+            "john-15-26"
+          ],
+          "note": "The Savior said the Comforter, “the Spirit of truth,” “shall testify of me.”"
+        },
+        {
+          "from": "concept:holy-ghost",
+          "to": "question:primary-christ",
+          "relation": "answers",
+          "sourceIds": [
+            "john-15-26",
+            "nelson-revelation-for-our-lives-2018"
+          ],
+          "note": "President Nelson taught that the most important truth the Holy Ghost will ever witness is that Jesus is the Christ."
+        },
+        {
+          "from": "scripture:moroni-10-3-5",
+          "to": "concept:testimony",
+          "relation": "teaches",
+          "sourceIds": [
+            "moroni-10-3-5"
+          ],
+          "note": "Moroni promises that God will manifest truth “by the power of the Holy Ghost” to those who ask with real intent."
+        }
+      ]
+    },
+    {
+      "id": "like-a-sunrise",
+      "title": "A light switch or a sunrise?",
+      "phase": "understand",
+      "method": "analytical",
+      "depth": "deep",
+      "intro": "Elder David A. Bednar of the Quorum of the Twelve Apostles compared two patterns of revelation to two ordinary experiences with light. His comparison speaks to anyone who has wondered why they haven't had a dramatic spiritual experience.",
+      "sourceIds": [
+        "bednar-spirit-of-revelation-2011",
+        "2-nephi-28-30",
+        "dc-6-14-15"
+      ],
+      "branchIds": [
+        "spirit-highs-and-lows"
+      ],
+      "activities": {
+        "easy": {
+          "type": "vocab-match",
+          "id": "patterns-of-light",
+          "prompt": "Match each image from Elder Bednar's talk with what it teaches about revelation.",
+          "sourceIds": [
+            "bednar-spirit-of-revelation-2011",
+            "2-nephi-28-30"
+          ],
+          "hints": [
+            "Read the section of the talk titled “Patterns of Revelation.”",
+            "Elder Bednar says one pattern “tends to be more rare than common” and the other is “more common than rare.”",
+            "The cloudy morning is his image for Oliver Cowdery's experience in D&C 6:14–15."
+          ],
+          "explanation": "Elder Bednar taught that both patterns are real, but “most frequently, revelation comes in small increments over time.” He added a third image: as on a cloudy morning, “we many times receive revelation without recognizing precisely how or when we are receiving revelation.” The scriptural pattern behind his comparison is “line upon line, precept upon precept” (2 Nephi 28:30). He also taught that the spirit of revelation belongs to every covenant member, not only to Church leaders.",
+          "pairs": [
+            {
+              "id": "switch",
+              "term": "A light switched on",
+              "meaning": "Revelation received quickly, completely, and all at once: real, but more rare than common"
+            },
+            {
+              "id": "sunrise",
+              "term": "A sunrise",
+              "meaning": "Revelation received gradually, in small increments over time: more common than rare"
+            },
+            {
+              "id": "cloudy",
+              "term": "A cloudy morning",
+              "meaning": "Receiving revelation without recognizing precisely how or when it came"
+            },
+            {
+              "id": "line",
+              "term": "Line upon line",
+              "meaning": "God giving truth a little at a time, and more to those who receive it"
+            }
+          ],
+          "extraMeanings": [
+            "Revelation reserved for presiding Church leaders",
+            "A feeling that proves one person is more spiritual than another"
+          ],
+          "match": "meaning"
+        },
+        "hard": {
+          "type": "compare",
+          "id": "quite-normal",
+          "prompt": "Elder Bednar spoke to people who “question the strength of their personal testimony.” Weigh each statement against his talk, 2 Nephi 28:30, and D&C 6:14–15.",
+          "sourceIds": [
+            "bednar-spirit-of-revelation-2011",
+            "2-nephi-28-30",
+            "dc-6-14-15"
+          ],
+          "hints": [
+            "Elder Bednar speaks directly to two of these statements. Look for “quite normal” and “mighty miracles.”",
+            "For the cloudy morning, compare his talk with D&C 6:14–15.",
+            "Two statements are contradicted, two are supported, and one adds a timeline the sources don't give."
+          ],
+          "explanation": "Elder Bednar taught that dramatic revelation is real but rare, that most revelation comes gradually, and that we can receive it without recognizing exactly when. To people who worry that they lack strong spiritual experiences he said they are “quite normal,” and counseled, “Just keep pressing forward obediently and with faith in the Savior.” He didn't put a timeline on gradual answers.",
+          "perspectives": [
+            {
+              "id": "something-wrong",
+              "voice": "A classmate",
+              "text": "If I haven't had an experience like Joseph Smith's in the Sacred Grove, something is wrong with me.",
+              "verdict": "contradicted",
+              "rationale": "Elder Bednar addressed exactly this thought: “If you have had similar thoughts or doubts, please know that you are quite normal.”"
+            },
+            {
+              "id": "no-more-miracles",
+              "voice": "A common idea",
+              "text": "Dramatic, immediate revelations don't happen anymore.",
+              "verdict": "contradicted",
+              "rationale": "“Indeed, these mighty miracles do occur. However, this pattern of revelation tends to be more rare than common.”"
+            },
+            {
+              "id": "small-increments",
+              "voice": "A friend",
+              "text": "Most revelation comes in small pieces over time.",
+              "verdict": "supported",
+              "rationale": "“Most frequently, revelation comes in small increments over time.” 2 Nephi 28:30 describes the same pattern: “line upon line, precept upon precept.”"
+            },
+            {
+              "id": "without-the-moment",
+              "voice": "A youth leader",
+              "text": "A person can be guided by God without being able to point to the moment it happened.",
+              "verdict": "supported",
+              "rationale": "Elder Bednar's cloudy-morning image and the Lord's words to Oliver in D&C 6:14–15 both describe receiving revelation without recognizing precisely how or when."
+            },
+            {
+              "id": "takes-years",
+              "voice": "A classmate",
+              "text": "Gradual revelation always takes years.",
+              "verdict": "beyond",
+              "rationale": "Elder Bednar describes revelation coming gradually, but he gives no timeline. How long any answer takes isn't something these sources say."
+            }
+          ]
+        }
+      },
+      "insight": "Elder Bednar taught that most revelation comes gradually, like a sunrise, and sometimes so subtly that we don't recognize when it came. To anyone who hasn't had a dramatic experience, he said: you are ‘quite normal.’ The pattern of the scriptures is line upon line.",
+      "concepts": [
+        "personal-revelation"
+      ],
+      "connections": [
+        {
+          "from": "scripture:2-nephi-28-30",
+          "to": "concept:personal-revelation",
+          "relation": "teaches",
+          "sourceIds": [
+            "2-nephi-28-30",
+            "bednar-spirit-of-revelation-2011"
+          ],
+          "note": "God gives truth “line upon line, precept upon precept,” the pattern Elder Bednar compared to a sunrise."
+        }
+      ]
+    },
+    {
+      "id": "listen-for-him",
+      "title": "Listen for Him",
+      "phase": "understand",
+      "method": "divine",
+      "sourceIds": [
+        "john-14-26-27",
+        "dc-11-12-13",
+        "nelson-revelation-for-our-lives-2018"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "reflect-listen",
+        "prompt": "The Comforter is sent in the Savior's name and testifies of Him. If you'd like, write about one way you could make room this week to notice the Spirit's quiet voice, or to “put your trust in that Spirit which leadeth to do good.”",
+        "sourceIds": [
+          "john-14-26-27",
+          "dc-11-12-13",
+          "nelson-revelation-for-our-lives-2018"
+        ],
+        "suggestions": [
+          "President Nelson counseled that after praying, we “listen! Write the thoughts that come to your mind.”",
+          "Read John 14:26–27 slowly and notice what the Savior promises.",
+          "When a thought invites you to do good, try acting on it, and see where it leads.",
+          "Ask Heavenly Father, in the name of Jesus Christ, to help you recognize His Spirit."
+        ]
+      },
+      "insight": "Recognizing the Spirit is learned over time, and it centers on Jesus Christ, in whose name the Comforter is sent. Reflection here is always optional and never checked.",
+      "concepts": [
+        "holy-ghost",
+        "jesus-christ"
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "spirit-thoughts-or-inspiration",
+      "question": "How can I tell my own thoughts from the Spirit?",
+      "intro": "A common question is how to tell whether a thought is your own or from God. Scripture doesn't give a test that sorts every thought by where it came from. But it says a good deal about how revelation can sound, and it gives a way to judge what a thought invites you to do.",
+      "returnNote": "Back to the main investigation: next, see what the Spirit testifies of above all.",
+      "steps": [
+        {
+          "id": "thoughts-in-the-mind",
+          "title": "When revelation sounds like a thought",
+          "phase": "discover",
+          "method": "academic",
+          "sourceIds": [
+            "enos-1-10",
+            "dc-8-2-3",
+            "moroni-7-12-17",
+            "preach-my-gospel-2023-chapter-4",
+            "dc-9-7-9"
+          ],
+          "activities": {
+            "medium": {
+              "type": "scripture-connect",
+              "id": "voice-in-the-mind",
+              "prompt": "Read how the Lord's voice came to Enos and what He told Oliver Cowdery, then Mormon's words about good things. Answer each question.",
+              "sourceIds": [
+                "enos-1-10",
+                "dc-8-2-3",
+                "moroni-7-12-17",
+                "preach-my-gospel-2023-chapter-4"
+              ],
+              "hints": [
+                "Enos 1:10 and D&C 8:2 describe where the Lord's voice can come.",
+                "Moroni 7:12 describes where good things come from; verses 13 and 16 say what Mormon concludes about things that invite to do good.",
+                "Revelation can come as a thought in the mind, and Mormon says that whatever invites to do good and to believe in Christ is of God."
+              ],
+              "explanation": "Enos heard “the voice of the Lord” come “into my mind,” and the Lord told Oliver He would speak “in your mind.” So revelation can sound a lot like thinking. Mormon adds that “all things which are good cometh of God,” and that whatever invites to do good and to believe in Christ is of God (Moroni 7:13, 16). President Gordon B. Hinckley, quoted in Preach My Gospel, put it simply: “If it invites to do good, it is of God.” One way to apply these verses, suggested by Gospel Labs rather than stated in them: when you can't tell where a good thought came from, noticing where it leads may help more than trying to pin down its exact source.",
+              "passages": [
+                "enos-1-10",
+                "dc-8-2-3",
+                "moroni-7-12-17"
+              ],
+              "questions": [
+                {
+                  "id": "into-my-mind",
+                  "prompt": "How did the voice of the Lord come to Enos?",
+                  "options": [
+                    {
+                      "id": "mind",
+                      "text": "It came into his mind."
+                    },
+                    {
+                      "id": "loud",
+                      "text": "As a loud voice others could hear",
+                      "feedback": "Read the first line of Enos 1:10. Where did the voice come?"
+                    },
+                    {
+                      "id": "person",
+                      "text": "Through another person",
+                      "feedback": "Enos describes the voice of the Lord coming to him directly. Where?"
+                    }
+                  ],
+                  "correct": [
+                    "mind"
+                  ]
+                },
+                {
+                  "id": "sounds-like-me",
+                  "prompt": "If revelation can come “in your mind” (D&C 8:2), what does that suggest about a thought that feels like your own?",
+                  "options": [
+                    {
+                      "id": "not-ruled-out",
+                      "text": "Sounding like my own thought doesn't by itself rule out inspiration."
+                    },
+                    {
+                      "id": "all-revelation",
+                      "text": "Every thought I have must be revelation.",
+                      "feedback": "Moroni 7:17 describes thoughts that persuade to do evil. Not every thought is from God."
+                    },
+                    {
+                      "id": "never-like-me",
+                      "text": "Real revelation never sounds like my own thinking.",
+                      "feedback": "Enos 1:10 and D&C 8:2 both describe the Lord speaking in the mind."
+                    }
+                  ],
+                  "correct": [
+                    "not-ruled-out"
+                  ]
+                },
+                {
+                  "id": "good-cometh-of-god",
+                  "prompt": "Moroni 7:13 and 16 describe every thing that invites to do good, to love and serve God, and to believe in Christ. What does Mormon say about such things?",
+                  "options": [
+                    {
+                      "id": "of-god",
+                      "text": "Each such thing is “inspired of God,” and we “may know with a perfect knowledge it is of God.”"
+                    },
+                    {
+                      "id": "only-if-sure",
+                      "text": "They come from God only if you can tell exactly where they came from.",
+                      "feedback": "Read verse 16: “I show unto you the way to judge.” Mormon's test judges a thing by what it invites a person to do."
+                    },
+                    {
+                      "id": "good-from-me",
+                      "text": "Good thoughts come from me; only commands come from God.",
+                      "feedback": "Read verse 12 again: “all things which are good cometh of God.”"
+                    }
+                  ],
+                  "correct": [
+                    "of-god"
+                  ]
+                }
+              ]
+            },
+            "hard": {
+              "type": "compare",
+              "id": "sorting-thoughts",
+              "prompt": "Weigh each statement against Moroni 7, D&C 9, and the counsel in Preach My Gospel.",
+              "sourceIds": [
+                "moroni-7-12-17",
+                "preach-my-gospel-2023-chapter-4",
+                "dc-9-7-9"
+              ],
+              "hints": [
+                "Moroni 7 judges by direction. Preach My Gospel adds safeguards and counsel about decisions.",
+                "Look for President Dallin H. Oaks's counsel in Preach My Gospel about what to do when no guidance comes.",
+                "Three statements are supported, one is contradicted by President Oaks's counsel, and one claims more than scripture gives."
+              ],
+              "explanation": "The sources give real help without a formula: judge by direction (Moroni 7), check impressions against scripture and living prophets, study things out yourself, and, when no clear guidance comes, act on your best judgment. Notice that President Oaks didn't treat uncertainty as failure. He said Heavenly Father leaves many decisions to us. That can take a lot of pressure off the question ‘Was that me or God?’",
+              "perspectives": [
+                {
+                  "id": "safe-to-act",
+                  "voice": "A classmate",
+                  "text": "A thought that invites me to do good and to believe in Christ is of God.",
+                  "verdict": "supported",
+                  "rationale": "Moroni 7:13 and 16 call such things “inspired of God” and “sent forth by the power and gift of Christ.” President Hinckley, quoted in Preach My Gospel: “If it invites to do good, it is of God.”"
+                },
+                {
+                  "id": "align-with-prophets",
+                  "voice": "A friend",
+                  "text": "True impressions won't contradict scripture or the teachings of living prophets.",
+                  "verdict": "supported",
+                  "rationale": "Preach My Gospel: “Impressions from the Spirit will align with these sources.”"
+                },
+                {
+                  "id": "must-know-first",
+                  "voice": "A common idea",
+                  "text": "Before every decision, I must know for certain which thoughts are mine and which are God's.",
+                  "verdict": "contradicted",
+                  "rationale": "Preach My Gospel quotes President Dallin H. Oaks: “Our Heavenly Father leaves many decisions for our personal choices,” and “if we do not receive guidance, we should act upon our best judgment.”"
+                },
+                {
+                  "id": "use-reasoning",
+                  "voice": "A seminary student",
+                  "text": "God expects me to use my own reasoning as part of seeking revelation.",
+                  "verdict": "supported",
+                  "rationale": "The Lord told Oliver Cowdery, “You must study it out in your mind; then you must ask me if it be right.”"
+                },
+                {
+                  "id": "exact-method",
+                  "voice": "A friend",
+                  "text": "Scripture gives an exact method for sorting every one of my thoughts into ‘mine’ and ‘God's.’",
+                  "verdict": "beyond",
+                  "rationale": "Moroni 7 gives a clear way to judge good from evil, but scripture doesn't give a procedure for sorting every thought by its origin. Saying it does goes beyond these sources."
+                }
+              ]
+            }
+          },
+          "insight": "Revelation can sound like your own thoughts (Enos 1:10; D&C 8:2). Mormon's test looks at what a thought invites you to do: whatever invites to do good and to believe in Christ is of God (Moroni 7:13, 16). One way to apply that, suggested by Gospel Labs: instead of worrying over exactly where a good thought came from, notice where it leads, check it against scripture and living prophets, and, when no clear guidance comes, act on your best judgment, as President Oaks counseled.",
+          "concepts": [
+            "spiritual-discernment",
+            "personal-revelation"
+          ],
+          "connections": [
+            {
+              "from": "scripture:enos-1-10",
+              "to": "concept:personal-revelation",
+              "relation": "illustrates",
+              "sourceIds": [
+                "enos-1-10"
+              ],
+              "note": "Enos describes how “the voice of the Lord came into my mind.”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spirit-highs-and-lows",
+      "question": "Why do spiritual feelings seem to come and go?",
+      "intro": "Many people notice that spiritual feelings rise and fall over time. That's an honest and common experience. Scripture doesn't explain every reason feelings rise and fall, and this side question won't pretend it does. But the sources do say some things that may help.",
+      "returnNote": "If low times feel heavy or last a long time, it can help to talk with a parent, leader, or counselor you trust. You don't have to sort it out alone.",
+      "steps": [
+        {
+          "id": "feelings-are-not-the-measure",
+          "title": "Feelings are not the measure",
+          "phase": "discover",
+          "method": "analytical",
+          "sourceIds": [
+            "preach-my-gospel-2023-chapter-4",
+            "john-3-8",
+            "bednar-spirit-of-revelation-2011",
+            "nelson-revelation-for-our-lives-2018"
+          ],
+          "activities": {
+            "medium": {
+              "type": "clue",
+              "id": "a-low-season",
+              "prompt": "Examine each clue, then choose the conclusion they support about a ‘low’ season.",
+              "sourceIds": [
+                "preach-my-gospel-2023-chapter-4",
+                "john-3-8",
+                "nelson-revelation-for-our-lives-2018"
+              ],
+              "hints": [
+                "Notice what the first clue says about emotion and the Spirit's presence.",
+                "The second and third clues describe something we can't control.",
+                "The answer separates feelings from the Spirit's presence and leaves the timing to God."
+              ],
+              "explanation": "These sources don't explain why spiritual feelings rise and fall, and they don't promise that low times will never come. But they separate two things that are easy to merge: emotional highs and lows, and the Spirit's presence. President Hunter cautioned against equating emotion with the Spirit; Jesus compared the Spirit to wind we can't direct; Preach My Gospel says we can't dictate how or when inspiration comes; and President Nelson acknowledged times when the heavens feel closed and counseled patience with the Lord's timetable.",
+              "clues": [
+                {
+                  "id": "emotion",
+                  "title": "Emotion and the Spirit",
+                  "text": "President Howard W. Hunter, quoted in Preach My Gospel: strong emotion “ought not to be confused with the presence of the Spirit itself.”",
+                  "sourceId": "preach-my-gospel-2023-chapter-4"
+                },
+                {
+                  "id": "wind",
+                  "title": "The wind",
+                  "text": "Jesus said, “The wind bloweth where it listeth, and thou hearest the sound thereof, but canst not tell whence it cometh, and whither it goeth: so is every one that is born of the Spirit.”",
+                  "sourceId": "john-3-8"
+                },
+                {
+                  "id": "not-forced",
+                  "title": "Not forced",
+                  "text": "Preach My Gospel: “You can cultivate an attitude and an environment that invite the Spirit, and you can prepare yourself, but you cannot dictate how or when inspiration comes.”",
+                  "sourceId": "preach-my-gospel-2023-chapter-4"
+                },
+                {
+                  "id": "heavens-closed",
+                  "title": "When heaven feels closed",
+                  "text": "President Nelson: “There may be times when you feel as though the heavens are closed.” He promised that, as you continue to be obedient and grateful, understanding would come “as you patiently honor the Lord’s timetable.”",
+                  "sourceId": "nelson-revelation-for-our-lives-2018"
+                }
+              ],
+              "question": {
+                "id": "low-season-conclusion",
+                "prompt": "What do these clues suggest about a ‘low’ season?",
+                "options": [
+                  {
+                    "id": "not-proof",
+                    "text": "A low feeling isn't proof that the Spirit has left. Emotions aren't the same as His presence, and His timing isn't ours to control."
+                  },
+                  {
+                    "id": "my-fault",
+                    "text": "A low season always means I've done something wrong.",
+                    "feedback": "President Nelson spoke to faithful people who feel the heavens are closed. Does the last clue treat that as a sign of wrongdoing?"
+                  },
+                  {
+                    "id": "same-every-day",
+                    "text": "If I do all the right things, I should feel the Spirit the same way every day.",
+                    "feedback": "Look at the second and third clues: the wind “bloweth where it listeth,” and we “cannot dictate how or when inspiration comes.”"
+                  },
+                  {
+                    "id": "only-highs",
+                    "text": "Only the high moments count as spiritual experiences.",
+                    "feedback": "The first clue separates emotion from the Spirit's presence. A high feeling and the Spirit aren't the same thing either."
+                  }
+                ],
+                "correct": [
+                  "not-proof"
+                ]
+              }
+            }
+          },
+          "insight": "Spiritual feelings can rise and fall for reasons scripture doesn't fully explain. The sources suggest not treating a low feeling as proof that the Spirit has left or that you've failed. The Spirit's ways and God's timing aren't ours to command.",
+          "concepts": [
+            "holy-ghost"
+          ]
+        },
+        {
+          "id": "what-i-can-do",
+          "title": "What I can do, and what I can't control",
+          "phase": "understand",
+          "method": "analytical",
+          "sourceIds": [
+            "preach-my-gospel-2023-chapter-4",
+            "nelson-revelation-for-our-lives-2018",
+            "bednar-spirit-of-revelation-2011"
+          ],
+          "activities": {
+            "easy": {
+              "type": "sort",
+              "id": "invite-or-control",
+              "prompt": "A common question is how to invite the Spirit into everyday life. Sort each item: something these sources invite you to do, or something they say isn't yours to control.",
+              "sourceIds": [
+                "preach-my-gospel-2023-chapter-4",
+                "nelson-revelation-for-our-lives-2018",
+                "bednar-spirit-of-revelation-2011"
+              ],
+              "hints": [
+                "Look at the Preach My Gospel section called “Do Not Try to Force Spiritual Things.”",
+                "President Nelson gives invitations and also speaks of the Lord's timetable.",
+                "Prayer, study, covenants, and gratitude are invitations; timing, manner, and force are not ours to control."
+              ],
+              "explanation": "The sources offer real invitations: prayer, listening, scripture study, covenants, gratitude, and avoiding what dulls our sensitivity. But they don't present these as a formula that guarantees a feeling. Preach My Gospel says, “Spiritual matters cannot be forced,” and counsels, “Be patient and trust that you will receive what you need when the time is right.” Doing our part is about drawing near to God, not controlling Him.",
+              "categories": [
+                {
+                  "id": "invite",
+                  "label": "Ways to seek the Spirit",
+                  "description": "Things these sources invite us to do"
+                },
+                {
+                  "id": "not-ours",
+                  "label": "Not ours to control",
+                  "description": "What these sources say we can't dictate"
+                }
+              ],
+              "items": [
+                {
+                  "id": "pray-listen",
+                  "text": "Pray, then listen and write down the thoughts that come",
+                  "category": "invite",
+                  "why": "President Nelson: “And then listen! Write the thoughts that come to your mind.”"
+                },
+                {
+                  "id": "study-pray",
+                  "text": "Pray fervently and study the scriptures consistently",
+                  "category": "invite",
+                  "why": "Preach My Gospel says having the Spirit's guidance includes “fervent prayer and consistent scripture study.”"
+                },
+                {
+                  "id": "covenants",
+                  "text": "Keep your covenants and take the sacrament each week",
+                  "category": "invite",
+                  "why": "Preach My Gospel names “keeping your covenants and God’s commandments” and “worthily partaking of the sacrament each week.”"
+                },
+                {
+                  "id": "avoid-dulling",
+                  "text": "Avoid media and habits that dull your sensitivity to the Spirit",
+                  "category": "invite",
+                  "why": "Elder Bednar taught that such things “can impair and eventually destroy our capacity to recognize and respond to the subtle messages from God.”"
+                },
+                {
+                  "id": "gratitude",
+                  "text": "Express gratitude for blessings",
+                  "category": "invite",
+                  "why": "President Nelson spoke of “expressing gratitude for every blessing the Lord gives you.”"
+                },
+                {
+                  "id": "how-when",
+                  "text": "Exactly how or when inspiration comes",
+                  "category": "not-ours",
+                  "why": "Preach My Gospel: “You cannot dictate how or when inspiration comes.”"
+                },
+                {
+                  "id": "timetable",
+                  "text": "The Lord's timetable",
+                  "category": "not-ours",
+                  "why": "President Nelson counseled us to “patiently honor the Lord’s timetable.”"
+                },
+                {
+                  "id": "on-command",
+                  "text": "Making the Spirit come on command by doing the right steps",
+                  "category": "not-ours",
+                  "why": "Preach My Gospel: “Spiritual matters cannot be forced.”"
+                }
+              ]
+            }
+          },
+          "insight": "We can invite the Spirit and prepare ourselves, but we can't dictate how or when He comes. That frees us to keep doing what draws us closer to God without treating every low moment as a verdict on our faithfulness.",
+          "concepts": [
+            "holy-ghost",
+            "personal-revelation"
+          ]
+        }
+      ]
+    }
+  ],
+  "discovery": {
+    "summary": "Scripture describes the Holy Ghost in more ways than a strong emotion. The Lord was not in the wind, earthquake, or fire; after them came “a still small voice.” A voice “of perfect mildness” still pierced to the soul, and Lamanites who came to Christ were baptized with fire and the Holy Ghost “and they knew it not.” The Lord told Oliver Cowdery He would speak “in your mind and in your heart,” reminded him that He had enlightened his mind, and asked, “Did I not speak peace to your mind…?” Mormon gave a way to judge: what invites to do good and persuades to believe in Christ is of God. Preach My Gospel adds that the Spirit's communications “can feel different to different people,” and Elder Bednar taught that revelation most often comes gradually, like a sunrise. Above all, the Savior said the Comforter “shall testify of me.” These sources don't promise a formula or identical experiences, but they suggest that not feeling a strong emotion doesn't by itself mean the Spirit has been absent.",
+    "keyIdeas": [
+      "The Spirit usually speaks quietly, as a still small voice, though His voice can still pierce the soul (1 Kings 19:12; Helaman 5:30).",
+      "People can receive the Spirit's influence before they recognize it (3 Nephi 9:20; D&C 6:14–15).",
+      "Revelation can come as thoughts in the mind and feelings in the heart, including peace and enlightenment (D&C 8:2; 6:23; 11:13).",
+      "Mormon's test: whatever invites to do good and to believe in Christ is of God (Moroni 7:13, 16).",
+      "The Holy Ghost's central witness is of Jesus Christ (John 15:26)."
+    ],
+    "christConnection": "The Savior Himself promised the Comforter, sent in His name to teach His words, bring them to remembrance, and testify of Him, and with that promise He gave His peace, “not as the world giveth” (John 14:26–27; 15:26). Mormon's test asks whether something persuades us to believe in Christ. Learning to recognize the Spirit is, in the end, learning to recognize the One He points to.",
+    "openQuestions": [
+      "Why do spiritual experiences vary so much from person to person, and from season to season? Scripture acknowledges the variety but doesn't fully explain it.",
+      "What does the Lord mean by a bosom that ‘burns’ (D&C 9:8)? The verse doesn't describe the sensation.",
+      "Where in my ordinary days might the Spirit already be speaking in ways I haven't recognized?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "Whole investigation",
+        "note": "The main interpretive move is that not feeling a strong emotion doesn't mean the Spirit is absent. It rests on 3 Nephi 9:20, D&C 6:14–15, Preach My Gospel chapter 4, and Elder Bednar, but applying 3 Nephi 9:20 to people today is interpretation. Some people who find it hard to feel the Spirit may be facing circumstances such as grief or depression that these sources don't address; the content doesn't speculate about them.",
+        "resolution": "Qualified: every use of 3 Nephi 9:20 for people today is now framed as an application. The complex question says the verse describes particular people and asks for the most careful conclusion if it is applied today, and its explanation says the application isn't stated in the verse; the ‘without realizing’ rationale says the verse shows this can happen; the discovery says a lack of strong emotion doesn't ‘by itself’ mean the Spirit is absent. The intro now poses the question in general terms. Owner review of the main interpretive move is still recommended."
+      },
+      {
+        "where": "Step what-it-leads-to; branch spirit-thoughts-or-inspiration",
+        "note": "Moroni 7 speaks of the Spirit of Christ, which Preach My Gospel identifies with the Light of Christ, not the Holy Ghost as such. The step applies Mormon's test to recognizing what is of God generally, as Preach My Gospel does via President Hinckley. The branch suggested that, for a good thought, where it leads may matter more than identifying its exact source (from Moroni 7:12–13). That is an interpretation; please confirm it is acceptable doctrine for youth.",
+        "resolution": "Withheld in part, and qualified. The branch question that rewarded that conclusion as its correct answer is withheld (docs/2.0/withheld/recognizing-the-spirit.json) and replaced, under the same id, by one that rewards only what Moroni 7:13 and 16 state. The idea remains only as an application labeled as Gospel Labs' (explanation and insight). The ‘safe to act on’ perspective now says only ‘is of God’. The step intro says Mormon wrote of the Spirit of Christ, which Preach My Gospel calls the Light of Christ, and that the manual shows President Hinckley using these verses."
+      },
+      {
+        "where": "Step mind-and-heart (D&C 9:8)",
+        "note": "Marks ‘a burning in the bosom must be a physical feeling of heat’ as going beyond the text, because D&C 9:8 doesn't describe the sensation. Owner may want to confirm this framing.",
+        "resolution": "Qualified: the ‘beyond’ verdict already claims only that D&C 9:8 doesn't describe the sensation, and says nothing about what it is. Two related places were tightened: the sort item now says only that the verse ties the burning to feeling (‘you shall feel that it is right’), replacing an unsourced gloss of ‘bosom’, and the open question now says the verse, rather than all of scripture, doesn't describe the sensation."
+      },
+      {
+        "where": "Quotations of President Hunter, President Hinckley, and President Oaks",
+        "note": "These are quoted as they appear in Preach My Gospel (2023), chapter 4, an official manual written for missionaries. The investigation applies its principles to all learners. The original talks are not declared as separate sources.",
+        "resolution": "Resolved: checked against Preach My Gospel (2023) chapter 4 on 26 October 2026. Each quotation appears there with these titles (President Howard W. Hunter, President Gordon B. Hinckley, President Dallin H. Oaks), and the content always attributes them as quoted in the manual. The manual's reading of Elijah (1 Kings 19:12) and its identification of Moroni 7:16 with the Light of Christ were confirmed. The chapter says it is important for ‘you and the people you teach’ to recognize the Spirit, so applying it to all learners follows the manual."
+      },
+      {
+        "where": "Steps like-a-sunrise, he-shall-testify-of-me",
+        "note": "Elder Bednar's light patterns and President Nelson's statements are presented as their teachings (speaker kind), not as scripture.",
+        "resolution": "Resolved: callings checked (Elder Bednar, Quorum of the Twelve, April 2011; President Nelson, President of the Church, April 2018). Elder Bednar's talk names Joseph in the Sacred Grove, so the ‘something wrong’ rationale is accurate, and it says the spirit of revelation belongs to every covenant member. The ‘most important truth’ perspective now names President Nelson; the build-principle explanation says ‘Above all’ reflects his teaching; the heavens-closed clue now includes his promise's conditions (obedience, gratitude)."
+      },
+      {
+        "where": "Branch spirit-highs-and-lows",
+        "note": "Scripture doesn't explain why spiritual feelings rise and fall. The branch says so and avoids a formula. Its returnNote, suggesting a parent, leader, or counselor if low times feel heavy or last a long time, is written by Gospel Labs, not drawn from a source. Please confirm the wording.",
+        "resolution": "Qualified: the returnNote reads as caring guidance (‘it can help to talk with… You don't have to sort it out alone’), not as a teaching of the sources, and no activity rewards it. The branch question, intro, one distractor, and one explanation were rewritten in general terms."
+      },
+      {
+        "where": "Step he-shall-testify-of-me (compare)",
+        "note": "Uses Gospel Topics to mark ‘only Church members can feel the Holy Ghost's influence’ as contradicted. The investigation does not explain the difference between the influence and the gift of the Holy Ghost; the Gospel Topics source does.",
+        "resolution": "Resolved: the rationale now also quotes Gospel Topics' statement that the gift of the Holy Ghost is different from His influence, so the ‘contradicted’ verdict isn't read as erasing that distinction. Both quotations were checked against the page."
+      }
+    ]
+  }
+}

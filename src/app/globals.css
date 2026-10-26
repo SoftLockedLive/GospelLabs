@@ -1,13 +1,85 @@
 @import "tailwindcss";
 
 /*
- * Design tokens. Dark is the default theme; light is applied via
- * <html data-theme="light">. Components use the Tailwind utilities mapped in
- * @theme below (bg-canvas, bg-surface, text-fg, text-muted, border-line, ...)
- * rather than raw colors, so both themes stay consistent.
+ * ============================================================================
+ *  Gospel Labs design tokens
+ * ============================================================================
+ *
+ * Four themes share one layout and component system. Each theme is a set of
+ * color tokens on :root[data-theme="…"] (set before first paint by the init
+ * script in src/lib/theme.ts). The same selectors also work on any element,
+ * so <div data-theme="dawn"> renders its contents in Parchment (Settings uses
+ * this for live theme previews).
+ *
+ *   dark     "Lab"        deep teal, the original look (default)
+ *   light    "Daylight"   clean and bright
+ *   dawn     "Parchment"  warm paper and ink for long reading (light)
+ *   evening  "Evening"    soft indigo and gold (dark)
+ *
+ * Components use the Tailwind utilities mapped in @theme below (bg-canvas,
+ * bg-surface, text-fg, text-muted, border-line, bg-accent, bg-highlight, …),
+ * never raw colors, so every theme stays consistent.
+ *
+ * Token reference
+ *   Surfaces
+ *     --canvas           Page background.
+ *     --surface          Cards and panels.
+ *     --surface-raised   Hovered cards, menus, popovers (one step lighter).
+ *     --surface-sunken   Inputs, wells, inset areas (one step deeper).
+ *     --sacred           Quiet, warm surface for reflective content: Connect
+ *                        with Christ, testimony of the Savior, prayer and
+ *                        ponder prompts. Use with --sacred-fg / --sacred-muted.
+ *     --sacred-line      Hairline border on sacred surfaces.
+ *     --wash             Soft tint behind the top of every page (decorative).
+ *     --scrim            Backdrop behind sheets and dialogs.
+ *   Lines
+ *     --line             Hairline borders and dividers (decorative).
+ *     --line-strong      Control borders, dashed empty states.
+ *   Text (all ≥ 4.5:1 on canvas, surface, surface-raised, and surface-sunken)
+ *     --fg               Primary text.
+ *     --muted            Secondary text.
+ *     --subtle           Tertiary text: metadata, hints, captions.
+ *     --sacred-fg        Text on --sacred.
+ *     --sacred-muted     Secondary text on --sacred.
+ *     --sacred-accent    Small gold accents on --sacred (icons, rules, labels).
+ *   Accent
+ *     --accent           Links, primary buttons, focus rings, selected states.
+ *     --accent-strong    Primary button hover.
+ *     --accent-fg        Text on --accent and --accent-strong.
+ *     --accent-soft      Tinted background for selected/active items.
+ *   Status (each text color is ≥ 4.5:1 on its own -soft tint over surface)
+ *     --amber / --amber-soft     Caution, "partially understood", speakers.
+ *     --green / --green-soft     Confirmation, "You discovered", completion.
+ *     --danger / --danger-soft   Errors and destructive actions.
+ *   Scripture highlights
+ *     --highlight        Background of a highlighted phrase (a marker, not a
+ *                        selection). Pair with --highlight-fg for the text.
+ *     --highlight-fg     Text on --highlight.
+ *     --highlight-line   Underline/border that marks a highlight without
+ *                        relying on fill alone (≥ 3:1 on surface and sacred).
+ *                        e.g. `bg-highlight text-highlight-fg
+ *                        decoration-highlight-line underline decoration-2`.
+ *   Discovery Map node kinds (≥ 4.5:1 on canvas and surface, so they work as
+ *   strokes, icons, and label text; use /15–/25 opacity for fills, e.g.
+ *   `bg-node-concept/15 text-node-concept`)
+ *     --node-scripture  --node-concept  --node-question
+ *     --node-attribute  --node-vocabulary  --node-investigation
+ *   Depth
+ *     --elevation-1      Resting cards (shadow-soft).
+ *     --elevation-2      Menus, sheets, and popovers (shadow-lifted).
+ *   Legacy
+ *     --grid-line        The 1.x notebook grid (bg-notebook-grid); faint in Lab
+ *                        only, transparent elsewhere.
+ *
+ * Contrast (WCAG 2.2, checked numerically for every theme; see the 2.0 UI
+ * report): every text color above is ≥ 4.5:1 on canvas, surface,
+ * surface-raised, and surface-sunken, and on the -soft tints over surface;
+ * the lowest is --subtle on --green-soft over --surface in Lab (4.64:1).
+ * Selected-state borders use --accent (≥ 5.5:1) or accent/80 (≥ 3.5:1).
+ * The focus ring (--accent) is ≥ 6:1 against --canvas.
  */
 :root,
-:root[data-theme="dark"] {
+[data-theme="dark"] {
   color-scheme: dark;
   --canvas: #071116;
   --surface: #11232c;
@@ -16,22 +88,40 @@
   --line: rgb(160 179 187 / 0.14);
   --line-strong: rgb(160 179 187 / 0.26);
   --fg: #f1f7f9;
-  --muted: #a0b3bb;
-  --subtle: #7f959e;
+  --muted: #a3b5bd;
+  --subtle: #8ea3ac;
   --accent: #27c6dd;
   --accent-strong: #5ad6e8;
   --accent-fg: #03161b;
-  --accent-soft: rgb(39 198 221 / 0.12);
+  --accent-soft: rgb(39 198 221 / 0.13);
   --amber: #e9b860;
-  --amber-soft: rgb(233 184 96 / 0.12);
+  --amber-soft: rgb(233 184 96 / 0.13);
   --green: #5cd6a6;
-  --green-soft: rgb(92 214 166 / 0.12);
+  --green-soft: rgb(92 214 166 / 0.13);
   --danger: #f2877e;
-  --danger-soft: rgb(242 135 126 / 0.12);
-  --grid-line: rgb(160 179 187 / 0.045);
+  --danger-soft: rgb(242 135 126 / 0.13);
+  --sacred: #19252b;
+  --sacred-line: rgb(230 196 126 / 0.2);
+  --sacred-fg: #f4efe4;
+  --sacred-muted: #c2b8a6;
+  --sacred-accent: #e6c47e;
+  --highlight: #4a3d1d;
+  --highlight-fg: #fdf4dc;
+  --highlight-line: #c99a45;
+  --node-scripture: #6cb4f2;
+  --node-concept: #b9a4f6;
+  --node-question: #e9b860;
+  --node-attribute: #f297b6;
+  --node-vocabulary: #6fd6a6;
+  --node-investigation: #27c6dd;
+  --wash: rgb(39 198 221 / 0.07);
+  --scrim: rgb(2 8 11 / 0.66);
+  --elevation-1: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 1px 2px rgb(0 0 0 / 0.24);
+  --elevation-2: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 16px 40px -12px rgb(0 0 0 / 0.6);
+  --grid-line: rgb(160 179 187 / 0.035);
 }
 
-:root[data-theme="light"] {
+[data-theme="light"] {
   color-scheme: light;
   --canvas: #f4f7f8;
   --surface: #ffffff;
@@ -52,7 +142,109 @@
   --green-soft: rgb(31 158 112 / 0.12);
   --danger: #9a2d24;
   --danger-soft: rgb(180 56 45 / 0.1);
-  --grid-line: rgb(11 38 48 / 0.04);
+  --sacred: #fbf6ec;
+  --sacred-line: rgb(127 90 18 / 0.18);
+  --sacred-fg: #2a2217;
+  --sacred-muted: #5f5241;
+  --sacred-accent: #7f5a12;
+  --highlight: #fbe7a6;
+  --highlight-fg: #1f1a0b;
+  --highlight-line: #b3800f;
+  --node-scripture: #2560a3;
+  --node-concept: #6a49c0;
+  --node-question: #8a5600;
+  --node-attribute: #ad3566;
+  --node-vocabulary: #1c7448;
+  --node-investigation: #086776;
+  --wash: rgb(8 103 118 / 0.05);
+  --scrim: rgb(11 28 34 / 0.42);
+  --elevation-1: 0 1px 2px rgb(11 28 34 / 0.05), 0 1px 3px rgb(11 28 34 / 0.05);
+  --elevation-2: 0 18px 44px -14px rgb(11 28 34 / 0.24), 0 2px 6px rgb(11 28 34 / 0.06);
+  --grid-line: transparent;
+}
+
+[data-theme="dawn"] {
+  color-scheme: light;
+  --canvas: #f5efe3;
+  --surface: #fbf7ef;
+  --surface-raised: #fffdf8;
+  --surface-sunken: #ede4d3;
+  --line: rgb(74 52 24 / 0.12);
+  --line-strong: rgb(74 52 24 / 0.24);
+  --fg: #2b2118;
+  --muted: #5d4f3f;
+  --subtle: #66574a;
+  --accent: #1e626c;
+  --accent-strong: #174f58;
+  --accent-fg: #ffffff;
+  --accent-soft: rgb(30 98 108 / 0.1);
+  --amber: #7a4d0b;
+  --amber-soft: rgb(184 128 40 / 0.15);
+  --green: #2d653a;
+  --green-soft: rgb(61 140 80 / 0.13);
+  --danger: #9c311f;
+  --danger-soft: rgb(180 64 40 / 0.1);
+  --sacred: #fcf3e0;
+  --sacred-line: rgb(125 84 20 / 0.2);
+  --sacred-fg: #2b2118;
+  --sacred-muted: #5d4f3f;
+  --sacred-accent: #7d5414;
+  --highlight: #f2d98c;
+  --highlight-fg: #2b2118;
+  --highlight-line: #a8741c;
+  --node-scripture: #285c94;
+  --node-concept: #64459f;
+  --node-question: #83500a;
+  --node-attribute: #a2385e;
+  --node-vocabulary: #2d6a3d;
+  --node-investigation: #1e626c;
+  --wash: rgb(196 150 70 / 0.1);
+  --scrim: rgb(43 33 24 / 0.42);
+  --elevation-1: 0 1px 2px rgb(74 52 24 / 0.06), 0 1px 3px rgb(74 52 24 / 0.05);
+  --elevation-2: 0 18px 44px -14px rgb(74 52 24 / 0.26), 0 2px 6px rgb(74 52 24 / 0.06);
+  --grid-line: transparent;
+}
+
+[data-theme="evening"] {
+  color-scheme: dark;
+  --canvas: #0e1124;
+  --surface: #161a33;
+  --surface-raised: #1d2240;
+  --surface-sunken: #0b0d1d;
+  --line: rgb(180 186 230 / 0.13);
+  --line-strong: rgb(180 186 230 / 0.26);
+  --fg: #eef0fa;
+  --muted: #b2b7d4;
+  --subtle: #979cc0;
+  --accent: #e8c46f;
+  --accent-strong: #f2d690;
+  --accent-fg: #191530;
+  --accent-soft: rgb(232 196 111 / 0.13);
+  --amber: #f3a774;
+  --amber-soft: rgb(243 167 116 / 0.13);
+  --green: #82d6ae;
+  --green-soft: rgb(130 214 174 / 0.13);
+  --danger: #f59c9c;
+  --danger-soft: rgb(245 156 156 / 0.13);
+  --sacred: #1f1e3a;
+  --sacred-line: rgb(232 196 111 / 0.2);
+  --sacred-fg: #f5efdf;
+  --sacred-muted: #c6bea9;
+  --sacred-accent: #e8c46f;
+  --highlight: #4e4122;
+  --highlight-fg: #fcf2d8;
+  --highlight-line: #c9a24f;
+  --node-scripture: #8fb6ff;
+  --node-concept: #c3a8ff;
+  --node-question: #e8c46f;
+  --node-attribute: #f5a0c0;
+  --node-vocabulary: #82d6ae;
+  --node-investigation: #7fd3e0;
+  --wash: rgb(140 150 255 / 0.07);
+  --scrim: rgb(5 6 16 / 0.66);
+  --elevation-1: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 1px 2px rgb(0 0 0 / 0.28);
+  --elevation-2: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 16px 40px -12px rgb(0 0 0 / 0.62);
+  --grid-line: transparent;
 }
 
 @theme inline {
@@ -75,13 +267,42 @@
   --color-green-soft: var(--green-soft);
   --color-danger: var(--danger);
   --color-danger-soft: var(--danger-soft);
+  --color-sacred: var(--sacred);
+  --color-sacred-line: var(--sacred-line);
+  --color-sacred-fg: var(--sacred-fg);
+  --color-sacred-muted: var(--sacred-muted);
+  --color-sacred-accent: var(--sacred-accent);
+  --color-highlight: var(--highlight);
+  --color-highlight-fg: var(--highlight-fg);
+  --color-highlight-line: var(--highlight-line);
+  --color-node-scripture: var(--node-scripture);
+  --color-node-concept: var(--node-concept);
+  --color-node-question: var(--node-question);
+  --color-node-attribute: var(--node-attribute);
+  --color-node-vocabulary: var(--node-vocabulary);
+  --color-node-investigation: var(--node-investigation);
+  --color-wash: var(--wash);
+  --color-scrim: var(--scrim);
+  --shadow-soft: var(--elevation-1);
+  --shadow-lifted: var(--elevation-2);
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Scripture, reflections, and other contemplative text: `font-serif` or `prose-scripture`. */
+  --font-serif: var(--font-literata), ui-serif, Georgia, "Times New Roman", serif;
   --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+  --ease-gentle: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/*
+ * `dark:` matches the two dark themes (Lab and Evening), not the OS setting,
+ * because the theme can differ from the device. Rarely needed: tokens already
+ * change per theme.
+ */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, [data-theme="evening"], [data-theme="evening"] *));
 
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -99,15 +320,46 @@
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
+
+  /* Native dialogs and sheets share the theme's scrim, and the page behind them doesn't scroll. */
+  dialog::backdrop {
+    background-color: var(--scrim);
+  }
+
+  html:has(dialog:modal) {
+    overflow: hidden;
+  }
 }
 
-/* Faint lab-notebook grid behind page content. */
+/* --- Backgrounds -------------------------------------------------------------- */
+
+/* The 1.x lab-notebook grid. Faint in Lab; transparent in the other themes. */
 @utility bg-notebook-grid {
   background-image:
     linear-gradient(var(--grid-line) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 28px 28px;
 }
+
+/* A soft light at the top of the page; place on an absolutely positioned, aria-hidden layer. */
+@utility bg-page-wash {
+  background-image:
+    radial-gradient(60% 100% at 50% 0%, var(--wash), transparent 70%),
+    radial-gradient(40% 70% at 90% 0%, var(--wash), transparent 70%);
+}
+
+/* --- Typography --------------------------------------------------------------- */
+
+/* Scripture and long-form reflective reading: serif, generous leading, pretty wrapping. */
+@utility prose-scripture {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  font-optical-sizing: auto;
+  text-wrap: pretty;
+}
+
+/* --- Layout helpers ----------------------------------------------------------- */
 
 @utility pb-safe {
   padding-bottom: env(safe-area-inset-bottom);
@@ -118,6 +370,181 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+/*
+ * ============================================================================
+ *  Motion
+ * ============================================================================
+ *
+ * <html data-motion="full|subtle|off"> is set before first paint from the
+ * learner's Motion setting (src/lib/preferences.ts; "Follow my device" is
+ * "off" under prefers-reduced-motion, otherwise "subtle"). Every animation
+ * below runs only under "full" or "subtle"; under "off" (or with no attribute)
+ * the utilities do nothing and elements simply appear in their final state.
+ * Animation is feedback, never decoration, and apart from loading
+ * placeholders (animate-pulse) nothing loops indefinitely.
+ *
+ *   motion-reveal     Fade in with a small rise. For content entering the
+ *                     page: cards, step panels, feedback. Stagger siblings
+ *                     with style={{ "--motion-index": i }} (60ms apart under
+ *                     full, 30ms under subtle).
+ *   motion-success    A gentle settle (slight scale) for a confirmation:
+ *                     a correct answer, a saved card, a check mark.
+ *   motion-glow       One or two soft pulses of an accent halo, to draw the
+ *                     eye to something that just changed (a highlighted
+ *                     source, a focused node). Uses box-shadow; works on any
+ *                     element with a border radius.
+ *   motion-draw       Draws an SVG stroke in. Put it on the <path>/<line>/
+ *                     <polyline>/<circle> and set pathLength="1" on it (or set
+ *                     --draw-length to the path's length). Don't use it on
+ *                     dashed strokes; fade those in with motion-reveal.
+ *   motion-pulse-new  A soft swell that repeats a few times, then stops, for
+ *                     newly added Discovery Map nodes. It scales around the
+ *                     element's own center: on SVG, put it on the node's
+ *                     shape (e.g. a <circle cx cy>), not on a <g> positioned
+ *                     with transform="translate(…)".
+ *   motion-press      A slight press-in on :active for buttons and cards.
+ *
+ * Variants for one-off cases: `motion-on:` (full or subtle), `motion-full:`,
+ * and `motion-off:` — e.g. `motion-on:transition-transform`.
+ * Script-driven animation should check currentMotionLevel() first.
+ */
+@custom-variant motion-on (&:where([data-motion="full"] *, [data-motion="subtle"] *));
+@custom-variant motion-full (&:where([data-motion="full"] *));
+@custom-variant motion-off (&:where([data-motion="off"] *));
+
+:root[data-motion="full"] {
+  --motion-reveal: gl-reveal 460ms var(--ease-gentle) both;
+  --motion-success: gl-success 520ms var(--ease-gentle) both;
+  --motion-glow: gl-glow 1400ms ease-in-out 2;
+  --motion-draw: gl-draw 900ms var(--ease-gentle) both;
+  --motion-pulse-new: gl-pulse-new 1800ms ease-in-out 3;
+  --motion-rise: 10px;
+  --motion-settle: 1.035;
+  --motion-glow-size: 6px;
+  --motion-pulse-scale: 1.12;
+  --motion-stagger: 60ms;
+  --motion-press: 0.975;
+}
+
+:root[data-motion="subtle"] {
+  --motion-reveal: gl-reveal 240ms ease-out both;
+  --motion-success: gl-success 260ms ease-out both;
+  --motion-glow: gl-glow 1200ms ease-in-out 1;
+  --motion-draw: gl-draw 450ms ease-out both;
+  --motion-pulse-new: gl-pulse-new 1800ms ease-in-out 2;
+  --motion-rise: 4px;
+  --motion-settle: 1.012;
+  --motion-glow-size: 4px;
+  --motion-pulse-scale: 1.05;
+  --motion-stagger: 30ms;
+  --motion-press: 0.99;
+}
+
+@keyframes gl-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-rise, 0));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gl-success {
+  0% {
+    transform: scale(0.97);
+    opacity: 0.6;
+  }
+  55% {
+    transform: scale(var(--motion-settle, 1));
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes gl-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 0 var(--motion-glow-size, 0) var(--accent-soft);
+  }
+}
+
+@keyframes gl-draw {
+  from {
+    stroke-dasharray: var(--draw-length, 1);
+    stroke-dashoffset: var(--draw-length, 1);
+  }
+  to {
+    stroke-dasharray: var(--draw-length, 1);
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Uses the `scale` property (not `transform`) so it composes with an element's own transform. */
+@keyframes gl-pulse-new {
+  0%,
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+  50% {
+    scale: var(--motion-pulse-scale, 1);
+    opacity: 0.8;
+  }
+}
+
+@utility motion-reveal {
+  animation: var(--motion-reveal, none);
+  animation-delay: calc(var(--motion-index, 0) * var(--motion-stagger, 0ms));
+}
+
+@utility motion-success {
+  animation: var(--motion-success, none);
+}
+
+@utility motion-glow {
+  animation: var(--motion-glow, none);
+}
+
+@utility motion-draw {
+  animation: var(--motion-draw, none);
+  animation-delay: calc(var(--motion-index, 0) * var(--motion-stagger, 0ms));
+}
+
+@utility motion-pulse-new {
+  animation: var(--motion-pulse-new, none);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@utility motion-press {
+  &:where([data-motion="full"] *, [data-motion="subtle"] *) {
+    transition-property: transform, color, background-color, border-color, box-shadow;
+    transition-duration: 150ms;
+    transition-timing-function: var(--ease-gentle);
+  }
+  &:where([data-motion="full"] *, [data-motion="subtle"] *):active:not(:disabled) {
+    transform: scale(var(--motion-press, 1));
+  }
+}
+
+/* "Off" means off: stop everything, including Tailwind's animate-* and transitions. */
+:root[data-motion="off"] *,
+:root[data-motion="off"] *::before,
+:root[data-motion="off"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

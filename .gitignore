@@ -45,3 +45,6 @@ next-env.d.ts
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# private learner data (see scripts/import-learner-questions.mjs)
+/data/private/

@@ -1,0 +1,615 @@
+{
+  "id": "meekness",
+  "status": "ready",
+  "name": "Meekness",
+  "summary": "A gentle, teachable, self-restrained strength—the quality the Savior named when He described Himself.",
+  "definition": {
+    "text": "The Guide to the Scriptures describes the meek as “Godfearing, righteous, humble, teachable, and patient under suffering,” and says, “The meek are willing to follow gospel teachings.” Elder David A. Bednar taught that meekness “is a defining attribute of the Redeemer and is distinguished by righteous responsiveness, willing submissiveness, and strong self-restraint.”",
+    "sourceIds": [
+      "gs-meek-meekness",
+      "bednar-meek-and-lowly-of-heart"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "meekness-gentle",
+      "term": "Gentle",
+      "meaning": "Kind and mild rather than harsh or quarrelsome. Paul taught that the Lord’s servant “must not strive; but be gentle unto all men” (2 Timothy 2:24).",
+      "sourceIds": [
+        "2-timothy-2-24-25"
+      ]
+    },
+    {
+      "id": "meekness-self-restraint",
+      "term": "Self-restraint",
+      "meaning": "Holding back power, anger, or words you could use. Elder Bednar named “strong self-restraint” as a mark of meekness.",
+      "sourceIds": [
+        "bednar-meek-and-lowly-of-heart"
+      ]
+    },
+    {
+      "id": "meekness-submissiveness",
+      "term": "Willing submissiveness",
+      "meaning": "Choosing to yield to God’s will rather than insisting on your own. Elder Bednar lists “willing submissiveness” as part of meekness.",
+      "sourceIds": [
+        "bednar-meek-and-lowly-of-heart",
+        "mosiah-3-19"
+      ]
+    },
+    {
+      "id": "meekness-receptive",
+      "term": "Spiritually receptive",
+      "meaning": "Open to learning from the Holy Ghost and from people who may seem less capable, experienced, or educated. Elder Bednar called this a distinguishing characteristic of meekness.",
+      "sourceIds": [
+        "bednar-meek-and-lowly-of-heart"
+      ]
+    },
+    {
+      "id": "meekness-strive",
+      "term": "Strive",
+      "meaning": "In 2 Timothy 2:24, to quarrel or contend. In the Church’s edition, the footnote on this word points to passages about contention, such as 3 Nephi 11:29 and Doctrine and Covenants 136:23. The Lord’s servant “must not strive.”",
+      "sourceIds": [
+        "2-timothy-2-24-25"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "meekness-not-weakness",
+      "term": "Weakness",
+      "title": "Meek does not mean weak",
+      "explanation": "Elder Bednar taught, “Meekness is strong, not weak; active, not passive; courageous, not timid.” The Savior shows this. When Peter drew his sword, the Lord told him to put it away, though He could have asked for “more than twelve legions of angels” (Matthew 26:53). Gospel Labs suggests a second example, which Elder Bednar doesn’t use: the same Savior who called Himself “meek and lowly in heart” also drove the money changers out of His Father’s house (John 2:13–16). One way to sum up these accounts: meekness in Him was strength under restraint, never an absence of strength.",
+      "sourceIds": [
+        "bednar-meek-and-lowly-of-heart",
+        "matthew-26-52-53",
+        "matthew-11-28-30",
+        "john-2-13-16"
+      ]
+    },
+    {
+      "id": "meekness-and-humility",
+      "term": "Humility",
+      "title": "Meekness and humility are close, but not identical",
+      "explanation": "Elder Bednar explained, “Whereas humility generally denotes dependence upon God and the constant need for His guidance and support, a distinguishing characteristic of meekness is a particular spiritual receptivity to learning both from the Holy Ghost and from people who may seem less capable, experienced, or educated.”",
+      "sourceIds": [
+        "bednar-meek-and-lowly-of-heart"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "matthew-5-5",
+      "note": "“Blessed are the meek: for they shall inherit the earth.”"
+    },
+    {
+      "sourceId": "mosiah-3-19",
+      "note": "King Benjamin teaches that a person becomes meek by yielding to the Holy Spirit and becoming a saint “through the atonement of Christ the Lord.”"
+    },
+    {
+      "sourceId": "moroni-7-44-48",
+      "note": "Mormon teaches that “none is acceptable before God, save the meek and lowly in heart,” and that such a person “must needs have charity.”"
+    },
+    {
+      "sourceId": "numbers-12-3",
+      "note": "Moses—a mighty leader—was “very meek, above all the men which were upon the face of the earth.” Meekness and great capability went together in him."
+    },
+    {
+      "sourceId": "dc-19-23",
+      "note": "The Lord’s invitation: “Learn of me, and listen to my words; walk in the meekness of my Spirit, and you shall have peace in me.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "meekness-meek-and-lowly",
+      "title": "“I am meek and lowly in heart”",
+      "sourceId": "matthew-11-28-30",
+      "note": "Inviting the weary to come to Him, the Savior described Himself as meek. Elder Bednar observed that He “chose to emphasize meekness from among all the attributes and virtues He potentially could have selected.”"
+    },
+    {
+      "id": "meekness-washed-feet",
+      "title": "He washed His disciples’ feet",
+      "sourceId": "john-13-4-5",
+      "note": "The Lord of all took a towel “and began to wash the disciples’ feet.” Elder Bednar called such meekness “a hallmark characteristic of the Lord as a servant and leader.”"
+    },
+    {
+      "id": "meekness-healed-the-ear",
+      "title": "He healed a man who came to arrest Him",
+      "sourceId": "luke-22-49-51",
+      "note": "When a disciple cut off the ear of the high priest’s servant, Jesus said, “Suffer ye thus far,” and “touched his ear, and healed him.” Elder Bednar noted that He blessed His potential captor “using the same heavenly power that could have prevented Him from being captured.”"
+    },
+    {
+      "id": "meekness-never-a-word",
+      "title": "He answered never a word",
+      "sourceId": "matthew-27-12-14",
+      "note": "Accused before Pilate, “he answered him to never a word; insomuch that the governor marvelled greatly.” Elder Bednar saw in this His “disciplined response, strong restraint, and unwillingness to exert His infinite power for personal benefit.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "charity",
+      "relation": "leads-to",
+      "note": "Mormon teaches that “if a man be meek and lowly in heart, and confesses by the power of the Holy Ghost that Jesus is the Christ, he must needs have charity” (Moroni 7:44).",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ]
+    },
+    {
+      "attributeId": "patience",
+      "relation": "relates-to",
+      "note": "The Guide to the Scriptures describes the meek as “patient under suffering,” and its entries on meekness and patience each point to the other.",
+      "sourceIds": [
+        "gs-meek-meekness",
+        "gs-patience"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "meekness-or-weakness",
+      "prompt": "Elder Bednar taught that meekness is “strong, not weak; active, not passive; courageous, not timid.” Sort each example.",
+      "sourceIds": [
+        "bednar-meek-and-lowly-of-heart",
+        "luke-22-49-51",
+        "matthew-26-52-53",
+        "matthew-27-12-14"
+      ],
+      "hints": [
+        "Ask: is this strength being held back for a good purpose, or is strength simply missing?",
+        "Meekness is active and courageous. Fear that keeps us from the truth is not meekness.",
+        "Compare with what the Savior did in Luke 22:49–51 and Matthew 26:52–53."
+      ],
+      "explanation": "In the Savior, meekness was strength under restraint: He could have called legions of angels, yet He healed the servant’s ear and answered His accusers with silence. Learning from someone less experienced is meekness too. Fear that keeps us quiet about the truth, and going along with anything because we have no convictions, are weakness, not meekness.",
+      "categories": [
+        {
+          "id": "meekness",
+          "label": "Meekness"
+        },
+        {
+          "id": "weakness",
+          "label": "Weakness or timidity"
+        }
+      ],
+      "items": [
+        {
+          "id": "hold-back-power",
+          "text": "Holding back power you could use to get your own way",
+          "category": "meekness",
+          "why": "The Savior could have asked for “more than twelve legions of angels” (Matthew 26:53) but didn’t."
+        },
+        {
+          "id": "heal-enemy",
+          "text": "Showing kindness to someone who opposes you",
+          "category": "meekness",
+          "why": "He “touched his ear, and healed him” (Luke 22:51), blessing “His potential captor,” as Elder Bednar put it."
+        },
+        {
+          "id": "learn-from-younger",
+          "text": "Gladly learning from someone younger or less experienced",
+          "category": "meekness",
+          "why": "Elder Bednar: meekness includes receptivity to learning from people who “may seem less capable, experienced, or educated.”"
+        },
+        {
+          "id": "afraid-of-truth",
+          "text": "Staying quiet about the truth because you’re afraid of what others will think",
+          "category": "weakness",
+          "why": "Meekness is “courageous, not timid.”"
+        },
+        {
+          "id": "no-convictions",
+          "text": "Going along with whatever the group decides because you have no convictions of your own",
+          "category": "weakness",
+          "why": "Meekness is “active, not passive.”"
+        },
+        {
+          "id": "calm-restraint",
+          "text": "Answering an unfair accusation with calm restraint instead of a cutting reply",
+          "category": "meekness",
+          "why": "Before Pilate, “he answered him to never a word” (Matthew 27:14)."
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "meekness-vocab",
+      "prompt": "Match each word with its meaning and with a scripture that shows it.",
+      "sourceIds": [
+        "2-timothy-2-24-25",
+        "matthew-27-12-14",
+        "mosiah-3-19",
+        "dc-19-23",
+        "bednar-meek-and-lowly-of-heart"
+      ],
+      "hints": [
+        "Start with the meanings, then find the passage where each quality appears.",
+        "One passage shows silence before accusers; one shows a willingness to yield to God.",
+        "The Lord’s invitation to “learn of me” fits the word about learning."
+      ],
+      "explanation": "Gentleness is shown in Paul’s counsel to be “gentle unto all men”; self-restraint in the Savior’s silence before Pilate; willing submissiveness in King Benjamin’s description of a saint; and spiritual receptivity in the Lord’s invitation to “Learn of me, and listen to my words.”",
+      "pairs": [
+        {
+          "id": "meekness-gentle",
+          "term": "Gentle",
+          "meaning": "Kind and mild rather than harsh or quarrelsome",
+          "example": {
+            "text": "“be gentle unto all men, apt to teach, patient”",
+            "sourceId": "2-timothy-2-24-25"
+          }
+        },
+        {
+          "id": "meekness-self-restraint",
+          "term": "Self-restraint",
+          "meaning": "Holding back power, anger, or words you could use",
+          "example": {
+            "text": "“he answered him to never a word”",
+            "sourceId": "matthew-27-12-14"
+          }
+        },
+        {
+          "id": "meekness-submissiveness",
+          "term": "Willing submissiveness",
+          "meaning": "Choosing to yield to God’s will rather than insisting on your own",
+          "example": {
+            "text": "“willing to submit to all things which the Lord seeth fit to inflict upon him”",
+            "sourceId": "mosiah-3-19"
+          }
+        },
+        {
+          "id": "meekness-receptive",
+          "term": "Spiritually receptive",
+          "meaning": "Open to learning from the Holy Ghost and from others",
+          "example": {
+            "text": "“Learn of me, and listen to my words”",
+            "sourceId": "dc-19-23"
+          }
+        }
+      ],
+      "extraMeanings": [
+        "Never disagreeing with anyone about anything"
+      ],
+      "match": "both"
+    },
+    {
+      "type": "highlight",
+      "id": "meekness-mosiah-3-19",
+      "prompt": "King Benjamin says a person can become “meek.” Tap the phrases that tell what must happen for that change to take place.",
+      "sourceIds": [
+        "mosiah-3-19"
+      ],
+      "hints": [
+        "Look at what comes before “becometh as a child.”",
+        "There are three steps, and one of them names the Savior."
+      ],
+      "explanation": "Meekness comes as a person “yields to the enticings of the Holy Spirit,” “putteth off the natural man,” and “becometh a saint through the atonement of Christ the Lord.” It is not only self-improvement; it is a change made possible by the Savior.",
+      "passage": "mosiah-3-19",
+      "chunks": [
+        {
+          "verse": 19,
+          "text": "For the natural man is an enemy to God,"
+        },
+        {
+          "verse": 19,
+          "text": "and has been from the fall of Adam, and will be, forever and ever,"
+        },
+        {
+          "verse": 19,
+          "text": "unless he yields to the enticings of the Holy Spirit,"
+        },
+        {
+          "verse": 19,
+          "text": "and putteth off the natural man"
+        },
+        {
+          "verse": 19,
+          "text": "and becometh a saint through the atonement of Christ the Lord,"
+        },
+        {
+          "verse": 19,
+          "text": "and becometh as a child,"
+        },
+        {
+          "verse": 19,
+          "text": "submissive, meek, humble, patient, full of love,"
+        },
+        {
+          "verse": 19,
+          "text": "willing to submit to all things which the Lord seeth fit to inflict upon him,"
+        },
+        {
+          "verse": 19,
+          "text": "even as a child doth submit to his father."
+        }
+      ],
+      "targets": [
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "reflection": [
+    "The Savior could have called “more than twelve legions of angels.” What does His restraint teach about strength?",
+    "Who could you learn from, even if they seem less experienced than you?",
+    "What might it mean to “walk in the meekness of my Spirit”?"
+  ],
+  "safety": {
+    "text": "Meekness is never a reason to let someone hurt you. The submissiveness the scriptures describe is yielding to God (Mosiah 3:19); Elder Bednar’s example is Amulek, who “willingly submitted to God’s will.” Meekness is “courageous, not timid.” The Church teaches that “No one is expected to endure abusive behavior” and that victims “are never to blame for the harmful behavior of others.” If someone is hurting you, seeking safety and telling a trusted adult or leader is right, and it is not a failure of meekness. The Church’s abuse help site, linked below, shows where to turn.",
+    "sourceIds": [
+      "church-abuse-help",
+      "gospel-topics-abuse",
+      "mosiah-3-19",
+      "bednar-meek-and-lowly-of-heart"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "contrasts.meekness-not-weakness",
+        "note": "Using the cleansing of the temple (John 2:13–16) to show that meekness is not weakness is Gospel Labs’ interpretation; Elder Bednar’s talk doesn’t cite it. The phrase ‘strength under restraint’ is ours, summarizing his teaching that meekness is “strong, not weak.” Please confirm.",
+        "resolution": "Qualified: the contrast now says Gospel Labs suggests the temple account as a second example that Elder Bednar doesn’t use, and offers ‘strength under restraint’ as one way to sum up the accounts. Owner: the contrast stands on Elder Bednar and Matthew 26:52–53 alone if you would rather drop the temple example."
+      },
+      {
+        "where": "vocabulary.meekness-strive",
+        "note": "Uses the footnote to 2 Timothy 2:24 in the Church’s edition (Greek: to compete in a contest); the footnote is part of the linked page but isn’t quoted in our verse text.",
+        "resolution": "Resolved, corrected: checked the Church’s edition again on 26 October 2026. The Greek note ‘compete in a contest’ is footnote 5a, on ‘strive’ in verse 5, not verse 24. Footnote 24a, on ‘strive’ in verse 24, cross-references 3 Nephi 11:29 (29–30) and Doctrine and Covenants 18:20 and 136:23, which speak of contention. The meaning now cites those cross-references instead of the Greek."
+      },
+      {
+        "where": "saviorExamples",
+        "note": "Luke 22:49–51 and Matthew 27:12–14 follow Elder Bednar’s use of these accounts as examples of the Savior’s meekness.",
+        "resolution": "Resolved: checked 26 October 2026; Elder Bednar’s talk presents the healing of the servant’s ear and the Savior’s silence before Pilate as examples of His meekness, and the quotations in both notes are his."
+      },
+      {
+        "where": "safety; activities.meekness-or-weakness (heal-enemy)",
+        "note": "Sensitive. ‘Patient under suffering’, ‘willing submissiveness’, Mosiah 3:19 (‘even as a child doth submit to his father’), and a sort item rewarding ‘Helping someone who came to harm you’ as meekness could be read as asking a learner to give in to someone who hurts them.",
+        "resolution": "Qualified: added a safety note, shown right after the definition, that links the Church’s abuse help site, quotes Gospel Topics: Abuse and Elder Bednar, and says the submissiveness scripture describes is yielding to God. The sort item now reads ‘Showing kindness to someone who opposes you’, tied to Luke 22:51 and Elder Bednar’s ‘potential captor’ (item id unchanged). Owner: please confirm the wording."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gs-meek-meekness",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Meek, Meekness",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/meek-meekness?lang=eng"
+    },
+    {
+      "id": "bednar-meek-and-lowly-of-heart",
+      "kind": "speaker",
+      "label": "Meek and Lowly of Heart",
+      "author": "Elder David A. Bednar",
+      "publication": "General Conference, April 2018",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/04/meek-and-lowly-of-heart?lang=eng",
+      "excerpt": "Meekness is strong, not weak; active, not passive; courageous, not timid; restrained, not excessive; modest, not self-aggrandizing; and gracious, not brash."
+    },
+    {
+      "id": "2-timothy-2-24-25",
+      "kind": "scripture",
+      "label": "2 Timothy 2:24–25",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-tim/2?lang=eng&id=p24-p25#p24",
+      "verses": [
+        {
+          "number": 24,
+          "text": "And the servant of the Lord must not strive; but be gentle unto all men, apt to teach, patient,"
+        },
+        {
+          "number": 25,
+          "text": "In meekness instructing those that oppose themselves; if God peradventure will give them repentance to the acknowledging of the truth;"
+        }
+      ]
+    },
+    {
+      "id": "mosiah-3-19",
+      "kind": "scripture",
+      "label": "Mosiah 3:19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng&id=p19#p19",
+      "verses": [
+        {
+          "number": 19,
+          "text": "For the natural man is an enemy to God, and has been from the fall of Adam, and will be, forever and ever, unless he yields to the enticings of the Holy Spirit, and putteth off the natural man and becometh a saint through the atonement of Christ the Lord, and becometh as a child, submissive, meek, humble, patient, full of love, willing to submit to all things which the Lord seeth fit to inflict upon him, even as a child doth submit to his father."
+        }
+      ]
+    },
+    {
+      "id": "matthew-26-52-53",
+      "kind": "scripture",
+      "label": "Matthew 26:52–53",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=p52-p53#p52",
+      "verses": [
+        {
+          "number": 52,
+          "text": "Then said Jesus unto him, Put up again thy sword into his place: for all they that take the sword shall perish with the sword."
+        },
+        {
+          "number": 53,
+          "text": "Thinkest thou that I cannot now pray to my Father, and he shall presently give me more than twelve legions of angels?"
+        }
+      ]
+    },
+    {
+      "id": "matthew-11-28-30",
+      "kind": "scripture",
+      "label": "Matthew 11:28–30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28",
+      "verses": [
+        {
+          "number": 28,
+          "text": "¶ Come unto me, all ye that labour and are heavy laden, and I will give you rest."
+        },
+        {
+          "number": 29,
+          "text": "Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls."
+        },
+        {
+          "number": 30,
+          "text": "For my yoke is easy, and my burden is light."
+        }
+      ]
+    },
+    {
+      "id": "john-2-13-16",
+      "kind": "scripture",
+      "label": "John 2:13–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/2?lang=eng&id=p13-p16#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "¶ And the Jews’ passover was at hand, and Jesus went up to Jerusalem,"
+        },
+        {
+          "number": 14,
+          "text": "And found in the temple those that sold oxen and sheep and doves, and the changers of money sitting:"
+        },
+        {
+          "number": 15,
+          "text": "And when he had made a scourge of small cords, he drove them all out of the temple, and the sheep, and the oxen; and poured out the changers’ money, and overthrew the tables;"
+        },
+        {
+          "number": 16,
+          "text": "And said unto them that sold doves, Take these things hence; make not my Father’s house an house of merchandise."
+        }
+      ]
+    },
+    {
+      "id": "matthew-5-5",
+      "kind": "scripture",
+      "label": "Matthew 5:5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p5#p5",
+      "verses": [
+        {
+          "number": 5,
+          "text": "Blessed are the meek: for they shall inherit the earth."
+        }
+      ]
+    },
+    {
+      "id": "moroni-7-44-48",
+      "kind": "scripture",
+      "label": "Moroni 7:44–48",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p44-p48#p44",
+      "verses": [
+        {
+          "number": 44,
+          "text": "If so, his faith and hope is vain, for none is acceptable before God, save the meek and lowly in heart; and if a man be meek and lowly in heart, and confesses by the power of the Holy Ghost that Jesus is the Christ, he must needs have charity; for if he have not charity he is nothing; wherefore he must needs have charity."
+        },
+        {
+          "number": 45,
+          "text": "And charity suffereth long, and is kind, and envieth not, and is not puffed up, seeketh not her own, is not easily provoked, thinketh no evil, and rejoiceth not in iniquity but rejoiceth in the truth, beareth all things, believeth all things, hopeth all things, endureth all things."
+        },
+        {
+          "number": 46,
+          "text": "Wherefore, my beloved brethren, if ye have not charity, ye are nothing, for charity never faileth. Wherefore, cleave unto charity, which is the greatest of all, for all things must fail—"
+        },
+        {
+          "number": 47,
+          "text": "But charity is the pure love of Christ, and it endureth forever; and whoso is found possessed of it at the last day, it shall be well with him."
+        },
+        {
+          "number": 48,
+          "text": "Wherefore, my beloved brethren, pray unto the Father with all the energy of heart, that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son, Jesus Christ; that ye may become the sons of God; that when he shall appear we shall be like him, for we shall see him as he is; that we may have this hope; that we may be purified even as he is pure. Amen."
+        }
+      ]
+    },
+    {
+      "id": "numbers-12-3",
+      "kind": "scripture",
+      "label": "Numbers 12:3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/num/12?lang=eng&id=p3#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "(Now the man Moses was very meek, above all the men which were upon the face of the earth.)"
+        }
+      ]
+    },
+    {
+      "id": "dc-19-23",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 19:23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p23#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "Learn of me, and listen to my words; walk in the meekness of my Spirit, and you shall have peace in me."
+        }
+      ]
+    },
+    {
+      "id": "john-13-4-5",
+      "kind": "scripture",
+      "label": "John 13:4–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p4-p5#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "He riseth from supper, and laid aside his garments; and took a towel, and girded himself."
+        },
+        {
+          "number": 5,
+          "text": "After that he poureth water into a basin, and began to wash the disciples’ feet, and to wipe them with the towel wherewith he was girded."
+        }
+      ]
+    },
+    {
+      "id": "luke-22-49-51",
+      "kind": "scripture",
+      "label": "Luke 22:49–51",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p49-p51#p49",
+      "verses": [
+        {
+          "number": 49,
+          "text": "When they which were about him saw what would follow, they said unto him, Lord, shall we smite with the sword?"
+        },
+        {
+          "number": 50,
+          "text": "¶ And one of them smote the servant of the high priest, and cut off his right ear."
+        },
+        {
+          "number": 51,
+          "text": "And Jesus answered and said, Suffer ye thus far. And he touched his ear, and healed him."
+        }
+      ]
+    },
+    {
+      "id": "matthew-27-12-14",
+      "kind": "scripture",
+      "label": "Matthew 27:12–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=p12-p14#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And when he was accused of the chief priests and elders, he answered nothing."
+        },
+        {
+          "number": 13,
+          "text": "Then said Pilate unto him, Hearest thou not how many things they witness against thee?"
+        },
+        {
+          "number": 14,
+          "text": "And he answered him to never a word; insomuch that the governor marvelled greatly."
+        }
+      ]
+    },
+    {
+      "id": "gs-patience",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Patience",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/patience?lang=eng"
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "church-abuse-help",
+      "kind": "official",
+      "label": "Abuse help (ChurchofJesusChrist.org)",
+      "url": "https://abuse.churchofjesuschrist.org/",
+      "summary": "The Church’s official help for people affected by abuse and for those who want to help them, including where to turn for safety and support."
+    }
+  ]
+}

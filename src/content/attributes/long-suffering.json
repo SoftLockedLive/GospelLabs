@@ -1,0 +1,533 @@
+{
+  "id": "long-suffering",
+  "status": "ready",
+  "name": "Long-suffering",
+  "summary": "Being patient with others’ weaknesses over a long time—as the Lord is patient with ours.",
+  "definition": {
+    "text": "The Church’s scripture study helps don’t give long-suffering a definition of its own (the Topical Guide lists verses and points to Patience), so this is Gospel Labs’ summary of how scripture uses the word. Literally it means ‘suffering long’: being patient with others over a long time. Scripture uses it of the Lord Himself—“merciful and gracious, longsuffering, and abundant in goodness and truth” (Exodus 34:6)—who “is longsuffering to us-ward, not willing that any should perish” (2 Peter 3:9). Mormon begins his description of charity with it: “charity suffereth long, and is kind” (Moroni 7:45).",
+    "sourceIds": [
+      "tg-long-suffering",
+      "exodus-34-6-7",
+      "2-peter-3-9",
+      "moroni-7-44-48"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "long-suffering-forbearing",
+      "term": "Forbearing",
+      "meaning": "Holding back from anger or retaliation; patiently putting up with others’ faults. Paul asks the Saints to walk “with longsuffering, forbearing one another in love” (Ephesians 4:2).",
+      "sourceIds": [
+        "ephesians-4-1-2"
+      ]
+    },
+    {
+      "id": "long-suffering-slow-to-anger",
+      "term": "Slow to anger",
+      "meaning": "Not quick to become angry. The psalmist describes the Lord as “merciful and gracious, slow to anger, and plenteous in mercy” (Psalm 103:8).",
+      "sourceIds": [
+        "psalm-103-8"
+      ]
+    },
+    {
+      "id": "long-suffering-persuasion",
+      "term": "Persuasion",
+      "meaning": "Influencing others by reasoning and invitation rather than force. The Lord names it first, just before long-suffering, among the ways influence should be maintained (Doctrine and Covenants 121:41).",
+      "sourceIds": [
+        "dc-121-41-43"
+      ]
+    },
+    {
+      "id": "long-suffering-love-unfeigned",
+      "term": "Love unfeigned",
+      "meaning": "Sincere love, not pretended. ‘Unfeigned’ means genuine (Doctrine and Covenants 121:41).",
+      "sourceIds": [
+        "dc-121-41-43"
+      ]
+    },
+    {
+      "id": "long-suffering-to-us-ward",
+      "term": "Longsuffering to us-ward",
+      "meaning": "Patient toward us. Peter explains why the Lord waits: He “is longsuffering to us-ward, not willing that any should perish” (2 Peter 3:9).",
+      "sourceIds": [
+        "2-peter-3-9"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "long-suffering-not-tolerating-abuse",
+      "term": "Tolerating abuse",
+      "title": "Long-suffering never means enduring abuse",
+      "explanation": "Bearing patiently with others’ weaknesses is very different from enduring mistreatment. The Church teaches that “abuse cannot be tolerated in any form” and that “No one is expected to endure abusive behavior.” Victims “are never to blame for the harmful behavior of others.” If someone is hurting you, telling a trusted adult or leader and seeking safety is right—and it is not a failure of patience or love.",
+      "sourceIds": [
+        "gospel-topics-abuse"
+      ]
+    },
+    {
+      "id": "long-suffering-not-silence",
+      "term": "Never correcting",
+      "title": "Long-suffering is not the same as never speaking up",
+      "explanation": "In the same passage that names long-suffering, the Lord allows for “Reproving betimes with sharpness, when moved upon by the Holy Ghost; and then showing forth afterwards an increase of love” (Doctrine and Covenants 121:43). Long-suffering keeps loving over time; it doesn’t require pretending that wrong is right.",
+      "sourceIds": [
+        "dc-121-41-43"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "exodus-34-6-7",
+      "note": "The Lord proclaims His own name and nature to Moses: “merciful and gracious, longsuffering, and abundant in goodness and truth.”"
+    },
+    {
+      "sourceId": "dc-121-41-43",
+      "note": "Influence in the Lord’s way is maintained “by persuasion, by long-suffering, by gentleness and meekness, and by love unfeigned.”"
+    },
+    {
+      "sourceId": "alma-7-23",
+      "note": "Alma hopes his people will be “full of patience and long-suffering.”"
+    },
+    {
+      "sourceId": "galatians-5-22-23",
+      "note": "Paul lists longsuffering among “the fruit of the Spirit.”"
+    },
+    {
+      "sourceId": "2-peter-3-9",
+      "note": "The Lord’s long-suffering has a purpose: He is “not willing that any should perish, but that all should come to repentance.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "long-suffering-he-suffereth-it",
+      "title": "“He suffereth it”",
+      "sourceId": "1-nephi-19-9",
+      "note": "Nephi foresaw that the world would scourge, smite, and spit upon the Savior, “and he suffereth it, because of his loving kindness and his long-suffering towards the children of men.” His suffering is not a pattern for letting anyone hurt you: the Church teaches that “No one is expected to endure abusive behavior.”"
+    },
+    {
+      "id": "long-suffering-as-a-hen",
+      "title": "“How often would I have gathered thy children”",
+      "sourceId": "matthew-23-37",
+      "note": "Even of a city that killed the prophets, the Savior said, “how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not!” His love kept reaching out though it was refused."
+    },
+    {
+      "id": "long-suffering-greatest-act",
+      "title": "The greatest act of long-suffering",
+      "sourceId": "john-15-13",
+      "note": "“Greater love hath no man than this, that a man lay down his life for his friends.” Gospel Topics calls the Savior’s Atonement “the greatest act of long-suffering, kindness, and selflessness that we will ever know.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "meekness",
+      "relation": "relates-to",
+      "note": "Scripture names them side by side: “by long-suffering, by gentleness and meekness” (Doctrine and Covenants 121:41), and “with all lowliness and meekness, with longsuffering” (Ephesians 4:2).",
+      "sourceIds": [
+        "dc-121-41-43",
+        "ephesians-4-1-2",
+        "galatians-5-22-23"
+      ]
+    },
+    {
+      "attributeId": "mercy",
+      "relation": "relates-to",
+      "note": "The Lord describes Himself as “merciful and gracious, longsuffering” (Exodus 34:6).",
+      "sourceIds": [
+        "exodus-34-6-7"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "long-suffering-or-not",
+      "prompt": "Sort each example: is it long-suffering as the scriptures describe it, or something long-suffering does not ask of anyone?",
+      "sourceIds": [
+        "dc-121-41-43",
+        "ephesians-4-1-2",
+        "gospel-topics-abuse"
+      ],
+      "hints": [
+        "Long-suffering bears with people’s weaknesses and keeps loving over time.",
+        "Gospel Topics: “No one is expected to endure abusive behavior.”",
+        "Doctrine and Covenants 121:43 shows that correction, followed by more love, can fit with long-suffering."
+      ],
+      "explanation": "Long-suffering is patient with others’ weaknesses, keeps inviting and loving, answers unkindness with kindness, and can correct when prompted by the Spirit and then show more love. It never asks anyone to stay in abuse, keep abuse secret, or call serious wrong right.",
+      "categories": [
+        {
+          "id": "long-suffering",
+          "label": "Long-suffering"
+        },
+        {
+          "id": "not-asked",
+          "label": "Not what long-suffering asks"
+        }
+      ],
+      "items": [
+        {
+          "id": "patient-sibling",
+          "text": "Being patient with a younger sibling who keeps making the same mistake",
+          "category": "long-suffering",
+          "why": "Ephesians 4:2: “with longsuffering, forbearing one another in love.”"
+        },
+        {
+          "id": "stay-in-abuse",
+          "text": "Staying in a situation where someone is abusing you",
+          "category": "not-asked",
+          "why": "Gospel Topics: “No one is expected to endure abusive behavior.”"
+        },
+        {
+          "id": "keep-inviting",
+          "text": "Continuing to invite a friend who has said no before",
+          "category": "long-suffering",
+          "why": "Like the Savior’s “how often would I have gathered thy children” (Matthew 23:37), long-suffering keeps reaching out."
+        },
+        {
+          "id": "keep-secret",
+          "text": "Keeping it secret when someone is hurting you",
+          "category": "not-asked",
+          "why": "Gospel Topics: those affected by abuse “need to be heard and supported,” and others should help them find safety."
+        },
+        {
+          "id": "kindness-again",
+          "text": "Answering unkindness with kindness again and again",
+          "category": "long-suffering",
+          "why": "Doctrine and Covenants 121:41–42: “by long-suffering … By kindness.”"
+        },
+        {
+          "id": "pretend-fine",
+          "text": "Pretending a serious wrong is fine so no one gets upset",
+          "category": "not-asked",
+          "why": "Doctrine and Covenants 121:43 allows for “Reproving betimes with sharpness, when moved upon by the Holy Ghost.”"
+        },
+        {
+          "id": "correct-then-love",
+          "text": "Correcting someone when prompted by the Spirit, then showing an increase of love",
+          "category": "long-suffering",
+          "why": "Doctrine and Covenants 121:43 pairs correction with “an increase of love toward him whom thou hast reproved.”"
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "long-suffering-vocab",
+      "prompt": "Match each word or phrase with its meaning.",
+      "sourceIds": [
+        "ephesians-4-1-2",
+        "psalm-103-8",
+        "dc-121-41-43",
+        "2-peter-3-9"
+      ],
+      "hints": [
+        "‘Unfeigned’ is the opposite of ‘pretended.’",
+        "‘Us-ward’ is an old way of saying ‘toward us.’",
+        "One of the extra meanings describes tolerating abuse, which long-suffering never requires."
+      ],
+      "explanation": "Forbearing means patiently bearing with others; slow to anger describes the Lord; persuasion influences without force; love unfeigned is sincere; and the Lord is “longsuffering to us-ward”—patient toward us.",
+      "pairs": [
+        {
+          "id": "long-suffering-forbearing",
+          "term": "Forbearing",
+          "meaning": "Patiently putting up with others’ faults, without anger or retaliation"
+        },
+        {
+          "id": "long-suffering-slow-to-anger",
+          "term": "Slow to anger",
+          "meaning": "Not quick to become angry"
+        },
+        {
+          "id": "long-suffering-persuasion",
+          "term": "Persuasion",
+          "meaning": "Influencing others by reasoning and invitation, not force"
+        },
+        {
+          "id": "long-suffering-love-unfeigned",
+          "term": "Love unfeigned",
+          "meaning": "Sincere love, not pretended"
+        },
+        {
+          "id": "long-suffering-to-us-ward",
+          "term": "Longsuffering to us-ward",
+          "meaning": "Patient toward us"
+        }
+      ],
+      "extraMeanings": [
+        "Accepting mistreatment without telling anyone",
+        "Waiting for others to change before loving them"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "highlight",
+      "id": "long-suffering-dc-121-43",
+      "prompt": "The Lord allows for correction alongside long-suffering. In verse 43, tap the phrases that show what keeps correction consistent with long-suffering and love.",
+      "sourceIds": [
+        "dc-121-41-43"
+      ],
+      "hints": [
+        "When is correction appropriate, according to this verse?",
+        "What should follow the correction?"
+      ],
+      "explanation": "Correction comes “when moved upon by the Holy Ghost,” and is followed by “an increase of love toward him whom thou hast reproved.” Long-suffering doesn’t ignore wrong; it corrects only as the Spirit directs and keeps loving afterward.",
+      "passage": "dc-121-41-43",
+      "chunks": [
+        {
+          "verse": 43,
+          "text": "Reproving betimes with sharpness,"
+        },
+        {
+          "verse": 43,
+          "text": "when moved upon by the Holy Ghost;"
+        },
+        {
+          "verse": 43,
+          "text": "and then showing forth afterwards an increase of love toward him whom thou hast reproved,"
+        },
+        {
+          "verse": 43,
+          "text": "lest he esteem thee to be his enemy;"
+        }
+      ],
+      "targets": [
+        1,
+        2
+      ]
+    }
+  ],
+  "reflection": [
+    "Peter says the Lord is “longsuffering to us-ward.” Where do you see the Lord’s patience with people in the scriptures?",
+    "Why might long-suffering and “love unfeigned” belong together?",
+    "What helps someone keep loving another person over a long time?"
+  ],
+  "safety": {
+    "text": "Long-suffering never means staying where you are being hurt. Being patient with someone’s weaknesses is different from putting up with abuse. The Church teaches that “No one is expected to endure abusive behavior” and that victims “are never to blame for the harmful behavior of others.” If someone is hurting you or someone you know, seeking safety and telling a trusted adult or leader is right, and it is not a failure of patience or love. The Church’s abuse help site, linked below, shows where to turn.",
+    "sourceIds": [
+      "church-abuse-help",
+      "gospel-topics-abuse"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "definition",
+        "note": "No official source gives a single definition of long-suffering (no Guide to the Scriptures, Bible Dictionary, or Gospel Topics entry was found). The definition combines the literal meaning, scripture usage, and the Guide’s definition of patience. Please confirm, or point to an official definition to cite.",
+        "resolution": "Qualified: the definition now opens by saying it is Gospel Labs’ summary of how scripture uses the word. Checked 26 October 2026: the Guide to the Scriptures and Bible Dictionary have no entry, and the Topical Guide entry Long-Suffering (now cited) lists verses and refers to Patience. The Guide’s patience definition (enduring ‘affliction, insult, or injury without complaint’) was taken out of this definition so it can’t be read as long-suffering toward abuse; it stays on the Patience page beside a safety note. Owner: please confirm the summary."
+      },
+      {
+        "where": "contrasts.long-suffering-not-tolerating-abuse",
+        "note": "Sensitive. Relies on Gospel Topics: Abuse. Please review the wording for youth, and consider linking abuse.ChurchofJesusChrist.org.",
+        "resolution": "Resolved: the safety note, shown right after the definition, links the Church’s abuse help site (church-abuse-help, kind official) and quotes Gospel Topics: Abuse; the contrast’s quotations were checked against that page on 26 October 2026. ‘Telling a trusted adult or leader’ is Gospel Labs’ plain wording of Gospel Topics: Abuse. Owner: please confirm the safety wording for youth."
+      },
+      {
+        "where": "vocabulary.long-suffering-love-unfeigned",
+        "note": "The gloss of ‘unfeigned’ (genuine, not pretended) is plain English, written by Gospel Labs.",
+        "resolution": "Resolved: kept as a plain-English gloss of the word in Doctrine and Covenants 121:41. It quotes nothing, and the Church’s edition has no footnote on ‘unfeigned’ to cite instead (checked 26 October 2026)."
+      },
+      {
+        "where": "saviorExamples.long-suffering-he-suffereth-it; summary",
+        "note": "Sensitive. 1 Nephi 19:9 presents the Savior suffering being scourged, smitten, and spat upon as long-suffering. On its own it could suggest that long-suffering means accepting abuse; the old card summary (‘bearing patiently … with hardship’) could add to that.",
+        "resolution": "Qualified: the note now says this is not a pattern for letting anyone hurt you, quoting Gospel Topics: Abuse. The card summary now speaks of patience with others’ weaknesses (Ephesians 4:2; 2 Peter 3:9)."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "tg-long-suffering",
+      "kind": "official",
+      "label": "Topical Guide: Long-Suffering",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/tg/long-suffering?lang=eng",
+      "summary": "A list of scripture passages that use the word long-suffering, with a cross-reference to Patience. It gives no separate definition."
+    },
+    {
+      "id": "exodus-34-6-7",
+      "kind": "scripture",
+      "label": "Exodus 34:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/34?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And the Lord passed by before him, and proclaimed, The Lord, The Lord God, merciful and gracious, longsuffering, and abundant in goodness and truth,"
+        },
+        {
+          "number": 7,
+          "text": "Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children’s children, unto the third and to the fourth generation."
+        }
+      ]
+    },
+    {
+      "id": "moroni-7-44-48",
+      "kind": "scripture",
+      "label": "Moroni 7:44–48",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p44-p48#p44",
+      "verses": [
+        {
+          "number": 44,
+          "text": "If so, his faith and hope is vain, for none is acceptable before God, save the meek and lowly in heart; and if a man be meek and lowly in heart, and confesses by the power of the Holy Ghost that Jesus is the Christ, he must needs have charity; for if he have not charity he is nothing; wherefore he must needs have charity."
+        },
+        {
+          "number": 45,
+          "text": "And charity suffereth long, and is kind, and envieth not, and is not puffed up, seeketh not her own, is not easily provoked, thinketh no evil, and rejoiceth not in iniquity but rejoiceth in the truth, beareth all things, believeth all things, hopeth all things, endureth all things."
+        },
+        {
+          "number": 46,
+          "text": "Wherefore, my beloved brethren, if ye have not charity, ye are nothing, for charity never faileth. Wherefore, cleave unto charity, which is the greatest of all, for all things must fail—"
+        },
+        {
+          "number": 47,
+          "text": "But charity is the pure love of Christ, and it endureth forever; and whoso is found possessed of it at the last day, it shall be well with him."
+        },
+        {
+          "number": 48,
+          "text": "Wherefore, my beloved brethren, pray unto the Father with all the energy of heart, that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son, Jesus Christ; that ye may become the sons of God; that when he shall appear we shall be like him, for we shall see him as he is; that we may have this hope; that we may be purified even as he is pure. Amen."
+        }
+      ]
+    },
+    {
+      "id": "ephesians-4-1-2",
+      "kind": "scripture",
+      "label": "Ephesians 4:1–2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/4?lang=eng&id=p1-p2#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,"
+        },
+        {
+          "number": 2,
+          "text": "With all lowliness and meekness, with longsuffering, forbearing one another in love;"
+        }
+      ]
+    },
+    {
+      "id": "psalm-103-8",
+      "kind": "scripture",
+      "label": "Psalm 103:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/103?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "The Lord is merciful and gracious, slow to anger, and plenteous in mercy."
+        }
+      ]
+    },
+    {
+      "id": "dc-121-41-43",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 121:41–43",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p43#p41",
+      "verses": [
+        {
+          "number": 41,
+          "text": "No power or influence can or ought to be maintained by virtue of the priesthood, only by persuasion, by long-suffering, by gentleness and meekness, and by love unfeigned;"
+        },
+        {
+          "number": 42,
+          "text": "By kindness, and pure knowledge, which shall greatly enlarge the soul without hypocrisy, and without guile—"
+        },
+        {
+          "number": 43,
+          "text": "Reproving betimes with sharpness, when moved upon by the Holy Ghost; and then showing forth afterwards an increase of love toward him whom thou hast reproved, lest he esteem thee to be his enemy;"
+        }
+      ]
+    },
+    {
+      "id": "2-peter-3-9",
+      "kind": "scripture",
+      "label": "2 Peter 3:9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-pet/3?lang=eng&id=p9#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "The Lord is not slack concerning his promise, as some men count slackness; but is longsuffering to us-ward, not willing that any should perish, but that all should come to repentance."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "alma-7-23",
+      "kind": "scripture",
+      "label": "Alma 7:23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p23#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "And now I would that ye should be humble, and be submissive and gentle; easy to be entreated; full of patience and long-suffering; being temperate in all things; being diligent in keeping the commandments of God at all times; asking for whatsoever things ye stand in need, both spiritual and temporal; always returning thanks unto God for whatsoever things ye do receive."
+        }
+      ]
+    },
+    {
+      "id": "galatians-5-22-23",
+      "kind": "scripture",
+      "label": "Galatians 5:22–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/5?lang=eng&id=p22-p23#p22",
+      "verses": [
+        {
+          "number": 22,
+          "text": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith,"
+        },
+        {
+          "number": 23,
+          "text": "Meekness, temperance: against such there is no law."
+        }
+      ]
+    },
+    {
+      "id": "1-nephi-19-9",
+      "kind": "scripture",
+      "label": "1 Nephi 19:9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19?lang=eng&id=p9#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "And the world, because of their iniquity, shall judge him to be a thing of naught; wherefore they scourge him, and he suffereth it; and they smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it, because of his loving kindness and his long-suffering towards the children of men."
+        }
+      ]
+    },
+    {
+      "id": "matthew-23-37",
+      "kind": "scripture",
+      "label": "Matthew 23:37",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/23?lang=eng&id=p37#p37",
+      "verses": [
+        {
+          "number": 37,
+          "text": "O Jerusalem, Jerusalem, thou that killest the prophets, and stonest them which are sent unto thee, how often would I have gathered thy children together, even as a hen gathereth her chickens under her wings, and ye would not!"
+        }
+      ]
+    },
+    {
+      "id": "john-15-13",
+      "kind": "scripture",
+      "label": "John 15:13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p13#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "Greater love hath no man than this, that a man lay down his life for his friends."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-charity",
+      "kind": "official",
+      "label": "Gospel Topics: Charity",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/charity?lang=eng",
+      "excerpt": "Charity is the pure love of Christ. It is the love that Christ has for the children of men and that the children of men should have for one another. It is the highest, noblest, and strongest kind of love and the most joyous to the soul."
+    },
+    {
+      "id": "church-abuse-help",
+      "kind": "official",
+      "label": "Abuse help (ChurchofJesusChrist.org)",
+      "url": "https://abuse.churchofjesuschrist.org/",
+      "summary": "The Church’s official help for people affected by abuse and for those who want to help them, including where to turn for safety and support."
+    }
+  ]
+}

@@ -3,6 +3,12 @@
  * way in and on the way out, every failure surfaces as a StorageError, and
  * multi-record operations run inside a single transaction so they either
  * fully apply or leave the database untouched.
+ *
+ * Whole-backup operations (export, import, and deleting everything, across
+ * the investigations and the 2.0 study tables) are also offered here, so
+ * that in the browser they run after unsaved-edit recovery like every other
+ * investigation operation (see client.ts): an export always includes edits
+ * a closing page left in a safety copy. Their logic is in full-backup.ts.
  */
 import {
   investigationSchema,
@@ -11,8 +17,16 @@ import {
   type Investigation,
 } from "@/domain/investigation";
 import type { StoredStamp } from "./autosave";
-import { createBackup, planImport, sameContent, type Backup, type ImportMode, type ImportPlan } from "./backup";
+import { planImport, sameContent, type BackupPreferences, type ImportMode, type ImportPlan } from "./backup";
 import type { GospelLabsDatabase } from "./db";
+import {
+  countEverything,
+  deleteEverything,
+  exportEverything,
+  importBackup,
+  previewBackupImport,
+  type BackupContents,
+} from "./full-backup";
 import { StorageError, toStorageError } from "./storage-errors";
 
 export interface InvestigationList {
@@ -40,6 +54,7 @@ export type LoadResult =
 export type SaveConflict = "modified" | "deleted" | "exists" | "newer-version";
 export type SaveResult = { ok: true } | { ok: false; conflict: SaveConflict };
 
+/** What an investigations-only import did (the 1.1 API). Whole backups report a BackupImportSummary. */
 export type ImportSummary = Omit<ImportPlan, "toWrite">;
 
 const summarize = (plan: ImportPlan): ImportSummary => ({
@@ -149,7 +164,10 @@ export function createInvestigationRepository(db: GospelLabsDatabase) {
 
     delete: (id: string) => guard(() => table.delete(id)),
 
-    /** Deletes every investigation, returning how many were removed. */
+    /**
+     * Deletes every investigation, returning how many were removed. Study
+     * data is untouched; Settings › Delete all data uses deleteEverything.
+     */
     deleteAll: () =>
       guard(() =>
         db.transaction("rw", table, async () => {
@@ -159,21 +177,43 @@ export function createInvestigationRepository(db: GospelLabsDatabase) {
         }),
       ),
 
-    exportBackup: (exportedAt: string) =>
-      guard(async (): Promise<{ backup: Backup; unreadable: number }> => {
-        const { investigations, unreadable } = await db.transaction("r", table, () => readAll({ asStored: true }));
-        return { backup: createBackup(investigations, exportedAt), unreadable };
-      }),
+    /**
+     * A backup (format version 3) of everything stored: investigations and
+     * study data, each record exactly as stored, plus the given preferences
+     * (read from localStorage by the caller). `unreadable` counts damaged
+     * records that couldn't be included.
+     */
+    exportBackup: (exportedAt: string, { preferences }: { preferences?: BackupPreferences } = {}) =>
+      guard(() => exportEverything(db, exportedAt, preferences)),
 
-    /** What an import would do right now, without changing anything. */
+    /** What importing a whole backup would do right now, per kind, without changing anything. */
+    previewBackup: (contents: BackupContents, mode: ImportMode) => guard(() => previewBackupImport(db, contents, mode)),
+
+    /**
+     * Imports a whole backup (investigations and study data) atomically in
+     * one transaction across all five tables. See full-backup.ts.
+     */
+    importBackup: (contents: BackupContents, mode: ImportMode) => guard(() => importBackup(db, contents, mode)),
+
+    /** Deletes all investigations and all study data in one transaction, returning what was removed per kind. */
+    deleteEverything: () => guard(() => deleteEverything(db)),
+
+    /** How many records of each kind are stored, readable or not. */
+    countEverything: () => guard(() => countEverything(db)),
+
+    /**
+     * What an investigations-only import would do right now (the 1.1 API).
+     * Settings imports whole backups with previewBackup and importBackup.
+     */
     previewImport: (incoming: readonly Investigation[], mode: ImportMode) =>
       guard(async (): Promise<ImportSummary> => {
         return summarize(planImport((await readAll({ asStored: true })).investigations, incoming, mode));
       }),
 
     /**
-     * Applies an import atomically. The plan is recomputed inside the
-     * transaction, so it reflects the data at the moment of import.
+     * Applies an investigations-only import atomically (the 1.1 API; study
+     * data is untouched). The plan is recomputed inside the transaction, so
+     * it reflects the data at the moment of import.
      */
     importInvestigations: (incoming: readonly Investigation[], mode: ImportMode) =>
       guard(() =>

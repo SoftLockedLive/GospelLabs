@@ -196,3 +196,204 @@ export const BACKUP_V2_BEFORE_REFLECTION = `${JSON.stringify(
   null,
   2,
 )}\n`;
+
+/**
+ * A record saved by the released Gospel Labs 1.1: stamped `dataVersion: 2`,
+ * with every 1.1 field filled in, including the Research tab last shown.
+ */
+export const RECORD_FROM_1_1 = {
+  ...RECORD_BEFORE_REFLECTION,
+  id: "c3e5a7b9-from-1-1",
+  dataVersion: 2,
+  title: "Saved by 1.1",
+  updatedAt: "2026-10-21T09:00:00.000Z",
+  researchActivity: "connections",
+  discoveryHighlights: [
+    {
+      id: "hl-from-1-1",
+      title: "Discipleship is daily",
+      insight: "Luke adds the word daily.",
+      evidenceIds: ["ev-legacy", "ev-second"],
+      createdAt: "2026-10-21T08:50:00.000Z",
+      updatedAt: "2026-10-21T08:50:00.000Z",
+    },
+  ],
+  christReflection: { "learned-about-christ": "He asks for daily discipleship." },
+} as const;
+
+/** 1.1 stores every field, so it reads back unchanged. */
+export const RECORD_FROM_1_1_AS_READ = RECORD_FROM_1_1;
+
+/** A complete version 2 backup file as exported by the released 1.1. */
+export const BACKUP_FROM_1_1 = `${JSON.stringify(
+  { format: "gospel-labs-backup", version: 2, exportedAt: "2026-10-21T09:05:00.000Z", investigations: [RECORD_FROM_1_1] },
+  null,
+  2,
+)}\n`;
+
+/*
+ * Gospel Labs 2.0 study data and a version 3 backup, written out by hand as
+ * 2.0 stores and exports them. Today they test the 2.0 format; later
+ * versions keep them to prove 2.0 data still imports.
+ */
+
+/** Progress in a completed guided investigation, including a side branch and a reflection. */
+export const PROGRESS_FROM_2_0 = {
+  id: "he-knows-how-to-help",
+  dataVersion: 1,
+  contentVersion: 1,
+  startedAt: "2026-10-24T18:00:00.000Z",
+  updatedAt: "2026-10-24T18:20:00.000Z",
+  completedAt: "2026-10-24T18:20:00.000Z",
+  difficulty: "medium",
+  length: "quick",
+  position: { stepId: "connect" },
+  steps: {
+    notice: {
+      status: "complete",
+      difficulty: "medium",
+      attempts: 2,
+      hintsShown: 1,
+      revealed: false,
+      skipped: false,
+      response: { selected: [4] },
+      completedAt: "2026-10-24T18:05:00.000Z",
+      updatedAt: "2026-10-24T18:05:00.000Z",
+    },
+    "friends/why-friends": {
+      status: "started",
+      difficulty: "easy",
+      attempts: 0,
+      hintsShown: 0,
+      revealed: false,
+      skipped: false,
+      reflection: "He calls His disciples friends.",
+      updatedAt: "2026-10-24T18:10:00.000Z",
+    },
+  },
+  visitedBranches: ["friends"],
+  discoveryId: "6f1b2c3d-card-from-2-0",
+} as const;
+
+/** The Discovery Card created when that investigation was completed. */
+export const CARD_FROM_2_0 = {
+  id: "6f1b2c3d-card-from-2-0",
+  dataVersion: 1,
+  createdAt: "2026-10-24T18:20:00.000Z",
+  updatedAt: "2026-10-24T18:25:00.000Z",
+  origin: {
+    kind: "investigation",
+    contentId: "he-knows-how-to-help",
+    contentVersion: 1,
+    difficulty: "medium",
+    primaryQuestion: "christ",
+  },
+  title: "He knows how to help",
+  question: "Why did Jesus Christ take upon Him our pains?",
+  summary: "Alma teaches that the Savior took upon Him His people's infirmities so that He would know how to succor them.",
+  sources: [
+    {
+      id: "alma-7-11-12",
+      label: "Alma 7:11–12",
+      kind: "scripture",
+      url: "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11",
+    },
+  ],
+  concepts: [
+    { ref: "concept:atonement", label: "Atonement", demonstrated: true },
+    { ref: "concept:succor", label: "Succor", demonstrated: false },
+  ],
+  connections: [
+    {
+      id: "cc-from-2-0",
+      from: { ref: "scripture:alma-7-11-12", label: "Alma 7:11–12" },
+      to: { ref: "concept:atonement", label: "Atonement" },
+      relation: "teaches",
+      sourceIds: ["alma-7-11-12"],
+      note: "Alma describes what the Savior would suffer.",
+      provenance: "demonstrated",
+    },
+  ],
+  highlights: [
+    {
+      sourceId: "alma-7-11-12",
+      verse: 12,
+      text: "that he may know according to the flesh how to succor his people according to their infirmities.",
+      note: "",
+    },
+  ],
+  notes: "I want to remember verse 12.",
+} as const;
+
+/** A connection the learner added to their Map. */
+export const CONNECTION_FROM_2_0 = {
+  id: "8a9b0c1d-connection-from-2-0",
+  dataVersion: 1,
+  createdAt: "2026-10-24T19:00:00.000Z",
+  updatedAt: "2026-10-24T19:00:00.000Z",
+  from: { ref: "concept:atonement", label: "Atonement" },
+  to: { ref: "concept:succor", label: "Succor" },
+  relation: "relates-to",
+  note: "He suffered so that He would know how to help.",
+  sourceIds: ["alma-7-11-12"],
+} as const;
+
+/** What was explored in Scripture Explorer, and a Connect with Christ session. */
+export const EXPLORATIONS_FROM_2_0 = [
+  {
+    id: "passage:alma-7-11-13",
+    dataVersion: 1,
+    kind: "passage",
+    contentId: "alma-7-11-13",
+    firstAt: "2026-10-25T07:00:00.000Z",
+    updatedAt: "2026-10-25T07:15:00.000Z",
+    completedActivities: ["notice-words"],
+    vocabulary: [],
+    highlights: [
+      { id: "ph-from-2-0", verse: 12, start: 0, end: 6, note: "Purpose", createdAt: "2026-10-25T07:10:00.000Z" },
+    ],
+    note: "",
+  },
+  {
+    id: "connect:his-invitation",
+    dataVersion: 1,
+    kind: "connect",
+    contentId: "his-invitation",
+    firstAt: "2026-10-25T21:00:00.000Z",
+    updatedAt: "2026-10-25T21:00:00.000Z",
+    completedActivities: [],
+    vocabulary: [],
+    highlights: [],
+    note: "",
+  },
+] as const;
+
+export const STUDY_FROM_2_0 = {
+  progress: [PROGRESS_FROM_2_0],
+  discoveries: [CARD_FROM_2_0],
+  personalConnections: [CONNECTION_FROM_2_0],
+  explorations: EXPLORATIONS_FROM_2_0,
+} as const;
+
+/** Preferences as 2.0 exports them: everything the user had stored. */
+export const PREFERENCES_FROM_2_0 = {
+  theme: "dawn",
+  motion: "subtle",
+  studyLength: "deep",
+  difficulty: "hard",
+  activity: { offerBranches: true, showReflections: false, suggestDifficulty: true },
+} as const;
+
+/** A complete version 3 backup file as exported by 2.0, with one 1.1 investigation alongside the study data. */
+export const BACKUP_FROM_2_0 = `${JSON.stringify(
+  {
+    format: "gospel-labs-backup",
+    version: 3,
+    exportedAt: "2026-10-26T08:00:00.000Z",
+    investigations: [RECORD_FROM_1_1],
+    study: STUDY_FROM_2_0,
+    preferences: PREFERENCES_FROM_2_0,
+  },
+  null,
+  2,
+)}\n`;

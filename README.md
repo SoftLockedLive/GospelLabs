@@ -1,14 +1,33 @@
 # Gospel Labs
 
-**Question. Study. Discover.**
+**Search the scriptures. Know Him.**
 
-Gospel Labs is a private, mobile-first research notebook for members of The Church of Jesus Christ of Latter-day Saints who want to study gospel questions carefully. Each investigation moves through five stages (Question, Hypothesis, Research, Analysis, Conclusion) that you can visit in any order. You gather evidence from scriptures and Church resources, link that evidence to the claims you make, and write your own conclusions.
+Gospel Labs is a private, Christ-centered scripture-study app for youth and adults of The Church of Jesus Christ of Latter-day Saints. It turns real gospel questions into interactive investigations: you examine verified scriptures and teachings, connect evidence, compare interpretations against the sources, and reach an understanding you can see in a growing Discovery Notebook and Discovery Map. Quiet five-minute sessions, a Character of Christ Builder, and a Scripture Explorer sit alongside it, and the original research notebook is still here for questions of your own.
 
-Gospel Labs never provides doctrinal answers, grades conclusions, or claims religious authority. It is an independent study tool, not an official Church product.
+Gospel Labs never claims religious authority, grades testimony, or measures how spiritual anyone is. There are no points, streaks, or rankings. Every explanation says where it comes from: scripture, an official Church resource, a speaker's teaching, scholarship, Gospel Labs' own suggestion, or your interpretation. It is an independent study tool, not an official Church product.
 
-See [PROJECT_SPEC.md](PROJECT_SPEC.md) for the full product specification.
+Version 2.0 is documented in [docs/GOSPEL_LABS_2.0_RELEASE.md](docs/GOSPEL_LABS_2.0_RELEASE.md) (release report), [docs/2.0/ARCHITECTURE.md](docs/2.0/ARCHITECTURE.md), [docs/2.0/CONTENT_GUIDE.md](docs/2.0/CONTENT_GUIDE.md), [docs/2.0/LEARNER_QUESTIONS.md](docs/2.0/LEARNER_QUESTIONS.md), and [docs/2.0/DOCTRINAL_REVIEW.md](docs/2.0/DOCTRINAL_REVIEW.md). The original specification is [PROJECT_SPEC.md](PROJECT_SPEC.md).
 
-## Features
+## Study modes (2.0)
+
+- **Dashboard:** continue where you left off, or start an investigation in one tap; choose a quick (5–10 minute) or deep (20–40 minute) session; reach Scripture Explorer, Character of Christ, Connect with Christ, your recent discoveries, the Notebook, and the Map.
+- **Investigations:** eight guided investigations on the themes learners asked about most (see [docs/2.0/LEARNER_QUESTIONS.md](docs/2.0/LEARNER_QUESTIONS.md)); no survey response is quoted in the app. Each follows Question → Evidence → Discovery → Understanding through interactive activities: Evidence Connections, Clue Investigations, Build the Principle, Compare Perspectives, Scripture Connections, Vocabulary Matching, Sort It Out, Find It in the Text, and optional reflection.
+  - **Four difficulty levels** change the kind of reasoning: Easy (recognize and identify), Medium (explain and connect), Hard (compare, analyze, apply), Complex (synthesize sources and weigh nuance). Change level any time without losing finished steps; light suggestions are optional.
+  - **Incorrect answers** get feedback that points back to the evidence, then progressively clearer hints; after three tries you can see the answer or continue. Nobody gets stuck, and nothing is punished.
+  - **Side questions** branch off the main path and return you where you were. Progress saves automatically and survives refreshes and updates.
+  - Each investigation names the **primary question** it rests on, and steps are tagged with **methods of learning**, following Elder Lawrence E. Corbridge's BYU devotional "Stand Forever" (2019).
+- **Discovery Notebook:** finishing an investigation creates a Discovery Card automatically (sources, concepts, connections, a labeled summary, optional notes), clearly separating what *you discovered* from what *Gospel Labs suggested*. Search, filter, revisit, and manage cards; your 1.x research discoveries appear too.
+- **Discovery Map:** a personal knowledge network computed only from your discoveries — scriptures, concepts, questions, attributes, vocabulary, and investigations — where every connection shows its evidence. Add, revise, or remove your own connections (always labeled "Your interpretation"). Pan, zoom, keyboard navigation, and an accessible list view.
+- **Scripture Explorer:** eight short passages shown verbatim with links to the full chapter: highlight phrases (touch or keyboard), tag themes, read sourced meanings of key words, compare related scriptures side by side, investigate context, and save to the Notebook and Map.
+- **Character of Christ Builder:** nine Christlike attributes (charity, humility, patience, meekness, mercy, compassion, obedience, forgiveness, long-suffering), each with an official definition, vocabulary, easily confused contrasts (such as meekness vs. weakness), scriptures, accounts from the Savior's life, relationships, and activities. It tracks what you've explored, never how Christlike you are.
+- **Connect with Christ:** quiet, roughly five-minute sessions in three rotating formats (See Christ, Understand Christ, Reflect on Christ). No timer, no counters, no reports of feelings; prayer and notes are optional.
+- **Themes and preferences:** Lab, Daylight, Parchment, and Evening themes (WCAG 2.2 AA contrast), motion (follow device, full, subtle, off), preferred session length, default difficulty, and activity options.
+- **Optional AI boundary:** Gospel Labs works fully without AI. A clean interface exists for a future, clearly labeled, server-side assistant; the shipped implementation is a local, non-AI helper built from curated content. No AI service, API key, or network call is included.
+- **Backups:** export and import everything (research notebooks, study progress, Discovery Cards, map connections, explorations, preferences) as versioned JSON (format 3), with validation, previews, merge or replace, and atomic, all-or-nothing imports. See [docs/BACKUPS.md](docs/BACKUPS.md).
+
+## Research notebook (from 1.x, preserved)
+
+The original five-stage research notebook (Question, Hypothesis, Research, Analysis, Conclusion) is unchanged and lives under **Research** (Question Bank, My Library):
 
 - **Investigation workspace:** five freely navigable sections; optional subquestions and any number of hypotheses; evidence cards (create, edit, delete) with source, link, observation, relevance, and tags; claims in Analysis and Conclusion linked to evidence; user-controlled status (investigating, partially understood, concluded), with concluded investigations still editable; Undo for deletions.
 - **Evidence connections:** in Research, connect two pieces of evidence and say how they relate (supports, challenges, raises a question about, or connects to), with an optional explanation. Each connection shows both cards joined by a labeled arrow, opens either card, and can be edited in place or deleted with Undo. Connections are only ever made by the user; Gospel Labs never creates or evaluates them. See [docs/EVIDENCE_CONNECTIONS.md](docs/EVIDENCE_CONNECTIONS.md).
@@ -26,15 +45,16 @@ See [PROJECT_SPEC.md](PROJECT_SPEC.md) for the full product specification.
 - **Installable and offline:** a Progressive Web App that keeps working without a connection after the first visit.
 - **Accessible:** keyboard operable throughout, screen-reader labels and announcements, WCAG 2.2 AA contrast in dark and light themes, reduced-motion support.
 
+
 ## Privacy
 
 - No accounts, analytics, advertising, tracking, cookies, AI, or cloud services.
-- Investigations are stored only in this browser's IndexedDB. The theme choice is stored in `localStorage`.
+- Research notebooks, study progress, Discovery Cards, map connections, and explorations are stored only in this browser's IndexedDB. Theme and study preferences are stored in `localStorage`. Backups include all of them.
 - The app makes no requests to other sites. Fonts are bundled at build time, and a Content Security Policy (set by the server) limits scripts, styles, fonts, images, and connections to the app's own origin.
 - To notice updates, open copies of the app read `/version.json` from their own site now and then (when opened, when the tab is shown again, and every 30 minutes). It sends nothing about the user.
 - If a page closes before its last edits are saved, a temporary copy of those edits is kept in this browser's `localStorage` until it's saved.
-- Links to ChurchofJesusChrist.org open in a new tab only when you choose them, and send no referrer.
-- The only tool that contacts an external site is the developer script `npm run verify:references`, which never runs in the app.
+- Links to ChurchofJesusChrist.org and BYU Speeches open in a new tab only when you choose them, and send no referrer.
+- Only developer scripts contact external sites (`npm run verify:references`, `npm run verify:study`); they never run in the app.
 
 ## Getting started
 
@@ -57,15 +77,19 @@ npm start            # http://localhost:3000
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Development server with hot reload |
-| `npm run build` | Production build |
+| `npm run build` | Production build (validates all curated content; invalid content fails the build) |
 | `npm start` | Serve the static build in `out/` the way it's served in production (`scripts/serve-out.mjs`) |
 | `npm run deploy` | Build and publish to Atlas ([docs/HOSTING.md](docs/HOSTING.md)) |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | TypeScript (run `build` or `dev` once first so route types exist) |
-| `npm test` | Unit and integration tests (Vitest; IndexedDB via fake-indexeddb) |
+| `npm test` | Unit and integration tests (Vitest; IndexedDB via fake-indexeddb), including content validation |
 | `npm run test:e2e` | End-to-end tests in Chromium, desktop and mobile (Playwright); run `npm run build` first |
 | `npm run verify:production` | After a deployment: check the live site's security headers, update manifest, caching, clean URLs, and 404 page (read-only; needs network) |
-| `npm run verify:references` | Check every question-bank and trail link, and every trail quotation, against ChurchofJesusChrist.org (needs network) |
+| `npm run verify:references` | Check every 1.x question-bank and trail link and quotation, then all 2.0 study content (needs network) |
+| `npm run verify:study` | Check every 2.0 source link, scripture verse, excerpt, and quotation word for word against the original (`-- --only <file>` for one file; needs network) |
+| `npm run learner-questions -- "<xlsx>"` | Import the learner-question survey verbatim into git-ignored `data/private/` |
+| `node scripts/review-notes.mjs` | Regenerate [docs/2.0/DOCTRINAL_REVIEW.md](docs/2.0/DOCTRINAL_REVIEW.md) from content review notes |
+| `node scripts/scripture.mjs verses\|text\|find\|title <url>` | Content-authoring helper: copy exact verse text, find a quotation, or check a link |
 | `npm run questions:schema` | Regenerate the question bank's JSON Schema after changing its Zod schema |
 
 End-to-end tests need a Chromium browser: run `npx playwright install chromium` once, or set `CHROMIUM_PATH` to an existing Chromium or Chrome executable.
@@ -82,17 +106,19 @@ See **[docs/HOSTING.md](docs/HOSTING.md)** for building, testing, deploying, rol
 
 ## Offline behavior
 
-After one online visit, the service worker caches the app shell: the dashboard, question bank (including every question page), library, settings, the investigation editor, and the static files they need. Offline, you can open, edit, and create investigations, browse the question bank, and export or import backups.
+After one online visit, the service worker caches the app shell: the dashboard, every investigation, Scripture Explorer passage, and Character of Christ page, Connect with Christ, the Notebook, the Map, the question bank, the library, settings, and the static files they need. Offline you can study, keep notes, explore, open your Notebook and Map, use the research notebook, and export or import backups.
 
-- Links to ChurchofJesusChrist.org need a connection. Gospel Labs never caches other sites, and shows a notice while offline saying so.
+- Links to ChurchofJesusChrist.org and BYU Speeches need a connection. Gospel Labs never caches other sites, and shows a notice while offline saying so.
 - A page that was never cached shows an "isn't available offline" page instead of a browser error.
 - Pages are fetched from the network first when online, so updates appear right away. The cache is the fallback.
 
-## Adding questions, challenges, and trails
+## Adding content
 
-- **Questions:** edit [`src/data/question-bank.json`](src/data/question-bank.json); no code changes are needed. See [docs/QUESTION_BANK.md](docs/QUESTION_BANK.md) for the fields, rules, and how links are verified.
-- **Research challenges:** edit [`src/data/research-challenges.json`](src/data/research-challenges.json). See [docs/RESEARCH_CHALLENGES.md](docs/RESEARCH_CHALLENGES.md) for the fields and writing guidelines.
-- **Discovery trails:** edit [`src/data/discovery-trails.json`](src/data/discovery-trails.json). See [docs/DISCOVERY_TRAILS.md](docs/DISCOVERY_TRAILS.md) for the fields, the rules that keep text and interpretation apart, and how quotations are verified.
+All curated content is JSON validated by Zod at build time; no code changes are needed to edit it.
+
+- **Investigations, attributes, passages, Connect sessions:** `src/content/` (one file per item, listed in each folder's `index.ts`). Follow [docs/2.0/CONTENT_GUIDE.md](docs/2.0/CONTENT_GUIDE.md): copy scripture with `node scripts/scripture.mjs`, never from memory, and run `npm run verify:study` and `npm test`. Mark anything interpretive in the file's `review` notes.
+- **Shared concepts** (Discovery Map nodes): `src/content/concepts.json`.
+- **1.x questions, research challenges, and discovery trails:** [`src/data/`](src/data/); see [docs/QUESTION_BANK.md](docs/QUESTION_BANK.md), [docs/RESEARCH_CHALLENGES.md](docs/RESEARCH_CHALLENGES.md), and [docs/DISCOVERY_TRAILS.md](docs/DISCOVERY_TRAILS.md).
 
 ## Feedback
 
@@ -104,50 +130,61 @@ Bug reports and ideas go to **[gospellabs@proton.me](mailto:gospellabs@proton.me
 src/
   app/                        Routes (App Router); every page is exported as static HTML
     page.tsx                  Dashboard
-    questions/, questions/[id]  Question bank and question pages
-    library/                  My Library
-    settings/                 Settings: appearance, backups, storage, privacy
-    investigations/new/       New investigation (draft created in the browser)
-    investigations/view/      Saved investigation (?id=…&section=…), loaded from IndexedDB
-    offline/                  Shown for uncached pages while offline
-    manifest.ts, apple-icon.png, icon.svg   PWA manifest and icons
+    investigate/, investigate/[id]   Guided investigations
+    explore/, explore/[id]    Scripture Explorer
+    character/, character/[id]  Character of Christ Builder
+    connect/                  Connect with Christ
+    notebook/, map/           Discovery Notebook and Discovery Map (personal data via ?card= / ?node=)
+    questions/, library/, investigations/   1.x research notebook (unchanged)
+    settings/, offline/
   components/
-    ui/                       Primitives: Button, Card, Field/Input, Badge, Dialog, EmptyState, …
+    study/                    2.0 features: activities/, player/, explorer/, character/, connect/,
+                              notebook/, map/, dashboard/, shared/ (sources, provenance labels)
+    ui/                       Primitives: Button, Card, Dialog, Tabs, Sheet, SegmentedControl, …
     layout/                   App shell and navigation
-    workspace/                Investigation editor, sections, evidence/, claims/, connections/,
-                              discoveries/, reflection/, challenges/, trails/, undo, autosave status
-    library/, dashboard/, questions/, settings/, investigations/, pwa/
-  data/                       question-bank.json (and its generated JSON Schema), research-challenges.json,
-                              discovery-trails.json
-  domain/                     Pure logic and Zod schemas: investigation model and reducer,
-                              evidence input, question bank, research challenges, discovery trails,
-                              reflection prompts, filters, factory
-  persistence/                Dexie database, repository, autosave controller, backups, React hooks
-  lib/                        Utilities (ids, dates, routes, theme, downloads)
+    workspace/, library/, questions/, settings/, investigations/, pwa/   (1.x and shared)
+  content/                    2.0 curated content (JSON) and learner-question families
+  data/                       1.x question bank, research challenges, discovery trails
+  domain/
+    study/                    2.0 pure logic and schemas: vocabulary, content schema and registry,
+                              user data, engine/, activities/ (answer checking), cards/, graph,
+                              suggestions, connect rotation
+    …                         1.x investigation model, reducer, question bank, trails
+  persistence/                Dexie database (v2), repositories, autosave, backups, React hooks
+  lib/                        Utilities, preferences, theme, routes, study-content loader, assist/
 public/                       sw.js (service worker), PWA icons
 e2e/                          Playwright end-to-end tests
-scripts/                      deploy.sh, serve-out.mjs (local static server), security-headers.mjs,
-                              verify-references.mjs, verify-production.mjs
-docs/                         HOSTING.md, QUESTION_BANK.md, RESEARCH_CHALLENGES.md, DISCOVERY_TRAILS.md,
-                              EVIDENCE_CONNECTIONS.md, REFLECTION_AND_DISCOVERIES.md, BACKUPS.md,
-                              RELEASE_1.1.md (release readiness and deployment sequence)
+scripts/                      deploy, local server, security headers, verification and content tools
+docs/                         2.0/ (architecture, content guide, learner questions, doctrinal review),
+                              release reports, hosting, backups, 1.x feature docs
 ```
 
 ### Architecture notes
 
-- **Data model:** one self-contained IndexedDB record per investigation; evidence cards, claims, evidence connections, discoveries, challenge responses, trail notes, and reflections inside it reference each other by id. New data is added as new fields with defaults, so older records load without a migration, and fields added by newer versions are preserved rather than dropped. Zod schemas in `src/domain/investigation.ts` define the types and validate records on every read, write, and import.
-- **State:** every change goes through a pure reducer (`src/domain/investigation-reducer.ts`) via React's `useReducer`; ids and timestamps are passed in, so operations are deterministic and unit-tested.
-- **Persistence:** `src/persistence/investigation-repository.ts` validates data, maps browser storage failures to clear messages, refuses to overwrite changes made elsewhere, and runs multi-record operations in a single transaction. `src/persistence/autosave.ts` debounces and serializes saves independently of React.
+See [docs/2.0/ARCHITECTURE.md](docs/2.0/ARCHITECTURE.md) for the full design. In brief:
+
+- **Content is data.** Curated content lives in `src/content/` and is validated (schemas plus cross-file checks: every source, concept, and Map node exists; highlight passages match their verses exactly) when the app builds.
+- **Study data** lives in four IndexedDB tables added in database version 2 (`studyProgress`, `discoveries`, `personalConnections`, `explorations`), beside the untouched 1.x `investigations` table. The Notebook and Map read the same Discovery Cards, so they can't disagree.
+- **The engine is pure.** Progression, difficulty, hints, and branching are a deterministic reducer (`src/domain/study/engine/`); answer checking is pure per activity type (`src/domain/study/activities/`). Both are unit-tested against all real content.
+- **1.x research notebook:**
+  - **Data model:** one self-contained IndexedDB record per investigation; evidence cards, claims, evidence connections, discoveries, challenge responses, trail notes, and reflections inside it reference each other by id. New data is added as new fields with defaults, so older records load without a migration, and fields added by newer versions are preserved rather than dropped. Zod schemas in `src/domain/investigation.ts` define the types and validate records on every read, write, and import.
+  - **State:** every change goes through a pure reducer (`src/domain/investigation-reducer.ts`) via React's `useReducer`; ids and timestamps are passed in, so operations are deterministic and unit-tested.
+  - **Persistence:** `src/persistence/investigation-repository.ts` validates data, maps browser storage failures to clear messages, refuses to overwrite changes made elsewhere, and runs multi-record operations in a single transaction. `src/persistence/autosave.ts` debounces and serializes saves independently of React.
 
 ## Testing
 
-- **Unit and integration tests (Vitest, 280+):** the investigation reducer, schema and integrity rules (including malformed, orphaned, self-referencing, and duplicate connections), evidence input, question-bank and research-challenge validation, search, filters and random selection, persistence against a real IndexedDB implementation, autosave timing and conflicts, backup export/import round trips including transactional rollback, discovery-trail validation and progress, and compatibility with records and backups saved by Gospel Labs 1.0 and by pre-release 1.1 builds.
-- **End-to-end tests (Playwright; desktop and mobile Chromium, plus Firefox on request):** run under the production security headers. Research activities (switching keeps unsaved input, counts, keyboard, remembered activity); edits in two tabs at once; the update notice; edits made just before leaving a page; create, edit, resume, conclude, and reopen; curated questions; discovery highlights (save from any section, title required, link evidence, review, edit, delete with Undo, evidence deletion and Undo, backup contents); Come unto Christ reflection (optional, autosaved, independent of status); evidence connections (create with validation, duplicate pairs blocked, connect from a card, edit in place, open a card, delete evidence or connections with Undo, backup contents); research challenges (respond, try another, filter, revisit and edit, undo a deletion); discovery trails (any-order steps, notes, explored marks, recording evidence, resuming, library progress, backup contents) and questions without trails; a 1.0 record and a 1.0 backup opening with all their data; delete confirmation; export, delete everything, and restore; replace with its safeguards; damaged and newer-version backups; feedback links; and full offline use.
+- **Unit and integration tests (Vitest):** the 1.x suite plus the 2.0 schemas and content registry (all shipped content validated, every activity's revealed answer checked correct), answer checking for every activity type, the progression engine (difficulty changes, hints, branching, persistence, a playthrough of every investigation), Discovery Card builders, the Map graph and deterministic layout, Notebook search, suggestions, Connect rotation, study repositories, database version-2 upgrade and rollback safety, and backup format 3 (round trips, migrations from formats 1 and 2, atomic rollback, merge rules, preferences).
+- **End-to-end tests (Playwright; desktop and mobile Chromium):** run under the production security headers. The 1.x regression suite, plus 2.0 flows; see [docs/GOSPEL_LABS_2.0_RELEASE.md](docs/GOSPEL_LABS_2.0_RELEASE.md) for the current list and results.
+- **Content verification:** `npm run verify:study` checks every source, verse, excerpt, and quotation in 2.0 content against the original.
 
 ## Known limitations
 
-- **One browser, one device.** There is no sync. Use export and import to move investigations between browsers or devices.
-- **Clearing site data deletes investigations.** Regular backups are the safeguard. The browser may grant "persistent storage" (Settings), but that is its decision.
+- **One browser, one device.** There is no sync (the data model is ready for it: stable ids, timestamps, version stamps). Use export and import to move study between browsers or devices.
+- **Clearing site data deletes everything stored.** Regular backups are the safeguard. The browser may grant "persistent storage" (Settings), but that is its decision.
+- **Study progress is last-write-wins** across tabs (research notebooks keep 1.1's conflict detection).
+- **Scripture text is limited to short passages** (at most 12 verses per source); everything else links to the original.
+- **Overlapping verse ranges** cited by different content (e.g. John 15:9–15 and John 15:13–15) appear as separate Map nodes.
+- **Doctrinal review:** all quotations are verified and every interpretive note has a recorded resolution (qualified, corrected, or withheld to `docs/2.0/withheld/`), but 17 items still await the owner's personal review; see [docs/2.0/DOCTRINAL_REVIEW.md](docs/2.0/DOCTRINAL_REVIEW.md).
 - **Multiple tabs:** changes from another tab are noticed immediately, and conflicting edits are never overwritten silently, but they aren't merged either: the user chooses which version to keep.
 - **Tabs left open from 1.0:** version 1.0 can't detect updates or newer data, and no later release can change a 1.0 tab that's already running. A 1.0 tab that opens an investigation after 1.1 added connections, discoveries, reflections, challenge responses, or trail notes to it, and is then used to edit it, saves it without them. Reload open tabs after the 1.1 update; see [docs/HOSTING.md](docs/HOSTING.md) for the rollout plan. From 1.1 on, tabs are told about updates, keep data they don't recognise, and refuse to save over newer data.
 - **Safety copies** of unsaved edits live in `localStorage`. Where it's unavailable (some private modes), a page closed within a moment of an edit can still lose that edit in browsers that abandon database writes during unload (Firefox does).
@@ -155,12 +192,11 @@ docs/                         HOSTING.md, QUESTION_BANK.md, RESEARCH_CHALLENGES.
 - **Discovery trails** exist for one question so far. Trail progress counts only steps the user marks explored; nothing is inferred.
 - **Undo** covers one deletion at a time inside the editor (subquestions, hypotheses, evidence, claims). Deleting a whole investigation from My Library is confirmed but can't be undone.
 - **Evidence labels** (E1, E2, …) follow list order and shift when a card is deleted. Claim links are unaffected because they use ids, but "E2" typed into free-text notes may then refer to a different card.
-- **Offline support starts after the first online visit**, is active only in production builds, and never includes external Church websites.
-- **Browser testing:** the full end-to-end suite passes in Chromium (desktop and mobile) and Firefox 148; offline behavior is verified in Chromium only (Playwright can't simulate offline service-worker traffic in Firefox). WebKit/Safari couldn't be run in the test environment, and nothing has been tested on real iOS or Android devices or with a screen reader. The app relies on IndexedDB, service workers, `<dialog>`, and CSS `:has()`, all supported by current versions of these browsers.
 - **Reference verification** uses the content service behind the Church's Gospel Library website, which isn't a documented public API. The check may need updating if that service changes. It runs only as a developer script.
 - **Content Security Policy** allows inline scripts, which Next.js and the theme script need. It still blocks all third-party requests.
+- **Offline support starts after the first online visit**, is active only in production builds, and never includes external websites.
+- **Browser testing:** see the release report. WebKit/Safari, real phones, and screen readers haven't been tested.
 - **English only.**
-- **Not implemented:** a way for users to submit questions to the bank (the `submittedBy` field exists for attribution only), cross-device sync, and any AI features (intentionally excluded).
 
 ## License
 

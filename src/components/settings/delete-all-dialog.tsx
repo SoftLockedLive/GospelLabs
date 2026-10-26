@@ -4,21 +4,37 @@ import { Download, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AcknowledgeCheckbox, Dialog } from "@/components/ui/dialog";
+import { countOf, DATA_KINDS, describeCounts, totalCount, type DataCounts, type DataKind } from "@/persistence/backup";
 import { getRepository } from "@/persistence/client";
 import { toStorageError } from "@/persistence/storage-errors";
 import { exportAllData } from "./export-backup";
 
 interface DeleteAllDialogProps {
   open: boolean;
-  count: number;
+  /** What is stored right now, per kind. */
+  counts: DataCounts;
   onClose: () => void;
-  onDeleted: (count: number) => void;
+  /** Called with what was actually deleted, per kind. */
+  onDeleted: (removed: DataCounts) => void;
 }
 
-export function DeleteAllDialog({ open, count, onClose, onDeleted }: DeleteAllDialogProps) {
+/** What each kind includes, so the list says exactly what will be lost. */
+const INCLUDES: Partial<Record<DataKind, string>> = {
+  investigations: "with their evidence, connections, discoveries, and notes",
+  progress: "your progress, answers, and reflections",
+  discoveries: "with your notes and highlights",
+};
+
+/**
+ * Confirms deleting everything stored on this device: research
+ * investigations and all study data, in one transaction. Lists what will be
+ * deleted per kind, offers a backup first, and requires an explicit
+ * acknowledgement. Appearance and study preferences are kept.
+ */
+export function DeleteAllDialog({ open, counts, onClose, onDeleted }: DeleteAllDialogProps) {
   const [acknowledged, setAcknowledged] = useState(false);
   const [busy, setBusy] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useState<{ tone: "status" | "alert"; text: string } | null>(null);
 
   const close = () => {
     setAcknowledged(false);
@@ -29,11 +45,11 @@ export function DeleteAllDialog({ open, count, onClose, onDeleted }: DeleteAllDi
   const confirm = async () => {
     setBusy(true);
     try {
-      const deleted = await getRepository().deleteAll();
+      const removed = await getRepository().deleteEverything();
       close();
-      onDeleted(deleted);
+      onDeleted(removed);
     } catch (cause) {
-      setMessage(`${toStorageError(cause).message} Nothing was deleted.`);
+      setMessage({ tone: "alert", text: `${toStorageError(cause).message} Nothing was deleted.` });
     } finally {
       setBusy(false);
     }
@@ -41,12 +57,19 @@ export function DeleteAllDialog({ open, count, onClose, onDeleted }: DeleteAllDi
 
   const downloadFirst = async () => {
     try {
-      const { count: exported } = await exportAllData();
-      setMessage(`Downloaded a backup of ${exported} ${exported === 1 ? "investigation" : "investigations"}.`);
+      const { counts: exported, unreadable } = await exportAllData();
+      setMessage({
+        tone: "status",
+        text:
+          `Downloaded a backup of ${describeCounts(exported, "your preferences (nothing else is saved yet)")}.` +
+          (unreadable ? ` ${unreadable} damaged ${unreadable === 1 ? "record" : "records"} couldn't be included.` : ""),
+      });
     } catch (cause) {
-      setMessage(toStorageError(cause).message);
+      setMessage({ tone: "alert", text: toStorageError(cause).message });
     }
   };
+
+  const kinds = DATA_KINDS.filter((kind) => counts[kind] > 0);
 
   return (
     <Dialog
@@ -54,10 +77,11 @@ export function DeleteAllDialog({ open, count, onClose, onDeleted }: DeleteAllDi
       onClose={close}
       title="Delete all data?"
       description={
-        <>
-          All {count} {count === 1 ? "investigation" : "investigations"} on this device, with their evidence and
-          notes, will be permanently deleted. This can&rsquo;t be undone.
-        </>
+        totalCount(counts) > 0 ? (
+          <>Everything saved on this device will be permanently deleted. This can&rsquo;t be undone.</>
+        ) : (
+          <>Nothing is saved on this device.</>
+        )
       }
       footer={
         <>
@@ -72,20 +96,40 @@ export function DeleteAllDialog({ open, count, onClose, onDeleted }: DeleteAllDi
       }
     >
       <div className="flex flex-col gap-4">
+        {kinds.length > 0 && (
+          <ul aria-label="Will be deleted" className="flex flex-col gap-1.5 text-sm text-fg">
+            {kinds.map((kind) => (
+              <li key={kind} className="flex gap-2.5">
+                <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-danger" />
+                <span>
+                  <span className="font-medium">{countOf(kind, counts[kind])}</span>
+                  {INCLUDES[kind] && <span className="text-muted"> — {INCLUDES[kind]}</span>}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+        <p className="text-sm text-muted">Your appearance and study preferences are kept.</p>
         <div>
-          <Button variant="secondary" size="sm" onClick={downloadFirst}>
+          <Button variant="secondary" size="md" onClick={downloadFirst}>
             <Download aria-hidden />
             Download a backup first
           </Button>
         </div>
-        <AcknowledgeCheckbox checked={acknowledged} onChange={setAcknowledged}>
-          I understand that all my investigations will be deleted and can&rsquo;t be recovered.
-        </AcknowledgeCheckbox>
-        {message && (
-          <p role="status" className="text-sm text-muted">
-            {message}
-          </p>
-        )}
+        <div>
+          <AcknowledgeCheckbox checked={acknowledged} onChange={setAcknowledged}>
+            I understand that all my investigations and study data will be deleted and can&rsquo;t be recovered.
+          </AcknowledgeCheckbox>
+          {/* Kept in the dialog, so screen readers announce the message when it appears. */}
+          <div role="status">
+            {message?.tone === "status" && <p className="mt-4 text-sm text-muted">{message.text}</p>}
+          </div>
+          {message?.tone === "alert" && (
+            <p role="alert" className="mt-4 text-sm text-danger">
+              {message.text}
+            </p>
+          )}
+        </div>
       </div>
     </Dialog>
   );

@@ -1,0 +1,582 @@
+{
+  "id": "the-prodigal-son",
+  "status": "ready",
+  "title": "The prodigal son",
+  "sourceId": "luke-15-17-24",
+  "context": {
+    "setting": "Publicans and sinners were drawing near to hear Jesus, and the Pharisees and scribes murmured, “This man receiveth sinners, and eateth with them” (Luke 15:1–2). Jesus answered with parables of a lost sheep, a lost piece of silver, and two sons. In verses 11–16 the younger son asks for his portion, wastes it in a far country, and ends up feeding swine, hungry.",
+    "speaker": "Jesus Christ, telling a parable",
+    "audience": "Pharisees and scribes who murmured, while publicans and sinners drew near to hear (Luke 15:1–3)"
+  },
+  "themes": [
+    {
+      "conceptId": "repentance",
+      "note": "The son ‘came to himself,’ decided to return, and confessed: “Father, I have sinned against heaven, and in thy sight.”",
+      "verses": [
+        17,
+        18,
+        19,
+        21
+      ]
+    },
+    {
+      "conceptId": "love-of-god",
+      "note": "Jesus told this parable soon after saying “joy shall be in heaven over one sinner that repenteth.” Many readers see that joy pictured in the father's welcome and celebration; the parable leaves the comparison to the listener.",
+      "verses": [
+        20,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "conceptId": "compassion",
+      "note": "The father “had compassion, and ran.”",
+      "verses": [
+        20
+      ]
+    },
+    {
+      "conceptId": "forgiveness",
+      "note": "The father receives him as a son, with a robe, a ring, shoes, and a feast. The servant's place the son planned to ask for never comes up.",
+      "verses": [
+        20,
+        22,
+        23,
+        24
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "came-to-himself",
+      "verse": 17,
+      "phrase": "when he came to himself",
+      "meaning": "A turning point: he sees his situation clearly. The footnote links the phrase to the Topical Guide entry ‘Repent.’ Repentance is “A change of mind and heart that brings a fresh attitude toward God, oneself, and life in general.”",
+      "sourceIds": [
+        "gs-repent-repentance"
+      ]
+    },
+    {
+      "id": "arise-and-go",
+      "verse": 18,
+      "phrase": "I will arise and go to my father",
+      "meaning": "He decides, and then acts on it: verse 20 says “he arose, and came to his father.”",
+      "sourceIds": []
+    },
+    {
+      "id": "sinned",
+      "verse": 18,
+      "phrase": "I have sinned against heaven, and before thee",
+      "meaning": "‘Against heaven’ is commonly read as meaning against God, alongside the wrong done to his father (‘before thee’). That is an interpretation; the parable doesn't explain the phrase. The footnote on ‘sinned’ points to the Topical Guide entry Confession.",
+      "sourceIds": []
+    },
+    {
+      "id": "hired-servants",
+      "verse": 19,
+      "phrase": "make me as one of thy hired servants",
+      "meaning": "He plans to ask only for a servant's place. When he meets his father (verse 21), he doesn't say this part.",
+      "sourceIds": []
+    },
+    {
+      "id": "great-way-off",
+      "verse": 20,
+      "phrase": "when he was yet a great way off",
+      "meaning": "The father sees him while he is still far away, and goes to meet him before he arrives.",
+      "sourceIds": []
+    },
+    {
+      "id": "compassion-ran",
+      "verse": 20,
+      "phrase": "had compassion, and ran",
+      "meaning": "The Guide to the Scriptures says compassion means literally “to suffer with,” and also to show “sympathy, pity, and mercy for another.”",
+      "sourceIds": [
+        "gs-compassion"
+      ]
+    },
+    {
+      "id": "best-robe",
+      "verse": 22,
+      "phrase": "Bring forth the best robe",
+      "meaning": "The father gives the best robe, a ring, and shoes: far more than the servant's place the son meant to ask for.",
+      "sourceIds": []
+    },
+    {
+      "id": "lost-found",
+      "verse": 24,
+      "phrase": "he was lost, and is found",
+      "meaning": "The same words close the parable (verse 32) and echo the lost sheep: “I have found my sheep which was lost.”",
+      "sourceIds": [
+        "luke-15-4-7",
+        "luke-15-28-32"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "luke-15-11-16",
+      "relation": "leads-to",
+      "note": "The beginning of the story: the younger son asks for his portion, wastes it “with riotous living,” and is left feeding swine."
+    },
+    {
+      "sourceId": "luke-15-4-7",
+      "relation": "relates-to",
+      "note": "The parable of the lost sheep ends, “joy shall be in heaven over one sinner that repenteth.”"
+    },
+    {
+      "sourceId": "luke-15-28-32",
+      "relation": "contrasts-with",
+      "note": "The elder son is angry and won't go in. The father goes out to him too: “therefore came his father out, and entreated him.”"
+    },
+    {
+      "sourceId": "alma-5-33",
+      "relation": "supports",
+      "note": "Alma testifies that “the arms of mercy are extended towards them, and he saith: Repent, and I will receive you.”"
+    }
+  ],
+  "questions": [
+    {
+      "id": "audience",
+      "question": "Who was Jesus talking to when He told this parable?",
+      "answer": "Luke 15:1–2 says “all the publicans and sinners” drew near to hear Him, and “the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them.” The parables that follow, including this one, answer that complaint.",
+      "sourceIds": [
+        "luke-15-1-2"
+      ]
+    },
+    {
+      "id": "father-stands-for",
+      "question": "Does the father stand for Heavenly Father?",
+      "answer": "Jesus doesn't say so directly. Many readers understand the father's welcome as a picture of God's love, because the parable of the lost sheep, told just before, ends with “joy shall be in heaven over one sinner that repenteth” (Luke 15:7). A parable is “A simple story used to illustrate and teach a spiritual truth or principle” (Guide to the Scriptures). This one leaves the comparison for the listener to draw.",
+      "sourceIds": [
+        "gs-parable",
+        "luke-15-4-7"
+      ]
+    },
+    {
+      "id": "speech-changes",
+      "question": "Why is the son's speech in verse 21 shorter than the one he planned in verses 18–19?",
+      "answer": "In verse 19 he planned to say, “make me as one of thy hired servants.” In verse 21 he says only the first part, and then the father speaks to his servants: “Bring forth the best robe.” The text doesn't say why the request is missing or whether the father interrupted him. What it shows is the father's answer: he receives him as a son.",
+      "sourceIds": [
+        "luke-15-17-24"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "the-fathers-response",
+      "prompt": "In verse 20, the father acts before his son says a word. Tap each thing the father does.",
+      "sourceIds": [
+        "luke-15-17-24"
+      ],
+      "hints": [
+        "Start reading at “But when he was yet a great way off.”",
+        "There are five actions, each joined by ‘and.’"
+      ],
+      "explanation": "Five actions belong to the father: he “saw him,” “had compassion,” “ran,” “fell on his neck,” and “kissed him,” all before the son's confession in verse 21.",
+      "passage": "luke-15-17-24",
+      "chunks": [
+        {
+          "verse": 20,
+          "text": "And he arose,"
+        },
+        {
+          "verse": 20,
+          "text": "and came to his father."
+        },
+        {
+          "verse": 20,
+          "text": "But when he was yet a great way off,"
+        },
+        {
+          "verse": 20,
+          "text": "his father saw him,"
+        },
+        {
+          "verse": 20,
+          "text": "and had compassion,"
+        },
+        {
+          "verse": 20,
+          "text": "and ran,"
+        },
+        {
+          "verse": 20,
+          "text": "and fell on his neck,"
+        },
+        {
+          "verse": 20,
+          "text": "and kissed him."
+        }
+      ],
+      "targets": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "minTargets": 4
+    },
+    {
+      "type": "sort",
+      "id": "planned-and-received",
+      "prompt": "Compare the speech the son planned (verses 18–19) with what happened (verses 21–24). Sort each line.",
+      "sourceIds": [
+        "luke-15-17-24"
+      ],
+      "hints": [
+        "Read verses 18–19, then verse 21. Which planned words are missing?",
+        "Everything the father says begins in verse 22."
+      ],
+      "explanation": "The son planned three parts: a confession, “am no more worthy to be called thy son,” and a request to be made a hired servant. In verse 21 he says the first two, but he never asks to be a servant; the father answers with a robe, a ring, shoes, and a feast, saying “this my son was dead, and is alive again.”",
+      "categories": [
+        {
+          "id": "said",
+          "label": "Planned, and said"
+        },
+        {
+          "id": "never-said",
+          "label": "Planned, but never said"
+        },
+        {
+          "id": "father",
+          "label": "The father's answer"
+        }
+      ],
+      "items": [
+        {
+          "id": "sinned",
+          "text": "Father, I have sinned against heaven",
+          "category": "said",
+          "why": "Planned in verse 18 and said in verse 21."
+        },
+        {
+          "id": "not-worthy",
+          "text": "I am no more worthy to be called thy son",
+          "category": "said",
+          "why": "Planned in verse 19 and said in verse 21."
+        },
+        {
+          "id": "hired-servant",
+          "text": "Make me as one of thy hired servants",
+          "category": "never-said",
+          "why": "Planned in verse 19, but verse 21 doesn't include it; the next words are the father's."
+        },
+        {
+          "id": "robe",
+          "text": "Bring forth the best robe",
+          "category": "father",
+          "why": "The father, verse 22."
+        },
+        {
+          "id": "ring-shoes",
+          "text": "Put a ring on his hand, and shoes on his feet",
+          "category": "father",
+          "why": "The father, verse 22."
+        },
+        {
+          "id": "alive-again",
+          "text": "This my son was dead, and is alive again",
+          "category": "father",
+          "why": "The father, verse 24."
+        }
+      ]
+    },
+    {
+      "type": "scripture-connect",
+      "id": "lost-and-found",
+      "prompt": "Read the prodigal son beside the lost sheep (Luke 15:4–7) and the elder son (Luke 15:28–32).",
+      "sourceIds": [
+        "luke-15-17-24",
+        "luke-15-4-7",
+        "luke-15-28-32"
+      ],
+      "hints": [
+        "Find the words ‘lost’ and ‘found’ in all three passages.",
+        "In verse 28, who goes out to whom?"
+      ],
+      "explanation": "Each passage ends with rejoicing because what was lost is found. The shepherd goes after the sheep; the father runs to the younger son, and then goes out to the elder son too and entreats him: “Son, thou art ever with me, and all that I have is thine.”",
+      "passages": [
+        "luke-15-17-24",
+        "luke-15-4-7",
+        "luke-15-28-32"
+      ],
+      "questions": [
+        {
+          "id": "shared-ending",
+          "prompt": "What ending do the lost sheep and the lost son share?",
+          "options": [
+            {
+              "id": "rejoicing",
+              "text": "Rejoicing when what was lost is found"
+            },
+            {
+              "id": "punishment",
+              "text": "Punishment for having been lost",
+              "feedback": "Look at verse 6 and verse 23. What do the shepherd and the father invite others to do?"
+            },
+            {
+              "id": "alone",
+              "text": "The lost one finds the way back without anyone coming to meet it",
+              "feedback": "In verse 4 the shepherd goes “after that which is lost”; in verse 20 the father runs."
+            }
+          ],
+          "correct": [
+            "rejoicing"
+          ]
+        },
+        {
+          "id": "elder-son",
+          "prompt": "How does the father treat the elder son, who is angry and won't go in?",
+          "options": [
+            {
+              "id": "entreats",
+              "text": "He goes out to him, entreats him, and says “all that I have is thine.”"
+            },
+            {
+              "id": "ignores",
+              "text": "He stays at the feast and ignores him.",
+              "feedback": "Verse 28 says what the father did when the elder son would not go in."
+            },
+            {
+              "id": "rebukes",
+              "text": "He tells him to leave the house.",
+              "feedback": "Read verse 31: what does the father call him?"
+            }
+          ],
+          "correct": [
+            "entreats"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:luke-15-17-24",
+      "to": "concept:repentance",
+      "relation": "illustrates",
+      "sourceIds": [
+        "luke-15-17-24"
+      ],
+      "note": "The son comes to himself, returns to his father, and confesses."
+    },
+    {
+      "from": "scripture:luke-15-17-24",
+      "to": "concept:love-of-god",
+      "relation": "illustrates",
+      "sourceIds": [
+        "luke-15-17-24",
+        "luke-15-4-7"
+      ],
+      "note": "Many readers see the father's welcome as a picture of the joy in heaven the Savior described (Luke 15:7); the parable leaves that comparison to the listener."
+    },
+    {
+      "from": "scripture:luke-15-17-24",
+      "to": "attribute:compassion",
+      "relation": "illustrates",
+      "sourceIds": [
+        "luke-15-17-24"
+      ],
+      "note": "The father “had compassion, and ran.”"
+    }
+  ],
+  "sources": [
+    {
+      "id": "luke-15-17-24",
+      "kind": "scripture",
+      "label": "Luke 15:17–24",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p17-p24#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "And when he came to himself, he said, How many hired servants of my father’s have bread enough and to spare, and I perish with hunger!"
+        },
+        {
+          "number": 18,
+          "text": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee,"
+        },
+        {
+          "number": 19,
+          "text": "And am no more worthy to be called thy son: make me as one of thy hired servants."
+        },
+        {
+          "number": 20,
+          "text": "And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him."
+        },
+        {
+          "number": 21,
+          "text": "And the son said unto him, Father, I have sinned against heaven, and in thy sight, and am no more worthy to be called thy son."
+        },
+        {
+          "number": 22,
+          "text": "But the father said to his servants, Bring forth the best robe, and put it on him; and put a ring on his hand, and shoes on his feet:"
+        },
+        {
+          "number": 23,
+          "text": "And bring hither the fatted calf, and kill it; and let us eat, and be merry:"
+        },
+        {
+          "number": 24,
+          "text": "For this my son was dead, and is alive again; he was lost, and is found. And they began to be merry."
+        }
+      ]
+    },
+    {
+      "id": "luke-15-1-2",
+      "kind": "scripture",
+      "label": "Luke 15:1–2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p1-p2#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Then drew near unto him all the publicans and sinners for to hear him."
+        },
+        {
+          "number": 2,
+          "text": "And the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them."
+        }
+      ]
+    },
+    {
+      "id": "luke-15-11-16",
+      "kind": "scripture",
+      "label": "Luke 15:11–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p11-p16#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "¶ And he said, A certain man had two sons:"
+        },
+        {
+          "number": 12,
+          "text": "And the younger of them said to his father, Father, give me the portion of goods that falleth to me. And he divided unto them his living."
+        },
+        {
+          "number": 13,
+          "text": "And not many days after the younger son gathered all together, and took his journey into a far country, and there wasted his substance with riotous living."
+        },
+        {
+          "number": 14,
+          "text": "And when he had spent all, there arose a mighty famine in that land; and he began to be in want."
+        },
+        {
+          "number": 15,
+          "text": "And he went and joined himself to a citizen of that country; and he sent him into his fields to feed swine."
+        },
+        {
+          "number": 16,
+          "text": "And he would fain have filled his belly with the husks that the swine did eat: and no man gave unto him."
+        }
+      ]
+    },
+    {
+      "id": "luke-15-4-7",
+      "kind": "scripture",
+      "label": "Luke 15:4–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p4-p7#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost, until he find it?"
+        },
+        {
+          "number": 5,
+          "text": "And when he hath found it, he layeth it on his shoulders, rejoicing."
+        },
+        {
+          "number": 6,
+          "text": "And when he cometh home, he calleth together his friends and neighbours, saying unto them, Rejoice with me; for I have found my sheep which was lost."
+        },
+        {
+          "number": 7,
+          "text": "I say unto you, that likewise joy shall be in heaven over one sinner that repenteth, more than over ninety and nine just persons, which need no repentance."
+        }
+      ]
+    },
+    {
+      "id": "luke-15-28-32",
+      "kind": "scripture",
+      "label": "Luke 15:28–32",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p28-p32#p28",
+      "verses": [
+        {
+          "number": 28,
+          "text": "And he was angry, and would not go in: therefore came his father out, and entreated him."
+        },
+        {
+          "number": 29,
+          "text": "And he answering said to his father, Lo, these many years do I serve thee, neither transgressed I at any time thy commandment: and yet thou never gavest me a kid, that I might make merry with my friends:"
+        },
+        {
+          "number": 30,
+          "text": "But as soon as this thy son was come, which hath devoured thy living with harlots, thou hast killed for him the fatted calf."
+        },
+        {
+          "number": 31,
+          "text": "And he said unto him, Son, thou art ever with me, and all that I have is thine."
+        },
+        {
+          "number": 32,
+          "text": "It was meet that we should make merry, and be glad: for this thy brother was dead, and is alive again; and was lost, and is found."
+        }
+      ]
+    },
+    {
+      "id": "alma-5-33",
+      "kind": "scripture",
+      "label": "Alma 5:33",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p33#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "Behold, he sendeth an invitation unto all men, for the arms of mercy are extended towards them, and he saith: Repent, and I will receive you."
+        }
+      ]
+    },
+    {
+      "id": "gs-repent-repentance",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Repent, Repentance",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/repent-repentance?lang=eng"
+    },
+    {
+      "id": "gs-compassion",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Compassion",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/compassion?lang=eng"
+    },
+    {
+      "id": "gs-parable",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Parable",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/parable?lang=eng"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "sourceId",
+        "note": "Luke 15:11–24 is 14 verses, over the 12-verse limit, so the passage is 15:17–24 and verses 11–16 are a related source.",
+        "resolution": "Resolved: confirmed. Luke 15:11–24 is 14 verses; the passage is Luke 15:17–24 (8 verses), and Luke 15:11–16 is declared and shown as a related source (‘leads-to’)."
+      },
+      {
+        "where": "questions.father-stands-for and connections",
+        "note": "Linking the father to God's love is interpretive. It rests on the setting (Luke 15:7, 10), and the text is careful to say the parable leaves the comparison to the listener. Please review.",
+        "resolution": "Qualified: the answer, the love-of-god theme note, and the Map connection now say that linking the father to God's love is how many readers understand the parable, and that the parable leaves the comparison to the listener. The answer now cites only Luke 15:7, whose words it quotes (verse 10 is worded differently). The forgiveness theme, the hired-servants meaning, the speech-changes answer, and the sort item no longer imply the father interrupted his son."
+      },
+      {
+        "where": "keyPhrases.sinned",
+        "note": "Reading ‘against heaven’ as ‘toward God’ is a common reading but an interpretation.",
+        "resolution": "Qualified: the meaning now says ‘against God’ is how the phrase is commonly read, and that the parable doesn't explain it. Checked 26 October 2026: the footnote on ‘sinned’ in verse 18 points to the Topical Guide entry Confession."
+      },
+      {
+        "where": "themes",
+        "note": "Uses the Character of Christ attributes ‘compassion’ and ‘forgiveness’ as themes and Map nodes.",
+        "resolution": "Resolved: both attributes exist (src/content/attributes/compassion.json and forgiveness.json). The compassion note quotes verse 20; the forgiveness note describes what verses 20–24 show."
+      }
+    ]
+  }
+}

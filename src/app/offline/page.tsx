@@ -1,30 +1,29 @@
 import { WifiOff } from "lucide-react";
 import type { Metadata } from "next";
-import { PageContainer } from "@/components/layout/app-shell";
+import { StatusPage } from "@/components/layout/status-page";
 import { ButtonLink } from "@/components/ui/button";
-import { EmptyState } from "@/components/ui/empty-state";
+import { notebookHref } from "@/lib/routes";
 
 export const metadata: Metadata = { title: "Offline", robots: { index: false } };
 
 /** Served by the service worker for pages that weren't saved for offline use. */
 export default function OfflinePage() {
   return (
-    <PageContainer>
-      <EmptyState
-        headingLevel={1}
-        icon={WifiOff}
-        title="This page isn't available offline"
-        description="You're offline, and this page hasn't been saved on this device yet. Your investigations and the main pages of Gospel Labs still work."
-        action={
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/library">Open My Library</ButtonLink>
-            <ButtonLink href="/" variant="secondary">
-              Go to Dashboard
-            </ButtonLink>
-          </div>
-        }
-        className="mt-6 bg-surface"
-      />
-    </PageContainer>
+    <StatusPage
+      icon={WifiOff}
+      title="This page isn't available offline"
+      description="You're offline, and this page hasn't been saved on this device yet. Everything you've saved still works, along with the main pages of Gospel Labs: investigations, the Scripture Explorer, your Notebook, and your research notebooks."
+      actions={
+        <>
+          <ButtonLink href="/">Go to Home</ButtonLink>
+          <ButtonLink href={notebookHref()} variant="secondary">
+            Your Notebook
+          </ButtonLink>
+          <ButtonLink href="/library" variant="secondary">
+            My Library
+          </ButtonLink>
+        </>
+      }
+    />
   );
 }

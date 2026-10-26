@@ -2,7 +2,10 @@
  * Gospel Labs service worker.
  *
  * Caches the app shell (pages and the static files they need) so the app
- * opens and works offline. Investigations are stored in IndexedDB, not here.
+ * opens and works offline, including every guided investigation, Scripture
+ * Explorer passage, and Character of Christ attribute page. Personal study
+ * data (research notebooks, progress, Discovery Cards, the Map) is stored in
+ * IndexedDB, not here.
  *
  * Only same-origin GET requests are handled. Requests to other sites, such as
  * ChurchofJesusChrist.org, are never intercepted or cached, so external
@@ -16,8 +19,37 @@ const PREFIX = "gospel-labs-";
 const PAGES_CACHE = `${PREFIX}pages-${VERSION}`;
 const ASSETS_CACHE = `${PREFIX}assets-${VERSION}`;
 
-/** Pages that make up the app shell. Investigation pages read their id from the URL in the browser. */
-const SHELL_PAGES = ["/", "/questions", "/library", "/settings", "/investigations/new", "/investigations/view", "/offline"];
+/**
+ * Pages that make up the app shell. Pages for personal records (research
+ * notebooks, Discovery Cards, Map nodes) read their id from the query string
+ * in the browser, so one cached page serves them all.
+ */
+const SHELL_PAGES = [
+  "/",
+  "/investigate",
+  "/explore",
+  "/character",
+  "/connect",
+  "/notebook",
+  "/map",
+  "/questions",
+  "/library",
+  "/settings",
+  "/investigations/new",
+  "/investigations/view",
+  "/offline",
+];
+
+/**
+ * Content detail pages are found in their list page's links and cached too:
+ * /questions/<id>, /investigate/<id>, /explore/<id>, /character/<id>.
+ */
+const DETAIL_PAGES = [
+  { list: "/questions", prefix: "/questions/" },
+  { list: "/investigate", prefix: "/investigate/" },
+  { list: "/explore", prefix: "/explore/" },
+  { list: "/character", prefix: "/character/" },
+];
 const SHELL_FILES = ["/manifest.webmanifest", "/icon.svg", "/apple-icon.png", "/icons/icon-192.png", "/icons/icon-512.png"];
 const NETWORK_TIMEOUT_MS = 4000;
 
@@ -30,9 +62,11 @@ function staticAssetsIn(html) {
   return [...urls];
 }
 
-function questionPagesIn(html) {
+/** Links in a list page's HTML to its detail pages, e.g. href="/explore/the-prodigal-son". */
+function detailPagesIn(html, prefix) {
   const urls = new Set();
-  for (const match of html.matchAll(/href="(\/questions\/[a-z0-9-]+)"/g)) urls.add(match[1]);
+  const escaped = prefix.replace(/[.*+?^${}()|[\]\\/]/g, "\\$&");
+  for (const match of html.matchAll(new RegExp(`href="(${escaped}[a-z0-9-]+)"`, "g"))) urls.add(match[1]);
   return [...urls];
 }
 
@@ -51,10 +85,11 @@ self.addEventListener("install", (event) => {
       const [pages, assets] = await Promise.all([caches.open(PAGES_CACHE), caches.open(ASSETS_CACHE)]);
       // Best effort: anything missed here is cached the first time it's used.
       const results = await Promise.allSettled(SHELL_PAGES.map((path) => cachePage(path, pages, assets)));
-      const questionsHtml = results[SHELL_PAGES.indexOf("/questions")];
-      if (questionsHtml.status === "fulfilled") {
-        await Promise.allSettled(questionPagesIn(questionsHtml.value).map((path) => cachePage(path, pages, assets)));
-      }
+      const details = DETAIL_PAGES.flatMap(({ list, prefix }) => {
+        const listHtml = results[SHELL_PAGES.indexOf(list)];
+        return listHtml && listHtml.status === "fulfilled" ? detailPagesIn(listHtml.value, prefix) : [];
+      });
+      await Promise.allSettled([...new Set(details)].map((path) => cachePage(path, pages, assets)));
       await Promise.allSettled(SHELL_FILES.map((file) => assets.add(file)));
       await self.skipWaiting();
     })(),

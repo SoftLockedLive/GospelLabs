@@ -1,0 +1,503 @@
+{
+  "id": "charity",
+  "status": "ready",
+  "name": "Charity",
+  "summary": "“The pure love of Christ”: the love He has for all people, and the love He invites us to have for one another.",
+  "definition": {
+    "text": "Mormon taught that charity is “the pure love of Christ, and it endureth forever” (Moroni 7:47). The Guide to the Scriptures explains that it is “the love that Christ has for the children of men and that the children of men should have for one another,” and “the highest, noblest, strongest kind of love, not merely affection.” Preach My Gospel adds that charity “includes God’s eternal love for all His children.”",
+    "sourceIds": [
+      "moroni-7-44-48",
+      "gs-charity",
+      "preach-my-gospel-chapter-6"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "charity-suffereth-long",
+      "term": "Suffereth long",
+      "meaning": "Is patient with people over a long time—the quality scripture calls ‘long-suffering.’ Mormon’s description of charity begins with it (Moroni 7:45).",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ]
+    },
+    {
+      "id": "charity-envieth-not",
+      "term": "Envieth not",
+      "meaning": "Does not resent or begrudge what others have or achieve. Preach My Gospel teaches that as we pray for charity, we become “less inclined to dwell on negative feelings such as anger or envy.”",
+      "sourceIds": [
+        "moroni-7-44-48",
+        "preach-my-gospel-chapter-6"
+      ]
+    },
+    {
+      "id": "charity-puffed-up",
+      "term": "Not puffed up",
+      "meaning": "Not swollen with pride or self-importance; charity doesn’t make itself look bigger than others.",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ]
+    },
+    {
+      "id": "charity-seeketh-not-her-own",
+      "term": "Seeketh not her own",
+      "meaning": "Is not self-seeking; looks to the good of others rather than its own advantage. (‘Her’ refers to charity.)",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ]
+    },
+    {
+      "id": "charity-easily-provoked",
+      "term": "Not easily provoked",
+      "meaning": "Not quick to become angry or irritated, even when others are difficult.",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ]
+    },
+    {
+      "id": "charity-rejoiceth-in-the-truth",
+      "term": "Rejoiceth in the truth",
+      "meaning": "Finds joy in what is true and right. Mormon says charity “rejoiceth not in iniquity but rejoiceth in the truth” (Moroni 7:45), so charity is not the same as approving of everything.",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "charity-not-mere-niceness",
+      "term": "Mere niceness",
+      "title": "Charity is more than being nice",
+      "explanation": "Being pleasant and polite is good, but charity goes deeper. The Guide to the Scriptures calls it “the highest, noblest, strongest kind of love, not merely affection.” Mormon says it “rejoiceth not in iniquity but rejoiceth in the truth” (Moroni 7:45), so charity can be honest as well as kind. And Preach My Gospel teaches, “Charity, like faith, leads to action.”",
+      "sourceIds": [
+        "gs-charity",
+        "moroni-7-44-48",
+        "preach-my-gospel-chapter-6"
+      ]
+    },
+    {
+      "id": "charity-not-self-made",
+      "term": "Love we make on our own",
+      "title": "Charity is a gift, not only an effort",
+      "explanation": "Charity isn’t something we simply manufacture by trying harder. Mormon invites us to “pray unto the Father with all the energy of heart, that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son, Jesus Christ” (Moroni 7:48). Preach My Gospel teaches that “Christlike attributes are gifts from God,” and that we strengthen charity “as you serve others and give of yourself.”",
+      "sourceIds": [
+        "moroni-7-44-48",
+        "preach-my-gospel-chapter-6"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "moroni-7-44-48",
+      "note": "Mormon describes what charity does and doesn’t do, calls it “the pure love of Christ,” and invites us to pray to be filled with it."
+    },
+    {
+      "sourceId": "ether-12-33-34",
+      "note": "Moroni tells the Lord that the love He showed in laying down His life for the world is charity—and that we need it too."
+    },
+    {
+      "sourceId": "john-13-34-35",
+      "note": "The Savior’s “new commandment”: to love one another “as I have loved you.” His own love is the pattern."
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "charity-laid-down-his-life",
+      "title": "He laid down His life",
+      "sourceId": "john-15-13",
+      "note": "The Savior taught, “Greater love hath no man than this, that a man lay down his life for his friends,” and then gave His own life. Gospel Topics calls His Atonement His “crowning expression of charity.”"
+    },
+    {
+      "id": "charity-loved-them-unto-the-end",
+      "title": "He loved them unto the end",
+      "sourceId": "john-13-1",
+      "note": "On the night before His death, knowing “that his hour was come,” the Savior did not withdraw into Himself: “having loved his own which were in the world, he loved them unto the end.”"
+    },
+    {
+      "id": "charity-went-about-doing-good",
+      "title": "He went about doing good",
+      "sourceId": "acts-10-38",
+      "note": "Peter summarized the Savior’s ministry: He “went about doing good, and healing all that were oppressed of the devil.” His love showed itself in action."
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "long-suffering",
+      "relation": "relates-to",
+      "note": "Mormon’s description of charity begins “charity suffereth long” (Moroni 7:45), and Gospel Topics calls the Savior’s Atonement “the greatest act of long-suffering, kindness, and selflessness that we will ever know.”",
+      "sourceIds": [
+        "moroni-7-44-48",
+        "gospel-topics-charity"
+      ]
+    },
+    {
+      "attributeId": "compassion",
+      "relation": "relates-to",
+      "note": "Gospel Topics describes the Savior’s charity as “showing tender compassion for the poor, afflicted, and distressed.”",
+      "sourceIds": [
+        "gospel-topics-charity"
+      ]
+    },
+    {
+      "attributeId": "mercy",
+      "relation": "relates-to",
+      "note": "Gospel Topics teaches that followers of Christ “strive to love as He loves, with unfailing compassion, patience, and mercy.”",
+      "sourceIds": [
+        "gospel-topics-charity"
+      ]
+    },
+    {
+      "attributeId": "patience",
+      "relation": "relates-to",
+      "note": "Preach My Gospel teaches that as we pray for charity, “You will become more patient and try to help people when they are struggling or discouraged.”",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "vocab-match",
+      "id": "charity-vocab",
+      "prompt": "Mormon describes charity with old-fashioned phrases. Match each phrase from Moroni 7:45 with its meaning.",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ],
+      "hints": [
+        "Read Moroni 7:45 slowly and picture what each phrase would look like in a real person.",
+        "‘Puffed up’ describes something swollen with air. ‘Her own’ means charity’s own interests.",
+        "Two of the meanings describe pride and self-interest; the phrases that start with ‘not’ or ‘seeketh not’ are the opposite of those."
+      ],
+      "explanation": "Each phrase describes love that looks outward. It doesn’t resent others’ blessings (‘envieth not’), isn’t full of itself (‘not puffed up’), isn’t self-seeking (‘seeketh not her own’), isn’t quick to anger (‘not easily provoked’), and delights in what is true (‘rejoiceth in the truth’).",
+      "pairs": [
+        {
+          "id": "charity-envieth-not",
+          "term": "Envieth not",
+          "meaning": "Doesn’t resent what others have or achieve"
+        },
+        {
+          "id": "charity-puffed-up",
+          "term": "Not puffed up",
+          "meaning": "Isn’t swollen with pride or self-importance"
+        },
+        {
+          "id": "charity-seeketh-not-her-own",
+          "term": "Seeketh not her own",
+          "meaning": "Looks to the good of others rather than its own advantage"
+        },
+        {
+          "id": "charity-easily-provoked",
+          "term": "Not easily provoked",
+          "meaning": "Isn’t quick to become angry or irritated"
+        },
+        {
+          "id": "charity-rejoiceth-in-the-truth",
+          "term": "Rejoiceth in the truth",
+          "meaning": "Finds joy in what is true and right, not in wrongdoing"
+        }
+      ],
+      "extraMeanings": [
+        "Agrees with whatever anyone chooses to do",
+        "Keeps a careful record of others’ mistakes"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "sort",
+      "id": "charity-stated-or-assumed",
+      "prompt": "Sort each statement: does Moroni 7:45–48 say it, or is it an assumption these verses don’t support?",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ],
+      "hints": [
+        "Check each statement against the actual words of verses 45–48.",
+        "Watch for statements that add an idea the verses never mention, or that reverse what they say.",
+        "Verse 45 mentions iniquity and truth; verse 48 tells where this love comes from."
+      ],
+      "explanation": "Mormon teaches that charity is patient and kind, that without it we are nothing, that it is the pure love of Christ, and that the Father bestows it on followers of His Son who pray for it. The verses don’t describe charity as approving of everything, as a mere feeling of affection, or as something we produce entirely on our own.",
+      "categories": [
+        {
+          "id": "stated",
+          "label": "Moroni 7:45–48 says this"
+        },
+        {
+          "id": "assumed",
+          "label": "These verses don’t say this",
+          "description": "An assumption the verses don’t support"
+        }
+      ],
+      "items": [
+        {
+          "id": "patient-kind",
+          "text": "Charity is patient and kind.",
+          "category": "stated",
+          "why": "Verse 45: “charity suffereth long, and is kind.”"
+        },
+        {
+          "id": "approves-everything",
+          "text": "Charity means approving of whatever anyone does.",
+          "category": "assumed",
+          "why": "Verse 45 says charity “rejoiceth not in iniquity but rejoiceth in the truth.”"
+        },
+        {
+          "id": "pure-love",
+          "text": "Charity is the pure love of Christ, and it lasts forever.",
+          "category": "stated",
+          "why": "Verse 47: “charity is the pure love of Christ, and it endureth forever.”"
+        },
+        {
+          "id": "just-feeling",
+          "text": "Charity is mainly a warm feeling of affection.",
+          "category": "assumed",
+          "why": "The verses describe what charity does—bears, believes, hopes, endures. The Guide to the Scriptures calls it “not merely affection.”"
+        },
+        {
+          "id": "pray-for-it",
+          "text": "We can pray to be filled with charity.",
+          "category": "stated",
+          "why": "Verse 48: “pray unto the Father with all the energy of heart, that ye may be filled with this love.”"
+        },
+        {
+          "id": "on-our-own",
+          "text": "Charity is something we must produce entirely on our own.",
+          "category": "assumed",
+          "why": "Verse 48 says the Father “hath bestowed” this love “upon all who are true followers of his Son.”"
+        },
+        {
+          "id": "nothing-without",
+          "text": "Without charity, we are nothing.",
+          "category": "stated",
+          "why": "Verse 46: “if ye have not charity, ye are nothing.”"
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "id": "charity-how-it-comes",
+      "prompt": "In verse 48, tap the phrase that tells what we should do to receive charity, and the phrase that tells whom the Father gives it to.",
+      "sourceIds": [
+        "moroni-7-44-48"
+      ],
+      "hints": [
+        "Look for an instruction: something Mormon tells us to do.",
+        "Then look for the people on whom the Father “hath bestowed” this love."
+      ],
+      "explanation": "Mormon tells us to “pray unto the Father with all the energy of heart,” and says the Father has bestowed this love “upon all who are true followers of his Son, Jesus Christ.” Charity is both sought in prayer and received as a gift.",
+      "passage": "moroni-7-44-48",
+      "chunks": [
+        {
+          "verse": 48,
+          "text": "Wherefore, my beloved brethren,"
+        },
+        {
+          "verse": 48,
+          "text": "pray unto the Father with all the energy of heart,"
+        },
+        {
+          "verse": 48,
+          "text": "that ye may be filled with this love,"
+        },
+        {
+          "verse": 48,
+          "text": "which he hath bestowed upon all who are true followers of his Son, Jesus Christ;"
+        },
+        {
+          "verse": 48,
+          "text": "that ye may become the sons of God;"
+        },
+        {
+          "verse": 48,
+          "text": "that when he shall appear we shall be like him,"
+        },
+        {
+          "verse": 48,
+          "text": "for we shall see him as he is;"
+        },
+        {
+          "verse": 48,
+          "text": "that we may have this hope;"
+        },
+        {
+          "verse": 48,
+          "text": "that we may be purified even as he is pure."
+        },
+        {
+          "verse": 48,
+          "text": "Amen."
+        }
+      ],
+      "targets": [
+        1,
+        3
+      ]
+    }
+  ],
+  "reflection": [
+    "Which phrase in Moroni 7:45 best describes the way the Savior treats people?",
+    "Mormon says charity is bestowed on “true followers of his Son.” What might following Him have to do with receiving His love?",
+    "Who around you might need the kind of love described in Moroni 7:45?"
+  ],
+  "safety": {
+    "text": "Charity “beareth all things” and “endureth all things” (Moroni 7:45), but it never asks anyone to put up with abuse. Charity “rejoiceth not in iniquity,” and the Church teaches that “No one is expected to endure abusive behavior” and that victims “are never to blame for the harmful behavior of others.” If someone is hurting you, seeking safety and telling a trusted adult or leader is right, and it is not a failure of love. The Church’s abuse help site, linked below, shows where to turn.",
+    "sourceIds": [
+      "church-abuse-help",
+      "gospel-topics-abuse",
+      "moroni-7-44-48"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "vocabulary",
+        "note": "Meanings of the phrases from Moroni 7:45 are plain-English glosses written by Gospel Labs, not official definitions.",
+        "resolution": "Resolved: the glosses quote nothing and are shown as meanings, not as definitions from a source. The ‘Suffereth long’ gloss no longer says charity bears ‘with hardship’, so it can’t be read as putting up with mistreatment."
+      },
+      {
+        "where": "saviorExamples",
+        "note": "Acts 10:38 is Peter’s summary of the Savior’s ministry rather than a single account; Gospel Topics: Charity cites it for “went about doing good.”",
+        "resolution": "Resolved: checked 26 October 2026. Gospel Topics: Charity says He always “went about doing good,” and its note cites Acts 10:38 (with Matthew 4:23 and Mark 6:6)."
+      },
+      {
+        "where": "safety",
+        "note": "Sensitive. Moroni 7:45 says charity “beareth all things” and “endureth all things.” Read alone, a learner who is being hurt could take that to mean love requires putting up with abuse.",
+        "resolution": "Qualified: added a safety note, shown right after the definition, that quotes Moroni 7:45 and Gospel Topics: Abuse and links the Church’s abuse help site (both sources declared exactly as in forgiveness.json). Its first sentence, that charity never asks anyone to put up with abuse, is Gospel Labs’ application of Gospel Topics: Abuse to this verse. Owner: please confirm the wording."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "moroni-7-44-48",
+      "kind": "scripture",
+      "label": "Moroni 7:44–48",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p44-p48#p44",
+      "verses": [
+        {
+          "number": 44,
+          "text": "If so, his faith and hope is vain, for none is acceptable before God, save the meek and lowly in heart; and if a man be meek and lowly in heart, and confesses by the power of the Holy Ghost that Jesus is the Christ, he must needs have charity; for if he have not charity he is nothing; wherefore he must needs have charity."
+        },
+        {
+          "number": 45,
+          "text": "And charity suffereth long, and is kind, and envieth not, and is not puffed up, seeketh not her own, is not easily provoked, thinketh no evil, and rejoiceth not in iniquity but rejoiceth in the truth, beareth all things, believeth all things, hopeth all things, endureth all things."
+        },
+        {
+          "number": 46,
+          "text": "Wherefore, my beloved brethren, if ye have not charity, ye are nothing, for charity never faileth. Wherefore, cleave unto charity, which is the greatest of all, for all things must fail—"
+        },
+        {
+          "number": 47,
+          "text": "But charity is the pure love of Christ, and it endureth forever; and whoso is found possessed of it at the last day, it shall be well with him."
+        },
+        {
+          "number": 48,
+          "text": "Wherefore, my beloved brethren, pray unto the Father with all the energy of heart, that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son, Jesus Christ; that ye may become the sons of God; that when he shall appear we shall be like him, for we shall see him as he is; that we may have this hope; that we may be purified even as he is pure. Amen."
+        }
+      ]
+    },
+    {
+      "id": "gs-charity",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Charity",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/charity?lang=eng"
+    },
+    {
+      "id": "preach-my-gospel-chapter-6",
+      "kind": "official",
+      "label": "Preach My Gospel, chapter 6",
+      "title": "Chapter 6: Seek Christlike Attributes",
+      "publication": "Preach My Gospel: A Guide to Sharing the Gospel of Jesus Christ (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/14-chapter-6?lang=eng",
+      "excerpt": "A Christlike attribute is a quality or trait of the Savior’s nature and character."
+    },
+    {
+      "id": "ether-12-33-34",
+      "kind": "scripture",
+      "label": "Ether 12:33–34",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p33-p34#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "And again, I remember that thou hast said that thou hast loved the world, even unto the laying down of thy life for the world, that thou mightest take it again to prepare a place for the children of men."
+        },
+        {
+          "number": 34,
+          "text": "And now I know that this love which thou hast had for the children of men is charity; wherefore, except men shall have charity they cannot inherit that place which thou hast prepared in the mansions of thy Father."
+        }
+      ]
+    },
+    {
+      "id": "john-13-34-35",
+      "kind": "scripture",
+      "label": "John 13:34–35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p34-p35#p34",
+      "verses": [
+        {
+          "number": 34,
+          "text": "A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another."
+        },
+        {
+          "number": 35,
+          "text": "By this shall all men know that ye are my disciples, if ye have love one to another."
+        }
+      ]
+    },
+    {
+      "id": "john-15-13",
+      "kind": "scripture",
+      "label": "John 15:13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p13#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "Greater love hath no man than this, that a man lay down his life for his friends."
+        }
+      ]
+    },
+    {
+      "id": "john-13-1",
+      "kind": "scripture",
+      "label": "John 13:1",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p1#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Now before the feast of the passover, when Jesus knew that his hour was come that he should depart out of this world unto the Father, having loved his own which were in the world, he loved them unto the end."
+        }
+      ]
+    },
+    {
+      "id": "acts-10-38",
+      "kind": "scripture",
+      "label": "Acts 10:38",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/10?lang=eng&id=p38#p38",
+      "verses": [
+        {
+          "number": 38,
+          "text": "How God anointed Jesus of Nazareth with the Holy Ghost and with power: who went about doing good, and healing all that were oppressed of the devil; for God was with him."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-charity",
+      "kind": "official",
+      "label": "Gospel Topics: Charity",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/charity?lang=eng",
+      "excerpt": "Charity is the pure love of Christ. It is the love that Christ has for the children of men and that the children of men should have for one another. It is the highest, noblest, and strongest kind of love and the most joyous to the soul."
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "church-abuse-help",
+      "kind": "official",
+      "label": "Abuse help (ChurchofJesusChrist.org)",
+      "url": "https://abuse.churchofjesuschrist.org/",
+      "summary": "The Church’s official help for people affected by abuse and for those who want to help them, including where to turn for safety and support."
+    }
+  ]
+}

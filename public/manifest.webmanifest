@@ -1,7 +1,7 @@
 {
   "name": "Gospel Labs",
   "short_name": "Gospel Labs",
-  "description": "Question. Study. Discover. A private research notebook for investigating gospel questions with scriptures and Church resources.",
+  "description": "Search the scriptures and come to know Jesus Christ. Guided, interactive investigations, a Scripture Explorer, and a private notebook of your discoveries, all on your own device.",
   "id": "/",
   "start_url": "/",
   "scope": "/",
@@ -16,7 +16,33 @@
     { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "New investigation", "url": "/investigations/new" },
-    { "name": "My Library", "url": "/library" }
+    {
+      "name": "Investigate",
+      "short_name": "Investigate",
+      "description": "Guided investigations of gospel questions",
+      "url": "/investigate",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Connect with Christ",
+      "short_name": "Connect",
+      "description": "A quiet five minutes with the Savior",
+      "url": "/connect",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Notebook",
+      "short_name": "Notebook",
+      "description": "Your Discovery Cards",
+      "url": "/notebook",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "My Library",
+      "short_name": "Library",
+      "description": "Your research notebooks",
+      "url": "/library",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
   ]
 }

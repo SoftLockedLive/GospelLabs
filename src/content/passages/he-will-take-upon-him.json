@@ -1,0 +1,574 @@
+{
+  "id": "he-will-take-upon-him",
+  "status": "ready",
+  "title": "He will take upon Him",
+  "sourceId": "alma-7-11-13",
+  "context": {
+    "setting": "Alma had been the chief judge, but the judgment-seat had been given to another, so he could come and preach (Alma 7:1–2). These words were delivered to the people in the city of Gideon, about 83 B.C. Just before this passage Alma prophesied that the Son of God would be born of Mary (verse 10), so he speaks of the Savior's mortal life in the future tense.",
+    "speaker": "Alma, the son of Alma",
+    "audience": "The people in the city of Gideon"
+  },
+  "themes": [
+    {
+      "conceptId": "atonement",
+      "note": "Alma lists what the Son of God would take upon Him (pains, afflictions, temptations, sicknesses, death, infirmities, and sins) and why.",
+      "verses": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "conceptId": "succor",
+      "note": "Alma gives a purpose that reaches beyond sin: He would take upon Him His people's infirmities so that He would know how to succor them.",
+      "verses": [
+        12
+      ]
+    },
+    {
+      "conceptId": "adversity",
+      "note": "Because Alma names pains, afflictions, sicknesses, and infirmities alongside sins, Gospel Labs suggests these verses speak to the hardships of mortal life as well as to sin.",
+      "verses": [
+        11,
+        12
+      ]
+    },
+    {
+      "conceptId": "resurrection",
+      "note": "He would take upon Him death “that he may loose the bands of death which bind his people.”",
+      "verses": [
+        12
+      ]
+    },
+    {
+      "conceptId": "forgiveness-of-sins",
+      "note": "He would take upon Him the sins of His people, “that he might blot out their transgressions.”",
+      "verses": [
+        13
+      ]
+    },
+    {
+      "conceptId": "mercy",
+      "note": "Alma says He would take upon Him their infirmities “that his bowels may be filled with mercy.”",
+      "verses": [
+        12
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "every-kind",
+      "verse": 11,
+      "phrase": "suffering pains and afflictions and temptations of every kind",
+      "meaning": "Alma names three kinds of suffering and adds ‘of every kind.’ Hebrews makes a similar point: He “was in all points tempted like as we are, yet without sin.”",
+      "sourceIds": [
+        "hebrews-4-15-16"
+      ]
+    },
+    {
+      "id": "word-fulfilled",
+      "verse": 11,
+      "phrase": "that the word might be fulfilled",
+      "meaning": "Alma points back to an earlier prophecy (‘the word … which saith’). The footnotes in this verse point to Isaiah 53:3–5, which says, “Surely he hath borne our griefs, and carried our sorrows.”",
+      "sourceIds": [
+        "isaiah-53-3-5"
+      ]
+    },
+    {
+      "id": "bands-of-death",
+      "verse": 12,
+      "phrase": "loose the bands of death",
+      "meaning": "To ‘loose’ is to untie or set free. Death is pictured as bands that bind; the Guide to the Scriptures explains that every person will be resurrected “because Jesus Christ overcame death.”",
+      "sourceIds": [
+        "gs-resurrection"
+      ]
+    },
+    {
+      "id": "bowels-of-mercy",
+      "verse": 12,
+      "phrase": "his bowels may be filled with mercy",
+      "meaning": "Many readers understand ‘bowels’ here as the inner self, the seat of deep feeling, and other scriptures support that reading. The resurrected Savior uses the same words beside compassion: “I have compassion upon you; my bowels are filled with mercy.” Where Paul speaks of “the bowels of Jesus Christ” (Philippians 1:8), the Church's edition footnotes ‘bowels’ with the Greek meaning: affections, compassions.",
+      "sourceIds": [
+        "3-nephi-17-6-7",
+        "philippians-1-8",
+        "gs-compassion"
+      ]
+    },
+    {
+      "id": "according-to-the-flesh",
+      "verse": 12,
+      "phrase": "that he may know according to the flesh",
+      "meaning": "Alma says He would ‘know’ through His own mortal experience, ‘according to the flesh.’ Hebrews 2:17 says “in all things it behoved him to be made like unto his brethren.”",
+      "sourceIds": [
+        "hebrews-2-17-18"
+      ]
+    },
+    {
+      "id": "succor",
+      "verse": 12,
+      "phrase": "how to succor his people according to their infirmities",
+      "meaning": "To ‘succor’ is to run to help or to give relief. ‘Infirmities’ are weaknesses. The Lord describes Himself as the one “who knoweth the weakness of man and how to succor them who are tempted.”",
+      "sourceIds": [
+        "dc-62-1",
+        "hebrews-2-17-18"
+      ]
+    },
+    {
+      "id": "blot-out",
+      "verse": 13,
+      "phrase": "blot out their transgressions",
+      "meaning": "To ‘blot out’ is to wipe away, as writing is erased. Isaiah 53:5 says that “he was wounded for our transgressions.”",
+      "sourceIds": [
+        "isaiah-53-3-5"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "isaiah-53-3-5",
+      "relation": "supports",
+      "note": "Isaiah prophesied of “a man of sorrows, and acquainted with grief” who “hath borne our griefs, and carried our sorrows.” The footnotes in Alma 7:11 point here."
+    },
+    {
+      "sourceId": "hebrews-2-17-18",
+      "relation": "supports",
+      "note": "Hebrews gives the same reason Alma does: “in that he himself hath suffered being tempted, he is able to succour them that are tempted.”"
+    },
+    {
+      "sourceId": "hebrews-4-15-16",
+      "relation": "relates-to",
+      "note": "Because He can be “touched with the feeling of our infirmities,” Hebrews invites us to “come boldly unto the throne of grace.”"
+    },
+    {
+      "sourceId": "dc-62-1",
+      "relation": "supports",
+      "note": "In a latter-day revelation the Lord calls Himself the one “who knoweth the weakness of man and how to succor them who are tempted.”"
+    },
+    {
+      "sourceId": "3-nephi-17-6-7",
+      "relation": "illustrates",
+      "note": "The resurrected Savior shows the mercy Alma foretold: “my bowels are filled with mercy,” He says, and He offers to heal every sick and afflicted person brought to Him."
+    }
+  ],
+  "questions": [
+    {
+      "id": "who-and-when",
+      "question": "Who was Alma speaking to, and when?",
+      "answer": "The chapter introduction calls this chapter “The words of Alma which he delivered to the people in Gideon.” The chapter summary dates it about 83 B.C., so Alma is prophesying of the Savior's mortal life before it happened. That is why he uses the future tense: “he shall go forth,” “he will take upon him.”",
+      "sourceIds": [
+        "alma-7",
+        "alma-7-11-13"
+      ]
+    },
+    {
+      "id": "how",
+      "question": "Does Alma explain how the Savior could take all of this upon Him?",
+      "answer": "No. Alma states what He would take upon Him and why: to loose the bands of death, to know how to succor His people, and to blot out their transgressions. He doesn't describe how it would be done; he says only that it would be “according to the power of his deliverance.” Where scripture is silent, it's honest to say so.",
+      "sourceIds": [
+        "alma-7-11-13"
+      ]
+    },
+    {
+      "id": "spirit-knoweth",
+      "question": "If “the Spirit knoweth all things,” why would the Son of God need to suffer “according to the flesh”?",
+      "answer": "Verse 13 holds both truths together: “the Spirit knoweth all things; nevertheless the Son of God suffereth according to the flesh.” Verse 12 gives a purpose: “that he may know according to the flesh how to succor his people.” Hebrews 2:17–18 connects His being “made like unto his brethren” with His ability to help. The verses link His mortal experience with His help; they don't explain more than that.",
+      "sourceIds": [
+        "alma-7-11-13",
+        "hebrews-2-17-18"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "find-the-purposes",
+      "prompt": "Alma often uses ‘that’ to give a reason. In verses 12–13, tap every phrase that tells why the Son of God would take these things upon Him.",
+      "sourceIds": [
+        "alma-7-11-13"
+      ],
+      "hints": [
+        "Look for phrases that begin with ‘that.’",
+        "There are three in verse 12 and two in verse 13.",
+        "Each one begins with ‘that he may,’ ‘that his,’ or ‘that he might.’"
+      ],
+      "explanation": "Verse 12 gives three purposes: “that he may loose the bands of death,” “that his bowels may be filled with mercy,” and “that he may know according to the flesh how to succor his people.” Verse 13 adds two: “that he might take upon him the sins of his people” and “that he might blot out their transgressions.” Every purpose is about His people.",
+      "passage": "alma-7-11-13",
+      "chunks": [
+        {
+          "verse": 12,
+          "text": "And he will take upon him death,"
+        },
+        {
+          "verse": 12,
+          "text": "that he may loose the bands of death which bind his people;"
+        },
+        {
+          "verse": 12,
+          "text": "and he will take upon him their infirmities,"
+        },
+        {
+          "verse": 12,
+          "text": "that his bowels may be filled with mercy, according to the flesh,"
+        },
+        {
+          "verse": 12,
+          "text": "that he may know according to the flesh how to succor his people according to their infirmities."
+        },
+        {
+          "verse": 13,
+          "text": "Now the Spirit knoweth all things;"
+        },
+        {
+          "verse": 13,
+          "text": "nevertheless the Son of God suffereth according to the flesh"
+        },
+        {
+          "verse": 13,
+          "text": "that he might take upon him the sins of his people,"
+        },
+        {
+          "verse": 13,
+          "text": "that he might blot out their transgressions according to the power of his deliverance;"
+        },
+        {
+          "verse": 13,
+          "text": "and now behold, this is the testimony which is in me."
+        }
+      ],
+      "targets": [
+        1,
+        3,
+        4,
+        7,
+        8
+      ],
+      "minTargets": 4
+    },
+    {
+      "type": "sort",
+      "id": "stated-or-not",
+      "prompt": "Sort each statement: does Alma say it here, do these verses leave it unexplained, or do they say otherwise?",
+      "sourceIds": [
+        "alma-7-11-13"
+      ],
+      "hints": [
+        "Check each statement against the exact words of verses 11–13.",
+        "Two statements go against the verses: check what He takes upon Him, and the tense Alma uses.",
+        "Only one statement asks for something Alma never describes: how it was done."
+      ],
+      "explanation": "Alma states what the Savior would take upon Him (pains, afflictions, temptations, sicknesses, death, infirmities, and sins) and why (to loose the bands of death, to be filled with mercy, to know how to succor, and to blot out transgressions). He speaks of it as future, and he never explains how it would be done.",
+      "categories": [
+        {
+          "id": "stated",
+          "label": "Alma says this"
+        },
+        {
+          "id": "unexplained",
+          "label": "These verses don't explain this"
+        },
+        {
+          "id": "otherwise",
+          "label": "These verses say otherwise"
+        }
+      ],
+      "items": [
+        {
+          "id": "temptations",
+          "text": "The Savior would suffer temptations of every kind.",
+          "category": "stated",
+          "why": "Verse 11: “suffering pains and afflictions and temptations of every kind.”"
+        },
+        {
+          "id": "sicknesses",
+          "text": "He would take upon Him His people's sicknesses as well as their sins.",
+          "category": "stated",
+          "why": "Verse 11 names “the pains and the sicknesses of his people,” and verse 13 names “the sins of his people.”"
+        },
+        {
+          "id": "know-how",
+          "text": "One purpose of His suffering was to know how to help His people.",
+          "category": "stated",
+          "why": "Verse 12: “that he may know according to the flesh how to succor his people according to their infirmities.”"
+        },
+        {
+          "id": "exactly-how",
+          "text": "Alma explains exactly how the Savior took these things upon Himself.",
+          "category": "unexplained",
+          "why": "Alma tells what and why, not how. Verse 13 says only that it is “according to the power of his deliverance.”"
+        },
+        {
+          "id": "only-sins",
+          "text": "The Savior suffered only for people's sins.",
+          "category": "otherwise",
+          "why": "Verse 11 includes pains, afflictions, temptations, and sicknesses; verse 12 adds death and infirmities."
+        },
+        {
+          "id": "past-tense",
+          "text": "Alma was describing something that had already happened.",
+          "category": "otherwise",
+          "why": "Alma speaks of the future: “he shall go forth” and “he will take upon him.”"
+        }
+      ]
+    },
+    {
+      "type": "scripture-connect",
+      "id": "knows-how-to-help",
+      "prompt": "Read Alma 7:12, Hebrews 2:17–18, and Doctrine and Covenants 62:1 side by side. What do they say together?",
+      "sourceIds": [
+        "alma-7-11-13",
+        "hebrews-2-17-18",
+        "dc-62-1"
+      ],
+      "hints": [
+        "Look for the word ‘succor’ in each passage (Hebrews spells it ‘succour’).",
+        "Each passage links something He experienced or knows with something He is able to do for us."
+      ],
+      "explanation": "All three tie what the Savior experienced or knows to His help: He would “know according to the flesh how to succor his people,” He “is able to succour them that are tempted,” and He “knoweth the weakness of man and how to succor them who are tempted.”",
+      "passages": [
+        "alma-7-11-13",
+        "hebrews-2-17-18",
+        "dc-62-1"
+      ],
+      "questions": [
+        {
+          "id": "shared-idea",
+          "prompt": "What idea do all three passages share?",
+          "options": [
+            {
+              "id": "experience-help",
+              "text": "What He experienced and knows is connected to His ability to help those who suffer or are tempted."
+            },
+            {
+              "id": "never-tempted",
+              "text": "Only someone who has never been tempted can help others.",
+              "feedback": "Hebrews 2:18 says He “suffered being tempted.” What does it say that makes Him able to do?"
+            },
+            {
+              "id": "after-overcoming",
+              "text": "He helps people only after they have overcome their weaknesses.",
+              "feedback": "Doctrine and Covenants 62:1 says He knows “the weakness of man.” Does any passage set that condition?"
+            },
+            {
+              "id": "resurrection-only",
+              "text": "These passages are mainly about the Resurrection.",
+              "feedback": "Alma mentions death, but Hebrews 2:18 and Doctrine and Covenants 62:1 focus on something else. Look for ‘succor.’"
+            }
+          ],
+          "correct": [
+            "experience-help"
+          ]
+        },
+        {
+          "id": "matching-phrase",
+          "prompt": "Which phrase from Alma 7:12 is closest to “he is able to succour them that are tempted” (Hebrews 2:18)?",
+          "options": [
+            {
+              "id": "bands",
+              "text": "“that he may loose the bands of death”",
+              "feedback": "This phrase is about death. Look for the phrase about helping."
+            },
+            {
+              "id": "know-succor",
+              "text": "“that he may know according to the flesh how to succor his people”"
+            },
+            {
+              "id": "take-death",
+              "text": "“he will take upon him death”",
+              "feedback": "This tells what He takes upon Him, not what it enables Him to do."
+            }
+          ],
+          "correct": [
+            "know-succor"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:alma-7-11-13",
+      "to": "concept:atonement",
+      "relation": "teaches",
+      "sourceIds": [
+        "alma-7-11-13"
+      ],
+      "note": "Alma describes what the Son of God would take upon Him and why."
+    },
+    {
+      "from": "scripture:alma-7-11-13",
+      "to": "vocabulary:succor",
+      "relation": "teaches",
+      "sourceIds": [
+        "alma-7-11-13"
+      ],
+      "note": "He would take upon Him His people's infirmities so that He would know how to succor them."
+    },
+    {
+      "from": "scripture:hebrews-2-17-18",
+      "to": "vocabulary:succor",
+      "relation": "teaches",
+      "sourceIds": [
+        "hebrews-2-17-18"
+      ],
+      "note": "Because He suffered being tempted, He is able to succor those who are tempted."
+    }
+  ],
+  "sources": [
+    {
+      "id": "alma-7-11-13",
+      "kind": "scripture",
+      "label": "Alma 7:11–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "And he shall go forth, suffering pains and afflictions and temptations of every kind; and this that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his people."
+        },
+        {
+          "number": 12,
+          "text": "And he will take upon him death, that he may loose the bands of death which bind his people; and he will take upon him their infirmities, that his bowels may be filled with mercy, according to the flesh, that he may know according to the flesh how to succor his people according to their infirmities."
+        },
+        {
+          "number": 13,
+          "text": "Now the Spirit knoweth all things; nevertheless the Son of God suffereth according to the flesh that he might take upon him the sins of his people, that he might blot out their transgressions according to the power of his deliverance; and now behold, this is the testimony which is in me."
+        }
+      ]
+    },
+    {
+      "id": "alma-7",
+      "kind": "scripture",
+      "label": "Alma 7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+      "summary": "The whole chapter, with its introduction and chapter summary."
+    },
+    {
+      "id": "isaiah-53-3-5",
+      "kind": "scripture",
+      "label": "Isaiah 53:3–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p3-p5#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "He is despised and rejected of men; a man of sorrows, and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not."
+        },
+        {
+          "number": 4,
+          "text": "¶ Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
+        },
+        {
+          "number": 5,
+          "text": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-2-17-18",
+      "kind": "scripture",
+      "label": "Hebrews 2:17–18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/2?lang=eng&id=p17-p18#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people."
+        },
+        {
+          "number": 18,
+          "text": "For in that he himself hath suffered being tempted, he is able to succour them that are tempted."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-4-15-16",
+      "kind": "scripture",
+      "label": "Hebrews 4:15–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/4?lang=eng&id=p15-p16#p15",
+      "verses": [
+        {
+          "number": 15,
+          "text": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin."
+        },
+        {
+          "number": 16,
+          "text": "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need."
+        }
+      ]
+    },
+    {
+      "id": "dc-62-1",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 62:1",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/62?lang=eng&id=p1#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "Behold, and hearken, O ye elders of my church, saith the Lord your God, even Jesus Christ, your advocate, who knoweth the weakness of man and how to succor them who are tempted."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-6-7",
+      "kind": "scripture",
+      "label": "3 Nephi 17:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And he said unto them: Behold, my bowels are filled with compassion towards you."
+        },
+        {
+          "number": 7,
+          "text": "Have ye any that are sick among you? Bring them hither. Have ye any that are lame, or blind, or halt, or maimed, or leprous, or that are withered, or that are deaf, or that are afflicted in any manner? Bring them hither and I will heal them, for I have compassion upon you; my bowels are filled with mercy."
+        }
+      ]
+    },
+    {
+      "id": "philippians-1-8",
+      "kind": "scripture",
+      "label": "Philippians 1:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/1?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "For God is my record, how greatly I long after you all in the bowels of Jesus Christ."
+        }
+      ]
+    },
+    {
+      "id": "gs-resurrection",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Resurrection",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/resurrection?lang=eng"
+    },
+    {
+      "id": "gs-compassion",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Compassion",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/compassion?lang=eng"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "context",
+        "note": "Setting (Gideon, about 83 B.C.) comes from the chapter introduction and summary; Alma's earlier role as chief judge from Alma 7:1–2 (and Alma 4). The speaker is given as ‘Alma, the son of Alma’ after the Guide to the Scriptures entry name.",
+        "resolution": "Resolved: checked 26 October 2026. The chapter introduction reads ‘The words of Alma which he delivered to the people in Gideon’, the summary ends ‘About 83 B.C.’, Alma 7:1–2 says he had been ‘wholly confined to the judgment-seat’ until it was ‘given to another’ (footnoted to Mosiah 29:42 and Alma 4), and the Guide to the Scriptures entry is titled ‘Alma, Son of Alma’."
+      },
+      {
+        "where": "keyPhrases.bowels-of-mercy",
+        "note": "The gloss of ‘bowels’ as the seat of deep feeling relies on parallel usage (3 Nephi 17:6–7) and the Guide to the Scriptures listing of 3 Nephi 17:6 under Compassion. Please confirm the wording.",
+        "resolution": "Qualified: the meaning now says this is how many readers understand ‘bowels’ and gives the evidence: the Savior's parallel words in 3 Nephi 17:7, and the Church edition's footnote on ‘bowels’ in Philippians 1:8 (checked 26 October 2026: ‘GR affections, compassions’), now declared as a source. The Guide to the Scriptures does list 3 Nephi 17:6 under Compassion."
+      },
+      {
+        "where": "themes.adversity",
+        "note": "Applying the passage to mortal hardship beyond sin follows verse 11's list, but the framing is Gospel Labs'.",
+        "resolution": "Qualified: the theme note now says Gospel Labs suggests the application, and grounds it in the words Alma uses (pains, afflictions, sicknesses, and infirmities alongside sins)."
+      },
+      {
+        "where": "themes.mercy",
+        "note": "Uses the Character of Christ attribute ‘mercy’ as a theme, so it links to that page and Map node.",
+        "resolution": "Resolved: the attribute exists (src/content/attributes/mercy.json), and the theme note quotes verse 12."
+      }
+    ]
+  }
+}

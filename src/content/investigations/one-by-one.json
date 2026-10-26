@@ -1,0 +1,2305 @@
+{
+  "id": "one-by-one",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "One by One",
+  "question": "How could Jesus Christ suffer for each of us personally?",
+  "hook": "Billions of people have lived. Scripture says His suffering reached every one of them, and tells us why. How it could work is a harder question.",
+  "theme": "Atonement of Jesus Christ",
+  "tags": [
+    "atonement",
+    "infinite-atonement",
+    "succor",
+    "jesus-christ"
+  ],
+  "primaryQuestion": {
+    "id": "christ",
+    "note": "Beneath the question of how lies the primary question: is Jesus Christ the Son of God, the Savior of the world? In a 2019 BYU devotional, Elder Lawrence E. Corbridge named it among the primary questions and taught that when those are answered, secondary questions are answered too or matter less. Gospel Labs suggests that exactly how the Atonement reaches each person is one such secondary question."
+  },
+  "commonQuestions": [
+    "How could one Savior suffer for every person who has ever lived?",
+    "Does the Atonement really reach me as an individual?",
+    "How can God know each of His children personally?"
+  ],
+  "estimatedMinutes": {
+    "quick": 9,
+    "deep": 32
+  },
+  "intro": "Many people wonder how one Savior could suffer for every person who has ever lived. It's a question about scale, and about whether a Savior of the whole world can really be your Savior. This investigation separates three questions hidden inside it: Did His suffering reach each person? Why did He take it upon Himself? And how could it work? You'll find that the scriptures studied here answer the first two clearly, and are honest that they don't explain the third.",
+  "sources": [
+    {
+      "id": "2-nephi-9-20-22",
+      "kind": "scripture",
+      "label": "2 Nephi 9:20–22",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/9?lang=eng&id=p20-p22#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "O how great the holiness of our God! For he knoweth all things, and there is not anything save he knows it."
+        },
+        {
+          "number": 21,
+          "text": "And he cometh into the world that he may save all men if they will hearken unto his voice; for behold, he suffereth the pains of all men, yea, the pains of every living creature, both men, women, and children, who belong to the family of Adam."
+        },
+        {
+          "number": 22,
+          "text": "And he suffereth this that the resurrection might pass upon all men, that all might stand before him at the great and judgment day."
+        }
+      ]
+    },
+    {
+      "id": "dc-18-10-13",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 18:10–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng&id=p10-p13#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "Remember the worth of souls is great in the sight of God;"
+        },
+        {
+          "number": 11,
+          "text": "For, behold, the Lord your Redeemer suffered death in the flesh; wherefore he suffered the pain of all men, that all men might repent and come unto him."
+        },
+        {
+          "number": 12,
+          "text": "And he hath risen again from the dead, that he might bring all men unto him, on conditions of repentance."
+        },
+        {
+          "number": 13,
+          "text": "And how great is his joy in the soul that repenteth!"
+        }
+      ]
+    },
+    {
+      "id": "dc-19-16-19",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 19:16–19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p16-p19#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "For behold, I, God, have suffered these things for all, that they might not suffer if they would repent;"
+        },
+        {
+          "number": 17,
+          "text": "But if they would not repent they must suffer even as I;"
+        },
+        {
+          "number": 18,
+          "text": "Which suffering caused myself, even God, the greatest of all, to tremble because of pain, and to bleed at every pore, and to suffer both body and spirit—and would that I might not drink the bitter cup, and shrink—"
+        },
+        {
+          "number": 19,
+          "text": "Nevertheless, glory be to the Father, and I partook and finished my preparations unto the children of men."
+        }
+      ]
+    },
+    {
+      "id": "alma-7-11-13",
+      "kind": "scripture",
+      "label": "Alma 7:11–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "And he shall go forth, suffering pains and afflictions and temptations of every kind; and this that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his people."
+        },
+        {
+          "number": 12,
+          "text": "And he will take upon him death, that he may loose the bands of death which bind his people; and he will take upon him their infirmities, that his bowels may be filled with mercy, according to the flesh, that he may know according to the flesh how to succor his people according to their infirmities."
+        },
+        {
+          "number": 13,
+          "text": "Now the Spirit knoweth all things; nevertheless the Son of God suffereth according to the flesh that he might take upon him the sins of his people, that he might blot out their transgressions according to the power of his deliverance; and now behold, this is the testimony which is in me."
+        }
+      ]
+    },
+    {
+      "id": "isaiah-53-3-5",
+      "kind": "scripture",
+      "label": "Isaiah 53:3–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p3-p5#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "He is despised and rejected of men; a man of sorrows, and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not."
+        },
+        {
+          "number": 4,
+          "text": "¶ Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
+        },
+        {
+          "number": 5,
+          "text": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-2-17-18",
+      "kind": "scripture",
+      "label": "Hebrews 2:17–18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/2?lang=eng&id=p17-p18#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people."
+        },
+        {
+          "number": 18,
+          "text": "For in that he himself hath suffered being tempted, he is able to succour them that are tempted."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-4-14-16",
+      "kind": "scripture",
+      "label": "Hebrews 4:14–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/4?lang=eng&id=p14-p16#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God, let us hold fast our profession."
+        },
+        {
+          "number": 15,
+          "text": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin."
+        },
+        {
+          "number": 16,
+          "text": "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need."
+        }
+      ]
+    },
+    {
+      "id": "luke-22-41-44",
+      "kind": "scripture",
+      "label": "Luke 22:41–44",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p41-p44#p41",
+      "verses": [
+        {
+          "number": 41,
+          "text": "And he was withdrawn from them about a stone’s cast, and kneeled down, and prayed,"
+        },
+        {
+          "number": 42,
+          "text": "Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done."
+        },
+        {
+          "number": 43,
+          "text": "And there appeared an angel unto him from heaven, strengthening him."
+        },
+        {
+          "number": 44,
+          "text": "And being in an agony he prayed more earnestly: and his sweat was as it were great drops of blood falling down to the ground."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-15-10-11",
+      "kind": "scripture",
+      "label": "Mosiah 15:10–11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/15?lang=eng&id=p10-p11#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "And now I say unto you, who shall declare his generation? Behold, I say unto you, that when his soul has been made an offering for sin he shall see his seed. And now what say ye? And who shall be his seed?"
+        },
+        {
+          "number": 11,
+          "text": "Behold I say unto you, that whosoever has heard the words of the prophets, yea, all the holy prophets who have prophesied concerning the coming of the Lord—I say unto you, that all those who have hearkened unto their words, and believed that the Lord would redeem his people, and have looked forward to that day for a remission of their sins, I say unto you, that these are his seed, or they are the heirs of the kingdom of God."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-11-14-17",
+      "kind": "scripture",
+      "label": "3 Nephi 11:14–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14-p17#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "Arise and come forth unto me, that ye may thrust your hands into my side, and also that ye may feel the prints of the nails in my hands and in my feet, that ye may know that I am the God of Israel, and the God of the whole earth, and have been slain for the sins of the world."
+        },
+        {
+          "number": 15,
+          "text": "And it came to pass that the multitude went forth, and thrust their hands into his side, and did feel the prints of the nails in his hands and in his feet; and this they did do, going forth one by one until they had all gone forth, and did see with their eyes and did feel with their hands, and did know of a surety and did bear record, that it was he, of whom it was written by the prophets, that should come."
+        },
+        {
+          "number": 16,
+          "text": "And when they had all gone forth and had witnessed for themselves, they did cry out with one accord, saying:"
+        },
+        {
+          "number": 17,
+          "text": "Hosanna! Blessed be the name of the Most High God! And they did fall down at the feet of Jesus, and did worship him."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-6-9",
+      "kind": "scripture",
+      "label": "3 Nephi 17:6–9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p6-p9#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And he said unto them: Behold, my bowels are filled with compassion towards you."
+        },
+        {
+          "number": 7,
+          "text": "Have ye any that are sick among you? Bring them hither. Have ye any that are lame, or blind, or halt, or maimed, or leprous, or that are withered, or that are deaf, or that are afflicted in any manner? Bring them hither and I will heal them, for I have compassion upon you; my bowels are filled with mercy."
+        },
+        {
+          "number": 8,
+          "text": "For I perceive that ye desire that I should show unto you what I have done unto your brethren at Jerusalem, for I see that your faith is sufficient that I should heal you."
+        },
+        {
+          "number": 9,
+          "text": "And it came to pass that when he had thus spoken, all the multitude, with one accord, did go forth with their sick and their afflicted, and their lame, and with their blind, and with their dumb, and with all them that were afflicted in any manner; and he did heal them every one as they were brought forth unto him."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-21-25",
+      "kind": "scripture",
+      "label": "3 Nephi 17:21–25",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p21-p25#p21",
+      "verses": [
+        {
+          "number": 21,
+          "text": "And when he had said these words, he wept, and the multitude bare record of it, and he took their little children, one by one, and blessed them, and prayed unto the Father for them."
+        },
+        {
+          "number": 22,
+          "text": "And when he had done this he wept again;"
+        },
+        {
+          "number": 23,
+          "text": "And he spake unto the multitude, and said unto them: Behold your little ones."
+        },
+        {
+          "number": 24,
+          "text": "And as they looked to behold they cast their eyes towards heaven, and they saw the heavens open, and they saw angels descending out of heaven as it were in the midst of fire; and they came down and encircled those little ones about, and they were encircled about with fire; and the angels did minister unto them."
+        },
+        {
+          "number": 25,
+          "text": "And the multitude did see and hear and bear record; and they know that their record is true for they all of them did see and hear, every man for himself; and they were in number about two thousand and five hundred souls; and they did consist of men, women, and children."
+        }
+      ]
+    },
+    {
+      "id": "john-10-14-16",
+      "kind": "scripture",
+      "label": "John 10:14–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p14-p16#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "I am the good shepherd, and know my sheep, and am known of mine."
+        },
+        {
+          "number": 15,
+          "text": "As the Father knoweth me, even so know I the Father: and I lay down my life for the sheep."
+        },
+        {
+          "number": 16,
+          "text": "And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd."
+        }
+      ]
+    },
+    {
+      "id": "luke-15-4-7",
+      "kind": "scripture",
+      "label": "Luke 15:4–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p4-p7#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost, until he find it?"
+        },
+        {
+          "number": 5,
+          "text": "And when he hath found it, he layeth it on his shoulders, rejoicing."
+        },
+        {
+          "number": 6,
+          "text": "And when he cometh home, he calleth together his friends and neighbours, saying unto them, Rejoice with me; for I have found my sheep which was lost."
+        },
+        {
+          "number": 7,
+          "text": "I say unto you, that likewise joy shall be in heaven over one sinner that repenteth, more than over ninety and nine just persons, which need no repentance."
+        }
+      ]
+    },
+    {
+      "id": "moses-1-33-35",
+      "kind": "scripture",
+      "label": "Moses 1:33–35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p33-p35#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "And worlds without number have I created; and I also created them for mine own purpose; and by the Son I created them, which is mine Only Begotten."
+        },
+        {
+          "number": 34,
+          "text": "And the first man of all men have I called Adam, which is many."
+        },
+        {
+          "number": 35,
+          "text": "But only an account of this earth, and the inhabitants thereof, give I unto you. For behold, there are many worlds that have passed away by the word of my power. And there are many that now stand, and innumerable are they unto man; but all things are numbered unto me, for they are mine and I know them."
+        }
+      ]
+    },
+    {
+      "id": "luke-12-6-7",
+      "kind": "scripture",
+      "label": "Luke 12:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "Are not five sparrows sold for two farthings, and not one of them is forgotten before God?"
+        },
+        {
+          "number": 7,
+          "text": "But even the very hairs of your head are all numbered. Fear not therefore: ye are of more value than many sparrows."
+        }
+      ]
+    },
+    {
+      "id": "psalm-147-3-5",
+      "kind": "scripture",
+      "label": "Psalm 147:3–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/147?lang=eng&id=p3-p5#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "He healeth the broken in heart, and bindeth up their wounds."
+        },
+        {
+          "number": 4,
+          "text": "He telleth the number of the stars; he calleth them all by their names."
+        },
+        {
+          "number": 5,
+          "text": "Great is our Lord, and of great power: his understanding is infinite."
+        }
+      ]
+    },
+    {
+      "id": "bateman-pattern-for-all-2005",
+      "kind": "speaker",
+      "label": "Merrill J. Bateman, “A Pattern for All”",
+      "title": "A Pattern for All",
+      "author": "Elder Merrill J. Bateman",
+      "publication": "General Conference, October 2005",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2005/10/a-pattern-for-all?lang=eng",
+      "excerpt": "The Atonement was an intimate, personal experience in which Jesus came to know how to help each of us."
+    },
+    {
+      "id": "bednar-bear-up-their-burdens-2014",
+      "kind": "speaker",
+      "label": "David A. Bednar, “Bear Up Their Burdens with Ease”",
+      "title": "Bear Up Their Burdens with Ease",
+      "author": "Elder David A. Bednar",
+      "publication": "General Conference, April 2014",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2014/04/bear-up-their-burdens-with-ease?lang=eng",
+      "excerpt": "There is no physical pain, no spiritual wound, no anguish of soul or heartache, no infirmity or weakness you or I ever confront in mortality that the Savior did not experience first."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "worth-of-souls",
+      "kind": "concept",
+      "label": "Worth of souls",
+      "description": "The great worth of each individual person in God's sight, which D&C 18:10–11 connects with the Savior's suffering for all.",
+      "sourceIds": [
+        "dc-18-10-13"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "all-and-each",
+      "title": "For all—and for each",
+      "phase": "question",
+      "method": "academic",
+      "intro": "Hidden inside this question are really three questions. Did His suffering truly reach each person? Why would He do it? And how could it work? Start with the first. When these passages describe the reach of His suffering, do they speak of humanity in general, or of persons?",
+      "sourceIds": [
+        "2-nephi-9-20-22",
+        "dc-18-10-13",
+        "dc-19-16-19"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "obo-find-whose-pains",
+          "prompt": "In verse 21, Nephi says whose pains the Savior suffers, then says it again more specifically. Tap the two phrases where he restates it in more specific terms.",
+          "sourceIds": [
+            "2-nephi-9-20-22"
+          ],
+          "hints": [
+            "Look in verse 21 for the word “yea.” Here it introduces a more specific restatement.",
+            "After “the pains of all men,” Nephi names whose pains again, in more detail.",
+            "Tap “yea, the pains of every living creature,” and “both men, women, and children,”."
+          ],
+          "explanation": "Nephi first says He suffers “the pains of all men,” then restates it: “yea, the pains of every living creature, both men, women, and children.” The words “who belong to the family of Adam” show he means people. Gospel Labs reads the restatement as turning toward individuals: ‘every’ can point to each one, and naming men, women, and children leaves no one out. The verse before adds that God “knoweth all things.”",
+          "passage": "2-nephi-9-20-22",
+          "chunks": [
+            {
+              "verse": 20,
+              "text": "O how great the holiness of our God!"
+            },
+            {
+              "verse": 20,
+              "text": "For he knoweth all things,"
+            },
+            {
+              "verse": 20,
+              "text": "and there is not anything save he knows it."
+            },
+            {
+              "verse": 21,
+              "text": "And he cometh into the world that he may save all men if they will hearken unto his voice;"
+            },
+            {
+              "verse": 21,
+              "text": "for behold, he suffereth the pains of all men,"
+            },
+            {
+              "verse": 21,
+              "text": "yea, the pains of every living creature,"
+            },
+            {
+              "verse": 21,
+              "text": "both men, women, and children,"
+            },
+            {
+              "verse": 21,
+              "text": "who belong to the family of Adam."
+            },
+            {
+              "verse": 22,
+              "text": "And he suffereth this that the resurrection might pass upon all men,"
+            },
+            {
+              "verse": 22,
+              "text": "that all might stand before him at the great and judgment day."
+            }
+          ],
+          "targets": [
+            5,
+            6
+          ]
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "obo-match-claims",
+          "prompt": "Connect each statement with the words of scripture that support it. One piece of evidence doesn't match any statement.",
+          "sourceIds": [
+            "2-nephi-9-20-22",
+            "dc-18-10-13",
+            "dc-19-16-19"
+          ],
+          "hints": [
+            "Find the key idea in each statement (every person, repenting, worth, body and spirit), then look for it in the evidence.",
+            "The leftover evidence describes the Savior finishing His work, not any of these four ideas.",
+            "Every person → 2 Nephi 9:21. Repent → D&C 19:16. Worth → D&C 18:10. Body and spirit → D&C 19:18."
+          ],
+          "explanation": "Nephi names “the pains of every living creature.” The Lord says He suffered “for all, that they might not suffer if they would repent.” He tells us to remember that “the worth of souls is great in the sight of God.” And He describes suffering “both body and spirit.” The words “I partook and finished my preparations” are about completing the work, so they match none of the four.",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "every",
+                "text": "His suffering reached every person, not only one group."
+              },
+              {
+                "id": "repent",
+                "text": "Because He suffered, people need not suffer for their sins if they repent."
+              },
+              {
+                "id": "worth",
+                "text": "Each individual soul has great worth to God."
+              },
+              {
+                "id": "real",
+                "text": "His suffering was real, in body and in spirit."
+              }
+            ]
+          },
+          "right": {
+            "label": "Evidence",
+            "items": [
+              {
+                "id": "ev-every",
+                "text": "“he suffereth the pains of all men, yea, the pains of every living creature”",
+                "sourceId": "2-nephi-9-20-22"
+              },
+              {
+                "id": "ev-repent",
+                "text": "“I, God, have suffered these things for all, that they might not suffer if they would repent”",
+                "sourceId": "dc-19-16-19"
+              },
+              {
+                "id": "ev-worth",
+                "text": "“Remember the worth of souls is great in the sight of God”",
+                "sourceId": "dc-18-10-13"
+              },
+              {
+                "id": "ev-real",
+                "text": "“to tremble because of pain, and to bleed at every pore, and to suffer both body and spirit”",
+                "sourceId": "dc-19-16-19"
+              },
+              {
+                "id": "ev-finished",
+                "text": "“I partook and finished my preparations unto the children of men”",
+                "sourceId": "dc-19-16-19"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "every",
+              "right": "ev-every",
+              "because": "Nephi restates “all men” as “every living creature,” wording that includes each one.",
+              "clue": "Look for evidence that uses the word ‘every.’"
+            },
+            {
+              "left": "repent",
+              "right": "ev-repent",
+              "because": "The Lord says He suffered “that they might not suffer if they would repent.”",
+              "clue": "Which evidence mentions repenting?"
+            },
+            {
+              "left": "worth",
+              "right": "ev-worth",
+              "because": "D&C 18:10 speaks directly of “the worth of souls.”",
+              "clue": "Which evidence uses the word ‘worth’?"
+            },
+            {
+              "left": "real",
+              "right": "ev-real",
+              "because": "He describes suffering that made Him “tremble because of pain” and suffer “both body and spirit.”",
+              "clue": "Look for the evidence that describes what the suffering did to Him."
+            }
+          ]
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "obo-scope-connect",
+          "prompt": "Read the three passages side by side and answer what each adds.",
+          "sourceIds": [
+            "2-nephi-9-20-22",
+            "dc-19-16-19",
+            "dc-18-10-13"
+          ],
+          "hints": [
+            "For the first question, read D&C 19:16 and then verse 17. Who might still suffer, and why?",
+            "For the second, D&C 18:11 begins with “For,” a word that often introduces a reason. What does verse 11 point to?",
+            "For the third, notice that verse 13 speaks of one soul, not a crowd."
+          ],
+          "explanation": "D&C 19:16–17 keeps the scope universal (He suffered “for all”) while making repentance the condition for being spared that suffering. D&C 18:10 says the worth of souls is great, and verse 11 follows with “For, behold,” pointing to the Redeemer, who “suffered the pain of all men, that all men might repent and come unto him.” A common way to read that “For” is as a reason: His suffering shows how much each soul is worth. The verses set the two side by side without saying more. And verse 13 describes His joy one person at a time: “how great is his joy in the soul that repenteth!”",
+          "passages": [
+            "2-nephi-9-20-22",
+            "dc-19-16-19",
+            "dc-18-10-13"
+          ],
+          "questions": [
+            {
+              "id": "q-condition",
+              "prompt": "2 Nephi 9:21 and D&C 19:16 both say His suffering was for all. What does D&C 19:16–17 add?",
+              "options": [
+                {
+                  "id": "condition",
+                  "text": "Whether a person must also suffer for their sins depends on whether they repent."
+                },
+                {
+                  "id": "only-repentant",
+                  "text": "Only people who would repent were included in His suffering.",
+                  "feedback": "Read the start of verse 16 again: for whom did He suffer?"
+                },
+                {
+                  "id": "no-need",
+                  "text": "Because He suffered, repenting is no longer necessary.",
+                  "feedback": "Read verse 17. What happens to those who will not repent?"
+                },
+                {
+                  "id": "smaller",
+                  "text": "His suffering was lighter than people usually imagine.",
+                  "feedback": "Verse 18 describes how intense it was."
+                }
+              ],
+              "correct": [
+                "condition"
+              ]
+            },
+            {
+              "id": "q-worth",
+              "prompt": "D&C 18:10 says “the worth of souls is great in the sight of God.” Verse 11 then begins “For, behold.” What does verse 11 point to?",
+              "options": [
+                {
+                  "id": "redeemer",
+                  "text": "The Redeemer suffered death and the pain of all men so that all could repent and come to Him."
+                },
+                {
+                  "id": "numerous",
+                  "text": "There are so many souls that together they are valuable.",
+                  "feedback": "Verse 11 doesn't talk about numbers. Whom does it talk about?"
+                },
+                {
+                  "id": "righteous",
+                  "text": "Some souls have earned great worth by their righteousness.",
+                  "feedback": "Verse 11 points to what someone else did for all men."
+                },
+                {
+                  "id": "created",
+                  "text": "Souls are valuable because they existed before the earth.",
+                  "feedback": "Look at what follows “For, behold,” in verse 11."
+                }
+              ],
+              "correct": [
+                "redeemer"
+              ]
+            },
+            {
+              "id": "q-joy",
+              "prompt": "How does D&C 18:13 describe the Savior's response to a single person who repents?",
+              "options": [
+                {
+                  "id": "joy",
+                  "text": "With great joy over that one soul."
+                },
+                {
+                  "id": "relief",
+                  "text": "With relief that the work is finally done.",
+                  "feedback": "Read verse 13 closely. What word describes His response?"
+                },
+                {
+                  "id": "unnoticed",
+                  "text": "It doesn't mention individuals, only the whole world.",
+                  "feedback": "Verse 13 says “the soul,” singular."
+                },
+                {
+                  "id": "disappointed",
+                  "text": "With disappointment that it took so long.",
+                  "feedback": "Verse 13 is an exclamation. What does it exclaim?"
+                }
+              ],
+              "correct": [
+                "joy"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "obo-build-scope",
+          "prompt": "Build a statement that all three passages support together. Leave out the fragments they don't support.",
+          "sourceIds": [
+            "2-nephi-9-20-22",
+            "dc-18-10-13",
+            "dc-19-16-19"
+          ],
+          "hints": [
+            "Start with whose pains He suffered (2 Nephi 9:21).",
+            "Then add the purpose D&C 18:11 and 19:16 give.",
+            "End with what D&C 18:10–11 connects to His suffering: the worth of souls. Leave out anything that limits who was included, makes it impersonal, or claims to explain how."
+          ],
+          "explanation": "2 Nephi 9:21 gives the scope (“every living creature, both men, women, and children”). D&C 18:11 and 19:16 give the purpose (“that all men might repent and come unto him”). D&C 18:10–11 connects “the worth of souls” with the Redeemer's suffering; many read that connection as showing how much each soul is worth to God. The distractors limit His suffering to some people, which D&C 19:16 (“for all”) rules out; make it a general payment rather than for persons, which isn't how Nephi describes it; or claim the verses explain how it reached each one, which they don't.",
+          "fragments": [
+            {
+              "id": "scope",
+              "text": "Scripture testifies that Jesus Christ suffered the pains of every man, woman, and child"
+            },
+            {
+              "id": "purpose",
+              "text": "so that all might repent and come unto Him;"
+            },
+            {
+              "id": "worth",
+              "text": "and the Lord connects that suffering with the great worth of souls."
+            },
+            {
+              "id": "only-some",
+              "text": "but only for those who would one day repent;"
+            },
+            {
+              "id": "general",
+              "text": "as one general payment for humanity rather than for persons;"
+            },
+            {
+              "id": "how",
+              "text": "and these verses explain exactly how it reached each one."
+            }
+          ],
+          "solution": [
+            "scope",
+            "purpose",
+            "worth"
+          ],
+          "statement": "Scripture testifies that Jesus Christ suffered the pains of every man, woman, and child so that all might repent and come unto Him; and the Lord connects that suffering with the great worth of souls."
+        }
+      },
+      "insight": "These passages don't describe a vague sacrifice for humanity in general. Nephi moves from “all men” to “every living creature, both men, women, and children,” and the Lord connects “the worth of souls” with the fact that “the Lord your Redeemer suffered death in the flesh.” One common reading of that “For” is that His suffering shows what each soul is worth. Even His joy is described one person at a time: “how great is his joy in the soul that repenteth!”",
+      "concepts": [
+        "atonement",
+        "infinite-atonement",
+        "worth-of-souls",
+        "repentance"
+      ],
+      "connections": [
+        {
+          "from": "scripture:2-nephi-9-20-22",
+          "to": "concept:infinite-atonement",
+          "relation": "teaches",
+          "sourceIds": [
+            "2-nephi-9-20-22"
+          ],
+          "note": "Nephi says the Savior suffers the pains of every man, woman, and child in the family of Adam."
+        },
+        {
+          "from": "concept:worth-of-souls",
+          "to": "concept:atonement",
+          "relation": "relates-to",
+          "sourceIds": [
+            "dc-18-10-13"
+          ],
+          "note": "Right after saying the worth of souls is great, the Lord points to the Redeemer, who suffered the pain of all so that all might repent and come unto Him."
+        }
+      ]
+    },
+    {
+      "id": "what-he-took",
+      "title": "What He took upon Him",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "Long before the Savior's birth, Alma prophesied what He would experience, and Isaiah wrote of a “man of sorrows.” Read Alma 7:11–13 beside Isaiah 53:3–5. The list of what He would carry is longer than many people expect.",
+      "sourceIds": [
+        "alma-7-11-13",
+        "isaiah-53-3-5"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "obo-sort-wrongs-hurts",
+          "prompt": "Alma and Isaiah name many things the Savior would bear. Sort each one: is it a wrong we commit, or a hurt we experience?",
+          "sourceIds": [
+            "alma-7-11-13",
+            "isaiah-53-3-5"
+          ],
+          "hints": [
+            "Ask of each word: is this something a person does, or something that happens to a person?",
+            "Sins, transgressions, and iniquities are things people do. Griefs and sicknesses happen to people.",
+            "Three items are wrongs we commit; the other five are hurts we experience."
+          ],
+          "explanation": "Both prophets describe a Savior who bears both. Alma names “the sins of his people,” and Isaiah says He was “wounded for our transgressions” and “bruised for our iniquities.” They also name what we suffer: “the pains and the sicknesses of his people,” “their infirmities,” death, “our griefs,” and “our sorrows.”",
+          "categories": [
+            {
+              "id": "wrongs",
+              "label": "Wrongs we commit"
+            },
+            {
+              "id": "hurts",
+              "label": "Hurts we experience"
+            }
+          ],
+          "items": [
+            {
+              "id": "sins",
+              "text": "“the sins of his people” (Alma 7:13)",
+              "category": "wrongs",
+              "why": "Sin is something a person does: choosing against God's commandments."
+            },
+            {
+              "id": "transgressions",
+              "text": "“our transgressions” (Isaiah 53:5)",
+              "category": "wrongs",
+              "why": "To transgress is to break a law, which is something we do."
+            },
+            {
+              "id": "iniquities",
+              "text": "“our iniquities” (Isaiah 53:5)",
+              "category": "wrongs",
+              "why": "Iniquity means wickedness, wrongdoing we commit."
+            },
+            {
+              "id": "pains",
+              "text": "“the pains and the sicknesses of his people” (Alma 7:11)",
+              "category": "hurts",
+              "why": "Pain and sickness happen to people, often through no choice of their own."
+            },
+            {
+              "id": "griefs",
+              "text": "“our griefs” (Isaiah 53:4)",
+              "category": "hurts",
+              "why": "Grief is sorrow we experience, for example at a loss."
+            },
+            {
+              "id": "sorrows",
+              "text": "“our sorrows” (Isaiah 53:4)",
+              "category": "hurts",
+              "why": "Sorrow is pain of heart that we experience."
+            },
+            {
+              "id": "infirmities",
+              "text": "“their infirmities” (Alma 7:12)",
+              "category": "hurts",
+              "why": "Infirmities are weaknesses and frailties, part of being mortal rather than wrong choices."
+            },
+            {
+              "id": "death",
+              "text": "Death (Alma 7:12)",
+              "category": "hurts",
+              "why": "Death comes to every mortal. Alma says He took it upon Him “that he may loose the bands of death.”"
+            }
+          ]
+        },
+        "medium": {
+          "type": "vocab-match",
+          "id": "obo-vocab",
+          "prompt": "Match each word with its meaning and with the verse where it appears.",
+          "sourceIds": [
+            "alma-7-11-13",
+            "isaiah-53-3-5"
+          ],
+          "hints": [
+            "‘Succor’ is an action word: something someone does for another person.",
+            "‘Infirmities’ are weaknesses, not wrongdoing. ‘Afflictions’ are hardships that press on a person.",
+            "Two meanings are distractors. In Alma 7 the sinless Savior suffers afflictions, so ‘punishment for sin’ doesn't fit; and succor is help in need, not help after we're already strong."
+          ],
+          "explanation": "Afflictions are hardships and distress (Alma 7:11). Infirmities are weaknesses or frailties (Alma 7:12). Griefs and sorrows are deep sadness (Isaiah 53:4). To succor is to help and relieve someone in need (Alma 7:12). These meanings are plain-English glosses by Gospel Labs, not dictionary quotations. None of these words means ‘punishment.’ In Alma's list they describe what the sinless Savior would carry for us.",
+          "pairs": [
+            {
+              "id": "afflictions",
+              "term": "Afflictions",
+              "meaning": "Hardships and distress that press on a person",
+              "example": {
+                "text": "“suffering pains and afflictions and temptations of every kind”",
+                "sourceId": "alma-7-11-13"
+              }
+            },
+            {
+              "id": "infirmities",
+              "term": "Infirmities",
+              "meaning": "Weaknesses or frailties of body or mind",
+              "example": {
+                "text": "“he will take upon him their infirmities”",
+                "sourceId": "alma-7-11-13"
+              }
+            },
+            {
+              "id": "griefs",
+              "term": "Griefs and sorrows",
+              "meaning": "Deep sadness and emotional pain",
+              "example": {
+                "text": "“he hath borne our griefs, and carried our sorrows”",
+                "sourceId": "isaiah-53-3-5"
+              }
+            },
+            {
+              "id": "succor",
+              "term": "Succor",
+              "meaning": "To help and relieve someone in need",
+              "example": {
+                "text": "“that he may know according to the flesh how to succor his people”",
+                "sourceId": "alma-7-11-13"
+              }
+            }
+          ],
+          "extraMeanings": [
+            "Punishments God sends because of a person's sins",
+            "Help that is given only after a person becomes strong"
+          ],
+          "match": "both"
+        },
+        "hard": {
+          "type": "clue",
+          "id": "obo-smitten-clue",
+          "prompt": "Isaiah notices a mistake people made when they saw the Savior suffer. Examine the clues, then identify the mistake.",
+          "sourceIds": [
+            "isaiah-53-3-5",
+            "alma-7-11-13"
+          ],
+          "hints": [
+            "Read Isaiah 53:4 slowly. What did people “esteem” (think) about Him?",
+            "Then read verse 5. Whose transgressions was He wounded for?",
+            "People assumed that suffering meant God was punishing Him. Isaiah says He was carrying their griefs and their transgressions."
+          ],
+          "explanation": "Onlookers “did esteem him stricken, smitten of God, and afflicted,” as if His suffering proved God was against Him. Isaiah corrects them: “he hath borne our griefs,” and “he was wounded for our transgressions.” He suffered for what was theirs, not His own. Alma likewise says He took upon Him the pains and sins “of his people.” This matters for anyone tempted to read their own suffering as proof that God is against them.",
+          "clues": [
+            {
+              "id": "c-sorrows",
+              "title": "Isaiah 53:3",
+              "text": "He is called “a man of sorrows, and acquainted with grief,” and people “esteemed him not.”",
+              "sourceId": "isaiah-53-3-5"
+            },
+            {
+              "id": "c-esteem",
+              "title": "Isaiah 53:4",
+              "text": "“Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.”",
+              "sourceId": "isaiah-53-3-5"
+            },
+            {
+              "id": "c-wounded",
+              "title": "Isaiah 53:5",
+              "text": "“He was wounded for our transgressions, he was bruised for our iniquities … and with his stripes we are healed.”",
+              "sourceId": "isaiah-53-3-5"
+            },
+            {
+              "id": "c-his-people",
+              "title": "Alma 7:11, 13",
+              "text": "Alma says He would take upon Him “the pains and the sicknesses of his people” and “the sins of his people.”",
+              "sourceId": "alma-7-11-13"
+            }
+          ],
+          "question": {
+            "id": "q-mistake",
+            "prompt": "What mistake were the onlookers making?",
+            "options": [
+              {
+                "id": "punished",
+                "text": "They assumed His suffering meant God was punishing Him, when He was really carrying their griefs and transgressions."
+              },
+              {
+                "id": "strong",
+                "text": "They thought He was too strong to feel pain.",
+                "feedback": "Verse 3 calls Him “a man of sorrows.” Did anyone doubt that He suffered?"
+              },
+              {
+                "id": "own-sins",
+                "text": "They thought He suffered for His own sins, and Isaiah agrees with them.",
+                "feedback": "Read verse 5. Whose transgressions does Isaiah say He was wounded for?"
+              },
+              {
+                "id": "physical",
+                "text": "They thought He suffered only physically, not emotionally.",
+                "feedback": "Isaiah's words are “griefs” and “sorrows.” What did the onlookers ‘esteem’ in verse 4?"
+              }
+            ],
+            "correct": [
+              "punished"
+            ]
+          }
+        },
+        "complex": {
+          "type": "compare",
+          "id": "obo-compare-what",
+          "prompt": "These sources include an Apostle's teaching alongside scripture. Decide whether each statement is supported by these sources, goes beyond them, or is contradicted by them. Notice which kind of source does the supporting.",
+          "sourceIds": [
+            "alma-7-11-13",
+            "isaiah-53-3-5",
+            "bednar-bear-up-their-burdens-2014"
+          ],
+          "hints": [
+            "Check each statement against Alma and Isaiah first, then against Elder Bednar's words.",
+            "Two statements are contradicted: one by Isaiah 53:4–5, one by the purpose Alma gives in verse 12.",
+            "The statement about taking every trial away goes beyond these sources. Elder Bednar describes being strengthened to bear burdens, not burdens disappearing."
+          ],
+          "explanation": "Scripture itself says He bore “the pains and the sicknesses of his people” and “our griefs.” Elder Bednar, an Apostle, explains Alma 7 to include “the injustices and inequities we experience.” That is a speaker's teaching that builds on scripture, and it is the only support here for the statement about unfair things. Isaiah 53:4–5 contradicts the idea that suffering proves sin: people wrongly thought Him “smitten of God.” And Alma's purpose, to “succor his people according to their infirmities,” assumes we will still have infirmities that need His help.",
+          "perspectives": [
+            {
+              "id": "pains-too",
+              "voice": "A classmate",
+              "text": "His suffering included our pains and sicknesses, not only our sins.",
+              "verdict": "supported",
+              "rationale": "Scripture states this directly: Alma 7:11 names “the pains and the sicknesses of his people,” and Isaiah 53:4 says He “hath borne our griefs.”"
+            },
+            {
+              "id": "injustice",
+              "voice": "A friend",
+              "text": "He has felt the weight of the unfair things that happen to me.",
+              "verdict": "supported",
+              "rationale": "Supported by an Apostle's teaching, not by the words of scripture. Elder Bednar taught that the Savior suffered not only for sins but also for “the injustices and inequities we experience.” He was explaining Alma 7, whose list (“afflictions … of every kind”) doesn't name injustice itself. Treat this as a speaker's teaching, not a statement of scripture."
+            },
+            {
+              "id": "suffering-means-sin",
+              "voice": "A common worry",
+              "text": "If I am suffering, it must mean I have sinned.",
+              "verdict": "contradicted",
+              "rationale": "Isaiah 53:4 describes exactly this mistake: people saw Him suffer and thought Him “smitten of God.” Alma also lists pains and sicknesses separately from sins."
+            },
+            {
+              "id": "never-pain",
+              "voice": "A common idea",
+              "text": "He bore our pains so that we would never have to feel pain.",
+              "verdict": "contradicted",
+              "rationale": "Alma 7:12 says He bore them so He would know “how to succor his people according to their infirmities.” Succor is help in the middle of real need, which assumes the need is still there."
+            },
+            {
+              "id": "remove-trial",
+              "voice": "A classmate",
+              "text": "Since He has felt my pain, He will take my trial away as soon as I pray.",
+              "verdict": "beyond",
+              "rationale": "None of these sources promises that. They say He knows how to succor, and Elder Bednar teaches that the Lord strengthens people to “bear up their burdens with ease,” describing burdens made light, not removed. God may remove a trial, but these sources don't promise when or whether."
+            }
+          ]
+        }
+      },
+      "insight": "Alma and Isaiah describe a Savior who carried both what we do wrong (“the sins of his people,” “our transgressions”) and what we suffer: “pains,” “sicknesses,” “our griefs,” “our sorrows.” Isaiah also notices a mistake people made. Seeing Him suffer, they assumed He was “smitten of God.” Suffering is not proof of sin: He was “wounded for our transgressions,” not His own.",
+      "concepts": [
+        "atonement",
+        "adversity",
+        "sin",
+        "weakness"
+      ],
+      "connections": [
+        {
+          "from": "scripture:alma-7-11-13",
+          "to": "concept:atonement",
+          "relation": "teaches",
+          "sourceIds": [
+            "alma-7-11-13"
+          ],
+          "note": "Alma lists pains, afflictions, temptations, sicknesses, death, infirmities, and sins among what the Savior would take upon Him."
+        },
+        {
+          "from": "concept:atonement",
+          "to": "concept:adversity",
+          "relation": "relates-to",
+          "sourceIds": [
+            "alma-7-11-13",
+            "isaiah-53-3-5"
+          ],
+          "note": "The Savior's suffering included the griefs, sorrows, pains, and sicknesses of mortal life, not only sin."
+        }
+      ]
+    },
+    {
+      "id": "why-to-succor",
+      "title": "Why: to know how to succor",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "Alma doesn't only say what the Savior would take upon Him. Nearly every clause gives a reason, often beginning with “that.” The Epistle to the Hebrews makes the same point in different words. Look for why, and notice how personal the answer is.",
+      "sourceIds": [
+        "alma-7-11-13",
+        "hebrews-2-17-18",
+        "hebrews-4-14-16"
+      ],
+      "activities": {
+        "easy": {
+          "type": "evidence-connect",
+          "id": "obo-match-reasons",
+          "prompt": "Alma gives a reason for each thing the Savior would take upon Him. Connect each one with its reason.",
+          "sourceIds": [
+            "alma-7-11-13"
+          ],
+          "hints": [
+            "Each reason follows the thing it explains, in the same verse.",
+            "Death is followed by “that he may loose…”; sins are followed by “that he might blot out…”.",
+            "One reason comes from Isaiah, not Alma, and isn't a reason at all."
+          ],
+          "explanation": "Verse 11: He would suffer pains, afflictions, and temptations “that the word might be fulfilled.” Verse 12: He takes death “that he may loose the bands of death,” and infirmities so “that he may know according to the flesh how to succor his people.” Verse 13: He takes sins “that he might blot out their transgressions.” Isaiah's “he was despised, and we esteemed him not” describes how people treated Him, not why He suffered.",
+          "left": {
+            "label": "He would take upon Him…",
+            "items": [
+              {
+                "id": "pains",
+                "text": "Pains, afflictions, and temptations of every kind",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "death",
+                "text": "Death",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "infirmities",
+                "text": "Their infirmities",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "sins",
+                "text": "The sins of His people",
+                "sourceId": "alma-7-11-13"
+              }
+            ]
+          },
+          "right": {
+            "label": "Alma's reason",
+            "items": [
+              {
+                "id": "r-fulfilled",
+                "text": "“that the word might be fulfilled”",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "r-loose",
+                "text": "“that he may loose the bands of death which bind his people”",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "r-succor",
+                "text": "“that he may know according to the flesh how to succor his people according to their infirmities”",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "r-blot",
+                "text": "“that he might blot out their transgressions according to the power of his deliverance”",
+                "sourceId": "alma-7-11-13"
+              },
+              {
+                "id": "r-despised",
+                "text": "“he was despised, and we esteemed him not”",
+                "sourceId": "isaiah-53-3-5"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "pains",
+              "right": "r-fulfilled",
+              "because": "Verse 11 says He would suffer these “that the word might be fulfilled” which prophesied He would bear His people's pains.",
+              "clue": "Look at the end of verse 11."
+            },
+            {
+              "left": "death",
+              "right": "r-loose",
+              "because": "He takes upon Him death “that he may loose the bands of death.”",
+              "clue": "Which reason mentions death?"
+            },
+            {
+              "left": "infirmities",
+              "right": "r-succor",
+              "because": "He takes their infirmities so He may know “how to succor his people according to their infirmities.”",
+              "clue": "Which reason repeats the word ‘infirmities’?"
+            },
+            {
+              "left": "sins",
+              "right": "r-blot",
+              "because": "Verse 13: He takes their sins “that he might blot out their transgressions.”",
+              "clue": "Which reason is about transgressions?"
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "obo-succor-connect",
+          "prompt": "Alma 7 and Hebrews use the same word, succor (spelled “succour” in Hebrews). Compare them.",
+          "sourceIds": [
+            "alma-7-11-13",
+            "hebrews-2-17-18",
+            "hebrews-4-14-16"
+          ],
+          "hints": [
+            "In Hebrews 2:18, look at the words just before “he is able to succour.”",
+            "Hebrews 4:16 begins with “therefore”: it draws a conclusion for us from verse 15.",
+            "Both passages tie His ability to help to His own experience, and Hebrews invites us to come to Him in our need, not after it."
+          ],
+          "explanation": "In Alma 7:12 He takes our infirmities so “that he may know according to the flesh how to succor his people.” Hebrews 2:18 says “in that he himself hath suffered being tempted, he is able to succour them that are tempted.” Both ground His help in His experience. Hebrews 4:16 then draws the conclusion: “Let us therefore come boldly unto the throne of grace … to help in time of need.”",
+          "passages": [
+            "alma-7-11-13",
+            "hebrews-2-17-18",
+            "hebrews-4-14-16"
+          ],
+          "questions": [
+            {
+              "id": "q-able",
+              "prompt": "In both Alma 7:12 and Hebrews 2:18, what makes Him able to succor?",
+              "options": [
+                {
+                  "id": "experience",
+                  "text": "His own experience of suffering and temptation"
+                },
+                {
+                  "id": "office",
+                  "text": "His title as high priest, by itself",
+                  "feedback": "Hebrews 2:18 begins “For in that he himself hath…” What had He done?"
+                },
+                {
+                  "id": "creator",
+                  "text": "His knowledge as the Creator of all things",
+                  "feedback": "Both verses point to something He went through “according to the flesh.”"
+                },
+                {
+                  "id": "others",
+                  "text": "Other people's prayers on our behalf",
+                  "feedback": "Both verses are about what He himself experienced."
+                }
+              ],
+              "correct": [
+                "experience"
+              ]
+            },
+            {
+              "id": "q-boldly",
+              "prompt": "Hebrews 4:15–16 draws a conclusion from His experience. What does it invite us to do?",
+              "options": [
+                {
+                  "id": "come-boldly",
+                  "text": "Come boldly to the throne of grace to find mercy and help when we need it"
+                },
+                {
+                  "id": "wait",
+                  "text": "Wait until we have overcome our infirmities before approaching Him",
+                  "feedback": "When does verse 16 say we find grace? Look at the last words."
+                },
+                {
+                  "id": "hide",
+                  "text": "Hide our weaknesses, since He was without sin",
+                  "feedback": "Verse 15 says He can be “touched with the feeling of our infirmities.”"
+                },
+                {
+                  "id": "fear",
+                  "text": "Approach Him fearfully, because He is a great high priest",
+                  "feedback": "Find the adverb in verse 16 that describes how we should come."
+                }
+              ],
+              "correct": [
+                "come-boldly"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "obo-compare-help",
+          "prompt": "Decide whether each statement is supported by Alma 7 and Hebrews 2 and 4, goes beyond them, or is contradicted by them.",
+          "sourceIds": [
+            "alma-7-11-13",
+            "hebrews-2-17-18",
+            "hebrews-4-14-16"
+          ],
+          "hints": [
+            "For each statement, find the verse that speaks to it, then ask whether the verse agrees, disagrees, or doesn't say.",
+            "Hebrews 4:15 says “yet without sin” and also “in all points tempted like as we are.” Both matter.",
+            "Two are contradicted (by Hebrews 4:15 and 4:16), two are supported, and the promise about removing every temptation goes beyond these verses."
+          ],
+          "explanation": "Hebrews 4:15 contradicts the worry that a sinless Savior can't understand temptation: He “was in all points tempted like as we are, yet without sin.” Hebrews 4:16 contradicts waiting until we're strong: grace is “to help in time of need.” Alma 7:12 and Hebrews 2:17–18 support that His help comes from experience. The verses promise help (succor) to those who are tempted, but they don't promise that every temptation will be removed.",
+          "perspectives": [
+            {
+              "id": "sinless",
+              "voice": "A common worry",
+              "text": "Because He never sinned, He can't really understand someone who struggles with temptation.",
+              "verdict": "contradicted",
+              "rationale": "Hebrews 4:15: He “was in all points tempted like as we are, yet without sin.” Hebrews 2:18: because He “suffered being tempted, he is able to succour them that are tempted.”"
+            },
+            {
+              "id": "experience",
+              "voice": "A classmate",
+              "text": "He experienced mortal suffering so that His mercy and help would come from experience, not only from knowledge.",
+              "verdict": "supported",
+              "rationale": "Alma 7:12 says He would be “filled with mercy, according to the flesh, that he may know according to the flesh how to succor his people.” Hebrews 2:17 says it “behoved him to be made like unto his brethren.”"
+            },
+            {
+              "id": "touched",
+              "voice": "A friend",
+              "text": "He is not distant from what we feel.",
+              "verdict": "supported",
+              "rationale": "Hebrews 4:15 describes a high priest who can be “touched with the feeling of our infirmities.”"
+            },
+            {
+              "id": "remove-all",
+              "voice": "A common idea",
+              "text": "Because He understands, He will stop every temptation before it reaches me.",
+              "verdict": "beyond",
+              "rationale": "Hebrews 2:18 says He is able to succour “them that are tempted.” That is help in temptation, not a promise that temptation won't come. These verses don't make that promise."
+            },
+            {
+              "id": "wait",
+              "voice": "A common idea",
+              "text": "I should wait until I've overcome my weaknesses before I come to Him.",
+              "verdict": "contradicted",
+              "rationale": "Hebrews 4:16 invites us to “come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need”: while we are in need, not after."
+            }
+          ]
+        },
+        "complex": {
+          "type": "clue",
+          "id": "obo-nevertheless-clue",
+          "prompt": "Alma 7:13 contains a surprising “nevertheless.” Examine the clues, then decide which reading of it they support best.",
+          "sourceIds": [
+            "alma-7-11-13",
+            "hebrews-2-17-18",
+            "hebrews-4-14-16"
+          ],
+          "hints": [
+            "Ask what Alma says the Spirit already knows, and then what the Son of God did anyway.",
+            "Notice the phrase “according to the flesh” in verse 12, and “made like unto his brethren” in Hebrews.",
+            "The clues seem to distinguish knowing about something from experiencing it. None says God lacked knowledge; they say the Son also experienced it."
+          ],
+          "explanation": "Alma says “the Spirit knoweth all things; nevertheless the Son of God suffereth according to the flesh.” One way to read this “nevertheless” is that knowing all things and experiencing mortal suffering are not the same. Verse 12 says He would “know according to the flesh how to succor,” and Hebrews says it “behoved him to be made like unto his brethren.” Alma doesn't spell out the difference, so this is a careful reading of the verses, not a full explanation of how the Atonement works.",
+          "clues": [
+            {
+              "id": "c-know",
+              "title": "Alma 7:12",
+              "text": "He takes upon Him our infirmities “that he may know according to the flesh how to succor his people.”",
+              "sourceId": "alma-7-11-13"
+            },
+            {
+              "id": "c-nevertheless",
+              "title": "Alma 7:13",
+              "text": "“Now the Spirit knoweth all things; nevertheless the Son of God suffereth according to the flesh…”",
+              "sourceId": "alma-7-11-13"
+            },
+            {
+              "id": "c-brethren",
+              "title": "Hebrews 2:17–18",
+              "text": "“In all things it behoved him to be made like unto his brethren”; because He “suffered being tempted, he is able to succour them that are tempted.”",
+              "sourceId": "hebrews-2-17-18"
+            },
+            {
+              "id": "c-feeling",
+              "title": "Hebrews 4:15",
+              "text": "Our high priest can be “touched with the feeling of our infirmities.”",
+              "sourceId": "hebrews-4-14-16"
+            }
+          ],
+          "question": {
+            "id": "q-nevertheless",
+            "prompt": "Which reading do these clues support best?",
+            "options": [
+              {
+                "id": "experience",
+                "text": "Knowing about suffering and experiencing it are different. The Savior experienced it “according to the flesh,” so His help comes from experience as well as knowledge."
+              },
+              {
+                "id": "ignorant",
+                "text": "Before His mortal life, God knew nothing about human pain.",
+                "feedback": "Verse 13 begins with what the Spirit already knows. Does any clue say God was ignorant?"
+              },
+              {
+                "id": "symbolic",
+                "text": "Since the Spirit already knew everything, His suffering in the flesh was only symbolic.",
+                "feedback": "Look at what “nevertheless” introduces in verse 13, and what His suffering was for."
+              },
+              {
+                "id": "example",
+                "text": "He suffered in the flesh only to set an example of endurance for us.",
+                "feedback": "Find the purpose both Alma and Hebrews give: what is He able to do because He suffered?"
+              }
+            ],
+            "correct": [
+              "experience"
+            ]
+          }
+        }
+      },
+      "insight": "Alma's reason is personal: “that he may know according to the flesh how to succor his people according to their infirmities.” Hebrews says the same: because “he himself hath suffered being tempted, he is able to succour them that are tempted.” Read together, these verses suggest that His knowledge of us is not only a Creator's knowledge but the knowledge of someone who has been there. That is why Hebrews invites us to “come boldly unto the throne of grace.”",
+      "concepts": [
+        "succor",
+        "weakness",
+        "grace"
+      ],
+      "connections": [
+        {
+          "from": "concept:atonement",
+          "to": "vocabulary:succor",
+          "relation": "leads-to",
+          "sourceIds": [
+            "alma-7-11-13",
+            "hebrews-2-17-18"
+          ],
+          "note": "He took upon Him our infirmities and suffered being tempted so that He would know how to succor His people."
+        },
+        {
+          "from": "scripture:hebrews-4-14-16",
+          "to": "concept:grace",
+          "relation": "teaches",
+          "sourceIds": [
+            "hebrews-4-14-16"
+          ],
+          "note": "Because our High Priest is touched with the feeling of our infirmities, we can come boldly to find grace to help in time of need."
+        }
+      ]
+    },
+    {
+      "id": "where-scripture-is-silent",
+      "title": "What these passages say, and what they leave unsaid",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "Now the hardest part of the question: how? How could one Being's suffering hold the pains of billions? The scriptures in this step describe His suffering, and Church leaders have taught about it. Your task is to keep three layers apart: what these scriptures state, what Church leaders have taught, and what these sources leave unexplained.",
+      "sourceIds": [
+        "dc-19-16-19",
+        "luke-22-41-44",
+        "mosiah-15-10-11",
+        "bateman-pattern-for-all-2005",
+        "bednar-bear-up-their-burdens-2014"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "obo-sort-stated",
+          "prompt": "Sort each item: do these verses state it, or do they leave it unexplained?",
+          "sourceIds": [
+            "dc-19-16-19",
+            "luke-22-41-44"
+          ],
+          "hints": [
+            "If you can point to the words in D&C 19:16–19 or Luke 22:41–44, scripture states it.",
+            "Items that ask ‘exactly how’ or describe the inner workings of His suffering aren't answered in these verses.",
+            "Four items are stated; three are about how it worked."
+          ],
+          "explanation": "D&C 19 and Luke 22 state that He suffered “for all,” that it caused Him “to tremble because of pain, and to bleed at every pore,” that an angel came “strengthening him,” and that He “partook and finished.” They don't explain how one Being's suffering could include every person's pains, what form that took, or how suffering long ago reaches someone today. These passages affirm the results without explaining the mechanism.",
+          "categories": [
+            {
+              "id": "stated",
+              "label": "These verses state this"
+            },
+            {
+              "id": "unexplained",
+              "label": "These verses don't explain this"
+            }
+          ],
+          "items": [
+            {
+              "id": "for-all",
+              "text": "He suffered “for all, that they might not suffer if they would repent.”",
+              "category": "stated",
+              "why": "D&C 19:16 says it in the Lord's own words."
+            },
+            {
+              "id": "tremble",
+              "text": "His suffering caused Him “to tremble because of pain, and to bleed at every pore.”",
+              "category": "stated",
+              "why": "D&C 19:18. Luke 22:44 also says His sweat was “as it were great drops of blood.”"
+            },
+            {
+              "id": "angel",
+              "text": "An angel came to Him, “strengthening him.”",
+              "category": "stated",
+              "why": "Luke 22:43."
+            },
+            {
+              "id": "finished",
+              "text": "Though He shrank from the bitter cup, He “partook and finished.”",
+              "category": "stated",
+              "why": "D&C 19:18–19."
+            },
+            {
+              "id": "how-billions",
+              "text": "Exactly how one Being's suffering could include the pains of billions of people",
+              "category": "unexplained",
+              "why": "These verses don't describe the mechanism. They affirm that He did it, not how."
+            },
+            {
+              "id": "form",
+              "text": "Whether He experienced people one at a time, all at once, or some other way",
+              "category": "unexplained",
+              "why": "These verses don't describe the form His suffering took for each person."
+            },
+            {
+              "id": "today",
+              "text": "How His suffering long ago heals and forgives someone today",
+              "category": "unexplained",
+              "why": "D&C 19:16 promises that those who repent need not suffer as He did, but these verses don't explain the inner workings."
+            }
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "obo-gethsemane-clue",
+          "prompt": "These passages describe His suffering in vivid detail. Examine them, then decide what they add to the ‘how’ question.",
+          "sourceIds": [
+            "dc-19-16-19",
+            "luke-22-41-44",
+            "mosiah-15-10-11"
+          ],
+          "hints": [
+            "For each clue, ask: does this tell me what it was like, or how it worked?",
+            "Read Mosiah 15:10–11 closely. What does Abinadi say He would see, and who are they? Does he describe how?",
+            "The passages show the suffering was real, intense, and chosen, and that He was strengthened, but none explains the mechanism."
+          ],
+          "explanation": "D&C 19:18 and Luke 22:44 show how real and intense His suffering was. Luke 22:42–43 shows He submitted (“not my will, but thine, be done”) and was strengthened by an angel. Abinadi says “he shall see his seed” and identifies them as those who believed the prophets. None of the passages explains how His suffering reached each person.",
+          "clues": [
+            {
+              "id": "c-dc19",
+              "title": "Doctrine and Covenants 19:18",
+              "text": "The suffering caused “even God, the greatest of all, to tremble because of pain, and to bleed at every pore, and to suffer both body and spirit.”",
+              "sourceId": "dc-19-16-19"
+            },
+            {
+              "id": "c-luke-will",
+              "title": "Luke 22:42–43",
+              "text": "He prayed, “nevertheless not my will, but thine, be done,” and “there appeared an angel unto him from heaven, strengthening him.”",
+              "sourceId": "luke-22-41-44"
+            },
+            {
+              "id": "c-luke-agony",
+              "title": "Luke 22:44",
+              "text": "“Being in an agony he prayed more earnestly: and his sweat was as it were great drops of blood falling down to the ground.”",
+              "sourceId": "luke-22-41-44"
+            },
+            {
+              "id": "c-seed",
+              "title": "Mosiah 15:10–11",
+              "text": "Abinadi: “when his soul has been made an offering for sin he shall see his seed.” His seed are those who “believed that the Lord would redeem his people.”",
+              "sourceId": "mosiah-15-10-11"
+            }
+          ],
+          "question": {
+            "id": "q-adds",
+            "prompt": "What do these passages add to the question of how His suffering reached each person?",
+            "options": [
+              {
+                "id": "real-not-how",
+                "text": "They show how real, intense, and willing His suffering was, and Abinadi says He would “see his seed,” but none of them explains how it worked."
+              },
+              {
+                "id": "seed-explains",
+                "text": "Mosiah 15:10 explains that He suffered for each person by seeing them one at a time.",
+                "feedback": "Read verse 10 again. Abinadi says He would see His seed, but does he describe how or when, or what that seeing involved?"
+              },
+              {
+                "id": "easy",
+                "text": "D&C 19:18 shows the suffering was easy for Him because He was God.",
+                "feedback": "Look at what the suffering caused “even God, the greatest of all” to do."
+              },
+              {
+                "id": "alone",
+                "text": "Luke 22 shows He faced it without any help at all.",
+                "feedback": "Read Luke 22:43. Who appeared, and what did they do?"
+              }
+            ],
+            "correct": [
+              "real-not-how"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "obo-compare-layers",
+          "prompt": "Decide whether each statement is supported by these scriptures (D&C 19, Luke 22, Mosiah 15), goes beyond them, or is contradicted by them. Some statements that go beyond scripture have been taught by Church leaders; the rationale will say so.",
+          "sourceIds": [
+            "dc-19-16-19",
+            "luke-22-41-44",
+            "mosiah-15-10-11"
+          ],
+          "hints": [
+            "Judge only against these three passages, even if a statement sounds familiar from a talk.",
+            "One statement is contradicted by the words “would that I might not drink the bitter cup, and shrink.”",
+            "The ‘long line of people’ and the ‘explains how’ statements go beyond these verses."
+          ],
+          "explanation": "These scriptures support that the suffering was intense (D&C 19:18) and that He submitted to the Father (Luke 22:42; D&C 19:19). They contradict the idea that it was easy for Him. They don't describe what He saw or how it worked. Elder Merrill J. Bateman taught that “instead of an impersonal mass of sin, there was a long line of people,” a picture he drew from Alma, Abinadi, and Isaiah. That is worth pondering as a Church leader's teaching, but it goes beyond what these verses state.",
+          "perspectives": [
+            {
+              "id": "intense",
+              "voice": "A classmate",
+              "text": "His suffering was so intense that it caused Him, “even God, the greatest of all,” to tremble and bleed.",
+              "verdict": "supported",
+              "rationale": "D&C 19:18 says exactly this, and Luke 22:44 describes His sweat “as it were great drops of blood.”"
+            },
+            {
+              "id": "easy",
+              "voice": "A common idea",
+              "text": "Because He was divine, the suffering was easy for Him.",
+              "verdict": "contradicted",
+              "rationale": "In D&C 19:18 the Lord says “would that I might not drink the bitter cup, and shrink.” Luke 22:44 says He was “in an agony.”"
+            },
+            {
+              "id": "line",
+              "voice": "A friend",
+              "text": "In Gethsemane He saw each person who would ever live, one after another, in a long line.",
+              "verdict": "beyond",
+              "rationale": "Abinadi says “he shall see his seed” but doesn't describe what that was like. Elder Bateman taught that “instead of an impersonal mass of sin, there was a long line of people,” drawing on Alma, Abinadi, and Isaiah. It's a Church leader's teaching, not a statement of these verses."
+            },
+            {
+              "id": "explains",
+              "voice": "A common idea",
+              "text": "These verses explain how one Being's suffering could include every person's pains.",
+              "verdict": "beyond",
+              "rationale": "They describe its intensity and purpose, not its mechanism. Claiming they explain how goes beyond what they say."
+            },
+            {
+              "id": "submitted",
+              "voice": "A classmate",
+              "text": "He submitted His will to the Father's, even though He shrank from the cup.",
+              "verdict": "supported",
+              "rationale": "Luke 22:42: “nevertheless not my will, but thine, be done.” D&C 19:19: “Nevertheless, glory be to the Father, and I partook and finished.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "obo-build-layers",
+          "prompt": "Build an honest answer to the ‘how’ question that keeps scripture, Church leaders' teaching, and what remains unexplained in their proper places.",
+          "sourceIds": [
+            "dc-19-16-19",
+            "mosiah-15-10-11",
+            "bateman-pattern-for-all-2005",
+            "bednar-bear-up-their-burdens-2014"
+          ],
+          "hints": [
+            "Begin with what scripture testifies, then add what leaders have taught, then name what remains unexplained.",
+            "Elder Bateman called the Atonement “an intimate, personal experience.” Elder Bednar said many things about it “we simply cannot comprehend with our mortal minds.”",
+            "Leave out fragments that claim these passages explain the mechanism, treat leaders' words as scripture, or say we can't know it happened."
+          ],
+          "explanation": "Scripture testifies that He suffered “for all” and would “know … how to succor his people.” Elder Bateman taught that it was “an intimate, personal experience in which Jesus came to know how to help each of us,” and Elder Bednar taught that “He has felt and borne our individual burdens.” Elder Bednar also said that “many things about the Atonement we simply cannot comprehend with our mortal minds.” Not knowing how something happened is different from not knowing that it happened.",
+          "fragments": [
+            {
+              "id": "scripture",
+              "text": "Scripture testifies that Jesus Christ suffered for all and knows how to succor each person;"
+            },
+            {
+              "id": "leaders",
+              "text": "Church leaders have taught that His Atonement was intimate and personal;"
+            },
+            {
+              "id": "unexplained",
+              "text": "how one Being could do this for billions is something these passages leave unexplained."
+            },
+            {
+              "id": "mechanism",
+              "text": "these passages explain exactly how it worked;"
+            },
+            {
+              "id": "doubt",
+              "text": "because we can't explain how, we can't be sure that it happened."
+            },
+            {
+              "id": "same",
+              "text": "leaders' teachings and scripture are the same kind of source;"
+            }
+          ],
+          "solution": [
+            "scripture",
+            "leaders",
+            "unexplained"
+          ],
+          "statement": "Scripture testifies that Jesus Christ suffered for all and knows how to succor each person; Church leaders have taught that His Atonement was intimate and personal; how one Being could do this for billions is something these passages leave unexplained."
+        }
+      },
+      "insight": "These scriptures are vivid about the reality of His suffering. It caused Him “to tremble because of pain, and to bleed at every pore,” and He chose to finish it: “not my will, but thine, be done.” But none of these passages explains how His suffering reached each person. Church leaders have testified that it did, personally. Elder Bateman called it “an intimate, personal experience,” and Elder Bednar taught that “He has felt and borne our individual burdens,” while acknowledging that “many things about the Atonement we simply cannot comprehend with our mortal minds.” Saying ‘these passages don't explain how’ isn't doubt. It's honesty about what these sources say.",
+      "concepts": [
+        "atonement",
+        "infinite-atonement"
+      ],
+      "connections": [
+        {
+          "from": "scripture:dc-19-16-19",
+          "to": "concept:atonement",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-19-16-19"
+          ],
+          "note": "The Savior Himself describes suffering that caused Him to tremble because of pain and to bleed at every pore, in body and spirit."
+        },
+        {
+          "from": "scripture:luke-22-41-44",
+          "to": "scripture:dc-19-16-19",
+          "relation": "relates-to",
+          "sourceIds": [
+            "luke-22-41-44",
+            "dc-19-16-19"
+          ],
+          "note": "Gospel Labs reads these side by side: Luke records His agony as He prayed, with sweat “as it were great drops of blood,” and in D&C 19 the Savior describes His suffering in His own words. D&C 19 doesn't name a time or place."
+        }
+      ],
+      "branchIds": [
+        "know-us-all"
+      ]
+    },
+    {
+      "id": "one-by-one",
+      "title": "One by one",
+      "phase": "understand",
+      "method": "academic",
+      "intro": "The passages so far don't let us watch how the Atonement reached each person. But 3 Nephi lets us watch the risen Savior with a multitude. When He blessed their children, the record counts “about two thousand and five hundred souls” (3 Nephi 17:25). Watch what He does with them.",
+      "sourceIds": [
+        "3-nephi-11-14-17",
+        "3-nephi-17-6-9",
+        "3-nephi-17-21-25",
+        "john-10-14-16",
+        "luke-15-4-7"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "obo-find-one-by-one",
+          "prompt": "Tap the phrase that tells how the multitude came to Him, and the phrase that tells what each person did with their own eyes and hands.",
+          "sourceIds": [
+            "3-nephi-11-14-17"
+          ],
+          "hints": [
+            "Look in the middle of verse 15 for how they went forth.",
+            "Then look for what they did “with their eyes” and “with their hands.”",
+            "Tap “going forth one by one until they had all gone forth,” and “did see with their eyes and did feel with their hands,”."
+          ],
+          "explanation": "They came “one by one until they had all gone forth,” and each “did see with their eyes and did feel with their hands.” The risen Lord let every person in the multitude have an experience of their own.",
+          "passage": "3-nephi-11-14-17",
+          "chunks": [
+            {
+              "verse": 15,
+              "text": "And it came to pass that the multitude went forth,"
+            },
+            {
+              "verse": 15,
+              "text": "and thrust their hands into his side,"
+            },
+            {
+              "verse": 15,
+              "text": "and did feel the prints of the nails in his hands and in his feet;"
+            },
+            {
+              "verse": 15,
+              "text": "and this they did do, going forth one by one until they had all gone forth,"
+            },
+            {
+              "verse": 15,
+              "text": "and did see with their eyes and did feel with their hands,"
+            },
+            {
+              "verse": 15,
+              "text": "and did know of a surety and did bear record,"
+            },
+            {
+              "verse": 15,
+              "text": "that it was he, of whom it was written by the prophets, that should come."
+            }
+          ],
+          "targets": [
+            3,
+            4
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "obo-multitude-connect",
+          "prompt": "Read 3 Nephi 11 and 3 Nephi 17 together.",
+          "sourceIds": [
+            "3-nephi-11-14-17",
+            "3-nephi-17-21-25"
+          ],
+          "hints": [
+            "In 3 Nephi 11:14, look for the word “that”: it introduces His purpose.",
+            "In 3 Nephi 17:21 and 25, look for phrases about individuals rather than the crowd.",
+            "Two details in chapter 17 match the ‘one by one’ pattern: one about the children, one about every man."
+          ],
+          "explanation": "The Savior invited them to feel the prints of the nails “that ye may know that I am the God of Israel, and the God of the whole earth, and have been slain for the sins of the world.” Each person touched the evidence of the suffering that was for them. Later He took their children “one by one,” and the record stresses that the people saw and heard “every man for himself.”",
+          "passages": [
+            "3-nephi-11-14-17",
+            "3-nephi-17-21-25"
+          ],
+          "questions": [
+            {
+              "id": "q-why-touch",
+              "prompt": "In 3 Nephi 11:14, why did the Savior invite each person to feel the prints of the nails?",
+              "options": [
+                {
+                  "id": "know",
+                  "text": "So each could know for themselves that He is the God of the whole earth, who was slain for the sins of the world"
+                },
+                {
+                  "id": "count",
+                  "text": "So He could count how many people believed in Him",
+                  "feedback": "Read the words after “that ye may know” in verse 14."
+                },
+                {
+                  "id": "heal",
+                  "text": "Because touching the wounds would heal them",
+                  "feedback": "Healing comes later, in chapter 17. What does 11:14 say they would know?"
+                },
+                {
+                  "id": "fear",
+                  "text": "So they would be afraid to disobey Him",
+                  "feedback": "Verse 17 shows their response. Was it fear, or something else?"
+                }
+              ],
+              "correct": [
+                "know"
+              ]
+            },
+            {
+              "id": "q-pattern",
+              "prompt": "Which details in 3 Nephi 17:21–25 match the ‘one by one’ pattern of 3 Nephi 11:15? Choose all that apply.",
+              "options": [
+                {
+                  "id": "children",
+                  "text": "“he took their little children, one by one, and blessed them”"
+                },
+                {
+                  "id": "every-man",
+                  "text": "“they all of them did see and hear, every man for himself”"
+                },
+                {
+                  "id": "spake",
+                  "text": "“he spake unto the multitude”",
+                  "feedback": "This is said to everyone at once. Look for phrases about individuals."
+                },
+                {
+                  "id": "angels",
+                  "text": "“they saw angels descending out of heaven”",
+                  "feedback": "This describes what they saw, not how He treated each person."
+                }
+              ],
+              "correct": [
+                "children",
+                "every-man"
+              ],
+              "multiple": true
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "obo-mercy-clue",
+          "prompt": "Examine the clues from Alma, 3 Nephi, John, and Luke. Then decide what they suggest about how He relates to each person.",
+          "sourceIds": [
+            "alma-7-11-13",
+            "3-nephi-17-6-9",
+            "john-10-14-16",
+            "luke-15-4-7"
+          ],
+          "hints": [
+            "Compare Alma 7:12 with 3 Nephi 17:7 word for word. What did Alma prophesy, and what does the risen Savior say?",
+            "Notice that the 3 Nephi accounts happen after His Resurrection, not in Gethsemane.",
+            "These accounts don't explain a mechanism, but they show what kind of Savior He is."
+          ],
+          "explanation": "Alma prophesied that His “bowels may be filled with mercy, according to the flesh.” Later, the risen Lord tells the multitude, “my bowels are filled with mercy,” and heals “every one as they were brought forth unto him.” 3 Nephi doesn't say it is fulfilling Alma's words; the matching wording is an echo Gospel Labs points out. The Good Shepherd says “I … know my sheep,” and in the parable a shepherd leaves the ninety and nine to find one. These passages don't explain how the Atonement reached each person, but one way to see them is as its fruit in His character.",
+          "clues": [
+            {
+              "id": "c-prophecy",
+              "title": "Alma 7:12",
+              "text": "Alma prophesied He would take upon Him our infirmities “that his bowels may be filled with mercy, according to the flesh.”",
+              "sourceId": "alma-7-11-13"
+            },
+            {
+              "id": "c-fulfilled",
+              "title": "3 Nephi 17:6–7",
+              "text": "The risen Lord: “my bowels are filled with compassion towards you … my bowels are filled with mercy.”",
+              "sourceId": "3-nephi-17-6-9"
+            },
+            {
+              "id": "c-every-one",
+              "title": "3 Nephi 17:9",
+              "text": "“He did heal them every one as they were brought forth unto him.”",
+              "sourceId": "3-nephi-17-6-9"
+            },
+            {
+              "id": "c-shepherd",
+              "title": "John 10:14",
+              "text": "“I am the good shepherd, and know my sheep, and am known of mine.”",
+              "sourceId": "john-10-14-16"
+            },
+            {
+              "id": "c-one-sheep",
+              "title": "Luke 15:4",
+              "text": "The shepherd will “leave the ninety and nine in the wilderness, and go after that which is lost, until he find it.”",
+              "sourceId": "luke-15-4-7"
+            }
+          ],
+          "minRevealed": 4,
+          "question": {
+            "id": "q-suggest",
+            "prompt": "What do these clues suggest about how He relates to each person?",
+            "options": [
+              {
+                "id": "fruit",
+                "text": "They don't explain how His Atonement reached each person, but they show a Savior filled with the mercy Alma described, who knows and ministers to individuals."
+              },
+              {
+                "id": "proof",
+                "text": "They prove that He experienced each person's pain separately in Gethsemane.",
+                "feedback": "These accounts happen after His Resurrection. Do any of them describe Gethsemane?"
+              },
+              {
+                "id": "limited",
+                "text": "They show He can only help one person at a time, the way we can.",
+                "feedback": "3 Nephi 17:9 says how many He healed. Do any of the accounts describe a limit?"
+              },
+              {
+                "id": "crowd",
+                "text": "They suggest a crowd matters more to Him than any one person in it.",
+                "feedback": "Read Luke 15:4. What does the shepherd do about the one?"
+              }
+            ],
+            "correct": [
+              "fruit"
+            ]
+          }
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "obo-build-one-by-one",
+          "prompt": "Bring the whole investigation together. Build a statement the evidence supports, and leave out what it doesn't.",
+          "sourceIds": [
+            "2-nephi-9-20-22",
+            "alma-7-11-13",
+            "hebrews-4-14-16",
+            "3-nephi-11-14-17",
+            "john-10-14-16"
+          ],
+          "hints": [
+            "Start honestly with what these passages don't explain.",
+            "Then add who He is: the One who suffered for all, and who knows His sheep and ministers one by one.",
+            "End with the invitation: Hebrews 4:16 and 3 Nephi 11:14 both invite people to come to Him."
+          ],
+          "explanation": "The statement stays inside the evidence. These passages don't explain the mechanism. They do testify that He suffered for all (2 Nephi 9:21), that He knows “how to succor his people” (Alma 7:12), and that He knows His sheep (John 10:14). He invited a multitude to “come forth unto me” (3 Nephi 11:14), and Hebrews invites us to “come boldly.” The distractors invent limits on Him that the accounts don't describe.",
+          "fragments": [
+            {
+              "id": "silent",
+              "text": "The passages we've studied don't explain how His suffering reached every person,"
+            },
+            {
+              "id": "who",
+              "text": "but they show that the Savior who suffered for all"
+            },
+            {
+              "id": "knows",
+              "text": "knows His sheep and ministers to them one by one,"
+            },
+            {
+              "id": "come",
+              "text": "so each of us can come to Him personally."
+            },
+            {
+              "id": "no-time",
+              "text": "so He has little time for any one person."
+            },
+            {
+              "id": "crowd",
+              "text": "because saving a crowd is easier than saving individuals,"
+            },
+            {
+              "id": "only-then",
+              "text": "though only those present that day were known to Him."
+            }
+          ],
+          "solution": [
+            "silent",
+            "who",
+            "knows",
+            "come"
+          ],
+          "statement": "The passages we've studied don't explain how His suffering reached every person, but they show that the Savior who suffered for all knows His sheep and ministers to them one by one, so each of us can come to Him personally."
+        }
+      },
+      "insight": "With a multitude before Him, the risen Lord didn't just address a crowd. He let them come “one by one until they had all gone forth,” healed “every one,” and took their children “one by one.” The words Alma used to prophesy His mercy (“that his bowels may be filled with mercy”) echo the words He used about Himself: “my bowels are filled with mercy.” These passages don't show how His Atonement reached each person, but one way to read them is as its fruit: a Savior who knows His sheep.",
+      "concepts": [
+        "jesus-christ",
+        "love-of-god",
+        "worth-of-souls"
+      ],
+      "connections": [
+        {
+          "from": "scripture:3-nephi-11-14-17",
+          "to": "question:one-by-one",
+          "relation": "answers",
+          "sourceIds": [
+            "3-nephi-11-14-17"
+          ],
+          "note": "The risen Lord let each person in the multitude come one by one to feel the prints of the nails and know that He was slain for the sins of the world."
+        },
+        {
+          "from": "scripture:3-nephi-17-6-9",
+          "to": "scripture:alma-7-11-13",
+          "relation": "relates-to",
+          "sourceIds": [
+            "3-nephi-17-6-9",
+            "alma-7-11-13"
+          ],
+          "note": "Alma prophesied that His bowels would be filled with mercy; the risen Savior says “my bowels are filled with mercy” and heals every one brought to Him."
+        }
+      ]
+    },
+    {
+      "id": "bring-it-to-him",
+      "title": "Bring it to Him",
+      "phase": "understand",
+      "method": "divine",
+      "sourceIds": [
+        "alma-7-11-13",
+        "3-nephi-11-14-17",
+        "hebrews-4-14-16"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "obo-reflect",
+        "prompt": "The Savior who suffered “for all” invited a multitude to “arise and come forth unto me,” one by one. If you'd like, take a quiet moment with that invitation. Nothing you write is checked or shared.",
+        "sourceIds": [
+          "alma-7-11-13",
+          "3-nephi-11-14-17",
+          "hebrews-4-14-16"
+        ],
+        "suggestions": [
+          "Which phrase from Alma 7:11–12 or 3 Nephi 11:14–15 would you like to remember this week?",
+          "Is there a pain, a weakness, or a question you could bring to Him in prayer, trusting that He knows how to succor?",
+          "How might it change the way you see the people around you to know that He sees each of them one by one?"
+        ]
+      },
+      "insight": "Reflection is personal and optional. The invitation in 3 Nephi 11:14 and Hebrews 4:16 is the same: come to Him.",
+      "concepts": []
+    }
+  ],
+  "branches": [
+    {
+      "id": "know-us-all",
+      "question": "How can God know each of His children personally?",
+      "intro": "Some people feel almost overwhelmed by the idea that God could know each person. That's an honest reaction, and these scriptures acknowledge it: they describe things that are past human counting. Moses 1 and Psalm 147 speak of worlds, stars, and “all things”; Luke 12 and 2 Nephi 9 speak more directly of people. Read what they affirm about God's knowledge, and what reason they give for it.",
+      "steps": [
+        {
+          "id": "numbered-unto-me",
+          "title": "“Numbered unto me”",
+          "phase": "evidence",
+          "method": "academic",
+          "sourceIds": [
+            "moses-1-33-35",
+            "luke-12-6-7",
+            "psalm-147-3-5",
+            "2-nephi-9-20-22"
+          ],
+          "activities": {
+            "easy": {
+              "type": "highlight",
+              "id": "obo-branch-find-numbered",
+              "prompt": "The Lord contrasts what is impossible for us with what is true for Him. Tap the phrases that describe His side of the contrast.",
+              "sourceIds": [
+                "moses-1-33-35"
+              ],
+              "hints": [
+                "Look for the word “but” in verse 35: it turns from our side to His.",
+                "His side has two parts: what is true of all things, and why.",
+                "Tap “but all things are numbered unto me,” and “for they are mine and I know them.”"
+              ],
+              "explanation": "Worlds are “innumerable … unto man; but all things are numbered unto me, for they are mine and I know them.” The limit is placed on human counting, not on God. And the reason He gives is belonging: “they are mine.” The verse speaks of worlds and “all things”; applying it to each person is a reasonable step that Luke 12:6–7 supports more directly.",
+              "passage": "moses-1-33-35",
+              "chunks": [
+                {
+                  "verse": 35,
+                  "text": "But only an account of this earth, and the inhabitants thereof, give I unto you."
+                },
+                {
+                  "verse": 35,
+                  "text": "For behold, there are many worlds that have passed away by the word of my power."
+                },
+                {
+                  "verse": 35,
+                  "text": "And there are many that now stand,"
+                },
+                {
+                  "verse": 35,
+                  "text": "and innumerable are they unto man;"
+                },
+                {
+                  "verse": 35,
+                  "text": "but all things are numbered unto me,"
+                },
+                {
+                  "verse": 35,
+                  "text": "for they are mine and I know them."
+                }
+              ],
+              "targets": [
+                4,
+                5
+              ]
+            },
+            "medium": {
+              "type": "scripture-connect",
+              "id": "obo-branch-connect",
+              "prompt": "Compare how Moses 1, Luke 12, and Psalm 147 describe God's knowledge.",
+              "sourceIds": [
+                "moses-1-33-35",
+                "luke-12-6-7",
+                "psalm-147-3-5"
+              ],
+              "hints": [
+                "Luke 12:7 ends with a reason not to fear. What is it?",
+                "Moses 1:35 and Psalm 147:5 both say something is beyond us. Is the limit on us, or on God?",
+                "Moses 1:35 places the limit on human counting (“innumerable … unto man”), and Psalm 147:5 says “his understanding is infinite.”"
+              ],
+              "explanation": "Luke 12:6–7 says not one sparrow “is forgotten before God,” and “ye are of more value than many sparrows.” Moses 1:35 and Psalm 147:4–5 both describe God's knowledge of vast things (worlds “innumerable … unto man,” the stars) and place the limit on us, not on God: “his understanding is infinite.”",
+              "passages": [
+                "moses-1-33-35",
+                "luke-12-6-7",
+                "psalm-147-3-5"
+              ],
+              "questions": [
+                {
+                  "id": "q-fear-not",
+                  "prompt": "Moses 1:35 gives a reason God knows all things: “for they are mine.” What reason does Luke 12:6–7 give for not being afraid?",
+                  "options": [
+                    {
+                      "id": "value",
+                      "text": "Not even one sparrow is forgotten before God, and we are of more value than many sparrows."
+                    },
+                    {
+                      "id": "few",
+                      "text": "There are only a few people for God to keep track of.",
+                      "feedback": "Luke 12:7 mentions how many hairs are numbered. Is that a small number?"
+                    },
+                    {
+                      "id": "earn",
+                      "text": "We earn God's attention by being righteous.",
+                      "feedback": "What does verse 7 say about our value? Is anything said about earning it?"
+                    },
+                    {
+                      "id": "sparrows",
+                      "text": "Sparrows matter more than people.",
+                      "feedback": "Read the final words of verse 7."
+                    }
+                  ],
+                  "correct": [
+                    "value"
+                  ]
+                },
+                {
+                  "id": "q-limit",
+                  "prompt": "Moses 1:35 and Psalm 147:4–5 both speak of God's knowledge of vast things: worlds and stars. Where do they place the limit?",
+                  "options": [
+                    {
+                      "id": "on-us",
+                      "text": "On human ability: what is “innumerable … unto man” is “numbered unto me,” and “his understanding is infinite.”"
+                    },
+                    {
+                      "id": "on-god",
+                      "text": "On God: even He can know only some of His creations well.",
+                      "feedback": "Read Psalm 147:5. How does it describe His understanding?"
+                    },
+                    {
+                      "id": "unknowable",
+                      "text": "On the universe: some things are simply unknowable to anyone.",
+                      "feedback": "Moses 1:35 says “all things are numbered unto me.” Does that leave anything unknown?"
+                    }
+                  ],
+                  "correct": [
+                    "on-us"
+                  ]
+                }
+              ]
+            },
+            "hard": {
+              "type": "compare",
+              "id": "obo-branch-compare",
+              "prompt": "Decide whether each statement is supported by these passages, goes beyond them, or is contradicted by them.",
+              "sourceIds": [
+                "moses-1-33-35",
+                "luke-12-6-7",
+                "psalm-147-3-5",
+                "2-nephi-9-20-22"
+              ],
+              "hints": [
+                "Look for whether each passage connects God's knowledge with care, or only with counting.",
+                "Two statements are contradicted by Luke 12:6–7 and Psalm 147:3.",
+                "The statement about explaining how an infinite mind works goes beyond the passages."
+              ],
+              "explanation": "The passages affirm that God “knoweth all things” (2 Nephi 9:20) and that “all things are numbered unto me, for they are mine.” They join knowledge with care: no sparrow is forgotten, “ye are of more value,” and “he healeth the broken in heart.” They don't explain how an infinite mind attends to each person; they place the limit on human understanding: such things are “innumerable … unto man.”",
+              "perspectives": [
+                {
+                  "id": "each",
+                  "voice": "A classmate",
+                  "text": "God knows every person individually, even though there are more of us than we can count.",
+                  "verdict": "supported",
+                  "rationale": "Luke 12:6–7 speaks of people: not one sparrow “is forgotten before God,” and “the very hairs of your head are all numbered.” 2 Nephi 9:20: He “knoweth all things.” Moses 1:35 adds that what is “innumerable … unto man” is “numbered unto me.”"
+                },
+                {
+                  "id": "data",
+                  "voice": "A common idea",
+                  "text": "God knows us the way a computer stores data: facts without feelings.",
+                  "verdict": "contradicted",
+                  "rationale": "These passages join knowing with caring: “not one of them is forgotten,” “Fear not,” and “He healeth the broken in heart.”"
+                },
+                {
+                  "id": "belong",
+                  "voice": "A friend",
+                  "text": "In Moses 1:35, part of the reason God gives for knowing all things is that they are His.",
+                  "verdict": "supported",
+                  "rationale": "His own words: “all things are numbered unto me, for they are mine and I know them.” The verse speaks of worlds and “all things”; applying that reason to each person is a reasonable step, and Luke 12:6–7 speaks of people directly."
+                },
+                {
+                  "id": "matter-less",
+                  "voice": "A common worry",
+                  "text": "With so many people and worlds, each one of us must matter less.",
+                  "verdict": "contradicted",
+                  "rationale": "Luke 12:6–7: not even one sparrow is forgotten, and “ye are of more value than many sparrows.”"
+                },
+                {
+                  "id": "how-mind",
+                  "voice": "A classmate",
+                  "text": "These passages explain how an infinite mind can attend to each person at once.",
+                  "verdict": "beyond",
+                  "rationale": "The passages affirm that God knows all things and each person, and say His understanding is infinite, but they don't explain how."
+                }
+              ]
+            }
+          },
+          "insight": "These passages don't make God's knowledge smaller to make it easier to understand. They say plainly that His creations are “innumerable … unto man,” and that “all things are numbered unto me, for they are mine and I know them.” Feeling amazed is a reasonable response. Moses 1:35 gives belonging as a reason (“for they are mine”), and Luke 12 speaks of His care for people: “ye are of more value than many sparrows.”",
+          "concepts": [
+            "heavenly-father",
+            "love-of-god",
+            "worth-of-souls"
+          ],
+          "connections": [
+            {
+              "from": "scripture:moses-1-33-35",
+              "to": "question:know-us-all",
+              "relation": "relates-to",
+              "sourceIds": [
+                "moses-1-33-35"
+              ],
+              "note": "The Lord says what is innumerable to man is numbered to Him, “for they are mine and I know them”: a reason, though not an explanation of how."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main question. The Father numbers what we can't, and His Son knows how to succor each one."
+    }
+  ],
+  "discovery": {
+    "summary": "Scripture answers two parts of the question clearly. Did it reach each person? Nephi says He suffers “the pains of every living creature, both men, women, and children,” and the Lord ties “the worth of souls” to the Redeemer's suffering. Why? Alma says He took upon Him our pains, sicknesses, infirmities, and sins “that he may know according to the flesh how to succor his people according to their infirmities.” The third part, how one Being's suffering could reach billions, these passages don't explain. They describe the intensity (D&C 19:18; Luke 22:44) but not the mechanism. Elder Merrill J. Bateman and Elder David A. Bednar have testified that the Atonement was intimate and personal, and Elder Bednar also acknowledged that many things about it “we simply cannot comprehend with our mortal minds.” What scripture does show is the Savior Himself: risen, He let a multitude come to Him “one by one.”",
+    "keyIdeas": [
+      "Scripture says His suffering reached each person: “the pains of every living creature, both men, women, and children” (2 Nephi 9:21).",
+      "He bore both what we do wrong and what we suffer: sins and transgressions, and also pains, sicknesses, griefs, and infirmities (Alma 7:11–13; Isaiah 53:4–5).",
+      "Alma gives the reason: so He would know “according to the flesh how to succor his people according to their infirmities” (Alma 7:12).",
+      "These passages describe how intense His suffering was but don't explain how it reached each person. Saying so honestly is part of studying well.",
+      "The risen Savior ministered to a multitude “one by one” (3 Nephi 11:15; 17:21)."
+    ],
+    "christConnection": "The question began with numbers: billions of people. The scriptures answer with a Person. The same Jesus who suffered “for all” (D&C 19:16) stood before a multitude and let them come “one by one” to feel the prints of the nails, then took their little children “one by one” and blessed them. Alma prophesied that His “bowels may be filled with mercy”; in 3 Nephi 17:7 the risen Lord says, “my bowels are filled with mercy.” We may not understand how He did it, but we can come to know who He is.",
+    "openQuestions": [
+      "How does suffering in Gethsemane and on the cross reach someone's pain today? The passages studied here affirm that it does without explaining how.",
+      "What did Abinadi mean when he said that “he shall see his seed”?",
+      "Alma says “the Spirit knoweth all things,” yet the Son suffered “according to the flesh.” What is the difference between knowing and experiencing?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "Step all-and-each (insight, build-principle)",
+        "note": "Reads the “For” in D&C 18:11 as tying the worth of souls to the Redeemer's suffering, and the statement ‘His suffering shows how great the worth of each soul is’ follows from that reading. This is a common reading but interpretive.",
+        "resolution": "Qualified: the hard activity's hint, question, and explanation, and the step insight, now present the reason-reading of “For” as a common reading, not a fact. The build-principle no longer rewards ‘His suffering shows how great the worth of each soul is’; its fragment now states only what D&C 18:10–11 plainly does (the Lord connects that suffering with the great worth of souls). The explanation names the fuller reading as one many people hold."
+      },
+      {
+        "where": "Step all-and-each (highlight)",
+        "note": "Treats “yea, the pains of every living creature, both men, women, and children” (2 Nephi 9:21) as narrowing from a group to individuals. The context (“who belong to the family of Adam”) supports reading “every living creature” as people, but the emphasis on individuals is the app's observation.",
+        "resolution": "Qualified: the highlight prompt now asks for the phrases where Nephi restates it in more specific terms, not where he ‘narrows to individuals.’ The explanation points to “who belong to the family of Adam” as showing he means people and labels the turn toward individuals as Gospel Labs' reading. The matching activity's ‘because’ text was softened the same way."
+      },
+      {
+        "where": "Step what-he-took (compare, vocab-match)",
+        "note": "Labels Elder Bednar's list (“the injustices and inequities we experience”) as ‘supported’ by these sources because an Apostle's talk is among them; the rationale says it is a speaker's explanation of Alma 7, not scripture. ‘He will take my trial away as soon as I pray’ is marked ‘goes beyond.’ Vocabulary meanings are plain-English glosses written by Gospel Labs, not dictionary quotations.",
+        "resolution": "Qualified: checked against the talk. Elder Bednar lists ‘the injustices and inequities we experience’ among what the Savior suffered for. The ‘supported’ rationale now rests only on his talk, a declared speaker source. It says Alma 7 doesn't name injustice and that this is a speaker's teaching, not scripture, and the explanation says the same. ‘Take my trial away’ stays ‘goes beyond.’ Resolved: the vocabulary explanation now labels the meanings as Gospel Labs' plain-English glosses, and ‘succor’ no longer carries an unsourced ‘run to’ gloss."
+      },
+      {
+        "where": "Step why-to-succor (complex clue)",
+        "note": "Interprets the “nevertheless” of Alma 7:13 as distinguishing knowing all things by the Spirit from experiencing suffering according to the flesh. The explanation calls this a careful reading, not a full account of the Atonement. Please confirm the framing.",
+        "resolution": "Qualified: the clue's prompt and question now ask which reading the clues support best. The explanation says ‘One way to read this “nevertheless”’ and that Alma doesn't spell out the difference, and a hint says the clues ‘seem to’ distinguish knowing from experiencing. The step insight now says the verses ‘suggest’ it. The three wrong options stay, since each is ruled out by the verses' plain words. The owner may still want to confirm the reading."
+      },
+      {
+        "where": "Step where-scripture-is-silent",
+        "note": "Depends on speakers: Elder Merrill J. Bateman's picture of “a long line of people” is presented respectfully as a Church leader's teaching that goes beyond what D&C 19, Luke 22, and Mosiah 15 state. Elder Bednar is quoted saying many things about the Atonement can't be comprehended. The claim that scripture never explains the mechanism is a judgment about the standard works as a whole and should be confirmed.",
+        "resolution": "Qualified: every claim that scripture doesn't explain the mechanism is now limited to the passages studied (‘these verses’, ‘these passages’, ‘the passages we've studied’). That covers the hook, intros, step title, sort labels, clue prompt (no longer ‘the greatest detail scripture gives’), build fragments, insights, discovery, and open questions. Elder Bateman's ‘long line of people’ stays a Church leader's teaching marked ‘goes beyond’; his talk says he drew it from ‘the words of Alma, Abinadi, Isaiah, and other prophets.’ Elder Bednar's quotations were checked against his talk."
+      },
+      {
+        "where": "Step where-scripture-is-silent (connection)",
+        "note": "Links Luke 22:41–44 and D&C 19:16–19 as two descriptions of the same suffering. Gospel Topics (Atonement of Jesus Christ) cites them together, but D&C 19 doesn't name Gethsemane.",
+        "resolution": "Qualified: the connection note now says Gospel Labs reads Luke 22 and D&C 19 side by side, quotes Luke's “as it were great drops of blood” exactly, and says D&C 19 doesn't name a time or place. It no longer calls Luke's account ‘a witness's record,’ which the declared verses don't establish. A sort item now quotes Luke 22:44 exactly instead of shortening it to ‘great drops of blood.’"
+      },
+      {
+        "where": "Step one-by-one (intro)",
+        "note": "‘About 2,500 people’ comes from 3 Nephi 17:25, which counts the multitude present that day; the app applies it to the same day's multitude in 3 Nephi 11. Linking Alma 7:12 (“that his bowels may be filled with mercy”) with 3 Nephi 17:7 (“my bowels are filled with mercy”) as prophecy and fulfillment is the app's observation of matching wording.",
+        "resolution": "Resolved: the intro now uses the count only where 3 Nephi 17:25 gives it (when He blessed their children, “about two thousand and five hundred souls”), not as the size of the 3 Nephi 11 multitude. Qualified: the clue explanation and step insight now present the Alma 7:12 / 3 Nephi 17:7 match as an echo Gospel Labs points out, and say 3 Nephi doesn't claim to fulfill Alma's words. The correct option says ‘the mercy Alma described’ instead of ‘foretold.’ The ‘fruit’ reading is offered as ‘one way to see them,’ and ‘Generations later’ became ‘Later.’"
+      },
+      {
+        "where": "Branch know-us-all",
+        "note": "Moses 1:35 and Psalm 147:4 speak of worlds, things, and stars; the app applies them to God's knowledge of people, which Luke 12:6–7 and 2 Nephi 9:20 support more directly.",
+        "resolution": "Qualified: the branch intro and highlight explanation now say Moses 1 and Psalm 147 speak of worlds, stars, and ‘all things,’ while Luke 12 and 2 Nephi 9 speak of people more directly. The ‘each’ rationale now rests on Luke 12:6–7 and 2 Nephi 9:20. The ‘belong’ perspective now states only what Moses 1:35 says, and its rationale calls applying it to people a reasonable step. The Map connection changed from ‘answers’ to ‘relates to.’ ‘Beyond what is revealed’ was limited to these passages."
+      },
+      {
+        "where": "primaryQuestion note",
+        "note": "Paraphrases Elder Corbridge (‘Stand Forever,’ BYU, 2019) without quoting him; the talk isn't declared as a source in this file.",
+        "resolution": "Resolved: checked against the talk (BYU devotional, 22 January 2019). Elder Corbridge lists whether Jesus Christ is the Son of God, the Savior of the world, among four primary questions. He says that when they are answered, secondary questions get answered too or pale in significance. The note now paraphrases that without quotation marks or the talk's title, and labels the application to how the Atonement reaches each person as Gospel Labs' suggestion. The talk isn't declared in this file because its shared declaration is under review in other files."
+      }
+    ]
+  }
+}

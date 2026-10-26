@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
+/** Gospel Labs 2.0 tagline: "Search the scriptures" (John 5:39) and come to know Jesus Christ (John 17:3). */
+export const TAGLINE = "Search the scriptures. Know Him.";
+
 export function BrandMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden className={cn("size-8", className)}>
@@ -20,13 +23,14 @@ export function BrandMark({ className }: { className?: string }) {
   );
 }
 
-export function Brand({ className }: { className?: string }) {
+export function Brand({ className, showTagline = true }: { className?: string; showTagline?: boolean }) {
+  // The link is named by its visible text (name and tagline), so speech-input users can say what they see (WCAG 2.5.3).
   return (
-    <Link href="/" className={cn("flex items-center gap-3 rounded-lg", className)}>
+    <Link href="/" className={cn("flex min-h-11 items-center gap-3 rounded-lg", className)}>
       <BrandMark />
       <span className="flex flex-col leading-tight">
         <span className="text-[15px] font-semibold tracking-tight text-fg">Gospel Labs</span>
-        <span className="font-mono text-[10px] tracking-[0.06em] whitespace-nowrap text-subtle uppercase">Question · Study · Discover</span>
+        {showTagline && <span className="font-serif text-[11px] text-subtle italic">{TAGLINE}</span>}
       </span>
     </Link>
   );

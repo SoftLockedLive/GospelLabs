@@ -1,0 +1,2695 @@
+{
+  "id": "again-and-again",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "Again and Again",
+  "question": "Does God still forgive me when I keep making the same mistake?",
+  "hook": "Many people worry that repeating a sin could use up God’s patience. The scriptures speak to that fear directly, and more than once.",
+  "theme": "Repentance and forgiveness",
+  "tags": [
+    "repentance",
+    "forgiveness",
+    "weakness",
+    "grace"
+  ],
+  "primaryQuestion": {
+    "id": "christ",
+    "note": "Whether God forgives again and again rests on who Jesus Christ is. When Enos asked how his guilt could be swept away, the Lord answered, “Because of thy faith in Christ.” Repentance is possible only because He is the Savior, so the question of how often it works is ultimately a question about Him."
+  },
+  "commonQuestions": [
+    "Can repeating the same mistake use up God’s patience?",
+    "How can I know I’ve been forgiven?",
+    "Does being imperfect mean I’m always sinning?"
+  ],
+  "estimatedMinutes": {
+    "quick": 8,
+    "deep": 30
+  },
+  "intro": "This is a common question, and it comes in many forms. Some people worry that God’s patience runs out, that being imperfect means they are always sinning, or that they can never know whether they’ve been forgiven. This investigation reads a parable about a son who came home, the Lord’s own answer to how often He forgives, what scripture and Church resources say about weakness and sin, and how people in the scriptures came to know they were forgiven. It can’t tell you whether you are forgiven. It can show you what the Lord has promised.",
+  "sources": [
+    {
+      "id": "luke-15-17-24",
+      "kind": "scripture",
+      "label": "Luke 15:17–24",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p17-p24#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "And when he came to himself, he said, How many hired servants of my father’s have bread enough and to spare, and I perish with hunger!"
+        },
+        {
+          "number": 18,
+          "text": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee,"
+        },
+        {
+          "number": 19,
+          "text": "And am no more worthy to be called thy son: make me as one of thy hired servants."
+        },
+        {
+          "number": 20,
+          "text": "And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him."
+        },
+        {
+          "number": 21,
+          "text": "And the son said unto him, Father, I have sinned against heaven, and in thy sight, and am no more worthy to be called thy son."
+        },
+        {
+          "number": 22,
+          "text": "But the father said to his servants, Bring forth the best robe, and put it on him; and put a ring on his hand, and shoes on his feet:"
+        },
+        {
+          "number": 23,
+          "text": "And bring hither the fatted calf, and kill it; and let us eat, and be merry:"
+        },
+        {
+          "number": 24,
+          "text": "For this my son was dead, and is alive again; he was lost, and is found. And they began to be merry."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-9-13-14",
+      "kind": "scripture",
+      "label": "3 Nephi 9:13–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng&id=p13-p14#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "O all ye that are spared because ye were more righteous than they, will ye not now return unto me, and repent of your sins, and be converted, that I may heal you?"
+        },
+        {
+          "number": 14,
+          "text": "Yea, verily I say unto you, if ye will come unto me ye shall have eternal life. Behold, mine arm of mercy is extended towards you, and whosoever will come, him will I receive; and blessed are those who come unto me."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-26-29-30",
+      "kind": "scripture",
+      "label": "Mosiah 26:29–30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/26?lang=eng&id=p29-p30#p29",
+      "verses": [
+        {
+          "number": 29,
+          "text": "Therefore I say unto you, Go; and whosoever transgresseth against me, him shall ye judge according to the sins which he has committed; and if he confess his sins before thee and me, and repenteth in the sincerity of his heart, him shall ye forgive, and I will forgive him also."
+        },
+        {
+          "number": 30,
+          "text": "Yea, and as often as my people repent will I forgive them their trespasses against me."
+        }
+      ]
+    },
+    {
+      "id": "moroni-6-8",
+      "kind": "scripture",
+      "label": "Moroni 6:8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/6?lang=eng&id=p8#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "But as oft as they repented and sought forgiveness, with real intent, they were forgiven."
+        }
+      ]
+    },
+    {
+      "id": "matthew-18-21-22",
+      "kind": "scripture",
+      "label": "Matthew 18:21–22",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p21-p22#p21",
+      "verses": [
+        {
+          "number": 21,
+          "text": "¶ Then came Peter to him, and said, Lord, how oft shall my brother sin against me, and I forgive him? till seven times?"
+        },
+        {
+          "number": 22,
+          "text": "Jesus saith unto him, I say not unto thee, Until seven times: but, Until seventy times seven."
+        }
+      ]
+    },
+    {
+      "id": "luke-17-3-4",
+      "kind": "scripture",
+      "label": "Luke 17:3–4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/17?lang=eng&id=p3-p4#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "¶ Take heed to yourselves: If thy brother trespass against thee, rebuke him; and if he repent, forgive him."
+        },
+        {
+          "number": 4,
+          "text": "And if he trespass against thee seven times in a day, and seven times in a day turn again to thee, saying, I repent; thou shalt forgive him."
+        }
+      ]
+    },
+    {
+      "id": "ether-12-27",
+      "kind": "scripture",
+      "label": "Ether 12:27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27",
+      "verses": [
+        {
+          "number": 27,
+          "text": "And if men come unto me I will show unto them their weakness. I give unto men weakness that they may be humble; and my grace is sufficient for all men that humble themselves before me; for if they humble themselves before me, and have faith in me, then will I make weak things become strong unto them."
+        }
+      ]
+    },
+    {
+      "id": "gs-sin",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Sin",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/sin?lang=eng",
+      "excerpt": "Willful disobedience to God’s commandments."
+    },
+    {
+      "id": "gospel-topics-repentance",
+      "kind": "official",
+      "label": "Gospel Topics: Repentance",
+      "publication": "Topics and Questions (2025)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/repentance?lang=eng",
+      "excerpt": "When He sent us to earth, He knew that none of us would be perfect. So as part of His plan of salvation, He gave us His Son, Jesus Christ, to suffer for our sins.",
+      "summary": "Describes repentance as God’s gift and a daily process, and lists its elements: faith in Heavenly Father and Jesus Christ, sorrow for sin, confession, giving up sin, restitution, and righteous living."
+    },
+    {
+      "id": "nelson-do-better-be-better-2019",
+      "kind": "speaker",
+      "label": "Russell M. Nelson, “We Can Do Better and Be Better”",
+      "title": "We Can Do Better and Be Better",
+      "author": "President Russell M. Nelson",
+      "publication": "General Conference, April 2019",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2019/04/36nelson?lang=eng",
+      "excerpt": "Repentance is not an event; it is a process. It is the key to happiness and peace of mind."
+    },
+    {
+      "id": "1-john-1-8-9",
+      "kind": "scripture",
+      "label": "1 John 1:8–9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/1?lang=eng&id=p8-p9#p8",
+      "verses": [
+        {
+          "number": 8,
+          "text": "If we say that we have no sin, we deceive ourselves, and the truth is not in us."
+        },
+        {
+          "number": 9,
+          "text": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-4-14-16",
+      "kind": "scripture",
+      "label": "Hebrews 4:14–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/4?lang=eng&id=p14-p16#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "Seeing then that we have a great high priest, that is passed into the heavens, Jesus the Son of God, let us hold fast our profession."
+        },
+        {
+          "number": 15,
+          "text": "For we have not an high priest which cannot be touched with the feeling of our infirmities; but was in all points tempted like as we are, yet without sin."
+        },
+        {
+          "number": 16,
+          "text": "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need."
+        }
+      ]
+    },
+    {
+      "id": "enos-1-5-8",
+      "kind": "scripture",
+      "label": "Enos 1:5–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng&id=p5-p8#p5",
+      "verses": [
+        {
+          "number": 5,
+          "text": "And there came a voice unto me, saying: Enos, thy sins are forgiven thee, and thou shalt be blessed."
+        },
+        {
+          "number": 6,
+          "text": "And I, Enos, knew that God could not lie; wherefore, my guilt was swept away."
+        },
+        {
+          "number": 7,
+          "text": "And I said: Lord, how is it done?"
+        },
+        {
+          "number": 8,
+          "text": "And he said unto me: Because of thy faith in Christ, whom thou hast never before heard nor seen. And many years pass away before he shall manifest himself in the flesh; wherefore, go to, thy faith hath made thee whole."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-4-2-3",
+      "kind": "scripture",
+      "label": "Mosiah 4:2–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p2-p3#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "And they had viewed themselves in their own carnal state, even less than the dust of the earth. And they all cried aloud with one voice, saying: O have mercy, and apply the atoning blood of Christ that we may receive forgiveness of our sins, and our hearts may be purified; for we believe in Jesus Christ, the Son of God, who created heaven and earth, and all things; who shall come down among the children of men."
+        },
+        {
+          "number": 3,
+          "text": "And it came to pass that after they had spoken these words the Spirit of the Lord came upon them, and they were filled with joy, having received a remission of their sins, and having peace of conscience, because of the exceeding faith which they had in Jesus Christ who should come, according to the words which king Benjamin had spoken unto them."
+        }
+      ]
+    },
+    {
+      "id": "alma-36-17-21",
+      "kind": "scripture",
+      "label": "Alma 36:17–21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p17-p21#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "And it came to pass that as I was thus racked with torment, while I was harrowed up by the memory of my many sins, behold, I remembered also to have heard my father prophesy unto the people concerning the coming of one Jesus Christ, a Son of God, to atone for the sins of the world."
+        },
+        {
+          "number": 18,
+          "text": "Now, as my mind caught hold upon this thought, I cried within my heart: O Jesus, thou Son of God, have mercy on me, who am in the gall of bitterness, and am encircled about by the everlasting chains of death."
+        },
+        {
+          "number": 19,
+          "text": "And now, behold, when I thought this, I could remember my pains no more; yea, I was harrowed up by the memory of my sins no more."
+        },
+        {
+          "number": 20,
+          "text": "And oh, what joy, and what marvelous light I did behold; yea, my soul was filled with joy as exceeding as was my pain!"
+        },
+        {
+          "number": 21,
+          "text": "Yea, I say unto you, my son, that there could be nothing so exquisite and so bitter as were my pains. Yea, and again I say unto you, my son, that on the other hand, there can be nothing so exquisite and sweet as was my joy."
+        }
+      ]
+    },
+    {
+      "id": "dc-58-42-43",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 58:42–43",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p42-p43#p42",
+      "verses": [
+        {
+          "number": 42,
+          "text": "Behold, he who has repented of his sins, the same is forgiven, and I, the Lord, remember them no more."
+        },
+        {
+          "number": 43,
+          "text": "By this ye may know if a man repenteth of his sins—behold, he will confess them and forsake them."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-4-17-19",
+      "kind": "scripture",
+      "label": "2 Nephi 4:17–19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/4?lang=eng&id=p17-p19#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "Nevertheless, notwithstanding the great goodness of the Lord, in showing me his great and marvelous works, my heart exclaimeth: O wretched man that I am! Yea, my heart sorroweth because of my flesh; my soul grieveth because of mine iniquities."
+        },
+        {
+          "number": 18,
+          "text": "I am encompassed about, because of the temptations and the sins which do so easily beset me."
+        },
+        {
+          "number": 19,
+          "text": "And when I desire to rejoice, my heart groaneth because of my sins; nevertheless, I know in whom I have trusted."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-4-28-30",
+      "kind": "scripture",
+      "label": "2 Nephi 4:28–30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/4?lang=eng&id=p28-p30#p28",
+      "verses": [
+        {
+          "number": 28,
+          "text": "Awake, my soul! No longer droop in sin. Rejoice, O my heart, and give place no more for the enemy of my soul."
+        },
+        {
+          "number": 29,
+          "text": "Do not anger again because of mine enemies. Do not slacken my strength because of mine afflictions."
+        },
+        {
+          "number": 30,
+          "text": "Rejoice, O my heart, and cry unto the Lord, and say: O Lord, I will praise thee forever; yea, my soul will rejoice in thee, my God, and the rock of my salvation."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-2-17-18",
+      "kind": "scripture",
+      "label": "Hebrews 2:17–18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/2?lang=eng&id=p17-p18#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "Wherefore in all things it behoved him to be made like unto his brethren, that he might be a merciful and faithful high priest in things pertaining to God, to make reconciliation for the sins of the people."
+        },
+        {
+          "number": 18,
+          "text": "For in that he himself hath suffered being tempted, he is able to succour them that are tempted."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-4-27",
+      "kind": "scripture",
+      "label": "Mosiah 4:27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p27#p27",
+      "verses": [
+        {
+          "number": 27,
+          "text": "And see that all these things are done in wisdom and order; for it is not requisite that a man should run faster than he has strength. And again, it is expedient that he should be diligent, that thereby he might win the prize; therefore, all things must be done in order."
+        }
+      ]
+    },
+    {
+      "id": "renlund-keep-on-trying-2015",
+      "kind": "speaker",
+      "label": "Dale G. Renlund, “Latter-day Saints Keep on Trying”",
+      "title": "Latter-day Saints Keep on Trying",
+      "author": "Elder Dale G. Renlund",
+      "publication": "General Conference, April 2015",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/latter-day-saints-keep-on-trying?lang=eng",
+      "excerpt": "God cares a lot more about who we are and who we are becoming than about who we once were. He cares that we keep on trying."
+    },
+    {
+      "id": "moroni-10-32",
+      "kind": "scripture",
+      "label": "Moroni 10:32",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p32#p32",
+      "verses": [
+        {
+          "number": 32,
+          "text": "Yea, come unto Christ, and be perfected in him, and deny yourselves of all ungodliness; and if ye shall deny yourselves of all ungodliness, and love God with all your might, mind and strength, then is his grace sufficient for you, that by his grace ye may be perfect in Christ; and if by the grace of God ye are perfect in Christ, ye can in nowise deny the power of God."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-grace",
+      "kind": "official",
+      "label": "Gospel Topics: Grace",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/grace?lang=eng",
+      "excerpt": "Grace is the divine help or strength extended to us through the Atonement of the Lord Jesus Christ."
+    },
+    {
+      "id": "2-nephi-25-23",
+      "kind": "scripture",
+      "label": "2 Nephi 25:23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng&id=p23#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "For we labor diligently to write, to persuade our children, and also our brethren, to believe in Christ, and to be reconciled to God; for we know that it is by grace that we are saved, after all we can do."
+        }
+      ]
+    },
+    {
+      "id": "bd-grace",
+      "kind": "official",
+      "label": "Bible Dictionary: Grace",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bd/grace?lang=eng",
+      "excerpt": "The main idea of the word is divine means of help or strength, given through the bounteous mercy and love of Jesus Christ."
+    },
+    {
+      "id": "uchtdorf-gift-of-grace-2015",
+      "kind": "speaker",
+      "label": "Dieter F. Uchtdorf, “The Gift of Grace”",
+      "title": "The Gift of Grace",
+      "author": "President Dieter F. Uchtdorf",
+      "publication": "General Conference, April 2015",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/the-gift-of-grace?lang=eng",
+      "excerpt": "However, I wonder if sometimes we misinterpret the phrase “after all we can do.” We must understand that “after” does not equal “because.”"
+    }
+  ],
+  "concepts": [],
+  "steps": [
+    {
+      "id": "what-the-son-expected",
+      "title": "What the son expected",
+      "phase": "question",
+      "method": "academic",
+      "intro": "In the parable of the prodigal son, a younger son takes his inheritance, wastes it in a far country, and ends up hungry, feeding pigs. When he decides to go home, he rehearses what he will say. Compare what he expected with what his father did.",
+      "sourceIds": [
+        "luke-15-17-24",
+        "3-nephi-9-13-14"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "son-highlight",
+          "prompt": "The son rehearsed what he would say to his father. Tap the two phrases that show how he expected to be received.",
+          "sourceIds": [
+            "luke-15-17-24"
+          ],
+          "hints": [
+            "He planned to confess, and then to say what he thought he had become. Look in verse 19.",
+            "He didn’t expect to be welcomed back as a son. What did he think he was worth now?",
+            "Tap “And am no more worthy to be called thy son:” and “make me as one of thy hired servants.”"
+          ],
+          "explanation": "The son expected to have lost his place: “am no more worthy to be called thy son: make me as one of thy hired servants.” Many people share the same fear: that repeated wrongs have cost them their place with God. Verse 20 shows what actually happened.",
+          "passage": "luke-15-17-24",
+          "chunks": [
+            {
+              "verse": 18,
+              "text": "I will arise and go to my father,"
+            },
+            {
+              "verse": 18,
+              "text": "and will say unto him,"
+            },
+            {
+              "verse": 18,
+              "text": "Father, I have sinned against heaven, and before thee,"
+            },
+            {
+              "verse": 19,
+              "text": "And am no more worthy to be called thy son:"
+            },
+            {
+              "verse": 19,
+              "text": "make me as one of thy hired servants."
+            },
+            {
+              "verse": 20,
+              "text": "And he arose, and came to his father."
+            },
+            {
+              "verse": 20,
+              "text": "But when he was yet a great way off,"
+            },
+            {
+              "verse": 20,
+              "text": "his father saw him,"
+            },
+            {
+              "verse": 20,
+              "text": "and had compassion,"
+            },
+            {
+              "verse": 20,
+              "text": "and ran, and fell on his neck, and kissed him."
+            }
+          ],
+          "targets": [
+            3,
+            4
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "son-clue",
+          "prompt": "The order of events in this story matters. Examine each clue, then decide what it suggests.",
+          "sourceIds": [
+            "luke-15-17-24"
+          ],
+          "hints": [
+            "Put the events in order: what happens in verse 20, and what happens in verse 21?",
+            "The father sees his son, has compassion, and runs while the son is still “a great way off.”",
+            "The welcome came first and the confession after, and the planned request to be a servant never appears in verse 21."
+          ],
+          "explanation": "The father saw his son “a great way off,” had compassion, and ran to him before the son said a word. When the son did speak, his confession was honest (“I have sinned”), but the request he had rehearsed, “make me as one of thy hired servants,” doesn’t appear. Then the father called for “the best robe.” The son’s return mattered, but his welcome wasn’t something he earned with the right words.",
+          "clues": [
+            {
+              "id": "plan",
+              "title": "The son’s plan",
+              "text": "Luke 15:18–19: he planned to say, “Father, I have sinned against heaven, and before thee, And am no more worthy to be called thy son: make me as one of thy hired servants.”",
+              "sourceId": "luke-15-17-24"
+            },
+            {
+              "id": "distance",
+              "title": "Still far away",
+              "text": "Luke 15:20: “when he was yet a great way off, his father saw him.”",
+              "sourceId": "luke-15-17-24"
+            },
+            {
+              "id": "response",
+              "title": "Before a word was said",
+              "text": "Luke 15:20: his father “had compassion, and ran, and fell on his neck, and kissed him.” Only in verse 21 does the son begin to speak.",
+              "sourceId": "luke-15-17-24"
+            },
+            {
+              "id": "speech",
+              "title": "The speech he gave",
+              "text": "Luke 15:21: “Father, I have sinned against heaven, and in thy sight, and am no more worthy to be called thy son.” Compare it with the speech he planned.",
+              "sourceId": "luke-15-17-24"
+            }
+          ],
+          "question": {
+            "id": "son-order",
+            "prompt": "What does the order of events suggest?",
+            "options": [
+              {
+                "id": "welcomed",
+                "text": "The father ran to his son and embraced him before the son confessed anything. The son didn’t have to earn his welcome."
+              },
+              {
+                "id": "apology",
+                "text": "The father waited to hear a good enough apology before deciding.",
+                "feedback": "Check the order: what happens in verse 20, before the son speaks in verse 21?"
+              },
+              {
+                "id": "servant",
+                "text": "The son was welcomed because he offered to work as a servant.",
+                "feedback": "Compare verse 19 with verse 21. Does the son ever make that offer?"
+              },
+              {
+                "id": "pretend",
+                "text": "The father acted as though nothing wrong had happened.",
+                "feedback": "The father says his son “was dead, and is alive again; he was lost, and is found.” Does he pretend his son was never lost?"
+              }
+            ],
+            "correct": [
+              "welcomed"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "son-compare",
+          "prompt": "Decide how each statement compares with Luke 15:17–24.",
+          "sourceIds": [
+            "luke-15-17-24"
+          ],
+          "hints": [
+            "For each statement, look for exact words in verses 17–24 that support it, leave it open, or say the opposite.",
+            "Two statements are interpretations that many readers hold but that these verses don’t state outright.",
+            "The father’s words in verse 24 contradict the idea that his son was no longer a son, and verse 17 shows real consequences."
+          ],
+          "explanation": "The son did think he had lost his place, and the father’s response contradicts that: “this my son was dead, and is alive again.” The son’s choices had real consequences (“I perish with hunger!”), so the welcome wasn’t a denial of what happened. Two common readings, that the father interrupted his son and that the father represents Heavenly Father, are reasonable, but they go beyond what these eight verses state.",
+          "perspectives": [
+            {
+              "id": "lost-place",
+              "text": "The son believed his wrongs had cost him his place as a son.",
+              "voice": "A reader",
+              "verdict": "supported",
+              "rationale": "He planned to say, and then did say, “am no more worthy to be called thy son.”"
+            },
+            {
+              "id": "agreed",
+              "text": "The father agreed that he was no longer really a son.",
+              "voice": "A common fear",
+              "verdict": "contradicted",
+              "rationale": "The father called for “the best robe,” “a ring,” and “shoes,” and said, “this my son was dead, and is alive again.”"
+            },
+            {
+              "id": "interrupted",
+              "text": "The father interrupted his son to keep him from asking to be a servant.",
+              "voice": "One reading",
+              "verdict": "beyond",
+              "rationale": "Verse 21 leaves out the request to be a hired servant, and verse 22 begins “But the father said.” Many readers notice this, but the text doesn’t say whether the father cut him off."
+            },
+            {
+              "id": "no-consequences",
+              "text": "The parable shows that the son’s choices had no consequences.",
+              "voice": "A classmate",
+              "verdict": "contradicted",
+              "rationale": "Before he came home he said, “I perish with hunger!” His choices had cost him a great deal."
+            },
+            {
+              "id": "who-father",
+              "text": "The father in the parable represents Heavenly Father.",
+              "voice": "A common reading",
+              "verdict": "beyond",
+              "rationale": "Verses 17–24 don’t say whom the father represents. It’s a widely shared reading, and the parables just before it in Luke 15 describe joy in heaven over a sinner who repents, but this passage alone doesn’t state it."
+            }
+          ]
+        },
+        "complex": {
+          "type": "scripture-connect",
+          "id": "son-connect",
+          "prompt": "In 3 Nephi 9, the voice of Jesus Christ speaks to the survivors of great destruction. Compare His invitation with the parable.",
+          "sourceIds": [
+            "luke-15-17-24",
+            "3-nephi-9-13-14"
+          ],
+          "passages": [
+            "luke-15-17-24",
+            "3-nephi-9-13-14"
+          ],
+          "hints": [
+            "Read 3 Nephi 9:13–14 for images and promises that match the parable.",
+            "Look for an image of reaching out, the word “whosoever,” and what the Lord wants to do for those who return.",
+            "“mine arm of mercy is extended towards you”; “whosoever will come, him will I receive”; “that I may heal you.”"
+          ],
+          "explanation": "The father ran to meet his son, and the Savior says, “mine arm of mercy is extended towards you.” The father welcomed a son who had wasted everything, and the Savior says, “whosoever will come, him will I receive.” Neither passage keeps a count or offers a lesser place. The Lord’s stated purpose is “that I may heal you.”",
+          "questions": [
+            {
+              "id": "arm",
+              "prompt": "Which phrase in 3 Nephi 9:14 is closest to the father running to meet his son?",
+              "options": [
+                {
+                  "id": "arm",
+                  "text": "“mine arm of mercy is extended towards you”"
+                },
+                {
+                  "id": "eternal-life",
+                  "text": "“if ye will come unto me ye shall have eternal life”",
+                  "feedback": "That’s a promise to those who come. Which phrase describes the Lord reaching toward them?"
+                },
+                {
+                  "id": "spared",
+                  "text": "“O all ye that are spared because ye were more righteous than they”",
+                  "feedback": "This phrase, from verse 13, describes whom He is speaking to. Look for an image of reaching out."
+                }
+              ],
+              "correct": [
+                "arm"
+              ]
+            },
+            {
+              "id": "who",
+              "prompt": "In both passages, who is welcomed?",
+              "options": [
+                {
+                  "id": "whosoever",
+                  "text": "Anyone who returns: “whosoever will come, him will I receive.”"
+                },
+                {
+                  "id": "never-wandered",
+                  "text": "Only people who had never wandered.",
+                  "feedback": "The son had wasted everything, and in 3 Nephi 9:13 the Lord invites people to “repent of your sins.” Were these people without sin?"
+                },
+                {
+                  "id": "prove",
+                  "text": "Only people who first prove they’ve changed for good.",
+                  "feedback": "Look at when the father ran, and at the word “whosoever.”"
+                }
+              ],
+              "correct": [
+                "whosoever"
+              ]
+            },
+            {
+              "id": "heal",
+              "prompt": "What does the Savior say He wants to do for those who return (3 Nephi 9:13)?",
+              "options": [
+                {
+                  "id": "heal",
+                  "text": "“that I may heal you”"
+                },
+                {
+                  "id": "count",
+                  "text": "Keep count of how many times they left.",
+                  "feedback": "Nothing in either passage keeps a count. Read the end of verse 13."
+                },
+                {
+                  "id": "servants",
+                  "text": "Take them back as servants instead of children.",
+                  "feedback": "The son expected that. What did his father do instead, and what does the Lord say He will do?"
+                }
+              ],
+              "correct": [
+                "heal"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "The son rehearsed a speech built on a fear many people share: that his wrongs had cost him his place. His father saw him “a great way off,” ran to him, and embraced him before he said a word, and the planned request to be a hired servant doesn’t appear in what the son actually said. In 3 Nephi 9 the Savior speaks the same way: “mine arm of mercy is extended towards you, and whosoever will come, him will I receive.”",
+      "concepts": [
+        "repentance",
+        "love-of-god",
+        "forgiveness-of-sins"
+      ],
+      "connections": [
+        {
+          "from": "scripture:luke-15-17-24",
+          "to": "concept:love-of-god",
+          "relation": "illustrates",
+          "sourceIds": [
+            "luke-15-17-24"
+          ],
+          "note": "The father saw his son a great way off, had compassion, and ran to embrace him before the son confessed."
+        },
+        {
+          "from": "scripture:3-nephi-9-13-14",
+          "to": "scripture:luke-15-17-24",
+          "relation": "relates-to",
+          "sourceIds": [
+            "3-nephi-9-13-14",
+            "luke-15-17-24"
+          ],
+          "note": "Both describe a welcome extended to people who return: the father runs to his son, and the Lord’s arm of mercy is extended to whoever will come."
+        }
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "as-often-as",
+      "title": "“As often as my people repent”",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "Peter once asked the Savior how many times he should forgive someone who kept wronging him. In the Book of Mormon, Alma asked the Lord what to do about Church members who had sinned, and the Lord answered him directly. Later, Moroni described how the Church treated people who repented. Look for numbers, limits, and conditions.",
+      "sourceIds": [
+        "mosiah-26-29-30",
+        "moroni-6-8",
+        "matthew-18-21-22",
+        "luke-17-3-4"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "often-highlight",
+          "prompt": "The Lord answered Alma’s question about people who had sinned. Tap the phrase that says how often He will forgive, and the phrase that describes how a person repents.",
+          "sourceIds": [
+            "mosiah-26-29-30"
+          ],
+          "hints": [
+            "One phrase is in verse 30 and answers ‘how often.’",
+            "The other is in verse 29 and describes the heart of the person who repents.",
+            "Tap “Yea, and as often as my people repent” and “and repenteth in the sincerity of his heart,”."
+          ],
+          "explanation": "The Lord gave no number: “as often as my people repent will I forgive them their trespasses against me.” The condition is the sincerity of the repentance (“repenteth in the sincerity of his heart”), not a count of how many times it has happened.",
+          "passage": "mosiah-26-29-30",
+          "chunks": [
+            {
+              "verse": 29,
+              "text": "Therefore I say unto you, Go;"
+            },
+            {
+              "verse": 29,
+              "text": "and whosoever transgresseth against me, him shall ye judge according to the sins which he has committed;"
+            },
+            {
+              "verse": 29,
+              "text": "and if he confess his sins before thee and me,"
+            },
+            {
+              "verse": 29,
+              "text": "and repenteth in the sincerity of his heart,"
+            },
+            {
+              "verse": 29,
+              "text": "him shall ye forgive, and I will forgive him also."
+            },
+            {
+              "verse": 30,
+              "text": "Yea, and as often as my people repent"
+            },
+            {
+              "verse": 30,
+              "text": "will I forgive them their trespasses against me."
+            }
+          ],
+          "targets": [
+            3,
+            5
+          ]
+        },
+        "medium": {
+          "type": "vocab-match",
+          "id": "often-vocab",
+          "prompt": "Match each phrase from these verses with its meaning. Read the example beside each one first.",
+          "sourceIds": [
+            "mosiah-26-29-30",
+            "moroni-6-8",
+            "matthew-18-21-22",
+            "luke-17-3-4"
+          ],
+          "hints": [
+            "Read each phrase in its verse before choosing.",
+            "‘Sincerity of his heart’ is about being honest and genuine; ‘real intent’ is about truly meaning to follow through.",
+            "Two meanings on the list describe limits that none of these verses set."
+          ],
+          "explanation": "‘As often as’ means every time; Mosiah 26:30 sets no number. ‘Sincerity of his heart’ and ‘real intent’ both describe genuine repentance, honest and meant. ‘Seventy times seven’ was the Savior’s answer to Peter’s ‘seven times,’ moving far past the limit Peter proposed. A ‘trespass’ is a wrong done against someone. None of these verses limits forgiveness to a number or to accidents.",
+          "pairs": [
+            {
+              "id": "often",
+              "term": "As often as",
+              "meaning": "Every time, with no fixed number",
+              "example": {
+                "text": "Yea, and as often as my people repent will I forgive them their trespasses against me.",
+                "sourceId": "mosiah-26-29-30"
+              }
+            },
+            {
+              "id": "sincerity",
+              "term": "Sincerity of his heart",
+              "meaning": "Honest and genuine, from the heart rather than just in words",
+              "example": {
+                "text": "and repenteth in the sincerity of his heart",
+                "sourceId": "mosiah-26-29-30"
+              }
+            },
+            {
+              "id": "intent",
+              "term": "Real intent",
+              "meaning": "Truly meaning to follow through, not pretending",
+              "example": {
+                "text": "But as oft as they repented and sought forgiveness, with real intent, they were forgiven.",
+                "sourceId": "moroni-6-8"
+              }
+            },
+            {
+              "id": "seventy",
+              "term": "Seventy times seven",
+              "meaning": "Far beyond the limit Peter suggested",
+              "example": {
+                "text": "I say not unto thee, Until seven times: but, Until seventy times seven.",
+                "sourceId": "matthew-18-21-22"
+              }
+            },
+            {
+              "id": "trespass",
+              "term": "Trespass",
+              "meaning": "A wrong done against someone",
+              "example": {
+                "text": "If thy brother trespass against thee, rebuke him; and if he repent, forgive him.",
+                "sourceId": "luke-17-3-4"
+              }
+            }
+          ],
+          "extraMeanings": [
+            "Up to a set number of times, and then no more",
+            "Only for mistakes made by accident"
+          ],
+          "match": "meaning"
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "often-connect",
+          "prompt": "Read the four passages side by side. Two are about how disciples forgive one another; two are about how the Lord and His Church forgive.",
+          "sourceIds": [
+            "matthew-18-21-22",
+            "luke-17-3-4",
+            "mosiah-26-29-30",
+            "moroni-6-8"
+          ],
+          "passages": [
+            "matthew-18-21-22",
+            "luke-17-3-4",
+            "mosiah-26-29-30",
+            "moroni-6-8"
+          ],
+          "hints": [
+            "Notice who is forgiving whom in each passage.",
+            "Matthew 18 and Luke 17 are the Savior teaching His disciples; Mosiah 26 is the Lord speaking of His own forgiveness; Moroni 6 describes the Church.",
+            "Luke 17:4 imagines seven returns in one day; Mosiah 26:30 sets no number; Mosiah 26:29 and Moroni 6:8 both ask for sincerity."
+          ],
+          "explanation": "Luke 17:4 imagines the same person returning “seven times in a day” saying “I repent,” and the Savior says, “thou shalt forgive him.” When Peter offered seven as a limit, the Savior answered, “Until seventy times seven.” Those passages teach disciples how to forgive. Mosiah 26:30 is the Lord describing His own forgiveness, and He sets no number at all. What Mosiah 26:29 and Moroni 6:8 ask for is sincerity: “the sincerity of his heart,” “real intent.”",
+          "questions": [
+            {
+              "id": "same-day",
+              "prompt": "Peter suggested forgiving “seven times.” What situation does Luke 17:4 describe?",
+              "options": [
+                {
+                  "id": "same-person",
+                  "text": "The same person wronging you seven times in one day and coming back each time saying, “I repent.”"
+                },
+                {
+                  "id": "limit",
+                  "text": "A limit of seven times a day, after which forgiveness stops.",
+                  "feedback": "Read Matthew 18:22 beside it. Did the Savior accept Peter’s number as a limit?"
+                },
+                {
+                  "id": "strangers",
+                  "text": "Forgiving strangers, not family or friends.",
+                  "feedback": "Who is doing the trespassing in Luke 17:3–4? Look for the word “brother.”"
+                }
+              ],
+              "correct": [
+                "same-person"
+              ]
+            },
+            {
+              "id": "lord-himself",
+              "prompt": "Which passage states how often the Lord Himself forgives?",
+              "options": [
+                {
+                  "id": "mosiah",
+                  "text": "Mosiah 26:30: “as often as my people repent will I forgive them”"
+                },
+                {
+                  "id": "matthew",
+                  "text": "Matthew 18:22: “Until seventy times seven”",
+                  "feedback": "Peter asked how often he should forgive his brother. Look for a passage where the Lord speaks about His own forgiveness."
+                },
+                {
+                  "id": "none",
+                  "text": "None of them. Scripture never says.",
+                  "feedback": "Read Mosiah 26:30. Who is speaking, and whose forgiveness is He describing?"
+                }
+              ],
+              "correct": [
+                "mosiah"
+              ]
+            },
+            {
+              "id": "condition",
+              "prompt": "What condition appears in both Mosiah 26:29 and Moroni 6:8?",
+              "options": [
+                {
+                  "id": "sincerity",
+                  "text": "Sincerity: “the sincerity of his heart” and “real intent”"
+                },
+                {
+                  "id": "number",
+                  "text": "A limit on the number of times",
+                  "feedback": "Look for a number in either verse. Is there one?"
+                },
+                {
+                  "id": "never-again",
+                  "text": "Never making the mistake again afterward",
+                  "feedback": "Does either verse say the person must never fall again? What do they ask for instead?"
+                }
+              ],
+              "correct": [
+                "sincerity"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "compare",
+          "id": "often-compare",
+          "prompt": "Weigh each statement against these passages. Some of these are common fears.",
+          "sourceIds": [
+            "mosiah-26-29-30",
+            "moroni-6-8",
+            "matthew-18-21-22",
+            "luke-17-3-4",
+            "dc-58-42-43"
+          ],
+          "hints": [
+            "For each statement, ask which passage speaks to it, and whether that passage is about the Lord’s forgiveness or a disciple’s.",
+            "One fear adds a conclusion the verses never draw. Another statement uses a passage about forgiving others as if it were about God.",
+            "‘Real intent’ describes the repentance, not a promise never to struggle again, so the fear about earlier repentance goes beyond these verses."
+          ],
+          "explanation": "The Lord’s own words contradict the fear that forgiveness runs out: “as often as my people repent.” They also contradict the idea that change doesn’t matter, because forgiveness is tied to sincere repentance, and D&C 58:43 adds that a person who repents “will confess them and forsake them.” The fear that a later mistake cancels an earlier repentance goes beyond these verses: they ask for “real intent” and nowhere say that a later struggle proves it was fake. Sincerity and forsaking sin both matter. Reading carefully also means noticing which passages are about forgiving others and which are about the Lord.",
+          "perspectives": [
+            {
+              "id": "limit",
+              "text": "God’s forgiveness has a limit, and repeating a sin uses it up.",
+              "voice": "A common fear",
+              "verdict": "contradicted",
+              "rationale": "The Lord: “as often as my people repent will I forgive them their trespasses against me.”"
+            },
+            {
+              "id": "not-real",
+              "text": "If I make the same mistake again, my earlier repentance must not have been real.",
+              "voice": "A common fear",
+              "verdict": "beyond",
+              "rationale": "Mosiah 26:29 and Moroni 6:8 ask for “sincerity” and “real intent” in the repentance itself. Forsaking sin matters too (D&C 58:43), but neither verse says that a later mistake proves an earlier repentance was false."
+            },
+            {
+              "id": "doesnt-matter",
+              "text": "Since God always forgives, it doesn’t matter whether I actually try to change.",
+              "voice": "A classmate",
+              "verdict": "contradicted",
+              "rationale": "Forgiveness in these verses is promised to those who repent “in the sincerity of his heart” and “with real intent,” and D&C 58:43 says a person who repents “will confess them and forsake them.”"
+            },
+            {
+              "id": "matthew-alone",
+              "text": "Matthew 18:22, by itself, states how often God forgives us.",
+              "voice": "A classmate",
+              "verdict": "beyond",
+              "rationale": "Matthew 18 answers Peter’s question about forgiving his brother. Mosiah 26:30 is where the Lord states how often He forgives."
+            },
+            {
+              "id": "keep-coming",
+              "text": "Forgiveness is offered to someone who keeps making the same mistake, as long as they keep sincerely repenting.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Luke 17:4 imagines the same person returning seven times in one day, and the Lord says He forgives “as often as my people repent.”"
+            }
+          ]
+        }
+      },
+      "insight": "Peter offered a limit, “seven times,” and the Savior answered, “Until seventy times seven.” Luke’s account even imagines the same person coming back seven times in one day. When the Lord spoke of His own forgiveness, He gave no number at all: “as often as my people repent will I forgive them.” The condition in these verses is sincere repentance (“real intent,” “the sincerity of his heart”). The Lord also says a person who repents “will confess them and forsake them” (D&C 58:43), but none of these verses treats a later struggle as proof that an earlier repentance was false.",
+      "concepts": [
+        "repentance",
+        "forgiveness-of-sins"
+      ],
+      "connections": [
+        {
+          "from": "scripture:mosiah-26-29-30",
+          "to": "question:again-and-again",
+          "relation": "answers",
+          "sourceIds": [
+            "mosiah-26-29-30"
+          ],
+          "note": "The Lord told Alma, “as often as my people repent will I forgive them their trespasses against me.”"
+        },
+        {
+          "from": "scripture:moroni-6-8",
+          "to": "scripture:mosiah-26-29-30",
+          "relation": "supports",
+          "sourceIds": [
+            "moroni-6-8"
+          ],
+          "note": "Moroni records that the Church forgave people as often as they repented and sought forgiveness with real intent."
+        },
+        {
+          "from": "scripture:matthew-18-21-22",
+          "to": "attribute:forgiveness",
+          "relation": "teaches",
+          "sourceIds": [
+            "matthew-18-21-22"
+          ],
+          "note": "When Peter asked whether he should forgive seven times, the Savior answered, “Until seventy times seven.”"
+        }
+      ],
+      "branchIds": [
+        "how-to-repent"
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "weakness-or-sin",
+      "title": "Weakness and sin",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "Some people wonder whether being imperfect means they are always sinning. Scripture and Church resources speak about weakness and about sin in different ways. Look closely at what each source says.",
+      "sourceIds": [
+        "ether-12-27",
+        "gs-sin",
+        "gospel-topics-repentance",
+        "nelson-do-better-be-better-2019",
+        "1-john-1-8-9",
+        "hebrews-4-14-16"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "weakness-sort",
+          "prompt": "Sort each example using the Guide to the Scriptures’ definition of sin, “Willful disobedience to God’s commandments.” Is it sin, or not sin in itself?",
+          "sourceIds": [
+            "ether-12-27",
+            "gs-sin",
+            "hebrews-4-14-16",
+            "gospel-topics-repentance",
+            "nelson-do-better-be-better-2019"
+          ],
+          "hints": [
+            "Ask of each example: is it a limitation the person didn’t choose, or a choice against something they know is right?",
+            "Being tempted isn’t the same as giving in. Look at Hebrews 4:15.",
+            "Five examples aren’t willful disobedience; three are choices against what the person knows is right."
+          ],
+          "explanation": "These sources suggest the difference is choice. The Lord says, “I give unto men weakness that they may be humble”: weakness is part of the mortal condition. The Guide to the Scriptures defines sin as “willful disobedience to God’s commandments.” Being tempted isn’t sin either: the Savior “was in all points tempted like as we are, yet without sin.” Real life isn’t always this tidy, and these sources don’t sort every case, but the distinction helps: weakness is something to bring to the Lord for strength, and sin is something to repent of.",
+          "categories": [
+            {
+              "id": "weakness",
+              "label": "Not sin in itself",
+              "description": "Weakness, a limit of mortal life, or a temptation not acted on. The Lord says, “I give unto men weakness.”"
+            },
+            {
+              "id": "sin",
+              "label": "Sin",
+              "description": "“Willful disobedience to God’s commandments” (Guide to the Scriptures)"
+            }
+          ],
+          "items": [
+            {
+              "id": "forget",
+              "text": "Forgetting an answer on a test even after studying hard",
+              "category": "weakness",
+              "why": "A limit of memory isn’t disobedience. It’s the kind of weakness Ether 12:27 says the Lord can make strong."
+            },
+            {
+              "id": "nervous",
+              "text": "Feeling nervous about speaking in front of people",
+              "category": "weakness",
+              "why": "Fear and nervousness are part of mortal life, not willful disobedience."
+            },
+            {
+              "id": "sick",
+              "text": "Having a body that gets sick or injured",
+              "category": "weakness",
+              "why": "Sickness and injury are conditions of mortal life, not choices against God’s commandments."
+            },
+            {
+              "id": "tempted",
+              "text": "Feeling tempted to do something you know is wrong",
+              "category": "weakness",
+              "why": "Being tempted isn’t sin: the Savior “was in all points tempted like as we are, yet without sin.” Giving in to it is a different matter."
+            },
+            {
+              "id": "not-perfect",
+              "text": "Not being perfect yet",
+              "category": "weakness",
+              "why": "Gospel Topics says that when God sent us to earth, “He knew that none of us would be perfect,” and President Nelson taught that the Lord “does not expect perfection from us at this point in our eternal progression.”"
+            },
+            {
+              "id": "lie",
+              "text": "Choosing to lie to get out of trouble, knowing it’s wrong",
+              "category": "sin",
+              "why": "Choosing what we know is wrong is “willful disobedience.”"
+            },
+            {
+              "id": "keep-doing",
+              "text": "Deciding to keep doing something you know God has asked you not to do",
+              "category": "sin",
+              "why": "This is willful disobedience to a commandment."
+            },
+            {
+              "id": "not-help",
+              "text": "Knowing you should help someone and deciding not to",
+              "category": "sin",
+              "why": "The Guide to the Scriptures cites James 4:17: “To him that knoweth to do good, and doeth it not, to him it is sin.”"
+            }
+          ]
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "weakness-connect",
+          "prompt": "Connect each statement with the source that supports it.",
+          "sourceIds": [
+            "ether-12-27",
+            "gs-sin",
+            "gospel-topics-repentance",
+            "nelson-do-better-be-better-2019",
+            "1-john-1-8-9",
+            "hebrews-4-14-16"
+          ],
+          "hints": [
+            "Each statement closely paraphrases one source. Look for the matching words.",
+            "One source on the right is about temptation, and no statement here matches it.",
+            "Weakness given: Ether 12:27. A definition: Guide to the Scriptures. None of us perfect: Gospel Topics. Not yet: President Nelson. Confessing: 1 John 1:8–9."
+          ],
+          "explanation": "Ether 12:27 says the Lord gives weakness “that they may be humble.” The Guide to the Scriptures defines sin as willful disobedience. Gospel Topics says God “knew that none of us would be perfect” and gave us His Son. President Nelson taught that the Lord “does not expect perfection from us at this point in our eternal progression.” And John writes that all of us have sins to confess, and that “he is faithful and just to forgive us our sins.”",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "gives",
+                "text": "God gives people weakness so they can be humble."
+              },
+              {
+                "id": "willful",
+                "text": "Sin is willful disobedience to God’s commandments."
+              },
+              {
+                "id": "knew",
+                "text": "God knew none of us would be perfect, so He provided a Savior."
+              },
+              {
+                "id": "not-yet",
+                "text": "The Lord does not expect perfection from us yet."
+              },
+              {
+                "id": "confess",
+                "text": "Everyone has sins to confess, and He is faithful to forgive them."
+              }
+            ]
+          },
+          "right": {
+            "label": "Source",
+            "items": [
+              {
+                "id": "ether",
+                "text": "Ether 12:27",
+                "sourceId": "ether-12-27"
+              },
+              {
+                "id": "gs",
+                "text": "Guide to the Scriptures: Sin",
+                "sourceId": "gs-sin"
+              },
+              {
+                "id": "gt",
+                "text": "Gospel Topics: Repentance",
+                "sourceId": "gospel-topics-repentance"
+              },
+              {
+                "id": "nelson",
+                "text": "President Russell M. Nelson",
+                "sourceId": "nelson-do-better-be-better-2019"
+              },
+              {
+                "id": "john",
+                "text": "1 John 1:8–9",
+                "sourceId": "1-john-1-8-9"
+              },
+              {
+                "id": "hebrews",
+                "text": "Hebrews 4:15",
+                "sourceId": "hebrews-4-14-16"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "gives",
+              "right": "ether",
+              "because": "Ether 12:27: “I give unto men weakness that they may be humble.”",
+              "clue": "In which source does the Lord speak about weakness in the first person?"
+            },
+            {
+              "left": "willful",
+              "right": "gs",
+              "because": "The Guide to the Scriptures defines sin as “Willful disobedience to God’s commandments.”",
+              "clue": "Which source is a definition?"
+            },
+            {
+              "left": "knew",
+              "right": "gt",
+              "because": "Gospel Topics: “When He sent us to earth, He knew that none of us would be perfect. So as part of His plan of salvation, He gave us His Son.”",
+              "clue": "Which source describes God’s plan and the gift of His Son?"
+            },
+            {
+              "left": "not-yet",
+              "right": "nelson",
+              "because": "President Nelson: “The Lord does not expect perfection from us at this point in our eternal progression.”",
+              "clue": "Which source is a latter-day prophet’s teaching?"
+            },
+            {
+              "left": "confess",
+              "right": "john",
+              "because": "1 John 1:8–9: “If we say that we have no sin, we deceive ourselves… If we confess our sins, he is faithful and just to forgive us our sins.”",
+              "clue": "Which passage speaks of confessing sins?"
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "weakness-compare",
+          "prompt": "A common question is whether being imperfect is itself a sin. Weigh each statement against these sources.",
+          "sourceIds": [
+            "ether-12-27",
+            "gs-sin",
+            "gospel-topics-repentance",
+            "nelson-do-better-be-better-2019",
+            "1-john-1-8-9"
+          ],
+          "hints": [
+            "Check each statement against the definition of sin and against what Ether 12:27 says about weakness.",
+            "One statement adds a conclusion about faith that the sources never draw. That’s a ‘goes beyond.’",
+            "Imperfection isn’t the same as willful disobedience; repentance is described as a process; and the Lord promises to make weak things strong without saying how soon."
+          ],
+          "explanation": "These sources suggest that being imperfect isn’t the same as sinning: the Lord gives weakness, while sin is “willful disobedience.” That doesn’t make weakness unimportant, because the Lord promises to “make weak things become strong,” though He doesn’t say how soon. Everyone does sin and need to repent, and President Nelson calls repentance “a process,” so repenting daily isn’t failure. These sources don’t sort every passing feeling into weakness or sin. When it’s unclear, a person can simply bring it to Heavenly Father in prayer.",
+          "perspectives": [
+            {
+              "id": "existing",
+              "text": "Being imperfect means I’m always sinning.",
+              "voice": "A common worry",
+              "verdict": "contradicted",
+              "rationale": "Ether 12:27 says the Lord gives weakness “that they may be humble,” and the Guide to the Scriptures defines sin as “willful disobedience.” Gospel Topics says God knew “none of us would be perfect.” These sources suggest that imperfection and willful disobedience aren’t the same thing."
+            },
+            {
+              "id": "everyone",
+              "text": "Everyone sins, so everyone needs to repent.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "1 John 1:8: “If we say that we have no sin, we deceive ourselves.” President Nelson asked, “Does everyone need to repent?” and answered, “The answer is yes.”"
+            },
+            {
+              "id": "weakness-ok",
+              "text": "Weakness doesn’t matter, since only sin needs the Lord’s help.",
+              "voice": "A classmate",
+              "verdict": "contradicted",
+              "rationale": "The Lord shows people their weakness and promises, “then will I make weak things become strong unto them.” He cares about our weaknesses and offers grace to change them."
+            },
+            {
+              "id": "slow-change",
+              "text": "If a weakness isn’t made strong right away, I must not have enough faith.",
+              "voice": "A common worry",
+              "verdict": "beyond",
+              "rationale": "Ether 12:27 promises to “make weak things become strong” for those who humble themselves and have faith, but it doesn’t say how soon or in what way. These sources don’t measure anyone’s faith by how quickly a weakness changes."
+            },
+            {
+              "id": "daily",
+              "text": "Needing to repent every day is a sign that repentance isn’t working.",
+              "voice": "A common worry",
+              "verdict": "contradicted",
+              "rationale": "President Nelson: “Repentance is not an event; it is a process.” Gospel Topics: “We can repent daily of even minor mistakes to help us continually grow closer to God.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "weakness-principle",
+          "prompt": "Build a principle that brings these sources together. Leave out the fragments that the sources contradict.",
+          "sourceIds": [
+            "ether-12-27",
+            "gs-sin",
+            "1-john-1-8-9",
+            "nelson-do-better-be-better-2019",
+            "hebrews-4-14-16",
+            "gospel-topics-repentance"
+          ],
+          "hints": [
+            "Begin with what the Lord says about weakness, then add the Guide to the Scriptures’ definition of sin.",
+            "Then add what the Savior offers for each: Ether 12:27 speaks of grace, and 1 John 1:9 speaks of forgiveness.",
+            "Five fragments make the statement. The three left over are each contradicted by President Nelson, Hebrews 4:15, or Ether 12:27."
+          ],
+          "explanation": "Ether 12:27 says the Lord gives weakness “that they may be humble” and that “my grace is sufficient for all men that humble themselves before me.” The Guide to the Scriptures defines sin as willful disobedience, which we confess and He forgives (1 John 1:9), and Gospel Topics says, “We can repent daily of even minor mistakes to help us continually grow closer to God.” President Nelson’s teaching that the Lord “does not expect perfection from us at this point” rules out waiting to be perfect first, Hebrews 4:15 rules out treating temptation as sin, and Ether 12:27 rules out the idea that weakness needs no help.",
+          "fragments": [
+            {
+              "id": "gives",
+              "text": "The Lord gives people weakness so they can be humble,"
+            },
+            {
+              "id": "willful",
+              "text": "while sin is willful disobedience to God’s commandments."
+            },
+            {
+              "id": "grace",
+              "text": "Jesus Christ offers grace to make weak things strong"
+            },
+            {
+              "id": "forgive",
+              "text": "and forgiveness when we confess our sins,"
+            },
+            {
+              "id": "daily",
+              "text": "so we can keep coming to Him every day."
+            },
+            {
+              "id": "perfect-first",
+              "text": "so we must become perfect before He will help,"
+            },
+            {
+              "id": "tempted-sin",
+              "text": "and being tempted is already the same as sinning,"
+            },
+            {
+              "id": "no-help",
+              "text": "which means weakness needs no help from Him."
+            }
+          ],
+          "solution": [
+            "gives",
+            "willful",
+            "grace",
+            "forgive",
+            "daily"
+          ],
+          "alternatives": [
+            [
+              "grace",
+              "forgive",
+              "daily",
+              "gives",
+              "willful"
+            ]
+          ],
+          "statement": "The Lord gives people weakness so they can be humble, while sin is willful disobedience to God’s commandments. Jesus Christ offers grace to make weak things strong and forgiveness when we confess our sins, so we can keep coming to Him every day."
+        }
+      },
+      "insight": "Ether 12:27 says the Lord gives people weakness “that they may be humble,” and promises to “make weak things become strong” for those who come to Him. The Guide to the Scriptures defines sin as “willful disobedience to God’s commandments.” Together, these sources suggest that being imperfect isn’t the same as rebelling. Gospel Topics says God knew “none of us would be perfect,” and President Nelson taught that the Lord “does not expect perfection from us at this point in our eternal progression.” Everyone still has sins to confess (1 John 1:8–9), so daily repentance isn’t a sign of failure; it is how we keep coming to Him.",
+      "concepts": [
+        "weakness",
+        "sin",
+        "grace",
+        "repentance"
+      ],
+      "connections": [
+        {
+          "from": "scripture:ether-12-27",
+          "to": "concept:weakness",
+          "relation": "teaches",
+          "sourceIds": [
+            "ether-12-27"
+          ],
+          "note": "The Lord says He gives people weakness that they may be humble, and makes weak things strong for those who come to Him."
+        },
+        {
+          "from": "concept:weakness",
+          "to": "concept:sin",
+          "relation": "contrasts-with",
+          "sourceIds": [
+            "ether-12-27",
+            "gs-sin"
+          ],
+          "note": "The Lord says He gives people weakness that they may be humble; the Guide to the Scriptures defines sin as willful disobedience to His commandments."
+        },
+        {
+          "from": "scripture:1-john-1-8-9",
+          "to": "concept:forgiveness-of-sins",
+          "relation": "teaches",
+          "sourceIds": [
+            "1-john-1-8-9"
+          ],
+          "note": "John wrote that if we confess our sins, He is faithful and just to forgive us."
+        }
+      ],
+      "branchIds": [
+        "am-i-good-enough"
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "knowing-forgiven",
+      "title": "How does God show forgiveness?",
+      "phase": "discover",
+      "method": "analytical",
+      "intro": "A common question is how God shows that we’ve been forgiven. The scriptures describe several people who received a remission of their sins, and their experiences weren’t identical. Notice what each received, and what each one’s assurance rested on.",
+      "sourceIds": [
+        "enos-1-5-8",
+        "mosiah-4-2-3",
+        "alma-36-17-21",
+        "dc-58-42-43"
+      ],
+      "activities": {
+        "easy": {
+          "type": "evidence-connect",
+          "id": "forgiven-match",
+          "prompt": "Connect each person or group with what they experienced when they were forgiven.",
+          "sourceIds": [
+            "enos-1-5-8",
+            "mosiah-4-2-3",
+            "alma-36-17-21",
+            "dc-58-42-43"
+          ],
+          "hints": [
+            "Read each passage and look for what happened right after the person or group pleaded for forgiveness.",
+            "One experience on the right isn’t in any of these passages.",
+            "Enos: a voice. Benjamin’s people: the Spirit, joy, and peace. Alma: mercy and relief from torment. Anyone who repents: the Lord remembers no more."
+          ],
+          "explanation": "Enos heard a voice and “knew that God could not lie.” King Benjamin’s people felt the Spirit and were “filled with joy,” with “peace of conscience.” Alma cried to Jesus for mercy and was “harrowed up by the memory of my sins no more.” And to anyone who has repented, the Lord promises, “I, the Lord, remember them no more.” No one in these passages is promised never to be tempted again.",
+          "left": {
+            "label": "Who",
+            "items": [
+              {
+                "id": "enos",
+                "text": "Enos",
+                "sourceId": "enos-1-5-8"
+              },
+              {
+                "id": "benjamin",
+                "text": "King Benjamin’s people",
+                "sourceId": "mosiah-4-2-3"
+              },
+              {
+                "id": "alma",
+                "text": "Alma the Younger",
+                "sourceId": "alma-36-17-21"
+              },
+              {
+                "id": "anyone",
+                "text": "Anyone who has repented",
+                "sourceId": "dc-58-42-43"
+              }
+            ]
+          },
+          "right": {
+            "label": "What they experienced",
+            "items": [
+              {
+                "id": "voice",
+                "text": "Heard a voice, knew God could not lie, and his guilt was swept away"
+              },
+              {
+                "id": "spirit",
+                "text": "The Spirit came upon them; they were filled with joy and had peace of conscience"
+              },
+              {
+                "id": "mercy",
+                "text": "Cried to Jesus for mercy, and was no longer harrowed up by the memory of his sins"
+              },
+              {
+                "id": "remember",
+                "text": "The Lord promises to remember their sins no more"
+              },
+              {
+                "id": "never-tempted",
+                "text": "Was promised he would never be tempted again"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "enos",
+              "right": "voice",
+              "because": "Enos 1:5–6: “there came a voice unto me… Enos, thy sins are forgiven thee… my guilt was swept away.”",
+              "clue": "Which experience includes words spoken to him?"
+            },
+            {
+              "left": "benjamin",
+              "right": "spirit",
+              "because": "Mosiah 4:3: “the Spirit of the Lord came upon them, and they were filled with joy, having received a remission of their sins, and having peace of conscience.”",
+              "clue": "Read Mosiah 4:3. What came upon the people?"
+            },
+            {
+              "left": "alma",
+              "right": "mercy",
+              "because": "Alma 36:18–19: “O Jesus, thou Son of God, have mercy on me… I was harrowed up by the memory of my sins no more.”",
+              "clue": "Whom did Alma cry out to in verse 18?"
+            },
+            {
+              "left": "anyone",
+              "right": "remember",
+              "because": "D&C 58:42: “he who has repented of his sins, the same is forgiven, and I, the Lord, remember them no more.”",
+              "clue": "Which passage is a promise to everyone, not an account of one person?"
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "forgiven-connect",
+          "prompt": "Look past the differences between these accounts. What did each person’s forgiveness rest on?",
+          "sourceIds": [
+            "enos-1-5-8",
+            "mosiah-4-2-3",
+            "alma-36-17-21"
+          ],
+          "passages": [
+            "enos-1-5-8",
+            "mosiah-4-2-3",
+            "alma-36-17-21"
+          ],
+          "hints": [
+            "Read the end of each passage: what reason or source does it give for the forgiveness?",
+            "Look for the name of Jesus Christ in each passage.",
+            "Each experience centers on faith in Jesus Christ, and Enos’s peace rested on knowing that “God could not lie.”"
+          ],
+          "explanation": "The experiences differ, but each centers on Jesus Christ: “Because of thy faith in Christ”; “because of the exceeding faith which they had in Jesus Christ”; “O Jesus, thou Son of God, have mercy on me.” And Enos ties his peace to something steady: he “knew that God could not lie; wherefore, my guilt was swept away.” His assurance was trust in what God had said.",
+          "questions": [
+            {
+              "id": "how-done",
+              "prompt": "Enos asked, “Lord, how is it done?” What answer did he receive?",
+              "options": [
+                {
+                  "id": "faith",
+                  "text": "“Because of thy faith in Christ, whom thou hast never before heard nor seen.”"
+                },
+                {
+                  "id": "long-prayer",
+                  "text": "Because his prayer had lasted long enough.",
+                  "feedback": "Read verse 8. What does the Lord name as the reason?"
+                },
+                {
+                  "id": "never-sinned",
+                  "text": "Because he had never sinned seriously.",
+                  "feedback": "Verse 6 speaks of his “guilt.” What does verse 8 credit instead?"
+                }
+              ],
+              "correct": [
+                "faith"
+              ]
+            },
+            {
+              "id": "common",
+              "prompt": "What do Enos, King Benjamin’s people, and Alma have in common?",
+              "options": [
+                {
+                  "id": "christ",
+                  "text": "Each turned to Jesus Christ: Enos’s “faith in Christ,” the people’s faith “in Jesus Christ who should come,” and Alma’s cry, “O Jesus, thou Son of God.”"
+                },
+                {
+                  "id": "angel",
+                  "text": "Each saw an angel announce their forgiveness.",
+                  "feedback": "Look at what actually happens in each passage after they plead."
+                },
+                {
+                  "id": "forgot",
+                  "text": "Each had to wait until they could no longer remember the sin.",
+                  "feedback": "Alma tells this story to his son years later. Does he still remember his sins?"
+                }
+              ],
+              "correct": [
+                "christ"
+              ]
+            },
+            {
+              "id": "enos-knew",
+              "prompt": "Enos 1:6 says, “I, Enos, knew that God could not lie; wherefore, my guilt was swept away.” What was his assurance based on?",
+              "options": [
+                {
+                  "id": "word",
+                  "text": "Trust in God’s word: God had told him he was forgiven, and God does not lie."
+                },
+                {
+                  "id": "feeling",
+                  "text": "A feeling that would never fade.",
+                  "feedback": "What does the word “wherefore” connect his peace to?"
+                },
+                {
+                  "id": "proof",
+                  "text": "Proof that he would never sin again.",
+                  "feedback": "Verse 6 gives one reason his guilt was swept away. What is it?"
+                }
+              ],
+              "correct": [
+                "word"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "forgiven-compare",
+          "prompt": "Weigh each statement about knowing you’re forgiven against these four passages.",
+          "sourceIds": [
+            "enos-1-5-8",
+            "mosiah-4-2-3",
+            "alma-36-17-21",
+            "dc-58-42-43"
+          ],
+          "hints": [
+            "Separate what these passages say happened to particular people from what they promise to everyone.",
+            "D&C 58:42 is a promise. Does it mention a voice, a feeling, or a sign?",
+            "Experiences vary, Alma still remembered his sins, and none of the passages makes forgiveness depend on a later feeling."
+          ],
+          "explanation": "The scriptures describe forgiveness in several ways (a voice, the Spirit, joy, peace of conscience, relief from torment), so no single sign is required. Being forgiven doesn’t erase memory: Alma remembered his sins but was no longer “harrowed up” by them. Lingering feelings are real, but these passages never make forgiveness depend on them. D&C 58:42 is the Lord’s promise: “he who has repented of his sins, the same is forgiven.”",
+          "perspectives": [
+            {
+              "id": "voice",
+              "text": "If I don’t hear a voice like Enos did, I haven’t been forgiven.",
+              "voice": "A common worry",
+              "verdict": "contradicted",
+              "rationale": "D&C 58:42 says “he who has repented of his sins, the same is forgiven,” with no mention of a voice, and Benjamin’s people and Alma experienced forgiveness in other ways."
+            },
+            {
+              "id": "forget",
+              "text": "Being forgiven means I’ll forget I ever sinned.",
+              "voice": "A common idea",
+              "verdict": "contradicted",
+              "rationale": "Alma tells his son about his sins years later, so he remembers them, but he says he “was harrowed up by the memory of my sins no more.” In D&C 58:42 it is the Lord who will “remember them no more.”"
+            },
+            {
+              "id": "peace",
+              "text": "Joy and peace of conscience are among the ways people in scripture experienced forgiveness.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Mosiah 4:3: “they were filled with joy, having received a remission of their sins, and having peace of conscience.”"
+            },
+            {
+              "id": "same-way",
+              "text": "Everyone experiences forgiveness in exactly the same way.",
+              "voice": "A common idea",
+              "verdict": "contradicted",
+              "rationale": "Enos heard a voice; Benjamin’s people felt the Spirit, joy, and peace; Alma was released from torment and filled with joy. The accounts themselves differ."
+            },
+            {
+              "id": "still-bad",
+              "text": "If I still feel bad about a sin after repenting, God hasn’t forgiven me.",
+              "voice": "A common worry",
+              "verdict": "beyond",
+              "rationale": "These passages describe what people experienced, but none of them says forgiveness depends on how a person feels afterward. D&C 58:42 grounds forgiveness in the Lord’s promise to the one who has repented."
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "forgiven-principle",
+          "prompt": "Build a statement that all four passages support together.",
+          "sourceIds": [
+            "enos-1-5-8",
+            "mosiah-4-2-3",
+            "alma-36-17-21",
+            "dc-58-42-43"
+          ],
+          "hints": [
+            "Start with what the accounts show about variety.",
+            "Then name what every account centers on, and the promise in D&C 58:42.",
+            "Five fragments make the statement. The others require a feeling, require forgetting, or set a limit, and the passages support none of those."
+          ],
+          "explanation": "Enos, Benjamin’s people, and Alma each experienced forgiveness differently, but each turned to Jesus Christ, and the Lord’s promise in D&C 58:42 doesn’t depend on any one experience: “I, the Lord, remember them no more.” No passage requires a strong feeling, requires forgetting, or sets a number of times after which forgiveness stops.",
+          "fragments": [
+            {
+              "id": "ways",
+              "text": "People in scripture experienced forgiveness in different ways,"
+            },
+            {
+              "id": "list",
+              "text": "through a voice, the Spirit, joy, or peace of conscience,"
+            },
+            {
+              "id": "christ",
+              "text": "but each turned to Jesus Christ,"
+            },
+            {
+              "id": "promise",
+              "text": "and the Lord promises"
+            },
+            {
+              "id": "remember",
+              "text": "to remember repented sins no more."
+            },
+            {
+              "id": "feeling",
+              "text": "so forgiveness must always come as a strong feeling,"
+            },
+            {
+              "id": "forget",
+              "text": "and only after the person can no longer remember the sin,"
+            },
+            {
+              "id": "too-many",
+              "text": "because some sins have been repeated too often to forgive."
+            }
+          ],
+          "solution": [
+            "ways",
+            "list",
+            "christ",
+            "promise",
+            "remember"
+          ],
+          "statement": "People in scripture experienced forgiveness in different ways, through a voice, the Spirit, joy, or peace of conscience, but each turned to Jesus Christ, and the Lord promises to remember repented sins no more."
+        }
+      },
+      "insight": "Enos heard a voice; King Benjamin’s people felt the Spirit, joy, and “peace of conscience”; Alma was no longer “harrowed up by the memory” of his sins. Their experiences differed, but each centered on Jesus Christ (“Because of thy faith in Christ”), and these accounts suggest that assurance can rest on something steadier than a feeling. Enos “knew that God could not lie,” and the Lord’s promise is plain: “he who has repented of his sins, the same is forgiven, and I, the Lord, remember them no more.” Scripture doesn’t promise one particular sign of forgiveness. It promises forgiveness to everyone who repents.",
+      "concepts": [
+        "forgiveness-of-sins",
+        "faith",
+        "holy-ghost",
+        "jesus-christ"
+      ],
+      "connections": [
+        {
+          "from": "scripture:enos-1-5-8",
+          "to": "concept:forgiveness-of-sins",
+          "relation": "illustrates",
+          "sourceIds": [
+            "enos-1-5-8"
+          ],
+          "note": "When Enos asked how his guilt had been swept away, the Lord answered, “Because of thy faith in Christ.”"
+        },
+        {
+          "from": "scripture:mosiah-4-2-3",
+          "to": "concept:holy-ghost",
+          "relation": "illustrates",
+          "sourceIds": [
+            "mosiah-4-2-3"
+          ],
+          "note": "The Spirit of the Lord came upon King Benjamin’s people, and they received a remission of their sins with joy and peace of conscience."
+        },
+        {
+          "from": "scripture:dc-58-42-43",
+          "to": "question:again-and-again",
+          "relation": "answers",
+          "sourceIds": [
+            "dc-58-42-43"
+          ],
+          "note": "The Lord promises that whoever has repented is forgiven, and that He remembers those sins no more."
+        }
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "keep-on-trying",
+      "title": "Saints who keep on trying",
+      "phase": "understand",
+      "method": "analytical",
+      "intro": "Even prophets felt the weight of sins that kept returning. Nephi wrote a prayer about it. Read it alongside what the New Testament says about the Savior and temptation, and what latter-day leaders teach about repentance as a process.",
+      "sourceIds": [
+        "2-nephi-4-17-19",
+        "2-nephi-4-28-30",
+        "hebrews-2-17-18",
+        "hebrews-4-14-16",
+        "mosiah-4-27",
+        "renlund-keep-on-trying-2015",
+        "nelson-do-better-be-better-2019"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "trying-sort",
+          "prompt": "Nephi’s prayer moves between two kinds of statements. Sort each line: is Nephi grieving over his sins, or turning toward trust and change?",
+          "sourceIds": [
+            "2-nephi-4-17-19",
+            "2-nephi-4-28-30"
+          ],
+          "hints": [
+            "Read 2 Nephi 4:17–19 first, then 4:28–30.",
+            "The word “nevertheless” in verse 19 marks a turn.",
+            "Four lines grieve over sin; four turn toward trust, resolve, and rejoicing."
+          ],
+          "explanation": "Nephi, a prophet, grieved honestly: “O wretched man that I am!” and “the sins which do so easily beset me.” He didn’t stay there. “Nevertheless, I know in whom I have trusted,” he wrote, and later, “Awake, my soul! No longer droop in sin. Rejoice, O my heart.” Both kinds of statements belong to the same faithful prayer.",
+          "categories": [
+            {
+              "id": "grief",
+              "label": "Grieving over sin"
+            },
+            {
+              "id": "trust",
+              "label": "Turning toward trust and change"
+            }
+          ],
+          "items": [
+            {
+              "id": "wretched",
+              "text": "“O wretched man that I am!”",
+              "category": "grief",
+              "why": "In verse 17 Nephi cries out over his sins and weakness."
+            },
+            {
+              "id": "grieveth",
+              "text": "“my soul grieveth because of mine iniquities.”",
+              "category": "grief",
+              "why": "Verse 17: Nephi is honest about his sorrow for sin."
+            },
+            {
+              "id": "beset",
+              "text": "“the sins which do so easily beset me”",
+              "category": "grief",
+              "why": "Verse 18 describes sins that keep surrounding him."
+            },
+            {
+              "id": "groaneth",
+              "text": "“when I desire to rejoice, my heart groaneth because of my sins”",
+              "category": "grief",
+              "why": "Verse 19: his sins weigh on him even when he wants to rejoice."
+            },
+            {
+              "id": "trusted",
+              "text": "“nevertheless, I know in whom I have trusted.”",
+              "category": "trust",
+              "why": "Verse 19 turns on the word “nevertheless.”"
+            },
+            {
+              "id": "awake",
+              "text": "“Awake, my soul! No longer droop in sin.”",
+              "category": "trust",
+              "why": "In verse 28 Nephi resolves to change."
+            },
+            {
+              "id": "rejoice",
+              "text": "“Rejoice, O my heart, and cry unto the Lord”",
+              "category": "trust",
+              "why": "Verse 30: Nephi turns to praise and prayer."
+            },
+            {
+              "id": "rock",
+              "text": "“my God, and the rock of my salvation”",
+              "category": "trust",
+              "why": "Verse 30: Nephi names the Lord as his sure foundation."
+            }
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "trying-clue",
+          "prompt": "Examine each clue, then decide what they suggest about someone who keeps struggling with the same sin.",
+          "sourceIds": [
+            "2-nephi-4-17-19",
+            "2-nephi-4-28-30",
+            "nelson-do-better-be-better-2019",
+            "renlund-keep-on-trying-2015"
+          ],
+          "hints": [
+            "Notice that the first two clues come from the same prophet.",
+            "Elder Renlund names a thought that does not come from the Holy Ghost. What is it?",
+            "Repentance is a process, God cares about who we are becoming, and the idea that it’s too late doesn’t come from the Spirit."
+          ],
+          "explanation": "Nephi was honest about sins that “do so easily beset me” and also determined: “Awake, my soul!” President Nelson described repentance as “a process,” and Elder Renlund taught that “the moment we decide to try again, the Atonement of Christ can help us,” adding that “it is not the Holy Ghost that tells us we’re so far gone that we might as well give up.” A repeated struggle is a reason to keep turning to the Lord, not a reason to stop.",
+          "clues": [
+            {
+              "id": "beset",
+              "title": "Nephi’s struggle",
+              "text": "2 Nephi 4:18: “I am encompassed about, because of the temptations and the sins which do so easily beset me.”",
+              "sourceId": "2-nephi-4-17-19"
+            },
+            {
+              "id": "awake",
+              "title": "Nephi’s resolve",
+              "text": "2 Nephi 4:28: “Awake, my soul! No longer droop in sin.”",
+              "sourceId": "2-nephi-4-28-30"
+            },
+            {
+              "id": "process",
+              "title": "A process",
+              "text": "President Russell M. Nelson: “Repentance is not an event; it is a process.”",
+              "sourceId": "nelson-do-better-be-better-2019"
+            },
+            {
+              "id": "becoming",
+              "title": "Who we are becoming",
+              "text": "Elder Dale G. Renlund: “God cares a lot more about who we are and who we are becoming than about who we once were.”",
+              "sourceId": "renlund-keep-on-trying-2015"
+            },
+            {
+              "id": "give-up",
+              "title": "Not the Spirit’s voice",
+              "text": "Elder Renlund: “the moment we decide to try again, the Atonement of Christ can help us. And we need to remember that it is not the Holy Ghost that tells us we’re so far gone that we might as well give up.”",
+              "sourceId": "renlund-keep-on-trying-2015"
+            }
+          ],
+          "question": {
+            "id": "trying-meaning",
+            "prompt": "What do these clues suggest about someone who keeps struggling with the same sin?",
+            "options": [
+              {
+                "id": "keep-turning",
+                "text": "Struggling again doesn’t disqualify them. The thought that they’re too far gone doesn’t come from the Holy Ghost, and they can keep turning to the Lord."
+              },
+              {
+                "id": "no-point",
+                "text": "If even Nephi struggled, there’s no point in trying to change.",
+                "feedback": "Read 2 Nephi 4:28 again. What did Nephi tell his own soul to do?"
+              },
+              {
+                "id": "once",
+                "text": "Real repentance happens once and never needs to be repeated.",
+                "feedback": "How does President Nelson describe repentance: as an event, or as a process?"
+              },
+              {
+                "id": "past",
+                "text": "God cares mostly about the mistakes in someone’s past.",
+                "feedback": "Look at the clue about who we are becoming. What does Elder Renlund say God cares about more?"
+              }
+            ],
+            "correct": [
+              "keep-turning"
+            ]
+          }
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "trying-connect",
+          "prompt": "Read Nephi’s prayer alongside two passages from Hebrews about the Savior.",
+          "sourceIds": [
+            "2-nephi-4-17-19",
+            "2-nephi-4-28-30",
+            "hebrews-2-17-18",
+            "hebrews-4-14-16"
+          ],
+          "passages": [
+            "2-nephi-4-17-19",
+            "2-nephi-4-28-30",
+            "hebrews-2-17-18",
+            "hebrews-4-14-16"
+          ],
+          "hints": [
+            "Compare the tone of 2 Nephi 4:17 with 4:30.",
+            "Hebrews 2:18 and 4:15 both describe the Savior’s own experience with temptation.",
+            "Nephi kept praying while he struggled; the Savior was tempted and can succour the tempted; and we come to Him boldly to obtain mercy."
+          ],
+          "explanation": "Nephi moved from “O wretched man that I am!” to “Rejoice, O my heart, and cry unto the Lord,” still admitting his struggle (“Do not anger again”). Hebrews explains why that kind of prayer makes sense: the Savior “hath suffered being tempted” and “is able to succour them that are tempted.” Because He was “in all points tempted like as we are, yet without sin,” we can “come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.”",
+          "questions": [
+            {
+              "id": "movement",
+              "prompt": "How does Nephi move from 2 Nephi 4:17–19 to 4:28–30?",
+              "options": [
+                {
+                  "id": "grief-to-joy",
+                  "text": "From grief over his sins to rejoicing and crying unto the Lord, while still admitting that he struggles."
+                },
+                {
+                  "id": "never-tempted",
+                  "text": "From sinning to never being tempted again.",
+                  "feedback": "Verse 29 says, “Do not anger again because of mine enemies.” Does it sound as though temptation has disappeared?"
+                },
+                {
+                  "id": "doubt",
+                  "text": "From trusting God to doubting Him.",
+                  "feedback": "Look at the end of verse 19 and at verse 30. What does Nephi say about trust?"
+                }
+              ],
+              "correct": [
+                "grief-to-joy"
+              ]
+            },
+            {
+              "id": "succour",
+              "prompt": "Hebrews 2:18 says, “in that he himself hath suffered being tempted, he is able to succour them that are tempted.” What does this mean for someone who keeps facing the same temptation?",
+              "options": [
+                {
+                  "id": "helps",
+                  "text": "The Savior knows temptation from experience and is able to help them in it."
+                },
+                {
+                  "id": "same-as-sin",
+                  "text": "Being tempted is the same as sinning.",
+                  "feedback": "Hebrews 4:15 says He was tempted “yet without sin.” Could being tempted be the same as sinning?"
+                },
+                {
+                  "id": "only-untempted",
+                  "text": "The Savior helps only people who are no longer tempted.",
+                  "feedback": "Whom does Hebrews 2:18 say He is able to succour?"
+                }
+              ],
+              "correct": [
+                "helps"
+              ]
+            },
+            {
+              "id": "boldly",
+              "prompt": "Hebrews 4:16 says to “come boldly unto the throne of grace, that we may obtain mercy.” How does that fit Nephi’s “O wretched man that I am”?",
+              "options": [
+                {
+                  "id": "confidence",
+                  "text": "Nephi’s grief didn’t stop him from crying unto the Lord, and Hebrews invites the same confidence in coming to Him."
+                },
+                {
+                  "id": "feel-good",
+                  "text": "Only people who feel good about themselves may come to God.",
+                  "feedback": "Hebrews says we come “that we may obtain mercy.” Who needs mercy?"
+                },
+                {
+                  "id": "pretend",
+                  "text": "Coming boldly means pretending we haven’t sinned.",
+                  "feedback": "Nephi named his sins plainly in his prayer. Did that keep him from coming to the Lord?"
+                }
+              ],
+              "correct": [
+                "confidence"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "compare",
+          "id": "trying-compare",
+          "prompt": "Weigh each statement against everything in this step: Nephi’s prayer, Hebrews, Mosiah 4:27, and the teachings of President Nelson and Elder Renlund.",
+          "sourceIds": [
+            "2-nephi-4-17-19",
+            "2-nephi-4-28-30",
+            "mosiah-4-27",
+            "nelson-do-better-be-better-2019",
+            "renlund-keep-on-trying-2015"
+          ],
+          "hints": [
+            "Look for the source that speaks most directly to each statement.",
+            "Two statements treat patience as if effort didn’t matter, or effort as if change had to be instant. Mosiah 4:27 balances both.",
+            "Every statement but one is contradicted; the supported one combines Nephi’s grief with his resolve."
+          ],
+          "explanation": "Elder Renlund taught that the moment we decide to try again, the Atonement of Christ can help, so coming back is never pointless. That doesn’t make change optional: President Nelson said the Lord “does expect us to become increasingly pure,” and Mosiah 4:27 asks us to be “diligent.” It doesn’t make change instant either: “it is not requisite that a man should run faster than he has strength.” Nephi shows the balance: honest grief, real resolve, and trust in the Lord.",
+          "perspectives": [
+            {
+              "id": "pointless",
+              "text": "Coming back to God about the same sin again and again is pointless.",
+              "voice": "A common fear",
+              "verdict": "contradicted",
+              "rationale": "Elder Renlund: “Even if we’ve been a conscious, deliberate sinner or have repeatedly faced failure and disappointment, the moment we decide to try again, the Atonement of Christ can help us.”"
+            },
+            {
+              "id": "still-matters",
+              "text": "Trying again doesn’t mean sin doesn’t matter: Nephi grieved over his sins and resolved to change.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Nephi wrote “my soul grieveth because of mine iniquities” and “Awake, my soul! No longer droop in sin.”"
+            },
+            {
+              "id": "perfect-now",
+              "text": "God expects me to be perfect right now.",
+              "voice": "A common fear",
+              "verdict": "contradicted",
+              "rationale": "President Nelson: “The Lord does not expect perfection from us at this point in our eternal progression. But He does expect us to become increasingly pure.”"
+            },
+            {
+              "id": "all-at-once",
+              "text": "Change has to happen all at once, or it doesn’t count.",
+              "voice": "A common idea",
+              "verdict": "contradicted",
+              "rationale": "Mosiah 4:27: “it is not requisite that a man should run faster than he has strength.” President Nelson spoke of “doing and being a little better each day.”"
+            },
+            {
+              "id": "no-effort",
+              "text": "Since a saint is just a sinner who keeps trying, it doesn’t matter whether I actually change.",
+              "voice": "A classmate",
+              "verdict": "contradicted",
+              "rationale": "President Nelson taught that the Lord “does expect us to become increasingly pure,” and Mosiah 4:27 adds that “it is expedient that he should be diligent.”"
+            }
+          ]
+        }
+      },
+      "insight": "Nephi, a prophet, wrote about “the sins which do so easily beset me,” and then, “nevertheless, I know in whom I have trusted.” He grieved, and he resolved: “Awake, my soul! No longer droop in sin.” The Savior “hath suffered being tempted” and “is able to succour them that are tempted.” President Nelson called repentance “a process,” and Elder Renlund taught that God “cares that we keep on trying.” Struggling again isn’t proof that repentance has failed, and Elder Renlund reminds us that the thought that we’re too far gone doesn’t come from the Holy Ghost.",
+      "concepts": [
+        "repentance",
+        "grace",
+        "weakness"
+      ],
+      "connections": [
+        {
+          "from": "scripture:2-nephi-4-17-19",
+          "to": "concept:repentance",
+          "relation": "illustrates",
+          "sourceIds": [
+            "2-nephi-4-17-19"
+          ],
+          "note": "Nephi grieved over sins that easily beset him, yet declared, “I know in whom I have trusted.”"
+        },
+        {
+          "from": "scripture:hebrews-2-17-18",
+          "to": "vocabulary:succor",
+          "relation": "teaches",
+          "sourceIds": [
+            "hebrews-2-17-18"
+          ],
+          "note": "Because the Savior suffered being tempted, He is able to succour those who are tempted."
+        },
+        {
+          "from": "scripture:hebrews-4-14-16",
+          "to": "concept:grace",
+          "relation": "teaches",
+          "sourceIds": [
+            "hebrews-4-14-16"
+          ],
+          "note": "Because He was tempted in all points yet without sin, we can come boldly to the throne of grace to obtain mercy and help."
+        }
+      ],
+      "depth": "deep"
+    },
+    {
+      "id": "coming-back",
+      "title": "Coming back to Him",
+      "phase": "understand",
+      "method": "divine",
+      "intro": "These questions are for you alone, if you’d like to think or write about them. Nothing you write is checked or shared.",
+      "sourceIds": [
+        "luke-15-17-24",
+        "mosiah-26-29-30",
+        "ether-12-27"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "reflect-coming-back",
+        "prompt": "The father saw his son while he was “yet a great way off.” Think of a mistake you keep coming back to. What would it mean to keep coming back to the Savior with it?",
+        "sourceIds": [
+          "luke-15-17-24",
+          "mosiah-26-29-30",
+          "ether-12-27"
+        ],
+        "suggestions": [
+          "The Lord said He forgives “as often as my people repent.” What would you like to say to Heavenly Father about that?",
+          "Is part of what you’re struggling with a weakness to bring to Him for strength, rather than a sin?",
+          "Is there someone you trust, such as a parent or your bishop, who could help you keep trying?",
+          "What is one small way to be “a little better” tomorrow than today?"
+        ]
+      },
+      "insight": "Jesus Christ’s invitation doesn’t run out. Every return is a chance to receive His mercy for sins and His strength for weakness. Reflection is personal and optional.",
+      "concepts": [
+        "jesus-christ",
+        "repentance",
+        "grace"
+      ],
+      "depth": "core"
+    }
+  ],
+  "branches": [
+    {
+      "id": "am-i-good-enough",
+      "question": "Am I good enough?",
+      "intro": "Many people wonder whether they are good enough. This branch can’t answer that for you: questions about your own worthiness are best talked through with a parent and your bishop. Here, look at what scripture and Church resources say about where the goodness we hope for comes from.",
+      "steps": [
+        {
+          "id": "perfect-in-christ",
+          "title": "“Perfect in Christ”",
+          "phase": "discover",
+          "method": "academic",
+          "intro": "Moroni’s closing words in the Book of Mormon include an invitation to be perfect. Read closely to see how, and in whom, that perfection comes.",
+          "sourceIds": [
+            "moroni-10-32",
+            "gospel-topics-grace",
+            "ether-12-27"
+          ],
+          "activities": {
+            "medium": {
+              "type": "highlight",
+              "id": "perfect-highlight",
+              "prompt": "Moroni invites us to become perfect. Tap the phrases that say how, or in whom, that perfection comes.",
+              "sourceIds": [
+                "moroni-10-32"
+              ],
+              "hints": [
+                "Look for the words “in him,” “in Christ,” and “grace.”",
+                "Moroni also names things we do, such as denying ungodliness and loving God. Those are our part; the prompt asks where the perfection itself comes from.",
+                "Tap the phrases with “perfected in him,” “his grace sufficient,” “by his grace,” and “by the grace of God.”"
+              ],
+              "explanation": "Moroni asks us to come unto Christ, deny ungodliness, and love God with all our might, but the perfection itself comes “in him” and “by his grace”: “then is his grace sufficient for you, that by his grace ye may be perfect in Christ.” Becoming ‘good enough’ isn’t something a person does alone and then presents to Christ. It happens in Him.",
+              "passage": "moroni-10-32",
+              "chunks": [
+                {
+                  "verse": 32,
+                  "text": "Yea, come unto Christ, and be perfected in him,"
+                },
+                {
+                  "verse": 32,
+                  "text": "and deny yourselves of all ungodliness;"
+                },
+                {
+                  "verse": 32,
+                  "text": "and if ye shall deny yourselves of all ungodliness, and love God with all your might, mind and strength,"
+                },
+                {
+                  "verse": 32,
+                  "text": "then is his grace sufficient for you,"
+                },
+                {
+                  "verse": 32,
+                  "text": "that by his grace ye may be perfect in Christ;"
+                },
+                {
+                  "verse": 32,
+                  "text": "and if by the grace of God ye are perfect in Christ,"
+                },
+                {
+                  "verse": 32,
+                  "text": "ye can in nowise deny the power of God."
+                }
+              ],
+              "targets": [
+                0,
+                3,
+                4,
+                5
+              ],
+              "minTargets": 3
+            },
+            "hard": {
+              "type": "compare",
+              "id": "perfect-compare",
+              "prompt": "Weigh each statement against Moroni 10:32, Ether 12:27, and the Gospel Topics article on grace.",
+              "sourceIds": [
+                "moroni-10-32",
+                "ether-12-27",
+                "gospel-topics-grace"
+              ],
+              "hints": [
+                "Look for who does the perfecting in Moroni 10:32, and for when grace helps in the Gospel Topics article.",
+                "One statement asks these sources for something they don’t give at all.",
+                "Grace helps “every day,” makes weak things strong, and perfects us “in Christ”; and no source here gives anyone a personal verdict."
+              ],
+              "explanation": "Moroni asks for real effort (deny ungodliness, love God), and the perfection comes “by his grace.” Gospel Topics says grace “helps us every day,” not only at the end, and Ether 12:27 promises to make weak things strong, so feeling unworthy now isn’t a final verdict. None of these sources tells any individual whether they will reach the celestial kingdom; questions about your own worthiness are best talked through with a parent and your bishop. These sources point to the One who perfects.",
+              "perspectives": [
+                {
+                  "id": "alone-first",
+                  "text": "I have to become perfect on my own before Christ will help me.",
+                  "voice": "A common fear",
+                  "verdict": "contradicted",
+                  "rationale": "Moroni: “by his grace ye may be perfect in Christ.” Gospel Topics says grace “strengthens us to do good works we could not do on our own.”"
+                },
+                {
+                  "id": "our-part",
+                  "text": "Moroni invites us to do our part, such as denying ungodliness and loving God with all our might.",
+                  "voice": "A classmate",
+                  "verdict": "supported",
+                  "rationale": "Moroni: “deny yourselves of all ungodliness, and love God with all your might, mind and strength.”"
+                },
+                {
+                  "id": "end-only",
+                  "text": "Grace is only for the end of life, after all my efforts are finished.",
+                  "voice": "A common idea",
+                  "verdict": "contradicted",
+                  "rationale": "Gospel Topics: “The grace of God helps us every day.”"
+                },
+                {
+                  "id": "never",
+                  "text": "Feeling unworthy right now means I can never become worthy.",
+                  "voice": "A common worry",
+                  "verdict": "contradicted",
+                  "rationale": "To those who humble themselves and have faith in Him, the Lord promises, “then will I make weak things become strong unto them.”"
+                },
+                {
+                  "id": "verdict-me",
+                  "text": "These verses tell me whether I personally will reach the celestial kingdom.",
+                  "voice": "A common question",
+                  "verdict": "beyond",
+                  "rationale": "These verses describe how perfection comes, through Christ’s grace. They don’t give a verdict about any individual. Questions about your own worthiness are best talked through with a parent and your bishop."
+                }
+              ]
+            }
+          },
+          "insight": "Moroni’s invitation is to “come unto Christ, and be perfected in him.” Our part is real (deny ungodliness, love God), but the perfection comes “by his grace.” Gospel Topics calls grace “the divine help or strength extended to us through the Atonement of the Lord Jesus Christ” and says that it “helps us every day.”",
+          "concepts": [
+            "grace",
+            "weakness"
+          ],
+          "connections": [
+            {
+              "from": "scripture:moroni-10-32",
+              "to": "concept:grace",
+              "relation": "teaches",
+              "sourceIds": [
+                "moroni-10-32"
+              ],
+              "note": "Moroni taught that those who come unto Christ can be perfected in Him by His grace."
+            }
+          ]
+        },
+        {
+          "id": "after-all-we-can-do",
+          "title": "“After all we can do”",
+          "phase": "discover",
+          "method": "analytical",
+          "intro": "Nephi wrote, “it is by grace that we are saved, after all we can do.” People understand that phrase in different ways, and some hear it as a demand they can never meet. Read it alongside the Bible Dictionary and a talk by President Dieter F. Uchtdorf, which emphasize different sides of it.",
+          "sourceIds": [
+            "2-nephi-25-23",
+            "bd-grace",
+            "uchtdorf-gift-of-grace-2015"
+          ],
+          "activities": {
+            "medium": {
+              "type": "clue",
+              "id": "after-clue",
+              "prompt": "Examine each clue, then decide how these sources fit together.",
+              "sourceIds": [
+                "2-nephi-25-23",
+                "bd-grace",
+                "uchtdorf-gift-of-grace-2015"
+              ],
+              "hints": [
+                "Notice that the Bible Dictionary says two things: grace is help and strength, and our effort matters.",
+                "President Uchtdorf focuses on one word in Nephi’s sentence. Which word, and what does he say it doesn’t mean?",
+                "Effort matters, grace helps us all along the way, and ‘after’ doesn’t mean ‘because.’"
+              ],
+              "explanation": "The Bible Dictionary says grace is “divine means of help or strength” that enables good works “that they otherwise would not be able to maintain,” and also that it “cannot suffice without total effort on the part of the recipient.” President Uchtdorf cautioned against misreading Nephi’s phrase: “after” does not equal “because,” and he asked whether God waits until we’ve expended every effort before He will intervene. These sources emphasize different sides of Nephi’s words, and this activity doesn’t settle the phrase’s exact meaning. Both affirm that effort matters and that grace is the help that makes salvation possible.",
+              "clues": [
+                {
+                  "id": "nephi",
+                  "title": "Nephi’s words",
+                  "text": "2 Nephi 25:23: “we know that it is by grace that we are saved, after all we can do.”",
+                  "sourceId": "2-nephi-25-23"
+                },
+                {
+                  "id": "help",
+                  "title": "What grace is",
+                  "text": "Bible Dictionary: grace is “divine means of help or strength,” through which people “receive strength and assistance to do good works that they otherwise would not be able to maintain if left to their own means.”",
+                  "sourceId": "bd-grace"
+                },
+                {
+                  "id": "effort",
+                  "title": "Effort still matters",
+                  "text": "The same Bible Dictionary entry: “grace cannot suffice without total effort on the part of the recipient.”",
+                  "sourceId": "bd-grace"
+                },
+                {
+                  "id": "after",
+                  "title": "‘After’ is not ‘because’",
+                  "text": "President Dieter F. Uchtdorf taught that “after” does not equal “because,” and asked, “Does God wait until we’ve expended every effort before He will intervene in our lives with His saving grace?”",
+                  "sourceId": "uchtdorf-gift-of-grace-2015"
+                }
+              ],
+              "question": {
+                "id": "after-meaning",
+                "prompt": "What do these sources say together?",
+                "options": [
+                  {
+                    "id": "along",
+                    "text": "Our effort matters, and grace is divine help and strength we receive along the way, not only at the end. President Uchtdorf adds that “after” does not equal “because.”"
+                  },
+                  {
+                    "id": "wait",
+                    "text": "We must finish everything we possibly can before grace begins.",
+                    "feedback": "President Uchtdorf asks whether God waits until we’ve expended every effort, and the Bible Dictionary describes grace as help to do good works we couldn’t maintain on our own. Could that kind of help come only at the end?"
+                  },
+                  {
+                    "id": "no-effort",
+                    "text": "Effort doesn’t matter at all, since grace does everything.",
+                    "feedback": "Read the third clue again. What does the Bible Dictionary say grace can’t do without?"
+                  },
+                  {
+                    "id": "capable",
+                    "text": "Nephi meant that only the most capable people are saved.",
+                    "feedback": "According to Nephi, what is it that saves?"
+                  }
+                ],
+                "correct": [
+                  "along"
+                ]
+              }
+            },
+            "hard": {
+              "type": "build-principle",
+              "id": "after-principle",
+              "prompt": "Build a statement that brings together what 2 Nephi 25:23, the Bible Dictionary, and President Uchtdorf say. Some fragments lean too far one way or the other.",
+              "sourceIds": [
+                "2-nephi-25-23",
+                "bd-grace",
+                "uchtdorf-gift-of-grace-2015"
+              ],
+              "hints": [
+                "Start with what saves, according to Nephi.",
+                "Then add what the Bible Dictionary says about effort and about what grace does, and what President Uchtdorf says about the word ‘after.’",
+                "Four fragments make the statement. The rest make grace wait until we’re perfect, deny that effort matters, or limit salvation to the most capable."
+              ],
+              "explanation": "Nephi says “it is by grace that we are saved.” The Bible Dictionary affirms that effort matters (“total effort on the part of the recipient”) and that grace is “divine means of help or strength.” President Uchtdorf adds that “after” does not equal “because”: we aren’t saved because of all that we can do. These sources emphasize different sides of Nephi’s phrase; this statement keeps both without deciding its exact meaning.",
+              "fragments": [
+                {
+                  "id": "saved",
+                  "text": "Nephi taught that we are saved by grace;"
+                },
+                {
+                  "id": "effort",
+                  "text": "the Bible Dictionary says grace “cannot suffice without total effort”"
+                },
+                {
+                  "id": "during",
+                  "text": "and gives strength to do good works we couldn’t maintain on our own;"
+                },
+                {
+                  "id": "not-because",
+                  "text": "and President Uchtdorf taught that “after” does not equal “because.”"
+                },
+                {
+                  "id": "perfect-first",
+                  "text": "so we must become perfect before grace begins,"
+                },
+                {
+                  "id": "no-effort",
+                  "text": "so our choices make no difference,"
+                },
+                {
+                  "id": "capable",
+                  "text": "which is why only the most capable are saved."
+                }
+              ],
+              "solution": [
+                "saved",
+                "effort",
+                "during",
+                "not-because"
+              ],
+              "statement": "Nephi taught that we are saved by grace; the Bible Dictionary says grace “cannot suffice without total effort” and gives strength to do good works we couldn’t maintain on our own; and President Uchtdorf taught that “after” does not equal “because.”"
+            }
+          },
+          "insight": "Church sources emphasize different sides of Nephi’s phrase “after all we can do.” The Bible Dictionary calls grace “divine means of help or strength” that helps people do good works they couldn’t maintain on their own, and says it “cannot suffice without total effort on the part of the recipient.” President Uchtdorf cautioned that “after” does not equal “because.” Read together, they suggest that effort and grace work together rather than compete; the exact meaning of the phrase is worth continuing to study.",
+          "concepts": [
+            "grace"
+          ],
+          "connections": [
+            {
+              "from": "scripture:2-nephi-25-23",
+              "to": "concept:grace",
+              "relation": "teaches",
+              "sourceIds": [
+                "2-nephi-25-23",
+                "bd-grace"
+              ],
+              "note": "Nephi wrote that it is by grace that we are saved, after all we can do; the Bible Dictionary describes grace as divine help and strength."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main investigation: whether something is a weakness or a sin, the same Savior offers help."
+    },
+    {
+      "id": "how-to-repent",
+      "question": "What does repenting actually involve?",
+      "intro": "People often wonder what repenting actually involves, and what to say when they pray about it. Gospel Topics describes repentance as a process with several parts, and the scriptures record what people actually said when they prayed for mercy.",
+      "steps": [
+        {
+          "id": "parts-of-repentance",
+          "title": "The parts of repentance",
+          "phase": "evidence",
+          "method": "academic",
+          "intro": "Read the “Process of Repentance” section of the Gospel Topics article, and the short prayers for mercy in Alma 36 and Mosiah 4.",
+          "sourceIds": [
+            "gospel-topics-repentance",
+            "dc-58-42-43",
+            "alma-36-17-21",
+            "mosiah-4-2-3",
+            "nelson-do-better-be-better-2019"
+          ],
+          "activities": {
+            "medium": {
+              "type": "vocab-match",
+              "id": "repent-vocab",
+              "prompt": "Match each part of repentance with how Gospel Topics and the scriptures describe it.",
+              "sourceIds": [
+                "gospel-topics-repentance",
+                "dc-58-42-43",
+                "alma-36-17-21"
+              ],
+              "hints": [
+                "Read the “Process of Repentance” section of the Gospel Topics article.",
+                "Two meanings on the list aren’t in the article or the scriptures at all. President Nelson even warned against seeing repentance as punishment.",
+                "Sorrow is about what we feel; confession is about admitting and asking; forsaking is about changing; restitution is about repairing."
+              ],
+              "explanation": "Gospel Topics describes repentance as faith in Heavenly Father and Jesus Christ, sorrow for sin, confession (“humbly praying to Heavenly Father, admitting our mistakes, and asking for His help and forgiveness”), giving up sin, restitution, and righteous living. The scriptures show people pleading for mercy in their own words. These sources describe confession in general terms and don’t say whether every mistake must be named one by one. President Nelson taught that seeing repentance as punishment is “engendered by Satan.”",
+              "pairs": [
+                {
+                  "id": "sorrow",
+                  "term": "Godly sorrow",
+                  "meaning": "Truly feeling bad for disobeying Heavenly Father and Jesus Christ, with a sincere desire to do what’s needed to be forgiven"
+                },
+                {
+                  "id": "confession",
+                  "term": "Confession",
+                  "meaning": "Humbly admitting our mistakes to Heavenly Father in prayer and asking for His help; for serious sins, also speaking with a bishop or branch president"
+                },
+                {
+                  "id": "forsake",
+                  "term": "Forsaking sin",
+                  "meaning": "Giving up the sin, as trust in Jesus Christ changes how we act",
+                  "example": {
+                    "text": "behold, he will confess them and forsake them.",
+                    "sourceId": "dc-58-42-43"
+                  }
+                },
+                {
+                  "id": "restitution",
+                  "term": "Restitution",
+                  "meaning": "Repairing, where possible, any hurt or damage our actions caused"
+                },
+                {
+                  "id": "mercy",
+                  "term": "Pleading for mercy",
+                  "meaning": "Asking Jesus Christ, in your own words, to forgive and heal you",
+                  "example": {
+                    "text": "O Jesus, thou Son of God, have mercy on me",
+                    "sourceId": "alma-36-17-21"
+                  }
+                }
+              ],
+              "extraMeanings": [
+                "Hiding our mistakes and hoping no one notices",
+                "Punishing yourself until you feel you’ve suffered enough"
+              ],
+              "match": "meaning"
+            },
+            "hard": {
+              "type": "compare",
+              "id": "repent-compare",
+              "prompt": "A common question is whether there’s a right way to repent, and what to say in prayer. Weigh each statement against these sources.",
+              "sourceIds": [
+                "gospel-topics-repentance",
+                "alma-36-17-21",
+                "mosiah-4-2-3",
+                "nelson-do-better-be-better-2019"
+              ],
+              "hints": [
+                "Look at how Gospel Topics describes confession, and compare the two prayers from scripture.",
+                "One statement is something President Nelson specifically addressed. What did he say about seeing repentance as punishment?",
+                "Pleading in your own words and speaking with a bishop about serious sins are supported; a complete list and a fixed formula go beyond these sources."
+              ],
+              "explanation": "Repentance isn’t a punishment; President Nelson said that feeling “is engendered by Satan.” Scripture’s prayers for mercy are short and personal, and they’re worded differently, so there is no single formula. Gospel Topics describes confession as admitting our mistakes to Heavenly Father and asking for help, and, for serious sins, speaking with a bishop. These sources don’t settle whether every mistake must be named one by one; President Nelson’s counsel is to “prayerfully seek to understand what stands in the way of your repentance.”",
+              "perspectives": [
+                {
+                  "id": "punishment",
+                  "text": "Repentance is a punishment to get through.",
+                  "voice": "A common idea",
+                  "verdict": "contradicted",
+                  "rationale": "President Nelson: “Too many people consider repentance as punishment… But this feeling of being penalized is engendered by Satan.”"
+                },
+                {
+                  "id": "own-words",
+                  "text": "Praying for mercy in my own words is a real part of repenting.",
+                  "voice": "A classmate",
+                  "verdict": "supported",
+                  "rationale": "Alma prayed, “O Jesus, thou Son of God, have mercy on me,” and Benjamin’s people, “O have mercy, and apply the atoning blood of Christ.” Gospel Topics describes confession as “humbly praying to Heavenly Father, admitting our mistakes, and asking for His help and forgiveness.”"
+                },
+                {
+                  "id": "every-mistake",
+                  "text": "Unless I can remember and name every single mistake, I can’t repent.",
+                  "voice": "A common worry",
+                  "verdict": "beyond",
+                  "rationale": "These sources describe confession as admitting our mistakes and asking for help. They don’t say whether a complete list is required. President Nelson invited people to “prayerfully seek to understand what stands in the way of your repentance.”"
+                },
+                {
+                  "id": "bishop",
+                  "text": "For serious sins, talking with a bishop or branch president may be part of repenting.",
+                  "voice": "A classmate",
+                  "verdict": "supported",
+                  "rationale": "Gospel Topics: “For serious sins, we may also need to speak with our bishop or branch president and seek his guidance in the repentance process.”"
+                },
+                {
+                  "id": "formula",
+                  "text": "There is one exact wording of prayer that makes repentance work.",
+                  "voice": "A common idea",
+                  "verdict": "beyond",
+                  "rationale": "The sources don’t give a required wording, and the two prayers in these passages are worded differently."
+                }
+              ]
+            }
+          },
+          "insight": "Gospel Topics lists the parts of repentance: faith in Heavenly Father and Jesus Christ, sorrow for sin, confession, giving up sin, restitution, and righteous living. The prayers for mercy in scripture are short and personal: “O Jesus, thou Son of God, have mercy on me.” For serious sins, a bishop or branch president can help. And repentance isn’t a punishment to endure; President Nelson described Jesus Christ as one “who stands with open arms, hoping and willing to heal, forgive, cleanse, strengthen, purify, and sanctify us.”",
+          "concepts": [
+            "repentance",
+            "prayer"
+          ],
+          "connections": [
+            {
+              "from": "scripture:dc-58-42-43",
+              "to": "concept:repentance",
+              "relation": "teaches",
+              "sourceIds": [
+                "dc-58-42-43"
+              ],
+              "note": "The Lord said that a person who repents of his sins will confess them and forsake them."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main investigation, where the Lord says how often He forgives."
+    }
+  ],
+  "discovery": {
+    "summary": "When Peter offered to forgive “seven times,” the Savior answered, “Until seventy times seven.” When the Lord spoke of His own forgiveness, He gave no number: “as often as my people repent will I forgive them.” The condition in these passages is sincere repentance, which includes confessing and forsaking sin; they don’t treat a later struggle as proof that an earlier repentance was false. These sources also suggest that weakness is different from sin: the Lord gives weakness “that they may be humble” and offers grace to make weak things strong, while sin is willful disobedience that we confess and forsake. People in the scriptures experienced forgiveness differently (a voice, the Spirit, joy, peace of conscience), but their assurance rested on Jesus Christ and on the Lord’s promise to remember repented sins no more. Prophets like Nephi struggled with sins that kept returning, and latter-day leaders describe repentance as a daily process of trying again. The father in the parable ran to meet his son, and the Savior says His arm of mercy is extended to whoever will come.",
+    "keyIdeas": [
+      "The Lord sets no number on His forgiveness: “as often as my people repent will I forgive them.”",
+      "Scripture asks for sincere repentance (“real intent”) that confesses and forsakes sin, and these verses don’t treat a later struggle as proof that it wasn’t real.",
+      "These sources suggest that weakness is part of mortal life and isn’t itself sin. The Lord offers grace for weakness and forgiveness for sin.",
+      "People in scripture experienced forgiveness in different ways. Each turned to Jesus Christ, and none of these accounts makes forgiveness depend on one particular feeling.",
+      "Repentance is a process: keep coming back and keep trying, a little better each day."
+    ],
+    "christConnection": "Every passage in this investigation leads to Jesus Christ. Enos asked how his guilt could be swept away and was told, “Because of thy faith in Christ.” Alma’s torment ended when he cried, “O Jesus, thou Son of God, have mercy on me.” The Savior “hath suffered being tempted” and “is able to succour them that are tempted,” so He understands the struggle, and He invites us to “come boldly unto the throne of grace.” Like the father who ran to meet his son, He says, “mine arm of mercy is extended towards you, and whosoever will come, him will I receive.”",
+    "openQuestions": [
+      "If the Lord forgives as often as we repent, why can it take so long to stop a repeated sin?",
+      "In a specific moment, how can I tell whether something is a weakness to strengthen or a sin to repent of?",
+      "What helps a person trust God’s promise of forgiveness when feelings of guilt haven’t faded yet?",
+      "How might learning to forgive others “seventy times seven” change the way I see His forgiveness of me?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "steps.weakness-or-sin; discovery",
+        "note": "Doctrine: the conclusion that imperfection or weakness is not itself sin is Gospel Labs’ synthesis of Ether 12:27 (“I give unto men weakness”), the Guide to the Scriptures’ definition of sin (“Willful disobedience to God’s commandments”), Gospel Topics (“none of us would be perfect”), and President Nelson. The sort activity simplified real cases (classing temptation as weakness, citing Hebrews 4:15), and the compare activity had an edge case about sudden anger marked ‘goes beyond’. Please confirm.",
+        "resolution": "Qualified: the synthesis is framed as what ‘these sources suggest’ (sort and compare explanations, insight, discovery, key idea), and the step is titled ‘Weakness and sin’. The sort applies the Guide to the Scriptures’ definition, so temptation is ‘not sin in itself’ (Hebrews 4:15), not a weakness. Withheld: the anger item, replaced by a plain ‘goes beyond’ item; the build-the-principle answer now uses only stated teachings (originals in docs/2.0/withheld/again-and-again.json). Owner to confirm the synthesis."
+      },
+      {
+        "where": "steps.as-often-as (compare: not-real)",
+        "note": "Sensitive and interpretive: the verdict that ‘a later mistake proves earlier repentance wasn’t real’ goes beyond Mosiah 26:29 and Moroni 6:8. This reassures learners who repeat sins. Some teachers emphasize that real intent includes a commitment to forsake sin (D&C 58:43); the investigation keeps both ideas: sincerity and forsaking matter, and a later struggle isn’t treated as proof of insincerity.",
+        "resolution": "Qualified: ‘not-real’ stays ‘goes beyond’, and the step now shows that forsaking sin matters too. D&C 58:43 (“will confess them and forsake them”) was added to the compare activity’s evidence, explanation, and two rationales, and the step insight, discovery summary, and a key idea now say sincere repentance includes confessing and forsaking sin, while these verses don’t treat a later struggle as proof of insincerity. Owner to confirm the balance."
+      },
+      {
+        "where": "steps (not included: D&C 82:7)",
+        "note": "D&C 82:7 (‘unto that soul who sinneth shall the former sins return’) speaks directly to repeated sin and was deliberately not included, because it needs careful context that a short activity can’t give. Learners may encounter it; the owner may want to address it in a future revision.",
+        "resolution": "Qualified (owner decision): D&C 82:7 is still not included; the wording in this note was checked against the verse. No learner-facing statement or correct answer says that former sins can never return or that a later sin cancels forgiveness; the nearest items rest on Mosiah 26:30 and D&C 58:42–43 and say only what those verses say. Whether and how to address D&C 82:7 remains for the owner."
+      },
+      {
+        "where": "steps.knowing-forgiven",
+        "note": "Interpretive: that forgiveness rests on the Lord’s promise (D&C 58:42) and on faith in Christ rather than on a particular feeling. This is a close reading of Enos 1:6 (“knew that God could not lie”) and D&C 58:42, offered to reassure learners who don’t feel a strong sign. The compare item ‘still-bad’ is marked ‘goes beyond’, not ‘contradicted’.",
+        "resolution": "Qualified: the insight now says these accounts ‘suggest’ assurance can rest on something steadier than a feeling, and an explanation quotes Enos’s own reasoning (“knew that God could not lie; wherefore, my guilt was swept away”). The build-the-principle answer now says each person turned to Jesus Christ and the Lord promises to remember repented sins no more, without implying earlier prophets relied on D&C 58:42. A key idea says no account makes forgiveness depend on a feeling. ‘Still-bad’ stays ‘goes beyond’."
+      },
+      {
+        "where": "steps.what-the-son-expected",
+        "note": "Interpretive readings of the parable are marked ‘goes beyond’: that the father interrupted his son (verse 21 omits the planned request) and that the father represents Heavenly Father (widely taught, but not stated in verses 17–24; Luke 15:7 and 10 speak of joy in heaven). 3 Nephi 9:13–14 is the voice of Jesus Christ heard after the destruction (He names Himself in 3 Nephi 9:15), before He appeared to the people.",
+        "resolution": "Qualified: both readings stay ‘goes beyond’. The step insight no longer says the son ‘never got to ask’ to be a servant (it says only that the planned request doesn’t appear in what he said), and the clue explanation no longer says the father was ‘already’ calling for the robe. Checked: Luke 15:7 and 10 speak of joy in heaven, and 3 Nephi 9:15 is where the voice names Himself as Jesus Christ; the note now says so. Survey framing removed from this step."
+      },
+      {
+        "where": "branches.am-i-good-enough (after-all-we-can-do)",
+        "note": "Doctrine: 2 Nephi 25:23 is presented with the Bible Dictionary entry ‘Grace’ (official) and President Uchtdorf’s April 2015 talk (speaker). The Bible Dictionary says grace “cannot suffice without total effort on the part of the recipient” and enables exaltation “after they have expended their own best efforts”; President Uchtdorf cautioned that “after” does not equal “because.” The branch presents both emphases (effort matters; grace is help along the way, not a reward for doing everything first). Please confirm the balance.",
+        "resolution": "Qualified: no activity now rewards one interpretation of ‘after all we can do’. The clue’s answer states what the Bible Dictionary and President Uchtdorf each say (effort matters; grace helps along the way; ‘after’ is not ‘because’), and the build-the-principle answer attributes each teaching to its source. The intro, explanations, and insight say these sources emphasize different sides of Nephi’s phrase and don’t settle its meaning. Originals are in docs/2.0/withheld/again-and-again.json. Owner to confirm the balance."
+      },
+      {
+        "where": "branches.am-i-good-enough",
+        "note": "Sensitive: questions about one’s own worthiness are personal. The branch doesn’t answer them for any individual and directs learners to parents and their bishop; the compare item ‘verdict-me’ is marked ‘goes beyond’.",
+        "resolution": "Resolved: survey row numbers and topics removed from this note and the branch intro. The intro says the branch can’t answer worthiness questions for anyone and points to a parent and the bishop; ‘verdict-me’ stays ‘goes beyond’, and its rationale and the activity explanation now also point to a parent and the bishop. No item gives anyone a personal verdict."
+      },
+      {
+        "where": "branches.how-to-repent",
+        "note": "Interpretive: that repentance doesn’t require naming every individual mistake is marked ‘goes beyond’ the sources rather than stated as doctrine. Gospel Topics describes confession to Heavenly Father in general terms and says serious sins may also require speaking with a bishop or branch president.",
+        "resolution": "Qualified: ‘every-mistake’ stays ‘goes beyond’, and its rationale now says the sources don’t say whether a complete list is required. The vocabulary activity no longer treats ‘listing every mistake’ as a wrong meaning (that distractor was replaced; the original is in docs/2.0/withheld/again-and-again.json), and both explanations now say the sources don’t settle it. Survey framing removed from the branch intro, compare prompt, and voice."
+      },
+      {
+        "where": "sources (speakers)",
+        "note": "President Nelson’s talk was given in the April 2019 priesthood session and addressed to priesthood holders; the passages quoted are general statements about repentance (Gospel Topics quotes the same passage). Elder Renlund was a Seventy when he spoke (April 2015); President Uchtdorf was Second Counselor in the First Presidency (April 2015). All are labeled as speakers’ teachings.",
+        "resolution": "Resolved: checked on 26 October 2026. The talk pages list Elder Renlund as ‘Of the Seventy’ and President Uchtdorf as ‘Second Counselor in the First Presidency’; the April 2019 conference index places President Nelson’s talk in the Priesthood Session, where he addresses ‘brethren’; Gospel Topics: Repentance quotes the same passage and cites the talk. Each is labeled as a speaker’s teaching."
+      }
+    ]
+  }
+}

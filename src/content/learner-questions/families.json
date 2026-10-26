@@ -1,0 +1,382 @@
+{
+  "source": "Gospel Question (Responses).xlsx — 128 anonymous responses collected 4–18 September 2026 (rows 2–129). The verbatim responses are kept out of the public repository; regenerate them with `node scripts/import-learner-questions.mjs <xlsx>` into data/private/.",
+  "families": [
+    {
+      "id": "trials-and-suffering",
+      "label": "Trials, suffering, and fairness",
+      "description": "Why faithful people still struggle; loneliness in trials; why life seems easier for others; consequences of other people's choices.",
+      "rows": [
+        7,
+        16,
+        18,
+        22,
+        33,
+        37,
+        74,
+        78,
+        87,
+        90,
+        108,
+        113,
+        118
+      ],
+      "investigation": "when-faithful-people-suffer",
+      "observations": [
+        "The largest family. Many learners assume obedience should prevent hardship and read trials as evidence that God is absent or displeased.",
+        "Some responses describe current pain or loneliness. Content must not imply that trials are punishments or that every trial has a knowable purpose.",
+        "Learning opportunity: Jesus Christ's own suffering and His promise to succor (Alma 7:11–12) reframe the question from 'why me?' to 'who is with me?'."
+      ]
+    },
+    {
+      "id": "knowing-truth",
+      "label": "Knowing the gospel is true",
+      "description": "Whether God and Jesus Christ are real, how to know the Restoration is true, building a testimony, and what to do when it doesn't feel certain.",
+      "rows": [
+        5,
+        11,
+        25,
+        70,
+        71,
+        101,
+        104,
+        123,
+        125,
+        129
+      ],
+      "investigation": "primary-questions",
+      "observations": [
+        "Many responses ask for proof. Elder Corbridge's distinction between primary and secondary questions, and his four methods of learning, fit this family directly.",
+        "Some responses suggest a feeling of pressure to believe. Content should invite honest inquiry, not demand conclusions."
+      ]
+    },
+    {
+      "id": "hard-questions",
+      "label": "Church history and hard questions",
+      "description": "Imperfect leaders, changes in Church practice, critical media, and rumors.",
+      "rows": [
+        8,
+        17,
+        48,
+        66,
+        73
+      ],
+      "investigation": "primary-questions",
+      "observations": [
+        "These are what Elder Corbridge calls secondary questions. The primary-questions investigation addresses how to approach them; individual historical topics need their own carefully sourced study (backlog).",
+        "Some responses repeat rumors or inaccurate claims; any future content should rely on official sources and avoid amplifying them."
+      ]
+    },
+    {
+      "id": "spirit-and-revelation",
+      "label": "Feeling and recognizing the Spirit",
+      "description": "Not feeling the Spirit, spiritual highs and lows, telling one's own thoughts from inspiration, decisions, and spiritual gifts.",
+      "rows": [
+        4,
+        13,
+        24,
+        27,
+        40,
+        59,
+        76,
+        81,
+        112
+      ],
+      "investigation": "recognizing-the-spirit",
+      "observations": [
+        "Common misconception: the Spirit is always a strong emotion. Scripture describes many forms (peace, thoughts in the mind, a still small voice), and 3 Nephi 9:20 describes people who received the Spirit and 'knew it not'.",
+        "Genuine uncertainty: why spiritual experiences vary even when habits stay the same. Content should not promise a formula."
+      ]
+    },
+    {
+      "id": "repentance-and-forgiveness",
+      "label": "Repentance and repeated mistakes",
+      "description": "How to repent, knowing when one is forgiven, and whether God still loves and forgives someone who keeps making the same mistake.",
+      "rows": [
+        62,
+        89,
+        91,
+        111,
+        124,
+        126
+      ],
+      "investigation": "again-and-again",
+      "observations": [
+        "Learners fear that repeated sin exhausts God's patience or makes repentance meaningless. Mosiah 26:30 and Moroni 6:8 speak directly to this.",
+        "Misconception: that existing imperfectly is itself sin. The difference between weakness and sin is a key learning opportunity (Ether 12:27)."
+      ]
+    },
+    {
+      "id": "worthiness-and-enough",
+      "label": "Worthiness and being 'good enough'",
+      "description": "Whether one is worthy, what it takes to reach the celestial kingdom, and comparing standards with others.",
+      "rows": [
+        53,
+        56,
+        64,
+        94,
+        99,
+        105
+      ],
+      "relatedInvestigation": "again-and-again",
+      "observations": [
+        "Closely tied to repentance; addressed as a side question in again-and-again. A strong candidate for a dedicated future investigation on grace."
+      ]
+    },
+    {
+      "id": "atonement-personal",
+      "label": "How the Atonement can be personal",
+      "description": "How Jesus Christ could suffer for billions of people individually, and how God can know everyone personally.",
+      "rows": [
+        21,
+        83
+      ],
+      "investigation": "one-by-one",
+      "observations": [
+        "Only two responses, but the question goes to the heart of the gospel and connects to many other families (trials, repentance).",
+        "Scripture affirms that He knows each person (Alma 7:11–12; 3 Nephi 17) without explaining the mechanism. Content must keep that line clear."
+      ]
+    },
+    {
+      "id": "christ-and-godhead",
+      "label": "Jesus Christ and the Godhead",
+      "description": "Why Jesus Christ is the center of the gospel, how the Father and the Son relate to us, and the Savior's premortal role.",
+      "rows": [
+        12,
+        19,
+        88,
+        121
+      ],
+      "investigation": "christ-at-the-center",
+      "observations": [
+        "Some ask whether the Father's love and the Son's love differ. John 3:16 and John 17 present them as united in purpose.",
+        "The premortal Council is a gentle future side question."
+      ]
+    },
+    {
+      "id": "fear-and-friendship",
+      "label": "Fearing God and friendship with God",
+      "description": "How scripture can command us to fear God while Jesus calls His disciples friends.",
+      "rows": [
+        60
+      ],
+      "investigation": "fear-god-friend",
+      "observations": [
+        "A single response, chosen because it is an excellent vocabulary investigation: the scriptural sense of 'fear' (reverence and awe) versus terror (1 John 4:18; Guide to the Scriptures, 'Fear')."
+      ]
+    },
+    {
+      "id": "families-and-afterlife",
+      "label": "Families and loved ones after death",
+      "description": "Whether family relationships continue, and what happens to loved ones who weren't members of the Church.",
+      "rows": [
+        2,
+        29,
+        30,
+        69,
+        109
+      ],
+      "investigation": "families-beyond-the-veil",
+      "observations": [
+        "Deeply personal: these questions are often about family members and friends of other faiths.",
+        "Scripture teaches that the gospel is preached to the dead and that God judges by the desires of the heart (D&C 137:7–9; D&C 138). Specifics about any individual's future must be left to God."
+      ]
+    },
+    {
+      "id": "eternity-and-judgment",
+      "label": "Eternity, judgment, and exaltation",
+      "description": "What eternity will be like, the Millennium and Final Judgment, and becoming like Heavenly Father.",
+      "rows": [
+        41,
+        42,
+        72,
+        79
+      ],
+      "observations": [
+        "Backlog. Pairs well with families-beyond-the-veil."
+      ]
+    },
+    {
+      "id": "prayer-and-answers",
+      "label": "Prayer and answers",
+      "description": "Whether God hears prayers and why answers aren't always clear.",
+      "rows": [
+        49,
+        110,
+        122
+      ],
+      "observations": [
+        "Strong candidate for the next release. Overlaps the 1.x question-bank entry 'meaningful-prayer' and the recognizing-the-spirit investigation."
+      ]
+    },
+    {
+      "id": "missions-and-blessings",
+      "label": "Missions, patriarchal blessings, and readiness",
+      "description": "Whether and when to serve a mission, and when and how to receive and understand a patriarchal blessing.",
+      "rows": [
+        15,
+        65,
+        67,
+        80,
+        82,
+        86,
+        100,
+        116,
+        117
+      ],
+      "observations": [
+        "Mostly personal-decision questions. A future investigation could study how scripture describes seeking guidance for decisions (D&C 9:7–9) rather than giving advice."
+      ]
+    },
+    {
+      "id": "second-coming",
+      "label": "The Second Coming",
+      "description": "Why the Second Coming isn't discussed more, why it is preceded by hard signs, and worry that it will come before one has a future.",
+      "rows": [
+        3,
+        61,
+        92
+      ],
+      "observations": [
+        "Some of these questions carry anxiety. A future study could pair the signs of the times with the Savior's counsel against fear (D&C 38:30; JS—Matthew)."
+      ]
+    },
+    {
+      "id": "creation-and-cosmos",
+      "label": "Creation, science, and other worlds",
+      "description": "Other worlds and life, the size and age of the universe, dinosaurs, and how science fits with the Creation.",
+      "rows": [
+        10,
+        14,
+        32,
+        44,
+        45,
+        50,
+        52,
+        63,
+        85
+      ],
+      "observations": [
+        "Large and curious family. Moses 1:33–39 and D&C 76:24 address worlds without number; many specifics are genuinely unrevealed and must be presented as such."
+      ]
+    },
+    {
+      "id": "commandments-and-practices",
+      "label": "Commandments and Church practices",
+      "description": "Fasting, the Word of Wisdom, the Sabbath, temple attendance, and meeting schedules.",
+      "rows": [
+        36,
+        38,
+        75,
+        95,
+        106,
+        107,
+        127
+      ],
+      "observations": [
+        "Backlog. The 1.x question bank already covers the Sabbath."
+      ]
+    },
+    {
+      "id": "women-priesthood-sealing",
+      "label": "Women, priesthood, and sealing",
+      "description": "Women's roles and priesthood, and sealing practices.",
+      "rows": [
+        55,
+        68,
+        98,
+        114
+      ],
+      "observations": [
+        "Sensitive topics with official statements and ongoing teaching. Any future content needs careful sourcing and the project owner's review."
+      ]
+    },
+    {
+      "id": "sharing-and-ministering",
+      "label": "Sharing the gospel and ministering",
+      "description": "Sharing the gospel naturally, helping friends and family, and Christlike friendship.",
+      "rows": [
+        28,
+        34,
+        57,
+        115,
+        120
+      ],
+      "observations": [
+        "Backlog. Christlike friendship connects to the Character of Christ Builder (charity, compassion)."
+      ]
+    },
+    {
+      "id": "people-and-criticism",
+      "label": "Imperfect people and criticism",
+      "description": "Unkindness among believers, self-righteousness, and criticism of the Church.",
+      "rows": [
+        35,
+        77,
+        97,
+        119,
+        128
+      ],
+      "observations": [
+        "Backlog. Connects to charity and meekness in the Character of Christ Builder."
+      ]
+    },
+    {
+      "id": "scripture-study-and-connection",
+      "label": "Scripture study and connecting with the Savior",
+      "description": "Building a scripture-study habit, a structured way to study Jesus Christ, and connecting with Him beyond routine answers.",
+      "rows": [
+        47,
+        54,
+        58,
+        84,
+        102,
+        103
+      ],
+      "observations": [
+        "Requests for a structured, personal way to study the Savior shaped Connect with Christ and the Character of Christ Builder."
+      ]
+    },
+    {
+      "id": "temptation-and-relationships",
+      "label": "Temptation and relationships",
+      "description": "Resisting temptation and navigating relationships.",
+      "rows": [
+        39,
+        43,
+        46
+      ],
+      "observations": [
+        "Personal; better served by trusted adults and leaders than by app content. Not planned as investigations."
+      ]
+    },
+    {
+      "id": "scripture-curiosities",
+      "label": "Scripture curiosities",
+      "description": "Specific people and events in the scriptures.",
+      "rows": [
+        20,
+        51
+      ],
+      "observations": [
+        "Good Scripture Explorer candidates (Alma 63; Matthew 4:1–11)."
+      ]
+    },
+    {
+      "id": "life-and-unclear",
+      "label": "Life direction and unclear responses",
+      "description": "School, the future, personal plans, and responses that aren't questions.",
+      "rows": [
+        6,
+        9,
+        23,
+        26,
+        31,
+        93,
+        96
+      ],
+      "observations": [
+        "Not suitable for investigations."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,591 @@
+{
+  "id": "forgiveness",
+  "status": "ready",
+  "name": "Forgiveness",
+  "summary": "Letting go of bitterness and revenge toward those who have wronged us, and leaving judgment to God, as the Savior forgives us.",
+  "definition": {
+    "text": "Gospel Topics teaches, “To forgive is a divine attribute.” The scriptures speak of forgiveness in two ways: the Lord forgives us as we repent, and “He also commands us to forgive those who offend or hurt us.” The Guide to the Scriptures explains that when people forgive each other, “they treat one another with Christlike love and have no bad feelings toward those who have offended them.”",
+    "sourceIds": [
+      "gospel-topics-forgiveness",
+      "gs-forgive"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "forgiveness-trespass",
+      "term": "Trespass",
+      "meaning": "A wrong or offense against someone. The Savior taught, “if ye forgive men their trespasses, your heavenly Father will also forgive you” (Matthew 6:14).",
+      "sourceIds": [
+        "matthew-6-12-15"
+      ]
+    },
+    {
+      "id": "forgiveness-debts",
+      "term": "Debts",
+      "meaning": "In the Lord’s Prayer, sins pictured as debts. The Guide to the Scriptures explains that we ask the Father to “release us from paying the price for our sins—through the Atonement of Jesus Christ—after we have forgiven others.”",
+      "sourceIds": [
+        "gs-debt",
+        "matthew-6-12-15"
+      ]
+    },
+    {
+      "id": "forgiveness-seventy-times-seven",
+      "term": "Seventy times seven",
+      "meaning": "The Savior’s answer when Peter asked whether forgiving seven times was enough (Matthew 18:21–22)—far more times than anyone would keep count of.",
+      "sourceIds": [
+        "matthew-18-21-22"
+      ]
+    },
+    {
+      "id": "forgiveness-pardon",
+      "term": "Pardon",
+      "meaning": "To release someone from blame or penalty. Gospel Topics says that to forgive is “to pardon or excuse someone from blame for an offense or misdeed.”",
+      "sourceIds": [
+        "gospel-topics-forgiveness"
+      ]
+    },
+    {
+      "id": "forgiveness-remember-no-more",
+      "term": "Remember them no more",
+      "meaning": "The Lord’s promise about the sins of those who repent: “I, the Lord, remember them no more” (Doctrine and Covenants 58:42).",
+      "sourceIds": [
+        "dc-58-42"
+      ]
+    },
+    {
+      "id": "forgiveness-vengeance",
+      "term": "Vengeance",
+      "meaning": "“Revenge or retaliation for an injury or offense” (Guide to the Scriptures). Gospel Topics counsels us to “abandon feelings of anger, bitterness, or revenge.”",
+      "sourceIds": [
+        "gs-vengeance",
+        "gospel-topics-forgiveness"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "forgiveness-not-condoning",
+      "term": "Condoning",
+      "title": "Forgiving is not saying the wrong was acceptable",
+      "explanation": "Elder Kevin R. Duncan taught, “To forgive is not to condone. We do not rationalize bad behavior or allow others to mistreat us because of their struggles, pains, or weaknesses.” Forgiveness lets go of bitterness and revenge; it never calls harm good.",
+      "sourceIds": [
+        "duncan-healing-ointment-of-forgiveness"
+      ]
+    },
+    {
+      "id": "forgiveness-not-returning-to-harm",
+      "term": "Staying in harm’s way",
+      "title": "Forgiving does not require going back to harm",
+      "explanation": "Elder Jeffrey R. Holland pointed out that the Lord did not say, “In order to forgive fully, you have to reenter a toxic relationship or return to an abusive, destructive circumstance.” The Church teaches that “No one is expected to endure abusive behavior.” If someone is hurting you, seeking safety and telling a trusted adult or leader is right, and it is not a failure to forgive.",
+      "sourceIds": [
+        "holland-ministry-of-reconciliation",
+        "gospel-topics-abuse"
+      ]
+    },
+    {
+      "id": "forgiveness-not-denying-pain",
+      "term": "Pretending it didn’t hurt",
+      "title": "Forgiving does not mean pretending it didn’t hurt",
+      "explanation": "Elder Holland also noted that the Lord did not say, “You are not allowed to feel true pain or real sorrow from the shattering experiences you have had at the hand of another.” Nor does forgiving give up on justice: Elder Duncan taught that “God will mete out a punishment that is fair, for mercy cannot rob justice,” and Gospel Topics teaches that “God will be the judge of others’ harmful actions.”",
+      "sourceIds": [
+        "holland-ministry-of-reconciliation",
+        "duncan-healing-ointment-of-forgiveness",
+        "gospel-topics-forgiveness"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "matthew-6-12-15",
+      "note": "In the Lord’s Prayer and the verses after it, the Savior links our forgiving others with our Father forgiving us."
+    },
+    {
+      "sourceId": "matthew-18-21-22",
+      "note": "Peter offered seven times; the Savior answered, “Until seventy times seven.”"
+    },
+    {
+      "sourceId": "dc-64-9-11",
+      "note": "“Of you it is required to forgive all men”—and we can “let God judge between me and thee.”"
+    },
+    {
+      "sourceId": "ephesians-4-31-32",
+      "note": "Paul pairs putting away “bitterness, and wrath, and anger” with being “kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.”"
+    },
+    {
+      "sourceId": "dc-58-42",
+      "note": "The Lord’s promise to the repentant: “I, the Lord, remember them no more.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "forgiveness-on-the-cross",
+      "title": "“Father, forgive them”",
+      "sourceId": "luke-23-33-34",
+      "note": "As He was crucified, the Savior prayed for those who did it: “Father, forgive them; for they know not what they do.” Gospel Topics says He “set the perfect example of forgiveness when He was on the cross.”"
+    },
+    {
+      "id": "forgiveness-power-to-forgive",
+      "title": "“Thy sins be forgiven thee”",
+      "sourceId": "matthew-9-2-6",
+      "note": "To a man sick of the palsy He said, “Son, be of good cheer; thy sins be forgiven thee,” and then healed him so that all might know that “the Son of man hath power on earth to forgive sins.”"
+    },
+    {
+      "id": "forgiveness-she-loved-much",
+      "title": "“Her sins, which are many, are forgiven”",
+      "sourceId": "luke-7-47-48",
+      "note": "Of a woman who had washed His feet with her tears, the Savior said, “Her sins, which are many, are forgiven; for she loved much,” and then told her, “Thy sins are forgiven.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "long-suffering",
+      "relation": "relates-to",
+      "note": "When the Lord proclaimed His name to Moses, He described Himself as “longsuffering” and as “forgiving iniquity and transgression and sin” (Exodus 34:6–7).",
+      "sourceIds": [
+        "exodus-34-6-7"
+      ]
+    },
+    {
+      "attributeId": "charity",
+      "relation": "relates-to",
+      "note": "The Guide to the Scriptures says that when people forgive each other, “they treat one another with Christlike love.”",
+      "sourceIds": [
+        "gs-forgive"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "forgiveness-what-it-asks",
+      "prompt": "Sort each statement: is it part of forgiving, as these scriptures and Church leaders teach, or something forgiving does not require?",
+      "sourceIds": [
+        "gospel-topics-forgiveness",
+        "dc-64-9-11",
+        "matthew-18-21-22",
+        "duncan-healing-ointment-of-forgiveness",
+        "holland-ministry-of-reconciliation",
+        "gospel-topics-abuse"
+      ],
+      "hints": [
+        "Some statements describe what forgiveness lets go of; others describe things forgiveness never demands.",
+        "Elder Duncan: “To forgive is not to condone.”",
+        "Elder Holland named two things the Lord did not say forgiveness requires."
+      ],
+      "explanation": "Forgiving includes praying for strength, letting go of revenge, forgiving again and again, and leaving judgment to God. It does not require calling a wrong acceptable, pretending it didn’t hurt, or going back into an abusive situation, and forgiving many times never means letting someone keep hurting you.",
+      "categories": [
+        {
+          "id": "part",
+          "label": "Part of forgiving"
+        },
+        {
+          "id": "not-required",
+          "label": "Not required to forgive"
+        }
+      ],
+      "items": [
+        {
+          "id": "pray-for-strength",
+          "text": "Praying for strength to forgive",
+          "category": "part",
+          "why": "Gospel Topics: “We should pray for strength to forgive those who have wronged us.”"
+        },
+        {
+          "id": "call-it-acceptable",
+          "text": "Saying that what happened was acceptable",
+          "category": "not-required",
+          "why": "Elder Duncan: “To forgive is not to condone.”"
+        },
+        {
+          "id": "let-go-revenge",
+          "text": "Letting go of a desire for revenge",
+          "category": "part",
+          "why": "Gospel Topics: we “should abandon feelings of anger, bitterness, or revenge.”"
+        },
+        {
+          "id": "return-to-abuse",
+          "text": "Going back into a situation where someone is abusing you",
+          "category": "not-required",
+          "why": "Elder Holland: the Lord did not say you must “return to an abusive, destructive circumstance.” Gospel Topics: “No one is expected to endure abusive behavior.”"
+        },
+        {
+          "id": "leave-judgment",
+          "text": "Leaving judgment to God",
+          "category": "part",
+          "why": "Doctrine and Covenants 64:11: “let God judge between me and thee.”"
+        },
+        {
+          "id": "pretend-no-pain",
+          "text": "Pretending it never hurt",
+          "category": "not-required",
+          "why": "Elder Holland: the Lord did not say, “You are not allowed to feel true pain or real sorrow.”"
+        },
+        {
+          "id": "again-and-again",
+          "text": "Forgiving more than once, even many times",
+          "category": "part",
+          "why": "Matthew 18:22: “Until seventy times seven.” Forgiving again never means letting someone keep hurting you; Elder Duncan taught that we do not “allow others to mistreat us.”"
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "forgiveness-vocab",
+      "prompt": "Match each word or phrase with its meaning.",
+      "sourceIds": [
+        "matthew-6-12-15",
+        "gs-debt",
+        "matthew-18-21-22",
+        "gospel-topics-forgiveness",
+        "dc-58-42",
+        "gs-vengeance"
+      ],
+      "hints": [
+        "Two words come from the Lord’s Prayer and the verses after it (Matthew 6:12–15).",
+        "One phrase is a promise the Lord makes to those who repent.",
+        "One word names what forgiveness lets go of."
+      ],
+      "explanation": "Trespasses are wrongs against us; debts picture sins we can’t repay ourselves; seventy times seven means forgiving beyond counting; to pardon is to release from blame; the Lord promises to remember repented sins no more; and vengeance is the revenge forgiveness lets go.",
+      "pairs": [
+        {
+          "id": "forgiveness-trespass",
+          "term": "Trespass",
+          "meaning": "A wrong or offense against someone"
+        },
+        {
+          "id": "forgiveness-debts",
+          "term": "Debts",
+          "meaning": "Sins pictured as something owed that we can’t repay by ourselves"
+        },
+        {
+          "id": "forgiveness-seventy-times-seven",
+          "term": "Seventy times seven",
+          "meaning": "Far more times than anyone would keep count of"
+        },
+        {
+          "id": "forgiveness-pardon",
+          "term": "Pardon",
+          "meaning": "To release someone from blame or penalty"
+        },
+        {
+          "id": "forgiveness-remember-no-more",
+          "term": "Remember them no more",
+          "meaning": "The Lord’s promise about the sins of those who repent"
+        },
+        {
+          "id": "forgiveness-vengeance",
+          "term": "Vengeance",
+          "meaning": "Revenge or retaliation for an injury"
+        }
+      ],
+      "extraMeanings": [
+        "Acting as though a wrong never happened",
+        "Staying close to someone who keeps hurting you"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "highlight",
+      "id": "forgiveness-dc-64-10-11",
+      "prompt": "Tap the phrase that tells what the Lord requires of us, and the phrase that tells what we can leave to Him.",
+      "sourceIds": [
+        "dc-64-9-11"
+      ],
+      "hints": [
+        "Look for the word “required.”",
+        "Then look for what we can say “in your hearts.”"
+      ],
+      "explanation": "The Lord says, “of you it is required to forgive all men,” and invites us to say in our hearts, “let God judge between me and thee.” We are asked to forgive; judging is His.",
+      "passage": "dc-64-9-11",
+      "chunks": [
+        {
+          "verse": 10,
+          "text": "I, the Lord, will forgive whom I will forgive,"
+        },
+        {
+          "verse": 10,
+          "text": "but of you it is required to forgive all men."
+        },
+        {
+          "verse": 11,
+          "text": "And ye ought to say in your hearts—let God judge between me and thee,"
+        },
+        {
+          "verse": 11,
+          "text": "and reward thee according to thy deeds."
+        }
+      ],
+      "targets": [
+        1,
+        2
+      ]
+    }
+  ],
+  "reflection": [
+    "The Savior prayed for those who crucified Him. What does that show you about Him?",
+    "What might it mean to “let God judge between me and thee”?",
+    "What helps a person let go of bitterness over time?"
+  ],
+  "safety": {
+    "text": "If someone is hurting you, forgiving them never means staying in harm’s way. Elder Jeffrey R. Holland taught that the Lord did not say that to forgive fully “you have to reenter a toxic relationship or return to an abusive, destructive circumstance.” Elder Kevin R. Duncan taught that forgiving does not mean we “allow others to mistreat us.” The Church teaches that “No one is expected to endure abusive behavior” and that victims “are never to blame for the harmful behavior of others.” Seeking safety and telling a trusted adult or leader is right, and it is not a failure to forgive. The Church’s abuse help site, linked below, shows where to turn.",
+    "sourceIds": [
+      "church-abuse-help",
+      "holland-ministry-of-reconciliation",
+      "duncan-healing-ointment-of-forgiveness",
+      "gospel-topics-abuse"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "contrasts",
+        "note": "Sensitive. The contrasts rely on speakers’ teachings (Elder Holland, October 2018; Elder Duncan, April 2016) and Gospel Topics: Abuse. The guidance to seek safety and tell a trusted adult or leader paraphrases Gospel Topics: Abuse. Please review the wording for youth, and consider linking abuse.ChurchofJesusChrist.org, which Gospel Topics: Abuse points to.",
+        "resolution": "Resolved: the page now has a safety note, shown right after the definition, that links the Church’s abuse help site (church-abuse-help, kind official) and quotes Elder Holland, Elder Duncan, and Gospel Topics: Abuse; all quotations were checked on 26 October 2026. ‘Seeking safety and telling a trusted adult or leader’ is Gospel Labs’ plain wording of Gospel Topics: Abuse (victims need to be heard and supported; others should find safety for the victim). Nothing on the page says trust must be restored. Owner: please confirm the safety wording for youth."
+      },
+      {
+        "where": "definition",
+        "note": "Gospel Topics defines forgiving as “to pardon or excuse someone from blame,” so the content avoids saying forgiveness isn’t excusing; it distinguishes forgiving from condoning (Elder Duncan’s word).",
+        "resolution": "Resolved: checked against Gospel Topics: Forgiveness on 26 October 2026; the definition and the ‘Pardon’ word quote it exactly, and the condoning contrast quotes Elder Duncan. The card summary now speaks of letting go of bitterness and revenge and leaving judgment to God (both from Gospel Topics) rather than of how to treat the person, so it can’t be read as requiring closeness to someone who causes harm."
+      },
+      {
+        "where": "saviorExamples.forgiveness-on-the-cross",
+        "note": "Gospel Topics notes (Luke 23:34 footnote c) that He referred to the Roman soldiers; we say only ‘those who did it.’",
+        "resolution": "Resolved: Gospel Topics itself says He was “Referring to the Roman soldiers who had crucified Him” and cites Luke 23:34 footnote c (checked 26 October 2026). The learner-facing note says only ‘those who did it’, which is accurate to both."
+      },
+      {
+        "where": "safety; activities.forgiveness-what-it-asks",
+        "note": "Sensitive. ‘Seventy times seven’ (Matthew 18:22) and ‘forgiving again and again’ could be read as forgiving someone who keeps hurting you while staying close to them.",
+        "resolution": "Resolved: the sort’s explanation and its again-and-again item now say that forgiving again never means letting someone keep hurting you, citing Elder Duncan. The return-to-abuse item now names Gospel Topics: Abuse for its second quotation, and the activity cites that source. The vocabulary activity keeps ‘Staying close to someone who keeps hurting you’ as a meaning that matches no word."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gospel-topics-forgiveness",
+      "kind": "official",
+      "label": "Gospel Topics: Forgiveness",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/forgiveness?lang=eng",
+      "excerpt": "To forgive is a divine attribute. It is to pardon or excuse someone from blame for an offense or misdeed. The scriptures refer to forgiveness in two ways. The Lord commands us to repent of our sins and seek His forgiveness. He also commands us to forgive those who offend or hurt us."
+    },
+    {
+      "id": "gs-forgive",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Forgive",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/forgive?lang=eng",
+      "excerpt": "When God forgives men, He cancels or sets aside a required punishment for sin. … As people forgive each other, they treat one another with Christlike love and have no bad feelings toward those who have offended them"
+    },
+    {
+      "id": "matthew-6-12-15",
+      "kind": "scripture",
+      "label": "Matthew 6:12–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p12-p15#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And forgive us our debts, as we forgive our debtors."
+        },
+        {
+          "number": 13,
+          "text": "And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen."
+        },
+        {
+          "number": 14,
+          "text": "For if ye forgive men their trespasses, your heavenly Father will also forgive you:"
+        },
+        {
+          "number": 15,
+          "text": "But if ye forgive not men their trespasses, neither will your Father forgive your trespasses."
+        }
+      ]
+    },
+    {
+      "id": "gs-debt",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Debt",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/debt?lang=eng",
+      "excerpt": "In another sense, Jesus taught that we should ask the Father to forgive us our debts, or release us from paying the price for our sins—through the Atonement of Jesus Christ—after we have forgiven others for their offences against us (Matt. 6:12; 3 Ne. 13:11)."
+    },
+    {
+      "id": "matthew-18-21-22",
+      "kind": "scripture",
+      "label": "Matthew 18:21–22",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p21-p22#p21",
+      "verses": [
+        {
+          "number": 21,
+          "text": "¶ Then came Peter to him, and said, Lord, how oft shall my brother sin against me, and I forgive him? till seven times?"
+        },
+        {
+          "number": 22,
+          "text": "Jesus saith unto him, I say not unto thee, Until seven times: but, Until seventy times seven."
+        }
+      ]
+    },
+    {
+      "id": "dc-58-42",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 58:42",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p42#p42",
+      "verses": [
+        {
+          "number": 42,
+          "text": "Behold, he who has repented of his sins, the same is forgiven, and I, the Lord, remember them no more."
+        }
+      ]
+    },
+    {
+      "id": "gs-vengeance",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Vengeance",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/vengeance?lang=eng",
+      "excerpt": "Revenge or retaliation for an injury or offense."
+    },
+    {
+      "id": "duncan-healing-ointment-of-forgiveness",
+      "kind": "speaker",
+      "label": "The Healing Ointment of Forgiveness",
+      "author": "Elder Kevin R. Duncan",
+      "publication": "General Conference, April 2016",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/04/the-healing-ointment-of-forgiveness?lang=eng",
+      "excerpt": "To forgive is not to condone. We do not rationalize bad behavior or allow others to mistreat us because of their struggles, pains, or weaknesses."
+    },
+    {
+      "id": "holland-ministry-of-reconciliation",
+      "kind": "speaker",
+      "label": "The Ministry of Reconciliation",
+      "author": "Elder Jeffrey R. Holland",
+      "publication": "General Conference, October 2018",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/10/the-ministry-of-reconciliation?lang=eng",
+      "excerpt": "Nor did He say, “In order to forgive fully, you have to reenter a toxic relationship or return to an abusive, destructive circumstance.”"
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "dc-64-9-11",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 64:9–11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64?lang=eng&id=p9-p11#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "Wherefore, I say unto you, that ye ought to forgive one another; for he that forgiveth not his brother his trespasses standeth condemned before the Lord; for there remaineth in him the greater sin."
+        },
+        {
+          "number": 10,
+          "text": "I, the Lord, will forgive whom I will forgive, but of you it is required to forgive all men."
+        },
+        {
+          "number": 11,
+          "text": "And ye ought to say in your hearts—let God judge between me and thee, and reward thee according to thy deeds."
+        }
+      ]
+    },
+    {
+      "id": "ephesians-4-31-32",
+      "kind": "scripture",
+      "label": "Ephesians 4:31–32",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/4?lang=eng&id=p31-p32#p31",
+      "verses": [
+        {
+          "number": 31,
+          "text": "Let all bitterness, and wrath, and anger, and clamour, and evil speaking, be put away from you, with all malice:"
+        },
+        {
+          "number": 32,
+          "text": "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+        }
+      ]
+    },
+    {
+      "id": "luke-23-33-34",
+      "kind": "scripture",
+      "label": "Luke 23:33–34",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p33-p34#p33",
+      "verses": [
+        {
+          "number": 33,
+          "text": "And when they were come to the place, which is called Calvary, there they crucified him, and the malefactors, one on the right hand, and the other on the left."
+        },
+        {
+          "number": 34,
+          "text": "¶ Then said Jesus, Father, forgive them; for they know not what they do. And they parted his raiment, and cast lots."
+        }
+      ]
+    },
+    {
+      "id": "matthew-9-2-6",
+      "kind": "scripture",
+      "label": "Matthew 9:2–6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng&id=p2-p6#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "And, behold, they brought to him a man sick of the palsy, lying on a bed: and Jesus seeing their faith said unto the sick of the palsy; Son, be of good cheer; thy sins be forgiven thee."
+        },
+        {
+          "number": 3,
+          "text": "And, behold, certain of the scribes said within themselves, This man blasphemeth."
+        },
+        {
+          "number": 4,
+          "text": "And Jesus knowing their thoughts said, Wherefore think ye evil in your hearts?"
+        },
+        {
+          "number": 5,
+          "text": "For whether is easier, to say, Thy sins be forgiven thee; or to say, Arise, and walk?"
+        },
+        {
+          "number": 6,
+          "text": "But that ye may know that the Son of man hath power on earth to forgive sins, (then saith he to the sick of the palsy,) Arise, take up thy bed, and go unto thine house."
+        }
+      ]
+    },
+    {
+      "id": "luke-7-47-48",
+      "kind": "scripture",
+      "label": "Luke 7:47–48",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p47-p48#p47",
+      "verses": [
+        {
+          "number": 47,
+          "text": "Wherefore I say unto thee, Her sins, which are many, are forgiven; for she loved much: but to whom little is forgiven, the same loveth little."
+        },
+        {
+          "number": 48,
+          "text": "And he said unto her, Thy sins are forgiven."
+        }
+      ]
+    },
+    {
+      "id": "exodus-34-6-7",
+      "kind": "scripture",
+      "label": "Exodus 34:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/34?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And the Lord passed by before him, and proclaimed, The Lord, The Lord God, merciful and gracious, longsuffering, and abundant in goodness and truth,"
+        },
+        {
+          "number": 7,
+          "text": "Keeping mercy for thousands, forgiving iniquity and transgression and sin, and that will by no means clear the guilty; visiting the iniquity of the fathers upon the children, and upon the children’s children, unto the third and to the fourth generation."
+        }
+      ]
+    },
+    {
+      "id": "church-abuse-help",
+      "kind": "official",
+      "label": "Abuse help (ChurchofJesusChrist.org)",
+      "url": "https://abuse.churchofjesuschrist.org/",
+      "summary": "The Church’s official help for people affected by abuse and for those who want to help them, including where to turn for safety and support."
+    }
+  ]
+}

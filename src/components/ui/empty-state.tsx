@@ -17,14 +17,14 @@ export function EmptyState({ icon: Icon, title, headingLevel, description, actio
   return (
     <div
       className={cn(
-        "flex flex-col items-center rounded-xl border border-dashed border-line-strong px-6 py-12 text-center",
+        "flex flex-col items-center rounded-2xl border border-dashed border-line-strong px-6 py-12 text-center",
         className,
       )}
     >
-      <div className="mb-4 flex size-11 items-center justify-center rounded-full border border-line bg-surface-raised text-accent">
+      <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-accent-soft text-accent ring-1 ring-accent/20">
         <Icon aria-hidden className="size-5" />
       </div>
-      <Title className="text-sm font-semibold text-fg">{title}</Title>
+      <Title className="text-base font-semibold tracking-tight text-fg">{title}</Title>
       {description && <p className="mt-1.5 max-w-sm text-sm leading-relaxed text-muted">{description}</p>}
       {action && <div className="mt-5">{action}</div>}
     </div>

@@ -1,0 +1,506 @@
+{
+  "id": "patience",
+  "status": "ready",
+  "name": "Patience",
+  "summary": "Trusting God through delay, opposition, or suffering—and enduring well while doing all we can.",
+  "definition": {
+    "text": "The Guide to the Scriptures defines patience as “Calm endurance; the ability to endure affliction, insult, or injury without complaint or retaliation.” Preach My Gospel describes it as “the capacity to trust God as you face delay, opposition, or suffering,” trusting “God’s timing for His promised blessings to be fulfilled.”",
+    "sourceIds": [
+      "gs-patience",
+      "preach-my-gospel-chapter-6"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "patience-endure",
+      "term": "Endure",
+      "meaning": "The Guide to the Scriptures: “To remain firm in a commitment to be true to the commandments of God despite temptation, opposition, and adversity.”",
+      "sourceIds": [
+        "gs-endure"
+      ]
+    },
+    {
+      "id": "patience-retaliation",
+      "term": "Retaliation",
+      "meaning": "Paying someone back for a hurt. The Guide to the Scriptures says patience endures injury “without complaint or retaliation.”",
+      "sourceIds": [
+        "gs-patience"
+      ]
+    },
+    {
+      "id": "patience-line-upon-line",
+      "term": "Line upon line",
+      "meaning": "Little by little. Preach My Gospel notes that righteous desires are usually realized “line upon line, … here a little and there a little” (2 Nephi 28:30).",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6"
+      ]
+    },
+    {
+      "id": "patience-active-waiting",
+      "term": "Active waiting",
+      "meaning": "Waiting while still working, hoping, and exercising faith. Preach My Gospel quotes President Dieter F. Uchtdorf: “Patience means active waiting and enduring.”",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6"
+      ]
+    },
+    {
+      "id": "patience-fortitude",
+      "term": "Fortitude",
+      "meaning": "Courage and strength in bearing hardship. Patience includes “bearing hardship with fortitude, even when the desires of our hearts are delayed” (quoted in Preach My Gospel).",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "patience-not-passivity",
+      "term": "Passivity",
+      "title": "Patience is not the same as doing nothing",
+      "explanation": "Preach My Gospel is direct: “Patience is not idleness or passive resignation.” Patient people keep nourishing the seed, trusting God to bring the fruit “by and by” (Alma 32:42). And when something truly cannot be changed, patience means coming “to accept it with courage, grace, and faith.”",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6",
+        "alma-32-41-43"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "mosiah-24-13-15",
+      "note": "When Alma’s people were in bondage, the Lord promised to “deliver them out of bondage” and eased their burdens while they waited, “and they did submit cheerfully and with patience to all the will of the Lord.”"
+    },
+    {
+      "sourceId": "alma-32-41-43",
+      "note": "Alma compares the word to a seed that grows as we nourish it “with great diligence, and with patience,” until “by and by” we taste its fruit."
+    },
+    {
+      "sourceId": "james-1-2-4",
+      "note": "James teaches that “the trying of your faith worketh patience,” and that patience has a “perfect work” to do in us."
+    },
+    {
+      "sourceId": "luke-21-19",
+      "note": "As He warned His disciples of persecution and hard times to come, the Savior counseled, “In your patience possess ye your souls.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "patience-reviled-not-again",
+      "title": "When He was reviled, He reviled not again",
+      "sourceId": "1-peter-2-21-23",
+      "note": "Peter holds up the Savior as “an example, that ye should follow his steps”: “when he was reviled, reviled not again; when he suffered, he threatened not; but committed himself to him that judgeth righteously.” He did not pay back hurt with hurt, and He left judgment to God. Following Him never means staying where someone is hurting you: “No one is expected to endure abusive behavior” (Gospel Topics: Abuse)."
+    },
+    {
+      "id": "patience-opened-not-his-mouth",
+      "title": "As a lamb before its shearers",
+      "sourceId": "isaiah-53-7",
+      "note": "Isaiah foresaw the Messiah’s silent endurance: “He was oppressed, and he was afflicted, yet he opened not his mouth.” When He was accused before Pilate, Matthew records that “he answered nothing” (Matthew 27:12)."
+    },
+    {
+      "id": "patience-grace-to-grace",
+      "title": "He grew from grace to grace",
+      "sourceId": "dc-93-12-13",
+      "note": "John testified that the Savior “received not of the fulness at first, but continued from grace to grace, until he received a fulness.” Scripture doesn’t call this patience, but Gospel Labs suggests it as a picture of patient growth. Preach My Gospel teaches that for us, too, “Becoming more like the Savior is a gradual, lifelong process.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "long-suffering",
+      "relation": "relates-to",
+      "note": "Alma pairs them twice: “full of patience and long-suffering” (Alma 7:23), and “patience, and long-suffering, waiting for the tree to bring forth fruit” (Alma 32:43).",
+      "sourceIds": [
+        "alma-7-23",
+        "alma-32-41-43"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "patience-or-passivity",
+      "prompt": "Preach My Gospel teaches that “Patience is not idleness or passive resignation.” Sort each example.",
+      "sourceIds": [
+        "preach-my-gospel-chapter-6",
+        "alma-32-41-43",
+        "gs-patience",
+        "gospel-topics-abuse"
+      ],
+      "hints": [
+        "Patience in these sources is active: it keeps working and keeps trusting.",
+        "Idleness does nothing; passive resignation gives up hope.",
+        "Compare each example with Alma 32:41–43 and the Guide to the Scriptures definition."
+      ],
+      "explanation": "Patience keeps acting while trusting God’s timing: nourishing a testimony, studying while waiting, answering calmly instead of retaliating, and accepting with courage what truly can’t be changed. Idleness waits without effort, and passive resignation gives up. Abuse is never something a person has to accept: “No one is expected to endure abusive behavior.”",
+      "categories": [
+        {
+          "id": "patience",
+          "label": "Patience"
+        },
+        {
+          "id": "passivity",
+          "label": "Idleness or passive resignation"
+        }
+      ],
+      "items": [
+        {
+          "id": "study-while-waiting",
+          "text": "Studying and praying a little every day while waiting for an answer",
+          "category": "patience",
+          "why": "“Patience means active waiting and enduring” (quoted in Preach My Gospel)."
+        },
+        {
+          "id": "prayer-doesnt-work",
+          "text": "Deciding prayer doesn’t work because an answer hasn’t come yet",
+          "category": "passivity",
+          "why": "Giving up is resignation. Patience trusts “God’s timing for His promised blessings to be fulfilled.”"
+        },
+        {
+          "id": "nourish-seed",
+          "text": "Nourishing a new testimony and waiting for it to grow",
+          "category": "patience",
+          "why": "Alma 32:41–42: nourish the word “with great diligence, and with patience.”"
+        },
+        {
+          "id": "do-nothing",
+          "text": "Doing nothing and assuming things will work out on their own",
+          "category": "passivity",
+          "why": "Preach My Gospel: patience is not idleness. Patient people do “all things that lie in [their] power.”"
+        },
+        {
+          "id": "answer-calmly",
+          "text": "Answering an insult calmly instead of getting even",
+          "category": "patience",
+          "why": "The Guide to the Scriptures: enduring insult “without complaint or retaliation.”"
+        },
+        {
+          "id": "accept-unchangeable",
+          "text": "Accepting with courage something that truly cannot be changed",
+          "category": "patience",
+          "why": "Preach My Gospel: when something cannot be changed, patience accepts it “with courage, grace, and faith.”"
+        },
+        {
+          "id": "never-try-again",
+          "text": "Never trying again after a setback because nothing ever changes anyway",
+          "category": "passivity",
+          "why": "That is passive resignation, not the hopeful endurance the sources describe."
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "patience-vocab",
+      "prompt": "Match each word or phrase with its meaning.",
+      "sourceIds": [
+        "gs-patience",
+        "gs-endure",
+        "preach-my-gospel-chapter-6"
+      ],
+      "hints": [
+        "One phrase describes how growth usually comes: little by little.",
+        "One word names what patience refuses to do when someone hurts us.",
+        "One of the extra meanings describes passivity, which Preach My Gospel says patience is not."
+      ],
+      "explanation": "Patience endures firmly, refuses retaliation, accepts growth line upon line, waits actively, and bears hardship with fortitude. Waiting without effort and never feeling frustrated are not what the sources describe.",
+      "pairs": [
+        {
+          "id": "patience-endure",
+          "term": "Endure",
+          "meaning": "To remain firm in being true to God despite temptation, opposition, and adversity"
+        },
+        {
+          "id": "patience-retaliation",
+          "term": "Retaliation",
+          "meaning": "Paying someone back for a hurt"
+        },
+        {
+          "id": "patience-line-upon-line",
+          "term": "Line upon line",
+          "meaning": "Little by little, a step at a time"
+        },
+        {
+          "id": "patience-active-waiting",
+          "term": "Active waiting",
+          "meaning": "Waiting while still working, hoping, and exercising faith"
+        },
+        {
+          "id": "patience-fortitude",
+          "term": "Fortitude",
+          "meaning": "Courage and strength in bearing hardship"
+        }
+      ],
+      "extraMeanings": [
+        "Waiting without doing anything",
+        "Never feeling frustrated at all"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "highlight",
+      "id": "patience-mosiah-24-15",
+      "prompt": "In verse 15, tap the phrase that shows where Alma’s people got their strength, and the phrase that shows how they responded to their burdens.",
+      "sourceIds": [
+        "mosiah-24-13-15"
+      ],
+      "hints": [
+        "Who did the strengthening?",
+        "Look for the word ‘patience.’"
+      ],
+      "explanation": "“The Lord did strengthen them that they could bear up their burdens with ease, and they did submit cheerfully and with patience to all the will of the Lord.” Their patience wasn’t grim endurance alone; it was cheerful, it rested on the Lord’s strength, and the Lord had promised to “deliver them out of bondage” (verse 13).",
+      "passage": "mosiah-24-13-15",
+      "chunks": [
+        {
+          "verse": 15,
+          "text": "And now it came to pass"
+        },
+        {
+          "verse": 15,
+          "text": "that the burdens which were laid upon Alma and his brethren were made light;"
+        },
+        {
+          "verse": 15,
+          "text": "yea, the Lord did strengthen them"
+        },
+        {
+          "verse": 15,
+          "text": "that they could bear up their burdens with ease,"
+        },
+        {
+          "verse": 15,
+          "text": "and they did submit cheerfully and with patience to all the will of the Lord."
+        }
+      ],
+      "targets": [
+        2,
+        4
+      ]
+    }
+  ],
+  "reflection": [
+    "What helps you keep doing your part while you wait for a blessing?",
+    "Alma’s people submitted “cheerfully and with patience.” What might cheerful patience look like?",
+    "How might trusting God’s timing change the way a person waits?"
+  ],
+  "safety": {
+    "text": "Patience never means staying where someone is hurting you, and enduring “without complaint or retaliation” never means keeping abuse secret. The Church teaches that “No one is expected to endure abusive behavior,” that “Reports of abuse should never be dismissed,” and that victims “are never to blame for the harmful behavior of others.” If someone is hurting you or someone you know, telling a trusted adult or leader and seeking safety is right, and it is not a failure of patience. The Church’s abuse help site, linked below, shows where to turn.",
+    "sourceIds": [
+      "church-abuse-help",
+      "gospel-topics-abuse",
+      "gs-patience"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "saviorExamples.patience-grace-to-grace",
+        "note": "Connecting D&C 93:12–13 (the Savior’s growth from grace to grace) with patience is an interpretation; Preach My Gospel lists D&C 93:12–13 among scriptures about seeking Christlike attributes.",
+        "resolution": "Qualified: the note now says scripture doesn’t call this patience and that Gospel Labs suggests it as a picture of patient growth. Preach My Gospel, chapter 6, does list Doctrine and Covenants 93:12–13 among scriptures about seeking Christlike attributes (checked 26 October 2026)."
+      },
+      {
+        "where": "saviorExamples.patience-opened-not-his-mouth",
+        "note": "Isaiah 53:7 is presented as prophecy of the Savior, as in Mosiah 14:7.",
+        "resolution": "Resolved: the Book of Mormon chapter summary for Mosiah 14, where Abinadi quotes Isaiah 53, says Isaiah speaks messianically of the Messiah’s sufferings (checked 26 October 2026). The safety note covers the risk of reading His silence as a reason to keep quiet about harm."
+      },
+      {
+        "where": "vocabulary",
+        "note": "Uchtdorf phrases are quoted from Preach My Gospel, chapter 6, which cites his talk “Continue in Patience” (April 2010).",
+        "resolution": "Resolved: Preach My Gospel, chapter 6, quotes these words and cites Dieter F. Uchtdorf, ‘Continue in Patience,’ Ensign or Liahona, May 2010 (April 2010 general conference); checked 26 October 2026. They are presented as quoted in Preach My Gospel."
+      },
+      {
+        "where": "safety; saviorExamples.patience-reviled-not-again; activities.patience-or-passivity; activities.patience-mosiah-24-15",
+        "note": "Sensitive. The Guide’s definition (enduring ‘affliction, insult, or injury without complaint or retaliation’), 1 Peter 2:21–23, Isaiah 53:7, the bondage of Mosiah 24, and ‘accepting what cannot be changed’ could each be read as asking someone to keep quiet about abuse or accept it.",
+        "resolution": "Qualified: added a safety note, shown right after the definition, that links the Church’s abuse help site and quotes Gospel Topics: Abuse. Its words that enduring ‘without complaint or retaliation’ never means keeping abuse secret are Gospel Labs’ reading of the Guide’s definition; owner, please confirm them. The 1 Peter example, the sort explanation, and the Mosiah 24 note and highlight now say that following Him never means staying where someone is hurting you, that abuse is never something to accept, and that the Lord promised deliverance."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gs-patience",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Patience",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/patience?lang=eng"
+    },
+    {
+      "id": "preach-my-gospel-chapter-6",
+      "kind": "official",
+      "label": "Preach My Gospel, chapter 6",
+      "title": "Chapter 6: Seek Christlike Attributes",
+      "publication": "Preach My Gospel: A Guide to Sharing the Gospel of Jesus Christ (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/14-chapter-6?lang=eng",
+      "excerpt": "A Christlike attribute is a quality or trait of the Savior’s nature and character."
+    },
+    {
+      "id": "gs-endure",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Endure",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/endure?lang=eng",
+      "excerpt": "To remain firm in a commitment to be true to the commandments of God despite temptation, opposition, and adversity."
+    },
+    {
+      "id": "alma-32-41-43",
+      "kind": "scripture",
+      "label": "Alma 32:41–43",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p41-p43#p41",
+      "verses": [
+        {
+          "number": 41,
+          "text": "But if ye will nourish the word, yea, nourish the tree as it beginneth to grow, by your faith with great diligence, and with patience, looking forward to the fruit thereof, it shall take root; and behold it shall be a tree springing up unto everlasting life."
+        },
+        {
+          "number": 42,
+          "text": "And because of your diligence and your faith and your patience with the word in nourishing it, that it may take root in you, behold, by and by ye shall pluck the fruit thereof, which is most precious, which is sweet above all that is sweet, and which is white above all that is white, yea, and pure above all that is pure; and ye shall feast upon this fruit even until ye are filled, that ye hunger not, neither shall ye thirst."
+        },
+        {
+          "number": 43,
+          "text": "Then, my brethren, ye shall reap the rewards of your faith, and your diligence, and patience, and long-suffering, waiting for the tree to bring forth fruit unto you."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-24-13-15",
+      "kind": "scripture",
+      "label": "Mosiah 24:13–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng&id=p13-p15#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "And it came to pass that the voice of the Lord came to them in their afflictions, saying: Lift up your heads and be of good comfort, for I know of the covenant which ye have made unto me; and I will covenant with my people and deliver them out of bondage."
+        },
+        {
+          "number": 14,
+          "text": "And I will also ease the burdens which are put upon your shoulders, that even you cannot feel them upon your backs, even while you are in bondage; and this will I do that ye may stand as witnesses for me hereafter, and that ye may know of a surety that I, the Lord God, do visit my people in their afflictions."
+        },
+        {
+          "number": 15,
+          "text": "And now it came to pass that the burdens which were laid upon Alma and his brethren were made light; yea, the Lord did strengthen them that they could bear up their burdens with ease, and they did submit cheerfully and with patience to all the will of the Lord."
+        }
+      ]
+    },
+    {
+      "id": "james-1-2-4",
+      "kind": "scripture",
+      "label": "James 1:2–4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p2-p4#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "My brethren, count it all joy when ye fall into divers temptations;"
+        },
+        {
+          "number": 3,
+          "text": "Knowing this, that the trying of your faith worketh patience."
+        },
+        {
+          "number": 4,
+          "text": "But let patience have her perfect work, that ye may be perfect and entire, wanting nothing."
+        }
+      ]
+    },
+    {
+      "id": "luke-21-19",
+      "kind": "scripture",
+      "label": "Luke 21:19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/21?lang=eng&id=p19#p19",
+      "verses": [
+        {
+          "number": 19,
+          "text": "In your patience possess ye your souls."
+        }
+      ]
+    },
+    {
+      "id": "1-peter-2-21-23",
+      "kind": "scripture",
+      "label": "1 Peter 2:21–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/2?lang=eng&id=p21-p23#p21",
+      "verses": [
+        {
+          "number": 21,
+          "text": "For even hereunto were ye called: because Christ also suffered for us, leaving us an example, that ye should follow his steps:"
+        },
+        {
+          "number": 22,
+          "text": "Who did no sin, neither was guile found in his mouth:"
+        },
+        {
+          "number": 23,
+          "text": "Who, when he was reviled, reviled not again; when he suffered, he threatened not; but committed himself to him that judgeth righteously:"
+        }
+      ]
+    },
+    {
+      "id": "isaiah-53-7",
+      "kind": "scripture",
+      "label": "Isaiah 53:7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p7#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "He was oppressed, and he was afflicted, yet he opened not his mouth: he is brought as a lamb to the slaughter, and as a sheep before her shearers is dumb, so he openeth not his mouth."
+        }
+      ]
+    },
+    {
+      "id": "dc-93-12-13",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 93:12–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p12-p13#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And I, John, saw that he received not of the fulness at the first, but received grace for grace;"
+        },
+        {
+          "number": 13,
+          "text": "And he received not of the fulness at first, but continued from grace to grace, until he received a fulness;"
+        }
+      ]
+    },
+    {
+      "id": "alma-7-23",
+      "kind": "scripture",
+      "label": "Alma 7:23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p23#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "And now I would that ye should be humble, and be submissive and gentle; easy to be entreated; full of patience and long-suffering; being temperate in all things; being diligent in keeping the commandments of God at all times; asking for whatsoever things ye stand in need, both spiritual and temporal; always returning thanks unto God for whatsoever things ye do receive."
+        }
+      ]
+    },
+    {
+      "id": "matthew-27-12-14",
+      "kind": "scripture",
+      "label": "Matthew 27:12–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng&id=p12-p14#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And when he was accused of the chief priests and elders, he answered nothing."
+        },
+        {
+          "number": 13,
+          "text": "Then said Pilate unto him, Hearest thou not how many things they witness against thee?"
+        },
+        {
+          "number": 14,
+          "text": "And he answered him to never a word; insomuch that the governor marvelled greatly."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "church-abuse-help",
+      "kind": "official",
+      "label": "Abuse help (ChurchofJesusChrist.org)",
+      "url": "https://abuse.churchofjesuschrist.org/",
+      "summary": "The Church’s official help for people affected by abuse and for those who want to help them, including where to turn for safety and support."
+    }
+  ]
+}

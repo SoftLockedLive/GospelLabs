@@ -1,0 +1,493 @@
+{
+  "id": "behold-your-little-ones",
+  "status": "ready",
+  "title": "Behold your little ones",
+  "sourceId": "3-nephi-17-20-24",
+  "context": {
+    "setting": "The resurrected Jesus Christ was teaching a multitude of the people of Nephi at the temple in the land Bountiful, about A.D. 34. He told them to go home and ponder, but when He saw their tears He said, “my bowels are filled with compassion towards you,” and healed their sick (3 Nephi 17:5–9). He had their little children brought to Him, knelt, and prayed for the people (verses 11–17).",
+    "speaker": "Jesus Christ; the multitude bore record of what they saw and heard",
+    "audience": "A multitude of about 2,500 men, women, and children (3 Nephi 17:25)"
+  },
+  "themes": [
+    {
+      "conceptId": "love-of-god",
+      "note": "He took the children “one by one, and blessed them”: personal attention to each child.",
+      "verses": [
+        21
+      ]
+    },
+    {
+      "conceptId": "prayer",
+      "note": "He “prayed unto the Father for them,” after praying for the whole multitude earlier in the chapter.",
+      "verses": [
+        21
+      ]
+    },
+    {
+      "conceptId": "faith",
+      "note": "“Blessed are ye because of your faith,” He told the people just before blessing their children.",
+      "verses": [
+        20
+      ]
+    },
+    {
+      "conceptId": "compassion",
+      "note": "Earlier in the chapter, when He saw the people's tears, He said, “my bowels are filled with compassion towards you” (verse 6). This scene with their children comes later in the same visit.",
+      "verses": [
+        21,
+        22
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "joy-is-full",
+      "verse": 20,
+      "phrase": "my joy is full",
+      "meaning": "The Savior Himself feels joy. The footnote on ‘now’ points back to verse 14, where He had said, “Father, I am troubled because of the wickedness of the people of the house of Israel.”",
+      "sourceIds": [
+        "3-nephi-17-14"
+      ]
+    },
+    {
+      "id": "he-wept",
+      "verse": 21,
+      "phrase": "he wept",
+      "meaning": "The record doesn't say why He wept; it comes right after He said His joy was full. The footnote points to another record of His tears: “Jesus wept.”",
+      "sourceIds": [
+        "john-11-35"
+      ]
+    },
+    {
+      "id": "one-by-one",
+      "verse": 21,
+      "phrase": "one by one",
+      "meaning": "He blessed each child individually. Earlier that day the multitude had come forward “one by one” to feel the prints of the nails in His hands and feet.",
+      "sourceIds": [
+        "3-nephi-11-14-15"
+      ]
+    },
+    {
+      "id": "blessed-and-prayed",
+      "verse": 21,
+      "phrase": "blessed them, and prayed unto the Father for them",
+      "meaning": "Compare His mortal ministry, when He “took them up in his arms, put his hands upon them, and blessed them.” The footnote on ‘blessed’ points there.",
+      "sourceIds": [
+        "mark-10-13-16"
+      ]
+    },
+    {
+      "id": "behold",
+      "verse": 23,
+      "phrase": "Behold your little ones",
+      "meaning": "‘Behold’ means look and see. He turns the multitude's attention to their own children, and verse 24 tells what they saw.",
+      "sourceIds": []
+    },
+    {
+      "id": "minister",
+      "verse": 24,
+      "phrase": "the angels did minister unto them",
+      "meaning": "To ‘minister’ is to serve and care for. Angels came down “as it were in the midst of fire” and “encircled those little ones about.”",
+      "sourceIds": []
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "3-nephi-17-6-7",
+      "relation": "relates-to",
+      "note": "Earlier in the chapter: “my bowels are filled with compassion towards you,” and He invites them to bring every sick and afflicted person to be healed."
+    },
+    {
+      "sourceId": "mark-10-13-16",
+      "relation": "relates-to",
+      "note": "During His mortal ministry He also welcomed little children, saying “of such is the kingdom of God,” and blessed them."
+    },
+    {
+      "sourceId": "3-nephi-11-14-15",
+      "relation": "relates-to",
+      "note": "On the same visit the multitude came “one by one” to feel the prints of the nails, so that each could know for themselves."
+    },
+    {
+      "sourceId": "john-11-35",
+      "relation": "relates-to",
+      "note": "Another record of the Savior's tears: “Jesus wept.” The footnote to ‘wept’ in 3 Nephi 17:21 points here."
+    }
+  ],
+  "questions": [
+    {
+      "id": "why-wept",
+      "question": "Why did Jesus weep?",
+      "answer": "The record doesn't say. Verse 20 shows He had just said, “my joy is full.” Verse 21 says He wept as He blessed the children, and verse 22 that “he wept again.” The text leaves the reason unstated, so it is a place to ponder rather than assume.",
+      "sourceIds": [
+        "3-nephi-17-20-24"
+      ]
+    },
+    {
+      "id": "troubled-to-joy",
+      "question": "What had He said earlier that makes “my joy is full” stand out?",
+      "answer": "In verse 14, as the people knelt, He said, “Father, I am troubled because of the wickedness of the people of the house of Israel.” After praying with them He told the multitude, “Blessed are ye because of your faith. And now behold, my joy is full.”",
+      "sourceIds": [
+        "3-nephi-17-14",
+        "3-nephi-17-20-24"
+      ]
+    },
+    {
+      "id": "witnesses",
+      "question": "How many people saw this, and how do we know?",
+      "answer": "Verse 25 says “they were in number about two thousand and five hundred souls,” men, women, and children, and that “they all of them did see and hear, every man for himself.”",
+      "sourceIds": [
+        "3-nephi-17-25"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "how-cared-for",
+      "prompt": "In verses 21–24, tap the phrases that describe what was done for the children, by the Savior and by angels.",
+      "sourceIds": [
+        "3-nephi-17-20-24"
+      ],
+      "hints": [
+        "Verse 21 has three things the Savior did for the children.",
+        "Verse 24 has two things the angels did once they came down."
+      ],
+      "explanation": "The Savior took the children “one by one,” “blessed them,” and “prayed unto the Father for them.” Then angels “came down and encircled those little ones about” and “did minister unto them.” Each child received personal attention from the Savior and from heaven.",
+      "passage": "3-nephi-17-20-24",
+      "chunks": [
+        {
+          "verse": 21,
+          "text": "And when he had said these words,"
+        },
+        {
+          "verse": 21,
+          "text": "he wept,"
+        },
+        {
+          "verse": 21,
+          "text": "and the multitude bare record of it,"
+        },
+        {
+          "verse": 21,
+          "text": "and he took their little children, one by one,"
+        },
+        {
+          "verse": 21,
+          "text": "and blessed them,"
+        },
+        {
+          "verse": 21,
+          "text": "and prayed unto the Father for them."
+        },
+        {
+          "verse": 22,
+          "text": "And when he had done this"
+        },
+        {
+          "verse": 22,
+          "text": "he wept again;"
+        },
+        {
+          "verse": 23,
+          "text": "And he spake unto the multitude, and said unto them:"
+        },
+        {
+          "verse": 23,
+          "text": "Behold your little ones."
+        },
+        {
+          "verse": 24,
+          "text": "And as they looked to behold they cast their eyes towards heaven,"
+        },
+        {
+          "verse": 24,
+          "text": "and they saw the heavens open,"
+        },
+        {
+          "verse": 24,
+          "text": "and they saw angels descending out of heaven as it were in the midst of fire;"
+        },
+        {
+          "verse": 24,
+          "text": "and they came down and encircled those little ones about, and they were encircled about with fire;"
+        },
+        {
+          "verse": 24,
+          "text": "and the angels did minister unto them."
+        }
+      ],
+      "targets": [
+        3,
+        4,
+        5,
+        13,
+        14
+      ],
+      "minTargets": 4
+    },
+    {
+      "type": "scripture-connect",
+      "id": "in-both-lands",
+      "prompt": "Compare 3 Nephi 17:20–24 with Mark 10:13–16 and 3 Nephi 11:14–15.",
+      "sourceIds": [
+        "3-nephi-17-20-24",
+        "mark-10-13-16",
+        "3-nephi-11-14-15"
+      ],
+      "hints": [
+        "Look for what Jesus does with the children in both 3 Nephi 17 and Mark 10.",
+        "Find the words ‘one by one’ in two of the passages."
+      ],
+      "explanation": "In both lands the Savior blessed little children. Mark records that He “took them up in his arms, put his hands upon them, and blessed them”; 3 Nephi adds that He prayed for them and that angels ministered to them. In 3 Nephi 11 and 17 He ministers “one by one”: personally, to each.",
+      "passages": [
+        "3-nephi-17-20-24",
+        "mark-10-13-16",
+        "3-nephi-11-14-15"
+      ],
+      "questions": [
+        {
+          "id": "both",
+          "prompt": "What do 3 Nephi 17:21 and Mark 10:16 both record the Savior doing?",
+          "options": [
+            {
+              "id": "blessed",
+              "text": "Blessing the little children"
+            },
+            {
+              "id": "sermon",
+              "text": "Teaching the children a sermon",
+              "feedback": "Neither passage records a sermon to the children. What did He do with them?"
+            },
+            {
+              "id": "sent-away",
+              "text": "Sending the children away so He could teach the adults",
+              "feedback": "In Mark 10:14 Jesus was “much displeased” when the disciples rebuked those who brought them. What did He say instead?"
+            }
+          ],
+          "correct": [
+            "blessed"
+          ]
+        },
+        {
+          "id": "only-nephi",
+          "prompt": "What does 3 Nephi 17:20–24 record that Mark 10:13–16 doesn't?",
+          "options": [
+            {
+              "id": "prayed-angels",
+              "text": "He prayed to the Father for the children, and angels ministered to them."
+            },
+            {
+              "id": "arms",
+              "text": "He took the children in His arms.",
+              "feedback": "That detail is in Mark 10:16."
+            },
+            {
+              "id": "blessed",
+              "text": "He blessed the children.",
+              "feedback": "Both passages record that."
+            }
+          ],
+          "correct": [
+            "prayed-angels"
+          ]
+        },
+        {
+          "id": "one-by-one",
+          "prompt": "What do “one by one” in 3 Nephi 11:15 and 17:21 suggest about how He ministers?",
+          "options": [
+            {
+              "id": "personally",
+              "text": "Personally, to each individual"
+            },
+            {
+              "id": "crowds",
+              "text": "Only to large crowds at once",
+              "feedback": "In 3 Nephi 11:15 the multitude went forth “one by one until they had all gone forth.”"
+            },
+            {
+              "id": "worthy-only",
+              "text": "Only to those who had already been healed",
+              "feedback": "In 3 Nephi 17:21 He blessed the children. Is any condition given?"
+            }
+          ],
+          "correct": [
+            "personally"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:3-nephi-17-20-24",
+      "to": "concept:love-of-god",
+      "relation": "illustrates",
+      "sourceIds": [
+        "3-nephi-17-20-24"
+      ],
+      "note": "He took the little children one by one, blessed them, and prayed for them."
+    },
+    {
+      "from": "scripture:3-nephi-17-20-24",
+      "to": "attribute:compassion",
+      "relation": "illustrates",
+      "sourceIds": [
+        "3-nephi-17-20-24",
+        "3-nephi-17-6-7"
+      ],
+      "note": "The scene follows His words of compassion when He saw the people's tears (verses 5–7)."
+    },
+    {
+      "from": "scripture:mark-10-13-16",
+      "to": "scripture:3-nephi-17-20-24",
+      "relation": "relates-to",
+      "sourceIds": [
+        "mark-10-13-16",
+        "3-nephi-17-20-24"
+      ],
+      "note": "In both lands, the Savior blessed little children."
+    }
+  ],
+  "sources": [
+    {
+      "id": "3-nephi-17-20-24",
+      "kind": "scripture",
+      "label": "3 Nephi 17:20–24",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p20-p24#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "And they arose from the earth, and he said unto them: Blessed are ye because of your faith. And now behold, my joy is full."
+        },
+        {
+          "number": 21,
+          "text": "And when he had said these words, he wept, and the multitude bare record of it, and he took their little children, one by one, and blessed them, and prayed unto the Father for them."
+        },
+        {
+          "number": 22,
+          "text": "And when he had done this he wept again;"
+        },
+        {
+          "number": 23,
+          "text": "And he spake unto the multitude, and said unto them: Behold your little ones."
+        },
+        {
+          "number": 24,
+          "text": "And as they looked to behold they cast their eyes towards heaven, and they saw the heavens open, and they saw angels descending out of heaven as it were in the midst of fire; and they came down and encircled those little ones about, and they were encircled about with fire; and the angels did minister unto them."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-6-7",
+      "kind": "scripture",
+      "label": "3 Nephi 17:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And he said unto them: Behold, my bowels are filled with compassion towards you."
+        },
+        {
+          "number": 7,
+          "text": "Have ye any that are sick among you? Bring them hither. Have ye any that are lame, or blind, or halt, or maimed, or leprous, or that are withered, or that are deaf, or that are afflicted in any manner? Bring them hither and I will heal them, for I have compassion upon you; my bowels are filled with mercy."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-14",
+      "kind": "scripture",
+      "label": "3 Nephi 17:14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p14#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "And it came to pass that when they had knelt upon the ground, Jesus groaned within himself, and said: Father, I am troubled because of the wickedness of the people of the house of Israel."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-17-25",
+      "kind": "scripture",
+      "label": "3 Nephi 17:25",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p25#p25",
+      "verses": [
+        {
+          "number": 25,
+          "text": "And the multitude did see and hear and bear record; and they know that their record is true for they all of them did see and hear, every man for himself; and they were in number about two thousand and five hundred souls; and they did consist of men, women, and children."
+        }
+      ]
+    },
+    {
+      "id": "mark-10-13-16",
+      "kind": "scripture",
+      "label": "Mark 10:13–16",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "¶ And they brought young children to him, that he should touch them: and his disciples rebuked those that brought them."
+        },
+        {
+          "number": 14,
+          "text": "But when Jesus saw it, he was much displeased, and said unto them, Suffer the little children to come unto me, and forbid them not: for of such is the kingdom of God."
+        },
+        {
+          "number": 15,
+          "text": "Verily I say unto you, Whosoever shall not receive the kingdom of God as a little child, he shall not enter therein."
+        },
+        {
+          "number": 16,
+          "text": "And he took them up in his arms, put his hands upon them, and blessed them."
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-11-14-15",
+      "kind": "scripture",
+      "label": "3 Nephi 11:14–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p14-p15#p14",
+      "verses": [
+        {
+          "number": 14,
+          "text": "Arise and come forth unto me, that ye may thrust your hands into my side, and also that ye may feel the prints of the nails in my hands and in my feet, that ye may know that I am the God of Israel, and the God of the whole earth, and have been slain for the sins of the world."
+        },
+        {
+          "number": 15,
+          "text": "And it came to pass that the multitude went forth, and thrust their hands into his side, and did feel the prints of the nails in his hands and in his feet; and this they did do, going forth one by one until they had all gone forth, and did see with their eyes and did feel with their hands, and did know of a surety and did bear record, that it was he, of whom it was written by the prophets, that should come."
+        }
+      ]
+    },
+    {
+      "id": "john-11-35",
+      "kind": "scripture",
+      "label": "John 11:35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng&id=p35#p35",
+      "verses": [
+        {
+          "number": 35,
+          "text": "Jesus wept."
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "context.setting",
+        "note": "Bountiful and about A.D. 34 come from the 3 Nephi 11 introduction and chapter summary; the rest summarizes 3 Nephi 17:1–17.",
+        "resolution": "Resolved: checked 26 October 2026. The 3 Nephi 11 introduction places the multitude ‘in the land Bountiful’, the 3 Nephi 17 chapter summary ends ‘About A.D. 34’, and verses 5–17 support the rest (their tears, His words of compassion, the healing, the children brought, and Jesus kneeling to pray)."
+      },
+      {
+        "where": "keyPhrases.blessed-and-prayed",
+        "note": "‘His ministry in the Holy Land’ is Gospel Labs' framing of Mark 10; Mark doesn't name the place in these verses.",
+        "resolution": "Resolved: reworded to ‘His mortal ministry’, matching the related note on Mark 10, so the text no longer names a place Mark doesn't name in these verses. Checked 26 October 2026: the footnote on ‘blessed’ in 3 Nephi 17:21 points to Mark 10:16."
+      },
+      {
+        "where": "themes.compassion",
+        "note": "Uses the Character of Christ attribute ‘compassion’; the compassion statement itself is in verses 6–7, just before this passage.",
+        "resolution": "Resolved: the theme and Map notes now cite verses 5–7 as where His compassion is stated and present this scene as following it in the same visit, rather than as itself stating compassion. The compassion attribute exists (src/content/attributes/compassion.json)."
+      }
+    ]
+  }
+}

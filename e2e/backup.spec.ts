@@ -3,6 +3,12 @@ import { expect, test, type Page } from "@playwright/test";
 import { BACKUP_FROM_1_0, RECORD_FROM_1_0, RECORD_FROM_1_0_AS_READ } from "../src/persistence/legacy-fixtures";
 import { createInvestigation, libraryItem } from "./helpers";
 
+/** The per-kind summary in Settings › Your data. */
+const savedData = (page: Page) => page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem");
+
+const NOTHING_SAVED = ["0 research investigations", "0 guided investigations", "0 Discovery Cards", "0 Map connections", "0 explorations"];
+const NO_STUDY_DATA = { progress: [], discoveries: [], personalConnections: [], explorations: [] };
+
 async function exportBackup(page: Page, path: string) {
   await page.goto("/settings");
   const [download] = await Promise.all([
@@ -18,7 +24,7 @@ test("export, delete everything, and restore with merge", async ({ page }, testI
   await createInvestigation(page, "Grace and works");
   const backupPath = testInfo.outputPath("backup.json");
   const backup = await exportBackup(page, backupPath);
-  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 2 });
+  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 3, study: NO_STUDY_DATA });
   expect(backup.investigations).toHaveLength(1);
   expect(backup.investigations[0]).toMatchObject({
     evidenceConnections: [],
@@ -28,13 +34,15 @@ test("export, delete everything, and restore with merge", async ({ page }, testI
     christReflection: {},
   });
 
-  // Delete everything (requires acknowledgement).
+  // Delete everything (requires acknowledgement, and lists what will go).
   await page.getByRole("button", { name: "Delete all data" }).click();
   const deleteDialog = page.getByRole("dialog", { name: "Delete all data?" });
+  await expect(deleteDialog.getByRole("list", { name: "Will be deleted" })).toContainText("1 research investigation");
   await expect(deleteDialog.getByRole("button", { name: "Delete everything" })).toBeDisabled();
-  await deleteDialog.getByRole("checkbox").check();
+  await deleteDialog.getByRole("checkbox", { name: /I understand/ }).check();
   await deleteDialog.getByRole("button", { name: "Delete everything" }).click();
-  await expect(page.getByText("0 investigations saved on this device.")).toBeVisible();
+  await expect(page.getByText("Deleted 1 research investigation from this device.")).toBeVisible();
+  await expect(savedData(page)).toHaveText(NOTHING_SAVED);
 
   // Restore.
   await page.locator('input[type="file"]').setInputFiles(backupPath);
@@ -60,11 +68,13 @@ test("replace warns before deleting current data", async ({ page }, testInfo) =>
   await page.locator('input[type="file"]').setInputFiles(backupPath);
   const dialog = page.getByRole("dialog", { name: "Import backup" });
   await dialog.getByText("Replace all my data").click();
-  await expect(dialog).toContainText("Your current 2 investigations will be permanently deleted.");
+  await expect(dialog).toContainText("Research investigations: 2 deleted · 1 restored");
+  await expect(dialog).toContainText("Everything now on this device will be permanently deleted: 2 research investigations.");
+  await expect(dialog.getByRole("button", { name: "Download a backup of my current data" })).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Replace all data" })).toBeDisabled();
-  await dialog.getByRole("checkbox").check();
+  await dialog.getByRole("checkbox", { name: /I understand/ }).check();
   await dialog.getByRole("button", { name: "Replace all data" }).click();
-  await expect(page.getByText("Replaced your data with 1 investigation from the backup.")).toBeVisible();
+  await expect(page.getByText("Replaced your data with 1 research investigation from the backup.")).toBeVisible();
 
   await page.goto("/library");
   await expect(libraryItem(page, "Kept in backup")).toBeVisible();
@@ -86,7 +96,7 @@ test("damaged and incompatible files are rejected without changing data", async 
   await page.locator('input[type="file"]').setInputFiles(newer);
   await expect(page.getByRole("alert").filter({ hasText: "newer version of Gospel Labs" })).toBeVisible();
 
-  await expect(page.getByText("1 investigation saved on this device.")).toBeVisible();
+  await expect(savedData(page).first()).toHaveText("1 research investigation");
 });
 
 test("a backup exported by Gospel Labs 1.0 imports with all of its data", async ({ page }, testInfo) => {
@@ -96,7 +106,8 @@ test("a backup exported by Gospel Labs 1.0 imports with all of its data", async 
   await page.goto("/settings");
   await page.locator('input[type="file"]').setInputFiles(oldBackup);
   const dialog = page.getByRole("dialog", { name: "Import backup" });
-  await expect(dialog).toContainText("1 new · 0 updated · 0 unchanged");
+  await expect(dialog).toContainText("made by Gospel Labs 1.x");
+  await expect(dialog).toContainText("Research investigations: 1 new · 0 updated · 0 unchanged");
   await dialog.getByRole("button", { name: "Import", exact: true }).click();
   await expect(page.getByText("Imported: 1 new, 0 updated, 0 unchanged.")).toBeVisible();
 
@@ -107,7 +118,8 @@ test("a backup exported by Gospel Labs 1.0 imports with all of its data", async 
 
   // Exporting again writes the current format, with the 1.0 data unchanged.
   const reexported = await exportBackup(page, testInfo.outputPath("reexported.json"));
-  expect(reexported.version).toBe(2);
+  expect(reexported.version).toBe(3);
   // Imported by this version, so stamped with its record format.
   expect(reexported.investigations).toEqual([{ ...RECORD_FROM_1_0_AS_READ, dataVersion: 2 }]);
+  expect(reexported.study).toEqual(NO_STUDY_DATA);
 });

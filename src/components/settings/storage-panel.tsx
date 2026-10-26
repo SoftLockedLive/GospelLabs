@@ -1,8 +1,9 @@
 "use client";
 
 import { ShieldCheck } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { DATA_KINDS, DATA_KIND_LABELS, type DataCounts } from "@/persistence/backup";
 
 interface StorageInfo {
   usage?: number;
@@ -21,6 +22,30 @@ async function readStorageInfo(): Promise<StorageInfo | null> {
   if (!storage?.estimate) return null;
   const [estimate, persisted] = await Promise.all([storage.estimate(), storage.persisted?.() ?? false]);
   return { usage: estimate.usage, persisted, canPersist: typeof storage.persist === "function" };
+}
+
+/**
+ * How many records of each kind are saved on this device: research
+ * investigations and every kind of study data. Counts include damaged
+ * records, since deleting everything removes them too.
+ */
+export function SavedDataSummary({ counts }: { counts: DataCounts }) {
+  const headingId = useId();
+  return (
+    <div>
+      <p id={headingId} className="text-sm font-medium text-fg">
+        Saved on this device
+      </p>
+      <ul aria-labelledby={headingId} className="mt-2 grid gap-x-6 gap-y-1 text-sm text-muted sm:grid-cols-2">
+        {DATA_KINDS.map((kind) => (
+          <li key={kind}>
+            <span className="font-mono text-fg">{counts[kind]}</span>{" "}
+            {counts[kind] === 1 ? DATA_KIND_LABELS[kind].one : DATA_KIND_LABELS[kind].many}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 /**
@@ -69,7 +94,7 @@ export function StoragePanel() {
               When a device runs low on space, browsers may clear site data. You can ask this browser to keep
               Gospel Labs data.
             </p>
-            <Button variant="secondary" size="sm" onClick={requestPersistence}>
+            <Button variant="secondary" size="md" onClick={requestPersistence}>
               <ShieldCheck aria-hidden />
               Keep my data protected
             </Button>

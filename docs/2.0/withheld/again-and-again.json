@@ -1,0 +1,228 @@
+{
+  "investigation": "again-and-again",
+  "file": "src/content/investigations/again-and-again.json",
+  "reviewed": "2026-10-26",
+  "about": "Content removed or replaced in the Gospel Labs 2.0 doctrinal review because an activity rewarded an interpretation or a contested edge case as its correct answer. Each entry keeps the original so the owner can restore it after confirming the doctrine. Wording that came from individual learner survey responses is generalized here as well, because this repository is public.",
+  "items": [
+    {
+      "where": "steps.weakness-or-sin.activities.hard (weakness-compare): perspective ‘anger’, and the hint that pointed to it",
+      "action": "withheld",
+      "reason": "Contested edge case. Whether a sudden flash of anger is weakness or sin isn’t settled by the sources this step declares. A learner could defensibly answer ‘contradicted’ (an unchosen reaction isn’t ‘willful disobedience’), and scripture elsewhere speaks to anger itself (Matthew 5:22, which adds ‘without a cause’, and 3 Nephi 12:22, which doesn’t). A correct answer shouldn’t depend on that judgment.",
+      "replacement": "Perspective ‘slow-change’ (‘If a weakness isn’t made strong right away, I must not have enough faith.’), marked ‘goes beyond’ because Ether 12:27 promises to make weak things strong but doesn’t say how soon. The explanation still says the sources don’t sort every passing feeling into weakness or sin.",
+      "privacy": "Text and voice generalized from a survey-derived original.",
+      "original": {
+        "perspective": {
+          "id": "anger",
+          "text": "A sudden flash of anger at someone is exactly the same as deciding to hurt them.",
+          "voice": "A common question",
+          "verdict": "beyond",
+          "rationale": "These sources distinguish weakness from willful disobedience, but they don’t sort every feeling or reaction into one category. Gospel Topics says we can repent daily “of even minor mistakes,” so a person can bring any of it to Heavenly Father."
+        },
+        "hint": "One statement describes a real situation that the sources don’t settle in detail. That’s a ‘goes beyond.’"
+      }
+    },
+    {
+      "where": "steps.weakness-or-sin.activities.easy (weakness-sort): category labels and hint",
+      "action": "replaced",
+      "reason": "The sort classed temptation as a ‘weakness or mortal limitation’. Hebrews 4:15 plainly says being tempted isn’t sin (‘yet without sin’), but no source calls temptation a weakness. The category is now ‘Not sin in itself’, so the answer rests only on what the sources state.",
+      "original": {
+        "prompt": "Sort each example: is it a weakness or limitation of mortal life, or a sin (choosing against what we know is right)?",
+        "categories": [
+          {
+            "id": "weakness",
+            "label": "Weakness or mortal limitation",
+            "description": "Part of mortal life, not willful disobedience. The Lord says, “I give unto men weakness.”"
+          },
+          {
+            "id": "sin",
+            "label": "Sin",
+            "description": "“Willful disobedience to God’s commandments” (Guide to the Scriptures)"
+          }
+        ],
+        "hint": "Five examples are weaknesses or conditions of mortal life; three are choices against what the person knows is right."
+      }
+    },
+    {
+      "where": "steps.weakness-or-sin.activities.complex (weakness-principle)",
+      "action": "replaced",
+      "reason": "The correct statement asserted Gospel Labs’ synthesis as fact (‘Weakness is part of being mortal and is not itself sin’). The new statement is built only from what Ether 12:27, the Guide to the Scriptures, 1 John 1:9, and Gospel Topics state; the synthesis is offered elsewhere as what ‘these sources suggest’.",
+      "original": {
+        "type": "build-principle",
+        "id": "weakness-principle",
+        "prompt": "Build a principle that brings these sources together. Leave out the fragments that the sources contradict.",
+        "sourceIds": [
+          "ether-12-27",
+          "gs-sin",
+          "1-john-1-8-9",
+          "nelson-do-better-be-better-2019"
+        ],
+        "hints": [
+          "Begin with what weakness is, then define sin.",
+          "Then add what the Savior offers for each: Ether 12:27 speaks of grace, and 1 John 1:9 speaks of forgiveness.",
+          "Six fragments make the principle. The three left over each contradict Ether 12:27, the Guide to the Scriptures, or President Nelson."
+        ],
+        "explanation": "Ether 12:27 shows weakness as something the Lord gives and makes strong through grace: “my grace is sufficient for all men that humble themselves before me.” The Guide to the Scriptures defines sin as willful disobedience, which we confess and He forgives (1 John 1:9). President Nelson’s teaching that the Lord “does not expect perfection from us at this point” rules out the idea that we must be perfect first, and Ether 12:27 rules out the idea that weakness needs no help.",
+        "fragments": [
+          {
+            "id": "mortal",
+            "text": "Weakness is part of being mortal"
+          },
+          {
+            "id": "not-sin",
+            "text": "and is not itself sin;"
+          },
+          {
+            "id": "choose",
+            "text": "sin is choosing against what we know is right."
+          },
+          {
+            "id": "grace",
+            "text": "Jesus Christ offers grace for our weakness"
+          },
+          {
+            "id": "forgive",
+            "text": "and forgiveness for our sins,"
+          },
+          {
+            "id": "daily",
+            "text": "so repenting daily is how we keep coming to Him."
+          },
+          {
+            "id": "perfect-first",
+            "text": "so we must become perfect before He will help,"
+          },
+          {
+            "id": "any-imperfection",
+            "text": "and any imperfection counts as willful disobedience,"
+          },
+          {
+            "id": "no-help",
+            "text": "which means weakness needs no help from Him."
+          }
+        ],
+        "solution": [
+          "mortal",
+          "not-sin",
+          "choose",
+          "grace",
+          "forgive",
+          "daily"
+        ],
+        "alternatives": [
+          [
+            "grace",
+            "forgive",
+            "daily",
+            "mortal",
+            "not-sin",
+            "choose"
+          ]
+        ],
+        "statement": "Weakness is part of being mortal and is not itself sin; sin is choosing against what we know is right. Jesus Christ offers grace for our weakness and forgiveness for our sins, so repenting daily is how we keep coming to Him."
+      }
+    },
+    {
+      "where": "branches.am-i-good-enough.steps.after-all-we-can-do.activities.medium (after-clue): question and correct option",
+      "action": "replaced",
+      "reason": "The rewarded answer gave one interpretation of 2 Nephi 25:23 (‘grace is … not a reward paid after we’ve done everything’). The Bible Dictionary and President Uchtdorf emphasize different sides of the phrase, so the answer now states only what each source says.",
+      "original": {
+        "question": {
+          "id": "after-meaning",
+          "prompt": "How do these sources fit together?",
+          "options": [
+            {
+              "id": "along",
+              "text": "Our effort matters, but grace is help along the way, not a reward paid after we’ve done everything. We aren’t saved because of our effort."
+            },
+            {
+              "id": "wait",
+              "text": "We must finish everything we possibly can before grace begins.",
+              "feedback": "President Uchtdorf asks whether God waits until we’ve expended every effort, and the Bible Dictionary describes grace as help to do good works we couldn’t maintain on our own. Could that kind of help come only at the end?"
+            },
+            {
+              "id": "no-effort",
+              "text": "Effort doesn’t matter at all, since grace does everything.",
+              "feedback": "Read the third clue again. What does the Bible Dictionary say grace can’t do without?"
+            },
+            {
+              "id": "capable",
+              "text": "Nephi meant that only the most capable people are saved.",
+              "feedback": "According to Nephi, what is it that saves?"
+            }
+          ],
+          "correct": [
+            "along"
+          ]
+        },
+        "explanation": "The Bible Dictionary says grace is “divine means of help or strength” that enables good works “that they otherwise would not be able to maintain,” and also that it “cannot suffice without total effort on the part of the recipient.” President Uchtdorf cautioned against misreading Nephi’s phrase: “after” does not equal “because,” and God doesn’t wait until we’ve done everything before helping. Effort matters, and grace is the help that makes both our effort and our salvation possible."
+      }
+    },
+    {
+      "where": "branches.am-i-good-enough.steps.after-all-we-can-do.activities.hard (after-principle)",
+      "action": "replaced",
+      "reason": "Same concern: the correct statement (‘His grace is help and strength along the way, not a reward we earn by doing everything first’) settled the meaning of ‘after all we can do’. The new statement attributes each teaching to its source without deciding the phrase’s meaning.",
+      "original": {
+        "type": "build-principle",
+        "id": "after-principle",
+        "prompt": "Build a statement that 2 Nephi 25:23, the Bible Dictionary, and President Uchtdorf’s teaching support together. Some fragments lean too far one way or the other.",
+        "sourceIds": [
+          "2-nephi-25-23",
+          "bd-grace",
+          "uchtdorf-gift-of-grace-2015"
+        ],
+        "hints": [
+          "Start with what saves, according to Nephi.",
+          "Then add what the Bible Dictionary says about effort, and what it says grace is.",
+          "Four fragments make the statement. The rest either deny that effort matters or make grace wait until we’re perfect."
+        ],
+        "explanation": "Nephi says “it is by grace that we are saved.” The Bible Dictionary affirms that effort matters (“total effort on the part of the recipient”) and that grace is “divine means of help or strength.” President Uchtdorf adds that “after” does not equal “because”: we aren’t saved because of our effort, and grace isn’t held back until we’ve done everything.",
+        "fragments": [
+          {
+            "id": "saved",
+            "text": "We are saved by the grace of Jesus Christ,"
+          },
+          {
+            "id": "effort",
+            "text": "and our effort to follow Him truly matters,"
+          },
+          {
+            "id": "during",
+            "text": "but His grace is help and strength along the way,"
+          },
+          {
+            "id": "not-because",
+            "text": "not a reward we earn by doing everything first."
+          },
+          {
+            "id": "perfect-first",
+            "text": "so we must become perfect before grace begins,"
+          },
+          {
+            "id": "no-effort",
+            "text": "so our choices make no difference,"
+          },
+          {
+            "id": "capable",
+            "text": "which is why only the most capable are saved."
+          }
+        ],
+        "solution": [
+          "saved",
+          "effort",
+          "during",
+          "not-because"
+        ],
+        "statement": "We are saved by the grace of Jesus Christ, and our effort to follow Him truly matters, but His grace is help and strength along the way, not a reward we earn by doing everything first."
+      }
+    },
+    {
+      "where": "branches.how-to-repent.steps.parts-of-repentance.activities.medium (repent-vocab): extraMeanings[0]",
+      "action": "replaced",
+      "reason": "This distractor treated ‘listing every mistake’ as plainly wrong, while the compare activity in the same step (rightly) marks the question ‘goes beyond’: the sources describe confession in general terms and don’t settle it. Replaced with a meaning the sources plainly contradict.",
+      "original": {
+        "extraMeaning": "Listing every mistake of your whole life in perfect detail before God will listen",
+        "explanation": "Gospel Topics describes repentance as faith in Heavenly Father and Jesus Christ, sorrow for sin, confession (“humbly praying to Heavenly Father, admitting our mistakes, and asking for His help and forgiveness”), giving up sin, restitution, and righteous living. The scriptures show people pleading for mercy in their own words. Nothing in these sources requires a complete list of every mistake, and President Nelson taught that seeing repentance as punishment is “engendered by Satan.”"
+      }
+    }
+  ]
+}

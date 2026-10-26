@@ -1,0 +1,194 @@
+import Dexie from "dexie";
+import { IDBFactory, IDBKeyRange } from "fake-indexeddb";
+import { describe, expect, it } from "vitest";
+import { STUDY_DATA_VERSION, type DiscoveryCard, type StudyProgress } from "@/domain/study/user-data";
+import { GospelLabsDatabase } from "./db";
+import { createInvestigationRepository } from "./investigation-repository";
+import { createTestStudyRepository } from "./study-test-utils";
+import { RECORD_FROM_1_0 } from "./legacy-fixtures";
+
+const NOW = "2026-10-25T12:00:00.000Z";
+
+const progress = (overrides: Partial<StudyProgress> = {}): StudyProgress => ({
+  id: "one-by-one",
+  contentVersion: 1,
+  startedAt: NOW,
+  updatedAt: NOW,
+  difficulty: "medium",
+  length: "quick",
+  position: { stepId: "notice" },
+  steps: {},
+  visitedBranches: [],
+  ...overrides,
+});
+
+const card = (overrides: Partial<DiscoveryCard> = {}): DiscoveryCard => ({
+  id: "card-1",
+  createdAt: NOW,
+  updatedAt: NOW,
+  origin: { kind: "investigation", contentId: "one-by-one", contentVersion: 1, difficulty: "medium" },
+  title: "One by one",
+  summary: "",
+  sources: [],
+  concepts: [],
+  connections: [],
+  highlights: [],
+  notes: "",
+  ...overrides,
+});
+
+describe("study repository", () => {
+  it("saves and reads progress, stamping the data version", async () => {
+    const { study } = createTestStudyRepository();
+    await study.progress.put(progress());
+    const stored = await study.progress.get("one-by-one");
+    expect(stored?.dataVersion).toBe(STUDY_DATA_VERSION);
+    expect(stored?.position.stepId).toBe("notice");
+  });
+
+  it("rejects invalid records without writing them", async () => {
+    const { study } = createTestStudyRepository();
+    await expect(study.progress.put({ ...progress(), difficulty: "impossible" } as unknown as StudyProgress)).rejects.toMatchObject({
+      kind: "invalid-data",
+    });
+    expect(await study.progress.get("one-by-one")).toBeUndefined();
+  });
+
+  it("never overwrites a record saved by a newer version", async () => {
+    const { db, study } = createTestStudyRepository();
+    await db.studyProgress.put({ ...progress(), dataVersion: STUDY_DATA_VERSION + 1 });
+    await expect(study.progress.put(progress({ difficulty: "easy" }))).rejects.toMatchObject({ kind: "version" });
+  });
+
+  it("keeps fields added by a newer version when reading", async () => {
+    const { db, study } = createTestStudyRepository();
+    await db.discoveries.put({ ...card(), futureField: "kept" } as DiscoveryCard);
+    const stored = await study.discoveries.get("card-1");
+    expect((stored as unknown as { futureField: string }).futureField).toBe("kept");
+  });
+
+  it("completes an investigation and its Discovery Card together", async () => {
+    const { study } = createTestStudyRepository();
+    await study.completeInvestigation(progress({ completedAt: NOW }), card());
+    expect((await study.progress.get("one-by-one"))?.discoveryId).toBe("card-1");
+    expect(await study.discoveries.get("card-1")).toBeDefined();
+  });
+
+  it("forgets a deleted card's link without un-completing the investigation", async () => {
+    const { study } = createTestStudyRepository();
+    await study.completeInvestigation(progress({ completedAt: NOW }), card());
+    await study.deleteDiscovery("card-1");
+    const stored = await study.progress.get("one-by-one");
+    expect(stored?.discoveryId).toBeUndefined();
+    expect(stored?.completedAt).toBe(NOW);
+  });
+
+  it("counts unreadable records instead of failing the whole list", async () => {
+    const { db, study } = createTestStudyRepository();
+    await study.progress.put(progress());
+    await db.studyProgress.put({ id: "broken" } as unknown as StudyProgress);
+    const { records, unreadable } = await study.progress.list();
+    expect(records.map((record) => record.id)).toEqual(["one-by-one"]);
+    expect(unreadable).toBe(1);
+  });
+});
+
+describe("bulk operations", () => {
+  it("snapshots every valid record as stored, counts each table, and deletes all study data together", async () => {
+    const { db, study } = createTestStudyRepository();
+    await study.completeInvestigation(progress({ completedAt: NOW }), card());
+    await db.discoveries.put({ ...card({ id: "card-2" }), futureField: 1 } as DiscoveryCard);
+    await db.explorations.put({ id: "broken" } as never);
+
+    const { snapshot, unreadable } = await study.snapshot();
+    expect(snapshot.progress.map((record) => record.id)).toEqual(["one-by-one"]);
+    expect(snapshot.discoveries.map((record) => record.id).sort()).toEqual(["card-1", "card-2"]);
+    expect(snapshot.discoveries.find((record) => record.id === "card-2")).toMatchObject({ futureField: 1 });
+    expect(unreadable).toBe(1);
+    expect(await study.counts()).toEqual({ progress: 1, discoveries: 2, personalConnections: 0, explorations: 1 });
+
+    expect(await study.deleteAll()).toBe(4);
+    expect(await study.counts()).toEqual({ progress: 0, discoveries: 0, personalConnections: 0, explorations: 0 });
+  });
+
+  it("never touches investigations when deleting study data", async () => {
+    const { db, study } = createTestStudyRepository();
+    const investigations = createInvestigationRepository(db);
+    await db.investigations.put(structuredClone(RECORD_FROM_1_0) as never);
+    await study.progress.put(progress());
+    await study.deleteAll();
+    expect(await investigations.count()).toBe(1);
+  });
+});
+
+describe("protecting data the app can't read", () => {
+  it("reports a stored record that fails validation as an error, not as missing", async () => {
+    const { db, study } = createTestStudyRepository();
+    await db.studyProgress.put({ ...progress(), difficulty: "impossible" } as unknown as StudyProgress);
+    await expect(study.progress.get("one-by-one")).rejects.toMatchObject({ kind: "invalid-data" });
+  });
+
+  it("refuses to replace a stored record it can't read, leaving it exactly as stored", async () => {
+    const { db, study } = createTestStudyRepository();
+    const damaged = { ...progress({ completedAt: NOW, discoveryId: "card-1" }), difficulty: "impossible" };
+    await db.studyProgress.put(damaged as unknown as StudyProgress);
+    await expect(study.progress.put(progress())).rejects.toMatchObject({ kind: "invalid-data" });
+    expect(await db.studyProgress.get("one-by-one")).toEqual(damaged);
+  });
+
+  it("deleting a card leaves newer-version progress untouched and stamps the records it changes", async () => {
+    const { db, study } = createTestStudyRepository();
+    await study.completeInvestigation(progress({ completedAt: NOW }), card());
+    await db.studyProgress.put({ ...progress({ id: "newer" }), discoveryId: "card-1", dataVersion: STUDY_DATA_VERSION + 1 });
+    await study.deleteDiscovery("card-1");
+    const changed = await db.studyProgress.get("one-by-one");
+    expect(changed?.discoveryId).toBeUndefined();
+    expect(Date.parse(changed!.updatedAt)).toBeGreaterThan(Date.parse(NOW));
+    expect((await db.studyProgress.get("newer"))?.discoveryId).toBe("card-1");
+  });
+
+  it("finds a card by its origin, oldest first", async () => {
+    const { study } = createTestStudyRepository();
+    await study.discoveries.put(card({ id: "later", createdAt: "2026-10-26T00:00:00.000Z", updatedAt: "2026-10-26T00:00:00.000Z" }));
+    await study.discoveries.put(card({ id: "first" }));
+    await study.discoveries.put(card({ id: "other", origin: { kind: "passage", contentId: "one-by-one" } }));
+    expect((await study.findDiscoveryByOrigin("investigation", "one-by-one"))?.id).toBe("first");
+    expect(await study.findDiscoveryByOrigin("investigation", "missing")).toBeUndefined();
+  });
+});
+
+describe("database version 2", () => {
+  it("upgrades a 1.x database without touching its investigations", async () => {
+    const indexedDB = new IDBFactory();
+    const name = `upgrade-${crypto.randomUUID()}`;
+    const legacy = new Dexie(name, { indexedDB, IDBKeyRange });
+    legacy.version(1).stores({ investigations: "id, updatedAt, status" });
+    const record = structuredClone(RECORD_FROM_1_0);
+    await legacy.table("investigations").put(record);
+    legacy.close();
+
+    const db = new GospelLabsDatabase(name, { indexedDB, IDBKeyRange });
+    const repository = createInvestigationRepository(db);
+    const loaded = await repository.get(record.id);
+    expect(loaded.status).toBe("found");
+    expect(await db.table("investigations").get(record.id)).toEqual(record);
+    expect(db.tables.map((table) => table.name).sort()).toEqual(
+      ["discoveries", "explorations", "investigations", "personalConnections", "studyProgress"].sort(),
+    );
+    db.close();
+  });
+
+  it("can still be opened by a 1.x build after upgrading (rollback safety)", async () => {
+    const indexedDB = new IDBFactory();
+    const name = `rollback-${crypto.randomUUID()}`;
+    const upgraded = new GospelLabsDatabase(name, { indexedDB, IDBKeyRange });
+    const record = structuredClone(RECORD_FROM_1_0);
+    await upgraded.table("investigations").put(record);
+    upgraded.close();
+
+    const legacy = new Dexie(name, { indexedDB, IDBKeyRange });
+    legacy.version(1).stores({ investigations: "id, updatedAt, status" });
+    expect(await legacy.table("investigations").get(record.id)).toEqual(record);
+    legacy.close();
+  });
+});

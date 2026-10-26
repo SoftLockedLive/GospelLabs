@@ -4,7 +4,7 @@ import { createInvestigation, expectSaved, goToSection, libraryItem } from "./he
 test("create, edit, resume, conclude, and reopen an investigation", async ({ page }) => {
   // Create from the dashboard.
   await page.goto("/");
-  await page.getByRole("link", { name: "Start an investigation" }).click();
+  await page.getByRole("link", { name: "New research notebook" }).click();
   await expect(page.getByText(/Not saved yet/)).toBeVisible();
   await page.getByRole("textbox", { name: "Question", exact: true }).fill("What does it mean to take up the cross?");
   await page.getByRole("textbox", { name: "Title" }).fill("Taking up the cross");

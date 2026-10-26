@@ -1,0 +1,542 @@
+{
+  "id": "obedience",
+  "status": "ready",
+  "name": "Obedience",
+  "summary": "Doing God’s will as an expression of love—as the Savior always did the will of His Father.",
+  "definition": {
+    "text": "The Guide to the Scriptures teaches, “In a spiritual sense, obedience is doing God’s will.” Gospel Topics explains that “God gives commandments for our benefit” and that “Our obedience to the commandments is an expression of our love for Heavenly Father and Jesus Christ.”",
+    "sourceIds": [
+      "gs-obedience-obedient-obey",
+      "gospel-topics-obedience"
+    ]
+  },
+  "vocabulary": [
+    {
+      "id": "obedience-hearken",
+      "term": "Hearken",
+      "meaning": "The Guide to the Scriptures: “To hear and obey the voice or teachings of the Lord.” In scripture, truly hearing includes doing.",
+      "sourceIds": [
+        "gs-hearken"
+      ]
+    },
+    {
+      "id": "obedience-commandments",
+      "term": "Commandments",
+      "meaning": "“The laws and requirements that God gives to mankind” (Guide to the Scriptures). Gospel Topics calls them “loving instructions for our happiness.”",
+      "sourceIds": [
+        "gs-commandments-of-god",
+        "gospel-topics-obedience"
+      ]
+    },
+    {
+      "id": "obedience-abide",
+      "term": "Abide",
+      "meaning": "To remain or stay. The Savior promised, “If ye keep my commandments, ye shall abide in my love” (John 15:10).",
+      "sourceIds": [
+        "john-15-10"
+      ]
+    },
+    {
+      "id": "obedience-predicated",
+      "term": "Predicated",
+      "meaning": "Based on; resting on. Every blessing is “predicated” on a law, and comes “by obedience to that law” (Doctrine and Covenants 130:20–21).",
+      "sourceIds": [
+        "dc-130-20-21"
+      ]
+    },
+    {
+      "id": "obedience-free",
+      "term": "Free",
+      "meaning": "Not bound. The Savior taught that continuing in His word brings true freedom: “ye shall know the truth, and the truth shall make you free” (John 8:32).",
+      "sourceIds": [
+        "john-8-31-32"
+      ]
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "obedience-not-blind",
+      "term": "Blind compliance",
+      "title": "Obedience is not blind compliance",
+      "explanation": "Elder Boyd K. Packer taught that “Latter-day Saints are not obedient because they are compelled to be obedient,” and “We are not obedient because we are blind, we are obedient because we can see.” Obedience sometimes comes before full understanding—Adam offered sacrifices, saying, “I know not, save the Lord commanded me,” and then an angel taught him why (Moses 5:6–7)—but it rests on trust in God, and it leads to knowing: whoever does His will “shall know of the doctrine” (John 7:17).",
+      "sourceIds": [
+        "packer-agency-and-control",
+        "moses-5-6-8",
+        "john-7-17"
+      ]
+    },
+    {
+      "id": "obedience-not-loss-of-freedom",
+      "term": "Losing freedom",
+      "title": "Obedience is not the loss of freedom",
+      "explanation": "Gospel Topics acknowledges that “Some people feel that the commandments are burdensome and that they limit freedom,” but teaches that “true freedom comes only from following Him”: “If ye continue in my word … ye shall know the truth, and the truth shall make you free” (John 8:31–32).",
+      "sourceIds": [
+        "gospel-topics-obedience",
+        "john-8-31-32"
+      ]
+    }
+  ],
+  "scriptures": [
+    {
+      "sourceId": "john-14-15",
+      "note": "“If ye love me, keep my commandments.” The Savior ties obedience to love."
+    },
+    {
+      "sourceId": "john-7-17",
+      "note": "Doing God’s will is a way of learning: whoever does His will “shall know of the doctrine, whether it be of God.”"
+    },
+    {
+      "sourceId": "1-nephi-3-7",
+      "note": "Nephi’s confidence: “I will go and do the things which the Lord hath commanded,” because the Lord prepares a way."
+    },
+    {
+      "sourceId": "mosiah-2-41",
+      "note": "King Benjamin invites us to “consider on the blessed and happy state of those that keep the commandments of God.”"
+    },
+    {
+      "sourceId": "dc-130-20-21",
+      "note": "Blessings come “by obedience to that law upon which it is predicated.”"
+    }
+  ],
+  "saviorExamples": [
+    {
+      "id": "obedience-thy-will-be-done",
+      "title": "“Not my will, but thine, be done”",
+      "sourceId": "luke-22-42",
+      "note": "In Gethsemane the Savior asked whether the cup might be removed, and then chose His Father’s will: “nevertheless not my will, but thine, be done.”"
+    },
+    {
+      "id": "obedience-kept-his-fathers-commandments",
+      "title": "He kept His Father’s commandments",
+      "sourceId": "john-15-10",
+      "note": "The Savior described His own obedience as the pattern for ours: “even as I have kept my Father’s commandments, and abide in his love.”"
+    },
+    {
+      "id": "obedience-baptized",
+      "title": "He was baptized to fulfill all righteousness",
+      "sourceId": "2-nephi-31-6-7",
+      "note": "Though He was holy, Nephi explains, the Savior was baptized to witness “unto the Father that he would be obedient unto him in keeping his commandments.”"
+    },
+    {
+      "id": "obedience-will-of-him-that-sent-me",
+      "title": "He came to do the will of the One who sent Him",
+      "sourceId": "john-6-38",
+      "note": "“I came down from heaven, not to do mine own will, but the will of him that sent me.”"
+    }
+  ],
+  "relationships": [
+    {
+      "attributeId": "meekness",
+      "relation": "relates-to",
+      "note": "The Guide to the Scriptures says, “The meek are willing to follow gospel teachings.”",
+      "sourceIds": [
+        "gs-meek-meekness"
+      ]
+    },
+    {
+      "attributeId": "charity",
+      "relation": "relates-to",
+      "note": "Gospel Labs connects these through love. Jesus said, “If ye love me, keep my commandments” (John 14:15), and Gospel Topics calls obedience “an expression of our love for Heavenly Father and Jesus Christ.” Preach My Gospel’s section on charity and love begins with the commandment to “love the Lord thy God.”",
+      "sourceIds": [
+        "john-14-15",
+        "gospel-topics-obedience",
+        "preach-my-gospel-chapter-6"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "sort",
+      "id": "obedience-matches-or-not",
+      "prompt": "Sort each description: does it match how these scriptures and teachings describe obedience?",
+      "sourceIds": [
+        "john-14-15",
+        "john-7-17",
+        "luke-22-42",
+        "1-nephi-3-7",
+        "packer-agency-and-control",
+        "gospel-topics-obedience"
+      ],
+      "hints": [
+        "Ask what moves the person to obey: love and trust, or force?",
+        "Compare with John 14:15, John 7:17, and Luke 22:42.",
+        "Gospel Topics calls commandments “loving instructions for our happiness.”"
+      ],
+      "explanation": "In these sources, obedience grows out of love and trust, chooses God’s will even when it is hard, and leads to understanding and freedom. Obeying only because someone forces you, or seeing commandments only as limits, doesn’t match how the Savior and His prophets describe it.",
+      "categories": [
+        {
+          "id": "matches",
+          "label": "Matches these sources"
+        },
+        {
+          "id": "doesnt",
+          "label": "Doesn’t match"
+        }
+      ],
+      "items": [
+        {
+          "id": "out-of-love",
+          "text": "Keeping a commandment because you love the Lord",
+          "category": "matches",
+          "why": "John 14:15: “If ye love me, keep my commandments.”"
+        },
+        {
+          "id": "forced",
+          "text": "Obeying only because someone is forcing you",
+          "category": "doesnt",
+          "why": "Elder Packer: Latter-day Saints “are not obedient because they are compelled to be obedient.”"
+        },
+        {
+          "id": "when-hard",
+          "text": "Choosing God’s will even when it is very hard",
+          "category": "matches",
+          "why": "Luke 22:42: “nevertheless not my will, but thine, be done.”"
+        },
+        {
+          "id": "live-to-learn",
+          "text": "Living a teaching in order to find out whether it is true",
+          "category": "matches",
+          "why": "John 7:17: “If any man will do his will, he shall know of the doctrine.”"
+        },
+        {
+          "id": "only-limits",
+          "text": "Seeing commandments only as rules that take away freedom",
+          "category": "doesnt",
+          "why": "Gospel Topics: “true freedom comes only from following Him.”"
+        },
+        {
+          "id": "trust-a-way",
+          "text": "Going to do what the Lord asks, trusting He will prepare a way",
+          "category": "matches",
+          "why": "1 Nephi 3:7: “he shall prepare a way for them that they may accomplish the thing which he commandeth them.”"
+        }
+      ]
+    },
+    {
+      "type": "vocab-match",
+      "id": "obedience-vocab",
+      "prompt": "Match each word with its meaning.",
+      "sourceIds": [
+        "gs-hearken",
+        "gs-commandments-of-god",
+        "john-15-10",
+        "dc-130-20-21",
+        "john-8-31-32"
+      ],
+      "hints": [
+        "One word combines hearing with obeying.",
+        "One word appears in Doctrine and Covenants 130:20 and means ‘based on.’",
+        "One of the extra meanings describes blind compliance, which Elder Packer taught obedience is not."
+      ],
+      "explanation": "To hearken is to hear and obey; commandments are God’s laws, given for our happiness; to abide is to remain in His love; blessings are predicated—based—on laws; and the truth makes us free.",
+      "pairs": [
+        {
+          "id": "obedience-hearken",
+          "term": "Hearken",
+          "meaning": "To hear and obey the voice or teachings of the Lord"
+        },
+        {
+          "id": "obedience-commandments",
+          "term": "Commandments",
+          "meaning": "Laws and requirements God gives for our happiness"
+        },
+        {
+          "id": "obedience-abide",
+          "term": "Abide",
+          "meaning": "To remain or stay"
+        },
+        {
+          "id": "obedience-predicated",
+          "term": "Predicated",
+          "meaning": "Based on; resting on"
+        },
+        {
+          "id": "obedience-free",
+          "term": "Free",
+          "meaning": "Not bound; what the truth makes those who continue in His word"
+        }
+      ],
+      "extraMeanings": [
+        "Doing what you’re told without ever asking why",
+        "A penalty for breaking a rule"
+      ],
+      "match": "meaning"
+    },
+    {
+      "type": "highlight",
+      "id": "obedience-2-nephi-31-7",
+      "prompt": "Nephi asks why the holy Lamb of God needed to be baptized. In verse 7, tap the phrases that tell what His baptism showed.",
+      "sourceIds": [
+        "2-nephi-31-6-7"
+      ],
+      "hints": [
+        "Look after the words “he showeth unto the children of men.”",
+        "There are two things: one about humility and one about obedience."
+      ],
+      "explanation": "Nephi explains that by being baptized, the Savior showed “that, according to the flesh he humbleth himself before the Father,” and witnessed “that he would be obedient unto him in keeping his commandments.” Even He who was holy chose to obey.",
+      "passage": "2-nephi-31-6-7",
+      "chunks": [
+        {
+          "verse": 7,
+          "text": "Know ye not that he was holy?"
+        },
+        {
+          "verse": 7,
+          "text": "But notwithstanding he being holy,"
+        },
+        {
+          "verse": 7,
+          "text": "he showeth unto the children of men"
+        },
+        {
+          "verse": 7,
+          "text": "that, according to the flesh he humbleth himself before the Father,"
+        },
+        {
+          "verse": 7,
+          "text": "and witnesseth unto the Father"
+        },
+        {
+          "verse": 7,
+          "text": "that he would be obedient unto him in keeping his commandments."
+        }
+      ],
+      "targets": [
+        3,
+        5
+      ]
+    }
+  ],
+  "reflection": [
+    "Jesus said, “If ye love me, keep my commandments.” How might love change the way a person obeys?",
+    "When has living a teaching helped you understand it better?",
+    "What do you notice about the way the Savior chose His Father’s will in Gethsemane?"
+  ],
+  "review": {
+    "status": "verified",
+    "notes": [
+      {
+        "where": "relationships.charity",
+        "note": "John 14:15 speaks of love for the Savior; the Guide to the Scriptures defines charity as Christ’s love for us and our love for one another. Linking obedience to charity relies on Preach My Gospel treating “Charity and Love” together. Please confirm this link.",
+        "resolution": "Qualified: the link’s note now says Gospel Labs connects the two through love, and cites Preach My Gospel, whose section Charity and Love begins with the commandment to love the Lord (Matthew 22:37). It doesn’t claim that the Guide to the Scriptures’ definition of charity includes obedience."
+      },
+      {
+        "where": "contrasts.obedience-not-blind",
+        "note": "Elder Packer’s statements are a speaker’s teaching (General Conference, April 1983). Moses 5:6–7 is added so the contrast doesn’t imply that obedience always requires understanding first.",
+        "resolution": "Resolved: both statements were checked against Elder Packer’s talk on 26 October 2026 and are presented as his teaching; Moses 5:6–7 is quoted from the declared verses."
+      },
+      {
+        "where": "saviorExamples.obedience-thy-will-be-done",
+        "note": "The phrase ‘made when it cost Him most’ is Gospel Labs’ summary of the Gethsemane account, not a quotation.",
+        "resolution": "Resolved: the phrase was removed; the note now quotes Luke 22:42 instead of describing what the choice cost Him."
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "gs-obedience-obedient-obey",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Obedience, Obedient, Obey",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/obedience-obedient-obey?lang=eng",
+      "excerpt": "In a spiritual sense, obedience is doing God’s will."
+    },
+    {
+      "id": "gospel-topics-obedience",
+      "kind": "official",
+      "label": "Gospel Topics: Obedience",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/obedience?lang=eng",
+      "excerpt": "Our obedience to the commandments is an expression of our love for Heavenly Father and Jesus Christ."
+    },
+    {
+      "id": "gs-hearken",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Hearken",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/hearken?lang=eng",
+      "excerpt": "To hear and obey the voice or teachings of the Lord."
+    },
+    {
+      "id": "gs-commandments-of-god",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Commandments of God",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/commandments-of-god?lang=eng",
+      "excerpt": "The laws and requirements that God gives to mankind, either individually or collectively. Keeping the commandments will bring blessings of the Lord to the obedient (D&C 130:21)."
+    },
+    {
+      "id": "john-15-10",
+      "kind": "scripture",
+      "label": "John 15:10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p10#p10",
+      "verses": [
+        {
+          "number": 10,
+          "text": "If ye keep my commandments, ye shall abide in my love; even as I have kept my Father’s commandments, and abide in his love."
+        }
+      ]
+    },
+    {
+      "id": "dc-130-20-21",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 130:20–21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p20-p21#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "There is a law, irrevocably decreed in heaven before the foundations of this world, upon which all blessings are predicated—"
+        },
+        {
+          "number": 21,
+          "text": "And when we obtain any blessing from God, it is by obedience to that law upon which it is predicated."
+        }
+      ]
+    },
+    {
+      "id": "john-8-31-32",
+      "kind": "scripture",
+      "label": "John 8:31–32",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/8?lang=eng&id=p31-p32#p31",
+      "verses": [
+        {
+          "number": 31,
+          "text": "Then said Jesus to those Jews which believed on him, If ye continue in my word, then are ye my disciples indeed;"
+        },
+        {
+          "number": 32,
+          "text": "And ye shall know the truth, and the truth shall make you free."
+        }
+      ]
+    },
+    {
+      "id": "packer-agency-and-control",
+      "kind": "speaker",
+      "label": "Agency and Control",
+      "author": "Elder Boyd K. Packer",
+      "publication": "General Conference, April 1983",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/1983/04/agency-and-control?lang=eng",
+      "excerpt": "We are not obedient because we are blind, we are obedient because we can see."
+    },
+    {
+      "id": "moses-5-6-8",
+      "kind": "scripture",
+      "label": "Moses 5:6–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p6-p8#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And after many days an angel of the Lord appeared unto Adam, saying: Why dost thou offer sacrifices unto the Lord? And Adam said unto him: I know not, save the Lord commanded me."
+        },
+        {
+          "number": 7,
+          "text": "And then the angel spake, saying: This thing is a similitude of the sacrifice of the Only Begotten of the Father, which is full of grace and truth."
+        },
+        {
+          "number": 8,
+          "text": "Wherefore, thou shalt do all that thou doest in the name of the Son, and thou shalt repent and call upon God in the name of the Son forevermore."
+        }
+      ]
+    },
+    {
+      "id": "john-7-17",
+      "kind": "scripture",
+      "label": "John 7:17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng&id=p17#p17",
+      "verses": [
+        {
+          "number": 17,
+          "text": "If any man will do his will, he shall know of the doctrine, whether it be of God, or whether I speak of myself."
+        }
+      ]
+    },
+    {
+      "id": "john-14-15",
+      "kind": "scripture",
+      "label": "John 14:15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p15#p15",
+      "verses": [
+        {
+          "number": 15,
+          "text": "¶ If ye love me, keep my commandments."
+        }
+      ]
+    },
+    {
+      "id": "1-nephi-3-7",
+      "kind": "scripture",
+      "label": "1 Nephi 3:7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them."
+        }
+      ]
+    },
+    {
+      "id": "mosiah-2-41",
+      "kind": "scripture",
+      "label": "Mosiah 2:41",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p41#p41",
+      "verses": [
+        {
+          "number": 41,
+          "text": "And moreover, I would desire that ye should consider on the blessed and happy state of those that keep the commandments of God. For behold, they are blessed in all things, both temporal and spiritual; and if they hold out faithful to the end they are received into heaven, that thereby they may dwell with God in a state of never-ending happiness. O remember, remember that these things are true; for the Lord God hath spoken it."
+        }
+      ]
+    },
+    {
+      "id": "luke-22-42",
+      "kind": "scripture",
+      "label": "Luke 22:42",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p42#p42",
+      "verses": [
+        {
+          "number": 42,
+          "text": "Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done."
+        }
+      ]
+    },
+    {
+      "id": "2-nephi-31-6-7",
+      "kind": "scripture",
+      "label": "2 Nephi 31:6–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p6-p7#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And now, I would ask of you, my beloved brethren, wherein the Lamb of God did fulfil all righteousness in being baptized by water?"
+        },
+        {
+          "number": 7,
+          "text": "Know ye not that he was holy? But notwithstanding he being holy, he showeth unto the children of men that, according to the flesh he humbleth himself before the Father, and witnesseth unto the Father that he would be obedient unto him in keeping his commandments."
+        }
+      ]
+    },
+    {
+      "id": "john-6-38",
+      "kind": "scripture",
+      "label": "John 6:38",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p38#p38",
+      "verses": [
+        {
+          "number": 38,
+          "text": "For I came down from heaven, not to do mine own will, but the will of him that sent me."
+        }
+      ]
+    },
+    {
+      "id": "gs-meek-meekness",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Meek, Meekness",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/meek-meekness?lang=eng"
+    },
+    {
+      "id": "preach-my-gospel-chapter-6",
+      "kind": "official",
+      "label": "Preach My Gospel, chapter 6",
+      "title": "Chapter 6: Seek Christlike Attributes",
+      "publication": "Preach My Gospel: A Guide to Sharing the Gospel of Jesus Christ (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/14-chapter-6?lang=eng",
+      "excerpt": "A Christlike attribute is a quality or trait of the Savior’s nature and character."
+    }
+  ]
+}

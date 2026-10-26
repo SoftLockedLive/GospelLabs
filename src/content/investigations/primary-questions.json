@@ -1,0 +1,2271 @@
+{
+  "id": "primary-questions",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "Primary Questions First",
+  "question": "How can I come to know the gospel is true when I have hard questions?",
+  "hook": "Elder Corbridge taught that not all questions are equal, and that the most important ones can't be answered by process of elimination. He offered a place to start.",
+  "theme": "Knowing truth",
+  "tags": [
+    "testimony",
+    "primary-and-secondary-questions",
+    "ways-of-learning",
+    "revelation"
+  ],
+  "primaryQuestion": {
+    "id": "christ",
+    "note": "This investigation is about what Elder Corbridge called the primary questions. It centers on the Savior's question to His disciples, “Whom say ye that I am?”, because Elder Corbridge quoted Peter's answer as an example of a witness that comes by revelation (Matthew 16:15–17)."
+  },
+  "commonQuestions": [
+    "How can I come to know for myself that the gospel is true?",
+    "What should I do with a hard question I can’t answer yet?",
+    "Is it all right to still be working out what I believe?"
+  ],
+  "estimatedMinutes": {
+    "quick": 10,
+    "deep": 35
+  },
+  "intro": "Many people wonder how they can come to know for themselves that the gospel is true, and what to do with hard questions, including questions about Church history. In a 2019 BYU devotional, Elder Lawrence E. Corbridge, a General Authority Seventy, offered a way to approach questions like these: distinguish primary questions from secondary ones, answer the primary questions first, and use every method of learning, especially the divine. This investigation presents his framework as his teaching and tests it against scripture. Questions are welcome here. As Elder Corbridge put it, the methods of learning “all begin the same way: with a question.”",
+  "sources": [
+    {
+      "id": "corbridge-stand-for-ever-2019",
+      "kind": "speaker",
+      "label": "Lawrence E. Corbridge, “Stand Forever”",
+      "title": "Stand Forever",
+      "author": "Elder Lawrence E. Corbridge",
+      "publication": "BYU devotional, 22 January 2019",
+      "url": "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+      "excerpt": "although we may not know the answer to every question, we must know the answers to the primary questions."
+    },
+    {
+      "id": "matthew-16-13-17",
+      "kind": "scripture",
+      "label": "Matthew 16:13–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/16?lang=eng&id=p13-p17#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "¶ When Jesus came into the coasts of Cæsarea Philippi, he asked his disciples, saying, Whom do men say that I the Son of man am?"
+        },
+        {
+          "number": 14,
+          "text": "And they said, Some say that thou art John the Baptist: some, Elias; and others, Jeremias, or one of the prophets."
+        },
+        {
+          "number": 15,
+          "text": "He saith unto them, But whom say ye that I am?"
+        },
+        {
+          "number": 16,
+          "text": "And Simon Peter answered and said, Thou art the Christ, the Son of the living God."
+        },
+        {
+          "number": 17,
+          "text": "And Jesus answered and said unto him, Blessed art thou, Simon Bar-jona: for flesh and blood hath not revealed it unto thee, but my Father which is in heaven."
+        }
+      ]
+    },
+    {
+      "id": "john-7-16-17",
+      "kind": "scripture",
+      "label": "John 7:16–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng&id=p16-p17#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "Jesus answered them, and said, My doctrine is not mine, but his that sent me."
+        },
+        {
+          "number": 17,
+          "text": "If any man will do his will, he shall know of the doctrine, whether it be of God, or whether I speak of myself."
+        }
+      ]
+    },
+    {
+      "id": "alma-32-26-28",
+      "kind": "scripture",
+      "label": "Alma 32:26–28",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng&id=p26-p28#p26",
+      "verses": [
+        {
+          "number": 26,
+          "text": "Now, as I said concerning faith—that it was not a perfect knowledge—even so it is with my words. Ye cannot know of their surety at first, unto perfection, any more than faith is a perfect knowledge."
+        },
+        {
+          "number": 27,
+          "text": "But behold, if ye will awake and arouse your faculties, even to an experiment upon my words, and exercise a particle of faith, yea, even if ye can no more than desire to believe, let this desire work in you, even until ye believe in a manner that ye can give place for a portion of my words."
+        },
+        {
+          "number": 28,
+          "text": "Now, we will compare the word unto a seed. Now, if ye give place, that a seed may be planted in your heart, behold, if it be a true seed, or a good seed, if ye do not cast it out by your unbelief, that ye will resist the Spirit of the Lord, behold, it will begin to swell within your breasts; and when you feel these swelling motions, ye will begin to say within yourselves—It must needs be that this is a good seed, or that the word is good, for it beginneth to enlarge my soul; yea, it beginneth to enlighten my understanding, yea, it beginneth to be delicious to me."
+        }
+      ]
+    },
+    {
+      "id": "dc-9-7-9",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 9:7–9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng&id=p7-p9#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "Behold, you have not understood; you have supposed that I would give it unto you, when you took no thought save it was to ask me."
+        },
+        {
+          "number": 8,
+          "text": "But, behold, I say unto you, that you must study it out in your mind; then you must ask me if it be right, and if it is right I will cause that your bosom shall burn within you; therefore, you shall feel that it is right."
+        },
+        {
+          "number": 9,
+          "text": "But if it be not right you shall have no such feelings, but you shall have a stupor of thought that shall cause you to forget the thing which is wrong; therefore, you cannot write that which is sacred save it be given you from me."
+        }
+      ]
+    },
+    {
+      "id": "moroni-10-3-5",
+      "kind": "scripture",
+      "label": "Moroni 10:3–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p3-p5#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "Behold, I would exhort you that when ye shall read these things, if it be wisdom in God that ye should read them, that ye would remember how merciful the Lord hath been unto the children of men, from the creation of Adam even down until the time that ye shall receive these things, and ponder it in your hearts."
+        },
+        {
+          "number": 4,
+          "text": "And when ye shall receive these things, I would exhort you that ye would ask God, the Eternal Father, in the name of Christ, if these things are not true; and if ye shall ask with a sincere heart, with real intent, having faith in Christ, he will manifest the truth of it unto you, by the power of the Holy Ghost."
+        },
+        {
+          "number": 5,
+          "text": "And by the power of the Holy Ghost ye may know the truth of all things."
+        }
+      ]
+    },
+    {
+      "id": "james-1-5",
+      "kind": "scripture",
+      "label": "James 1:5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p5#p5",
+      "verses": [
+        {
+          "number": 5,
+          "text": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him."
+        }
+      ]
+    },
+    {
+      "id": "ether-12-6",
+      "kind": "scripture",
+      "label": "Ether 12:6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p6#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "And now, I, Moroni, would speak somewhat concerning these things; I would show unto the world that faith is things which are hoped for and not seen; wherefore, dispute not because ye see not, for ye receive no witness until after the trial of your faith."
+        }
+      ]
+    },
+    {
+      "id": "mark-9-23-24",
+      "kind": "scripture",
+      "label": "Mark 9:23–24",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p23-p24#p23",
+      "verses": [
+        {
+          "number": 23,
+          "text": "Jesus said unto him, If thou canst believe, all things are possible to him that believeth."
+        },
+        {
+          "number": 24,
+          "text": "And straightway the father of the child cried out, and said with tears, Lord, I believe; help thou mine unbelief."
+        }
+      ]
+    },
+    {
+      "id": "1-corinthians-2-11-14",
+      "kind": "scripture",
+      "label": "1 Corinthians 2:11–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/2?lang=eng&id=p11-p14#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "For what man knoweth the things of a man, save the spirit of man which is in him? even so the things of God knoweth no man, but the Spirit of God."
+        },
+        {
+          "number": 12,
+          "text": "Now we have received, not the spirit of the world, but the spirit which is of God; that we might know the things that are freely given to us of God."
+        },
+        {
+          "number": 13,
+          "text": "Which things also we speak, not in the words which man’s wisdom teacheth, but which the Holy Ghost teacheth; comparing spiritual things with spiritual."
+        },
+        {
+          "number": 14,
+          "text": "But the natural man receiveth not the things of the Spirit of God: for they are foolishness unto him: neither can he know them, because they are spiritually discerned."
+        }
+      ]
+    },
+    {
+      "id": "dc-84-85",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 84:85",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p85#p85",
+      "verses": [
+        {
+          "number": 85,
+          "text": "Neither take ye thought beforehand what ye shall say; but treasure up in your minds continually the words of life, and it shall be given you in the very hour that portion that shall be meted unto every man."
+        }
+      ]
+    },
+    {
+      "id": "1-nephi-11-16-17",
+      "kind": "scripture",
+      "label": "1 Nephi 11:16–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng&id=p16-p17#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "And he said unto me: Knowest thou the condescension of God?"
+        },
+        {
+          "number": 17,
+          "text": "And I said unto him: I know that he loveth his children; nevertheless, I do not know the meaning of all things."
+        }
+      ]
+    },
+    {
+      "id": "john-6-66-69",
+      "kind": "scripture",
+      "label": "John 6:66–69",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p66-p69#p66",
+      "verses": [
+        {
+          "number": 66,
+          "text": "¶ From that time many of his disciples went back, and walked no more with him."
+        },
+        {
+          "number": 67,
+          "text": "Then said Jesus unto the twelve, Will ye also go away?"
+        },
+        {
+          "number": 68,
+          "text": "Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life."
+        },
+        {
+          "number": 69,
+          "text": "And we believe and are sure that thou art that Christ, the Son of the living God."
+        }
+      ]
+    },
+    {
+      "id": "dc-46-13-14",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 46:13–14",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/46?lang=eng&id=p13-p14#p13",
+      "verses": [
+        {
+          "number": 13,
+          "text": "To some it is given by the Holy Ghost to know that Jesus Christ is the Son of God, and that he was crucified for the sins of the world."
+        },
+        {
+          "number": 14,
+          "text": "To others it is given to believe on their words, that they also might have eternal life if they continue faithful."
+        }
+      ]
+    },
+    {
+      "id": "dc-88-118",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 88:118",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p118#p118",
+      "verses": [
+        {
+          "number": 118,
+          "text": "And as all have not faith, seek ye diligently and teach one another words of wisdom; yea, seek ye out of the best books words of wisdom; seek learning, even by study and also by faith."
+        }
+      ]
+    },
+    {
+      "id": "uchtdorf-come-join-with-us-2013",
+      "kind": "speaker",
+      "label": "President Dieter F. Uchtdorf, “Come, Join with Us”",
+      "title": "Come, Join with Us",
+      "author": "President Dieter F. Uchtdorf",
+      "publication": "General Conference, October 2013",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng",
+      "excerpt": "It’s natural to have questions—the acorn of honest inquiry has often sprouted and matured into a great oak of understanding.",
+      "summary": "President Uchtdorf invites everyone to find a place in the Church. He acknowledges that some things in Church history raise honest questions and that leaders and members have made mistakes, and he counsels people to doubt their doubts before doubting their faith."
+    },
+    {
+      "id": "holland-lord-i-believe-2013",
+      "kind": "speaker",
+      "label": "Elder Jeffrey R. Holland, “Lord, I Believe”",
+      "title": "Lord, I Believe",
+      "author": "Elder Jeffrey R. Holland",
+      "publication": "General Conference, April 2013",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
+      "excerpt": "Be as candid about your questions as you need to be; life is full of them on one subject or another.",
+      "summary": "Elder Holland draws on the account of the father in Mark 9:24 to counsel young people to hold fast to the faith they have, be honest about their questions, be patient with human imperfection, and ask God for help."
+    },
+    {
+      "id": "gospel-topics-essays",
+      "kind": "official",
+      "label": "Gospel Topics Essays",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays?lang=eng",
+      "summary": "The Church's collection of essays on historical and doctrinal topics, including Book of Mormon translation, First Vision accounts, plural marriage, and race and the priesthood."
+    },
+    {
+      "id": "church-history-topics",
+      "kind": "official",
+      "label": "Church History Topics",
+      "url": "https://www.churchofjesuschrist.org/study/history/topics?lang=eng",
+      "summary": "Church-published articles, arranged alphabetically, on people, places, events, and practices in the history of The Church of Jesus Christ of Latter-day Saints."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "experiment-upon-the-word",
+      "kind": "concept",
+      "label": "Experiment upon the word",
+      "description": "Alma's invitation to test the word of God by giving it place, acting on it, and noticing whether it enlarges the soul and enlightens the understanding (Alma 32:27–28). Elder Corbridge connected it with the scientific method of learning.",
+      "sourceIds": [
+        "alma-32-26-28",
+        "corbridge-stand-for-ever-2019"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "not-all-questions-are-equal",
+      "title": "Not all questions are equal",
+      "phase": "question",
+      "method": "analytical",
+      "intro": "Elder Corbridge began with a distinction: “There are primary questions and there are secondary questions. Answer the primary questions first.” Start by sorting some questions the way he did, then look at why he put them in that order.",
+      "sourceIds": [
+        "corbridge-stand-for-ever-2019",
+        "james-1-5"
+      ],
+      "branchIds": [
+        "church-history-questions"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "primary-or-secondary",
+          "prompt": "Elder Corbridge named four primary questions and listed examples of secondary ones. Sort each question the way his framework would.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019"
+          ],
+          "hints": [
+            "Elder Corbridge gave four primary questions. Find them in the section titled “Primary Questions and Secondary Questions.”",
+            "The primary questions are about God our Father, Jesus Christ, Joseph Smith, and the Church as the kingdom of God.",
+            "Everything else on the list is a secondary question in his framework, including questions about history and translation."
+          ],
+          "explanation": "Elder Corbridge taught, “There are only a few primary questions,” and named four: about God our Father, Jesus Christ, Joseph Smith, and the Church as the kingdom of God. By contrast, he said, “the secondary questions are unending.” Two of these questions (about a past leader and a changed practice) aren't on his list word for word; Gospel Labs placed them by applying his framework. In his framework, calling a question secondary doesn't make it unimportant or off-limits: he said “there are answers to the secondary questions,” and that everything else is “subordinate” to the primary ones.",
+          "categories": [
+            {
+              "id": "primary",
+              "label": "Primary question",
+              "description": "In Elder Corbridge's framework, one of the few most important questions; everything else is subordinate"
+            },
+            {
+              "id": "secondary",
+              "label": "Secondary question",
+              "description": "In his framework, one of the many questions that depend on the primary ones"
+            }
+          ],
+          "items": [
+            {
+              "id": "god",
+              "text": "Is there a God who is our Father?",
+              "category": "primary",
+              "why": "The first of Elder Corbridge's four primary questions."
+            },
+            {
+              "id": "christ",
+              "text": "Is Jesus Christ the Son of God, the Savior of the world?",
+              "category": "primary",
+              "why": "The second primary question."
+            },
+            {
+              "id": "joseph",
+              "text": "Was Joseph Smith a prophet?",
+              "category": "primary",
+              "why": "The third primary question."
+            },
+            {
+              "id": "kingdom",
+              "text": "Is The Church of Jesus Christ of Latter-day Saints the kingdom of God on the earth?",
+              "category": "primary",
+              "why": "The fourth primary question."
+            },
+            {
+              "id": "translation",
+              "text": "How was the Book of Mormon translated?",
+              "category": "secondary",
+              "why": "Elder Corbridge lists “how the Book of Mormon was translated” among the secondary questions."
+            },
+            {
+              "id": "accounts",
+              "text": "Why are there different accounts of the First Vision?",
+              "category": "secondary",
+              "why": "He lists “the different accounts of the First Vision” as a secondary question."
+            },
+            {
+              "id": "past-leader",
+              "text": "What should I make of something a past Church leader said or did?",
+              "category": "secondary",
+              "why": "His list of secondary questions begins with “questions about Church history.” This exact question isn't on his list; Gospel Labs places it there by applying his framework, in which such questions matter but depend on the primary ones."
+            },
+            {
+              "id": "practice-changed",
+              "text": "Why has a Church practice changed over time?",
+              "category": "secondary",
+              "why": "This isn't on his list word for word. Gospel Labs classifies it as secondary by applying his framework: it is a question about Church history and practice, and his list ends “and on and on.”"
+            }
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "why-primary-first",
+          "prompt": "Examine Elder Corbridge's statements, then decide why he said to answer the primary questions first.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019"
+          ],
+          "hints": [
+            "The first clue explains how primary and secondary questions relate.",
+            "The third clue describes what happens to secondary questions once the primary ones are answered.",
+            "The answer is about foundations, not about avoiding questions or understanding everything."
+          ],
+          "explanation": "Elder Corbridge's reasoning is about foundations. The primary questions are “the most important,” and “everything else is subordinate.” When they're answered, secondary questions either “get answered too” or “pale in significance,” and a person can live with things they don't yet understand “without jumping ship altogether.” He didn't promise every question would be resolved: “we may not know the answer to every question.”",
+          "clues": [
+            {
+              "id": "not-equal",
+              "title": "Not all questions are equal",
+              "text": "“Not all questions are equal and not all truths are equal. The primary questions are the most important. Everything else is subordinate.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "unending",
+              "title": "Unending",
+              "text": "“The secondary questions are unending.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "what-happens",
+              "title": "What happens next",
+              "text": "“If you answer the primary questions, the secondary questions get answered too, or they pale in significance and you can deal with things you understand and things you don’t … without jumping ship altogether.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "not-every-answer",
+              "title": "Not every answer",
+              "text": "“Although we may not know the answer to every question, we must know the answers to the primary questions.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            }
+          ],
+          "question": {
+            "id": "why-first",
+            "prompt": "According to Elder Corbridge, why answer the primary questions first?",
+            "options": [
+              {
+                "id": "foundation",
+                "text": "They're the foundation. Once they're answered, secondary questions get answered too or matter less, even if some stay open."
+              },
+              {
+                "id": "wrong-to-ask",
+                "text": "Because secondary questions are wrong to ask.",
+                "feedback": "Elder Corbridge said “there are answers to the secondary questions.” Look at what he says happens to them, not whether they're allowed."
+              },
+              {
+                "id": "easier",
+                "text": "Because primary questions are easier to answer.",
+                "feedback": "The first clue says the primary questions are “the most important,” not the easiest."
+              },
+              {
+                "id": "understand-everything",
+                "text": "Because once they're answered, you'll understand everything.",
+                "feedback": "The third and fourth clues both leave room for things you don't understand and questions without answers yet."
+              }
+            ],
+            "correct": [
+              "foundation"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "questions-perspectives",
+          "prompt": "Weigh each statement against Elder Corbridge's teaching and James 1:5.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "james-1-5"
+          ],
+          "hints": [
+            "Look at the section titled “Primary Questions and Secondary Questions” and the section on methods of learning.",
+            "For the ‘resolved right away’ statement, look at what he says a person can do with things they don't understand.",
+            "Two statements are supported, two are contradicted, and one says more than he did about timing."
+          ],
+          "explanation": "Elder Corbridge ranked questions; he didn't discourage them. He taught that questions begin every method of learning, and James 1:5 invites us to ask God. He said secondary questions have answers, and he also acknowledged that “we may not know the answer to every question,” teaching that a person grounded in the primary questions can live with that. He didn't say when every answer will come.",
+          "perspectives": [
+            {
+              "id": "weak-faith",
+              "voice": "A common idea",
+              "text": "Asking questions shows weak faith.",
+              "verdict": "contradicted",
+              "rationale": "Elder Corbridge said the methods of learning “all begin the same way: with a question. Questions are important, especially the primary questions.” James 1:5 invites anyone who lacks wisdom to “ask of God.”"
+            },
+            {
+              "id": "most-important-first",
+              "voice": "A classmate",
+              "text": "In Elder Corbridge's view, some questions matter more than others, and the most important ones should come first.",
+              "verdict": "supported",
+              "rationale": "“Not all questions are equal and not all truths are equal. The primary questions are the most important.”"
+            },
+            {
+              "id": "resolved-right-away",
+              "voice": "A friend",
+              "text": "Once I have a testimony, every hard question will feel resolved right away.",
+              "verdict": "contradicted",
+              "rationale": "He described being able to “deal with things you understand and things you don’t and things you agree with and things you don’t without jumping ship altogether.” Some questions may stay open."
+            },
+            {
+              "id": "answered-in-this-life",
+              "voice": "A classmate",
+              "text": "Every secondary question will be answered for me during this life.",
+              "verdict": "beyond",
+              "rationale": "He said “there are answers to the secondary questions” and that “we may not know the answer to every question,” but he didn't say when every answer will come."
+            },
+            {
+              "id": "history-is-secondary",
+              "voice": "A seminary student",
+              "text": "In Elder Corbridge's framework, questions about Church history are secondary questions.",
+              "verdict": "supported",
+              "rationale": "His list of secondary questions begins with “questions about Church history.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "principle-primary-first",
+          "prompt": "Build a principle that Elder Corbridge's teaching and James 1:5 support together. Leave out fragments they don't support.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "james-1-5"
+          ],
+          "hints": [
+            "Start with how questions differ, then what to do first.",
+            "James 1:5 describes how God responds to those who ask.",
+            "Leave out the fragments about avoiding hard questions and disproving every claim; Elder Corbridge taught neither."
+          ],
+          "explanation": "The principle combines Elder Corbridge's ordering (primary questions first, with secondary ones answered or paling in significance) with James's promise that God gives “liberally” and “upbraideth not”: He doesn't scold those who ask. The distractors misread Elder Corbridge. He said not to put your head in the sand, and he warned that “you cannot prove a positive by disproving every negative.”",
+          "fragments": [
+            {
+              "id": "not-equal",
+              "text": "Elder Corbridge taught that not all questions are equal,"
+            },
+            {
+              "id": "seek-primary",
+              "text": "so I can seek answers to the primary questions first,"
+            },
+            {
+              "id": "ask-god",
+              "text": "asking God, who “giveth to all men liberally, and upbraideth not”;"
+            },
+            {
+              "id": "then-secondary",
+              "text": "and he taught that secondary questions then get answered or pale in significance,"
+            },
+            {
+              "id": "some-open",
+              "text": "even while some remain open."
+            },
+            {
+              "id": "avoid",
+              "text": "so hard questions should be avoided altogether."
+            },
+            {
+              "id": "disprove",
+              "text": "by first disproving every claim against the Church."
+            }
+          ],
+          "solution": [
+            "not-equal",
+            "seek-primary",
+            "ask-god",
+            "then-secondary",
+            "some-open"
+          ],
+          "statement": "Elder Corbridge taught that not all questions are equal, so I can seek answers to the primary questions first, asking God, who “giveth to all men liberally, and upbraideth not”; and he taught that secondary questions then get answered or pale in significance, even while some remain open."
+        }
+      },
+      "insight": "Elder Corbridge didn't dismiss hard questions; he put them in order. In his view, a few primary questions carry the weight of everything else, and answering them first gives a place to stand while other questions are studied. James adds that God gives wisdom “liberally” to those who ask, and “upbraideth not.”",
+      "concepts": [
+        "primary-and-secondary-questions"
+      ],
+      "connections": [
+        {
+          "from": "question:church-history-questions",
+          "to": "concept:primary-and-secondary-questions",
+          "relation": "relates-to",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019"
+          ],
+          "note": "Elder Corbridge lists questions about Church history among the secondary questions, which, he taught, depend on the primary ones."
+        },
+        {
+          "from": "scripture:james-1-5",
+          "to": "concept:prayer",
+          "relation": "teaches",
+          "sourceIds": [
+            "james-1-5"
+          ],
+          "note": "God gives wisdom “liberally” to those who ask Him, and “upbraideth not.”"
+        }
+      ]
+    },
+    {
+      "id": "four-ways-of-learning",
+      "title": "Four ways of learning, one beginning",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "How can we know the answers? Elder Corbridge described four methods of learning (scientific, analytical, academic, and divine) and said, “They all begin the same way: with a question.” He tied each one to scripture.",
+      "sourceIds": [
+        "corbridge-stand-for-ever-2019",
+        "john-7-16-17",
+        "dc-9-7-9",
+        "dc-84-85",
+        "1-corinthians-2-11-14",
+        "moroni-10-3-5"
+      ],
+      "activities": {
+        "easy": {
+          "type": "vocab-match",
+          "id": "match-the-methods",
+          "prompt": "Match each method of learning Elder Corbridge described with its meaning.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "john-7-16-17",
+            "dc-9-7-9",
+            "dc-84-85",
+            "1-corinthians-2-11-14"
+          ],
+          "hints": [
+            "Elder Corbridge describes each method in its own section of the talk.",
+            "The analytical method weighs evidence; the academic method studies the written word.",
+            "The divine method “ultimately trumps everything else by tapping into the powers of heaven.”"
+          ],
+          "explanation": "Elder Corbridge described the scientific method (test by doing, as in John 7:17), the analytical method (gather and weigh evidence, as when the Lord told Oliver Cowdery to “study it out”), the academic method (study of the written word), and the divine method (learning by the Spirit, which “incorporates elements of the other three”). He said, “All four methods are necessary to know the truth.”",
+          "pairs": [
+            {
+              "id": "scientific",
+              "term": "Scientific method",
+              "meaning": "Act on a teaching to test it, then notice the results",
+              "example": {
+                "text": "“If any man will do his will, he shall know of the doctrine, whether it be of God.”",
+                "sourceId": "john-7-16-17"
+              }
+            },
+            {
+              "id": "analytical",
+              "term": "Analytical method",
+              "meaning": "Gather, organize, and weigh the evidence relevant to a question",
+              "example": {
+                "text": "“You must study it out in your mind; then you must ask me if it be right.”",
+                "sourceId": "dc-9-7-9"
+              }
+            },
+            {
+              "id": "academic",
+              "term": "Academic method",
+              "meaning": "Study the written word of God",
+              "example": {
+                "text": "“Treasure up in your minds continually the words of life.”",
+                "sourceId": "dc-84-85"
+              }
+            },
+            {
+              "id": "divine",
+              "term": "Divine method",
+              "meaning": "Learn the things of God by the Spirit of God",
+              "example": {
+                "text": "“The things of God knoweth no man, but the Spirit of God.”",
+                "sourceId": "1-corinthians-2-11-14"
+              }
+            }
+          ],
+          "extraMeanings": [
+            "Accept whatever most people around you believe",
+            "Wait for an answer without any effort of your own"
+          ],
+          "match": "meaning"
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "doing-studying-asking",
+          "prompt": "Each of these passages asks the learner to do something. Answer each question from the verses.",
+          "sourceIds": [
+            "john-7-16-17",
+            "dc-9-7-9",
+            "moroni-10-3-5"
+          ],
+          "hints": [
+            "Look for the verbs in each passage.",
+            "D&C 9:7 describes what Oliver did, and what he didn't do.",
+            "In each passage the learner acts and God responds."
+          ],
+          "explanation": "In each passage the learner has work to do: do His will (John 7:17); study it out, then ask (D&C 9:8); remember, ponder, and ask with real intent (Moroni 10:3–4). And in each, the knowing finally comes from God. That combination fits Elder Corbridge's description of the divine method, which he said “incorporates elements of the other three.”",
+          "passages": [
+            "john-7-16-17",
+            "dc-9-7-9",
+            "moroni-10-3-5"
+          ],
+          "questions": [
+            {
+              "id": "do-his-will",
+              "prompt": "In John 7:17, what leads to knowing whether the doctrine is of God?",
+              "options": [
+                {
+                  "id": "doing",
+                  "text": "Doing His will"
+                },
+                {
+                  "id": "opinions",
+                  "text": "Hearing many opinions about it",
+                  "feedback": "Read the first words of verse 17: “If any man will…”"
+                },
+                {
+                  "id": "family",
+                  "text": "Being born into the right family",
+                  "feedback": "Verse 17 says “any man.” What must he do?"
+                }
+              ],
+              "correct": [
+                "doing"
+              ]
+            },
+            {
+              "id": "oliver-misunderstood",
+              "prompt": "What had Oliver Cowdery misunderstood (D&C 9:7)?",
+              "options": [
+                {
+                  "id": "asking-enough",
+                  "text": "He thought asking was enough, without thinking it through himself."
+                },
+                {
+                  "id": "god-silent",
+                  "text": "He thought God wouldn't answer him.",
+                  "feedback": "Verse 7: “you have supposed that I would give it unto you.” What was missing?"
+                },
+                {
+                  "id": "studied-too-much",
+                  "text": "He had studied too much and prayed too little.",
+                  "feedback": "Verse 7 says he “took no thought save it was to ask.”"
+                }
+              ],
+              "correct": [
+                "asking-enough"
+              ]
+            },
+            {
+              "id": "in-common",
+              "prompt": "What do John 7:17, D&C 9:8, and Moroni 10:3–4 have in common?",
+              "options": [
+                {
+                  "id": "effort-and-witness",
+                  "text": "Each pairs the learner's own effort (doing, studying, pondering, asking) with a witness from God."
+                },
+                {
+                  "id": "evidence-alone",
+                  "text": "Each says knowledge comes from evidence alone.",
+                  "feedback": "D&C 9:8 says “then you must ask me,” and Moroni 10:4 promises a manifestation “by the power of the Holy Ghost.”"
+                },
+                {
+                  "id": "wait-passively",
+                  "text": "Each says to wait passively for an answer.",
+                  "feedback": "Look at the verbs: do, study, ask, remember, ponder."
+                }
+              ],
+              "correct": [
+                "effort-and-witness"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "why-divine-trumps",
+          "prompt": "Elder Corbridge said the divine method “ultimately trumps everything else.” Examine the clues, then choose what they show together.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "1-corinthians-2-11-14",
+            "moroni-10-3-5"
+          ],
+          "hints": [
+            "The first two clues are about the other methods. Do they dismiss them?",
+            "The last two clues are about how the things of God are known.",
+            "The answer keeps every method in place but names where knowledge of the things of God finally comes from."
+          ],
+          "explanation": "Elder Corbridge didn't set the methods against each other. He said all four are necessary and that evidence and reason help prepare us. But the things of God are “spiritually discerned,” and Moroni promised knowledge “by the power of the Holy Ghost.” As Elder Corbridge described it, the divine method includes the others and adds what they can't supply on their own: a witness from God.",
+          "clues": [
+            {
+              "id": "all-four",
+              "title": "All four",
+              "text": "Elder Corbridge: “All four methods are necessary to know the truth.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "evidence-prepares",
+              "title": "Evidence prepares",
+              "text": "Elder Corbridge: “Evidence and reason also play a role in preparing us to know the truth.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "paul",
+              "title": "Paul on the things of God",
+              "text": "“The things of God knoweth no man, but the Spirit of God.” They are “spiritually discerned.”",
+              "sourceId": "1-corinthians-2-11-14"
+            },
+            {
+              "id": "moroni",
+              "title": "Moroni's promise",
+              "text": "“By the power of the Holy Ghost ye may know the truth of all things.”",
+              "sourceId": "moroni-10-3-5"
+            }
+          ],
+          "question": {
+            "id": "divine-conclusion",
+            "prompt": "Which conclusion fits all four clues?",
+            "options": [
+              {
+                "id": "prepare-then-witness",
+                "text": "Study, evidence, and experience matter and help prepare us, but knowledge of the things of God finally comes by His Spirit."
+              },
+              {
+                "id": "prayer-only",
+                "text": "Once you pray, study and evidence no longer matter.",
+                "feedback": "The first clue says all four methods are necessary, and the second says evidence helps prepare us."
+              },
+              {
+                "id": "evidence-proves",
+                "text": "The things of God can be proven by evidence alone.",
+                "feedback": "The third clue: the things of God are “spiritually discerned.”"
+              },
+              {
+                "id": "pick-one",
+                "text": "Each method works on its own, so choose the one you prefer.",
+                "feedback": "Elder Corbridge said the divine method “incorporates elements of the other three.”"
+              }
+            ],
+            "correct": [
+              "prepare-then-witness"
+            ]
+          }
+        },
+        "complex": {
+          "type": "compare",
+          "id": "weigh-the-methods",
+          "prompt": "Weigh each statement against Elder Corbridge's teaching and the scriptures in this step.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "john-7-16-17",
+            "dc-9-7-9",
+            "1-corinthians-2-11-14",
+            "moroni-10-3-5"
+          ],
+          "hints": [
+            "Check the exact words of John 7:17, D&C 9:8, 1 Corinthians 2:11, and Moroni 10:4–5.",
+            "For the ‘same day’ statement, ask whether Moroni says when the manifestation will come.",
+            "Two statements are supported, two are contradicted, and one adds a timeline the sources don't give."
+          ],
+          "explanation": "The sources make room for every method: doing (John 7:17), reasoning and evidence (D&C 9:8; Elder Corbridge), and the Spirit (1 Corinthians 2; Moroni 10). They contradict the ideas that study alone can produce a spiritual witness and that evidence has no place in faith. And while Moroni promises a manifestation, he doesn't say when it will come, so claims about timing go beyond these sources.",
+          "perspectives": [
+            {
+              "id": "doing-teaches",
+              "voice": "A classmate",
+              "text": "Doing what Jesus taught is one way to learn whether His doctrine is true.",
+              "verdict": "supported",
+              "rationale": "“If any man will do his will, he shall know of the doctrine, whether it be of God.”"
+            },
+            {
+              "id": "study-alone",
+              "voice": "A common idea",
+              "text": "If I study hard enough, I can reach a spiritual witness without God's help.",
+              "verdict": "contradicted",
+              "rationale": "“The things of God knoweth no man, but the Spirit of God.” Even after studying it out, Oliver was told, “then you must ask me.”"
+            },
+            {
+              "id": "no-place-for-evidence",
+              "voice": "A friend",
+              "text": "Evidence and reason have no place in faith.",
+              "verdict": "contradicted",
+              "rationale": "Elder Corbridge: “Evidence and reason also play a role in preparing us to know the truth.”"
+            },
+            {
+              "id": "same-day",
+              "voice": "A classmate",
+              "text": "If I ask sincerely, the witness will come the same day I pray.",
+              "verdict": "beyond",
+              "rationale": "Moroni promises that God “will manifest the truth of it unto you,” but he doesn't say when. Timing isn't something these sources settle."
+            },
+            {
+              "id": "real-knowledge",
+              "voice": "A seminary student",
+              "text": "Knowledge that comes by the Spirit is real knowledge, even though it isn't gathered the way a lab gathers data.",
+              "verdict": "supported",
+              "rationale": "Moroni 10:5 says “ye may know the truth of all things,” and Paul says the things of God are “spiritually discerned.”"
+            }
+          ]
+        }
+      },
+      "insight": "Elder Corbridge taught that each method has a place: experience (doing), evidence and reasoning (studying it out), the written word, and the Spirit. He said the divine method includes the others and “ultimately trumps everything else by tapping into the powers of heaven,” and that all four begin with a question.",
+      "concepts": [
+        "ways-of-learning",
+        "holy-ghost"
+      ],
+      "connections": [
+        {
+          "from": "scripture:john-7-16-17",
+          "to": "concept:ways-of-learning",
+          "relation": "illustrates",
+          "sourceIds": [
+            "john-7-16-17",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "note": "Elder Corbridge cited John 7:17 for the scientific method: “If any man will do his will, he shall know of the doctrine.”"
+        },
+        {
+          "from": "scripture:1-corinthians-2-11-14",
+          "to": "concept:revelation",
+          "relation": "teaches",
+          "sourceIds": [
+            "1-corinthians-2-11-14"
+          ],
+          "note": "Paul taught that “the things of God knoweth no man, but the Spirit of God.”"
+        }
+      ]
+    },
+    {
+      "id": "not-by-elimination",
+      "title": "Can you learn the truth by elimination?",
+      "phase": "discover",
+      "method": "divine",
+      "intro": "Elder Corbridge warned against trying to learn the truth “by process of elimination,” that is, by trying to settle every objection first. Then he turned to a moment in the Savior's ministry when Peter answered a primary question.",
+      "sourceIds": [
+        "corbridge-stand-for-ever-2019",
+        "matthew-16-13-17",
+        "1-corinthians-2-11-14",
+        "moroni-10-3-5"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "source-of-peters-witness",
+          "prompt": "Tap the phrases that tell how Peter came to know who Jesus is: what didn't reveal it to him, and who did.",
+          "sourceIds": [
+            "matthew-16-13-17"
+          ],
+          "hints": [
+            "Look in the Savior's reply in verse 17.",
+            "One phrase says what did not reveal it; the next says who did.",
+            "Tap “for flesh and blood hath not revealed it unto thee,” and “but my Father which is in heaven.”"
+          ],
+          "explanation": "The Savior said Peter's knowledge didn't come from “flesh and blood” “but my Father which is in heaven.” Many readers take ‘flesh and blood’ to mean human sources, such as other people or one's own reasoning. That is an interpretation, but the verse plainly says the Father revealed it. Notice the contrast with verse 14, where others offered opinions. Elder Corbridge quoted this passage right after teaching that affirmative proof comes by revelation.",
+          "passage": "matthew-16-13-17",
+          "chunks": [
+            {
+              "verse": 14,
+              "text": "And they said, Some say that thou art John the Baptist:"
+            },
+            {
+              "verse": 14,
+              "text": "some, Elias;"
+            },
+            {
+              "verse": 14,
+              "text": "and others, Jeremias, or one of the prophets."
+            },
+            {
+              "verse": 15,
+              "text": "He saith unto them,"
+            },
+            {
+              "verse": 15,
+              "text": "But whom say ye that I am?"
+            },
+            {
+              "verse": 16,
+              "text": "And Simon Peter answered and said,"
+            },
+            {
+              "verse": 16,
+              "text": "Thou art the Christ, the Son of the living God."
+            },
+            {
+              "verse": 17,
+              "text": "And Jesus answered and said unto him,"
+            },
+            {
+              "verse": 17,
+              "text": "Blessed art thou, Simon Bar-jona:"
+            },
+            {
+              "verse": 17,
+              "text": "for flesh and blood hath not revealed it unto thee,"
+            },
+            {
+              "verse": 17,
+              "text": "but my Father which is in heaven."
+            }
+          ],
+          "targets": [
+            9,
+            10
+          ]
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "opinions-and-revelation",
+          "prompt": "Connect each statement with the evidence that supports it.",
+          "sourceIds": [
+            "matthew-16-13-17",
+            "corbridge-stand-for-ever-2019",
+            "1-corinthians-2-11-14"
+          ],
+          "hints": [
+            "Matthew 16 moves from what others say, to the Savior's question, to Peter's witness and its source.",
+            "One statement is about Elder Corbridge's logic, not about Matthew 16.",
+            "Mark 9:24 is a real passage about belief, but it doesn't match any of these statements."
+          ],
+          "explanation": "Matthew 16 moves from what others say (verse 14), to a personal question (verse 15), to a witness from the Father (verse 17). Elder Corbridge drew a similar contrast, teaching that you can't establish what is true only by eliminating objections, because “affirmative proof finally and surely comes by revelation.” Paul agrees that the things of God are known by the Spirit of God.",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "opinions",
+                "text": "Other people had many opinions about who Jesus was."
+              },
+              {
+                "id": "your-answer",
+                "text": "The Savior asked His disciples for their own answer."
+              },
+              {
+                "id": "from-father",
+                "text": "Peter's witness came by revelation from the Father."
+              },
+              {
+                "id": "cant-disprove",
+                "text": "Elder Corbridge's point: disproving objections can't by itself prove what is true."
+              },
+              {
+                "id": "spirit-of-god",
+                "text": "The things of God are known by the Spirit of God."
+              }
+            ]
+          },
+          "right": {
+            "label": "Evidence",
+            "items": [
+              {
+                "id": "matt-14",
+                "text": "Matthew 16:14",
+                "sourceId": "matthew-16-13-17"
+              },
+              {
+                "id": "matt-15",
+                "text": "Matthew 16:15",
+                "sourceId": "matthew-16-13-17"
+              },
+              {
+                "id": "matt-17",
+                "text": "Matthew 16:17",
+                "sourceId": "matthew-16-13-17"
+              },
+              {
+                "id": "corbridge",
+                "text": "Elder Corbridge, “You Can’t Learn the Truth by Elimination”",
+                "sourceId": "corbridge-stand-for-ever-2019"
+              },
+              {
+                "id": "cor-11",
+                "text": "1 Corinthians 2:11",
+                "sourceId": "1-corinthians-2-11-14"
+              },
+              {
+                "id": "mark-24",
+                "text": "Mark 9:24",
+                "sourceId": "mark-9-23-24"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "opinions",
+              "right": "matt-14",
+              "because": "“Some say that thou art John the Baptist: some, Elias; and others, Jeremias, or one of the prophets.”",
+              "clue": "Look for the verse that reports what others were saying."
+            },
+            {
+              "left": "your-answer",
+              "right": "matt-15",
+              "because": "“But whom say ye that I am?”",
+              "clue": "Which verse is the Savior's question to the disciples themselves?"
+            },
+            {
+              "left": "from-father",
+              "right": "matt-17",
+              "because": "“Flesh and blood hath not revealed it unto thee, but my Father which is in heaven.”",
+              "clue": "Peter's own answer is in verse 16. Which verse explains where it came from?"
+            },
+            {
+              "left": "cant-disprove",
+              "right": "corbridge",
+              "because": "“You cannot prove a positive by disproving every negative.”",
+              "clue": "This statement is about reasoning. Which source is a talk?"
+            },
+            {
+              "left": "spirit-of-god",
+              "right": "cor-11",
+              "because": "“The things of God knoweth no man, but the Spirit of God.”",
+              "clue": "Look for Paul's words about the Spirit of God."
+            }
+          ]
+        },
+        "hard": {
+          "type": "clue",
+          "id": "the-game-of-clue",
+          "prompt": "Elder Corbridge compared learning by elimination to a board game. Examine the clues, then choose the best summary of his reasoning.",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "matthew-16-13-17"
+          ],
+          "hints": [
+            "The second clue describes what happens when you try to answer every objection.",
+            "The third clue rules out one tempting option.",
+            "The best summary includes both the limit of elimination and the need for an affirmative witness."
+          ],
+          "explanation": "Elder Corbridge's point is about logic, not about avoiding questions. A list of objections has no end, so eliminating them one by one can't arrive at a positive conclusion: “You cannot prove the Church is true by disproving every claim made against it.” He didn't say to stop thinking (“I am not saying you should put your head in the sand”). He said that, with the things of God, “affirmative proof finally and surely comes by revelation through the spirit and power of the Holy Ghost,” as it did for Peter.",
+          "clues": [
+            {
+              "id": "game",
+              "title": "Only in a game",
+              "text": "“That approach only works in the game of Clue.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "lifetime",
+              "title": "A lifetime of tracking",
+              "text": "“You can spend a lifetime desperately tracking down the answer to every claim leveled against the Church and never come to a knowledge of the most important truths.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "sand",
+              "title": "Not head in the sand",
+              "text": "“I am not saying you should put your head in the sand.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "affirmative",
+              "title": "Affirmative proof",
+              "text": "“You cannot prove a positive by disproving every negative.… Ultimately there has to be affirmative proof.”",
+              "sourceId": "corbridge-stand-for-ever-2019"
+            },
+            {
+              "id": "peter",
+              "title": "Peter",
+              "text": "“Flesh and blood hath not revealed it unto thee, but my Father which is in heaven.”",
+              "sourceId": "matthew-16-13-17"
+            }
+          ],
+          "question": {
+            "id": "elimination-summary",
+            "prompt": "Which summary fits all five clues?",
+            "options": [
+              {
+                "id": "affirmative-witness",
+                "text": "He taught that objections never run out and that answering them can't by itself establish what is true; that takes an affirmative witness from God, though hard questions can still be studied."
+              },
+              {
+                "id": "no-answers",
+                "text": "Hard questions have no answers, so it's best not to think about them.",
+                "feedback": "The third clue rules this out, and Elder Corbridge also said, “There are answers to the secondary questions.”"
+              },
+              {
+                "id": "enough-answers",
+                "text": "If you answer enough objections, you'll eventually reach certainty.",
+                "feedback": "The second clue: a person can spend a lifetime tracking down answers “and never come to a knowledge of the most important truths.”"
+              },
+              {
+                "id": "ignore-evidence",
+                "text": "Evidence counts against faith, so faith has to ignore it.",
+                "feedback": "Elder Corbridge said evidence and reason help prepare us, and in his testimony he said, “the evidence is overwhelming.”"
+              }
+            ],
+            "correct": [
+              "affirmative-witness"
+            ]
+          }
+        },
+        "complex": {
+          "type": "scripture-connect",
+          "id": "affirmative-witness",
+          "prompt": "Read Matthew 16, 1 Corinthians 2, and Moroni 10 side by side. Answer each question, drawing on Elder Corbridge's teaching too.",
+          "sourceIds": [
+            "matthew-16-13-17",
+            "1-corinthians-2-11-14",
+            "moroni-10-3-5",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "hints": [
+            "Each passage says something about where knowledge of the things of God comes from.",
+            "Moroni 10:3–4 also describes what the learner does.",
+            "The most careful answers include both the learner's part and God's witness, and avoid claiming more than the sources do."
+          ],
+          "explanation": "All three passages locate knowledge of the things of God in God Himself: the Father revealed Christ to Peter, the Spirit of God knows the things of God, and the Holy Ghost manifests truth to those who ask with real intent. Moroni also describes the learner's part: remember, ponder, and ask. Elder Corbridge drew a similar conclusion: “Answers to the primary questions do not come by answering the secondary questions.” In his view, the witness is a different kind of knowing, though study and evidence help along the way.",
+          "passages": [
+            "matthew-16-13-17",
+            "1-corinthians-2-11-14",
+            "moroni-10-3-5"
+          ],
+          "questions": [
+            {
+              "id": "agree-on",
+              "prompt": "What do Matthew 16:17 and 1 Corinthians 2:11 agree on?",
+              "options": [
+                {
+                  "id": "by-gods-spirit",
+                  "text": "The things of God are made known by God, through His Spirit, not by human means alone."
+                },
+                {
+                  "id": "peter-reasoned",
+                  "text": "Peter reasoned his way to the answer.",
+                  "feedback": "Matthew 16:17 says “flesh and blood hath not revealed it unto thee.”"
+                },
+                {
+                  "id": "apostles-only",
+                  "text": "Only Apostles can know the things of God.",
+                  "feedback": "Moroni addresses whoever will “read these things,” and promises, “ye may know the truth of all things.”"
+                }
+              ],
+              "correct": [
+                "by-gods-spirit"
+              ]
+            },
+            {
+              "id": "learners-part",
+              "prompt": "In Moroni 10:3–4, what does the learner do before the promised manifestation?",
+              "options": [
+                {
+                  "id": "remember-ponder-ask",
+                  "text": "Remember the Lord's mercy, ponder, and ask God with a sincere heart, real intent, and faith in Christ."
+                },
+                {
+                  "id": "prove-first",
+                  "text": "Prove the book true through research first.",
+                  "feedback": "Read verses 3–4 for the verbs: remember, ponder, ask."
+                },
+                {
+                  "id": "nothing",
+                  "text": "Nothing. The witness comes without asking.",
+                  "feedback": "Verse 4: “I would exhort you that ye would ask God.”"
+                }
+              ],
+              "correct": [
+                "remember-ponder-ask"
+              ]
+            },
+            {
+              "id": "what-proves",
+              "prompt": "A friend asks how anyone could know whether the Restoration is from God. Based on these passages and Elder Corbridge's teaching, which answer is most careful?",
+              "options": [
+                {
+                  "id": "witness-from-god",
+                  "text": "God offers an affirmative witness by the Holy Ghost. Study and evidence can help prepare a person, but the witness itself comes from Him."
+                },
+                {
+                  "id": "unknowable",
+                  "text": "Nothing can be known, so it's all just belief.",
+                  "feedback": "Moroni 10:5 says “ye may know,” and Peter's witness came from the Father."
+                },
+                {
+                  "id": "every-objection",
+                  "text": "A witness is impossible until every objection is answered.",
+                  "feedback": "Elder Corbridge: “Answers to the primary questions do not come by answering the secondary questions.”"
+                }
+              ],
+              "correct": [
+                "witness-from-god"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "The Savior asked, “Whom say ye that I am?” Peter's answer wasn't what was left after eliminating other opinions; it came by revelation from the Father. Elder Corbridge taught that a positive witness of the primary questions comes the same way, by the Holy Ghost, though study and evidence help along the way.",
+      "concepts": [
+        "revelation",
+        "testimony"
+      ],
+      "connections": [
+        {
+          "from": "scripture:matthew-16-13-17",
+          "to": "question:primary-christ",
+          "relation": "answers",
+          "sourceIds": [
+            "matthew-16-13-17"
+          ],
+          "note": "Peter's witness that Jesus is “the Christ, the Son of the living God” came by revelation from the Father."
+        },
+        {
+          "from": "scripture:matthew-16-13-17",
+          "to": "concept:revelation",
+          "relation": "illustrates",
+          "sourceIds": [
+            "matthew-16-13-17",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "note": "Elder Corbridge pointed to Peter's witness as an example of affirmative proof that comes by revelation."
+        }
+      ]
+    },
+    {
+      "id": "experiment-upon-the-word",
+      "title": "Experiment upon the word",
+      "phase": "understand",
+      "method": "scientific",
+      "intro": "What can a person actually do with a primary question? Alma invited people who weren't yet sure to try an experiment. Elder Corbridge quoted this invitation when he described the scientific method.",
+      "sourceIds": [
+        "alma-32-26-28",
+        "ether-12-6",
+        "john-7-16-17"
+      ],
+      "branchIds": [
+        "not-sure-i-believe-yet"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "do-or-notice",
+          "prompt": "Alma's experiment has two parts: what you do, and what you notice. Sort each phrase from Alma 32:27–28.",
+          "sourceIds": [
+            "alma-32-26-28"
+          ],
+          "hints": [
+            "Verse 27 is mostly invitations; verse 28 describes what follows.",
+            "Ask of each phrase: is this something I do, or something I would notice happening?",
+            "The phrase about swelling and the three that begin ‘it beginneth’ are signs to notice. The rest are actions."
+          ],
+          "explanation": "Alma's experiment fits the pattern Elder Corbridge described for the scientific method: act, then observe. You awake, exercise even a particle of faith, let a desire work, and give place for the word. Then you watch for signs: it swells, enlarges your soul, enlightens your understanding, and becomes delicious. One sign is about understanding, so the experiment engages both the heart and the mind.",
+          "categories": [
+            {
+              "id": "do",
+              "label": "What you do",
+              "description": "Actions Alma invites"
+            },
+            {
+              "id": "notice",
+              "label": "What you notice",
+              "description": "Signs Alma says will follow if the word is good"
+            }
+          ],
+          "items": [
+            {
+              "id": "awake",
+              "text": "“Awake and arouse your faculties”",
+              "category": "do",
+              "why": "Alma's first invitation is to wake up and pay attention, which is an action."
+            },
+            {
+              "id": "particle",
+              "text": "“Exercise a particle of faith”",
+              "category": "do",
+              "why": "Even a small amount of faith is something you exercise."
+            },
+            {
+              "id": "desire-work",
+              "text": "“Let this desire work in you”",
+              "category": "do",
+              "why": "Alma asks you to let a desire to believe keep working, rather than wait for certainty."
+            },
+            {
+              "id": "give-place",
+              "text": "“Give place, that a seed may be planted in your heart”",
+              "category": "do",
+              "why": "Making room for the word is the learner's part."
+            },
+            {
+              "id": "swell",
+              "text": "“It will begin to swell within your breasts”",
+              "category": "notice",
+              "why": "A sign that follows planting a good seed."
+            },
+            {
+              "id": "enlarge",
+              "text": "“It beginneth to enlarge my soul”",
+              "category": "notice",
+              "why": "A sign Alma says you will begin to notice within yourself."
+            },
+            {
+              "id": "enlighten",
+              "text": "“It beginneth to enlighten my understanding”",
+              "category": "notice",
+              "why": "This sign is about the mind: the word makes things clearer."
+            },
+            {
+              "id": "delicious",
+              "text": "“It beginneth to be delicious to me”",
+              "category": "notice",
+              "why": "The word becomes something you want more of."
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "desire-to-witness",
+          "prompt": "Compare Alma 32, Ether 12:6, and John 7:17. Answer each question from the verses.",
+          "sourceIds": [
+            "alma-32-26-28",
+            "ether-12-6",
+            "john-7-16-17"
+          ],
+          "hints": [
+            "Alma 32:27 names the smallest place a person can start.",
+            "Ether 12:6 names what comes after the trial of faith.",
+            "All three passages put acting before knowing."
+          ],
+          "explanation": "Alma accepts even a desire to believe as a beginning and asks us to “let this desire work in you.” Ether says “ye receive no witness until after the trial of your faith,” and Jesus said that whoever “will do his will” shall know of the doctrine. In all three, knowledge comes as people act on what they hope is true, not before they begin.",
+          "passages": [
+            "alma-32-26-28",
+            "ether-12-6",
+            "john-7-16-17"
+          ],
+          "questions": [
+            {
+              "id": "smallest-beginning",
+              "prompt": "According to Alma 32:27, what is the smallest beginning Alma accepts?",
+              "options": [
+                {
+                  "id": "desire",
+                  "text": "Even a desire to believe"
+                },
+                {
+                  "id": "perfect-knowledge",
+                  "text": "A perfect knowledge",
+                  "feedback": "Verse 26 says “ye cannot know of their surety at first.” What does verse 27 accept instead?"
+                },
+                {
+                  "id": "certainty",
+                  "text": "Certainty that it's true",
+                  "feedback": "Read the phrase beginning “yea, even if ye can no more than…”"
+                }
+              ],
+              "correct": [
+                "desire"
+              ]
+            },
+            {
+              "id": "after-the-trial",
+              "prompt": "What does Ether 12:6 say comes after the trial of faith?",
+              "options": [
+                {
+                  "id": "witness",
+                  "text": "A witness"
+                },
+                {
+                  "id": "everything",
+                  "text": "A perfect understanding of everything",
+                  "feedback": "Ether 12:6 names one thing received after the trial of faith."
+                },
+                {
+                  "id": "nothing",
+                  "text": "Nothing, because faith is never confirmed",
+                  "feedback": "Read the last clause: “ye receive no witness until after the trial of your faith.”"
+                }
+              ],
+              "correct": [
+                "witness"
+              ]
+            },
+            {
+              "id": "shared-pattern",
+              "prompt": "What do John 7:17, Alma 32:27, and Ether 12:6 share?",
+              "options": [
+                {
+                  "id": "act-then-know",
+                  "text": "Knowledge comes as people act on what they hope is true, not before they begin."
+                },
+                {
+                  "id": "certain-first",
+                  "text": "You must be certain before you act.",
+                  "feedback": "Alma accepts a mere desire, and Ether says the witness comes after the trial."
+                },
+                {
+                  "id": "substitute",
+                  "text": "Acting is a substitute for God's witness.",
+                  "feedback": "Ether 12:6 still speaks of receiving a witness. Acting is how we try the experiment, not a replacement for God's answer."
+                }
+              ],
+              "correct": [
+                "act-then-know"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "experiment-perspectives",
+          "prompt": "Weigh each statement about Alma's experiment against Alma 32:26–28 and Ether 12:6.",
+          "sourceIds": [
+            "alma-32-26-28",
+            "ether-12-6"
+          ],
+          "hints": [
+            "Check what Alma says a person needs in order to begin.",
+            "For the ‘within a week’ statement, ask whether Alma gives any timeline.",
+            "Two statements are supported, two are contradicted, and one adds a deadline the verses don't give."
+          ],
+          "explanation": "Alma's experiment can start very small (even a desire), involves both acting and noticing, and leads to growing knowledge. Ether adds that the witness comes after the trial of faith. Neither passage sets a deadline. Treating a slow start as proof the seed is bad adds something Alma never said.",
+          "perspectives": [
+            {
+              "id": "strong-first",
+              "voice": "A friend",
+              "text": "I need a strong testimony before I can even start.",
+              "verdict": "contradicted",
+              "rationale": "Alma invites anyone to begin “even if ye can no more than desire to believe.”"
+            },
+            {
+              "id": "faith-is-knowledge",
+              "voice": "A common idea",
+              "text": "Faith and perfect knowledge are the same thing.",
+              "verdict": "contradicted",
+              "rationale": "Alma speaks of faith “that it was not a perfect knowledge.”"
+            },
+            {
+              "id": "witness-after",
+              "voice": "A classmate",
+              "text": "A witness often comes after acting in faith, not before.",
+              "verdict": "supported",
+              "rationale": "“Ye receive no witness until after the trial of your faith.”"
+            },
+            {
+              "id": "within-a-week",
+              "voice": "A classmate",
+              "text": "If I don't feel the seed swell within a week, it must be a bad seed.",
+              "verdict": "beyond",
+              "rationale": "Alma describes signs to watch for but gives no timeline. How long the experiment takes isn't something these verses settle."
+            },
+            {
+              "id": "act-and-notice",
+              "voice": "A seminary student",
+              "text": "Alma's experiment involves both doing something and noticing what happens inside you.",
+              "verdict": "supported",
+              "rationale": "Verse 27 asks us to “awake and arouse your faculties” and “give place”; verse 28 describes what we will notice: it will “enlarge my soul” and “enlighten my understanding.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "principle-experiment",
+          "prompt": "Build a principle that Alma 32, John 7:17, and Ether 12:6 support together. Leave out fragments they don't support.",
+          "sourceIds": [
+            "alma-32-26-28",
+            "john-7-16-17",
+            "ether-12-6",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "hints": [
+            "Begin with the smallest starting point Alma accepts.",
+            "Then add what to do, what to notice, and when a witness comes.",
+            "Leave out the fragments that add a deadline or require proof before starting."
+          ],
+          "explanation": "This principle draws on Alma 32:27–28 (desire, give place, enlarge, enlighten), John 7:17 (do His will), and Ether 12:6 (a witness after the trial of faith). It fits the scientific method as Elder Corbridge described it, applied to the word of God. The distractors add a deadline Alma never gives, or reverse the order by requiring proof before the experiment begins.",
+          "fragments": [
+            {
+              "id": "desire",
+              "text": "Even if I can no more than desire to believe,"
+            },
+            {
+              "id": "give-place",
+              "text": "I can let that desire work in me and give place for the word,"
+            },
+            {
+              "id": "act",
+              "text": "act on it as Jesus invited,"
+            },
+            {
+              "id": "notice",
+              "text": "and notice whether it enlarges my soul and enlightens my understanding,"
+            },
+            {
+              "id": "trust",
+              "text": "trusting that a witness comes after the trial of faith."
+            },
+            {
+              "id": "deadline",
+              "text": "and if nothing happens right away, the word must be false."
+            },
+            {
+              "id": "proof-first",
+              "text": "once I have first proven it true by other means,"
+            }
+          ],
+          "solution": [
+            "desire",
+            "give-place",
+            "act",
+            "notice",
+            "trust"
+          ],
+          "statement": "Even if I can no more than desire to believe, I can let that desire work in me and give place for the word, act on it as Jesus invited, and notice whether it enlarges my soul and enlightens my understanding, trusting that a witness comes after the trial of faith."
+        }
+      },
+      "insight": "Alma's experiment fits Elder Corbridge's scientific method: begin with a question and a desire, act on the word, and notice the results. Ether adds that the witness comes “after the trial of your faith.” Nothing here requires certainty to start.",
+      "concepts": [
+        "experiment-upon-the-word",
+        "faith"
+      ],
+      "connections": [
+        {
+          "from": "scripture:alma-32-26-28",
+          "to": "concept:experiment-upon-the-word",
+          "relation": "teaches",
+          "sourceIds": [
+            "alma-32-26-28"
+          ],
+          "note": "Alma invites even those who “can no more than desire to believe” to experiment upon his words."
+        },
+        {
+          "from": "scripture:ether-12-6",
+          "to": "concept:testimony",
+          "relation": "teaches",
+          "sourceIds": [
+            "ether-12-6"
+          ],
+          "note": "“Ye receive no witness until after the trial of your faith.”"
+        }
+      ]
+    },
+    {
+      "id": "standing-on-what-you-know",
+      "title": "Standing on what you know",
+      "phase": "understand",
+      "method": "analytical",
+      "depth": "deep",
+      "intro": "Hard questions don't all resolve at once. Scripture shows disciples who held on to what they knew while other things stayed unclear, and Church leaders have counseled the same.",
+      "sourceIds": [
+        "1-nephi-11-16-17",
+        "john-6-66-69",
+        "holland-lord-i-believe-2013",
+        "corbridge-stand-for-ever-2019"
+      ],
+      "activities": {
+        "medium": {
+          "type": "evidence-connect",
+          "id": "holding-fast",
+          "prompt": "Connect each statement with the source that supports it.",
+          "sourceIds": [
+            "1-nephi-11-16-17",
+            "john-6-66-69",
+            "holland-lord-i-believe-2013",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "hints": [
+            "Two statements come from scripture and two from Church leaders.",
+            "Nephi's answer to a question about the condescension of God is in 1 Nephi 11:17.",
+            "Ether 12:6 is about a witness after the trial of faith; it doesn't match any of these statements."
+          ],
+          "explanation": "Nephi knew one thing for certain, that God “loveth his children,” while saying, “I do not know the meaning of all things.” When many disciples left, Peter's reason for staying was the Savior Himself: “thou hast the words of eternal life.” Elder Holland and Elder Corbridge both counsel standing on what you know while other questions remain.",
+          "left": {
+            "label": "Statement",
+            "items": [
+              {
+                "id": "nephi",
+                "text": "Nephi knew God loves His children, though he didn't know the meaning of all things."
+              },
+              {
+                "id": "peter",
+                "text": "When many turned away, Peter said there was no one else to go to."
+              },
+              {
+                "id": "hold-fast",
+                "text": "Hold fast to what you already know until more knowledge comes."
+              },
+              {
+                "id": "primary-answers",
+                "text": "You may not know every answer, but you must know the answers to the primary questions."
+              }
+            ]
+          },
+          "right": {
+            "label": "Evidence",
+            "items": [
+              {
+                "id": "nephi-11",
+                "text": "1 Nephi 11:17",
+                "sourceId": "1-nephi-11-16-17"
+              },
+              {
+                "id": "john-6",
+                "text": "John 6:68",
+                "sourceId": "john-6-66-69"
+              },
+              {
+                "id": "holland",
+                "text": "Elder Holland, “Lord, I Believe”",
+                "sourceId": "holland-lord-i-believe-2013"
+              },
+              {
+                "id": "corbridge",
+                "text": "Elder Corbridge, BYU devotional (2019)",
+                "sourceId": "corbridge-stand-for-ever-2019"
+              },
+              {
+                "id": "ether",
+                "text": "Ether 12:6",
+                "sourceId": "ether-12-6"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "nephi",
+              "right": "nephi-11",
+              "because": "“I know that he loveth his children; nevertheless, I do not know the meaning of all things.”",
+              "clue": "Look for Nephi's answer when he was asked about the condescension of God."
+            },
+            {
+              "left": "peter",
+              "right": "john-6",
+              "because": "“Lord, to whom shall we go? thou hast the words of eternal life.”",
+              "clue": "Which passage describes disciples who “went back”?"
+            },
+            {
+              "left": "hold-fast",
+              "right": "holland",
+              "because": "“Hold fast to what you already know and stand strong until additional knowledge comes.”",
+              "clue": "This counsel comes from a talk about the father in Mark 9."
+            },
+            {
+              "left": "primary-answers",
+              "right": "corbridge",
+              "because": "“Although we may not know the answer to every question, we must know the answers to the primary questions.”",
+              "clue": "Which talk introduced primary questions?"
+            }
+          ]
+        },
+        "complex": {
+          "type": "compare",
+          "id": "know-and-dont-know",
+          "prompt": "Weigh each statement against 1 Nephi 11:16–17, John 6:66–69, and the counsel of Elder Holland and Elder Corbridge.",
+          "sourceIds": [
+            "1-nephi-11-16-17",
+            "john-6-66-69",
+            "holland-lord-i-believe-2013",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "hints": [
+            "Notice that Nephi says both what he knows and what he doesn't.",
+            "For the statement about Peter, ask whether John 6 says anything about his unanswered questions.",
+            "Two statements are supported, two are contradicted, and one goes beyond what John 6 says."
+          ],
+          "explanation": "These sources show faith that holds on to what it knows while some things remain unclear. They contradict the idea that one unanswered question cancels everything else, or that Nephi had to understand everything first. The statement about Peter is subtle: John 6 gives his reason for staying but doesn't say whether he had questions. Elder Holland's counsel is not to deny questions, but to put first what you know.",
+          "perspectives": [
+            {
+              "id": "faith-with-open-questions",
+              "voice": "A classmate",
+              "text": "A person can have real faith while some questions are still unanswered.",
+              "verdict": "supported",
+              "rationale": "Nephi said, “I do not know the meaning of all things,” while knowing God loves His children. Elder Holland: “In this Church, what we know will always trump what we do not know.”"
+            },
+            {
+              "id": "give-up-everything",
+              "voice": "A common idea",
+              "text": "If I can't answer one hard question, I have to give up everything I know.",
+              "verdict": "contradicted",
+              "rationale": "Elder Holland counseled, “hold fast to what you already know,” and Elder Corbridge described dealing with things you don't understand “without jumping ship altogether.”"
+            },
+            {
+              "id": "nephi-understood-all",
+              "voice": "A friend",
+              "text": "Nephi understood everything about God before he trusted Him.",
+              "verdict": "contradicted",
+              "rationale": "Nephi said plainly, “I do not know the meaning of all things.”"
+            },
+            {
+              "id": "peter-no-questions",
+              "voice": "A classmate",
+              "text": "Peter stayed because he had no questions about anything Jesus taught.",
+              "verdict": "beyond",
+              "rationale": "John 6:68–69 gives Peter's reason for staying (“thou hast the words of eternal life”), but it doesn't say whether he had unanswered questions."
+            },
+            {
+              "id": "acknowledge-questions",
+              "voice": "A seminary student",
+              "text": "Elder Holland counseled people to be honest about their questions while putting their faith first.",
+              "verdict": "supported",
+              "rationale": "“Honestly acknowledge your questions and your concerns, but first and forever fan the flame of your faith.”"
+            }
+          ]
+        }
+      },
+      "insight": "Nephi trusted God's love without knowing the meaning of all things, and Peter stayed because the Savior had “the words of eternal life.” Elder Holland counseled holding fast to what you know until more knowledge comes. Faith doesn't have to wait for every question to be answered.",
+      "concepts": [
+        "faith",
+        "testimony"
+      ],
+      "connections": [
+        {
+          "from": "scripture:1-nephi-11-16-17",
+          "to": "concept:faith",
+          "relation": "illustrates",
+          "sourceIds": [
+            "1-nephi-11-16-17"
+          ],
+          "note": "Nephi knew God “loveth his children” while not knowing “the meaning of all things.”"
+        }
+      ]
+    },
+    {
+      "id": "whom-say-ye",
+      "title": "Whom say ye that I am?",
+      "phase": "understand",
+      "method": "divine",
+      "sourceIds": [
+        "matthew-16-13-17",
+        "alma-32-26-28",
+        "james-1-5"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "reflect-whom-say-ye",
+        "prompt": "The Savior asked His disciples, “But whom say ye that I am?” Each person answers that question for themselves. If you'd like, write a question you want to bring to Heavenly Father about His Son, or one small way you could “experiment upon my words” this week.",
+        "sourceIds": [
+          "matthew-16-13-17",
+          "alma-32-26-28",
+          "james-1-5"
+        ],
+        "suggestions": [
+          "James 1:5 promises that God “giveth to all men liberally, and upbraideth not.” What would you like to ask Him?",
+          "What do you already know or believe about Jesus Christ, even if it feels small?",
+          "What is one teaching of the Savior you could act on this week, and then notice what happens?"
+        ]
+      },
+      "insight": "Elder Corbridge taught that answers to the primary questions finally come by revelation from God. One way to read the Savior's question to Peter is as an invitation to each of us to come to know Him for ourselves.",
+      "concepts": [
+        "jesus-christ",
+        "testimony"
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "church-history-questions",
+      "question": "What can I do with a hard question about Church history?",
+      "intro": "Many people come across questions about the Church's past, such as something a past leader said or did, or a practice that has changed over time. This side question won't try to settle specific historical issues; those deserve careful study with reliable sources. Instead, it looks at how Church leaders have counseled approaching such questions.",
+      "returnNote": "For specific topics, the Church's Gospel Topics Essays and Church History Topics are good places to start. You can also bring your questions to a parent, teacher, or leader you trust.",
+      "steps": [
+        {
+          "id": "approach-hard-history",
+          "title": "An approach, not an argument",
+          "phase": "understand",
+          "method": "analytical",
+          "sourceIds": [
+            "corbridge-stand-for-ever-2019",
+            "uchtdorf-come-join-with-us-2013",
+            "holland-lord-i-believe-2013",
+            "dc-88-118",
+            "gospel-topics-essays",
+            "church-history-topics"
+          ],
+          "activities": {
+            "easy": {
+              "type": "sort",
+              "id": "counsel-or-caution",
+              "prompt": "Sort each approach to a hard historical question: counsel these sources give, or something they caution against.",
+              "sourceIds": [
+                "corbridge-stand-for-ever-2019",
+                "uchtdorf-come-join-with-us-2013",
+                "holland-lord-i-believe-2013",
+                "dc-88-118",
+                "gospel-topics-essays",
+                "church-history-topics"
+              ],
+              "hints": [
+                "Elder Corbridge, President Uchtdorf, and Elder Holland each give counsel here. Look for both what they encourage and what they warn against.",
+                "Two of the cautions are about opposite extremes: ignoring questions entirely, or letting one question overturn everything.",
+                "Primary questions first, reliable sources, patience, charity toward imperfect people, and holding fast are counsel. The rest are cautions."
+              ],
+              "explanation": "These leaders steer between two extremes. They don't ask anyone to pretend there are no questions or to bury them: Elder Holland said to be candid, and Elder Corbridge said not to put your head in the sand. But they also counsel against letting an unanswered question undo everything else, or trying to settle every objection before trusting God. Their counsel: keep the primary questions first, seek learning from the best books “by study and also by faith,” be patient, remember that people are imperfect, and hold fast to what you know.",
+              "categories": [
+                {
+                  "id": "counsel",
+                  "label": "Counsel these sources give"
+                },
+                {
+                  "id": "caution",
+                  "label": "What these sources caution against"
+                }
+              ],
+              "items": [
+                {
+                  "id": "primary-first",
+                  "text": "Keep the primary questions first while you study a secondary one",
+                  "category": "counsel",
+                  "why": "Elder Corbridge: “Begin by answering the primary questions.”"
+                },
+                {
+                  "id": "reliable-sources",
+                  "text": "Look for careful, reliable sources, such as the Church's Gospel Topics Essays and Church History Topics",
+                  "category": "counsel",
+                  "why": "The Lord counseled, “Seek ye out of the best books words of wisdom; seek learning, even by study and also by faith.” These two Church-published collections, which cover many historical topics, are Gospel Labs' suggested starting places."
+                },
+                {
+                  "id": "patience",
+                  "text": "Be patient; sometimes not all the information is available yet",
+                  "category": "counsel",
+                  "why": "President Uchtdorf: “Sometimes questions arise because we simply don’t have all the information and we just need a bit more patience.”"
+                },
+                {
+                  "id": "imperfect-people",
+                  "text": "Remember that Church leaders and members are imperfect people",
+                  "category": "counsel",
+                  "why": "President Uchtdorf: “There have been times when members or leaders in the Church have simply made mistakes.” Elder Holland: “Imperfect people are all God has ever had to work with.”"
+                },
+                {
+                  "id": "hold-fast",
+                  "text": "Hold fast to what you already know while you look for answers",
+                  "category": "counsel",
+                  "why": "Elder Holland: “Hold fast to what you already know and stand strong until additional knowledge comes.”"
+                },
+                {
+                  "id": "settle-everything",
+                  "text": "Try to settle every objection before deciding anything about God",
+                  "category": "caution",
+                  "why": "Elder Corbridge: “You cannot prove a positive by disproving every negative.”"
+                },
+                {
+                  "id": "one-question-overturns",
+                  "text": "Treat one unanswered question as proof that everything is false",
+                  "category": "caution",
+                  "why": "Elder Holland: “In this Church, what we know will always trump what we do not know.”"
+                },
+                {
+                  "id": "pretend",
+                  "text": "Pretend you don't have any questions",
+                  "category": "caution",
+                  "why": "Elder Holland: “Be as candid about your questions as you need to be.”"
+                },
+                {
+                  "id": "never-look",
+                  "text": "Refuse ever to look into the question",
+                  "category": "caution",
+                  "why": "Elder Corbridge: “I am not saying you should put your head in the sand.”"
+                }
+              ]
+            },
+            "hard": {
+              "type": "compare",
+              "id": "imperfect-people-perfect-truth",
+              "prompt": "Weigh each statement against President Uchtdorf's and Elder Holland's counsel.",
+              "sourceIds": [
+                "uchtdorf-come-join-with-us-2013",
+                "holland-lord-i-believe-2013"
+              ],
+              "hints": [
+                "President Uchtdorf spoke frankly about mistakes and unanswered questions in the section titled “Mistakes of Imperfect People.”",
+                "Look for what he and Elder Holland say mistakes do, and don't do, to the truth of the gospel.",
+                "Two statements are supported and three are contradicted."
+              ],
+              "explanation": "President Uchtdorf spoke frankly: some things in the Church's past raise questions, leaders and members have made mistakes, and not every answer is known yet. He and Elder Holland also taught that human imperfection doesn't tarnish the truth of the restored gospel. This side question doesn't settle any particular historical issue. It offers a way to hold those questions honestly while you study them with reliable sources.",
+              "perspectives": [
+                {
+                  "id": "leaders-mistakes",
+                  "voice": "A classmate",
+                  "text": "Church leaders have sometimes made mistakes.",
+                  "verdict": "supported",
+                  "rationale": "President Uchtdorf: “There have been times when members or leaders in the Church have simply made mistakes.”"
+                },
+                {
+                  "id": "mistake-disproves",
+                  "voice": "A common idea",
+                  "text": "A leader's mistake proves God wasn't involved in the work.",
+                  "verdict": "contradicted",
+                  "rationale": "President Uchtdorf: “The eternal truth of the restored gospel … is not tarnished, diminished, or destroyed.” Elder Holland: “The limitation is not in the divinity of the work.”"
+                },
+                {
+                  "id": "all-answered",
+                  "voice": "A friend",
+                  "text": "Every question about Church history has already been fully answered.",
+                  "verdict": "contradicted",
+                  "rationale": "President Uchtdorf: “Some struggle with unanswered questions about things that have been done or said in the past,” and some things will make sense only “when the entire truth is eventually known.”"
+                },
+                {
+                  "id": "different-conclusions",
+                  "voice": "A seminary student",
+                  "text": "Studying the same question carefully can lead different people to different conclusions.",
+                  "verdict": "supported",
+                  "rationale": "President Uchtdorf: “A question that creates doubt in some can, after careful investigation, build faith in others.”"
+                },
+                {
+                  "id": "never-make-mistakes",
+                  "voice": "A classmate",
+                  "text": "God calls only people who never make mistakes.",
+                  "verdict": "contradicted",
+                  "rationale": "Elder Holland: “Except in the case of His only perfect Begotten Son, imperfect people are all God has ever had to work with.”"
+                }
+              ]
+            }
+          },
+          "insight": "Church leaders have acknowledged that some things in the Church's past raise honest questions and that leaders and members have made mistakes. Their counsel is neither to ignore questions nor to let one unanswered question undo everything else, but to keep the primary questions first, seek reliable information patiently, and hold fast to what you know.",
+          "concepts": [
+            "primary-and-secondary-questions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "not-sure-i-believe-yet",
+      "question": "What if I'm not sure I believe yet?",
+      "intro": "Some people aren't sure yet what they believe. That's an honest place to be. President Dieter F. Uchtdorf described a Church “that honors personal agency so strongly” and said, “we respect those who honestly search for truth.” Scripture speaks gently to this place: belief can begin as no more than a desire, and honest questions can sit alongside real faith.",
+      "returnNote": "Wherever you are, you're welcome to keep studying. Elder Holland told a young man who could say only that he believed that he “need never apologize” for that.",
+      "steps": [
+        {
+          "id": "help-thou-mine-unbelief",
+          "title": "Lord, I believe; help thou mine unbelief",
+          "phase": "discover",
+          "method": "divine",
+          "sourceIds": [
+            "mark-9-23-24",
+            "alma-32-26-28",
+            "dc-46-13-14",
+            "holland-lord-i-believe-2013",
+            "uchtdorf-come-join-with-us-2013",
+            "corbridge-stand-for-ever-2019"
+          ],
+          "activities": {
+            "medium": {
+              "type": "scripture-connect",
+              "id": "partial-faith",
+              "prompt": "Read Mark 9:23–24, Alma 32:27, and D&C 46:13–14. Answer each question from the verses.",
+              "sourceIds": [
+                "mark-9-23-24",
+                "alma-32-26-28",
+                "dc-46-13-14",
+                "holland-lord-i-believe-2013"
+              ],
+              "hints": [
+                "Notice the order of the father's words in Mark 9:24.",
+                "Alma 32:27 tells what to do with a desire.",
+                "D&C 46:14 describes a gift given to some people."
+              ],
+              "explanation": "Scripture makes room for partial and growing faith. The father in Mark 9 began with what he had (“Lord, I believe”) and asked for help with the rest. Alma treats a desire to believe as a starting point. And D&C 46 names believing on the words of others as a gift of the Spirit. Elder Holland told a 14-year-old who could say only that he believed that “belief is a precious word.”",
+              "passages": [
+                "mark-9-23-24",
+                "alma-32-26-28",
+                "dc-46-13-14"
+              ],
+              "questions": [
+                {
+                  "id": "father-first-words",
+                  "prompt": "What did the father in Mark 9:24 say first?",
+                  "options": [
+                    {
+                      "id": "i-believe",
+                      "text": "“Lord, I believe”"
+                    },
+                    {
+                      "id": "no-faith",
+                      "text": "That he had no faith at all",
+                      "feedback": "Read his first words before he mentions unbelief."
+                    },
+                    {
+                      "id": "after-miracle",
+                      "text": "That he would believe once he saw a miracle",
+                      "feedback": "He spoke before his son was healed. What did he say first?"
+                    }
+                  ],
+                  "correct": [
+                    "i-believe"
+                  ]
+                },
+                {
+                  "id": "let-desire-work",
+                  "prompt": "What does Alma 32:27 invite someone to do who “can no more than desire to believe”?",
+                  "options": [
+                    {
+                      "id": "let-it-work",
+                      "text": "Let that desire work in them"
+                    },
+                    {
+                      "id": "wait",
+                      "text": "Wait for the desire to turn into knowledge on its own",
+                      "feedback": "Alma says to “let this desire work in you.” That's active."
+                    },
+                    {
+                      "id": "pretend",
+                      "text": "Pretend to believe more than they do",
+                      "feedback": "Alma asks for a particle of faith, or even a desire, not pretending. Elder Holland said, “I am not asking you to pretend to faith you do not have.”"
+                    }
+                  ],
+                  "correct": [
+                    "let-it-work"
+                  ]
+                },
+                {
+                  "id": "believe-on-their-words",
+                  "prompt": "D&C 46:13–14 describes two spiritual gifts. What is the second?",
+                  "options": [
+                    {
+                      "id": "believe-words",
+                      "text": "To believe on the words of those who know"
+                    },
+                    {
+                      "id": "no-witness-needed",
+                      "text": "To never need to keep growing",
+                      "feedback": "Verse 14 says believers “might have eternal life if they continue faithful.” It describes a gift that continues, not an ending."
+                    },
+                    {
+                      "id": "know-everything",
+                      "text": "To know everything without study",
+                      "feedback": "Verse 14 is about believing on others' words."
+                    }
+                  ],
+                  "correct": [
+                    "believe-words"
+                  ]
+                }
+              ]
+            },
+            "hard": {
+              "type": "compare",
+              "id": "questions-and-faith",
+              "prompt": "Weigh each statement against Mark 9, Alma 32, and the counsel of Elder Holland, President Uchtdorf, and Elder Corbridge.",
+              "sourceIds": [
+                "mark-9-23-24",
+                "alma-32-26-28",
+                "holland-lord-i-believe-2013",
+                "uchtdorf-come-join-with-us-2013",
+                "corbridge-stand-for-ever-2019"
+              ],
+              "hints": [
+                "Mark 9:24 holds belief and unbelief in the same sentence.",
+                "Elder Holland speaks directly about pretending and about honest questions.",
+                "Two statements are supported and three are contradicted."
+              ],
+              "explanation": "These sources welcome honest questions and partial faith. Elder Holland said not to pretend to faith you don't have, but to be true to the faith you do have, and not to be afraid to ask for help when doubt comes. Elder Corbridge described his own experience as having questions but no doubts; President Uchtdorf counseled doubting your doubts before doubting your faith. Gospel Labs shares Elder Corbridge's words as his personal witness, not as a measure for anyone else. All three invite questions and point toward faith in Jesus Christ. Uncertainty isn't the end of the road; in Mark 9 it was where the father met the Savior.",
+              "perspectives": [
+                {
+                  "id": "certain-first",
+                  "voice": "A friend",
+                  "text": "I have to be certain before I can take any step of faith.",
+                  "verdict": "contradicted",
+                  "rationale": "Alma accepts even a desire to believe, and Elder Holland taught that “belief was always the first step toward conviction.”"
+                },
+                {
+                  "id": "together",
+                  "voice": "A classmate",
+                  "text": "Honest questions and real faith can exist together.",
+                  "verdict": "supported",
+                  "rationale": "The father said, “Lord, I believe; help thou mine unbelief.” Elder Holland: “Be as candid about your questions as you need to be.” President Uchtdorf: “It’s natural to have questions.”"
+                },
+                {
+                  "id": "pretend",
+                  "voice": "A common idea",
+                  "text": "God wants me to act as if I have more faith than I do.",
+                  "verdict": "contradicted",
+                  "rationale": "Elder Holland: “I am not asking you to pretend to faith you do not have. I am asking you to be true to the faith you do have.”"
+                },
+                {
+                  "id": "questions-not-doubts",
+                  "voice": "A seminary student",
+                  "text": "Speaking of himself, Elder Corbridge distinguished between having questions and having doubts.",
+                  "verdict": "supported",
+                  "rationale": "He said, “I have a lot of questions; I don’t have any doubts.” Those words describe his own experience; Gospel Labs doesn't present them as a test for anyone else. President Uchtdorf spoke of nurturing faith “even in the sometimes sandy soil of doubt and uncertainty” and counseled, “first doubt your doubts before you doubt your faith.” Elder Holland: “When doubt or difficulty come, do not be afraid to ask for help.”"
+                },
+                {
+                  "id": "unbelief-cancels",
+                  "voice": "A classmate",
+                  "text": "If I have any unbelief, I can't have real faith.",
+                  "verdict": "contradicted",
+                  "rationale": "The father in Mark 9:24 said both “Lord, I believe” and “help thou mine unbelief,” and Elder Holland notes that Jesus healed the boy “in response to new and still partial faith.”"
+                }
+              ]
+            }
+          },
+          "insight": "Faith can begin small and grow. The father in Mark 9 brought both his belief and his unbelief to the Savior, and Alma treats a desire to believe as enough to start. You can be honest about where you are and still take the next step.",
+          "concepts": [
+            "faith",
+            "experiment-upon-the-word"
+          ],
+          "connections": [
+            {
+              "from": "scripture:mark-9-23-24",
+              "to": "concept:faith",
+              "relation": "illustrates",
+              "sourceIds": [
+                "mark-9-23-24",
+                "holland-lord-i-believe-2013"
+              ],
+              "note": "The father's “Lord, I believe; help thou mine unbelief” shows partial faith brought to the Savior."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "discovery": {
+    "summary": "Elder Lawrence E. Corbridge taught that not all questions are equal. In his framework, a few primary questions, about God our Father, Jesus Christ, Joseph Smith, and the Church as God's kingdom, carry the weight of everything else, while secondary questions are “unending.” He described four methods of learning that all “begin the same way: with a question,” and taught that “you cannot prove a positive by disproving every negative.” Several scriptures fit his framework: Peter's witness of Christ came not from “flesh and blood” but from the Father; Paul taught that the things of God are known by the Spirit of God; Alma invited anyone with even a desire to believe to experiment upon the word; and Moroni promised a manifestation “by the power of the Holy Ghost.” These sources don't promise that every hard question will be resolved quickly. Together they suggest a way to learn: put the primary questions first, as Elder Corbridge counseled, study and act in faith, and seek the witness only God can give.",
+    "keyIdeas": [
+      "Elder Corbridge taught that primary questions come first, and that when they're answered, secondary questions get answered too or pale in significance.",
+      "Elder Corbridge described scientific, analytical, academic, and divine methods of learning that all begin with a question, and taught that all four matter.",
+      "Elder Corbridge taught that disproving objections can't by itself establish truth; scripture describes a witness that comes from God (Matthew 16:17; Moroni 10:4–5).",
+      "Even a desire to believe is a place to start (Alma 32:27), and a witness comes after the trial of faith (Ether 12:6).",
+      "Faith can hold fast to what it knows while some questions stay open (1 Nephi 11:17; John 6:68)."
+    ],
+    "christConnection": "The Savior Himself asked His disciples the question about Him that Elder Corbridge counted among the primary questions: “Whom say ye that I am?” Peter's answer, “Thou art the Christ, the Son of the living God,” came by revelation from the Father, and Moroni promises a manifestation by the Holy Ghost to those who ask with real intent. In Elder Corbridge's framework, questions about history and practice matter, but they rest on primary questions like this one. When many turned away, Peter's reason for staying was simply that Jesus had “the words of eternal life.”",
+    "openQuestions": [
+      "Which of my own questions are primary, and which depend on them?",
+      "What would it look like for me to experiment upon the word this week?",
+      "How can I hold an open question patiently without letting it crowd out what I know?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "Whole investigation (framing)",
+        "note": "Built directly on Elder Corbridge's BYU devotional, a speaker's teaching, not scripture or an official Church resource. The primary/secondary distinction and the four methods are always presented as his (‘Elder Corbridge taught…’) and tested against scripture. Please confirm that making his framework the backbone of an investigation for youth is appropriate, and that its emphasis is right.",
+        "resolution": "Qualified: every statement of the framework now reads as his teaching. Recast in his name: the hook, primaryQuestion note, intro (which now gives his calling, General Authority Seventy, from the BYU page), sort categories and explanation, one perspective, the build-principle, step insights, an evidence item, a clue option, several explanations, and the discovery's summary, key ideas, and Christ connection. A step title that stated his conclusion as fact is now a question. Whether the framework suits youth is still for the owner to confirm."
+      },
+      {
+        "where": "Talk title and source id",
+        "note": "The shared source corbridge-stand-for-ever-2019 is declared identically in several files with the title ‘Stand Forever’, while the BYU Speeches URL slug reads ‘stand-for-ever’. The earlier note asked which title is correct.",
+        "resolution": "Resolved: checked the BYU Speeches page on 26 October 2026. It titles the talk ‘Stand Forever’ and says Lawrence E. Corbridge, a General Authority Seventy, gave it on 22 January 2019. The shared declaration's title, author, and date are correct; only the URL slug differs, as BYU published it. No change is needed in any file."
+      },
+      {
+        "where": "Step not-all-questions-are-equal (sort)",
+        "note": "‘Why has a Church practice changed over time?’ isn't on Elder Corbridge's list word for word; it is classified as secondary by applying his framework (his list ends ‘and on and on’). ‘What should I make of something a past Church leader said or did?’ is placed under his ‘questions about Church history.’",
+        "resolution": "Qualified: both items' explanations now say the question isn't on his list word for word and that Gospel Labs placed it by applying his framework. The activity explanation says the same, the prompt asks learners to sort ‘the way his framework would’, and both category descriptions are labeled as his framework."
+      },
+      {
+        "where": "Elder Corbridge on doubt",
+        "note": "His speech says ‘I have a lot of questions; I don’t have any doubts’ and questions the saying ‘It is okay to have doubts.’ To avoid shaming learners who have doubts, this appears only in the not-sure-i-believe-yet branch, alongside President Uchtdorf (‘It’s natural to have questions’; ‘first doubt your doubts’) and Elder Holland (‘Be as candid about your questions’). His language about critical material (‘dark choir’, ‘swamp’, ‘gloom’) is deliberately not used, so critics are not characterized. Please review.",
+        "resolution": "Qualified: the perspective now says he was speaking of himself, and its rationale says Gospel Labs presents his words as his own experience, not as a test for anyone else. Beside them: President Uchtdorf on faith in ‘the sometimes sandy soil of doubt and uncertainty’ and ‘first doubt your doubts’, and Elder Holland's ‘When doubt or difficulty come, do not be afraid to ask for help.’ The explanation says Gospel Labs shares his words as his personal witness. The line still appears only in this branch; his language about critics is still unused."
+      },
+      {
+        "where": "Branch church-history-questions",
+        "note": "Approach only. It doesn't address any specific historical claim. It quotes President Uchtdorf's acknowledgment that leaders and members have made mistakes, and points to the Gospel Topics Essays and Church History Topics as starting places. Sensitive; please review the framing and the returnNote.",
+        "resolution": "Qualified: every item was reviewed; none characterizes critics or addresses a specific historical claim, so nothing was withheld. The intro was rewritten in general terms. The ‘reliable sources’ item now says the two Church collections are Gospel Labs' suggested starting places (the talks don't name them; D&C 88:118 gives the counsel). The returnNote points to those collections and a trusted parent, teacher, or leader, as guidance. Owner review of this sensitive branch is still recommended."
+      },
+      {
+        "where": "Branch not-sure-i-believe-yet",
+        "note": "The branch affirms agency (President Uchtdorf) and partial faith (Mark 9:24; Alma 32:27; D&C 46:14; Elder Holland) for people who aren't sure yet what they believe. It doesn't address family or social pressure, which the sources don't cover.",
+        "resolution": "Resolved: the intro now speaks generally of people who aren't sure yet what they believe. President Uchtdorf's words on agency and the scriptures on partial faith are kept. Elder Holland's account of the 14-year-old was checked against his talk."
+      },
+      {
+        "where": "Step not-by-elimination",
+        "note": "The highlight explanation glossed ‘flesh and blood’ as ‘people or ordinary means’, an interpretation. The investigation includes 1 Corinthians 2:14 (‘natural man’) in the verses shown, because Elder Corbridge quotes it, but never uses it to describe people who have questions.",
+        "resolution": "Qualified: the explanation now says many readers take ‘flesh and blood’ to mean human sources, that this is an interpretation, and that the verse plainly says the Father revealed it. The Church edition's footnotes don't gloss the phrase. Confirmed that 1 Corinthians 2:14 appears only in the verse text and is never applied to people with questions. The step title, which stated his conclusion as fact, is now a question."
+      }
+    ]
+  }
+}

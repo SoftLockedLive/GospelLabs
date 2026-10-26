@@ -1,0 +1,48 @@
+{
+  "file": "src/content/investigations/recognizing-the-spirit.json",
+  "contentVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "note": "Content withheld or reworded during the Gospel Labs 2.0 doctrinal review because it rewarded an interpretation as a correct answer. Kept verbatim so the owner can review it and restore it if he confirms it. Nothing here is shown in the app.",
+  "items": [
+    {
+      "location": "branches.spirit-thoughts-or-inspiration > steps.thoughts-in-the-mind > activities.medium (scripture-connect voice-in-the-mind) > questions.good-cometh-of-god",
+      "action": "Replaced",
+      "reason": "The question rewarded, as its only correct answer, Gospel Labs' interpretive conclusion that for a good thought ‘where it leads may matter more than identifying exactly where it came from.’ Moroni 7:12–16 doesn't state that comparison; it is one way to apply verses 13 and 16. A question with a single correct answer shouldn't reward an interpretation, so it was replaced by a question (same id) that rewards only what Moroni 7:13 and 16 state. The idea now appears only as an explicitly labeled application in the activity's explanation and the step insight. The owner may restore it if he confirms the reading is sound for youth.",
+      "original": {
+        "id": "good-cometh-of-god",
+        "prompt": "Moroni 7:12 says “all things which are good cometh of God.” How might that help when you can't tell where a good thought came from?",
+        "options": [
+          {
+            "id": "direction-matters",
+            "text": "For a thought that invites to do good, where it leads may matter more than identifying exactly where it came from."
+          },
+          {
+            "id": "ignore-unless-sure",
+            "text": "I should ignore good thoughts unless I'm sure they're from God.",
+            "feedback": "Moroni 7:13 calls every thing that invites to do good “inspired of God.” Would ignoring them fit that?"
+          },
+          {
+            "id": "good-from-me",
+            "text": "Good thoughts come from me; only commands come from God.",
+            "feedback": "Read verse 12 again: “all things which are good cometh of God.”"
+          }
+        ],
+        "correct": [
+          "direction-matters"
+        ]
+      }
+    },
+    {
+      "location": "branches.spirit-thoughts-or-inspiration > steps.thoughts-in-the-mind > activities.hard (compare sorting-thoughts) > perspectives.safe-to-act",
+      "action": "Reworded",
+      "reason": "Marked ‘supported’, the perspective said a good thought ‘is safe to act on’, an inference beyond Moroni 7:13 and 16. It now says only what verse 16 states (such a thought ‘is of God’), so the verdict rewards plainly stated content. The original is kept here for the owner's reference.",
+      "original": {
+        "id": "safe-to-act",
+        "voice": "A classmate",
+        "text": "A thought that invites me to do good and to believe in Christ is safe to act on.",
+        "verdict": "supported",
+        "rationale": "Moroni 7:13 and 16 call such things “inspired of God” and “sent forth by the power and gift of Christ.”"
+      }
+    }
+  ]
+}

@@ -1,0 +1,592 @@
+{
+  "id": "a-still-small-voice",
+  "status": "ready",
+  "title": "A still small voice",
+  "sourceId": "1-kings-19-9-13",
+  "context": {
+    "setting": "After Elijah challenged the prophets of Baal (1 Kings 18), Jezebel threatened his life. He fled into the wilderness and asked the Lord to let him die; an angel fed him, and he traveled forty days and forty nights to Horeb, “the mount of God” (1 Kings 19:1–8). There he lodged in a cave.",
+    "speaker": "The Lord and the prophet Elijah",
+    "audience": "Elijah, who had asked the Lord to take away his life (1 Kings 19:4)"
+  },
+  "themes": [
+    {
+      "conceptId": "still-small-voice",
+      "note": "After the wind, the earthquake, and the fire, none of which the Lord was in, came “a still small voice.”",
+      "verses": [
+        11,
+        12
+      ]
+    },
+    {
+      "conceptId": "revelation",
+      "note": "“the word of the Lord came to him” (verse 9), and a voice spoke to him (verse 13): the Lord speaks with His prophet. The Guide to the Scriptures lists verse 12 under Revelation.",
+      "verses": [
+        9,
+        12,
+        13
+      ]
+    },
+    {
+      "conceptId": "personal-revelation",
+      "note": "Here the Lord speaks to a prophet. Applying these words to personal revelation comes from later scripture and teachers: the Lord tells Oliver Cowdery, “I will tell you in your mind and in your heart, by the Holy Ghost,” and Elder Lawrence E. Corbridge taught that the Spirit of God “is usually a still, small voice.”",
+      "verses": [
+        12,
+        13
+      ]
+    },
+    {
+      "conceptId": "adversity",
+      "note": "Elijah felt alone and in danger: “I, even I only, am left; and they seek my life.” The Lord met him there with a question and a quiet voice.",
+      "verses": [
+        10
+      ]
+    }
+  ],
+  "keyPhrases": [
+    {
+      "id": "what-doest-thou",
+      "verse": 9,
+      "phrase": "What doest thou here, Elijah?",
+      "meaning": "The Lord begins with a question, and asks it again in verse 13. The question gives Elijah room to say what is in his heart, and he does (verse 10).",
+      "sourceIds": []
+    },
+    {
+      "id": "i-only",
+      "verse": 10,
+      "phrase": "I, even I only, am left",
+      "meaning": "Elijah feels completely alone. Later the Lord tells him of “seven thousand in Israel” who had not bowed to Baal.",
+      "sourceIds": [
+        "1-kings-19-15-18"
+      ]
+    },
+    {
+      "id": "not-in-the-wind",
+      "verse": 11,
+      "phrase": "the Lord was not in the wind",
+      "meaning": "The wind tore the mountains and broke the rocks, but the Lord was not in it, nor in the earthquake or the fire that followed.",
+      "sourceIds": []
+    },
+    {
+      "id": "still-small-voice",
+      "verse": 12,
+      "phrase": "a still small voice",
+      "meaning": "‘Still’ means quiet or calm. Here it is the Lord speaking to Elijah. The Guide to the Scriptures lists this passage under Voice and notes that “The voice of the Spirit may also be inaudible and directed to the heart or mind.”",
+      "sourceIds": [
+        "gs-voice",
+        "helaman-5-30",
+        "dc-85-6"
+      ]
+    },
+    {
+      "id": "mantle",
+      "verse": 13,
+      "phrase": "he wrapped his face in his mantle",
+      "meaning": "A mantle is a cloak. The text doesn't say why Elijah covered his face, but he responds to the voice at once: he goes out and stands at the entrance of the cave.",
+      "sourceIds": []
+    },
+    {
+      "id": "came-a-voice",
+      "verse": 13,
+      "phrase": "there came a voice unto him",
+      "meaning": "The quiet voice speaks words to Elijah: the same question as before, and then (verses 15–18) direction for what to do next.",
+      "sourceIds": [
+        "1-kings-19-15-18"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "sourceId": "1-kings-19-1-8",
+      "relation": "leads-to",
+      "note": "What brought Elijah here: Jezebel's threat, his flight, his prayer to die, and an angel who fed him twice, “because the journey is too great for thee.”"
+    },
+    {
+      "sourceId": "helaman-5-30",
+      "relation": "supports",
+      "note": "A voice is described as “not a voice of thunder, neither was it a voice of a great tumultuous noise, but behold, it was a still voice of perfect mildness.”"
+    },
+    {
+      "sourceId": "3-nephi-11-3",
+      "relation": "supports",
+      "note": "At Bountiful the people heard a voice that “was not a harsh voice, neither was it a loud voice,” yet “it did pierce them that did hear to the center.”"
+    },
+    {
+      "sourceId": "dc-85-6",
+      "relation": "supports",
+      "note": "The Doctrine and Covenants speaks of “the still small voice, which whispereth through and pierceth all things.”"
+    },
+    {
+      "sourceId": "dc-8-2-3",
+      "relation": "relates-to",
+      "note": "The Lord tells Oliver Cowdery, “I will tell you in your mind and in your heart, by the Holy Ghost,” and calls this “the spirit of revelation.”"
+    }
+  ],
+  "questions": [
+    {
+      "id": "why-cave",
+      "question": "Why was Elijah in a cave on Horeb?",
+      "answer": "Jezebel had sent word that she would take his life (1 Kings 19:2). He fled into the wilderness, asked to die, and was fed by an angel, then traveled forty days to Horeb (verses 3–8). In verse 10 he explains, “I, even I only, am left; and they seek my life, to take it away.”",
+      "sourceIds": [
+        "1-kings-19-1-8",
+        "1-kings-19-9-13"
+      ]
+    },
+    {
+      "id": "really-alone",
+      "question": "Was Elijah really alone?",
+      "answer": "He felt that way, but the Lord told him, “Yet I have left me seven thousand in Israel, all the knees which have not bowed unto Baal” (verse 18). The Lord also gave him work to do and named Elisha to be “prophet in thy room” (verse 16).",
+      "sourceIds": [
+        "1-kings-19-15-18"
+      ]
+    },
+    {
+      "id": "never-dramatic",
+      "question": "Does this mean God never speaks through dramatic events?",
+      "answer": "The passage says the Lord was not in the wind, the earthquake, or the fire on this occasion, and that a still small voice followed. It doesn't say God never uses dramatic means: in the chapter before, “the fire of the Lord fell” at Elijah's prayer (1 Kings 18:38). Here the Lord chose to speak to Elijah quietly. Elder Lawrence E. Corbridge taught that the things of God are made known by the Spirit of God, “which is usually a still, small voice.”",
+      "sourceIds": [
+        "1-kings-19-9-13",
+        "1-kings-18-38-39",
+        "corbridge-stand-for-ever-2019"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "type": "highlight",
+      "id": "where-the-lord-was-not",
+      "prompt": "Verses 11–12 describe what passed before Elijah. Tap the phrases that say where the Lord was not.",
+      "sourceIds": [
+        "1-kings-19-9-13"
+      ],
+      "hints": [
+        "Look for the word ‘not.’",
+        "There are three, one after each powerful event."
+      ],
+      "explanation": "Three times the text says “the Lord was not in” it: not in the wind, not in the earthquake, not in the fire. Then, after all three, came “a still small voice.” The contrast is the point: the Lord's word came quietly.",
+      "passage": "1-kings-19-9-13",
+      "chunks": [
+        {
+          "verse": 11,
+          "text": "And he said, Go forth, and stand upon the mount before the Lord."
+        },
+        {
+          "verse": 11,
+          "text": "And, behold, the Lord passed by,"
+        },
+        {
+          "verse": 11,
+          "text": "and a great and strong wind rent the mountains, and brake in pieces the rocks before the Lord;"
+        },
+        {
+          "verse": 11,
+          "text": "but the Lord was not in the wind:"
+        },
+        {
+          "verse": 11,
+          "text": "and after the wind an earthquake;"
+        },
+        {
+          "verse": 11,
+          "text": "but the Lord was not in the earthquake:"
+        },
+        {
+          "verse": 12,
+          "text": "And after the earthquake a fire;"
+        },
+        {
+          "verse": 12,
+          "text": "but the Lord was not in the fire:"
+        },
+        {
+          "verse": 12,
+          "text": "and after the fire a still small voice."
+        }
+      ],
+      "targets": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "type": "sort",
+      "id": "how-described",
+      "prompt": "Several scriptures describe how the Lord's voice came. Sort each description: is it how they describe the voice, or what they say it was not?",
+      "sourceIds": [
+        "1-kings-19-9-13",
+        "helaman-5-30",
+        "3-nephi-11-3",
+        "dc-8-2-3",
+        "dc-85-6"
+      ],
+      "hints": [
+        "Helaman 5:30 and 3 Nephi 11:3 each say what the voice was not, then what it was.",
+        "Doctrine and Covenants 8:2 tells where the Lord will speak."
+      ],
+      "explanation": "These scriptures agree: the voice was still, small, and mild, like a whisper, yet it pierced to the soul, and the Lord says He speaks “in your mind and in your heart, by the Holy Ghost.” They say plainly it was not thunder, not a tumultuous noise, not harsh, and not loud.",
+      "categories": [
+        {
+          "id": "described",
+          "label": "How these scriptures describe it"
+        },
+        {
+          "id": "not",
+          "label": "What they say it was not"
+        }
+      ],
+      "items": [
+        {
+          "id": "still-small",
+          "text": "Still and small",
+          "category": "described",
+          "why": "1 Kings 19:12: “a still small voice.”"
+        },
+        {
+          "id": "mildness",
+          "text": "Of perfect mildness, like a whisper",
+          "category": "described",
+          "why": "Helaman 5:30: “a still voice of perfect mildness, as if it had been a whisper.”"
+        },
+        {
+          "id": "pierce",
+          "text": "Piercing to the very soul",
+          "category": "described",
+          "why": "Helaman 5:30 and 3 Nephi 11:3: it did “pierce even to the very soul.”"
+        },
+        {
+          "id": "mind-heart",
+          "text": "In the mind and in the heart",
+          "category": "described",
+          "why": "Doctrine and Covenants 8:2: “I will tell you in your mind and in your heart, by the Holy Ghost.”"
+        },
+        {
+          "id": "thunder",
+          "text": "Like thunder",
+          "category": "not",
+          "why": "Helaman 5:30: “it was not a voice of thunder.”"
+        },
+        {
+          "id": "harsh",
+          "text": "Harsh",
+          "category": "not",
+          "why": "3 Nephi 11:3: “it was not a harsh voice.”"
+        },
+        {
+          "id": "loud",
+          "text": "Loud",
+          "category": "not",
+          "why": "3 Nephi 11:3: “neither was it a loud voice.”"
+        },
+        {
+          "id": "tumult",
+          "text": "A great, tumultuous noise",
+          "category": "not",
+          "why": "Helaman 5:30: “neither was it a voice of a great tumultuous noise.”"
+        }
+      ]
+    },
+    {
+      "type": "scripture-connect",
+      "id": "quiet-voice",
+      "prompt": "Read 1 Kings 19:11–13 beside Helaman 5:30 and 3 Nephi 11:3.",
+      "sourceIds": [
+        "1-kings-19-9-13",
+        "helaman-5-30",
+        "3-nephi-11-3"
+      ],
+      "hints": [
+        "Compare the words used for the voice in each passage.",
+        "Two of the passages say what the quiet voice did to those who heard it."
+      ],
+      "explanation": "All three describe a quiet voice: “a still small voice,” “a still voice of perfect mildness,” and “a small voice.” Helaman 5:30 and 3 Nephi 11:3 add that, quiet as it was, it pierced the hearers “to the very soul.”",
+      "passages": [
+        "1-kings-19-9-13",
+        "helaman-5-30",
+        "3-nephi-11-3"
+      ],
+      "questions": [
+        {
+          "id": "shared",
+          "prompt": "What do all three passages say about the voice?",
+          "options": [
+            {
+              "id": "quiet",
+              "text": "It was quiet rather than loud or forceful."
+            },
+            {
+              "id": "thunder",
+              "text": "It was louder than thunder.",
+              "feedback": "Helaman 5:30 says it “was not a voice of thunder.”"
+            },
+            {
+              "id": "prophets-only",
+              "text": "Only a prophet could hear it.",
+              "feedback": "In Helaman 5 and 3 Nephi 11, who heard the voice?"
+            }
+          ],
+          "correct": [
+            "quiet"
+          ]
+        },
+        {
+          "id": "added",
+          "prompt": "What do Helaman 5:30 and 3 Nephi 11:3 add that 1 Kings 19:12 doesn't say?",
+          "options": [
+            {
+              "id": "pierced",
+              "text": "That the quiet voice pierced the hearers to the very soul"
+            },
+            {
+              "id": "still",
+              "text": "That the voice was still",
+              "feedback": "1 Kings 19:12 says that too: “a still small voice.”"
+            },
+            {
+              "id": "wind-fire",
+              "text": "That wind and fire came first",
+              "feedback": "Only 1 Kings 19 mentions the wind and the fire."
+            }
+          ],
+          "correct": [
+            "pierced"
+          ]
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "scripture:1-kings-19-9-13",
+      "to": "vocabulary:still-small-voice",
+      "relation": "teaches",
+      "sourceIds": [
+        "1-kings-19-9-13"
+      ],
+      "note": "The Lord was not in the wind, the earthquake, or the fire; after them came a still small voice."
+    },
+    {
+      "from": "scripture:helaman-5-30",
+      "to": "vocabulary:still-small-voice",
+      "relation": "supports",
+      "sourceIds": [
+        "helaman-5-30"
+      ],
+      "note": "A voice is described as “a still voice of perfect mildness, as if it had been a whisper.”"
+    },
+    {
+      "from": "vocabulary:still-small-voice",
+      "to": "concept:personal-revelation",
+      "relation": "relates-to",
+      "sourceIds": [
+        "dc-8-2-3",
+        "dc-85-6",
+        "corbridge-stand-for-ever-2019"
+      ],
+      "note": "Applying the phrase to personal revelation draws on later scripture and a speaker: the Lord speaks to the mind and heart by the Holy Ghost (D&C 8:2), and Elder Corbridge taught that the Spirit of God is usually a still, small voice."
+    }
+  ],
+  "sources": [
+    {
+      "id": "1-kings-19-9-13",
+      "kind": "scripture",
+      "label": "1 Kings 19:9–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng&id=p9-p13#p9",
+      "verses": [
+        {
+          "number": 9,
+          "text": "¶ And he came thither unto a cave, and lodged there; and, behold, the word of the Lord came to him, and he said unto him, What doest thou here, Elijah?"
+        },
+        {
+          "number": 10,
+          "text": "And he said, I have been very jealous for the Lord God of hosts: for the children of Israel have forsaken thy covenant, thrown down thine altars, and slain thy prophets with the sword; and I, even I only, am left; and they seek my life, to take it away."
+        },
+        {
+          "number": 11,
+          "text": "And he said, Go forth, and stand upon the mount before the Lord. And, behold, the Lord passed by, and a great and strong wind rent the mountains, and brake in pieces the rocks before the Lord; but the Lord was not in the wind: and after the wind an earthquake; but the Lord was not in the earthquake:"
+        },
+        {
+          "number": 12,
+          "text": "And after the earthquake a fire; but the Lord was not in the fire: and after the fire a still small voice."
+        },
+        {
+          "number": 13,
+          "text": "And it was so, when Elijah heard it, that he wrapped his face in his mantle, and went out, and stood in the entering in of the cave. And, behold, there came a voice unto him, and said, What doest thou here, Elijah?"
+        }
+      ]
+    },
+    {
+      "id": "1-kings-19-1-8",
+      "kind": "scripture",
+      "label": "1 Kings 19:1–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng&id=p1-p8#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "And Ahab told Jezebel all that Elijah had done, and withal how he had slain all the prophets with the sword."
+        },
+        {
+          "number": 2,
+          "text": "Then Jezebel sent a messenger unto Elijah, saying, So let the gods do to me, and more also, if I make not thy life as the life of one of them by to morrow about this time."
+        },
+        {
+          "number": 3,
+          "text": "And when he saw that, he arose, and went for his life, and came to Beer-sheba, which belongeth to Judah, and left his servant there."
+        },
+        {
+          "number": 4,
+          "text": "¶ But he himself went a day’s journey into the wilderness, and came and sat down under a juniper tree: and he requested for himself that he might die; and said, It is enough; now, O Lord, take away my life; for I am not better than my fathers."
+        },
+        {
+          "number": 5,
+          "text": "And as he lay and slept under a juniper tree, behold, then an angel touched him, and said unto him, Arise and eat."
+        },
+        {
+          "number": 6,
+          "text": "And he looked, and, behold, there was a cake baken on the coals, and a cruse of water at his head. And he did eat and drink, and laid him down again."
+        },
+        {
+          "number": 7,
+          "text": "And the angel of the Lord came again the second time, and touched him, and said, Arise and eat; because the journey is too great for thee."
+        },
+        {
+          "number": 8,
+          "text": "And he arose, and did eat and drink, and went in the strength of that meat forty days and forty nights unto Horeb the mount of God."
+        }
+      ]
+    },
+    {
+      "id": "1-kings-19-15-18",
+      "kind": "scripture",
+      "label": "1 Kings 19:15–18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng&id=p15-p18#p15",
+      "verses": [
+        {
+          "number": 15,
+          "text": "And the Lord said unto him, Go, return on thy way to the wilderness of Damascus: and when thou comest, anoint Hazael to be king over Syria:"
+        },
+        {
+          "number": 16,
+          "text": "And Jehu the son of Nimshi shalt thou anoint to be king over Israel: and Elisha the son of Shaphat of Abel-meholah shalt thou anoint to be prophet in thy room."
+        },
+        {
+          "number": 17,
+          "text": "And it shall come to pass, that him that escapeth the sword of Hazael shall Jehu slay: and him that escapeth from the sword of Jehu shall Elisha slay."
+        },
+        {
+          "number": 18,
+          "text": "Yet I have left me seven thousand in Israel, all the knees which have not bowed unto Baal, and every mouth which hath not kissed him."
+        }
+      ]
+    },
+    {
+      "id": "1-kings-18-38-39",
+      "kind": "scripture",
+      "label": "1 Kings 18:38–39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/18?lang=eng&id=p38-p39#p38",
+      "verses": [
+        {
+          "number": 38,
+          "text": "Then the fire of the Lord fell, and consumed the burnt sacrifice, and the wood, and the stones, and the dust, and licked up the water that was in the trench."
+        },
+        {
+          "number": 39,
+          "text": "And when all the people saw it, they fell on their faces: and they said, The Lord, he is the God; the Lord, he is the God."
+        }
+      ]
+    },
+    {
+      "id": "helaman-5-30",
+      "kind": "scripture",
+      "label": "Helaman 5:30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p30#p30",
+      "verses": [
+        {
+          "number": 30,
+          "text": "And it came to pass when they heard this voice, and beheld that it was not a voice of thunder, neither was it a voice of a great tumultuous noise, but behold, it was a still voice of perfect mildness, as if it had been a whisper, and it did pierce even to the very soul—"
+        }
+      ]
+    },
+    {
+      "id": "3-nephi-11-3",
+      "kind": "scripture",
+      "label": "3 Nephi 11:3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p3#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "And it came to pass that while they were thus conversing one with another, they heard a voice as if it came out of heaven; and they cast their eyes round about, for they understood not the voice which they heard; and it was not a harsh voice, neither was it a loud voice; nevertheless, and notwithstanding it being a small voice it did pierce them that did hear to the center, insomuch that there was no part of their frame that it did not cause to quake; yea, it did pierce them to the very soul, and did cause their hearts to burn."
+        }
+      ]
+    },
+    {
+      "id": "dc-85-6",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 85:6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/85?lang=eng&id=p6#p6",
+      "verses": [
+        {
+          "number": 6,
+          "text": "Yea, thus saith the still small voice, which whispereth through and pierceth all things, and often times it maketh my bones to quake while it maketh manifest, saying:"
+        }
+      ]
+    },
+    {
+      "id": "dc-8-2-3",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 8:2–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng&id=p2-p3#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "Yea, behold, I will tell you in your mind and in your heart, by the Holy Ghost, which shall come upon you and which shall dwell in your heart."
+        },
+        {
+          "number": 3,
+          "text": "Now, behold, this is the spirit of revelation; behold, this is the spirit by which Moses brought the children of Israel through the Red Sea on dry ground."
+        }
+      ]
+    },
+    {
+      "id": "gs-voice",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Voice",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/voice?lang=eng"
+    },
+    {
+      "id": "gs-revelation",
+      "kind": "official",
+      "label": "Guide to the Scriptures: Revelation",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/revelation?lang=eng"
+    },
+    {
+      "id": "corbridge-stand-for-ever-2019",
+      "kind": "speaker",
+      "label": "Lawrence E. Corbridge, “Stand Forever”",
+      "title": "Stand Forever",
+      "author": "Elder Lawrence E. Corbridge",
+      "publication": "BYU devotional, 22 January 2019",
+      "url": "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+      "excerpt": "although we may not know the answer to every question, we must know the answers to the primary questions."
+    }
+  ],
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "themes.personal-revelation and connections",
+        "note": "1 Kings 19 describes the Lord speaking to a prophet. Applying ‘still small voice’ to personal revelation by the Holy Ghost rests on later scripture (Helaman 5:30; D&C 8:2–3; 85:6), the Guide to the Scriptures entry Voice, and Elder Corbridge (a speaker's teaching). Please review.",
+        "resolution": "Qualified: the theme note, the Map connection, and the key-phrase meaning now say the Lord speaks to a prophet here, and that applying the phrase to personal revelation comes from later scripture (D&C 8:2; 85:6) and from Elder Corbridge, labeled as his teaching. The theme no longer presents Helaman 5:30 (heard by a group) as how God speaks to individuals. Checked 26 Oct 2026: the Guide's entry Revelation lists 1 Kings 19:12. Kept needs-review for the owner, like recognizing-the-spirit."
+      },
+      {
+        "where": "sources.corbridge-stand-for-ever-2019",
+        "note": "The talk's source is declared exactly as in the investigations. BYU Speeches currently titles the page Stand Forever (URL slug stand-for-ever), while the shared declaration says Stand Forever; any correction must be made in every file at once.",
+        "resolution": "Resolved: checked BYU Speeches on 26 October 2026. The page titles the talk ‘Stand Forever’, which matches the shared declaration; only the URL slug is stand-for-ever. There is no discrepancy, so the shared source is unchanged."
+      },
+      {
+        "where": "context.setting",
+        "note": "The wording ‘challenged the prophets of Baal’ follows the 1 Kings 18 chapter summary.",
+        "resolution": "Resolved: checked 26 October 2026. The 1 Kings 18 chapter summary reads ‘Elijah challenges the prophets of Baal to call down fire from heaven,’ so the wording stands."
+      }
+    ]
+  }
+}

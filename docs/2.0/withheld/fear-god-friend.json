@@ -1,0 +1,95 @@
+{
+  "file": "src/content/investigations/fear-god-friend.json",
+  "withheldOn": "2026-10-26",
+  "summary": "Original wording removed from fear-god-friend during the doctrinal review. Each item rewarded, or depended on, a reading the sources don’t plainly state: chiefly identifying ‘him’ in Luke 12:5 as God (the verse doesn’t name him), or treating an interpretation as the passage’s plain meaning. Replacements in the content file rest only on what the passages plainly say. Restore an item only if the project owner confirms the reading.",
+  "items": [
+    {
+      "path": "steps.two-teachings.activities.medium (clue-same-word) · question.options[testaments]",
+      "why": "The feedback rebutted this distractor by pointing to Luke 12:5 as New Testament evidence for fearing God, which assumes ‘him’ is God. Replaced with a distractor that the clues rebut plainly (Luke 12 speaks of both friendship and fear).",
+      "original": {
+        "id": "testaments",
+        "text": "The Old Testament teaches fear of God, and the New Testament replaced it with friendship.",
+        "feedback": "Look at where the clues come from. Which testament is Luke 12 in, and what does Jesus say there?"
+      }
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.hard (clue-luke-point) · explanation",
+      "why": "Described verse 5 as ‘the One whose power reaches further’ and said His friends are taught ‘to revere the greatest power there is,’ identifying ‘him’ as God.",
+      "original": "The Savior contrasts fear of people, whose power ends at death, with fear directed to the One whose power reaches further. Then He speaks of God, who forgets no sparrow and numbers every hair, and concludes, “Fear not therefore.” His friends are taught to revere the greatest power there is, and to know that God values each of them."
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.hard (clue-luke-point) · question.options[reverence-and-care] (the correct answer)",
+      "why": "Rewarded identifying the one in verse 5 as God (‘reverence for God, whose power is greater’).",
+      "original": {
+        "id": "reverence-and-care",
+        "text": "Fear of what people can do should give way to reverence for God, whose power is greater and whose care is personal, so His friends need not be afraid."
+      }
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.hard (clue-luke-point) · question.options[dread]",
+      "why": "Attributed the power in verse 5 to God (‘Because God has power beyond death’).",
+      "original": {
+        "id": "dread",
+        "text": "Because God has power beyond death, His friends should live in constant dread of Him.",
+        "feedback": "Read on to verse 7. What does Jesus conclude right after speaking of God’s care?"
+      }
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.hard (clue-luke-point) · question.options[friendship-replaces]",
+      "why": "The feedback treated ‘Fear him’ as reverent fear of God.",
+      "original": {
+        "id": "friendship-replaces",
+        "text": "The Savior is telling His friends that friendship with Him replaces any fear of God.",
+        "feedback": "Look at clue 3: He tells these same friends “Fear him.” Friendship and reverent fear appear together here."
+      }
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.complex (compare-luke-readings) · explanation",
+      "why": "Said the comfort ‘doesn’t erase reverence’ (treating ‘Fear him’ as reverence for God) and that the word ‘must carry two meanings here’ (an interpretation stated as certain).",
+      "original": "Luke 12:4–7 clearly says not to fear people whose power ends at death, and it grounds “Fear not” in God’s personal care. It also says “Fear him,” so the comfort doesn’t erase reverence. Because Jesus asks His friends both to fear and not to fear, the word must carry two meanings here. The passage doesn’t explain how judgment works; that would go beyond it."
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.complex (compare-luke-readings) · perspectives[not-serious]",
+      "why": "The ‘contradicted’ verdict depended on ‘him’ in verse 5 being God (‘we don’t need to take Him seriously’).",
+      "original": {
+        "id": "not-serious",
+        "voice": "A classmate",
+        "text": "Because God values us, we don’t need to take Him seriously.",
+        "verdict": "contradicted",
+        "rationale": "Verse 5 says “Fear him” twice and calls it a forewarning. God’s care in verses 6–7 comes alongside that, not instead of it."
+      }
+    },
+    {
+      "path": "steps.fear-him-fear-not.activities.complex (compare-luke-readings) · perspectives[same-meaning]",
+      "why": "Rewarded the two-senses reading as the passage’s plain meaning (‘contradicted’). The passage doesn’t settle it: ‘fear’ could also mean the same thing with different objects. Replaced with a perspective the verses plainly support; the two-senses reading is now presented in the explanation as how many readers take it.",
+      "original": {
+        "id": "same-meaning",
+        "voice": "A common idea",
+        "text": "In this passage, ‘fear’ means the same thing every time it appears.",
+        "verdict": "contradicted",
+        "rationale": "“Be not afraid” and “Fear not” describe something Jesus wants His friends to let go of, while “Fear him” describes something He wants them to have. The word can’t mean the same thing in both."
+      }
+    },
+    {
+      "path": "steps.love-casts-out-fear.activities.complex (build-love-fear) · fragments[grow, casts-out, x-obey] and statement",
+      "why": "The correct statement built in the reading that love ‘can grow toward being made perfect’ and casts out fear ‘as it does.’ That is an interpretation of 1 John 4:17–18; the statement now uses the verses’ own wording.",
+      "original": {
+        "fragments": [
+          {
+            "id": "grow",
+            "text": "our love for Him can grow toward being made perfect,"
+          },
+          {
+            "id": "casts-out",
+            "text": "and as it does, it casts out the fear that torments"
+          },
+          {
+            "id": "x-obey",
+            "text": "and as it does, we no longer need to obey Him"
+          }
+        ],
+        "statement": "Because God first loved us, our love for Him can grow toward being made perfect, and as it does, it casts out the fear that torments while deepening our reverence and trust in Him."
+      }
+    }
+  ]
+}

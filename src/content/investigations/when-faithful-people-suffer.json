@@ -1,0 +1,2509 @@
+{
+  "id": "when-faithful-people-suffer",
+  "status": "ready",
+  "contentVersion": 1,
+  "title": "When Faithful People Suffer",
+  "question": "Why do faithful people still go through hard things?",
+  "hook": "Even Jesus’s disciples assumed that suffering meant someone had sinned. His answer, and the scriptures that follow it, move the question from ‘why me?’ to ‘who is with me?’",
+  "theme": "Trials and suffering",
+  "tags": [
+    "adversity",
+    "trials",
+    "atonement",
+    "succor",
+    "agency"
+  ],
+  "primaryQuestion": {
+    "id": "god",
+    "note": "Elder Lawrence E. Corbridge taught that “although we may not know the answer to every question, we must know the answers to the primary questions.” Why a particular trial comes is often a question scripture leaves open. Beneath it is a primary question: is there a God who is our Father, and is He with us in hard things?"
+  },
+  "commonQuestions": [
+    "If I’m trying to do what’s right, why is life still so hard?",
+    "Does a trial mean God is disappointed in me?",
+    "Where is God when I feel alone in something hard?"
+  ],
+  "estimatedMinutes": {
+    "quick": 9,
+    "deep": 30
+  },
+  "intro": "This is one of the most common questions people ask about faith. Many assume that keeping the commandments should keep hard things away, so a trial must mean God is displeased or far away. This investigation looks at what Jesus said when His own disciples made that assumption, what the Lord told Joseph Smith in a jail cell, what scripture says the Savior Himself suffered, and what happened when people asked God to take their trials away. It won’t explain any one person’s pain; scripture often doesn’t say why a particular hardship comes. It says a great deal about who is with us in it. If you’re carrying something heavy right now, please also talk with someone you trust.",
+  "sources": [
+    {
+      "id": "john-9-1-3",
+      "kind": "scripture",
+      "label": "John 9:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p3#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "And as Jesus passed by, he saw a man which was blind from his birth."
+        },
+        {
+          "number": 2,
+          "text": "And his disciples asked him, saying, Master, who did sin, this man, or his parents, that he was born blind?"
+        },
+        {
+          "number": 3,
+          "text": "Jesus answered, Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him."
+        }
+      ]
+    },
+    {
+      "id": "luke-13-1-5",
+      "kind": "scripture",
+      "label": "Luke 13:1–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p1-p5#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "There were present at that season some that told him of the Galilæans, whose blood Pilate had mingled with their sacrifices."
+        },
+        {
+          "number": 2,
+          "text": "And Jesus answering said unto them, Suppose ye that these Galilæans were sinners above all the Galilæans, because they suffered such things?"
+        },
+        {
+          "number": 3,
+          "text": "I tell you, Nay: but, except ye repent, ye shall all likewise perish."
+        },
+        {
+          "number": 4,
+          "text": "Or those eighteen, upon whom the tower in Siloam fell, and slew them, think ye that they were sinners above all men that dwelt in Jerusalem?"
+        },
+        {
+          "number": 5,
+          "text": "I tell you, Nay: but, except ye repent, ye shall all likewise perish."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-adversity",
+      "kind": "official",
+      "label": "Gospel Topics: Adversity",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/adversity?lang=eng",
+      "excerpt": "Other trials are simply a natural part of life and may come at times when people are living righteously.",
+      "summary": "Describes several sources of adversity (one’s own choices, the natural conditions of life, others’ choices, and, as one possibility, tutoring from a loving Heavenly Father), different responses to different trials, and trust in Heavenly Father and Jesus Christ as the constant response."
+    },
+    {
+      "id": "alma-36-3",
+      "kind": "scripture",
+      "label": "Alma 36:3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng&id=p3#p3",
+      "verses": [
+        {
+          "number": 3,
+          "text": "And now, O my son Helaman, behold, thou art in thy youth, and therefore, I beseech of thee that thou wilt hear my words and learn of me; for I do know that whosoever shall put their trust in God shall be supported in their trials, and their troubles, and their afflictions, and shall be lifted up at the last day."
+        }
+      ]
+    },
+    {
+      "id": "dc-121-1-3",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 121:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p1-p3#p1",
+      "verses": [
+        {
+          "number": 1,
+          "text": "O God, where art thou? And where is the pavilion that covereth thy hiding place?"
+        },
+        {
+          "number": 2,
+          "text": "How long shall thy hand be stayed, and thine eye, yea thy pure eye, behold from the eternal heavens the wrongs of thy people and of thy servants, and thine ear be penetrated with their cries?"
+        },
+        {
+          "number": 3,
+          "text": "Yea, O Lord, how long shall they suffer these wrongs and unlawful oppressions, before thine heart shall be softened toward them, and thy bowels be moved with compassion toward them?"
+        }
+      ]
+    },
+    {
+      "id": "dc-121-7-8",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 121:7–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p7-p8#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "My son, peace be unto thy soul; thine adversity and thine afflictions shall be but a small moment;"
+        },
+        {
+          "number": 8,
+          "text": "And then, if thou endure it well, God shall exalt thee on high; thou shalt triumph over all thy foes."
+        }
+      ]
+    },
+    {
+      "id": "dc-122-7-9",
+      "kind": "scripture",
+      "label": "Doctrine and Covenants 122:7–9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p7-p9#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "And if thou shouldst be cast into the pit, or into the hands of murderers, and the sentence of death passed upon thee; if thou be cast into the deep; if the billowing surge conspire against thee; if fierce winds become thine enemy; if the heavens gather blackness, and all the elements combine to hedge up the way; and above all, if the very jaws of hell shall gape open the mouth wide after thee, know thou, my son, that all these things shall give thee experience, and shall be for thy good."
+        },
+        {
+          "number": 8,
+          "text": "The Son of Man hath descended below them all. Art thou greater than he?"
+        },
+        {
+          "number": 9,
+          "text": "Therefore, hold on thy way, and the priesthood shall remain with thee; for their bounds are set, they cannot pass. Thy days are known, and thy years shall not be numbered less; therefore, fear not what man can do, for God shall be with you forever and ever."
+        }
+      ]
+    },
+    {
+      "id": "romans-8-35-39",
+      "kind": "scripture",
+      "label": "Romans 8:35–39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng&id=p35-p39#p35",
+      "verses": [
+        {
+          "number": 35,
+          "text": "Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?"
+        },
+        {
+          "number": 36,
+          "text": "As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter."
+        },
+        {
+          "number": 37,
+          "text": "Nay, in all these things we are more than conquerors through him that loved us."
+        },
+        {
+          "number": 38,
+          "text": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,"
+        },
+        {
+          "number": 39,
+          "text": "Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord."
+        }
+      ]
+    },
+    {
+      "id": "alma-7-11-12",
+      "kind": "scripture",
+      "label": "Alma 7:11–12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11",
+      "verses": [
+        {
+          "number": 11,
+          "text": "And he shall go forth, suffering pains and afflictions and temptations of every kind; and this that the word might be fulfilled which saith he will take upon him the pains and the sicknesses of his people."
+        },
+        {
+          "number": 12,
+          "text": "And he will take upon him death, that he may loose the bands of death which bind his people; and he will take upon him their infirmities, that his bowels may be filled with mercy, according to the flesh, that he may know according to the flesh how to succor his people according to their infirmities."
+        }
+      ]
+    },
+    {
+      "id": "isaiah-53-4-5",
+      "kind": "scripture",
+      "label": "Isaiah 53:4–5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p4-p5#p4",
+      "verses": [
+        {
+          "number": 4,
+          "text": "¶ Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted."
+        },
+        {
+          "number": 5,
+          "text": "But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed."
+        }
+      ]
+    },
+    {
+      "id": "hebrews-5-7-8",
+      "kind": "scripture",
+      "label": "Hebrews 5:7–8",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/5?lang=eng&id=p7-p8#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "Who in the days of his flesh, when he had offered up prayers and supplications with strong crying and tears unto him that was able to save him from death, and was heard in that he feared;"
+        },
+        {
+          "number": 8,
+          "text": "Though he were a Son, yet learned he obedience by the things which he suffered;"
+        }
+      ]
+    },
+    {
+      "id": "mosiah-24-12-15",
+      "kind": "scripture",
+      "label": "Mosiah 24:12–15",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng&id=p12-p15#p12",
+      "verses": [
+        {
+          "number": 12,
+          "text": "And Alma and his people did not raise their voices to the Lord their God, but did pour out their hearts to him; and he did know the thoughts of their hearts."
+        },
+        {
+          "number": 13,
+          "text": "And it came to pass that the voice of the Lord came to them in their afflictions, saying: Lift up your heads and be of good comfort, for I know of the covenant which ye have made unto me; and I will covenant with my people and deliver them out of bondage."
+        },
+        {
+          "number": 14,
+          "text": "And I will also ease the burdens which are put upon your shoulders, that even you cannot feel them upon your backs, even while you are in bondage; and this will I do that ye may stand as witnesses for me hereafter, and that ye may know of a surety that I, the Lord God, do visit my people in their afflictions."
+        },
+        {
+          "number": 15,
+          "text": "And now it came to pass that the burdens which were laid upon Alma and his brethren were made light; yea, the Lord did strengthen them that they could bear up their burdens with ease, and they did submit cheerfully and with patience to all the will of the Lord."
+        }
+      ]
+    },
+    {
+      "id": "luke-22-39-44",
+      "kind": "scripture",
+      "label": "Luke 22:39–44",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p39-p44#p39",
+      "verses": [
+        {
+          "number": 39,
+          "text": "¶ And he came out, and went, as he was wont, to the mount of Olives; and his disciples also followed him."
+        },
+        {
+          "number": 40,
+          "text": "And when he was at the place, he said unto them, Pray that ye enter not into temptation."
+        },
+        {
+          "number": 41,
+          "text": "And he was withdrawn from them about a stone’s cast, and kneeled down, and prayed,"
+        },
+        {
+          "number": 42,
+          "text": "Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done."
+        },
+        {
+          "number": 43,
+          "text": "And there appeared an angel unto him from heaven, strengthening him."
+        },
+        {
+          "number": 44,
+          "text": "And being in an agony he prayed more earnestly: and his sweat was as it were great drops of blood falling down to the ground."
+        }
+      ]
+    },
+    {
+      "id": "2-corinthians-12-7-10",
+      "kind": "scripture",
+      "label": "2 Corinthians 12:7–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/12?lang=eng&id=p7-p10#p7",
+      "verses": [
+        {
+          "number": 7,
+          "text": "And lest I should be exalted above measure through the abundance of the revelations, there was given to me a thorn in the flesh, the messenger of Satan to buffet me, lest I should be exalted above measure."
+        },
+        {
+          "number": 8,
+          "text": "For this thing I besought the Lord thrice, that it might depart from me."
+        },
+        {
+          "number": 9,
+          "text": "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me."
+        },
+        {
+          "number": 10,
+          "text": "Therefore I take pleasure in infirmities, in reproaches, in necessities, in persecutions, in distresses for Christ’s sake: for when I am weak, then am I strong."
+        }
+      ]
+    },
+    {
+      "id": "psalm-73-2-3",
+      "kind": "scripture",
+      "label": "Psalm 73:2–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/73?lang=eng&id=p2-p3#p2",
+      "verses": [
+        {
+          "number": 2,
+          "text": "But as for me, my feet were almost gone; my steps had well nigh slipped."
+        },
+        {
+          "number": 3,
+          "text": "For I was envious at the foolish, when I saw the prosperity of the wicked."
+        }
+      ]
+    },
+    {
+      "id": "psalm-73-16-17",
+      "kind": "scripture",
+      "label": "Psalm 73:16–17",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/73?lang=eng&id=p16-p17#p16",
+      "verses": [
+        {
+          "number": 16,
+          "text": "When I thought to know this, it was too painful for me;"
+        },
+        {
+          "number": 17,
+          "text": "Until I went into the sanctuary of God; then understood I their end."
+        }
+      ]
+    },
+    {
+      "id": "matthew-5-45",
+      "kind": "scripture",
+      "label": "Matthew 5:45",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p45#p45",
+      "verses": [
+        {
+          "number": 45,
+          "text": "That ye may be the children of your Father which is in heaven: for he maketh his sun to rise on the evil and on the good, and sendeth rain on the just and on the unjust."
+        }
+      ]
+    },
+    {
+      "id": "nelson-joy-and-spiritual-survival-2016",
+      "kind": "speaker",
+      "label": "Russell M. Nelson, “Joy and Spiritual Survival”",
+      "title": "Joy and Spiritual Survival",
+      "author": "President Russell M. Nelson",
+      "publication": "General Conference, October 2016",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival?lang=eng",
+      "excerpt": "the joy we feel has little to do with the circumstances of our lives and everything to do with the focus of our lives."
+    },
+    {
+      "id": "2-nephi-2-27",
+      "kind": "scripture",
+      "label": "2 Nephi 2:27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p27#p27",
+      "verses": [
+        {
+          "number": 27,
+          "text": "Wherefore, men are free according to the flesh; and all things are given them which are expedient unto man. And they are free to choose liberty and eternal life, through the great Mediator of all men, or to choose captivity and death, according to the captivity and power of the devil; for he seeketh that all men might be miserable like unto himself."
+        }
+      ]
+    },
+    {
+      "id": "genesis-39-20-23",
+      "kind": "scripture",
+      "label": "Genesis 39:20–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/39?lang=eng&id=p20-p23#p20",
+      "verses": [
+        {
+          "number": 20,
+          "text": "And Joseph’s master took him, and put him into the prison, a place where the king’s prisoners were bound: and he was there in the prison."
+        },
+        {
+          "number": 21,
+          "text": "¶ But the Lord was with Joseph, and shewed him mercy, and gave him favour in the sight of the keeper of the prison."
+        },
+        {
+          "number": 22,
+          "text": "And the keeper of the prison committed to Joseph’s hand all the prisoners that were in the prison; and whatsoever they did there, he was the doer of it."
+        },
+        {
+          "number": 23,
+          "text": "The keeper of the prison looked not to any thing that was under his hand; because the Lord was with him, and that which he did, the Lord made it to prosper."
+        }
+      ]
+    },
+    {
+      "id": "gospel-topics-agency-and-accountability",
+      "kind": "official",
+      "label": "Gospel Topics: Agency and Accountability",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/agency-and-accountability?lang=eng",
+      "excerpt": "Agency is the ability and privilege God gives us to choose and to act for ourselves."
+    },
+    {
+      "id": "gospel-topics-abuse",
+      "kind": "official",
+      "label": "Gospel Topics: Abuse",
+      "publication": "Topics and Questions (2023)",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+      "excerpt": "The Lord expects us to do everything we can to prevent abuse and to protect and help victims. No one is expected to endure abusive behavior."
+    },
+    {
+      "id": "renlund-keep-on-trying-2015",
+      "kind": "speaker",
+      "label": "Dale G. Renlund, “Latter-day Saints Keep on Trying”",
+      "title": "Latter-day Saints Keep on Trying",
+      "author": "Elder Dale G. Renlund",
+      "publication": "General Conference, April 2015",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/latter-day-saints-keep-on-trying?lang=eng",
+      "excerpt": "God cares a lot more about who we are and who we are becoming than about who we once were. He cares that we keep on trying."
+    },
+    {
+      "id": "corbridge-stand-for-ever-2019",
+      "kind": "speaker",
+      "label": "Lawrence E. Corbridge, “Stand Forever”",
+      "title": "Stand Forever",
+      "author": "Elder Lawrence E. Corbridge",
+      "publication": "BYU devotional, 22 January 2019",
+      "url": "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+      "excerpt": "although we may not know the answer to every question, we must know the answers to the primary questions."
+    }
+  ],
+  "concepts": [],
+  "steps": [
+    {
+      "id": "who-did-sin",
+      "title": "“Who did sin?”",
+      "phase": "question",
+      "method": "analytical",
+      "intro": "When Jesus’s disciples saw a man who had been blind from birth, they asked a question that took something for granted. On another occasion, people told Jesus about Galileans killed on Pilate’s orders, and He brought up eighteen people who died when a tower fell. Read what He said each time.",
+      "sourceIds": [
+        "john-9-1-3",
+        "luke-13-1-5"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "who-sinned-highlight",
+          "prompt": "The disciples’ question assumes something about suffering. Tap the phrase where they assume someone must have sinned, and the phrase where Jesus answers that assumption.",
+          "sourceIds": [
+            "john-9-1-3"
+          ],
+          "hints": [
+            "Look at the two explanations the disciples offer in verse 2. What do both have in common?",
+            "Both choices they offer are about who sinned. Jesus’s answer in verse 3 begins with “Neither.”",
+            "Tap “Master, who did sin, this man, or his parents,” and “Neither hath this man sinned, nor his parents:”."
+          ],
+          "explanation": "The disciples could imagine only two causes, and both were sin: “who did sin, this man, or his parents.” Jesus answered, “Neither hath this man sinned, nor his parents.” Their question treated suffering as a verdict on someone’s choices, and the Savior told them that in this man’s case it wasn’t.",
+          "passage": "john-9-1-3",
+          "chunks": [
+            {
+              "verse": 1,
+              "text": "And as Jesus passed by,"
+            },
+            {
+              "verse": 1,
+              "text": "he saw a man which was blind from his birth."
+            },
+            {
+              "verse": 2,
+              "text": "And his disciples asked him, saying,"
+            },
+            {
+              "verse": 2,
+              "text": "Master, who did sin, this man, or his parents,"
+            },
+            {
+              "verse": 2,
+              "text": "that he was born blind?"
+            },
+            {
+              "verse": 3,
+              "text": "Jesus answered,"
+            },
+            {
+              "verse": 3,
+              "text": "Neither hath this man sinned, nor his parents:"
+            },
+            {
+              "verse": 3,
+              "text": "but that the works of God should be made manifest in him."
+            }
+          ],
+          "targets": [
+            3,
+            6
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "who-sinned-clue",
+          "prompt": "Jesus spoke about suffering more than once. Examine each clue, then decide what His answers have in common.",
+          "sourceIds": [
+            "luke-13-1-5",
+            "john-9-1-3"
+          ],
+          "hints": [
+            "Focus on the question Jesus asks in Luke 13:2 and 13:4, and the answer He gives right after it.",
+            "One tragedy came from a ruler’s cruelty and the other from a falling tower, yet His answer is the same both times.",
+            "Both times He says “Nay”: the people who suffered were not worse sinners than everyone else."
+          ],
+          "explanation": "Jesus asked whether those who died were “sinners above all” the others, and answered, “I tell you, Nay.” One tragedy came from Pilate’s cruelty and the other from a falling tower, yet His answer didn’t change. With the man born blind He said the same: “Neither hath this man sinned, nor his parents.” He didn’t explain why these things happened. He rejected the idea that suffering marks someone as worse than others, and then turned His listeners to their own need to repent.",
+          "clues": [
+            {
+              "id": "galileans",
+              "title": "Galileans and Pilate",
+              "text": "In Luke 13:1–2, people tell Jesus about Galileans “whose blood Pilate had mingled with their sacrifices.” He asks, “Suppose ye that these Galilæans were sinners above all the Galilæans, because they suffered such things?”",
+              "sourceId": "luke-13-1-5"
+            },
+            {
+              "id": "tower",
+              "title": "The tower in Siloam",
+              "text": "In Luke 13:4, eighteen people died when “the tower in Siloam fell.” Jesus asks the same kind of question: “think ye that they were sinners above all men that dwelt in Jerusalem?”",
+              "sourceId": "luke-13-1-5"
+            },
+            {
+              "id": "answer",
+              "title": "His answer, twice",
+              "text": "Both times He answers, “I tell you, Nay,” and then speaks to His listeners: “except ye repent, ye shall all likewise perish.”",
+              "sourceId": "luke-13-1-5"
+            },
+            {
+              "id": "blind",
+              "title": "The man born blind",
+              "text": "In John 9:3, Jesus says of the blind man, “Neither hath this man sinned, nor his parents.”",
+              "sourceId": "john-9-1-3"
+            }
+          ],
+          "question": {
+            "id": "who-sinned-pattern",
+            "prompt": "What do these answers show together?",
+            "options": [
+              {
+                "id": "not-worse",
+                "text": "Jesus rejected the idea that people who suffer are worse sinners than others, whether the harm came from another person’s cruelty or from an accident."
+              },
+              {
+                "id": "explained",
+                "text": "Jesus explained exactly why each of these tragedies happened.",
+                "feedback": "Look again at what He says about the cause. Does He give a reason the tower fell, or does He answer a different question?"
+              },
+              {
+                "id": "unrepentant",
+                "text": "Jesus taught that suffering comes only to people who don’t repent.",
+                "feedback": "If suffering came only to the unrepentant, the victims would have been worse sinners. What does Jesus say when He is asked exactly that?"
+              },
+              {
+                "id": "random",
+                "text": "Jesus taught that tragedies are random and God has nothing to do with them.",
+                "feedback": "Jesus doesn’t make a claim about God’s role either way in these verses. Look at what He denies rather than what He leaves unsaid."
+              }
+            ],
+            "correct": [
+              "not-worse"
+            ]
+          }
+        },
+        "hard": {
+          "type": "compare",
+          "id": "who-sinned-compare",
+          "prompt": "People still reason about suffering the way the disciples did. Decide how each statement compares with John 9:1–3 and Luke 13:1–5.",
+          "sourceIds": [
+            "john-9-1-3",
+            "luke-13-1-5"
+          ],
+          "hints": [
+            "For each statement, ask: do the verses say this, leave it open, or say the opposite?",
+            "One statement is the very assumption the disciples made. Another adds an explanation that verse 3 doesn’t give.",
+            "The disciples’ assumption is contradicted by “Neither hath this man sinned.” The claim that God caused the blindness goes beyond verse 3."
+          ],
+          "explanation": "Jesus directly rejected the assumption that suffering proves someone sinned. He didn’t explain why the man was born blind or why the tower fell, so explanations of the cause go beyond these verses. He also didn’t say our choices never matter: after each “Nay” He called His listeners to repent.",
+          "perspectives": [
+            {
+              "id": "deserved",
+              "text": "If something terrible happens to someone, they or their family must have done something to deserve it.",
+              "voice": "A common assumption",
+              "verdict": "contradicted",
+              "rationale": "This is the disciples’ assumption, and Jesus answered, “Neither hath this man sinned, nor his parents.” In Luke 13 He said the victims weren’t worse sinners: “I tell you, Nay.”"
+            },
+            {
+              "id": "god-caused",
+              "text": "God made the man blind so that Jesus could heal him later.",
+              "voice": "One reading of John 9:3",
+              "verdict": "beyond",
+              "rationale": "Verse 3 says “that the works of God should be made manifest in him,” and Jesus went on to heal him. The verse doesn’t say God caused the blindness. Readers understand this phrase in different ways, and the passage doesn’t settle it."
+            },
+            {
+              "id": "no-worse",
+              "text": "Jesus said the people killed by Pilate and by the tower were no worse than anyone else.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "He asked whether they were “sinners above all” others and answered, “I tell you, Nay.”"
+            },
+            {
+              "id": "never-choices",
+              "text": "None of the hard things in my life could ever have anything to do with my own choices.",
+              "voice": "A classmate",
+              "verdict": "beyond",
+              "rationale": "These passages reject the idea that suffering always means sin. They don’t claim that choices never bring hardship, and Jesus still called His listeners to repent."
+            },
+            {
+              "id": "redirect",
+              "text": "Instead of judging the victims, Jesus turned His listeners toward their own repentance.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "After each “Nay” He told His listeners, “except ye repent, ye shall all likewise perish.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "who-sinned-principle",
+          "prompt": "Build a statement that John 9 and Luke 13 support together. Leave out the fragments that claim more than Jesus said.",
+          "sourceIds": [
+            "john-9-1-3",
+            "luke-13-1-5"
+          ],
+          "hints": [
+            "Start with what Jesus denied in both passages.",
+            "Luke 13 includes two different kinds of harm. Add a fragment that covers both, then one about what He didn’t explain.",
+            "The principle uses five fragments. Each fragment left over claims something neither passage says."
+          ],
+          "explanation": "Both passages deny that suffering marks someone as a worse sinner (“Neither hath this man sinned”; “I tell you, Nay”). Luke 13 covers harm from another person’s cruelty (Pilate) and from an accident (the tower). In neither passage does Jesus explain why the tragedy happened, and neither promises that faithful people won’t suffer.",
+          "fragments": [
+            {
+              "id": "not-proof",
+              "text": "Suffering is not proof"
+            },
+            {
+              "id": "sinned-more",
+              "text": "that a person has sinned more than others;"
+            },
+            {
+              "id": "rejected",
+              "text": "Jesus rejected that idea"
+            },
+            {
+              "id": "both-kinds",
+              "text": "whether the harm came from someone else’s cruelty or from an accident,"
+            },
+            {
+              "id": "unexplained",
+              "text": "without explaining why each tragedy happened."
+            },
+            {
+              "id": "protected",
+              "text": "because faithful people are protected from hardship,"
+            },
+            {
+              "id": "sent-test",
+              "text": "and He showed that God sends each trial as a test,"
+            },
+            {
+              "id": "only-wicked",
+              "text": "since only the wicked are harmed by others."
+            }
+          ],
+          "solution": [
+            "not-proof",
+            "sinned-more",
+            "rejected",
+            "both-kinds",
+            "unexplained"
+          ],
+          "statement": "Suffering is not proof that a person has sinned more than others; Jesus rejected that idea whether the harm came from someone else’s cruelty or from an accident, without explaining why each tragedy happened."
+        }
+      },
+      "insight": "Jesus’s disciples assumed that suffering is a verdict on someone’s choices. He said it wasn’t, both when the harm came from Pilate’s cruelty and when it came from a falling tower. He also didn’t explain why those things happened. That makes room for an honest answer: scripture often doesn’t say why a particular hardship comes, but it rejects the idea that hardship proves someone has sinned more than others.",
+      "concepts": [
+        "adversity",
+        "sin",
+        "mortality"
+      ],
+      "connections": [
+        {
+          "from": "scripture:john-9-1-3",
+          "to": "concept:adversity",
+          "relation": "teaches",
+          "sourceIds": [
+            "john-9-1-3"
+          ],
+          "note": "When His disciples assumed a man’s blindness came from sin, Jesus answered that neither the man nor his parents had sinned."
+        },
+        {
+          "from": "scripture:luke-13-1-5",
+          "to": "question:when-faithful-people-suffer",
+          "relation": "answers",
+          "sourceIds": [
+            "luke-13-1-5"
+          ],
+          "note": "Jesus said that people killed by a ruler’s cruelty and by a falling tower were not worse sinners than anyone else."
+        },
+        {
+          "from": "scripture:luke-13-1-5",
+          "to": "scripture:john-9-1-3",
+          "relation": "relates-to",
+          "sourceIds": [
+            "luke-13-1-5",
+            "john-9-1-3"
+          ],
+          "note": "In both passages Jesus rejects the idea that those who suffer are worse sinners than others."
+        }
+      ],
+      "branchIds": [
+        "easier-for-others"
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "where-hard-things-come-from",
+      "title": "Where hard things come from",
+      "phase": "evidence",
+      "method": "analytical",
+      "intro": "The Church’s Gospel Topics article on adversity describes several different sources of hardship and several different responses. Then it names one response that should never change. Read it closely: notice what it says, and what it doesn’t.",
+      "sourceIds": [
+        "gospel-topics-adversity",
+        "alma-36-3"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "sources-sort",
+          "prompt": "Sort each statement: does the Gospel Topics article on adversity say this, or not?",
+          "sourceIds": [
+            "gospel-topics-adversity"
+          ],
+          "hints": [
+            "Read the paragraph that begins “Adversity comes from different sources.”",
+            "The article lists several sources. Watch for statements that turn one source into the only source, or that promise something the article doesn’t.",
+            "Four statements come from the article. The others claim that every trial is a punishment, that faithfulness prevents trials, or that the reason is always knowable."
+          ],
+          "explanation": "The article says “all people experience adversity during their lifetime” and names several sources: our own choices, the natural conditions of life (“may come at times when people are living righteously”), other people’s poor choices, and one more possibility: suffering “may also come through a loving Heavenly Father as a tutoring experience.” It never says every trial is a punishment, that every trial is sent by God, that faithfulness prevents trials, or that we can always tell why a trial came.",
+          "categories": [
+            {
+              "id": "says",
+              "label": "The article says this"
+            },
+            {
+              "id": "not",
+              "label": "The article doesn’t say this"
+            }
+          ],
+          "items": [
+            {
+              "id": "all-people",
+              "text": "All people experience adversity during their lifetime.",
+              "category": "says",
+              "why": "The article opens with this statement."
+            },
+            {
+              "id": "natural",
+              "text": "Some trials are a natural part of life and can come while people are living righteously.",
+              "category": "says",
+              "why": "The article: “Other trials are simply a natural part of life and may come at times when people are living righteously.”"
+            },
+            {
+              "id": "others",
+              "text": "Some adversity comes because of other people’s poor choices.",
+              "category": "says",
+              "why": "The article: “Adversity may sometimes come because of others’ poor choices and hurtful words and actions.”"
+            },
+            {
+              "id": "own",
+              "text": "Some trials come as a consequence of a person’s own pride and disobedience.",
+              "category": "says",
+              "why": "The article names this as one source, and says such trials “can be avoided through righteous living.”"
+            },
+            {
+              "id": "punishment",
+              "text": "Every trial is a punishment from God.",
+              "category": "not",
+              "why": "The article names several sources. Some trials follow a person’s own disobedience, and others come “at times when people are living righteously.”"
+            },
+            {
+              "id": "faithful-avoid",
+              "text": "If you are faithful enough, you will avoid all trials.",
+              "category": "not",
+              "why": "The article says some trials come “at times when people are living righteously.”"
+            },
+            {
+              "id": "always-know",
+              "text": "You can always know exactly why a particular trial came.",
+              "category": "not",
+              "why": "The article describes possible sources, but it doesn’t say a person can always tell which one a trial comes from."
+            }
+          ]
+        },
+        "medium": {
+          "type": "evidence-connect",
+          "id": "sources-responses",
+          "prompt": "The article says “different kinds of adversity require different responses.” Connect each kind of hardship with the response it recommends.",
+          "sourceIds": [
+            "gospel-topics-adversity"
+          ],
+          "hints": [
+            "Find the paragraph that begins “Different kinds of adversity require different responses.”",
+            "Each sentence in that paragraph pairs one kind of hardship with one response. Two of the responses on the right aren’t in the article at all.",
+            "Illness: patience and faithfulness. Others’ words or actions: forgiveness. Abuse: seek help immediately. Disobedience: correct the behavior and seek forgiveness."
+          ],
+          "explanation": "The article pairs illness with being “patient and faithful,” hurt from others with working “toward forgiving,” abuse with seeking “help immediately,” and trials from disobedience with correcting the behavior and humbly seeking forgiveness. Then it adds that “one response should be constant—trust in Heavenly Father and Jesus Christ.” Nowhere does it say to assume God is punishing you or to hide a hard thing and carry it alone. Patience with an illness or injury doesn’t have to mean going without care: telling a parent and seeing a doctor can be part of responding wisely.",
+          "left": {
+            "label": "Kind of hardship",
+            "items": [
+              {
+                "id": "illness",
+                "text": "Illness"
+              },
+              {
+                "id": "hurt",
+                "text": "Hurt from someone else’s words or actions"
+              },
+              {
+                "id": "abuse",
+                "text": "Abuse"
+              },
+              {
+                "id": "disobedience",
+                "text": "A trial that comes from one’s own disobedience"
+              }
+            ]
+          },
+          "right": {
+            "label": "Response in the article",
+            "items": [
+              {
+                "id": "patient",
+                "text": "Be patient and faithful"
+              },
+              {
+                "id": "forgive",
+                "text": "Work toward forgiving those who caused it"
+              },
+              {
+                "id": "help",
+                "text": "Seek help immediately"
+              },
+              {
+                "id": "correct",
+                "text": "Correct the behavior and humbly seek forgiveness"
+              },
+              {
+                "id": "punished",
+                "text": "Assume God is punishing you"
+              },
+              {
+                "id": "alone",
+                "text": "Keep it to yourself and carry it alone"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "illness",
+              "right": "patient",
+              "because": "The article: people stricken with illness “may simply need to be patient and faithful.”",
+              "clue": "Which response does the article pair with being “stricken with illness”?"
+            },
+            {
+              "left": "hurt",
+              "right": "forgive",
+              "because": "The article: people who suffer because of others’ words or actions “should work toward forgiving those who have offended them.”",
+              "clue": "This hardship involves another person. What does the article ask us to work toward?"
+            },
+            {
+              "left": "abuse",
+              "right": "help",
+              "because": "The article: “Victims of abuse should seek help immediately.”",
+              "clue": "The article treats this case as urgent. Which response says so?"
+            },
+            {
+              "left": "disobedience",
+              "right": "correct",
+              "because": "The article: the person “should correct the behavior and humbly seek forgiveness.”",
+              "clue": "When a trial comes from one’s own choices, what does the article say to change?"
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "sources-compare",
+          "prompt": "It’s natural to wonder where a hard thing came from, and whether it’s meant to teach you something. Decide how each statement compares with the Gospel Topics article and Alma 36:3.",
+          "sourceIds": [
+            "gospel-topics-adversity",
+            "alma-36-3"
+          ],
+          "hints": [
+            "Check whether the article names a source as one possibility or as the only one.",
+            "Two statements turn a possibility into a rule. One statement contradicts the article’s counsel about getting help.",
+            "“May also come through a loving Heavenly Father” doesn’t mean every trial is sent; trust is called “constant”; and the article tells some people to “seek help immediately.”"
+          ],
+          "explanation": "The article names a loving Heavenly Father’s tutoring as one possibility: suffering “may also come through a loving Heavenly Father as a tutoring experience.” It lists that alongside other sources, never says every trial is sent, and never says a person must identify the source first. What it calls constant is trust in Heavenly Father and Jesus Christ, and Alma promises that those who trust God “shall be supported in their trials.” Trusting God doesn’t replace getting help: the article tells victims of abuse to “seek help immediately.”",
+          "perspectives": [
+            {
+              "id": "all-sent",
+              "text": "Every hard thing that happens to me was sent by God to teach me something.",
+              "voice": "A common idea",
+              "verdict": "beyond",
+              "rationale": "The article names this as one possibility: suffering “may also come through a loving Heavenly Father as a tutoring experience.” It lists that alongside other sources, such as the natural conditions of life and other people’s choices. It doesn’t say every trial is sent."
+            },
+            {
+              "id": "my-fault",
+              "text": "If I’m trying to live righteously and still have a trial, it must be my fault.",
+              "voice": "A common worry",
+              "verdict": "contradicted",
+              "rationale": "The article says some trials “may come at times when people are living righteously.”"
+            },
+            {
+              "id": "trust-anyway",
+              "text": "I may not be able to tell where a particular trial came from, but I can still respond with trust in Heavenly Father and Jesus Christ.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Responses vary, the article says, but “one response should be constant—trust in Heavenly Father and Jesus Christ.”"
+            },
+            {
+              "id": "supported",
+              "text": "Whatever a trial’s source, those who trust in God are promised support in it.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Alma: “whosoever shall put their trust in God shall be supported in their trials, and their troubles, and their afflictions.”"
+            },
+            {
+              "id": "no-help",
+              "text": "Trusting God means I shouldn’t need to ask anyone else for help.",
+              "voice": "A common idea",
+              "verdict": "contradicted",
+              "rationale": "The article tells victims of abuse to “seek help immediately” and gives different practical responses to different trials. Trust is the constant; it doesn’t replace getting help."
+            }
+          ]
+        },
+        "complex": {
+          "type": "scripture-connect",
+          "id": "sources-scripture",
+          "prompt": "Read the Gospel Topics article together with these passages. How do the official teaching and the scriptures fit together?",
+          "sourceIds": [
+            "gospel-topics-adversity"
+          ],
+          "passages": [
+            "luke-13-1-5",
+            "alma-36-3"
+          ],
+          "hints": [
+            "The article and Luke 13 answer slightly different questions: one lists where trials can come from, the other answers whether victims were worse sinners.",
+            "Alma’s promise names “trials,” “troubles,” and “afflictions” without limiting where they come from.",
+            "Some hardship can follow our own choices, but suffering doesn’t prove someone is a worse sinner; and Alma’s promise of support covers every kind of trial."
+          ],
+          "explanation": "The article says some trials follow a person’s own disobedience, while Jesus said the victims in Luke 13 weren’t worse sinners. These fit together: choices can bring consequences, but suffering by itself is not a verdict on anyone. Alma’s promise doesn’t sort trials by source at all: “whosoever shall put their trust in God shall be supported in their trials, and their troubles, and their afflictions.”",
+          "questions": [
+            {
+              "id": "conflict",
+              "prompt": "The article says some trials come from a person’s own pride and disobedience. Does that conflict with Jesus’s answer in Luke 13:2–3?",
+              "options": [
+                {
+                  "id": "fits",
+                  "text": "No. Some hardship can follow our own choices, but Jesus rejected the idea that suffering proves someone is a worse sinner. Neither treats suffering as a simple verdict."
+                },
+                {
+                  "id": "all-sin",
+                  "text": "Yes. The article says all trials are caused by sin.",
+                  "feedback": "Reread the article’s paragraph on sources. How many sources does it name?"
+                },
+                {
+                  "id": "never",
+                  "text": "Yes. Jesus said choices never lead to suffering.",
+                  "feedback": "In Luke 13 Jesus answered whether the victims were worse sinners. Did He say that choices never have consequences?"
+                }
+              ],
+              "correct": [
+                "fits"
+              ]
+            },
+            {
+              "id": "which-trials",
+              "prompt": "Alma 36:3 promises that those who trust in God “shall be supported in their trials.” Which trials does the promise cover?",
+              "options": [
+                {
+                  "id": "all",
+                  "text": "Every kind, whatever its source: “their trials, and their troubles, and their afflictions.”"
+                },
+                {
+                  "id": "sent",
+                  "text": "Only trials that God sends as lessons.",
+                  "feedback": "Does Alma limit his promise to one source? Look at who is promised support."
+                },
+                {
+                  "id": "innocent",
+                  "text": "Only trials the person didn’t cause.",
+                  "feedback": "Alma’s promise is to “whosoever shall put their trust in God.” Does it depend on where the trial came from?"
+                }
+              ],
+              "correct": [
+                "all"
+              ]
+            }
+          ]
+        }
+      },
+      "insight": "The Gospel Topics article describes hardship coming from several places: our own choices, the natural conditions of mortal life, other people’s choices, and, as one possibility it names, a loving Heavenly Father’s tutoring. It doesn’t say every trial is sent by God, it doesn’t call trials punishments, and it doesn’t ask anyone to identify the source before responding. Responses differ (patience in illness, forgiveness when others hurt us, getting help immediately in abuse), but one stays constant: trust in Heavenly Father and Jesus Christ, who support those who trust Him.",
+      "concepts": [
+        "adversity",
+        "agency",
+        "faith"
+      ],
+      "connections": [
+        {
+          "from": "scripture:alma-36-3",
+          "to": "concept:faith",
+          "relation": "teaches",
+          "sourceIds": [
+            "alma-36-3"
+          ],
+          "note": "Alma taught that whoever puts their trust in God will be supported in their trials, troubles, and afflictions."
+        },
+        {
+          "from": "concept:agency",
+          "to": "concept:adversity",
+          "relation": "leads-to",
+          "sourceIds": [
+            "gospel-topics-adversity"
+          ],
+          "note": "Gospel Topics notes that adversity can follow a person’s own choices and can also come because of others’ poor choices."
+        }
+      ],
+      "branchIds": [
+        "other-peoples-choices"
+      ],
+      "depth": "deep"
+    },
+    {
+      "id": "where-art-thou",
+      "title": "“O God, where art thou?”",
+      "phase": "evidence",
+      "method": "academic",
+      "intro": "In March 1839, Joseph Smith and several companions had been held for months in the jail at Liberty, Missouri, and their appeals for relief had failed. In letters dictated to the Church from that jail, Joseph included a prayer for the suffering Saints and the Lord’s answer. They are now Doctrine and Covenants 121 and 122.",
+      "sourceIds": [
+        "dc-121-1-3",
+        "dc-121-7-8",
+        "dc-122-7-9",
+        "romans-8-35-39"
+      ],
+      "activities": {
+        "easy": {
+          "type": "sort",
+          "id": "jail-sort",
+          "prompt": "Sort each line: is it part of Joseph’s question, part of the Lord’s promise, or something the Lord’s answer doesn’t include?",
+          "sourceIds": [
+            "dc-121-1-3",
+            "dc-121-7-8",
+            "dc-122-7-9"
+          ],
+          "hints": [
+            "Joseph’s prayer is D&C 121:1–3; the Lord’s answer is in D&C 121:7–8 and 122:7–9.",
+            "Three lines are questions and three are promises. For the rest, look for them in the answer. Are they there?",
+            "The Lord gives no specific reason for the jail, no release date, and no rebuke for asking."
+          ],
+          "explanation": "Joseph asked where God was and how long the suffering would last. The Lord answered with peace, perspective (“but a small moment”), and presence (“God shall be with you forever and ever”). What the answer leaves out is just as striking: no specific reason for this particular trial, no date for Joseph’s release, and no rebuke for asking.",
+          "categories": [
+            {
+              "id": "asks",
+              "label": "Joseph asks",
+              "description": "From Joseph’s prayer (D&C 121:1–3)"
+            },
+            {
+              "id": "promises",
+              "label": "The Lord promises",
+              "description": "From the Lord’s answer (D&C 121:7–8; 122:7–9)"
+            },
+            {
+              "id": "absent",
+              "label": "Not in the answer",
+              "description": "Something the Lord’s answer doesn’t say"
+            }
+          ],
+          "items": [
+            {
+              "id": "where",
+              "text": "“O God, where art thou?”",
+              "category": "asks",
+              "why": "Joseph’s first words in D&C 121:1 ask where God is."
+            },
+            {
+              "id": "how-long",
+              "text": "“How long shall thy hand be stayed”",
+              "category": "asks",
+              "why": "In D&C 121:2 Joseph asks how long God will hold back."
+            },
+            {
+              "id": "softened",
+              "text": "“before thine heart shall be softened toward them”",
+              "category": "asks",
+              "why": "In D&C 121:3 Joseph asks how long until God’s compassion moves Him to act."
+            },
+            {
+              "id": "peace",
+              "text": "“peace be unto thy soul”",
+              "category": "promises",
+              "why": "Right after “My son,” this is how the Lord begins His answer in D&C 121:7."
+            },
+            {
+              "id": "moment",
+              "text": "“thine adversity and thine afflictions shall be but a small moment”",
+              "category": "promises",
+              "why": "D&C 121:7 puts the trial in eternal perspective."
+            },
+            {
+              "id": "with-you",
+              "text": "“God shall be with you forever and ever”",
+              "category": "promises",
+              "why": "D&C 122:9 answers the question of where God is."
+            },
+            {
+              "id": "why",
+              "text": "A specific reason why Joseph had to be in jail",
+              "category": "absent",
+              "why": "The Lord promises that hard experiences “shall give thee experience, and shall be for thy good,” but He doesn’t say why this particular trial had to happen."
+            },
+            {
+              "id": "date",
+              "text": "A date when Joseph would be released",
+              "category": "absent",
+              "why": "The Lord says “thy days are known” and “their bounds are set,” but gives no release date."
+            },
+            {
+              "id": "rebuke",
+              "text": "A rebuke for asking “where art thou?”",
+              "category": "absent",
+              "why": "The answer begins “My son,” and nothing in these verses reproaches him for asking."
+            }
+          ]
+        },
+        "medium": {
+          "type": "clue",
+          "id": "jail-clue",
+          "prompt": "Joseph asked where God was. Examine the clues from the Lord’s answer, then decide what it emphasizes.",
+          "sourceIds": [
+            "dc-121-1-3",
+            "dc-121-7-8",
+            "dc-122-7-9"
+          ],
+          "hints": [
+            "Notice how the Lord addresses Joseph before He says anything else.",
+            "Look for anything in the answer that explains the reason for the jail. What do you find instead?",
+            "The answer is about relationship and presence: “My son,” “peace,” and “God shall be with you forever and ever.”"
+          ],
+          "explanation": "The Lord’s answer doesn’t explain the jail. It begins with relationship (“My son”), offers peace, puts the suffering in perspective (“but a small moment”), and ends with a promise of presence: “God shall be with you forever and ever.” It also asks something of Joseph (“if thou endure it well”), but it never scolds him for asking.",
+          "clues": [
+            {
+              "id": "question",
+              "title": "Joseph’s question",
+              "text": "D&C 121:1: “O God, where art thou? And where is the pavilion that covereth thy hiding place?”",
+              "sourceId": "dc-121-1-3"
+            },
+            {
+              "id": "first-words",
+              "title": "The first words of the answer",
+              "text": "D&C 121:7: “My son, peace be unto thy soul.”",
+              "sourceId": "dc-121-7-8"
+            },
+            {
+              "id": "moment",
+              "title": "A different measure of time",
+              "text": "D&C 121:7–8: “thine adversity and thine afflictions shall be but a small moment; And then, if thou endure it well, God shall exalt thee on high.”",
+              "sourceId": "dc-121-7-8"
+            },
+            {
+              "id": "presence",
+              "title": "The last words",
+              "text": "D&C 122:9: “fear not what man can do, for God shall be with you forever and ever.”",
+              "sourceId": "dc-122-7-9"
+            }
+          ],
+          "question": {
+            "id": "jail-emphasis",
+            "prompt": "What does the Lord’s answer emphasize most?",
+            "options": [
+              {
+                "id": "presence",
+                "text": "His relationship with Joseph and His presence: He calls Joseph “my son,” offers peace, and promises to be with him."
+              },
+              {
+                "id": "reason",
+                "text": "A detailed explanation of why the jail was necessary.",
+                "feedback": "Look for a sentence where the Lord gives the reason for this particular trial. What does He offer instead?"
+              },
+              {
+                "id": "immediate",
+                "text": "A promise that the suffering would end right away.",
+                "feedback": "Read “a small moment” together with “if thou endure it well.” Is the Lord promising immediate release, or perspective on how long it lasts?"
+              },
+              {
+                "id": "rebuke",
+                "text": "A rebuke for Joseph’s lack of faith in asking.",
+                "feedback": "How does the Lord address Joseph in the very first words of His answer?"
+              }
+            ],
+            "correct": [
+              "presence"
+            ]
+          }
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "jail-connect",
+          "prompt": "Read the Lord’s answer closely. Answer each question from the words of the verses.",
+          "sourceIds": [
+            "dc-121-1-3",
+            "dc-121-7-8",
+            "dc-122-7-9"
+          ],
+          "passages": [
+            "dc-121-1-3",
+            "dc-121-7-8",
+            "dc-122-7-9"
+          ],
+          "hints": [
+            "In D&C 122:7, notice how the hardships are introduced. Who does the verse say is causing them?",
+            "D&C 121:8 has a condition in it. Is the condition about understanding the trial, or about how it is carried?",
+            "Joseph asked “where art thou?” Look for the phrase in 122:9 that is about where God is."
+          ],
+          "explanation": "D&C 122:7 introduces each hardship with “if” and promises that “all these things shall give thee experience, and shall be for thy good”; the verse itself doesn’t say who or what causes them. That is a close reading of its wording, not a full answer to how God is involved in trials. D&C 121:8 makes how Joseph carries the trial matter: “if thou endure it well.” And the most direct answer to “where art thou?” comes at the end: “God shall be with you forever and ever.”",
+          "questions": [
+            {
+              "id": "for-thy-good",
+              "prompt": "D&C 122:7 lists terrible possibilities, then says “all these things shall give thee experience, and shall be for thy good.” Which reading fits the verse best?",
+              "options": [
+                {
+                  "id": "turned",
+                  "text": "The Lord promises that even these experiences will give Joseph experience and be for his good. The verse doesn’t say who causes them."
+                },
+                {
+                  "id": "sends",
+                  "text": "The Lord says He will send each of these hardships to teach Joseph.",
+                  "feedback": "Look at how verse 7 is phrased: “if thou be cast into the deep,” “if fierce winds become thine enemy.” Does the verse say who is doing these things?"
+                },
+                {
+                  "id": "wont-happen",
+                  "text": "The Lord promises that none of these things will actually happen.",
+                  "feedback": "The verse is written as “if” statements, but the promise that follows doesn’t depend on avoiding them. What does the Lord say these things will do?"
+                }
+              ],
+              "correct": [
+                "turned"
+              ]
+            },
+            {
+              "id": "endure",
+              "prompt": "What part does D&C 121:8 give Joseph in his own trial?",
+              "options": [
+                {
+                  "id": "well",
+                  "text": "How he goes through it matters: “if thou endure it well.”"
+                },
+                {
+                  "id": "none",
+                  "text": "None. The outcome is fixed no matter what he does.",
+                  "feedback": "Verse 8 begins with a condition. What is it?"
+                },
+                {
+                  "id": "understand",
+                  "text": "He must first understand why it is happening.",
+                  "feedback": "Is the condition in verse 8 about understanding the trial, or about enduring it?"
+                }
+              ],
+              "correct": [
+                "well"
+              ]
+            },
+            {
+              "id": "answer-where",
+              "prompt": "Joseph asked, “where art thou?” Which phrase in the Lord’s answer speaks most directly to that question?",
+              "options": [
+                {
+                  "id": "with-you",
+                  "text": "“God shall be with you forever and ever.”"
+                },
+                {
+                  "id": "days",
+                  "text": "“Thy days are known, and thy years shall not be numbered less.”",
+                  "feedback": "This speaks to the length of Joseph’s life. Look for words about where God is."
+                },
+                {
+                  "id": "triumph",
+                  "text": "“thou shalt triumph over all thy foes.”",
+                  "feedback": "This is about the outcome with his enemies. Which phrase answers ‘where’?"
+                }
+              ],
+              "correct": [
+                "with-you"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "compare",
+          "id": "jail-compare",
+          "prompt": "Many people feel alone in a trial. Weigh each statement against Joseph’s prayer, the Lord’s answer, and Paul’s words in Romans 8.",
+          "sourceIds": [
+            "dc-121-1-3",
+            "dc-121-7-8",
+            "dc-122-7-9",
+            "romans-8-35-39"
+          ],
+          "hints": [
+            "Separate what someone feels from what the verses say is true.",
+            "One statement takes a promise about God’s presence and turns it into a promise about a constant feeling.",
+            "Joseph felt God was far away and said so, and the Lord answered him gently. Paul says nothing “shall be able to separate us from the love of God.”"
+          ],
+          "explanation": "Joseph’s prayer suggests that even a prophet could feel abandoned and say so honestly, and the Lord answered him with “My son, peace be unto thy soul,” not a rebuke. Feeling far from God isn’t the same as being left: the Lord promised “God shall be with you forever and ever,” and Paul taught that neither “tribulation, or distress” nor anything else “shall be able to separate us from the love of God, which is in Christ Jesus our Lord.” What these verses promise is God’s presence and love. They don’t promise that a person will feel it at every moment; Joseph’s own prayer suggests the feeling can be missing for a time.",
+          "perspectives": [
+            {
+              "id": "left",
+              "text": "If God feels far away, it means He has actually left.",
+              "voice": "A worry many people have",
+              "verdict": "contradicted",
+              "rationale": "Joseph felt that way (“O God, where art thou?”), and the Lord answered, “God shall be with you forever and ever.” Paul adds that nothing “shall be able to separate us from the love of God.”"
+            },
+            {
+              "id": "honest",
+              "text": "A faithful person can honestly ask God where He is.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Joseph Smith, a prophet, prayed “O God, where art thou?” The Lord’s answer began “My son, peace be unto thy soul.”"
+            },
+            {
+              "id": "always-feel",
+              "text": "Because God promised to be with Joseph, faithful people will always feel His presence strongly.",
+              "voice": "A common idea",
+              "verdict": "beyond",
+              "rationale": "The verses promise God’s presence and love. They don’t promise a constant feeling of it, and Joseph’s own prayer (“where is the pavilion that covereth thy hiding place?”) suggests he wasn’t feeling it then."
+            },
+            {
+              "id": "nothing-separates",
+              "text": "Hardship, distress, and even death can’t separate us from the love of God in Christ.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Paul lists “tribulation, or distress, or persecution” and “death” among the things that cannot “separate us from the love of God, which is in Christ Jesus our Lord.”"
+            },
+            {
+              "id": "long-trial",
+              "text": "The Lord’s promise to Joseph applies only to trials that are short.",
+              "voice": "A classmate",
+              "verdict": "beyond",
+              "rationale": "The Lord called months of imprisonment “but a small moment” next to being exalted “on high.” The verses don’t limit the promise to trials of any particular length."
+            }
+          ]
+        }
+      },
+      "insight": "Joseph Smith asked the question many people ask: “O God, where art thou?” The Lord didn’t scold him for asking or explain why he was in jail. He called him “my son,” offered peace, put the trial in eternal perspective, and promised, “God shall be with you forever and ever.” Paul taught the same: nothing, not even tribulation or distress, can separate us from God’s love in Christ.",
+      "concepts": [
+        "adversity",
+        "love-of-god",
+        "prayer"
+      ],
+      "connections": [
+        {
+          "from": "scripture:dc-121-1-3",
+          "to": "question:when-faithful-people-suffer",
+          "relation": "raises",
+          "sourceIds": [
+            "dc-121-1-3"
+          ],
+          "note": "From Liberty Jail, Joseph Smith asked where God was while His people suffered, and how long it would last."
+        },
+        {
+          "from": "scripture:dc-121-7-8",
+          "to": "concept:adversity",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-121-7-8"
+          ],
+          "note": "The Lord told Joseph his adversity would be “but a small moment” and promised exaltation if he endured it well."
+        },
+        {
+          "from": "scripture:romans-8-35-39",
+          "to": "concept:love-of-god",
+          "relation": "teaches",
+          "sourceIds": [
+            "romans-8-35-39"
+          ],
+          "note": "Paul taught that tribulation, distress, and even death cannot separate us from the love of God in Christ."
+        }
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "descended-below",
+      "title": "He descended below them all",
+      "phase": "discover",
+      "method": "academic",
+      "intro": "Right after listing the trials Joseph might face, the Lord said, “The Son of Man hath descended below them all. Art thou greater than he?” Other scriptures describe what the Savior’s suffering included, and why.",
+      "sourceIds": [
+        "dc-122-7-9",
+        "alma-7-11-12",
+        "isaiah-53-4-5",
+        "hebrews-5-7-8"
+      ],
+      "activities": {
+        "easy": {
+          "type": "highlight",
+          "id": "descended-highlight",
+          "prompt": "Tap every phrase in Alma 7:11–12 that names something the Savior would suffer or take upon Himself. Leave the phrases that explain why for now.",
+          "sourceIds": [
+            "alma-7-11-12"
+          ],
+          "hints": [
+            "Look for the words “suffering” and “take upon him.”",
+            "There are four phrases. Phrases beginning with “that” explain a purpose, so leave them for now.",
+            "Tap the phrases about pains, afflictions, and temptations; pains and sicknesses; death; and infirmities."
+          ],
+          "explanation": "Alma names “pains and afflictions and temptations of every kind,” “the pains and the sicknesses of his people,” “death,” and “their infirmities.” The Savior’s suffering wasn’t only for sin. It reached the pain, sickness, and weakness that faithful people also carry.",
+          "passage": "alma-7-11-12",
+          "chunks": [
+            {
+              "verse": 11,
+              "text": "And he shall go forth,"
+            },
+            {
+              "verse": 11,
+              "text": "suffering pains and afflictions and temptations of every kind;"
+            },
+            {
+              "verse": 11,
+              "text": "and this that the word might be fulfilled which saith"
+            },
+            {
+              "verse": 11,
+              "text": "he will take upon him the pains and the sicknesses of his people."
+            },
+            {
+              "verse": 12,
+              "text": "And he will take upon him death,"
+            },
+            {
+              "verse": 12,
+              "text": "that he may loose the bands of death which bind his people;"
+            },
+            {
+              "verse": 12,
+              "text": "and he will take upon him their infirmities,"
+            },
+            {
+              "verse": 12,
+              "text": "that his bowels may be filled with mercy, according to the flesh,"
+            },
+            {
+              "verse": 12,
+              "text": "that he may know according to the flesh how to succor his people according to their infirmities."
+            }
+          ],
+          "targets": [
+            1,
+            3,
+            4,
+            6
+          ]
+        },
+        "medium": {
+          "type": "vocab-match",
+          "id": "descended-vocab",
+          "prompt": "Match each word or phrase from these passages with its meaning.",
+          "sourceIds": [
+            "alma-7-11-12",
+            "isaiah-53-4-5",
+            "dc-122-7-9"
+          ],
+          "hints": [
+            "Read each term in its verse; the example beside it shows how it’s used.",
+            "‘Succor’ is an action someone takes toward a person in need. ‘Infirmities’ are a condition people live with.",
+            "Two of the meanings describe the opposite of what these verses say the Savior did."
+          ],
+          "explanation": "To ‘succor’ is to run to help someone in need. ‘Infirmities’ are weaknesses and frailties of body or mind. Isaiah says He ‘hath borne our griefs’: He carried sorrows that were ours, not His. And to have ‘descended below them all’ means He went lower than every trial Joseph faced. None of these words describes watching from a distance or making sure no one ever suffers.",
+          "pairs": [
+            {
+              "id": "succor",
+              "term": "Succor",
+              "meaning": "To run to help or relieve someone in need",
+              "example": {
+                "text": "that he may know according to the flesh how to succor his people",
+                "sourceId": "alma-7-11-12"
+              }
+            },
+            {
+              "id": "infirmities",
+              "term": "Infirmities",
+              "meaning": "Weaknesses and frailties of body or mind",
+              "example": {
+                "text": "and he will take upon him their infirmities",
+                "sourceId": "alma-7-11-12"
+              }
+            },
+            {
+              "id": "borne",
+              "term": "Borne our griefs",
+              "meaning": "Carried sorrows that belonged to other people",
+              "example": {
+                "text": "Surely he hath borne our griefs, and carried our sorrows",
+                "sourceId": "isaiah-53-4-5"
+              }
+            },
+            {
+              "id": "descended",
+              "term": "Descended below them all",
+              "meaning": "Went lower than every one of the trials just listed",
+              "example": {
+                "text": "The Son of Man hath descended below them all.",
+                "sourceId": "dc-122-7-9"
+              }
+            }
+          ],
+          "extraMeanings": [
+            "Watched suffering from a distance without feeling it",
+            "Made sure faithful people would never have to suffer"
+          ],
+          "match": "meaning"
+        },
+        "hard": {
+          "type": "scripture-connect",
+          "id": "descended-connect",
+          "prompt": "Compare these three passages about the Savior’s suffering.",
+          "sourceIds": [
+            "alma-7-11-12",
+            "isaiah-53-4-5",
+            "hebrews-5-7-8"
+          ],
+          "passages": [
+            "alma-7-11-12",
+            "isaiah-53-4-5",
+            "hebrews-5-7-8"
+          ],
+          "hints": [
+            "Isaiah 53:4 records what onlookers assumed about the suffering servant. Compare that assumption with the disciples’ question in John 9.",
+            "Hebrews 5:8 begins “Though he were a Son.” What does the word “Though” suggest?",
+            "Both Alma and Isaiah say He carried things that aren’t sins: pains, sicknesses, griefs, and sorrows."
+          ],
+          "explanation": "Isaiah records that onlookers “did esteem him stricken, smitten of God,” and verse 5 answers that “he was wounded for our transgressions.” A common reading is that they took His suffering as punishment for wrongs of His own. Hebrews says that “Though he were a Son, yet learned he obedience by the things which he suffered.” Suffering came even to the Son of God, so it can’t be proof of disobedience. And both Alma and Isaiah say He carried far more than sin: “the pains and the sicknesses of his people,” “our griefs,” and “our sorrows.”",
+          "questions": [
+            {
+              "id": "smitten",
+              "prompt": "Isaiah 53:4 says, “yet we did esteem him stricken, smitten of God, and afflicted.” Read it with verse 5. What does verse 5 say about why He suffered?",
+              "options": [
+                {
+                  "id": "punished",
+                  "text": "For others’ sins: “he was wounded for our transgressions, he was bruised for our iniquities.”"
+                },
+                {
+                  "id": "nothing",
+                  "text": "It says He wasn’t really suffering.",
+                  "feedback": "Verse 4 says they saw Him as “stricken” and “afflicted.” Is His suffering in question?"
+                },
+                {
+                  "id": "correct",
+                  "text": "It says He was suffering for His own sins.",
+                  "feedback": "Read verse 5 again. Whose transgressions does it say He was wounded for?"
+                }
+              ],
+              "correct": [
+                "punished"
+              ]
+            },
+            {
+              "id": "though-son",
+              "prompt": "Hebrews 5:8 says, “Though he were a Son, yet learned he obedience by the things which he suffered.” What does this suggest about the idea that obedience prevents suffering?",
+              "options": [
+                {
+                  "id": "even-son",
+                  "text": "Even the Son of God suffered, so suffering can’t be treated as proof that someone has been disobedient."
+                },
+                {
+                  "id": "disobeyed",
+                  "text": "He suffered because He was learning to stop disobeying.",
+                  "feedback": "Read “Though he were a Son” again. Does the verse connect His suffering to wrongdoing, or to something He learned through it?"
+                },
+                {
+                  "id": "everyone",
+                  "text": "Suffering always makes people more obedient.",
+                  "feedback": "The verse describes what the Son learned. Does it make a promise about everyone?"
+                }
+              ],
+              "correct": [
+                "even-son"
+              ]
+            },
+            {
+              "id": "tears",
+              "prompt": "Hebrews 5:7 describes Him praying “with strong crying and tears.” What does this add to Alma 7?",
+              "options": [
+                {
+                  "id": "inside",
+                  "text": "He knows suffering from the inside, including pleading with the Father in anguish, and He “was heard.”"
+                },
+                {
+                  "id": "untouched",
+                  "text": "His suffering didn’t really affect Him.",
+                  "feedback": "Would someone untouched by suffering pray “with strong crying and tears”?"
+                },
+                {
+                  "id": "weak-faith",
+                  "text": "Crying out to God in pain shows weak faith.",
+                  "feedback": "Who is this verse describing? And what does it say happened when He prayed?"
+                }
+              ],
+              "correct": [
+                "inside"
+              ]
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "descended-principle",
+          "prompt": "Build a statement that D&C 122, Alma 7, and Isaiah 53 support together. Some fragments say what the passages don’t.",
+          "sourceIds": [
+            "dc-122-7-9",
+            "alma-7-11-12",
+            "isaiah-53-4-5"
+          ],
+          "hints": [
+            "Start with D&C 122:8, then add what Alma and Isaiah say He took upon Him.",
+            "Alma 7:12 gives the purpose. It’s about knowing how to help, not about preventing every trial.",
+            "Four fragments make the statement. The others claim He spared the faithful from suffering, that He suffered for His own sins, or that He explains every trial."
+          ],
+          "explanation": "D&C 122:8 says “The Son of Man hath descended below them all.” Alma says He took upon Him pains, sicknesses, and infirmities, and Isaiah says “he hath borne our griefs.” Alma gives the purpose: “that he may know according to the flesh how to succor his people according to their infirmities.” None of these passages says He prevents every trial or explains each one. They say He knows, and that He helps.",
+          "fragments": [
+            {
+              "id": "descended",
+              "text": "Jesus Christ descended below all things"
+            },
+            {
+              "id": "took",
+              "text": "and took upon Him our pains, sicknesses, griefs, and infirmities,"
+            },
+            {
+              "id": "know",
+              "text": "so that He would know according to the flesh"
+            },
+            {
+              "id": "succor",
+              "text": "how to succor His people in their trials."
+            },
+            {
+              "id": "spare",
+              "text": "so that no faithful person would ever have to suffer,"
+            },
+            {
+              "id": "own-sins",
+              "text": "because He needed to suffer for His own sins,"
+            },
+            {
+              "id": "explain",
+              "text": "which means He will explain the reason for every trial."
+            }
+          ],
+          "solution": [
+            "descended",
+            "took",
+            "know",
+            "succor"
+          ],
+          "statement": "Jesus Christ descended below all things and took upon Him our pains, sicknesses, griefs, and infirmities, so that He would know according to the flesh how to succor His people in their trials."
+        }
+      },
+      "insight": "The Lord’s answer to Joseph pointed to Jesus Christ: “The Son of Man hath descended below them all.” Alma says the Savior took upon Him pains, sicknesses, and infirmities so He would know how to succor His people, and Isaiah records that onlookers “did esteem him stricken, smitten of God,” though “he was wounded for our transgressions.” Hebrews adds that even the Son “learned … obedience by the things which he suffered.” If suffering came only to the disobedient, the Son of God wouldn’t have suffered. Instead, the One who descended below all things is the One who knows how to help.",
+      "concepts": [
+        "atonement",
+        "succor",
+        "jesus-christ",
+        "adversity"
+      ],
+      "connections": [
+        {
+          "from": "scripture:dc-122-7-9",
+          "to": "concept:atonement",
+          "relation": "teaches",
+          "sourceIds": [
+            "dc-122-7-9"
+          ],
+          "note": "The Lord told Joseph that the Son of Man had descended below every trial Joseph might face."
+        },
+        {
+          "from": "scripture:alma-7-11-12",
+          "to": "vocabulary:succor",
+          "relation": "teaches",
+          "sourceIds": [
+            "alma-7-11-12"
+          ],
+          "note": "Alma says the Savior took upon Him His people’s pains and infirmities so He would know how to succor them."
+        },
+        {
+          "from": "scripture:hebrews-5-7-8",
+          "to": "question:when-faithful-people-suffer",
+          "relation": "answers",
+          "sourceIds": [
+            "hebrews-5-7-8"
+          ],
+          "note": "Even the Son of God learned obedience by the things He suffered, so suffering cannot be proof of disobedience."
+        }
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "strength-to-bear-it",
+      "title": "Strength to bear it",
+      "phase": "understand",
+      "method": "analytical",
+      "intro": "Many people wonder why God doesn’t simply take hard things away. In each of these passages someone pleads for relief: Alma’s people in bondage, the Apostle Paul, and the Savior in Gethsemane. Notice what changes, what doesn’t, and whether asking was wrong.",
+      "sourceIds": [
+        "mosiah-24-12-15",
+        "2-corinthians-12-7-10",
+        "luke-22-39-44"
+      ],
+      "activities": {
+        "easy": {
+          "type": "evidence-connect",
+          "id": "strength-match",
+          "prompt": "Each of these people asked God for relief. Connect each one with what they received.",
+          "sourceIds": [
+            "mosiah-24-12-15",
+            "2-corinthians-12-7-10",
+            "luke-22-39-44"
+          ],
+          "hints": [
+            "Read Mosiah 24:14–15, 2 Corinthians 12:9, and Luke 22:43.",
+            "One option on the right appears in none of the accounts.",
+            "Alma’s people: burdens eased. Paul: “My grace is sufficient for thee.” The Savior: an angel strengthening Him."
+          ],
+          "explanation": "Alma’s people had their burdens eased “even while you are in bondage.” Paul was told, “My grace is sufficient for thee: for my strength is made perfect in weakness.” In Gethsemane “there appeared an angel unto him from heaven, strengthening him.” In none of the accounts did the hard thing vanish the moment they asked.",
+          "left": {
+            "label": "Who asked",
+            "items": [
+              {
+                "id": "alma",
+                "text": "Alma’s people, in bondage",
+                "sourceId": "mosiah-24-12-15"
+              },
+              {
+                "id": "paul",
+                "text": "Paul, with his “thorn in the flesh”",
+                "sourceId": "2-corinthians-12-7-10"
+              },
+              {
+                "id": "jesus",
+                "text": "Jesus in Gethsemane",
+                "sourceId": "luke-22-39-44"
+              }
+            ]
+          },
+          "right": {
+            "label": "What they received",
+            "items": [
+              {
+                "id": "eased",
+                "text": "Burdens made light, so they could bear them with ease"
+              },
+              {
+                "id": "grace",
+                "text": "“My grace is sufficient for thee”"
+              },
+              {
+                "id": "angel",
+                "text": "An angel from heaven, strengthening Him"
+              },
+              {
+                "id": "vanished",
+                "text": "The trial removed the moment they asked"
+              }
+            ]
+          },
+          "pairs": [
+            {
+              "left": "alma",
+              "right": "eased",
+              "because": "Mosiah 24:15: “the burdens which were laid upon Alma and his brethren were made light.”",
+              "clue": "Read Mosiah 24:15. What happened to their burdens?"
+            },
+            {
+              "left": "paul",
+              "right": "grace",
+              "because": "2 Corinthians 12:9: “My grace is sufficient for thee: for my strength is made perfect in weakness.”",
+              "clue": "Paul asked three times. What did the Lord say to him?"
+            },
+            {
+              "left": "jesus",
+              "right": "angel",
+              "because": "Luke 22:43: “there appeared an angel unto him from heaven, strengthening him.”",
+              "clue": "Read the verse right after His prayer in Luke 22:42."
+            }
+          ]
+        },
+        "medium": {
+          "type": "scripture-connect",
+          "id": "strength-connect",
+          "prompt": "Read the three accounts side by side and look for the pattern.",
+          "sourceIds": [
+            "mosiah-24-12-15",
+            "2-corinthians-12-7-10",
+            "luke-22-39-44"
+          ],
+          "passages": [
+            "mosiah-24-12-15",
+            "2-corinthians-12-7-10",
+            "luke-22-39-44"
+          ],
+          "hints": [
+            "In each account, check two things: did the person ask for relief, and was the hard thing immediately taken away?",
+            "Read Luke 22:44 carefully. What did the Savior do after the angel came?",
+            "Each person asked, none was rebuked for asking, and each received strength while the trial continued."
+          ],
+          "explanation": "Alma’s people poured out their hearts and had their burdens eased “even while you are in bondage” (they were delivered later). Paul “besought the Lord thrice” and was answered with grace rather than removal. The Savior asked, “remove this cup from me,” and was strengthened by an angel, yet even then, “being in an agony he prayed more earnestly.” Strength from God didn’t always end the pain, but it came every time.",
+          "questions": [
+            {
+              "id": "pattern",
+              "prompt": "What pattern do the three accounts share?",
+              "options": [
+                {
+                  "id": "strength",
+                  "text": "Each asked God for relief, and each received strength, though the hard thing wasn’t immediately taken away."
+                },
+                {
+                  "id": "faith",
+                  "text": "Each was refused because they didn’t have enough faith.",
+                  "feedback": "Look at who is praying in Luke 22. Could a lack of faith explain why His cup wasn’t removed?"
+                },
+                {
+                  "id": "wrong-to-ask",
+                  "text": "Each learned that it is wrong to ask God to take a trial away.",
+                  "feedback": "No one in these accounts is rebuked for asking, and the Savior Himself asked. What did each receive?"
+                }
+              ],
+              "correct": [
+                "strength"
+              ]
+            },
+            {
+              "id": "paul-answer",
+              "prompt": "Paul asked three times for his thorn to be removed. What does the Lord’s answer give him instead?",
+              "options": [
+                {
+                  "id": "grace",
+                  "text": "Grace and strength: “my strength is made perfect in weakness,” so that “the power of Christ may rest upon me.”"
+                },
+                {
+                  "id": "explanation",
+                  "text": "Only an explanation of where the thorn came from.",
+                  "feedback": "Read verse 9. Is the Lord’s answer an explanation, or a promise?"
+                },
+                {
+                  "id": "silence",
+                  "text": "No answer at all.",
+                  "feedback": "Verse 9 begins “And he said unto me.” What did He say?"
+                }
+              ],
+              "correct": [
+                "grace"
+              ]
+            },
+            {
+              "id": "after-angel",
+              "prompt": "According to Luke 22:44, what happened after the angel strengthened the Savior?",
+              "options": [
+                {
+                  "id": "earnestly",
+                  "text": "“being in an agony he prayed more earnestly.” The strength didn’t end His agony."
+                },
+                {
+                  "id": "painless",
+                  "text": "His suffering stopped.",
+                  "feedback": "Read verse 44 again. Was He still in agony?"
+                },
+                {
+                  "id": "stopped-praying",
+                  "text": "He stopped praying, since He’d been answered.",
+                  "feedback": "Verse 44 says what He did next. Did He stop?"
+                }
+              ],
+              "correct": [
+                "earnestly"
+              ]
+            }
+          ]
+        },
+        "hard": {
+          "type": "compare",
+          "id": "strength-compare",
+          "prompt": "When a hardship keeps getting worse, it’s natural to wonder how to ask for more help. Weigh each statement against these accounts.",
+          "sourceIds": [
+            "mosiah-24-12-15",
+            "2-corinthians-12-7-10",
+            "luke-22-39-44"
+          ],
+          "hints": [
+            "Look at what happened to each person’s prayer: was it ignored, or answered in a way they didn’t expect?",
+            "Two statements are contradicted by Luke 22. One statement is about something these passages don’t address at all.",
+            "These passages are about strength from God; they neither forbid nor command getting help from doctors or family, so that statement goes beyond them."
+          ],
+          "explanation": "The Savior’s own prayer for the cup to be removed wasn’t granted, yet He was strengthened, so a trial that remains isn’t proof of an unheard prayer. Asking, even repeatedly, is what Paul and the Savior did. Strength didn’t always end the pain (“being in an agony he prayed more earnestly”). These passages don’t address medical care or the help of family and leaders. Nothing in them suggests that God’s strength replaces that help; in Gethsemane the strength itself came through a messenger God sent.",
+          "perspectives": [
+            {
+              "id": "unheard",
+              "text": "If I pray for a trial to be removed and it isn’t, my prayer wasn’t heard.",
+              "voice": "A common worry",
+              "verdict": "contradicted",
+              "rationale": "The Savior asked, “remove this cup from me,” and the cup wasn’t removed, yet “there appeared an angel unto him from heaven, strengthening him.” Paul’s thorn stayed, yet the Lord answered him."
+            },
+            {
+              "id": "ask-again",
+              "text": "It’s right to ask God, more than once, to take a hard thing away.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Paul “besought the Lord thrice,” and the Savior prayed, “Father, if thou be willing, remove this cup from me.”"
+            },
+            {
+              "id": "no-pain",
+              "text": "When God strengthens someone, the hard thing always stops hurting right away.",
+              "voice": "A common idea",
+              "verdict": "contradicted",
+              "rationale": "After the angel strengthened Him, “being in an agony he prayed more earnestly.”"
+            },
+            {
+              "id": "no-doctors",
+              "text": "Because God gives strength, I shouldn’t also look for help from doctors, family, or leaders.",
+              "voice": "A common idea",
+              "verdict": "beyond",
+              "rationale": "These passages are about strength from God. They don’t address medical care or other people’s help, and nothing in them says God’s strength replaces it."
+            },
+            {
+              "id": "messenger",
+              "text": "In Gethsemane, the strength the Savior received came through a messenger sent from heaven.",
+              "voice": "A classmate",
+              "verdict": "supported",
+              "rationale": "Luke 22:43: “there appeared an angel unto him from heaven, strengthening him.”"
+            }
+          ]
+        },
+        "complex": {
+          "type": "build-principle",
+          "id": "strength-principle",
+          "prompt": "Build a principle that all three accounts support. Be careful: some fragments promise more than the passages do, and some promise less.",
+          "sourceIds": [
+            "mosiah-24-12-15",
+            "2-corinthians-12-7-10",
+            "luke-22-39-44"
+          ],
+          "hints": [
+            "Begin with what each person did, then what didn’t happen right away.",
+            "Mosiah 24:14 says the Lord does “visit my people in their afflictions.” Include His presence as well as His strength.",
+            "The principle has five fragments, ending with the three examples. Leave out fragments saying God doesn’t hear, that we should stop asking, or that faith always removes trials."
+          ],
+          "explanation": "In all three accounts someone asked, the trial wasn’t removed right away, and strength came: burdens made light, grace that was sufficient, an angel strengthening. Mosiah 24:14 adds the reason: “that ye may know of a surety that I, the Lord God, do visit my people in their afflictions.” The passages don’t say God never removes trials (Alma’s people were later delivered), and they don’t say asking is wrong.",
+          "fragments": [
+            {
+              "id": "ask",
+              "text": "When we ask God to take a trial away,"
+            },
+            {
+              "id": "not-yet",
+              "text": "He may not remove it right away,"
+            },
+            {
+              "id": "strengthen",
+              "text": "but He can strengthen us to bear it"
+            },
+            {
+              "id": "with-us",
+              "text": "and be with us in it,"
+            },
+            {
+              "id": "examples",
+              "text": "as He was with Alma’s people, with Paul, and with His own Son."
+            },
+            {
+              "id": "unheard",
+              "text": "because He doesn’t hear prayers about trials,"
+            },
+            {
+              "id": "stop",
+              "text": "so we should stop asking,"
+            },
+            {
+              "id": "faith-removes",
+              "text": "and He always removes it once our faith is strong enough."
+            }
+          ],
+          "solution": [
+            "ask",
+            "not-yet",
+            "strengthen",
+            "with-us",
+            "examples"
+          ],
+          "statement": "When we ask God to take a trial away, He may not remove it right away, but He can strengthen us to bear it and be with us in it, as He was with Alma’s people, with Paul, and with His own Son."
+        }
+      },
+      "insight": "In each account someone pleaded for relief: Alma’s people, Paul, and the Savior Himself. The hard thing wasn’t immediately taken away, and the pleading wasn’t wrong. Each received strength: burdens eased “even while you are in bondage,” grace that was “sufficient,” an angel “strengthening him.” Strength didn’t always end the pain; after the angel came, Jesus “prayed more earnestly.” These passages don’t say why relief comes sooner for some than for others. They do show that asking is right, and that God strengthens His people and visits them in their afflictions.",
+      "concepts": [
+        "grace",
+        "adversity",
+        "prayer",
+        "weakness"
+      ],
+      "connections": [
+        {
+          "from": "scripture:mosiah-24-12-15",
+          "to": "concept:adversity",
+          "relation": "teaches",
+          "sourceIds": [
+            "mosiah-24-12-15"
+          ],
+          "note": "The Lord eased the burdens of Alma’s people while they were still in bondage, so they would know He visits His people in their afflictions."
+        },
+        {
+          "from": "scripture:2-corinthians-12-7-10",
+          "to": "concept:grace",
+          "relation": "teaches",
+          "sourceIds": [
+            "2-corinthians-12-7-10"
+          ],
+          "note": "When Paul’s thorn wasn’t removed, the Lord told him His grace was sufficient and His strength made perfect in weakness."
+        },
+        {
+          "from": "scripture:luke-22-39-44",
+          "to": "scripture:mosiah-24-12-15",
+          "relation": "relates-to",
+          "sourceIds": [
+            "luke-22-39-44",
+            "mosiah-24-12-15"
+          ],
+          "note": "In both accounts God answered a plea for relief with strength to bear the trial rather than its immediate removal."
+        }
+      ],
+      "depth": "core"
+    },
+    {
+      "id": "who-is-with-you",
+      "title": "Who is with you",
+      "phase": "understand",
+      "method": "divine",
+      "intro": "Scripture doesn’t explain every trial, but it says a great deal about who is with us in one. Take a few quiet minutes with these passages, if you’d like. Nothing you write is checked or shared.",
+      "sourceIds": [
+        "dc-121-7-8",
+        "alma-7-11-12",
+        "dc-122-7-9"
+      ],
+      "activity": {
+        "type": "reflect",
+        "id": "reflect-who-is-with-you",
+        "prompt": "Think about something hard that you, or someone you love, is carrying. Which of these passages would you most want to remember the next time it feels heavy?",
+        "sourceIds": [
+          "dc-121-7-8",
+          "alma-7-11-12",
+          "dc-122-7-9"
+        ],
+        "suggestions": [
+          "The Lord called Joseph “my son” before He said anything else. What might He want you to know first?",
+          "Alma says the Savior knows “how to succor his people according to their infirmities.” What could it look like to let Him help with this?",
+          "Is there a parent, leader, friend, or doctor you could talk with about what you’re carrying?",
+          "Would you like to pray about it, for relief, for strength, or for both?"
+        ]
+      },
+      "insight": "Scripture doesn’t explain every hardship. It does testify of who is with you in it: a Father who calls you His child, and a Savior who descended below all things and knows how to help. Asking God for help, and asking people you trust, can go together.",
+      "concepts": [
+        "jesus-christ",
+        "succor",
+        "love-of-god"
+      ],
+      "depth": "core"
+    }
+  ],
+  "branches": [
+    {
+      "id": "easier-for-others",
+      "question": "Why does life seem easier for other people?",
+      "intro": "It’s common to look around and feel that everyone else has an easier life, or that some people do well no matter what they choose. A psalm in the Bible records a faithful person struggling with this same comparison, and the Savior said something about it in the Sermon on the Mount.",
+      "steps": [
+        {
+          "id": "comparing-lives",
+          "title": "Comparing lives",
+          "phase": "discover",
+          "method": "analytical",
+          "intro": "The writer of Psalm 73 nearly lost his footing over this question. Read what troubled him, how long he wrestled with it, and what changed.",
+          "sourceIds": [
+            "psalm-73-2-3",
+            "psalm-73-16-17",
+            "matthew-5-45",
+            "gospel-topics-adversity",
+            "nelson-joy-and-spiritual-survival-2016"
+          ],
+          "activities": {
+            "medium": {
+              "type": "clue",
+              "id": "comparing-clue",
+              "prompt": "Examine each clue, then decide what they suggest together about comparing our lives with others’.",
+              "sourceIds": [
+                "psalm-73-2-3",
+                "psalm-73-16-17",
+                "matthew-5-45"
+              ],
+              "hints": [
+                "The psalmist was a believer, yet the comparison nearly made him slip. What does that tell you about the feeling itself?",
+                "Look at the word “Until” in verse 17. Where did his view change?",
+                "Matthew 5:45 says sun and rain come to “the evil” and “the good.” Outward circumstances don’t sort people by goodness."
+              ],
+              "explanation": "The psalmist admits, “I was envious at the foolish, when I saw the prosperity of the wicked,” and that trying to understand it “was too painful for me; Until I went into the sanctuary of God.” His view changed there, in the sanctuary; these verses don’t say his circumstances changed. And the Savior taught that the Father “maketh his sun to rise on the evil and on the good.” How someone’s life looks from the outside isn’t a measure of God’s love, or of the whole story.",
+              "clues": [
+                {
+                  "id": "envy",
+                  "title": "The psalmist’s struggle",
+                  "text": "Psalm 73:2–3: “my feet were almost gone; my steps had well nigh slipped. For I was envious at the foolish, when I saw the prosperity of the wicked.”",
+                  "sourceId": "psalm-73-2-3"
+                },
+                {
+                  "id": "painful",
+                  "title": "Trying to figure it out",
+                  "text": "Psalm 73:16: “When I thought to know this, it was too painful for me;”",
+                  "sourceId": "psalm-73-16-17"
+                },
+                {
+                  "id": "sanctuary",
+                  "title": "What changed",
+                  "text": "Psalm 73:17: “Until I went into the sanctuary of God; then understood I their end.”",
+                  "sourceId": "psalm-73-16-17"
+                },
+                {
+                  "id": "sun",
+                  "title": "Sun and rain",
+                  "text": "Matthew 5:45: the Father “maketh his sun to rise on the evil and on the good, and sendeth rain on the just and on the unjust.”",
+                  "sourceId": "matthew-5-45"
+                }
+              ],
+              "question": {
+                "id": "comparing-meaning",
+                "prompt": "What do these clues suggest about comparing our lives with others’?",
+                "options": [
+                  {
+                    "id": "outside",
+                    "text": "Faithful people have felt this too, and how someone’s life looks from the outside isn’t a measure of God’s love or of the whole story."
+                  },
+                  {
+                    "id": "stop-thinking",
+                    "text": "The psalmist solved it by trying not to think about it.",
+                    "feedback": "Verse 16 says thinking about it was “too painful.” What came after the word “Until”?"
+                  },
+                  {
+                    "id": "reward",
+                    "text": "Good circumstances are God’s reward for good people.",
+                    "feedback": "Read Matthew 5:45. On whom does the Father send sun and rain?"
+                  }
+                ],
+                "correct": [
+                  "outside"
+                ]
+              }
+            },
+            "hard": {
+              "type": "compare",
+              "id": "comparing-compare",
+              "prompt": "Weigh each statement against Psalm 73, Matthew 5:45, the Gospel Topics article on adversity, and President Nelson’s teaching on joy.",
+              "sourceIds": [
+                "psalm-73-2-3",
+                "psalm-73-16-17",
+                "matthew-5-45",
+                "gospel-topics-adversity",
+                "nelson-joy-and-spiritual-survival-2016"
+              ],
+              "hints": [
+                "Gospel Topics says something about who experiences adversity. Start there.",
+                "President Nelson is a speaker, not scripture, but his teaching can still support or not support a statement. What did he say joy depends on?",
+                "The sources say everyone faces adversity and that joy depends on focus more than circumstances. They don’t say everyone’s trials are equally hard."
+              ],
+              "explanation": "Gospel Topics says “all people experience adversity during their lifetime,” so a life that looks perfect from the outside isn’t the whole picture. Matthew 5:45 shows that good things like sun and rain come “on the evil and on the good,” so circumstances aren’t a scorecard. President Nelson taught that “the joy we feel has little to do with the circumstances of our lives and everything to do with the focus of our lives.” That teaching is about where we focus, not a claim that pain isn’t real: the psalmist said trying to understand it “was too painful for me.” None of these sources says that everyone’s trials are equally heavy; that question stays open.",
+              "perspectives": [
+                {
+                  "id": "no-adversity",
+                  "text": "Some people get through life without any real adversity.",
+                  "voice": "How it can look",
+                  "verdict": "contradicted",
+                  "rationale": "Gospel Topics: “all people experience adversity during their lifetime.”"
+                },
+                {
+                  "id": "scorecard",
+                  "text": "Good circumstances are a sign that someone is more righteous.",
+                  "voice": "A common idea",
+                  "verdict": "contradicted",
+                  "rationale": "The Father “maketh his sun to rise on the evil and on the good, and sendeth rain on the just and on the unjust.”"
+                },
+                {
+                  "id": "focus",
+                  "text": "Joy has more to do with the focus of our lives than with our circumstances.",
+                  "voice": "A classmate",
+                  "verdict": "supported",
+                  "rationale": "President Nelson taught that “the joy we feel has little to do with the circumstances of our lives and everything to do with the focus of our lives.”"
+                },
+                {
+                  "id": "my-fault",
+                  "text": "If other people’s lives look easier than mine, I must be doing something wrong.",
+                  "voice": "A common worry",
+                  "verdict": "contradicted",
+                  "rationale": "Gospel Topics says some trials “may come at times when people are living righteously,” and the psalmist, a believer, struggled with the same comparison."
+                },
+                {
+                  "id": "equal",
+                  "text": "Everyone’s trials are equally hard, so comparing is pointless.",
+                  "voice": "A classmate",
+                  "verdict": "beyond",
+                  "rationale": "These sources say everyone experiences adversity. They don’t say every trial weighs the same."
+                }
+              ]
+            }
+          },
+          "insight": "The psalmist, a believer, nearly slipped because of this very comparison, and understanding came when he “went into the sanctuary of God.” Jesus taught that the Father sends sun and rain on the evil and the good, so circumstances aren’t a measure of anyone’s worth. Gospel Topics says all people experience adversity, and President Nelson taught that joy depends far more on the focus of our lives than on our circumstances.",
+          "concepts": [
+            "adversity",
+            "love-of-god"
+          ],
+          "connections": [
+            {
+              "from": "scripture:matthew-5-45",
+              "to": "question:easier-for-others",
+              "relation": "answers",
+              "sourceIds": [
+                "matthew-5-45"
+              ],
+              "note": "The Father sends sun and rain on the evil and the good, so outward circumstances are not a measure of righteousness."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main investigation, where Jesus answers a different form of the same assumption."
+    },
+    {
+      "id": "other-peoples-choices",
+      "question": "Why do I suffer because of other people’s choices?",
+      "intro": "It can feel unfair to suffer because of what someone else chose. Scripture teaches that God gives His children agency, and it also shows Him staying close to people who are hurt by others’ choices. If someone is hurting or abusing you, it is not your fault, and you should get help right away: tell a parent, leader, teacher, or another adult you trust. Gospel Topics says, “Victims should be assured that they are never to blame for the harmful behavior of others.”",
+      "steps": [
+        {
+          "id": "others-choices",
+          "title": "When others choose",
+          "phase": "discover",
+          "method": "analytical",
+          "intro": "Joseph, the son of Jacob, was sold by his brothers and later imprisoned in Egypt after being falsely accused. Read what Genesis says about the Lord during that time, alongside what scripture and Church teachers say about agency and innocent suffering, and what Gospel Topics says to anyone who is being abused.",
+          "sourceIds": [
+            "2-nephi-2-27",
+            "gospel-topics-agency-and-accountability",
+            "gospel-topics-adversity",
+            "genesis-39-20-23",
+            "renlund-keep-on-trying-2015",
+            "gospel-topics-abuse"
+          ],
+          "activities": {
+            "medium": {
+              "type": "evidence-connect",
+              "id": "others-connect",
+              "prompt": "Connect each statement with the source that supports it.",
+              "sourceIds": [
+                "2-nephi-2-27",
+                "gospel-topics-agency-and-accountability",
+                "gospel-topics-adversity",
+                "genesis-39-20-23",
+                "renlund-keep-on-trying-2015"
+              ],
+              "hints": [
+                "Two statements are about agency; two are about God’s care for people who are hurt.",
+                "One source on the right is about an accident, not a choice, so it pairs with nothing.",
+                "Free to choose: 2 Nephi 2:27. Others’ poor choices: Gospel Topics. The Lord with Joseph: Genesis 39:21. Innocent suffering: Elder Renlund."
+              ],
+              "explanation": "2 Nephi 2:27 says people are “free to choose liberty and eternal life” or “captivity and death,” and Gospel Topics names “others’ poor choices and hurtful words and actions” as one source of adversity. Genesis says that while Joseph was in prison, “the Lord was with Joseph, and shewed him mercy.” Elder Renlund taught that the Savior “understands perfectly what it is like to suffer innocently as a consequence of another’s transgression.”",
+              "left": {
+                "label": "Statement",
+                "items": [
+                  {
+                    "id": "free",
+                    "text": "People are free to choose good or evil."
+                  },
+                  {
+                    "id": "others-source",
+                    "text": "Some adversity comes from others’ poor choices and hurtful words and actions."
+                  },
+                  {
+                    "id": "with-joseph",
+                    "text": "The Lord stayed with someone imprisoned because of another person’s lie."
+                  },
+                  {
+                    "id": "understands",
+                    "text": "The Savior understands what it is like to suffer innocently because of someone else’s sin."
+                  }
+                ]
+              },
+              "right": {
+                "label": "Source",
+                "items": [
+                  {
+                    "id": "nephi",
+                    "text": "2 Nephi 2:27",
+                    "sourceId": "2-nephi-2-27"
+                  },
+                  {
+                    "id": "gt",
+                    "text": "Gospel Topics: Adversity",
+                    "sourceId": "gospel-topics-adversity"
+                  },
+                  {
+                    "id": "genesis",
+                    "text": "Genesis 39:20–23",
+                    "sourceId": "genesis-39-20-23"
+                  },
+                  {
+                    "id": "renlund",
+                    "text": "Elder Dale G. Renlund",
+                    "sourceId": "renlund-keep-on-trying-2015"
+                  },
+                  {
+                    "id": "tower",
+                    "text": "Luke 13:4, the tower that fell",
+                    "sourceId": "luke-13-1-5"
+                  }
+                ]
+              },
+              "pairs": [
+                {
+                  "left": "free",
+                  "right": "nephi",
+                  "because": "2 Nephi 2:27: people “are free to choose liberty and eternal life, through the great Mediator of all men, or to choose captivity and death.”",
+                  "clue": "Which source is about the freedom to choose itself?"
+                },
+                {
+                  "left": "others-source",
+                  "right": "gt",
+                  "because": "Gospel Topics: “Adversity may sometimes come because of others’ poor choices and hurtful words and actions.”",
+                  "clue": "Which source lists different sources of adversity?"
+                },
+                {
+                  "left": "with-joseph",
+                  "right": "genesis",
+                  "because": "Genesis 39:21: “But the Lord was with Joseph, and shewed him mercy.”",
+                  "clue": "Who was in prison in these sources?"
+                },
+                {
+                  "left": "understands",
+                  "right": "renlund",
+                  "because": "Elder Renlund: “He understands perfectly what it is like to suffer innocently as a consequence of another’s transgression.”",
+                  "clue": "Which source is a talk about the Savior’s Atonement healing those who suffer?"
+                }
+              ]
+            },
+            "hard": {
+              "type": "compare",
+              "id": "others-compare",
+              "prompt": "Weigh each statement against these sources. Some of these thoughts are common, and some of them hurt.",
+              "sourceIds": [
+                "2-nephi-2-27",
+                "gospel-topics-agency-and-accountability",
+                "gospel-topics-adversity",
+                "genesis-39-20-23",
+                "renlund-keep-on-trying-2015",
+                "gospel-topics-abuse"
+              ],
+              "hints": [
+                "For each statement, look for the source that speaks to it most directly.",
+                "Gospel Topics gives clear counsel to people who are being abused, and says what the Lord expects of everyone else. Find both.",
+                "Being hurt by someone else’s choice doesn’t mean you deserved it, hiding abuse is the opposite of what Gospel Topics says to do, and the Lord stayed with Joseph."
+              ],
+              "explanation": "These sources teach that God gives people agency, and that others’ choices can cause real suffering. They never treat the person who is hurt as deserving it: Elder Renlund speaks of “those who have innocently suffered,” and Gospel Topics says victims “are never to blame for the harmful behavior of others.” Gospel Topics is direct: “Victims of abuse should seek help immediately,” and the Lord expects us “to protect and help victims.” And Genesis shows the Lord staying with Joseph through a suffering someone else caused.",
+              "perspectives": [
+                {
+                  "id": "deserve",
+                  "text": "Being hurt by someone else’s choices means I did something to deserve it.",
+                  "voice": "A common worry",
+                  "verdict": "contradicted",
+                  "rationale": "Elder Renlund speaks of “those who have innocently suffered,” and Gospel Topics lists others’ poor choices as a separate source of adversity. Gospel Topics on abuse says victims “are never to blame for the harmful behavior of others.”"
+                },
+                {
+                  "id": "keep-quiet",
+                  "text": "If someone is hurting me, I should keep it to myself and just endure it.",
+                  "voice": "A common idea",
+                  "verdict": "contradicted",
+                  "rationale": "Gospel Topics: “Victims of abuse should seek help immediately,” and “No one is expected to endure abusive behavior.”"
+                },
+                {
+                  "id": "protect",
+                  "text": "The Lord wants people who are being abused to be protected and helped.",
+                  "voice": "A classmate",
+                  "verdict": "supported",
+                  "rationale": "Gospel Topics on abuse: “The Lord expects us to do everything we can to prevent abuse and to protect and help victims.”"
+                },
+                {
+                  "id": "heal",
+                  "text": "The Savior’s Atonement can heal people who have suffered because of someone else’s sins.",
+                  "voice": "A classmate",
+                  "verdict": "supported",
+                  "rationale": "Elder Renlund taught that “the Savior’s infinite Atonement can heal even—and perhaps especially—those who have innocently suffered.”"
+                },
+                {
+                  "id": "didnt-care",
+                  "text": "God didn’t stop what happened to Joseph in Egypt, so He must not have cared about him.",
+                  "voice": "A common idea",
+                  "verdict": "contradicted",
+                  "rationale": "Genesis 39:21: “But the Lord was with Joseph, and shewed him mercy.”"
+                }
+              ]
+            }
+          },
+          "insight": "Agency is real: people are free to choose, and their choices can hurt others. These sources don’t say God wants those harmful choices, and they never blame the person who is hurt: Gospel Topics says victims “are never to blame for the harmful behavior of others.” Genesis shows the Lord staying with Joseph through a suffering someone else caused, and Elder Renlund taught that the Savior understands innocent suffering perfectly and can heal it. If someone is hurting you, Gospel Topics says to seek help immediately: tell a parent, leader, teacher, or another adult you trust.",
+          "concepts": [
+            "agency",
+            "adversity",
+            "atonement"
+          ],
+          "connections": [
+            {
+              "from": "scripture:2-nephi-2-27",
+              "to": "concept:agency",
+              "relation": "teaches",
+              "sourceIds": [
+                "2-nephi-2-27"
+              ],
+              "note": "Lehi taught that people are free to choose liberty and eternal life, or captivity and death."
+            },
+            {
+              "from": "scripture:genesis-39-20-23",
+              "to": "question:other-peoples-choices",
+              "relation": "answers",
+              "sourceIds": [
+                "genesis-39-20-23"
+              ],
+              "note": "When Joseph was imprisoned because of another person’s accusation, the Lord was with him and showed him mercy."
+            }
+          ]
+        }
+      ],
+      "returnNote": "Back to the main investigation: wherever a trial comes from, scripture points to who is with us in it."
+    }
+  ],
+  "discovery": {
+    "summary": "Jesus’s disciples assumed that suffering proves someone has sinned, and He told them it doesn’t. Gospel Topics describes hardship coming from many directions, including our own choices, the ordinary conditions of mortal life, and other people’s choices, and it says trials can come while people are living righteously. Scripture often doesn’t explain why a particular trial comes. What it shows again and again is who is with us in it. When Joseph Smith asked, “O God, where art thou?”, the Lord answered with peace, perspective, and a promise of His presence, and He pointed Joseph to the Savior, who “descended below them all.” Alma testifies that Jesus Christ took upon Him our pains, sicknesses, and infirmities so He would know how to succor us. When people pleaded for relief, God didn’t always remove the hard thing right away, but He gave strength to bear it.",
+    "keyIdeas": [
+      "Suffering is not proof of sin: Jesus said the man born blind, and the victims of Pilate and of the tower, were not worse sinners than others.",
+      "Hard things come from many sources, including mortal life and other people’s choices. The response that never changes is trust in Heavenly Father and Jesus Christ.",
+      "A prophet could honestly ask “O God, where art thou?”, and the Lord answered with peace and the promise of His presence.",
+      "Jesus Christ descended below all things and took upon Him our pains and infirmities so He would know how to succor us.",
+      "God doesn’t always remove trials right away, but He gives strength to bear them, as He did for Alma’s people, for Paul, and for His own Son."
+    ],
+    "christConnection": "The Lord’s answer to Joseph turned his attention to Jesus Christ: “The Son of Man hath descended below them all. Art thou greater than he?” The faithful aren’t spared hardship; even the Son of God “learned … obedience by the things which he suffered.” Because He took upon Him our pains and infirmities, He knows “according to the flesh how to succor his people.” In Gethsemane He asked for the cup to be removed and was strengthened instead. Whoever turns to Him for help turns to someone who knows from experience.",
+    "openQuestions": [
+      "Scripture often doesn’t say why a particular trial comes. How can I keep trusting God when I don’t know the reason for mine?",
+      "Gospel Topics says some suffering may come “as a tutoring experience.” How would anyone know which trials those are, and does it matter?",
+      "Why are some trials lifted soon, like the bondage of Alma’s people, while others, like Paul’s thorn, remain?",
+      "What does it look like to “endure it well” when a trial is still hurting?"
+    ]
+  },
+  "review": {
+    "status": "needs-review",
+    "notes": [
+      {
+        "where": "steps.who-did-sin (compare: god-caused)",
+        "note": "John 9:3 (“that the works of God should be made manifest in him”) is read in different ways; some readers take it to mean God caused the blindness for that purpose. Gospel Labs marks that reading as going beyond the verse, which states the outcome but not the cause. Please confirm this framing.",
+        "resolution": "Qualified: the verdict stays ‘goes beyond’. Its rationale says verse 3 states the outcome, not the cause, and that readers understand the phrase in different ways; the hints and explanation say explanations of the cause go beyond these verses, and the clue’s distractor about God’s role gets the feedback that Jesus makes no claim about it either way. No activity rewards the reading that God caused the blindness. Owner to confirm."
+      },
+      {
+        "where": "steps.where-hard-things-come-from",
+        "note": "Gospel Topics says suffering “may also come through a loving Heavenly Father as a tutoring experience.” The investigation presents this as one possible source among several and says the article doesn’t claim every trial is sent. This concerns doctrine (God’s role in trials); please confirm. The article’s paragraph discouraging ‘why me’ questions was deliberately not featured, because many people’s questions about trials are ‘why’ questions and the app shouldn’t imply they are bitter for asking.",
+        "resolution": "Qualified: the ‘tutoring experience’ sentence is now presented, quoted in full, as one possibility the article names (sort and compare explanations, the ‘all-sent’ rationale, the insight, and the source summary). The text says the article doesn’t say every trial is sent by God and doesn’t call trials punishments. ‘All-sent’ stays ‘goes beyond’; ‘Every trial is a punishment from God’ is sorted as not in the article. The ‘why me’ paragraph is still not featured. Owner to confirm God’s role in trials."
+      },
+      {
+        "where": "steps.where-art-thou (scripture-connect: for-thy-good; compare)",
+        "note": "Interpretive: that D&C 122:7 promises the experiences will be for Joseph’s good without saying God causes them, and that Joseph’s prayer shows the feeling of God’s presence can be absent for a time. Both are close readings of the text but are Gospel Labs’ observations.",
+        "resolution": "Qualified: both readings are now worded as readings. The scripture-connect explanation says D&C 122:7 itself doesn’t say who or what causes the hardships, and that this is a close reading, not a full answer to how God is involved in trials. The compare explanation and the ‘always-feel’ rationale say Joseph’s prayer ‘suggests’ the feeling of God’s presence can be missing for a time, and the sort item on rebukes says only that nothing in these verses reproaches him."
+      },
+      {
+        "where": "steps.descended-below (scripture-connect: smitten)",
+        "note": "Reading Isaiah 53:4 (“we did esteem him stricken, smitten of God”) as onlookers mistaking His suffering for God’s punishment is a common reading in light of verse 5. Footnotes 11a and 11c to Alma 7:11 in the Church’s edition cross-reference Isaiah 53:5 (3–5) and Mosiah 14:4 (3–5).",
+        "resolution": "Qualified: the question now asks only what verse 5 plainly states about why He suffered (“he was wounded for our transgressions”). It no longer asks learners to affirm that the onlookers wrongly thought God was punishing Him, a claim verse 10 (‘it pleased the Lord to bruise him’) complicates; the original is in docs/2.0/withheld/when-faithful-people-suffer.json. The explanation calls the onlookers’ mistake ‘a common reading’. Footnotes checked on 26 October 2026."
+      },
+      {
+        "where": "intro; steps.where-hard-things-come-from; steps.strength-to-bear-it; steps.who-is-with-you; branches",
+        "note": "Sensitive: people studying this question may be carrying current pain. The app gently encourages talking with parents, leaders, friends, and doctors. That encouragement is Gospel Labs’ guidance, not a claim from the sources, and it is not medical advice. The compare item ‘no-doctors’ is marked ‘goes beyond’ because the passages don’t address medical care.",
+        "resolution": "Resolved: survey row numbers and descriptions of individual responses were removed from this note and from learner-facing text. The intro, three compare prompts, a step intro, an insight, and both branch intros now use general framing (for example, ‘When a hardship keeps getting worse…’ and ‘Many people feel alone in a trial’). The encouragement to talk with parents, leaders, friends, and doctors is kept, worded as a suggestion; ‘no-doctors’ stays ‘goes beyond’."
+      },
+      {
+        "where": "branches.other-peoples-choices",
+        "note": "Sensitive: someone using this branch may be living with the consequences of another person’s choices, including abuse. The branch includes Gospel Topics’ “Victims of abuse should seek help immediately” and invites telling a trusted adult. Alma 14:10–11 (believers burned) and Genesis 50:20 (‘God meant it unto good’) were deliberately left out as distressing or easily misread as God causing others’ sins; the owner may wish to reconsider. The verdict ‘beyond’ on ‘God must want it to happen’ was an interpretive judgment.",
+        "resolution": "Withheld: ‘God must want it to happen’ (docs/2.0/withheld/when-faithful-people-suffer.json); in this branch its ‘goes beyond’ verdict could be heard as leaving open that God wants someone’s abuse. Qualified: the branch now says plainly that victims should seek help and are not to blame, quoting Gospel Topics: Abuse (declared as in forgiveness.json) in the intro, explanation, rationales, and insight (“never to blame for the harmful behavior of others”; “No one is expected to endure abusive behavior”). A supported item on protecting victims was added."
+      },
+      {
+        "where": "branches.easier-for-others",
+        "note": "Psalm 73:17 continues “then understood I their end”; the verses that follow describe the downfall of the wicked. The branch focuses on the psalmist’s change of perspective in the sanctuary rather than on that outcome. President Nelson’s teaching on joy is presented as a speaker’s teaching; it could be heard by someone in pain as ‘you should just be happy’, so it is framed as about focus, not denial of pain.",
+        "resolution": "Qualified: the branch still focuses on the psalmist’s change of perspective rather than the downfall described in the verses that follow. The clue explanation now says his view changed in the sanctuary without claiming his circumstances changed, and the compare explanation says President Nelson’s teaching is about focus, not a claim that pain isn’t real (the psalmist said trying to understand it “was too painful for me”). Survey framing removed from the intro."
+      },
+      {
+        "where": "primaryQuestion; branches.other-peoples-choices",
+        "note": "Speaker-dependent: Elder Corbridge’s primary-question framework and Elder Renlund’s teaching on innocent suffering are labeled as speakers’ teachings. Elder Renlund was a Seventy when he gave the talk (April 2015).",
+        "resolution": "Resolved: checked on 26 October 2026. BYU Speeches lists Elder Corbridge as a General Authority Seventy and titles the talk ‘Stand Forever’, matching the declared title; the conference page lists Elder Renlund as ‘Of the Seventy’ (April 2015). Both are presented as speakers’ teachings. These source declarations are shared with other files and were not edited."
+      }
+    ]
+  }
+}
