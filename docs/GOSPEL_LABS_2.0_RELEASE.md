@@ -1,6 +1,6 @@
 # Gospel Labs 2.0: release report
 
-Prepared 26 October 2026. **Released to production on 26 October 2026** with the owner's explicit authorization: merged into `main`, pushed to GitHub, and deployed to Atlas. See [Production release](#production-release) for the live URL, deployed commit, and rollback path.
+Prepared 26 October 2026. **Released to production on 26 October 2026** with the owner's explicit authorization: merged into `main` and deployed to Atlas. The GitHub push is waiting on credentials this session didn't have. See [Production release](#production-release) for the live URL, deployed commit, and rollback path.
 
 ## Release status
 
@@ -248,7 +248,7 @@ All runs are on this machine against the released content. End-to-end tests ran 
 
 ## Commits
 
-**Public history (`main` on GitHub):** the two 1.1 commits that existed locally (`4512d75`, `99d15a2`), plus one squash commit for 2.0, tagged `v2.0.0`. `v1.1.0` tags the 1.1 release candidate. The squash keeps the intermediate development commits out of the public repository, because some of them contained verbatim survey questions (see [Git security](#git-security)).
+**Public history (`main`, to be pushed to GitHub):** the two 1.1 commits that existed locally (`4512d75`, `99d15a2`), plus one squash commit for 2.0, tagged `v2.0.0`. `v1.1.0` tags the 1.1 release candidate. The squash keeps the intermediate development commits out of the public repository, because some of them contained verbatim survey questions (see [Git security](#git-security)).
 
 **Local only:** the branch `v2.0-redesign` keeps the full development history, 24 commits from the foundation to the release preparation. **Never push it.** It's useful for archaeology on this machine; the tag `baseline-1.1-before-2.0` marks where it began.
 
@@ -289,12 +289,30 @@ Done on 26 October 2026 with the owner's authorization:
 
 1. **Release preparation:** privacy cleanup, git security check, abuse-help links, and doctrinal review (above).
 2. **Verification on the release content:** lint, typecheck, 1,408 unit tests, production build, 201 E2E tests (3 skipped by design), and `verify:study` and `verify:references`, all passing.
-3. **Merge:** `v2.0-redesign` was squash-merged into `main`. The pushed range was rescanned for survey text, secrets, and personal information, and was clean. `main` was pushed to GitHub with tags `v1.1.0` and `v2.0.0`.
+3. **Merge:** `v2.0-redesign` was squash-merged into `main` and tagged `v2.0.0`; `v1.1.0` tags the 1.1 release. The range to be published was rescanned for survey text, secrets, and personal information, and was clean. The push to GitHub is pending credentials (see below).
 4. **Rollback preserved on Atlas:** before deploying, the live 1.1 build was copied to `/srv/www/.gospellabs-1.1-20261021044420`, which is never served and survives later deploys. After the deploy it was also kept as `.gospellabs-previous`.
 5. **Deploy:** `npm run deploy` (the existing workflow) from a clean `main`.
 6. **Live verification:** results below.
 
-LIVE_PLACEHOLDER
+**Live:** <https://gospellabs.softlockedlive.com>
+- **Deployed commit:** `89a5982` ("Gospel Labs 2.0", tag `v2.0.0`).
+- **Build:** `20261026151214`, as reported by the live `/version.json` and identical to the deployed `out/`.
+
+| Live check | Result |
+| --- | --- |
+| `npm run verify:production` | All checks passed: security headers (CSP, Referrer-Policy, Permissions-Policy, nosniff, X-Frame-Options), `/version.json` serving the new build and never cached, `/sw.js`, clean URLs, and the 404 page. The three Cloudflare warnings (no HSTS, NEL/Report-To, `/sw.js` max-age) are as documented for 1.1 |
+| Browser smoke test (desktop and phone) | Every page loaded with status 200 and its expected heading: dashboard, `/investigate` (8 investigations), *One by One* (begun, first activity shown), Scripture Explorer, Character of Christ (*Forgiveness* safety notice linking the Church's abuse help), Connect with Christ, Notebook, Map, Settings, 1.x Question Bank, My Library, and the 1.x editor |
+| Offline | The service worker registered with the new build's version; *One by One* opened offline |
+| Console and network | No app errors. Cloudflare injects a Web Analytics beacon (`static.cloudflareinsights.com`) at the edge. The site's CSP blocks it, so no third-party script runs, but it logs a console error. Turn off Cloudflare Web Analytics for this hostname if that's unwanted (an edge setting, not part of the app) |
+| GitHub | **Not pushed yet.** This session had no GitHub credentials: the HTTPS remote has no credential helper, and the loaded SSH key is a deploy key for another repository. `main` and the tags are ready locally; see below |
+
+**To finish publishing to GitHub**, run this from a terminal with your usual GitHub access:
+
+```bash
+cd ~/GospelLabs && git push origin main v1.1.0 v2.0.0
+```
+
+That pushes `4512d75`, `99d15a2`, `89a5982`, this report's commit, and the two tags. All were scanned and found free of survey text, secrets, and personal information. **Do not push `v2.0-redesign`** or the `baseline-1.1-before-2.0` tag.
 
 ### Rolling back
 
