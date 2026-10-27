@@ -244,9 +244,12 @@ function setDifficulty(investigation: StudyInvestigation, progress: StudyProgres
   return { ...progress, difficulty, steps, updatedAt: now };
 }
 
+/**
+ * Changes the session length, and moves the learner onto its path. Choosing the same length again (as resuming
+ * does) still moves them on from a step that's no longer on it: content can make a quick step deep-only.
+ */
 function setLength(investigation: StudyInvestigation, progress: StudyProgress, length: StudyLength, now: string): StudyProgress {
-  if (progress.length === length) return progress;
-  let next: StudyProgress = { ...progress, length, updatedAt: now };
+  let next: StudyProgress = progress.length === length ? progress : { ...progress, length, updatedAt: now };
   // Quick sessions don't offer side branches: come back to the main path.
   if (length === "quick" && next.position.branchId) next = returnFromBranch(investigation, next, now);
   const path = mainPath(investigation, length);

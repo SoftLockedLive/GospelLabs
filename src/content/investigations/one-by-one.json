@@ -22,8 +22,8 @@
     "How can God know each of His children personally?"
   ],
   "estimatedMinutes": {
-    "quick": 30,
-    "deep": 35
+    "quick": 15,
+    "deep": 30
   },
   "intro": "Many people wonder how one Savior could suffer for every person who has ever lived. It's a question about scale, and about whether a Savior of the whole world can really be your Savior. This investigation separates three questions hidden inside it: Did His suffering reach each person? Why did He take it upon Himself? And how could it work? You'll find that the scriptures studied here answer the first two clearly, and are honest that they don't explain the third.",
   "sources": [
@@ -774,6 +774,7 @@
       "id": "what-he-took",
       "title": "What He took upon Him",
       "phase": "evidence",
+      "depth": "deep",
       "method": "academic",
       "intro": "Long before the Savior's birth, Alma prophesied what He would experience, and Isaiah wrote of a “man of sorrows.” Read Alma 7:11–13 beside Isaiah 53:3–5. The list of what He would carry is longer than many people expect.",
       "sourceIds": [
@@ -1070,6 +1071,7 @@
       "id": "why-to-succor",
       "title": "Why: to know how to succor",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "Alma doesn't only say what the Savior would take upon Him. Nearly every clause gives a reason, often beginning with “that.” The Epistle to the Hebrews makes the same point in different words. Look for why, and notice how personal the answer is.",
       "sourceIds": [
@@ -1694,6 +1696,7 @@
       "id": "one-by-one",
       "title": "One by one",
       "phase": "understand",
+      "depth": "deep",
       "method": "academic",
       "intro": "The passages so far don't let us watch how the Atonement reached each person. But 3 Nephi lets us watch the risen Savior with a multitude. When He blessed their children, the record counts “about two thousand and five hundred souls” (3 Nephi 17:25). Watch what He does with them.",
       "sourceIds": [

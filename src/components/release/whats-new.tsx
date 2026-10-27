@@ -3,7 +3,8 @@
 /**
  * Tells returning learners that Gospel Labs was updated, and what changed
  * since the version they last saw: on whatever page they open first, until
- * they dismiss it. Content-only releases get a one-line note instead.
+ * they dismiss it. Content-only releases get a one-line note instead, and
+ * patches (small one-off fixes) get nothing: they're listed only in Settings › About.
  *
  * Also decides who is new: a device with no recorded version and nothing
  * stored gets the welcome (on the dashboard) instead, and never this card.
@@ -12,7 +13,7 @@ import { BookOpenText, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Disclosure } from "@/components/ui/disclosure";
-import { assumedLastSeen, isContentOnly, releasesSince, type Release } from "@/domain/changelog";
+import { announcedSince, assumedLastSeen, isContentOnly, type Release } from "@/domain/changelog";
 import { APP_RELEASE } from "@/lib/app-version";
 import { CHANGELOG, markSeen, readDeviceHistory, readLastSeen, readWelcome, setWelcome } from "@/lib/release-state";
 import { ReleaseList } from "./release-list";
@@ -24,7 +25,9 @@ type State = { kind: "hidden" } | { kind: "whats-new"; releases: Release[] };
 async function decide(): Promise<State> {
   const lastSeen = readLastSeen();
   if (lastSeen) {
-    const releases = releasesSince(CHANGELOG, lastSeen, APP_RELEASE);
+    const releases = announcedSince(CHANGELOG, lastSeen, APP_RELEASE);
+    // Nothing to tell (only patches since): quietly current.
+    if (!releases.length) markSeen(APP_RELEASE);
     return releases.length ? { kind: "whats-new", releases } : { kind: "hidden" };
   }
   const assumed = assumedLastSeen(await readDeviceHistory());
@@ -37,7 +40,7 @@ async function decide(): Promise<State> {
   // Recorded now, so later visits show the same notes until they're dismissed, even once this version has
   // written study data or preferences that would make the device look newer.
   markSeen(assumed);
-  const releases = releasesSince(CHANGELOG, assumed, APP_RELEASE);
+  const releases = announcedSince(CHANGELOG, assumed, APP_RELEASE);
   if (!releases.length) markSeen(APP_RELEASE);
   return releases.length ? { kind: "whats-new", releases } : { kind: "hidden" };
 }

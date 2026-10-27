@@ -22,8 +22,8 @@
     "Does being imperfect mean I’m always sinning?"
   ],
   "estimatedMinutes": {
-    "quick": 25,
-    "deep": 40
+    "quick": 10,
+    "deep": 35
   },
   "intro": "This is a common question, and it comes in many forms. Some people worry that God’s patience runs out, that being imperfect means they are always sinning, or that they can never know whether they’ve been forgiven. This investigation reads a parable about a son who came home, the Lord’s own answer to how often He forgives, what scripture and Church resources say about weakness and sin, and how people in the scriptures came to know they were forgiven. It can’t tell you whether you are forgiven. It can show you what the Lord has promised.",
   "sources": [
@@ -1434,7 +1434,7 @@
       "branchIds": [
         "am-i-good-enough"
       ],
-      "depth": "core"
+      "depth": "deep"
     },
     {
       "id": "knowing-forgiven",
@@ -1784,7 +1784,7 @@
           "note": "The Lord promises that whoever has repented is forgiven, and that He remembers those sins no more."
         }
       ],
-      "depth": "core"
+      "depth": "deep"
     },
     {
       "id": "keep-on-trying",

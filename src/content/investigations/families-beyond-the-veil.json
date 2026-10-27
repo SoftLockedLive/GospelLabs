@@ -23,7 +23,7 @@
     "Where are family members who have already died?"
   ],
   "estimatedMinutes": {
-    "quick": 25,
+    "quick": 10,
     "deep": 35
   },
   "intro": "Many people wonder about this, especially when they think of someone they love. It’s a tender question, and it deserves careful answers. In this investigation you’ll look at what scripture and official Church teaching actually say about life after death, the gospel taught to those who have died, ordinances for the dead, and how God judges. You’ll also notice where the sources stop, because some answers belong to God alone.",
@@ -1029,6 +1029,7 @@
       "id": "ordinances-for-the-dead",
       "title": "Ordinances for those who have died",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "A common question is whether people who die without being sealed in the temple, including those who weren’t members of the Church, are cut off from their families forever. Scripture and official Church teaching speak to this directly.",
       "sourceIds": [
@@ -1450,6 +1451,7 @@
       "id": "desires-of-the-heart",
       "title": "Judged by works and the desires of the heart",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "In January 1836, in the Kirtland Temple, Joseph Smith received a vision in which he saw his brother Alvin, and he marveled. Alvin had died years earlier without being baptized. The Lord’s explanation teaches how He judges all people. It describes how He judges, not how He will judge any particular person.",
       "sourceIds": [
@@ -1806,6 +1808,7 @@
       "id": "trust-in-his-love",
       "title": "What we know, and what we leave to God",
       "phase": "understand",
+      "depth": "deep",
       "method": "analytical",
       "intro": "Some questions about loved ones, like exactly where they are, who they are with, or what they will choose, scripture doesn’t answer. President Dallin H. Oaks, then First Counselor in the First Presidency, taught in 2019 how to approach questions like these, and Nephi showed the same attitude centuries earlier.",
       "sourceIds": [

@@ -173,12 +173,12 @@ describe("suggestInvestigations", () => {
   });
 
   it("matches the session length", () => {
-    const long = investigation("long", { estimatedMinutes: { quick: 30, deep: 40 } });
-    const short = investigation("short", { estimatedMinutes: { quick: 20, deep: 30 }, steps: [{ id: "a", deep: false }], branches: 0 });
+    const long = investigation("long", { estimatedMinutes: { quick: 15, deep: 35 } });
+    const short = investigation("short", { estimatedMinutes: { quick: 10, deep: 25 }, steps: [{ id: "a", deep: false }], branches: 0 });
     const quick = suggestInvestigations({ investigations: [long, short], progress: [], discoveries: [], length: "quick" });
     // The shorter one first, even listed second.
     expect(quick.map((s) => s.investigation.id)).toEqual(["short", "long"]);
-    expect(quick[0].reason).toEqual({ kind: "fits", minutes: 20 });
+    expect(quick[0].reason).toEqual({ kind: "fits", minutes: 10 });
     const deep = suggestInvestigations({ investigations: [short, long], progress: [], discoveries: [], length: "deep" });
     expect(deep.map((s) => s.investigation.id)).toEqual(["long", "short"]);
     expect(lengthFit(short, "deep")).toBeLessThan(lengthFit(long, "deep"));

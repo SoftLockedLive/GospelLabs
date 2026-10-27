@@ -36,8 +36,8 @@ const CASES: { type: ActivityType; investigation: string; difficulty: Difficulty
   { type: "clue", investigation: "recognizing-the-spirit", difficulty: "medium" },
   { type: "compare", investigation: "recognizing-the-spirit", difficulty: "hard" },
   { type: "sort", investigation: "christ-at-the-center", difficulty: "easy" },
-  // Vocabulary Matching is the second step of One by One at medium.
-  { type: "vocab-match", investigation: "one-by-one", difficulty: "medium", step: 1 },
+  // Vocabulary Matching is the second quick step of Again and Again at medium.
+  { type: "vocab-match", investigation: "again-and-again", difficulty: "medium", step: 1 },
 ];
 
 for (const { type, investigation: id, difficulty, step: stepIndex = 0 } of CASES) {

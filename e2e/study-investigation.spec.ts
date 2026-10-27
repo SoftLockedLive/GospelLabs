@@ -151,7 +151,7 @@ test("Continue anyway moves on at once, even before trying, and the step can be 
   await section.getByRole("button", { name: "Continue anyway" }).click();
 
   // On to the next step, with the skipped one marked "moved on" (not completed).
-  await expect(stepArticle(page, descendedBelow)).toBeVisible();
+  await expect(stepArticle(page, whoIsWithYou)).toBeVisible();
   await expect(stepStatus(page, 1)).toHaveAccessibleName(/Step 2: .*, moved on/);
   await expect(stepStatus(page, 2)).toHaveAccessibleName(/Step 3: .*, in progress \(current\)|Step 3: .*, not started \(current\)/);
 

@@ -102,7 +102,7 @@ The same pattern affected My Library and the notebook editor with a pasted-link 
 
 ## Held back for a content update
 
-Every investigation, attribute, passage, and Connect session was also reviewed and revised. Those changes are **not in 2.2.0**: the owner hasn't reviewed them, and some touch doctrine or the abuse-safety notices. They are saved, committed, on the local branch **`content-2.2.1`** (commit `3c60191`, based on 2.1.0; rebase it onto 2.2.0 before use). It holds:
+Every investigation, attribute, passage, and Connect session was also reviewed and revised. Those changes are **not in 2.2.0**: the owner hasn't reviewed them, and some touch doctrine or the abuse-safety notices. They are saved, committed, on the local branch **`content-2.2.1`** (commit `3c60191`, based on 2.1.0; rebase it onto the latest release before use). It holds:
 - **Hints:** about 40 final hints stated the answer while still crediting "You discovered"; they now point to a place without naming it.
 - **Verdicts:** one rule everywhere (supported / contradicted / goes beyond); several verdicts changed.
 - **Answers and levels:**
@@ -129,7 +129,7 @@ The only content change in 2.2.0 is each investigation's `estimatedMinutes`, mea
 
 ## For the owner
 
-1. **Quick is too long for a high-school freshman.** Measured honestly, a quick study takes 20–30 minutes (it was labeled 5–10), and Deep adds only a few minutes because nearly every step is a core step. 2.2.0 relabels it honestly and makes stopping after any step easy. The real fix belongs in the content update: choose the three or four essential steps in each investigation (`depth: "deep"` on the rest), and check that each Discovery Card still holds.
+1. **Quick is too long for a high-school freshman.** Measured honestly, a quick study takes 20–30 minutes (it was labeled 5–10), and Deep adds only a few minutes because nearly every step is a core step. 2.2.0 relabels it honestly and makes stopping after any step easy. The real fix belongs in the content update: choose the three or four essential steps in each investigation (`depth: "deep"` on the rest), and check that each Discovery Card still holds. **Done in 2.2.0.1** ([RELEASE_2.2.0.1.md](RELEASE_2.2.0.1.md)).
 2. **Review the content pass** on `content-2.2.1` before it ships. Start with the "Needs owner review (2.2)" notes in its DOCTRINAL_REVIEW.md:
    - verdict changes;
    - new statements and answers;
@@ -184,4 +184,4 @@ Released October 26, 2026 (Mountain time) on the owner's go-ahead:
 
 **Rollback:** `.gospellabs-previous` on Atlas now holds 2.1.0 (see [HOSTING.md](HOSTING.md)). 2.2.0 didn't change the stored data format, so going back is safe for learners' data. 1.1 stays preserved separately.
 
-**Next:** the content update (2.2.1) from `content-2.2.1` after the owner's review; rebase it onto `v2.2.0` first.
+**Next:** 2.2.0.1 shortened the quick studies ([RELEASE_2.2.0.1.md](RELEASE_2.2.0.1.md)). The reviewed content pass follows as the content update 2.2.1.0 from `content-2.2.1`, rebased onto the latest release.

@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog } from "@/components/ui/dialog";
 import { Eyebrow } from "@/components/ui/page-header";
 import type { StudyInvestigation } from "@/domain/study/content-schema";
-import { findStep } from "@/domain/study/engine/path";
+import { findStep, mainPath } from "@/domain/study/engine/path";
 import { completionState } from "@/domain/study/engine/status";
 import type { StudyProgress } from "@/domain/study/user-data";
 import {
@@ -195,7 +195,11 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
             value={length}
             onChange={setLength}
             options={[
-              { value: "quick", label: `Quick · about ${investigation.estimatedMinutes.quick} min`, description: "The core steps of the investigation." },
+              {
+                value: "quick",
+                label: `Quick · about ${investigation.estimatedMinutes.quick} min`,
+                description: `${mainPath(investigation, "quick").length} steps: the heart of the investigation.`,
+              },
               {
                 value: "deep",
                 label: `Deep · about ${investigation.estimatedMinutes.deep} min`,

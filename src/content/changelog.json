@@ -1,6 +1,17 @@
 {
-  "note": "What changed in each release, newest first, in plain words for learners. Drives the What's new card, the update notice, and Settings › About. Version numbers are MAJOR.MINOR.CONTENT (docs/VERSIONING.md); the newest entry must match package.json (checked by tests).",
+  "note": "What changed in each release, newest first, in plain words for learners. Drives the What's new card, the update notice, and Settings › About. Version numbers are MAJOR.MINOR.CONTENT.PATCH (docs/VERSIONING.md; three parts before 2.2.0.1); patches are listed only in Settings › About. The newest entry must match package.json (checked by tests).",
   "releases": [
+    {
+      "version": "2.2.0.1",
+      "date": "2026-10-26",
+      "kind": "patch",
+      "title": "Shorter quick studies",
+      "highlights": [
+        "A quick study is now three steps, about 10–15 minutes: the question, the heart of the answer, and a moment to reflect.",
+        "Want more? A deep study still has every step and the side questions, in about 25–35 minutes.",
+        "Partway through a quick study? You’ll pick up at your next step on the shorter path."
+      ]
+    },
     {
       "version": "2.2.0",
       "date": "2026-10-26",

@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog } from "@/components/ui/dialog";
 import type { StudyInvestigation } from "@/domain/study/content-schema";
+import { mainPath } from "@/domain/study/engine/path";
 import { DIFFICULTIES, DIFFICULTY_DESCRIPTIONS, DIFFICULTY_LABELS, type Difficulty, type StudyLength } from "@/domain/study/vocabulary";
 import { ChoiceCards } from "./choice-cards";
 
@@ -53,7 +54,7 @@ export function StudySettings({ investigation, difficulty, length, onDifficulty,
             value={length}
             onChange={onLength}
             options={[
-              { value: "quick", label: `Quick · about ${investigation.estimatedMinutes.quick} min`, description: "The core steps." },
+              { value: "quick", label: `Quick · about ${investigation.estimatedMinutes.quick} min`, description: `${mainPath(investigation, "quick").length} steps.` },
               {
                 value: "deep",
                 label: `Deep · about ${investigation.estimatedMinutes.deep} min`,

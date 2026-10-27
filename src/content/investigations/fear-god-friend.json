@@ -22,7 +22,7 @@
     "What does it mean to ‘fear’ someone you love?"
   ],
   "estimatedMinutes": {
-    "quick": 25,
+    "quick": 15,
     "deep": 30
   },
   "intro": "Many people notice something real: scripture tells us to ‘fear God,’ yet the Savior calls His disciples His friends. Both teachings are in the scriptures, and sometimes they sit side by side. In this investigation you’ll look closely at what the word ‘fear’ means in different passages, read a sermon where Jesus uses it both ways, and see how love, reverence, and friendship fit together.",
@@ -1063,6 +1063,7 @@
       "id": "fear-him-fear-not",
       "title": "A sermon to His friends",
       "phase": "evidence",
+      "depth": "deep",
       "method": "academic",
       "intro": "In Luke 12, with an enormous crowd gathered, the Savior speaks first to His disciples, and He addresses them as “my friends.” In four verses He tells them whom not to fear, whom to fear, and why they don’t need to be afraid. Read slowly.",
       "sourceIds": [
@@ -1387,6 +1388,7 @@
       "id": "love-casts-out-fear",
       "title": "Love that casts out fear",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "John and Mormon both wrote that “perfect love casteth out” fear. If fearing God is good, which fear does love cast out? And whose love is it? Elder David A. Bednar of the Quorum of the Twelve Apostles also taught about this.",
       "sourceIds": [
@@ -1846,6 +1848,7 @@
       "id": "friends-who-revere",
       "title": "Friends who revere Him",
       "phase": "understand",
+      "depth": "deep",
       "method": "analytical",
       "intro": "The Lord calls people His friends throughout scripture: Moses, Abraham, His disciples, and Joseph Smith. Look at what that friendship includes, and where reverence fits in it.",
       "sourceIds": [

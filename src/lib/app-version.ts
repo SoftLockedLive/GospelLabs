@@ -6,7 +6,7 @@
 export const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION ?? "dev";
 
 /**
- * The release number learners see, MAJOR.MINOR.CONTENT (docs/VERSIONING.md),
+ * The release number learners see, MAJOR.MINOR.CONTENT.PATCH (docs/VERSIONING.md),
  * from package.json via next.config.ts. Each release has an entry in
  * src/content/changelog.json. "0.0.0" only outside a Next build (unit tests).
  */

@@ -22,8 +22,8 @@
     "Why do we pray to the Father in the name of the Son?"
   ],
   "estimatedMinutes": {
-    "quick": 25,
-    "deep": 40
+    "quick": 15,
+    "deep": 35
   },
   "intro": "Many people wonder why Jesus Christ is at the heart of everything the gospel teaches. This investigation lets the scriptures answer. You'll read how the Savior Himself defined His gospel, why witnesses on two continents said there is no other name, how the Son's role fits within the Father's plan, and how the other principles of the gospel connect to Him.",
   "sources": [
@@ -1218,6 +1218,7 @@
       "id": "sent-by-the-father",
       "title": "Sent by the Father",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "If Jesus Christ is the center, where does Heavenly Father fit? These scriptures show the sending and the love beginning with the Father, and the Son coming to do His will. Gospel Labs suggests that centering on the Son is a way of honoring the Father. Test that idea against the sources.",
       "sourceIds": [
@@ -1529,6 +1530,7 @@
       "id": "everything-connects",
       "title": "The trunk and the branches",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "In an 1838 editorial, the Prophet Joseph Smith named the fundamental principles of the Latter-day Saints' religion in a single sentence, quoted here from Teachings of Presidents of the Church: Joseph Smith. Read it, then trace how other principles of the gospel connect to the testimony at its center.",
       "sourceIds": [

@@ -43,8 +43,8 @@ export type StudyLength = (typeof STUDY_LENGTHS)[number];
  * content, set by scripts/estimate-study-time.mjs). A test keeps every investigation inside these.
  */
 export const STUDY_LENGTH_MINUTES: Record<StudyLength, readonly [number, number]> = {
-  quick: [20, 30],
-  deep: [30, 40],
+  quick: [10, 15],
+  deep: [25, 35],
 };
 
 const minutes = (length: StudyLength) => `${STUDY_LENGTH_MINUTES[length][0]}–${STUDY_LENGTH_MINUTES[length][1]} min`;
@@ -54,7 +54,7 @@ export const STUDY_LENGTH_LABELS: Record<StudyLength, string> = {
   deep: `Deep study (${minutes("deep")})`,
 };
 
-/** "20–25 min" */
+/** "10–15 min" */
 export const studyLengthMinutes = minutes;
 
 /**

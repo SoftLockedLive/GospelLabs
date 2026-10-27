@@ -34,7 +34,7 @@ Each build is stamped with its UTC build time (for example `20261020221921`). Se
 
 ## Versions
 
-Releases are numbered MAJOR.MINOR.CONTENT and recorded in `src/content/changelog.json`. See [VERSIONING.md](VERSIONING.md) for the rule and the release steps. Tag the deployed commit `vX.Y.Z`.
+Releases are numbered MAJOR.MINOR.CONTENT.PATCH (three parts up to 2.2.0) and recorded in `src/content/changelog.json`. See [VERSIONING.md](VERSIONING.md) for the rule and the release steps. Tag the deployed commit `vW.X.Y.Z`.
 
 ## Deploying
 

@@ -21,7 +21,7 @@
     "How can I tell my own thoughts from inspiration?"
   ],
   "estimatedMinutes": {
-    "quick": 20,
+    "quick": 10,
     "deep": 30
   },
   "intro": "Many people wonder why they don't seem to feel the Spirit, or how they would recognize Him if He spoke to them. Behind many of these questions is an assumption: that the Spirit always arrives as a strong, unmistakable emotion. In this investigation you'll test that assumption against scripture: Elijah on the mount, a still voice in the Book of Mormon, the Lord's words to Oliver Cowdery, and Mormon's way of judging what is of God. Scripture won't hand you a formula, and it doesn't say everyone's experiences will feel the same. But it describes how the Spirit often speaks, how to recognize Him, and what He testifies of above all.",
@@ -1012,6 +1012,7 @@
       "id": "what-it-leads-to",
       "title": "What does it invite you to do?",
       "phase": "discover",
+      "depth": "deep",
       "method": "analytical",
       "intro": "Recognizing the Spirit isn't only about how something feels. Mormon gave a way to judge based on what an influence invites and persuades us to do, and Paul described the ‘fruit’ the Spirit produces in a person. Mormon was writing about “the Spirit of Christ,” which Preach My Gospel calls the Light of Christ. Preach My Gospel also shows President Gordon B. Hinckley using these same verses to answer how we recognize the promptings of the Spirit.",
       "sourceIds": [
@@ -1337,6 +1338,7 @@
       "id": "he-shall-testify-of-me",
       "title": "He shall testify of me",
       "phase": "understand",
+      "depth": "deep",
       "method": "academic",
       "intro": "Shortly before His death, the Savior promised His disciples the Comforter. What He said about the Holy Ghost's work points to the most important thing the Spirit testifies of, and gives one more way to recognize Him.",
       "sourceIds": [

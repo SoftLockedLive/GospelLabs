@@ -226,6 +226,17 @@ describe("changing length", () => {
     expect(progress.steps["go-deeper"]).toBeDefined();
   });
 
+  it("resuming a quick session moves on from a step the content has since made deep-only", () => {
+    // Saved on "go-deeper" in a quick session while that step was still a core one.
+    const saved = { ...apply(start("medium", "deep"), { type: "complete", step: NOTICE }, { type: "next" }, { type: "next" }), length: "quick" as const };
+    expect(saved.position).toEqual(DEEPER);
+    const resumed = apply(saved, { type: "setLength", length: "quick" });
+    expect(resumed.position).toEqual(REFLECT);
+    expect(completionState(INV, resumed)).toMatchObject({ total: 3, done: 1, currentIndex: 2 });
+    // On the path already: nothing changes.
+    expect(apply(resumed, { type: "setLength", length: "quick" })).toBe(resumed);
+  });
+
   it("returns from a branch when switching to a quick session", () => {
     const progress = apply(start("medium", "deep"), { type: "enterBranch", branchId: "friends" }, { type: "setLength", length: "quick" });
     expect(progress.position).toEqual(NOTICE);

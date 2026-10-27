@@ -3,6 +3,8 @@
 import { RefreshCw } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { isQuietUpdate } from "@/domain/changelog";
+import { APP_RELEASE } from "@/lib/app-version";
 import { saveAllWork, unsavedDrafts } from "@/lib/unsaved-work";
 import { fetchDeployedInfo, isUpdateAvailable, type DeployedInfo } from "@/lib/update-check";
 
@@ -16,6 +18,8 @@ type Problem = { kind: "drafts"; names: string[] } | { kind: "unsaved" } | null;
  *
  * Checks happen when the page opens, when it becomes visible again, when the
  * connection returns, and every half hour while open. Production builds only.
+ * A patch (only the last number of the version changed) is quiet: the fix
+ * arrives the next time Gospel Labs loads.
  */
 export function UpdateNotice() {
   const [available, setAvailable] = useState<DeployedInfo | null>(null);
@@ -29,7 +33,7 @@ export function UpdateNotice() {
     const check = async () => {
       if (!navigator.onLine) return;
       const deployed = await fetchDeployedInfo();
-      if (active && deployed && isUpdateAvailable(deployed.version)) setAvailable(deployed);
+      if (active && deployed && isUpdateAvailable(deployed.version) && !isQuietUpdate(APP_RELEASE, deployed.release)) setAvailable(deployed);
     };
     const onVisibilityChange = () => {
       if (document.visibilityState === "visible") void check();

@@ -3,22 +3,25 @@
  * (a tour, a theme choice, the version, and how to report a bug) and never
  * What's new. Returning learners get What's new for every release since the
  * one they last saw: recorded from 2.1 on, and before that inferred from what
- * is stored on the device. Most other specs run as learners already on this
- * version (see playwright.config.ts); these start from an empty browser.
+ * is stored on the device. Patches are never announced (2.2.0.1). Most other
+ * specs run as learners already on this version (see playwright.config.ts);
+ * these start from an empty browser.
  */
 import { join } from "node:path";
 import { readFileSync, writeFileSync } from "node:fs";
 import { expect, test, type Locator, type Page } from "@playwright/test";
 import rawChangelog from "@/content/changelog.json";
-import { compareVersions } from "@/domain/changelog";
+import { compareVersions, isContentOnly, type Release } from "@/domain/changelog";
 import { BACKUP_FROM_2_0, RECORD_FROM_1_1 } from "../src/persistence/legacy-fixtures";
 import { pick } from "./study-helpers";
 
 test.use({ storageState: { cookies: [], origins: [] } });
 
 const RELEASE = (JSON.parse(readFileSync(join(process.cwd(), "package.json"), "utf8")) as { version: string }).version;
-const RELEASES = rawChangelog.releases;
-const LATEST = RELEASES[0];
+const RELEASES = rawChangelog.releases as Release[];
+/** What's new leaves patches out. */
+const ANNOUNCED = RELEASES.filter((release) => release.kind !== "patch");
+const LATEST = ANNOUNCED[0];
 const LAST_SEEN = "gospel-labs:last-seen-version";
 const WELCOME = "gospel-labs:welcome";
 const AXE_PATH = join(process.cwd(), "node_modules", "axe-core", "axe.min.js");
@@ -26,7 +29,7 @@ const AXE_PATH = join(process.cwd(), "node_modules", "axe-core", "axe.min.js");
 const welcome = (page: Page) => page.getByRole("region", { name: "Welcome to Gospel Labs" });
 const whatsNew = (page: Page) => page.getByRole("complementary", { name: /Gospel Labs has been updated/ });
 const stored = (page: Page, key: string) => page.evaluate((k) => localStorage.getItem(k), key);
-const since = (version: string) => RELEASES.filter((release) => compareVersions(release.version, version) > 0);
+const since = (version: string) => ANNOUNCED.filter((release) => compareVersions(release.version, version) > 0);
 
 /** Sets localStorage before the app runs, without overwriting what the app writes later. */
 function seed(page: Page, entries: Record<string, string>) {
@@ -174,12 +177,41 @@ test("a recorded version shows only newer releases, and nothing once current", a
   await expect(whatsNew(page)).toHaveCount(0);
 });
 
+test("someone on the release before sees just what changed since, as a one-line note if it was only content", async ({ page }) => {
+  const previous = ANNOUNCED[1];
+  await seed(page, { [LAST_SEEN]: previous.version, [WELCOME]: "done" });
+  await page.goto("/");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  if (isContentOnly(since(previous.version))) {
+    const note = page.getByRole("complementary", { name: "New content" });
+    await expect(note).toContainText(`New content in ${LATEST.version}: ${LATEST.title}.`);
+    await expect(whatsNew(page)).toHaveCount(0);
+    await note.getByRole("button", { name: "Got it" }).click();
+    await expect(note).toHaveCount(0);
+  } else {
+    await expect(whatsNew(page)).toContainText(`${LATEST.version} · ${LATEST.title}`);
+    await expect(whatsNew(page)).not.toContainText(`${previous.version} ·`);
+    await whatsNew(page).getByRole("button", { name: "Got it" }).click();
+  }
+  expect(await stored(page, LAST_SEEN)).toBe(RELEASE);
+});
+
+test("someone who has seen every release but patches gets nothing, and is marked current", async ({ page }) => {
+  await seed(page, { [LAST_SEEN]: LATEST.version, [WELCOME]: "done" });
+  await page.goto("/");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await expect.poll(() => stored(page, LAST_SEEN)).toBe(RELEASE);
+  await expect(whatsNew(page)).toHaveCount(0);
+  await expect(page.getByRole("complementary", { name: "New content" })).toHaveCount(0);
+});
+
 test("Settings › About shows the version, every release, and the tour", async ({ page }) => {
   await seed(page, { [LAST_SEEN]: RELEASE, [WELCOME]: "done" });
   await page.goto("/settings");
   const about = page.getByRole("region", { name: "About" });
   await expect(about).toContainText(`Version${RELEASE}`);
-  await expect(about).toContainText(`${LATEST.version} · ${LATEST.title}`);
+  // Every release, patches included.
+  await expect(about).toContainText(`${RELEASES[0].version} · ${RELEASES[0].title}`);
   await about.getByText("Earlier releases").click();
   for (const release of RELEASES.slice(1)) await expect(about).toContainText(`${release.version} · ${release.title}`);
   await about.getByRole("button", { name: "Take a quick tour" }).click();

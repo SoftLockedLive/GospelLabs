@@ -9,7 +9,7 @@ import type { NextConfig } from "next";
 const appVersion = new Date().toISOString().replace(/\D/g, "").slice(0, 14);
 
 /**
- * The release number learners see (MAJOR.MINOR.CONTENT; see docs/VERSIONING.md).
+ * The release number learners see (MAJOR.MINOR.CONTENT.PATCH; see docs/VERSIONING.md).
  * package.json is its only source; src/content/changelog.json must have a
  * matching entry (checked by tests), so the app, the changelog, and the git tag agree.
  */

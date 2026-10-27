@@ -18,7 +18,8 @@ export const sameRef = (a: StepRef, b: StepRef) => a.stepId === b.stepId && a.br
 
 /**
  * Main-path steps for a session length. Quick sessions follow the core steps
- * (about 5–10 minutes); deep sessions add the deeper steps (20–40 minutes).
+ * (three: the question, the heart of the answer, and a reflection); deep
+ * sessions add the deeper steps. STUDY_LENGTH_MINUTES says how long each takes.
  */
 export function mainPath(investigation: StudyInvestigation, length: StudyLength): Step[] {
   return length === "deep" ? investigation.steps : investigation.steps.filter((step) => step.depth === "core");

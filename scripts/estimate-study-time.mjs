@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 /**
  * Estimates how long each guided investigation really takes, to keep its
- * `estimatedMinutes` honest. Counts what a learner reads at Medium (the start
- * screen, each step's intro, activity, explanation and insight, the scripture
- * and excerpts in its evidence the first time each appears, and the Discovery
- * Card), reads it at 180 words
- * a minute (a phone, with scripture), and adds a minute per step for working
- * the activity. Quick is the core steps; Deep is every step and side question.
+ * `estimatedMinutes` honest. Counts what a learner reads at Medium (the
+ * question, hook and intro on the start screen; each step's intro, activity
+ * and insight; the scripture and excerpts in its evidence the first time each
+ * appears; and the big idea on the end screen), reads it at 180 words a minute
+ * (a phone, with scripture), and adds a minute per step for working the
+ * activity. Extra reading a learner opens or scrolls to only if they want it
+ * isn't counted: the start screen's common questions and "question beneath
+ * this one" below Begin, and the full write-up behind "See everything you
+ * found". Quick is the core steps; Deep is every step and side question.
  *
  * Usage: node scripts/estimate-study-time.mjs           (prints declared vs estimated)
  *        node scripts/estimate-study-time.mjs --write   (sets each estimatedMinutes, rounded to 5)
@@ -18,10 +21,11 @@ const WORDS_PER_MINUTE = 180;
 const MINUTES_PER_STEP = 1;
 const dir = new URL("../src/content/investigations/", import.meta.url);
 /**
- * Keys that hold ids, answers, text shown only on request (hints, wrong-answer feedback, and the
- * explanation, behind "Why it fits" once an answer is worked out), or Map connections (on the card).
+ * Keys that hold ids, settings (a step's phase, method, and depth), answers, text shown only on request
+ * (hints, wrong-answer feedback, and the explanation, behind "Why it fits" once an answer is worked out),
+ * or Map connections (on the card).
  */
-const SKIP = new Set(["id", "ids", "sourceIds", "concepts", "connections", "correct", "url", "hints", "feedback", "explanation", "review", "answer", "target", "targets", "verdict"]);
+const SKIP = new Set(["id", "ids", "sourceIds", "concepts", "connections", "correct", "url", "hints", "feedback", "explanation", "review", "answer", "target", "targets", "verdict", "phase", "method", "depth"]);
 
 const words = (text) => (text.match(/[\p{L}\p{N}’']+/gu) ?? []).length;
 
@@ -60,7 +64,7 @@ console.log("investigation".padEnd(30), "quick (declared → estimate)", "  deep
 for (const name of names) {
   const data = JSON.parse(await readFile(new URL(name, dir), "utf8"));
   const sources = new Map((data.sources ?? []).map((source) => [source.id, source]));
-  const opening = count([data.hook, data.intro, data.commonQuestions ?? [], data.primaryQuestion?.note ?? ""]) + count(data.discovery ?? {});
+  const opening = count([data.question, data.hook, data.intro, data.discovery?.keyIdeas?.[0] ?? ""]);
   const core = data.steps.filter((step) => (step.depth ?? "core") === "core");
   const branchSteps = (data.branches ?? []).flatMap((branch) => [branch, ...branch.steps]);
   const quickSeen = new Set();

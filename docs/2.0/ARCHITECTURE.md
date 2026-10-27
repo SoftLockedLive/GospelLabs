@@ -32,9 +32,9 @@ engine, the Notebook, and the Discovery Map can't drift into incompatible models
 Phases are tags on steps, not mandatory screens. An investigation is a guided
 main path of 3–9 steps with optional side branches. Each step has one activity
 per difficulty; difficulty changes the kind of reasoning (recognize → explain →
-analyze → synthesize), not the number of questions. Quick sessions (5–10 min)
-follow `depth: "core"` steps; deep sessions (20–40 min) add `depth: "deep"`
-steps, branches, and reflections.
+analyze → synthesize), not the number of questions. Quick sessions (10–15 min)
+follow the three `depth: "core"` steps (question, big idea, reflection); deep
+sessions (25–35 min) add the `depth: "deep"` steps and the side branches.
 
 Completing an investigation automatically creates a **Discovery Card**. Cards
 feed both the **Notebook** (as cards) and the **Discovery Map** (as nodes and

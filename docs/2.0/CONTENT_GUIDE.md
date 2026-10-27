@@ -83,6 +83,12 @@ one-sentence `note`. Don't add connections just to grow the graph.
 6. **Discovery summary**: what the evidence shows, key ideas, how it points to Christ,
    and honest open questions.
 
+**The quick path** (from 2.2.0.1) is three `core` steps: the opening question, the step
+whose insight gives the big idea (the first of `keyIdeas`, which the end screen shows),
+and the closing reflection. Every other main-path step is `"depth": "deep"`. A quick
+study should take 10–15 minutes and a deep one 25–35 (`STUDY_LENGTH_MINUTES`); run
+`node scripts/estimate-study-time.mjs --write` after changing steps.
+
 Use methods of learning (Corbridge) where they fit: `academic` for close reading,
 `analytical` for weighing evidence, `scientific` for "try it" invitations (e.g.
 Alma 32), `divine` for prayerful reflection. Not every investigation needs all four.
