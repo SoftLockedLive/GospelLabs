@@ -16,7 +16,7 @@ export function ComeUntoChrist({ investigation, actions }: { investigation: Inve
       aria-labelledby="come-unto-christ-heading"
       className="rounded-xl border border-accent/25 bg-linear-to-b from-accent-soft to-transparent p-4 sm:p-6"
     >
-      <p className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase">Reflection · Optional</p>
+      <p className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase">Reflection · optional</p>
       <h3 id="come-unto-christ-heading" className="mt-1.5 text-lg font-semibold tracking-tight text-fg">
         Come unto Christ
       </h3>

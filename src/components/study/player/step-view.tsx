@@ -1,12 +1,13 @@
 "use client";
 
 /**
- * One step of an investigation: its phase and method, framing, the activity
- * (at the learner's difficulty), and once it's done, what it brings out,
- * the concepts it touched, any side question it opens, and the way on.
+ * One step of an investigation: its phase and method (from `sm` up), framing,
+ * the activity (at the learner's difficulty), and once it's done, what it
+ * brings out, the concepts it touched, any side question it opens, and the
+ * way on.
  */
-import { ArrowLeft, ArrowRight, CornerDownLeft, Flag, Lightbulb } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { ArrowLeft, ArrowRight, ChevronDown, CornerDownLeft, Flag, Lightbulb } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { activitySourceIds, resolveActivity } from "@/domain/study/content-registry";
 import type { Source } from "@/domain/study/content-schema";
@@ -16,6 +17,7 @@ import { branchesOffered, findBranch, findStep, isStepDone, refKey, stepDifficul
 import { canOpenStep, completionState, statusOf } from "@/domain/study/engine/status";
 import type { StudyProgress } from "@/domain/study/user-data";
 import type { StudyAssistant } from "@/lib/assist";
+import { cn } from "@/lib/cn";
 import type { Preferences } from "@/lib/preferences";
 import { ActivityRenderer } from "../activities/activity-renderer";
 import { EvidencePanel } from "../activities/evidence-panel";
@@ -40,6 +42,8 @@ interface StepViewProps {
   onDismissSuggestion: () => void;
   dismissedBranches: ReadonlySet<string>;
   onDismissBranch: (branchId: string) => void;
+  /** Progress is being saved, so stopping after this step loses nothing (and the learner can be told so). */
+  saved?: boolean;
 }
 
 export function StepView(props: StepViewProps) {
@@ -106,7 +110,7 @@ export function StepView(props: StepViewProps) {
         {step.intro && <p className="text-[0.975rem] leading-relaxed text-muted">{step.intro}</p>}
       </header>
 
-      {stepSources.length > 0 && <EvidencePanel sources={stepSources} title="Also in this step" />}
+      {stepSources.length > 0 && <EvidencePanel sources={stepSources} title="Sources for this step" />}
 
       <div className="rounded-2xl border border-line bg-surface p-4 shadow-soft sm:p-6">
         <ActivityRenderer
@@ -147,7 +151,7 @@ export function StepView(props: StepViewProps) {
             </h3>
             <ProvenanceLabel provenance="suggested" />
           </div>
-          <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{step.insight}</p>
+          <StepInsight key={key} text={step.insight} />
           <StepConceptList concepts={concepts} demonstrated={status === "complete"} />
         </section>
       )}
@@ -188,7 +192,8 @@ export function StepView(props: StepViewProps) {
       )}
 
       <nav aria-label="Step navigation" className="flex flex-col-reverse gap-3 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
-        {index > 0 || inBranch ? (
+        {/* At the end of a one-step side question, "Return to the investigation" (below) already goes back. */}
+        {(index > 0 || inBranch) && !(inBranch && index === 0 && done && isLast) ? (
           <Button variant="ghost" size="lg" onClick={() => dispatch({ type: "previous" })} className="w-full sm:w-auto">
             {inBranch && index === 0 ? <CornerDownLeft aria-hidden /> : <ArrowLeft aria-hidden />}
             {inBranch && index === 0 ? "Back to the investigation" : "Previous step"}
@@ -214,6 +219,52 @@ export function StepView(props: StepViewProps) {
             </Button>
           ))}
       </nav>
+      {/* Short sessions are fine: say so where someone might stop, rather than making a whole investigation feel required. */}
+      {done && !isLast && !inBranch && props.saved && (
+        <p className="-mt-2 text-center text-sm text-muted sm:text-right">A good place to stop if you need to. Your place is saved for next time.</p>
+      )}
     </article>
+  );
+}
+
+/**
+ * What the step brings out. On phones it's cut to three lines with "Read more", so the way on ("Next step") stays
+ * close to the success message instead of a long paragraph below it; from `sm` up it's shown in full. The full text
+ * is always in the page (the clamp is only visual), so screen readers and find-in-page get all of it.
+ */
+function StepInsight({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  // Whether the clamp actually cuts the text: short insights, and every insight from `sm` up, need no toggle.
+  const [clamped, setClamped] = useState(false);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const textId = useId();
+
+  useEffect(() => {
+    const element = textRef.current;
+    if (!element || expanded) return;
+    // Reports once on observe, then whenever the size changes (rotating the phone, crossing `sm`).
+    const observer = new ResizeObserver(() => setClamped(element.scrollHeight > element.clientHeight + 1));
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [expanded]);
+
+  return (
+    <div className="flex flex-col items-start gap-1">
+      <p ref={textRef} id={textId} className={cn("font-serif text-[1.05rem] leading-relaxed text-fg", !expanded && "line-clamp-3 sm:line-clamp-none")}>
+        {text}
+      </p>
+      {(clamped || expanded) && (
+        <button
+          type="button"
+          aria-expanded={expanded}
+          aria-controls={textId}
+          onClick={() => setExpanded((value) => !value)}
+          className="inline-flex min-h-11 items-center gap-1.5 rounded-md text-sm font-medium text-accent hover:text-accent-strong sm:hidden"
+        >
+          {expanded ? "Show less" : "Read more"}
+          <ChevronDown aria-hidden className={cn("size-4 transition-transform", expanded && "rotate-180")} />
+        </button>
+      )}
+    </div>
   );
 }

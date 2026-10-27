@@ -83,7 +83,7 @@ export function ConnectionDialog({ graph, editor, onClose, onSaved }: Connection
     <Dialog
       open={editor !== null}
       onClose={onClose}
-      title={editing ? "Edit your connection" : "Connect two discoveries"}
+      title={editing ? "Edit your connection" : "Connect two things on your Map"}
       description={
         <>
           Connections you add are your own interpretation, and are labeled that way on your Map. Explain in your own words
@@ -110,7 +110,7 @@ export function ConnectionDialog({ graph, editor, onClose, onSaved }: Connection
             <span className="font-medium">{label(to)}</span>
           </p>
         ) : (
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <NodePicker
               legend="From"
               nodes={graph.nodes}

@@ -39,7 +39,7 @@ function describeImport({ summary, preferencesRestored, preferencesFailed }: Imp
   const preferences = preferencesRestored
     ? " Appearance and study preferences restored."
     : preferencesFailed
-      ? " Your preferences couldn't be restored on this device."
+      ? " Your preferences couldn’t be restored on this device."
       : "";
   if (summary.mode === "replace") {
     return `Replaced your data with ${describeCounts(summaryCounts(summary, "added"))} from the backup.${preferences}`;
@@ -73,7 +73,7 @@ export function DataManagement() {
         tone: "success",
         text:
           `Downloaded a backup of ${describeCounts(exported, "your preferences (nothing else is saved yet)")}.` +
-          (unreadable ? ` ${unreadable} damaged ${unreadable === 1 ? "record" : "records"} couldn't be included.` : ""),
+          (unreadable ? ` ${unreadable} damaged ${unreadable === 1 ? "record" : "records"} couldn’t be included.` : ""),
       });
     } catch (cause) {
       setFeedback({ tone: "error", text: toStorageError(cause).message });
@@ -94,12 +94,12 @@ export function DataManagement() {
     try {
       text = await file.text();
     } catch {
-      setFeedback({ tone: "error", text: "That file couldn't be read." });
+      setFeedback({ tone: "error", text: "That file couldn’t be read." });
       return;
     }
     const result = parseBackup(text);
     if (!result.ok) {
-      setFeedback({ tone: "error", text: `Couldn't import “${file.name}”: ${result.error.message} Nothing was changed.` });
+      setFeedback({ tone: "error", text: `Couldn’t import “${file.name}”: ${result.error.message} Nothing was changed.` });
       return;
     }
     setFeedback(null);
@@ -118,7 +118,7 @@ export function DataManagement() {
         <ul className="flex flex-col divide-y divide-line">
           <DataAction
             title="Export backup"
-            description="Download everything as a JSON file: research investigations, guided-investigation progress, Discovery Cards, your Map connections, explorations, and your preferences. Keep it somewhere safe."
+            description="Download everything as a JSON file: your research notebooks, investigation progress, Discovery Cards, Map connections, what you’ve saved in Scripture Explorer and Character of Christ, and your preferences. Keep it somewhere safe."
             action={
               <Button variant="secondary" size="md" onClick={exportData} disabled={exporting || unavailable}>
                 <Download aria-hidden />
@@ -128,7 +128,7 @@ export function DataManagement() {
           />
           <DataAction
             title="Import backup"
-            description="Restore from a backup file, including files from Gospel Labs 1.x. You'll see what would change and choose whether to merge or replace before anything changes."
+            description="Restore from a backup file, including files from Gospel Labs 1.x. You’ll see what would change and choose whether to merge or replace before anything changes."
             action={
               <>
                 <input
@@ -149,7 +149,7 @@ export function DataManagement() {
           />
           <DataAction
             title="Delete all data"
-            description="Permanently remove every investigation and all study data from this device. Preferences are kept."
+            description="Permanently remove your research notebooks, investigation progress, Discovery Cards, Map connections, and everything else you’ve saved from this device. Preferences are kept."
             action={
               <Button
                 variant="danger"

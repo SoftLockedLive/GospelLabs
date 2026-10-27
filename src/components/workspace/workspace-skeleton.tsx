@@ -1,7 +1,7 @@
-/** Loading placeholder shaped like the investigation workspace. */
+/** Loading placeholder shaped like the research notebook workspace. */
 export function WorkspaceSkeleton() {
   return (
-    <div role="status" aria-label="Loading investigation" className="flex animate-pulse flex-col gap-8">
+    <div role="status" aria-label="Loading research notebook" className="flex animate-pulse flex-col gap-8">
       <div className="flex flex-col gap-3">
         <div className="h-4 w-24 rounded bg-surface" />
         <div className="h-8 w-2/3 max-w-lg rounded bg-surface" />

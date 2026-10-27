@@ -9,7 +9,7 @@ export function StartingPoints({ question }: { question: CuratedQuestion }) {
       <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm text-fg [&::-webkit-details-marker]:hidden">
         <span className="flex items-center gap-2">
           <BookOpen aria-hidden className="size-4 text-accent" />
-          Starting points from the question bank
+          Starting points from the Question Bank
         </span>
         <ChevronDown aria-hidden className="size-4 text-subtle transition-transform group-open:rotate-180" />
       </summary>

@@ -67,7 +67,7 @@ export function StudyView({ bundle, progress, session, onOverview, ...stepProps 
             This investigation was updated since you last studied it. Steps you finished are kept; unfinished ones start fresh.
           </p>
           <Button variant="ghost" size="sm" onClick={() => setUpdateNoticeSeen(true)} className="shrink-0">
-            OK
+            Got it
           </Button>
         </div>
       )}
@@ -87,7 +87,7 @@ export function StudyView({ bundle, progress, session, onOverview, ...stepProps 
         </section>
       )}
 
-      <StepView bundle={bundle} progress={progress} dispatch={session.dispatch} {...stepProps} />
+      <StepView bundle={bundle} progress={progress} dispatch={session.dispatch} saved={!storageMessage} {...stepProps} />
     </div>
   );
 }

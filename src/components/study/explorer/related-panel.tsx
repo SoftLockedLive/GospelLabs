@@ -105,7 +105,7 @@ export function CompareView({ passage, sources, sourceId, onClose }: CompareView
           <X aria-hidden className="size-4" />
         </button>
       </div>
-      <div className="mt-5 grid gap-5 md:grid-cols-2 md:gap-6">
+      <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
         {[current, other].map((source) => (
           <article key={source.id} className="min-w-0 rounded-xl border border-line bg-surface-sunken p-4">
             <h3 className="mb-2 text-sm font-semibold text-fg">{source.label}</h3>

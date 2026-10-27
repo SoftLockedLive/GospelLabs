@@ -13,7 +13,7 @@ export default function ErrorPage({ error, reset }: { error: Error & { digest?: 
         icon={TriangleAlert}
         tone="danger"
         title="Something went wrong on this page"
-        description="Your saved study isn't affected: research notebooks, investigations, and discoveries are all still on this device. Try again, or go back to Home."
+        description="Nothing you’ve saved is affected: your research notebooks, investigation progress, and Discovery Cards are all still on this device. Try again, or go back to Home."
         actions={
           <>
             <Button onClick={reset}>Try again</Button>

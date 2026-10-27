@@ -15,7 +15,7 @@ interface LibraryItemProps {
 }
 
 export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
-  const title = investigation.title.trim() || "Untitled investigation";
+  const title = investigation.title.trim() || "Untitled notebook";
   const section = getSection(investigation.currentSection);
   const { evidence } = investigation;
   const headingId = `library-item-${investigation.id}`;
@@ -28,16 +28,16 @@ export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
       <div className="flex flex-wrap items-center gap-2">
         <StatusBadge status={investigation.status} />
         {investigation.category && (
-          <span className="font-mono text-[11px] tracking-wide text-subtle uppercase">{investigation.category}</span>
+          <span className="min-w-0 font-mono text-[11px] tracking-wide break-all text-subtle uppercase">{investigation.category}</span>
         )}
       </div>
-      <h2 id={headingId} className="mt-2.5 font-medium text-fg">
+      <h2 id={headingId} className="mt-2.5 font-medium break-words text-fg">
         <Link href={investigationHref(investigation.id)} className="rounded-sm hover:text-accent">
           {title}
         </Link>
       </h2>
       {investigation.question && investigation.question !== title && (
-        <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted">{investigation.question}</p>
+        <p className="mt-1 line-clamp-2 text-sm leading-relaxed break-words text-muted">{investigation.question}</p>
       )}
       <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-subtle">
         <div className="flex gap-1">
@@ -82,7 +82,7 @@ export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
                 href={investigationHref(investigation.id, "research")}
                 className="inline-block rounded-sm py-1 text-xs text-accent hover:underline"
               >
-                Open in Research
+                Open notebook
               </Link>
             </li>
           </ul>

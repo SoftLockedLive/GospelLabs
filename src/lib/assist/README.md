@@ -17,7 +17,7 @@ the browser.
    store secrets in localStorage, IndexedDB, or backups.
 2. **Label everything.** Every response has `provenance: "ai"`, and the UI
    shows it with `<ProvenanceLabel provenance="ai" />`, which reads
-   "AI-generated — not doctrine or revelation" (`PROVENANCE_LABELS.ai`).
+   "AI-generated—not doctrine or revelation" (`PROVENANCE_LABELS.ai`).
    Never present generated text as scripture, Church teaching, a speaker's
    words, or the learner's own discovery.
 3. **Never write into curated content.** Generated text is never saved into

@@ -34,6 +34,9 @@ async function decide(): Promise<State> {
     if (!readWelcome()) setWelcome("pending");
     return { kind: "hidden" };
   }
+  // Recorded now, so later visits show the same notes until they're dismissed, even once this version has
+  // written study data or preferences that would make the device look newer.
+  markSeen(assumed);
   const releases = releasesSince(CHANGELOG, assumed, APP_RELEASE);
   if (!releases.length) markSeen(APP_RELEASE);
   return releases.length ? { kind: "whats-new", releases } : { kind: "hidden" };
@@ -59,6 +62,13 @@ export function WhatsNew() {
     // Someone returning doesn't need the welcome as well.
     if (readWelcome() !== "done") setWelcome("done");
     setState({ kind: "hidden" });
+    // The card and its buttons are gone: keep focus on the page, at its heading.
+    requestAnimationFrame(() => {
+      const heading = document.querySelector<HTMLElement>("#main h1");
+      if (!heading) return;
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    });
   };
 
   const { releases } = state;
@@ -123,7 +133,7 @@ export function WhatsNew() {
           )}
         </div>
       </div>
-      <TourDialog open={tour} onClose={() => setTour(false)} />
+      <TourDialog open={tour} onClose={() => setTour(false)} finishLabel="Done" />
     </aside>
   );
 }

@@ -14,6 +14,7 @@ import { evidenceOptions } from "@/domain/study/activities/evidence-connect";
 import { exampleOptions, meaningOptions } from "@/domain/study/activities/vocab-match";
 import { resolveActivity } from "@/domain/study/content-registry";
 import type { Activity, ActivityOf, CheckedActivity, Step, StudyInvestigation } from "@/domain/study/content-schema";
+import { ATTEMPTS_BEFORE_REVEAL } from "@/domain/study/engine/hints";
 import { mainPath } from "@/domain/study/engine/path";
 import { DIFFICULTY_LABELS, VERDICT_LABELS, VERDICTS, type Difficulty, type StudyLength } from "@/domain/study/vocabulary";
 import { getInvestigation } from "@/lib/study-content";
@@ -253,7 +254,7 @@ async function answerClue(scope: Locator, activity: ActivityOf<"clue">, response
  */
 async function connectOnBoard(page: Page, board: Locator, labels: { left: string; right: string }, leftIndex: number, rightIndex: number) {
   if (isNarrow(page)) {
-    await board.getByRole("button", { name: /^(Choose from|Change)\b/ }).nth(leftIndex).click();
+    await board.getByRole("button", { name: /^(Choose a match|Change)\b/ }).nth(leftIndex).click();
     await board.getByRole("list", { name: `${labels.right} for item ${leftIndex + 1}` }).getByRole("button").nth(rightIndex).click();
     return;
   }
@@ -301,14 +302,20 @@ export async function solveActivity(page: Page, scope: Locator, activity: Activi
   await expect(fitsTheEvidence(section)).toBeVisible();
 }
 
-/** Three different wrong answers in a row, each checked: enough to offer "Show me" and "Continue anyway". */
-export async function threeWrongTries(page: Page, section: Locator, activity: CheckedActivity) {
-  for (let variant = 0; variant < 3; variant++) {
+/**
+ * Different wrong answers in a row, each checked. The default count is just enough to offer "Show me"
+ * ("Continue anyway" is there from the start).
+ */
+export async function wrongTries(page: Page, section: Locator, activity: CheckedActivity, count = ATTEMPTS_BEFORE_REVEAL) {
+  for (let variant = 0; variant < count; variant++) {
     await answer(page, section, activity, wrongResponse(activity, variant));
     await checkButton(section).click();
     await expect(section.getByText("Change your answer, then check again.")).toBeVisible();
   }
 }
+
+/** Three wrong tries: more than enough to offer "Show me". Kept for specs written when it took three. */
+export const threeWrongTries = (page: Page, section: Locator, activity: CheckedActivity) => wrongTries(page, section, activity, 3);
 
 /**
  * Works through the current main-path step at `difficulty`, then moves on
@@ -335,7 +342,7 @@ export async function completeInvestigation(page: Page, id: string, settings: { 
     await solveStep(page, step, settings.difficulty, { next: !last });
     if (last) await stepArticle(page, step).getByRole("button", { name: "See your discovery" }).click();
   }
-  await expect(page.getByText("Saved to your Discovery Notebook")).toBeVisible();
+  await expect(page.getByText("Saved to your Notebook.")).toBeVisible();
   return inv;
 }
 

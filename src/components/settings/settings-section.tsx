@@ -15,7 +15,7 @@ export function SettingsSection({ icon: Icon, title, description, children }: Se
   return (
     <section aria-labelledby={headingId} className="scroll-mt-24">
       <Card>
-        <CardContent className="grid gap-6 md:grid-cols-[minmax(0,15rem)_1fr] md:gap-10">
+        <CardContent className="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,15rem)_1fr] md:gap-10">
           <div>
             <div className="flex items-center gap-3">
               <span aria-hidden className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">

@@ -35,13 +35,25 @@ export default function CharacterPage() {
   const invitationVerse = invitation?.verses?.find((verse) => verse.number === MEEK_AND_LOWLY.verse);
 
   return (
-    <PageContainer className="flex flex-col gap-12">
+    <PageContainer className="flex flex-col gap-10 sm:gap-12">
       <PageHeader
         eyebrow="Character of Christ"
         title="Learn of Him"
-        description="Study the Savior’s character—what each attribute means, the words that describe it, what the scriptures teach, and how Jesus Christ showed it."
+        description="Choose one of the Savior’s attributes to learn what it means and how He showed it."
       />
 
+      <section aria-labelledby="attributes-title" className="flex flex-col gap-5">
+        <h2 id="attributes-title" className="text-lg font-semibold tracking-tight text-fg sm:text-xl">
+          Attributes of the Savior
+        </h2>
+        {items.length > 0 ? (
+          <AttributeGrid attributes={items} />
+        ) : (
+          <EmptyState icon={Sparkles} title="Attributes are on their way" description="Check back soon." className="bg-surface" />
+        )}
+      </section>
+
+      {/* The introduction follows the tiles: on a phone the first screen should offer attributes to open, not a citation. */}
       <section aria-label="About the Character of Christ" className="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         {invitation && invitationVerse && (
           <figure className="flex flex-col justify-center gap-3 rounded-2xl border border-sacred-line bg-sacred p-5 sm:p-7">
@@ -63,17 +75,6 @@ export default function CharacterPage() {
             <SourceLink source={preachMyGospel}>Quoted from {preachMyGospel.label}</SourceLink>
           )}
         </div>
-      </section>
-
-      <section aria-labelledby="attributes-title" className="flex flex-col gap-5">
-        <h2 id="attributes-title" className="text-lg font-semibold tracking-tight text-fg sm:text-xl">
-          Attributes of the Savior
-        </h2>
-        {items.length > 0 ? (
-          <AttributeGrid attributes={items} />
-        ) : (
-          <EmptyState icon={Sparkles} title="Attributes are on their way" description="Check back soon." className="bg-surface" />
-        )}
       </section>
 
       {edges.length > 0 && (

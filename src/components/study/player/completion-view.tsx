@@ -1,16 +1,19 @@
 "use client";
 
 /**
- * The end of an investigation: a calm summary of the discovery, saved as a
- * Discovery Card. What the learner worked out is labeled "You discovered";
- * what was shown or explained is labeled "Suggested by Gospel Labs". No
- * scores, no confetti.
+ * The end of an investigation, saved as a Discovery Card. It opens with one
+ * short card a phone shows at a glance: a small celebration, "Saved to your
+ * Notebook", the title, the big idea, and the concepts, then where to go next.
+ * Everything else (the full summary, key ideas, connections and their
+ * evidence, how it points to Christ, questions to carry forward) waits under
+ * one "See everything you found" disclosure, closed at first. What the
+ * learner worked out is labeled "You discovered"; what was shown or explained
+ * is labeled "Suggested by Gospel Labs". No scores.
  */
-import { ArrowLeft, BookMarked, Check, Heart, ListChecks, Network, Route, Sparkles } from "lucide-react";
+import { ArrowLeft, BookMarked, Check, ChevronDown, Heart, ListChecks, Network, PartyPopper, Route, Sparkles } from "lucide-react";
 import { useEffect, useId, useState, type ReactNode } from "react";
 import { ButtonLink, Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/input";
-import { Eyebrow } from "@/components/ui/page-header";
 import type { StudyInvestigation } from "@/domain/study/content-schema";
 import type { CardConnection, DiscoveryCard, StudyProgress } from "@/domain/study/user-data";
 import { RELATION_PHRASES } from "@/domain/study/vocabulary";
@@ -56,11 +59,12 @@ function ConnectionItem({ connection, card }: { connection: CardConnection; card
   const evidence = connection.sourceIds.map((id) => card.sources.find((source) => source.id === id)).filter((source) => !!source);
   return (
     <li className="rounded-xl border border-line bg-surface-sunken px-4 py-3">
-      <p className="text-sm leading-relaxed text-fg">
-        <span className="font-semibold">{connection.from.label}</span> <span className="text-muted">{RELATION_PHRASES[connection.relation]}</span>{" "}
-        <span className="font-semibold">{connection.to.label}</span>
+      {/* The note leads: it says the connection in plain words; the relation under it is how the Map names it. */}
+      <p className="text-sm leading-relaxed text-fg">{connection.note}</p>
+      <p className="mt-1.5 text-xs leading-relaxed text-muted">
+        <span className="font-semibold text-fg">{connection.from.label}</span> {RELATION_PHRASES[connection.relation]}{" "}
+        <span className="font-semibold text-fg">{connection.to.label}</span>
       </p>
-      <p className="mt-1 text-sm leading-relaxed text-muted">{connection.note}</p>
       {evidence.length > 0 && (
         <p className="mt-2 flex flex-wrap items-center gap-2 text-xs text-subtle">
           <span>Evidence:</span>
@@ -79,11 +83,15 @@ function ConnectionItem({ connection, card }: { connection: CardConnection; card
 export function CompletionView({ investigation, progress, card, saved, saveError, onSaveCard, noteStatus, onNoteChange, onReviewSteps, assistant }: CompletionViewProps) {
   const [followUps, setFollowUps] = useState<string[]>(investigation.discovery.openQuestions);
   const noteId = useId();
+  const bigIdeaId = useId();
   const { discovery } = investigation;
+  // The first key idea is the clearest one-line answer (a summary's first sentence often only sets up the question).
+  const [bigIdea] = discovery.keyIdeas;
   const demonstratedConcepts = card.concepts.filter((concept) => concept.demonstrated);
   const suggestedConcepts = card.concepts.filter((concept) => !concept.demonstrated);
   const demonstrated = card.connections.filter((connection) => connection.provenance === "demonstrated");
   const suggested = card.connections.filter((connection) => connection.provenance === "suggested");
+  const nothingDemonstrated = demonstratedConcepts.length + demonstrated.length === 0;
 
   useEffect(() => {
     let active = true;
@@ -98,17 +106,62 @@ export function CompletionView({ investigation, progress, card, saved, saveError
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
-      <header className="motion-reveal">
-        <Eyebrow>Your discovery</Eyebrow>
-        <h1 tabIndex={-1} className="mt-3 text-2xl font-semibold tracking-tight text-fg outline-none sm:text-3xl">
+      <header className="motion-reveal rounded-2xl border border-green/30 bg-surface p-5 shadow-soft sm:p-7">
+        <p className="flex items-center gap-2 text-sm font-semibold text-green">
+          <PartyPopper aria-hidden className="motion-success size-5" />
+          You finished the investigation!
+        </p>
+        {saved && (
+          <p role="status" className="motion-success mt-3 inline-flex items-center gap-2 rounded-full border border-green/35 bg-green-soft px-3 py-1 text-sm text-fg">
+            <Check aria-hidden className="size-4 text-green" />
+            Saved to your Notebook.
+          </p>
+        )}
+        <h1 tabIndex={-1} className="mt-4 text-2xl font-semibold tracking-tight text-fg outline-none sm:text-3xl">
           {investigation.title}
         </h1>
-        <p className="mt-3 font-serif text-xl leading-snug text-fg">{investigation.question}</p>
-        {saved && (
-          <p role="status" className="motion-success mt-4 inline-flex items-center gap-2 rounded-full border border-green/35 bg-green-soft px-3 py-1 text-sm text-fg">
-            <Check aria-hidden className="size-4 text-green" />
-            Saved to your Discovery Notebook
-          </p>
+        <p className="mt-1.5 text-base leading-snug text-muted">{investigation.question}</p>
+
+        {bigIdea && (
+          <section aria-labelledby={bigIdeaId} className="mt-5 border-t border-line pt-4">
+            <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+              <h2 id={bigIdeaId} className="text-xs font-semibold tracking-wide text-muted uppercase">
+                The big idea
+              </h2>
+              <ProvenanceLabel provenance="suggested" />
+            </div>
+            <p className="mt-2 font-serif text-lg leading-snug text-fg">{bigIdea}</p>
+          </section>
+        )}
+
+        {card.concepts.length > 0 && (
+          <div className="mt-5 flex flex-col gap-3">
+            {demonstratedConcepts.length > 0 && (
+              <div className="flex flex-col gap-2">
+                <ProvenanceLabel provenance="demonstrated" />
+                <ul aria-label="Concepts you discovered" className="flex flex-wrap gap-2">
+                  {demonstratedConcepts.map((concept) => (
+                    <li key={concept.ref} className="inline-flex items-center gap-1.5 rounded-full border border-green/35 bg-green-soft px-3 py-1 text-xs font-medium text-fg">
+                      <Sparkles aria-hidden className="size-3 text-green" />
+                      {concept.label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {suggestedConcepts.length > 0 && (
+              <div className="flex flex-col gap-2">
+                <ProvenanceLabel provenance="suggested" />
+                <ul aria-label="Concepts shown along the way" className="flex flex-wrap gap-2">
+                  {suggestedConcepts.map((concept) => (
+                    <li key={concept.ref} className="rounded-full border border-line-strong px-3 py-1 text-xs font-medium text-muted">
+                      {concept.label}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         )}
       </header>
 
@@ -118,93 +171,104 @@ export function CompletionView({ investigation, progress, card, saved, saveError
           <p>This discovery isn&rsquo;t in your Notebook right now. It may have been removed there.</p>
           <Button variant="secondary" onClick={onSaveCard} className="shrink-0">
             <BookMarked aria-hidden />
-            Save it to your Notebook
+            Save to Notebook
           </Button>
         </div>
       )}
 
-      <Section title="What the evidence shows" icon={<BookMarked aria-hidden className="size-4 text-accent" />} aside={<ProvenanceLabel provenance="suggested" />}>
-        <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{card.summary}</p>
-        <h3 className="mt-5 text-xs font-semibold tracking-wide text-muted uppercase">Key ideas</h3>
-        <ul className="mt-2 flex flex-col gap-2">
-          {discovery.keyIdeas.map((idea) => (
-            <li key={idea} className="flex gap-2.5 text-sm leading-relaxed text-fg">
-              <ListChecks aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
-              {idea}
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      <Section title="What you discovered" icon={<Sparkles aria-hidden className="size-4 text-green" />} aside={<ProvenanceLabel provenance="demonstrated" />}>
-        {demonstratedConcepts.length + demonstrated.length === 0 ? (
-          <p className="text-sm leading-relaxed text-muted">
-            This time, the answers were shown to you along the way, so what this investigation connects is saved as suggested. Study it again
-            whenever you like and work it out for yourself.
-          </p>
-        ) : (
-          <div className="flex flex-col gap-4">
-            {demonstratedConcepts.length > 0 && (
-              <ul aria-label="Concepts" className="flex flex-wrap gap-2">
-                {demonstratedConcepts.map((concept) => (
-                  <li key={concept.ref} className="inline-flex items-center gap-1.5 rounded-full border border-green/35 bg-green-soft px-3 py-1 text-xs font-medium text-fg">
-                    <Sparkles aria-hidden className="size-3 text-green" />
-                    {concept.label}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {demonstrated.length > 0 && (
-              <ul aria-label="Connections" className="flex flex-col gap-2.5">
-                {demonstrated.map((connection) => (
-                  <ConnectionItem key={connection.id} connection={connection} card={card} />
-                ))}
-              </ul>
-            )}
-          </div>
+      <nav aria-label="Where to next" className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        {saved && (
+          <ButtonLink href={notebookHref(card.id)} size="lg" className="w-full sm:w-auto">
+            <BookMarked aria-hidden />
+            Open in Notebook
+          </ButtonLink>
         )}
-      </Section>
+        <ButtonLink href={mapHref()} variant="secondary" size="lg" className="w-full sm:w-auto">
+          <Network aria-hidden />
+          Open your Map
+        </ButtonLink>
+        <ButtonLink href={investigateHref()} variant="ghost" size="lg" className="w-full sm:w-auto">
+          <ArrowLeft aria-hidden />
+          Back to investigations
+        </ButtonLink>
+        <Button variant="ghost" size="lg" onClick={onReviewSteps} className="w-full sm:w-auto">
+          Look back through the steps
+        </Button>
+      </nav>
 
-      {suggestedConcepts.length + suggested.length > 0 && (
-        <Section title="Shown along the way" icon={<Route aria-hidden className="size-4 text-muted" />} aside={<ProvenanceLabel provenance="suggested" />}>
-          {suggestedConcepts.length > 0 && (
-            <ul aria-label="Concepts" className="mb-3 flex flex-wrap gap-2">
-              {suggestedConcepts.map((concept) => (
-                <li key={concept.ref} className="rounded-full border border-line-strong px-3 py-1 text-xs font-medium text-muted">
-                  {concept.label}
+      {/* Native <details>: keyboard and screen-reader friendly, closed until the learner wants the full write-up. */}
+      <details className="group/everything">
+        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-line bg-surface px-5 py-3 transition-colors select-none hover:border-accent/40 hover:bg-surface-raised [&::-webkit-details-marker]:hidden">
+          <span className="flex min-w-0 flex-col">
+            <span className="text-base font-semibold text-fg">See everything you found</span>
+            <span className="text-sm text-muted">The full summary, connections, sources, and questions</span>
+          </span>
+          <ChevronDown aria-hidden className="size-5 shrink-0 text-subtle transition-transform duration-200 group-open/everything:rotate-180" />
+        </summary>
+
+        <div className="mt-6 flex flex-col gap-6">
+          <Section title="What the evidence shows" icon={<BookMarked aria-hidden className="size-4 text-accent" />} aside={<ProvenanceLabel provenance="suggested" />}>
+            <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{card.summary}</p>
+            <h3 className="mt-5 text-xs font-semibold tracking-wide text-muted uppercase">Key ideas</h3>
+            <ul className="mt-2 flex flex-col gap-2">
+              {discovery.keyIdeas.map((idea) => (
+                <li key={idea} className="flex gap-2.5 text-sm leading-relaxed text-fg">
+                  <ListChecks aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+                  {idea}
                 </li>
               ))}
             </ul>
+          </Section>
+
+          <Section
+            title="Pointing to Christ"
+            icon={<Heart aria-hidden className="size-4 text-accent" />}
+            aside={<ProvenanceLabel provenance="suggested" />}
+            className="border-accent/25 bg-accent-soft"
+          >
+            <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{discovery.christConnection}</p>
+          </Section>
+
+          {/* The concepts are on the card above; these are the connections between them, with their evidence. */}
+          {(demonstrated.length > 0 || nothingDemonstrated) && (
+            <Section title="What you discovered" icon={<Sparkles aria-hidden className="size-4 text-green" />} aside={<ProvenanceLabel provenance="demonstrated" />}>
+              {demonstrated.length === 0 ? (
+                <p className="text-sm leading-relaxed text-muted">
+                  This time, the answers were shown to you along the way, so what this investigation connects is saved as suggested. Study it again
+                  whenever you like and work it out for yourself.
+                </p>
+              ) : (
+                <ul aria-label="Connections" className="flex flex-col gap-2.5">
+                  {demonstrated.map((connection) => (
+                    <ConnectionItem key={connection.id} connection={connection} card={card} />
+                  ))}
+                </ul>
+              )}
+            </Section>
           )}
+
           {suggested.length > 0 && (
-            <ul aria-label="Connections" className="flex flex-col gap-2.5">
-              {suggested.map((connection) => (
-                <ConnectionItem key={connection.id} connection={connection} card={card} />
-              ))}
-            </ul>
+            <Section title="Shown along the way" icon={<Route aria-hidden className="size-4 text-muted" />} aside={<ProvenanceLabel provenance="suggested" />}>
+              <ul aria-label="Connections" className="flex flex-col gap-2.5">
+                {suggested.map((connection) => (
+                  <ConnectionItem key={connection.id} connection={connection} card={card} />
+                ))}
+              </ul>
+            </Section>
           )}
-        </Section>
-      )}
 
-      <Section
-        title="Pointing to Christ"
-        icon={<Heart aria-hidden className="size-4 text-accent" />}
-        aside={<ProvenanceLabel provenance="suggested" />}
-        className="border-accent/25 bg-accent-soft"
-      >
-        <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{discovery.christConnection}</p>
-      </Section>
-
-      {followUps.length > 0 && (
-        <Section title="Questions to carry forward" icon={<Route aria-hidden className="size-4 text-accent" />}>
-          <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed text-fg marker:text-subtle">
-            {followUps.map((question) => (
-              <li key={question}>{question}</li>
-            ))}
-          </ul>
-          <p className="mt-3 text-xs text-subtle">Honest questions are part of learning. Bring them back to the scriptures, and to the Lord in prayer if you wish.</p>
-        </Section>
-      )}
+          {followUps.length > 0 && (
+            <Section title="Questions to carry forward" icon={<Route aria-hidden className="size-4 text-accent" />}>
+              <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed text-fg marker:text-subtle">
+                {followUps.map((question) => (
+                  <li key={question}>{question}</li>
+                ))}
+              </ul>
+              <p className="mt-3 text-xs text-subtle">Honest questions are part of learning. Bring them back to the scriptures, and to the Lord in prayer if you wish.</p>
+            </Section>
+          )}
+        </div>
+      </details>
 
       <section aria-labelledby={noteId} className="motion-reveal rounded-2xl border border-line bg-surface p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -224,26 +288,6 @@ export function CompletionView({ investigation, progress, card, saved, saveError
         />
         {noteStatus.state === "error" && <p className="mt-2 text-xs text-danger">Your note couldn&rsquo;t be saved: {noteStatus.message}</p>}
       </section>
-
-      <nav aria-label="Where to next" className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-        {saved && (
-          <ButtonLink href={notebookHref(card.id)} size="lg" className="w-full sm:w-auto">
-            <BookMarked aria-hidden />
-            Open in Notebook
-          </ButtonLink>
-        )}
-        <ButtonLink href={mapHref()} variant="secondary" size="lg" className="w-full sm:w-auto">
-          <Network aria-hidden />
-          See your Discovery Map
-        </ButtonLink>
-        <ButtonLink href={investigateHref()} variant="ghost" size="lg" className="w-full sm:w-auto">
-          <ArrowLeft aria-hidden />
-          Back to investigations
-        </ButtonLink>
-        <Button variant="ghost" size="lg" onClick={onReviewSteps} className="w-full sm:w-auto">
-          Look back through the steps
-        </Button>
-      </nav>
     </div>
   );
 }

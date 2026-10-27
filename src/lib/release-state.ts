@@ -72,6 +72,21 @@ export function subscribeToReleaseState(onChange: () => void): () => void {
 }
 
 /** Whether anything shows this device used Gospel Labs before. Storage errors count as "nothing". */
+/**
+ * Stored preferences beyond the Map's "last visit" time (which only opening the
+ * Map writes, in any version from 2.0 on; a 1.x learner who opens the Map first
+ * must still be recognized as coming from 1.x).
+ */
+export function hasChosenPreferences(raw: string | null): boolean {
+  if (raw === null) return false;
+  try {
+    const value: unknown = JSON.parse(raw);
+    return !!value && typeof value === "object" && Object.keys(value).some((key) => key !== "lastMapVisit");
+  } catch {
+    return true;
+  }
+}
+
 export async function readDeviceHistory(): Promise<DeviceHistory> {
   const [research, study] = await Promise.all([
     getRepository()
@@ -85,7 +100,7 @@ export async function readDeviceHistory(): Promise<DeviceHistory> {
   return {
     hasResearch: research > 0,
     hasStudy: study > 0,
-    hasPreferences: read(PREFERENCES_STORAGE_KEY) !== null,
+    hasPreferences: hasChosenPreferences(read(PREFERENCES_STORAGE_KEY)),
     hasTheme: read(THEME_STORAGE_KEY) !== null,
   };
 }

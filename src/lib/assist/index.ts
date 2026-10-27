@@ -20,5 +20,5 @@ export function getStudyAssistant(glossary: readonly GlossaryEntry[] = []): Stud
 /** How help from an assistant is described to the learner. */
 export const ASSIST_SOURCE_NOTE: Record<StudyAssistant["kind"], string> = {
   local: "From Gospel Labs’ curated study content",
-  ai: "AI-generated — not doctrine or revelation",
+  ai: "AI-generated—not doctrine or revelation",
 };

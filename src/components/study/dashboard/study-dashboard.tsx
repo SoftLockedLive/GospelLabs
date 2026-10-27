@@ -35,7 +35,9 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
 
   const storageError =
     progressState.status === "error" ? progressState.error : discoveriesState.status === "error" ? discoveriesState.error : null;
-  const loading = !storageError && (progressState.status === "loading" || discoveriesState.status === "loading");
+  // Research notebooks count too: the "Continue studying" row appearing late pushed everything below it down.
+  const loading =
+    !storageError && (progressState.status === "loading" || discoveriesState.status === "loading" || researchState.status === "loading");
   const progress = progressState.status === "ready" ? progressState.value.records : [];
   const discoveries = discoveriesState.status === "ready" ? discoveriesState.value.records : [];
 
@@ -102,7 +104,7 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
           }
         >
           {loading ? (
-            <div role="status" aria-label="Loading suggestions" className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div role="status" aria-label="Loading suggestions" className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {Array.from({ length: SUGGESTION_COUNT }, (_, i) => (
                 <div key={i} className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-5">
                   <Skeleton className="h-3 w-20" />
@@ -112,7 +114,7 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
               ))}
             </div>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {listed.map((suggestion, index) => (
                 <InvestigationCard key={suggestion.investigation.id} suggestion={suggestion} length={studyLength} index={index} />
               ))}
@@ -121,7 +123,7 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
         </DashboardSection>
       )}
 
-      <DashboardSection id="tools" title="More ways to study" description="Read closely, study the Savior's character, or take a quiet moment with Him.">
+      <DashboardSection id="tools" title="More ways to study" description="Read closely, study the Savior’s character, or take a quiet moment with Him.">
         <StudyTools
           passages={content.passages}
           attributes={content.attributes}
@@ -141,7 +143,7 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
         }
       >
         {loading ? (
-          <div role="status" aria-label="Loading your discoveries" className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <div role="status" aria-label="Loading your discoveries" className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
             {Array.from({ length: 3 }, (_, i) => (
               <Skeleton key={i} className="h-32 rounded-2xl" />
             ))}

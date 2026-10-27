@@ -303,6 +303,14 @@
   html {
     -webkit-tap-highlight-color: transparent;
     text-size-adjust: 100%;
+    /* Below lg, a sticky header (4rem) and a fixed tab bar (about 5rem plus the safe area) cover the page's edges;
+       scroll padding keeps whatever is scrolled to, or focused with the keyboard, out from under them. */
+    scroll-padding-top: 4.5rem;
+    scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+    @media (width >= 64rem) {
+      scroll-padding-top: 1rem;
+      scroll-padding-bottom: 1rem;
+    }
   }
 
   body {

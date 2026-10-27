@@ -8,7 +8,7 @@ export default function NotFound() {
     <StatusPage
       icon={Compass}
       title="Page not found"
-      description="This page doesn't exist. It may have been moved, or the link may be incomplete. Your saved study isn't affected."
+      description="This page doesn’t exist. It may have been moved, or the link may be incomplete. Nothing you’ve saved is affected."
       actions={
         <>
           <ButtonLink href="/">Back to Home</ButtonLink>

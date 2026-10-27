@@ -152,7 +152,7 @@ export function ResearchSection({ investigation, actions, sourceQuestion, onNavi
           <EmptyState
             icon={FileSearch}
             title="No evidence yet"
-            description="Each evidence card holds a source, what you observed in it, and why it's relevant."
+            description="Each evidence card holds a source, what you observed in it, and why it’s relevant."
             action={
               <Button variant="secondary" onClick={() => startNew()}>
                 <Plus aria-hidden />

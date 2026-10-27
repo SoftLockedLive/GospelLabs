@@ -43,7 +43,7 @@ async function finishWithOneStepShown(page: Page) {
   await stepArticle(page, steps[0]).getByRole("button", { name: "Next step" }).click();
   for (const [index, step] of steps.slice(1).entries()) await solveStep(page, step, "medium", { next: index < steps.length - 2 });
   await page.getByRole("button", { name: "See your discovery" }).click();
-  await expect(page.getByText("Saved to your Discovery Notebook")).toBeVisible();
+  await expect(page.getByText("Saved to your Notebook.")).toBeVisible();
   const [card] = await readStore<DiscoveryCard>(page, "discoveries");
   return card;
 }
@@ -51,9 +51,9 @@ async function finishWithOneStepShown(page: Page) {
 /** Saves the Scripture Explorer passage as its own card (nothing highlighted). */
 async function savePassage(page: Page) {
   await page.goto(`/explore/${PASSAGE}`);
-  const save = page.getByRole("region", { name: "Save to Notebook & Map" });
-  await save.getByRole("button", { name: "Save to Notebook & Map" }).click();
-  await expect(save.getByText("Saved to your Notebook and Map.")).toBeVisible();
+  const save = page.getByRole("region", { name: "Save to Notebook" });
+  await save.getByRole("button", { name: "Save to Notebook" }).click();
+  await expect(save.getByText("Saved to your Notebook.")).toBeVisible();
 }
 
 const sentence = (connection: Pick<DiscoveryCard["connections"][number], "from" | "to" | "relation">) =>
@@ -78,12 +78,32 @@ const nodeItem = (page: Page, label: string) =>
 
 test("a finished investigation's card shows its sources, concepts, connections, and labeled summary in the Notebook", async ({ page }) => {
   const card = await finishWithOneStepShown(page);
+
+  // The completion view opens with a short card: the big idea and the concepts, each labeled with who established it.
+  await expect(page.getByText("You finished the investigation!")).toBeVisible();
+  const bigIdea = page.getByRole("region", { name: "The big idea" });
+  await expect(bigIdea).toContainText(inv.discovery.keyIdeas[0]);
+  await expect(bigIdea).toContainText("Suggested by Gospel Labs");
+  const workedOut = card.concepts.filter((c) => c.demonstrated);
+  const wasShown = card.concepts.filter((c) => !c.demonstrated);
+  await expect(page.getByRole("list", { name: "Concepts you discovered" }).getByRole("listitem")).toHaveText(workedOut.map((c) => c.label));
+  if (wasShown.length) await expect(page.getByRole("list", { name: "Concepts shown along the way" }).getByRole("listitem")).toHaveText(wasShown.map((c) => c.label));
+  // The rest waits under one disclosure; the note and the way on don't.
+  const fullSummary = page.getByRole("region", { name: "What the evidence shows" });
+  await expect(fullSummary).toBeHidden();
+  await expect(page.getByRole("textbox", { name: /Your note/ })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Where to next" }).getByRole("link", { name: "Open your Map" })).toBeVisible();
+  await page.getByText("See everything you found").click();
+  await expect(fullSummary).toContainText(inv.discovery.summary);
+  await expect(page.getByRole("region", { name: "Shown along the way" })).toContainText("Suggested by Gospel Labs");
+  await expectNoScoring(page);
+
   await page.getByRole("link", { name: "Open in Notebook" }).click();
   await expect(page).toHaveURL(`/notebook?card=${card.id}`);
   const detail = page.getByRole("article", { name: inv.title });
   await expect(detail.getByRole("heading", { level: 1, name: inv.title })).toBeFocused();
   await expect(detail.getByRole("region", { name: "The question" })).toContainText(inv.question);
-  await expect(detail.getByText("Studied at Medium depth")).toBeVisible();
+  await expect(detail.getByText("Studied at Medium difficulty")).toBeVisible();
 
   // The summary is labeled as Gospel Labs' suggestion, not doctrine or the learner's own words.
   const summary = detail.getByRole("region", { name: "What this discovery shows" });
@@ -144,8 +164,8 @@ test("the Map shows the card's concepts and connections, and See on your Map ope
   await page.goto(`/notebook?card=${card.id}`);
   // Each concept links to its own node on the Map.
   const concept = card.concepts[0];
-  await expect(page.getByRole("link", { name: `${concept.label}: see on your Map` })).toHaveAttribute("href", `/map?node=${encodeURIComponent(concept.ref)}`);
-  await page.getByRole("link", { name: "See on your Map", exact: true }).click();
+  await expect(page.getByRole("link", { name: `${concept.label}: see on Map` })).toHaveAttribute("href", `/map?node=${encodeURIComponent(concept.ref)}`);
+  await page.getByRole("link", { name: "See on Map", exact: true }).click();
   await expect(page).toHaveURL(`/map?node=${encodeURIComponent(`investigation:${ID}`)}`);
   // The details panel opens on the investigation itself, linked back to the card.
   const panel = page.getByRole("complementary", { name: inv.title });
@@ -179,7 +199,7 @@ test("a personal connection can be created, edited, and deleted, and is labeled 
   await openListView(page);
 
   await page.getByRole("button", { name: "Add a connection" }).click();
-  const dialog = page.getByRole("dialog", { name: "Connect two discoveries" });
+  const dialog = page.getByRole("dialog", { name: "Connect two things on your Map" });
   await expect(dialog).toContainText("Connections you add are your own interpretation");
   // Nothing chosen and no note: each problem is named.
   await dialog.getByRole("button", { name: "Add connection" }).click();
@@ -255,7 +275,7 @@ test("deleting a card removes the Map nodes only it supported, and keeps the lea
   await page.goto("/map");
   await openListView(page);
   await page.getByRole("button", { name: "Add a connection" }).click();
-  const dialog = page.getByRole("dialog", { name: "Connect two discoveries" });
+  const dialog = page.getByRole("dialog", { name: "Connect two things on your Map" });
   await dialog.getByRole("group", { name: "From" }).getByRole("searchbox").fill(kept.label);
   await dialog.getByRole("group", { name: "From" }).getByRole("radio", { name: new RegExp(`^${kept.label}( |$)`) }).check();
   await dialog.getByRole("group", { name: "To" }).getByRole("searchbox").fill(shared[0].label);

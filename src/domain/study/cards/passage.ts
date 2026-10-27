@@ -1,6 +1,6 @@
 /**
- * The Discovery Card saved from Scripture Explorer ("Save to Notebook &
- * Map"). There is one card per passage: saving again updates it in place
+ * The Discovery Card saved from Scripture Explorer ("Save to Notebook").
+ * There is one card per passage: saving again updates it in place
  * (same id, createdAt, and personal notes) instead of creating another.
  *
  *   - summary: the passage's setting, written by Gospel Labs (shown as suggested);

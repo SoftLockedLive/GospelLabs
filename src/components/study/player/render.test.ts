@@ -177,7 +177,7 @@ describe.each(investigations.map(({ registry, investigation }) => [investigation
         assistant,
       }),
     );
-    expect(completion).toContain("Saved to your Discovery Notebook");
+    expect(completion).toContain("Saved to your Notebook.");
     expect(completion).toContain(escape(investigation.discovery.christConnection));
   });
 });

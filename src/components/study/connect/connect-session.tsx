@@ -247,7 +247,7 @@ export function ConnectSessionView({
             <p className="font-serif text-lg text-pretty text-sacred-muted">Carry these verses with you today.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <ButtonLink href="/" variant="secondary" size="lg">
-                Close<span className="sr-only"> and return to the Dashboard</span>
+                Close<span className="sr-only"> and return Home</span>
               </ButtonLink>
               {onShowAnother && (
                 <Button variant="ghost" size="lg" onClick={onShowAnother}>

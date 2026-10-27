@@ -43,7 +43,7 @@ export function QuestionCard({ question }: { question: CuratedQuestion }) {
           </div>
           <div className="flex items-center gap-1.5">
             <Lightbulb aria-hidden className="size-3.5" />
-            <dt className="sr-only">Investigation prompts</dt>
+            <dt className="sr-only">Prompts</dt>
             <dd>
               {promptCount} {promptCount === 1 ? "prompt" : "prompts"}
             </dd>
@@ -66,10 +66,10 @@ export function QuestionCard({ question }: { question: CuratedQuestion }) {
           href={newInvestigationHref(question.id)}
           variant="secondary"
           size="sm"
-          aria-label={`Start investigation: ${question.question}`}
+          aria-label={`Start a research notebook: ${question.question}`}
         >
           <FlaskConical aria-hidden />
-          Start investigation
+          Start a research notebook
         </ButtonLink>
       </CardFooter>
     </Card>

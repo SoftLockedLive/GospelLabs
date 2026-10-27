@@ -4,18 +4,25 @@
  *
  *   - Hints can be requested from the start ("Need a hint?"), one at a time,
  *     each clearer than the last.
+ *   - Where the host allows it, "Continue anyway" (skip) is offered from the
+ *     start too, so nobody is held on a step. Skipping is recoverable: the
+ *     step can be tried again later, and a skipped step adds nothing to the
+ *     Discovery Card. The host keeps the button quiet so it doesn't tempt
+ *     anyone before they've tried.
  *   - After a wrong check, item feedback points back to the evidence (never
  *     the answer), and the next hint is offered.
- *   - After 3 checked attempts, "Show me" (reveal the answer with its
- *     explanation; connections are then recorded as suggested) and, where the
- *     host allows it, "Continue anyway" (skip) are offered.
+ *   - After 2 checked attempts, or after 1 once every hint has been shown,
+ *     "Show me" is offered (reveal the answer with its explanation;
+ *     connections are then recorded as suggested). Someone who thinks an
+ *     answer is arguable shouldn't have to make deliberate wrong guesses to
+ *     see it, and a younger learner shouldn't have to grind through many.
  *   - When the hints run out, "More help" points to the evidence to reread.
  */
 import { activitySourceIds } from "../content-registry";
 import type { Activity, ActivityType, Source } from "../content-schema";
 
-/** Checked attempts after which "Show me" and "Continue anyway" are offered. */
-export const ATTEMPTS_BEFORE_REVEAL = 3;
+/** Checked attempts after which "Show me" is offered (after 1, once every hint has been shown). */
+export const ATTEMPTS_BEFORE_REVEAL = 2;
 
 export interface HelpState {
   attempts: number;
@@ -39,7 +46,7 @@ export interface HelpOptions {
   hintsExhausted: boolean;
   /** "Show me". */
   canReveal: boolean;
-  /** "Continue anyway"; only when the host allows skipping. */
+  /** "Continue anyway", from the start; only when the host allows skipping. */
   canSkip: boolean;
 }
 
@@ -50,15 +57,17 @@ export function helpOptions(activity: Activity, state: HelpState, options: { all
   const open = !state.completed && activity.type !== "reflect";
   const index = Math.min(state.hintsShown, hints.length);
   const nextHint = open && index < hints.length ? { index, text: hints[index] } : undefined;
-  const enoughAttempts = state.attempts >= ATTEMPTS_BEFORE_REVEAL;
+  const hintsUsed = hints.length > 0 && index >= hints.length;
+  // "Show me" waits for a real try or two, so the answer isn't one tap away before anyone has looked.
+  const enoughAttempts = state.attempts >= ATTEMPTS_BEFORE_REVEAL || (state.attempts >= 1 && hintsUsed);
   return {
     showFeedback: open && !!state.lastCheckWrong,
     canRequestHint: !!nextHint,
     offerHint: !!nextHint && !!state.lastCheckWrong,
     nextHint,
-    hintsExhausted: open && hints.length > 0 && index >= hints.length,
+    hintsExhausted: open && hintsUsed,
     canReveal: open && enoughAttempts,
-    canSkip: open && enoughAttempts && !!options.allowSkip,
+    canSkip: open && !!options.allowSkip,
   };
 }
 

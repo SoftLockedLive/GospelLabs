@@ -27,8 +27,8 @@ const KINDS = Object.keys(STORES) as Kind[];
 /** The per-kind summary in Settings › Your data. */
 const savedData = (page: Page) => page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem");
 
-const NOTHING_SAVED = ["0 research investigations", "0 guided investigations", "0 Discovery Cards", "0 Map connections", "0 explorations"];
-const FIXTURE_SAVED = ["1 research investigation", "1 guided investigation", "1 Discovery Card", "1 Map connection", "2 explorations"];
+const NOTHING_SAVED = ["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes"];
+const FIXTURE_SAVED = ["1 research notebook", "1 investigation", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"];
 
 /** Opens Settings and waits until the app has opened (and upgraded) its database. */
 async function openSettings(page: Page) {
@@ -114,7 +114,7 @@ async function deleteEverything(page: Page) {
   await page.getByRole("button", { name: "Delete all data" }).click();
   const dialog = page.getByRole("dialog", { name: "Delete all data?" });
   const list = dialog.getByRole("list", { name: "Will be deleted" });
-  for (const text of ["1 research investigation", "1 guided investigation", "1 Discovery Card", "1 Map connection", "2 explorations"]) {
+  for (const text of ["1 research notebook", "1 investigation", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"]) {
     await expect(list).toContainText(text);
   }
   await expect(dialog).toContainText("Your appearance and study preferences are kept.");
@@ -137,7 +137,7 @@ test("study data and preferences survive export, delete everything, and import e
   expect(first.investigations).toEqual([RECORD_FROM_1_1]);
   // Every record exactly as stored, including the field this version doesn't know.
   expect(studyById(first.study)).toEqual(studyById(seededStudy()));
-  await expect(page.getByText(/^Downloaded a backup of 1 research investigation, 1 guided investigation/)).toBeVisible();
+  await expect(page.getByText(/^Downloaded a backup of 1 research notebook, 1 investigation/)).toBeVisible();
 
   await deleteEverything(page);
   for (const kind of KINDS) expect(await getAllRaw(page, STORES[kind])).toEqual([]);
@@ -150,7 +150,7 @@ test("study data and preferences survive export, delete everything, and import e
   await page.locator('input[type="file"]').setInputFiles(firstPath);
   const dialog = page.getByRole("dialog", { name: "Import backup" });
   await expect(dialog).toContainText("Discovery Cards: 1 new · 0 updated · 0 unchanged");
-  await expect(dialog).toContainText("Explorations: 2 new · 0 updated · 0 unchanged");
+  await expect(dialog).toContainText("Explored passages and attributes: 2 new · 0 updated · 0 unchanged");
   const restorePreferences = dialog.getByRole("checkbox", { name: /Also restore appearance and study preferences/ });
   await expect(restorePreferences).not.toBeChecked(); // off by default when merging
   await expect(dialog).toContainText("Theme: Parchment");
@@ -189,20 +189,20 @@ test("replacing with a 1.1 backup lists the study data it will delete first", as
   writeFileSync(path, BACKUP_FROM_1_1);
   await page.locator('input[type="file"]').setInputFiles(path);
   const dialog = page.getByRole("dialog", { name: "Import backup" });
-  await expect(dialog).toContainText("made by Gospel Labs 1.x, before study data existed");
+  await expect(dialog).toContainText("made by Gospel Labs 1.x, which saved only research notebooks");
   // A 1.x backup has no preferences to offer.
   await expect(dialog.getByRole("checkbox", { name: /Also restore/ })).toHaveCount(0);
 
   await dialog.getByText("Replace all my data").click();
   await expect(dialog).toContainText("Discovery Cards: 1 deleted · 0 restored");
   await expect(dialog).toContainText(
-    "Everything now on this device will be permanently deleted: 1 research investigation, 1 guided investigation, 1 Discovery Card, 1 Map connection, and 2 explorations.",
+    "Everything now on this device will be permanently deleted: 1 research notebook, 1 investigation, 1 Discovery Card, 1 Map connection, and 2 explored passages and attributes.",
   );
   await expect(dialog.getByRole("button", { name: "Replace all data" })).toBeDisabled();
   await dialog.getByRole("checkbox", { name: /I understand/ }).check();
   await dialog.getByRole("button", { name: "Replace all data" }).click();
-  await expect(page.getByText("Replaced your data with 1 research investigation from the backup.")).toBeVisible();
-  await expect(savedData(page)).toHaveText(["1 research investigation", ...NOTHING_SAVED.slice(1)]);
+  await expect(page.getByText("Replaced your data with 1 research notebook from the backup.")).toBeVisible();
+  await expect(savedData(page)).toHaveText(["1 research notebook", ...NOTHING_SAVED.slice(1)]);
   for (const kind of KINDS) expect(await getAllRaw(page, STORES[kind])).toEqual([]);
 });
 
@@ -228,7 +228,7 @@ test("a 2.0 backup restores into a new device with Replace, explaining what it s
   await dialog.getByRole("button", { name: "Replace all data" }).click();
   await expect(
     page.getByText(
-      "Replaced your data with 1 research investigation, 1 guided investigation, 1 Discovery Card, 1 Map connection, and 2 explorations from the backup. Appearance and study preferences restored.",
+      "Replaced your data with 1 research notebook, 1 investigation, 1 Discovery Card, 1 Map connection, and 2 explored passages and attributes from the backup. Appearance and study preferences restored.",
     ),
   ).toBeVisible();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dawn");

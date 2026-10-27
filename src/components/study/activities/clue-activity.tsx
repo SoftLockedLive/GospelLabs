@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Clue Investigation: clues are examined one at a time (opening one records
+ * Follow the Clues: clues are examined one at a time (opening one records
  * it), and the question unlocks once enough have been examined.
  */
 import { ChevronDown, Search } from "lucide-react";
@@ -50,7 +50,7 @@ export function ClueActivity(props: Props) {
             {examined.size} of {activity.clues.length} examined
           </span>
         </p>
-        <ol className="grid gap-2.5 sm:grid-cols-2">
+        <ol className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           {activity.clues.map((clue, index) => {
             const isExamined = examined.has(clue.id);
             const isOpen = isExamined && !closed.has(clue.id);
@@ -100,6 +100,7 @@ export function ClueActivity(props: Props) {
       <div className={cn("rounded-xl border border-line bg-surface-sunken p-4 sm:p-5", !ready && "opacity-90")}>
         <ChoiceQuestion
           question={activity.question}
+          seed={`${activity.id}:${activity.question.id}`}
           selected={response.answer}
           onChange={(answer) => onChange({ ...response, answer })}
           markFor={(id) => markFor(props, id, unchanged)}

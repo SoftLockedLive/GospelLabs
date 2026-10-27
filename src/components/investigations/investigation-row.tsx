@@ -6,7 +6,7 @@ import { StatusBadge } from "@/components/ui/badge";
 import { formatDate } from "@/lib/format";
 import { investigationHref } from "@/lib/routes";
 
-/** A single clickable investigation summary, used on the dashboard and in the library. */
+/** A single clickable research notebook summary, used on the dashboard and in the library. */
 export function InvestigationRow({ investigation }: { investigation: Investigation }) {
   const section = getSection(investigation.currentSection);
   const evidenceCount = investigation.evidence.length;
@@ -20,11 +20,11 @@ export function InvestigationRow({ investigation }: { investigation: Investigati
         <div className="flex flex-wrap items-center gap-2">
           <StatusBadge status={investigation.status} />
           {investigation.category && (
-            <span className="font-mono text-[11px] tracking-wide text-subtle uppercase">{investigation.category}</span>
+            <span className="min-w-0 font-mono text-[11px] tracking-wide break-all text-subtle uppercase">{investigation.category}</span>
           )}
         </div>
-        <p className="mt-2.5 font-medium text-fg">{investigation.title.trim() || "Untitled investigation"}</p>
-        <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted">{investigation.question}</p>
+        <p className="mt-2.5 font-medium break-words text-fg">{investigation.title.trim() || "Untitled notebook"}</p>
+        <p className="mt-1 line-clamp-2 text-sm leading-relaxed break-words text-muted">{investigation.question}</p>
         <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-subtle">
           <div className="flex gap-1">
             <dt>Last edited</dt>

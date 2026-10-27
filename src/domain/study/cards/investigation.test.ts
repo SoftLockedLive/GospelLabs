@@ -101,6 +101,25 @@ describe("buildInvestigationCard", () => {
     expect(updated.connections).toHaveLength(2);
   });
 
+  it("keeps what the learner wrote in reflections in the card's notes, without repeating or replacing anything", () => {
+    const progress = play(
+      { type: "complete", step: { stepId: "notice" } },
+      { type: "reflect", step: { stepId: "notice" }, text: "  He knows my pains.  " },
+      { type: "next" },
+      { type: "complete", step: { stepId: "connect" } },
+      { type: "reflect", step: { stepId: "connect" }, text: "So He can help me." },
+    );
+    const card = build(progress);
+    expect(card.notes).toBe("Notice what He takes upon Him\nHe knows my pains.\n\nConnect the purpose\nSo He can help me.");
+
+    // Finishing again adds nothing new, and the learner's own edits stay.
+    const edited = { ...card, notes: "My own words first.\n\nHe knows my pains.\nSo He can help me." };
+    expect(build(progress, edited).notes).toBe(edited.notes);
+    // A reflection that isn't in the notes yet is added at the end.
+    const later = studyReducer(investigation, progress, { type: "reflect", step: { stepId: "notice" }, text: "And my sins.", now: T1 });
+    expect(build(later, edited).notes).toBe(`${edited.notes}\n\nNotice what He takes upon Him\nAnd my sins.`);
+  });
+
   it("re-completing keeps earlier discoveries: a side question explored before, and what was worked out before", () => {
     // First time: the first step worked out, and the side question (the only step citing John 15 here).
     const first = build(

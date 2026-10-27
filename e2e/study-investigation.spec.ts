@@ -1,10 +1,11 @@
 /**
  * A guided investigation from start to discovery, answered through the UI:
- * gentle feedback and hints for wrong answers, "Show me" and "Continue
- * anyway" after three tries, quick vs. deep paths, changing difficulty
- * mid-way, side questions that return to the same step, resuming after a
- * reload, and a Discovery Card that keeps what the learner worked out apart
- * from what was shown. Answers come from the investigation's content.
+ * gentle feedback and hints for wrong answers, "Continue anyway" from the
+ * start and "Show me" after two tries, quick vs. deep paths, changing
+ * difficulty mid-way, side questions that return to the same step, resuming
+ * after a reload, remembering the level and length for the next
+ * investigation, and a Discovery Card that keeps what the learner worked out
+ * apart from what was shown. Answers come from the investigation's content.
  * Saved progress is never written over by something that can't see it: a
  * record this version can't read, progress from a newer version, or a tab
  * that missed a completion made in another tab.
@@ -36,8 +37,8 @@ import {
   startInvestigation,
   startsWith,
   stepArticle,
-  threeWrongTries,
   wrongResponse,
+  wrongTries,
 } from "./study-helpers";
 
 const ID = "when-faithful-people-suffer";
@@ -71,7 +72,7 @@ function putRaw(page: Page, store: string, records: readonly unknown[]) {
   );
 }
 
-test("a wrong answer points back to the evidence without giving it away, then hints, then Show me after three tries", async ({ page }) => {
+test("a wrong answer points back to the evidence without giving it away, then hints, then Show me after two tries; Continue anyway is there from the start", async ({ page }) => {
   await startInvestigation(page, ID, { difficulty: "medium", length: "quick" });
   const activity = activityAt(whoDidSin, "medium");
   if (activity.type !== "clue") throw new Error("Expected a clue activity on the first step at medium");
@@ -83,13 +84,16 @@ test("a wrong answer points back to the evidence without giving it away, then hi
   const group = section.getByRole("group", { name: activity.question.prompt });
   for (const radio of await group.getByRole("radio").all()) await expect(radio).toBeDisabled();
   await expect(section.getByText("Examine every clue to answer.")).toBeVisible();
-  // Hints are available from the start, quietly.
+  // Hints are available from the start, quietly, and so is moving on: nobody is held on a step.
   await expect(section.getByRole("button", { name: "Need a hint?" })).toBeVisible();
+  await expect(section.getByRole("button", { name: "Continue anyway" })).toBeVisible();
+  await expect(section.getByRole("button", { name: "Show me" })).toHaveCount(0);
+  await expect(section.getByText(/^You can keep looking/)).toHaveCount(0);
 
   // First wrong answer: calm feedback that points at the evidence, never the answer.
   await answer(page, section, activity, wrongResponse(activity, 0));
   await checkButton(section).click();
-  await expect(section.getByText("Not quite. Look again at the evidence.")).toBeVisible();
+  await expect(section.getByText("Not yet. Look again at the evidence.")).toBeVisible();
   await expect(section.getByText(wrong[0].feedback!)).toBeVisible();
   await expect(group.getByRole("radio", { name: startsWith(wrong[0].text) })).toHaveAccessibleName(/Look again$/);
   await expect(group.getByRole("radio", { name: startsWith(correct.text) })).toHaveAccessibleName(correct.text);
@@ -97,27 +101,27 @@ test("a wrong answer points back to the evidence without giving it away, then hi
   await expect(fitsTheEvidence(section)).toHaveCount(0);
   // The same answer can't be checked again until it changes.
   await expect(checkButton(section)).toBeDisabled();
+  // One try isn't enough to be shown the answer (hints remain).
   await expect(section.getByRole("button", { name: "Show me" })).toHaveCount(0);
+  await expect(section.getByText(/^You can keep looking/)).toHaveCount(0);
 
   // Hints come one at a time, each in the list of hints.
   const hints = section.getByRole("list", { name: "Hints" }).getByRole("listitem");
   await section.getByRole("button", { name: "Need a hint?" }).click();
   await expect(hints).toHaveText([`Hint 1: ${activity.hints[0]}`]);
+
+  // A second try opens "Show me", explained in words.
   await answer(page, section, activity, wrongResponse(activity, 1));
   await checkButton(section).click();
   await expect(section.getByText(wrong[1].feedback!)).toBeVisible();
+  await expect(section.getByText("You can keep looking, see the answer with an explanation, or continue and come back later.")).toBeVisible();
+  await expect(section.getByRole("button", { name: "Show me" })).toBeVisible();
+  await expect(section.getByRole("button", { name: "Continue anyway" })).toBeVisible();
+
+  // When the hints run out, "More help" points to the evidence to reread (labeled as a suggestion).
+  expect(activity.hints).toHaveLength(3);
   await section.getByRole("button", { name: "Another hint" }).click();
   await expect(hints).toHaveText([`Hint 1: ${activity.hints[0]}`, `Hint 2: ${activity.hints[1]}`]);
-  // Two tries: still no way to skip or reveal.
-  await expect(section.getByRole("button", { name: "Show me" })).toHaveCount(0);
-  await expect(section.getByRole("button", { name: "Continue anyway" })).toHaveCount(0);
-
-  // A third try opens "Show me" and "Continue anyway", explained in words.
-  await answer(page, section, activity, wrongResponse(activity, 2));
-  await checkButton(section).click();
-  await expect(section.getByText("You can keep looking, see the answer with an explanation, or continue and come back later.")).toBeVisible();
-  await expect(section.getByRole("button", { name: "Continue anyway" })).toBeVisible();
-  // When the hints run out, "More help" points to the evidence to reread (labeled as a suggestion).
   await section.getByRole("button", { name: "Another hint" }).click();
   await expect(hints).toHaveCount(3);
   await section.getByRole("button", { name: "More help" }).click();
@@ -128,7 +132,7 @@ test("a wrong answer points back to the evidence without giving it away, then hi
   // Show me: the answer with its explanation, saved as shown rather than discovered.
   await section.getByRole("button", { name: "Show me" }).click();
   await expect(section.getByText("Here is the answer, and why")).toBeVisible();
-  await expect(section.getByText("Because you chose to see it, what this step connects is saved as suggested rather than discovered.")).toBeVisible();
+  await expect(section.getByText("Because you chose to see the answer, this is saved as “Suggested by Gospel Labs” rather than “You discovered.”")).toBeVisible();
   await expect(section.getByText(activity.explanation)).toBeVisible();
   await expect(group.getByRole("radio", { name: startsWith(correct.text) })).toBeChecked();
   await expect(stepStatus(page, 0)).toHaveAccessibleName(/Step 1: .*, completed with the answer shown/);
@@ -136,12 +140,14 @@ test("a wrong answer points back to the evidence without giving it away, then hi
   await expectNoScoring(page);
 });
 
-test("Continue anyway moves on at once, and the step can be tried again later", async ({ page }) => {
+test("Continue anyway moves on at once, even before trying, and the step can be tried again later", async ({ page }) => {
   await startInvestigation(page, ID, { difficulty: "medium", length: "quick" });
   await solveStep(page, whoDidSin, "medium");
   const activity = activityAt(whereArtThou, "medium") as CheckedActivity;
   const section = activitySection(stepArticle(page, whereArtThou), activity);
-  await threeWrongTries(page, section, activity);
+  // Nothing tried yet: moving on is already offered, the answer isn't.
+  await expect(section.getByRole("button", { name: "Continue anyway" })).toBeVisible();
+  await expect(section.getByRole("button", { name: "Show me" })).toHaveCount(0);
   await section.getByRole("button", { name: "Continue anyway" }).click();
 
   // On to the next step, with the skipped one marked "moved on" (not completed).
@@ -157,6 +163,22 @@ test("Continue anyway moves on at once, and the step can be tried again later", 
   await checkButton(section).click();
   await expect(fitsTheEvidence(section)).toBeVisible();
   await expect(stepStatus(page, 1)).toHaveAccessibleName(/Step 2: .*, completed( \(current\))?$/);
+});
+
+test("the browser's Back button returns from the steps to the overview, without leaving the investigation", async ({ page }) => {
+  const inv = await startInvestigation(page, ID, { difficulty: "medium", length: "quick" });
+  await page.goBack();
+  await expect(page).toHaveURL(new RegExp(`/investigate/${ID}$`));
+  await expect(page.getByRole("heading", { level: 1, name: inv.title })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Continue" }).getByRole("button", { name: "Resume", exact: true })).toBeVisible();
+  // Forward again is just a second visit to the overview's way in; Resume goes back to the step.
+  await page.getByRole("region", { name: "Continue" }).getByRole("button", { name: "Resume", exact: true }).click();
+  await expect(stepArticle(page, pathSteps(inv, "quick")[0])).toBeVisible();
+  // The step's own "Overview" link uses the same history entry, so one more Back leaves the investigation.
+  await page.getByRole("button", { name: "Overview" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: inv.title })).toBeVisible();
+  await page.goBack();
+  await expect(page).not.toHaveURL(new RegExp(`/investigate/${ID}`));
 });
 
 test("quick and deep sessions follow different paths, and only deep sessions offer side questions", async ({ page }) => {
@@ -187,7 +209,7 @@ test("difficulty can change mid-way without losing finished steps; side question
   // Step 1: shown, not worked out.
   const first = activityAt(whoDidSin, "medium") as CheckedActivity;
   const firstSection = activitySection(stepArticle(page, whoDidSin), first);
-  await threeWrongTries(page, firstSection, first);
+  await wrongTries(page, firstSection, first);
   await firstSection.getByRole("button", { name: "Show me" }).click();
 
   // A side question is offered here. Explore it, finish it, and come back to this same step.
@@ -264,7 +286,7 @@ test("difficulty can change mid-way without losing finished steps; side question
 
   // The discovery: saved, with what was worked out apart from what was shown.
   await expect(page.getByRole("heading", { level: 1, name: inv.title })).toBeVisible();
-  await expect(page.getByRole("status").filter({ hasText: "Saved to your Discovery Notebook" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: "Saved to your Notebook." })).toBeVisible();
   const [card] = await readStore<DiscoveryCard>(page, "discoveries");
   expect(card.origin).toMatchObject({ kind: "investigation", contentId: ID, primaryQuestion: inv.primaryQuestion.id });
   const sentence = (c: DiscoveryCard["connections"][number]) => `${c.from.label} ${RELATION_PHRASES[c.relation]} ${c.to.label}`;
@@ -276,6 +298,9 @@ test("difficulty can change mid-way without losing finished steps; side question
   const workedOut = [hardThings, whereArtThou, descendedBelow, strengthToBear, whoIsWithYou, ...easier.steps].flatMap((step) => step.connections);
   expect(demonstrated).toHaveLength(new Set(workedOut.map((c) => `${c.from}|${c.relation}|${c.to}`)).size);
 
+  // The full write-up waits under one disclosure, closed at first.
+  await expect(page.getByRole("region", { name: "What the evidence shows" })).toBeHidden();
+  await page.getByText("See everything you found").click();
   const discovered = page.getByRole("region", { name: "What you discovered" });
   const shown = page.getByRole("region", { name: "Shown along the way" });
   await expect(discovered).toContainText("You discovered");
@@ -310,7 +335,8 @@ test("reloading inside a side question, right after a choice, resumes there with
   await section.getByRole("button", { name: /^Clue 1\b/ }).click();
   await expect(section.getByText(`1 of ${activity.clues.length} examined`)).toBeVisible();
   await page.reload();
-  await page.getByRole("button", { name: /^Resume/ }).click();
+  // Resume is offered right under the question, without scrolling past the introduction.
+  await page.getByRole("region", { name: "Continue" }).getByRole("button", { name: "Resume", exact: true }).click();
   const banner = page.getByRole("region", { name: "Side question" });
   await expect(banner).toContainText(easier.question);
   await expect(section.getByText(`1 of ${activity.clues.length} examined`)).toBeVisible();
@@ -339,6 +365,28 @@ test("study preferences choose the starting difficulty and length of a new inves
   expect(progress).toMatchObject({ difficulty: "complex", length: "deep" });
 });
 
+test("a new learner starts at Easy, and the level and length they begin with open the next investigation the same way", async ({ page }) => {
+  await page.goto(`/investigate/${ID}`);
+  const difficulty = page.getByRole("group", { name: "Difficulty" });
+  const session = page.getByRole("group", { name: "Session" });
+  await expect(difficulty.getByRole("radio", { name: /^Easy/ })).toBeChecked();
+  await expect(session.getByRole("radio", { name: /^Quick/ })).toBeChecked();
+  await expect(page.getByRole("region", { name: "Begin" })).toContainText("Easy · Quick");
+
+  await chooseStudySettings(page, { difficulty: "hard", length: "deep" });
+  await page.getByRole("button", { name: "Begin the investigation" }).click();
+  await expect(stepArticle(page, deep[0])).toBeVisible();
+
+  // The next investigation opens at Hard and Deep, and Settings shows them as the preferences.
+  await page.goto("/investigate/one-by-one");
+  await expect(difficulty.getByRole("radio", { name: /^Hard/ })).toBeChecked();
+  await expect(session.getByRole("radio", { name: /^Deep/ })).toBeChecked();
+  await page.goto("/settings");
+  const preferences = page.getByRole("region", { name: "Study preferences" });
+  await expect(preferences.getByRole("radio", { name: /^Hard/ })).toBeChecked();
+  await expect(preferences.getByRole("radio", { name: /^Deep study/ })).toBeChecked();
+});
+
 test("studying a finished investigation again updates the same Discovery Card, and a deleted card can be saved again", async ({ page }) => {
   const done = await completeInvestigation(page, ID, { difficulty: "easy", length: "quick" });
   await page.getByRole("textbox", { name: /Your note/ }).fill("First time through.");
@@ -356,7 +404,7 @@ test("studying a finished investigation again updates the same Discovery Card, a
   await expect(stepStatus(page, 0)).toHaveAccessibleName(/not started|in progress/);
   for (const [index, step] of quick.entries()) await solveStep(page, step, "easy", { next: index < quick.length - 1 });
   await page.getByRole("button", { name: "See your discovery" }).click();
-  await expect(page.getByRole("status").filter({ hasText: "Saved to your Discovery Notebook" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: "Saved to your Notebook." })).toBeVisible();
   const cards = await readStore<DiscoveryCard>(page, "discoveries");
   expect(cards).toHaveLength(1);
   expect(cards[0]).toMatchObject({ id: first.id, createdAt: first.createdAt, notes: "First time through." });
@@ -370,8 +418,8 @@ test("studying a finished investigation again updates the same Discovery Card, a
   await page.goto(`/investigate/${ID}`);
   await page.getByRole("button", { name: "Review your discovery" }).click();
   await expect(page.getByText("This discovery isn’t in your Notebook right now. It may have been removed there.")).toBeVisible();
-  await page.getByRole("button", { name: "Save it to your Notebook" }).click();
-  await expect(page.getByRole("status").filter({ hasText: "Saved to your Discovery Notebook" })).toBeVisible();
+  await page.getByRole("button", { name: "Save to Notebook" }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Saved to your Notebook." })).toBeVisible();
   const [saved] = await readStore<DiscoveryCard>(page, "discoveries");
   expect(saved.title).toBe(done.title);
   await page.getByRole("link", { name: "Open in Notebook" }).click();
@@ -461,10 +509,10 @@ test("a completion made in another tab isn't undone here, and finishing here too
   // Another tab picks the investigation up and finishes it.
   const other = await context.newPage();
   await other.goto(`/investigate/${ID}`);
-  await other.getByRole("button", { name: /^Resume/ }).click();
+  await other.getByRole("region", { name: "Continue" }).getByRole("button", { name: "Resume", exact: true }).click();
   for (const [index, step] of quick.entries()) await solveStep(other, step, "easy", { next: index < quick.length - 1 });
   await other.getByRole("button", { name: "See your discovery" }).click();
-  await expect(other.getByRole("status").filter({ hasText: "Saved to your Discovery Notebook" })).toBeVisible();
+  await expect(other.getByRole("status").filter({ hasText: "Saved to your Notebook." })).toBeVisible();
   const [card] = await readStore<DiscoveryCard>(other, "discoveries");
   await other.close();
 
@@ -479,7 +527,7 @@ test("a completion made in another tab isn't undone here, and finishing here too
   const rest = quick.slice(1);
   for (const [index, step] of rest.entries()) await solveStep(page, step, "easy", { next: index < rest.length - 1 });
   await page.getByRole("button", { name: "See your discovery" }).click();
-  await expect(page.getByRole("status").filter({ hasText: "Saved to your Discovery Notebook" })).toBeVisible();
+  await expect(page.getByRole("status").filter({ hasText: "Saved to your Notebook." })).toBeVisible();
   const cards = await readStore<DiscoveryCard>(page, "discoveries");
   expect(cards).toHaveLength(1);
   expect(cards[0]).toMatchObject({ id: card.id, createdAt: card.createdAt });

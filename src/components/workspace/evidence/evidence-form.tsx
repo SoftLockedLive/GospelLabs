@@ -63,7 +63,7 @@ export function EvidenceForm({ heading, initial, submitLabel, onSubmit, onCancel
     >
       <h3 className="text-sm font-semibold text-fg">{heading}</h3>
 
-      <div className="grid gap-5 sm:grid-cols-[12rem_1fr]">
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-[12rem_1fr]">
         <Field label="Source type">
           {(props) => (
             <Select
@@ -96,7 +96,7 @@ export function EvidenceForm({ heading, initial, submitLabel, onSubmit, onCancel
         label="Link"
         optional
         error={errors.sourceUrl}
-        hint="A link you add yourself. Gospel Labs doesn't check or verify it."
+        hint="A link you add yourself. Gospel Labs doesn’t check or verify it."
       >
         {(props) => (
           <Input

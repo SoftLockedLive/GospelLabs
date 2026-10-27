@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BookOpen, Clock, Compass, FlaskConical, Footprints, GitBranch, Hourglass, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, Clock, Compass, FlaskConical, Footprints, GitBranch, HeartHandshake, Hourglass, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ui/button";
 import { ProgressPath, pathFromCounts } from "@/components/ui/progress-path";
@@ -8,9 +8,9 @@ import { SegmentedControl, type SegmentedOption } from "@/components/ui/segmente
 import { Skeleton, SkeletonText } from "@/components/ui/skeleton";
 import { describeReason, minutesFor, sessionSteps, type StudyPositionSummary, type Suggestion } from "@/domain/study/suggestions";
 import type { StudyProgress } from "@/domain/study/user-data";
-import type { StudyLength } from "@/domain/study/vocabulary";
+import { studyLengthMinutes, type StudyLength } from "@/domain/study/vocabulary";
 import { cn } from "@/lib/cn";
-import { investigateHref, newInvestigationHref, studyInvestigationHref } from "@/lib/routes";
+import { connectHref, investigateHref, newInvestigationHref, resumeInvestigationHref, studyInvestigationHref } from "@/lib/routes";
 import { formatLongDate, greetingFor } from "./time";
 import type { InvestigationSummary } from "./types";
 
@@ -22,12 +22,12 @@ export type HeroFocus =
   | { kind: "browse"; hasInvestigations: boolean };
 
 const LENGTH_OPTIONS: readonly SegmentedOption<StudyLength>[] = [
-  { value: "quick", label: "Quick", detail: "5–10 min", icon: Hourglass },
-  { value: "deep", label: "Deep", detail: "20–40 min", icon: Footprints },
+  { value: "quick", label: "Quick", detail: studyLengthMinutes("quick"), icon: Hourglass },
+  { value: "deep", label: "Deep", detail: studyLengthMinutes("deep"), icon: Footprints },
 ];
 
 const LENGTH_HELP: Record<StudyLength, string> = {
-  quick: "A quick study follows an investigation's main path.",
+  quick: "A quick study follows an investigation’s main path.",
   deep: "A deep study adds deeper steps, side questions, and time to reflect.",
 };
 
@@ -40,7 +40,7 @@ interface DashboardHeroProps {
 
 export function DashboardHero({ now, length, onLengthChange, focus }: DashboardHeroProps) {
   return (
-    <section aria-labelledby="dashboard-title" className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] xl:items-center xl:gap-12">
+    <section aria-labelledby="dashboard-title" className="grid grid-cols-1 gap-8 xl:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] xl:items-center xl:gap-12">
       <div className="min-w-0">
         {/* The hour is only known in the browser; the line keeps its height until then. */}
         <p className="min-h-5 text-sm text-muted">
@@ -66,6 +66,18 @@ export function DashboardHero({ now, length, onLengthChange, focus }: DashboardH
           <p className="mt-2.5 text-xs leading-relaxed text-subtle" aria-live="polite">
             {LENGTH_HELP[length]}
           </p>
+          {/* Even a quick investigation takes 20 minutes or more; someone with a few minutes gets a way in too. */}
+          <Link
+            href={connectHref()}
+            className="mt-4 flex min-h-12 w-full max-w-md items-center gap-3 rounded-xl border border-line bg-surface px-4 py-2.5 text-sm transition-colors hover:border-accent/50 hover:bg-surface-raised"
+          >
+            <HeartHandshake aria-hidden className="size-5 shrink-0 text-accent" />
+            <span className="min-w-0 flex-1">
+              <span className="block font-medium text-fg">Only a few minutes?</span>
+              <span className="block text-xs text-muted">Spend them with the Savior in Connect with Christ.</span>
+            </span>
+            <ArrowRight aria-hidden className="size-4 shrink-0 text-subtle" />
+          </Link>
         </div>
       </div>
       <FocusCard focus={focus} length={length} />
@@ -131,7 +143,7 @@ function ContinueFocus({ investigation, progress, position }: Extract<HeroFocus,
         </div>
         <ProgressPath steps={pathFromCounts(position.total, Math.max(position.step - 1, 0))} label={`Step ${position.step} of ${position.total}`} />
       </div>
-      <ButtonLink href={studyInvestigationHref(investigation.id)} size="lg" className="mt-6 w-full">
+      <ButtonLink href={resumeInvestigationHref(investigation.id)} size="lg" className="mt-6 w-full">
         Continue studying
         <ArrowRight aria-hidden />
       </ButtonLink>
@@ -164,7 +176,7 @@ function StartFocus({ suggestion, length }: { suggestion: Suggestion; length: St
       </dl>
       {reason.kind === "related" && <p className="mt-2 text-xs text-subtle">{describeReason(reason, length)}</p>}
       <ButtonLink href={studyInvestigationHref(investigation.id)} size="lg" className="mt-6 w-full">
-        Start an investigation
+        Start this investigation
         <ArrowRight aria-hidden />
       </ButtonLink>
     </div>
@@ -204,7 +216,7 @@ function BrowseFocus({ hasInvestigations }: { hasInvestigations: boolean }) {
         className={cn("mt-3 flex min-h-11 items-center justify-center gap-2 rounded-lg text-sm font-medium text-accent hover:text-accent-strong")}
       >
         <BookOpen aria-hidden className="size-4" />
-        Browse the question bank
+        Browse the Question Bank
       </Link>
     </div>
   );

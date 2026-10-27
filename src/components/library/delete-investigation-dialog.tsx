@@ -16,7 +16,7 @@ interface DeleteInvestigationDialogProps {
 
 const plural = (count: number, word: string) => `${count} ${word}${count === 1 ? "" : "s"}`;
 
-/** "2 evidence cards, 1 claim, and 3 challenge responses": what deleting an investigation removes. */
+/** "2 evidence cards, 1 claim, and 3 challenge responses": what deleting a research notebook removes. */
 function describeContents(investigation: Investigation): string {
   const trailNotes = investigation.trailProgress.reduce(
     (count, trail) => count + trail.steps.filter((step) => step.discoveries.trim()).length,
@@ -31,8 +31,8 @@ function describeContents(investigation: Investigation): string {
     ...(investigation.discoveryHighlights.length > 0
       ? [
           investigation.discoveryHighlights.length === 1
-            ? "1 saved discovery"
-            : `${investigation.discoveryHighlights.length} saved discoveries`,
+            ? "1 saved insight"
+            : `${investigation.discoveryHighlights.length} saved insights`,
         ]
       : []),
     ...(investigation.challengeResponses.length > 0
@@ -66,13 +66,13 @@ export function DeleteInvestigationDialog({ investigation, onClose, onDeleted }:
     }
   };
 
-  const title = investigation?.title.trim() || "Untitled investigation";
+  const title = investigation?.title.trim() || "Untitled notebook";
 
   return (
     <Dialog
       open={investigation !== null}
       onClose={close}
-      title="Delete this investigation?"
+      title="Delete this research notebook?"
       description={
         investigation && (
           <>
@@ -88,13 +88,13 @@ export function DeleteInvestigationDialog({ investigation, onClose, onDeleted }:
           </Button>
           <Button variant="danger" onClick={confirm} disabled={busy}>
             <Trash2 aria-hidden />
-            {busy ? "Deleting…" : "Delete investigation"}
+            {busy ? "Deleting…" : "Delete notebook"}
           </Button>
         </>
       }
     >
       <p className="text-xs leading-relaxed text-subtle">
-        Tip: Settings › Export backup saves a copy of all your investigations first.
+        Tip: Settings › Export backup saves a copy of all your research notebooks first.
       </p>
       {error && (
         <p role="alert" className="mt-3 text-sm text-danger">

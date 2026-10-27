@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const reference = getSource(passage.sourceId)?.label;
   return {
     title: reference ? `${passage.title} (${reference})` : passage.title,
-    description: `Explore ${reference ?? passage.title} in Scripture Explorer: themes, key phrases, related scriptures, and context.`,
+    description: `Explore ${reference ?? passage.title} in Scripture Explorer: themes, key words, related scriptures, and context.`,
   };
 }
 

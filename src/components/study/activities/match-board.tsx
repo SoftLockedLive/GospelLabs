@@ -305,12 +305,13 @@ function MatchStack({ rightLabel, left, right, value, onToggle, markFor, feedbac
             {!readOnly && (
               <button
                 type="button"
+                id={`${listId}-toggle`}
                 aria-expanded={isOpen}
                 aria-controls={listId}
                 onClick={() => setOpen(isOpen ? null : item.id)}
                 className="mt-3 flex min-h-11 w-full items-center justify-between rounded-lg border border-line-strong px-3 text-sm font-medium text-fg hover:bg-surface-raised"
               >
-                {partner ? "Change" : `Choose from ${rightLabel.toLowerCase()}`}
+                {partner ? "Change" : "Choose a match"}
                 <ChevronDown aria-hidden className={cn("size-4 text-subtle transition-transform", isOpen && "rotate-180")} />
               </button>
             )}
@@ -327,6 +328,8 @@ function MatchStack({ rightLabel, left, right, value, onToggle, markFor, feedbac
                         onClick={() => {
                           onToggle(item.id, option.id);
                           setOpen(null);
+                          // The list closes under the focused option: return focus to this item's "Change" button.
+                          requestAnimationFrame(() => document.getElementById(`${listId}-toggle`)?.focus());
                         }}
                         className={cn(
                           itemBase,

@@ -30,7 +30,7 @@ export function RecentDiscoveries({ cards, total, now }: { cards: readonly Disco
             <p className="text-sm font-semibold text-fg">Your discoveries will gather here</p>
             <p className="mt-1 max-w-lg text-sm leading-relaxed text-muted">
               Finish an investigation and Gospel Labs saves a Discovery Card of what you found, with its sources. Your
-              cards also grow your Discovery Map.
+              cards also grow your Map.
             </p>
           </div>
         </div>
@@ -43,7 +43,7 @@ export function RecentDiscoveries({ cards, total, now }: { cards: readonly Disco
 
   return (
     <div className="flex flex-col gap-4">
-      <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {cards.map((card, index) => {
           const origin = ORIGINS[card.origin.kind];
           const Icon = origin.icon;
@@ -73,7 +73,7 @@ export function RecentDiscoveries({ cards, total, now }: { cards: readonly Disco
         </Link>
         <Link href={mapHref()} className={buttonClasses({ variant: "secondary" })}>
           <Waypoints aria-hidden />
-          Open the Discovery Map
+          Open your Map
         </Link>
       </div>
     </div>

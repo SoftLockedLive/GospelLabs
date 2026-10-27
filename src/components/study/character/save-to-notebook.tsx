@@ -24,14 +24,15 @@ export function SaveToNotebook() {
 
   return (
     <section aria-labelledby="keep-title" className="rounded-2xl border border-line bg-surface p-5 shadow-soft sm:p-6">
-      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
-        <div className="max-w-xl">
+      {/* Text above, buttons below and wrapping: side by side, three buttons crushed the text and overflowed at tablet widths. */}
+      <div className="flex flex-col gap-5">
+        <div className="max-w-2xl">
           <h2 id="keep-title" className="text-lg font-semibold tracking-tight text-fg">
             Keep what you’ve studied
           </h2>
           <p className="mt-1 text-sm leading-relaxed text-muted">
             Your Notebook card for {attribute.name.toLowerCase()} gathers its definition, the words you opened, and the connections and sources on this
-            page. It also places {attribute.name.toLowerCase()} on your Discovery Map. Finishing an activity updates the card for you.
+            page. It also places {attribute.name.toLowerCase()} on your Map. Finishing an activity updates the card for you.
           </p>
           {card && (
             <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-subtle">
@@ -40,10 +41,10 @@ export function SaveToNotebook() {
             </p>
           )}
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Button onClick={() => void handleSave()} disabled={state === "saving"} className="w-full sm:w-auto">
             <BookmarkPlus aria-hidden />
-            {card ? "Update my Notebook card" : "Save to my Notebook"}
+            {card ? "Update Notebook card" : "Save to Notebook"}
           </Button>
           {card && (
             <>
@@ -53,7 +54,7 @@ export function SaveToNotebook() {
               </ButtonLink>
               <ButtonLink href={mapHref(`attribute:${attribute.id}`)} variant="secondary" className="w-full sm:w-auto">
                 <Waypoints aria-hidden />
-                See it on the Map
+                See on Map
               </ButtonLink>
             </>
           )}
@@ -67,12 +68,13 @@ export function SaveToNotebook() {
   );
 }
 
-/** "Explored · 3 words" under the page title, once the record has loaded. */
+/** "Explored · 3 words" under the page title, once the record has loaded and the learner has done something. */
 export function ExploredStatus() {
   const { exploration } = useAttributeStudy();
   if (exploration.status !== "ready" || !exploration.value) return null;
   const summary = explorationSummary(exploration.value);
-  if (!summary) return null;
+  // They're on the page now, so "Opened" says nothing.
+  if (!summary || summary === "Opened") return null;
   return (
     <p className="inline-flex items-center gap-1.5 text-xs font-medium text-muted">
       <Check aria-hidden className="size-3.5 text-green" />

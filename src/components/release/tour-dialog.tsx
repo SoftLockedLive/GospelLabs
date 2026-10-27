@@ -28,7 +28,7 @@ export const TOUR_STEPS: readonly TourStep[] = [
     icon: BookOpenText,
     label: "Scripture Explorer",
     title: "Read closely",
-    text: "Explore a short passage: highlight the words that stand out, see its themes and key phrases, and compare related scriptures.",
+    text: "Explore a short passage: highlight the words that stand out, see its themes and key words, and compare related scriptures.",
   },
   {
     icon: Sparkles,
@@ -39,24 +39,33 @@ export const TOUR_STEPS: readonly TourStep[] = [
   {
     icon: HeartHandshake,
     label: "Connect with Christ",
-    title: "A quiet few minutes",
-    text: "A short scripture to read and ponder each day, with nothing to finish and nothing scored.",
+    title: "Time with the Savior",
+    text: "A few quiet minutes with the Savior: see Him in an account from His life, think through a question about His teachings, or reflect on a verse. Nothing to finish, nothing scored.",
   },
   {
     icon: NotebookPen,
     label: "Notebook and Map",
     title: "Keep what you discover",
-    text: "When you finish an investigation, a Discovery Card is saved to your Notebook, and your Discovery Map grows from what you've studied.",
+    text: "Finishing an investigation adds a Discovery Card to your Notebook, along with anything else you choose to save. Your Map grows from what you’ve studied.",
   },
   {
     icon: ShieldCheck,
     label: "Private by design",
     title: "Your study stays with you",
-    text: "There's no account, tracking, or AI. Everything is saved in this browser on this device, so back it up now and then in Settings. Found a problem? Report it from Settings › Feedback.",
+    text: "There’s no account, tracking, or AI. Everything is saved in this browser on this device, so back it up now and then in Settings. Found a problem? Report it from Settings › Feedback.",
   },
 ];
 
-export function TourDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+interface TourDialogProps {
+  open: boolean;
+  onClose: () => void;
+  /** The last step's button. "Start studying" by default; "Done" where the tour is a reminder (Settings, What's new). */
+  finishLabel?: string;
+  /** Called, after closing, when the learner finishes the tour with the last step's button. */
+  onFinish?: () => void;
+}
+
+export function TourDialog({ open, onClose, finishLabel = "Start studying", onFinish }: TourDialogProps) {
   const [index, setIndex] = useState(0);
   const step = TOUR_STEPS[index];
   const last = index === TOUR_STEPS.length - 1;
@@ -65,6 +74,11 @@ export function TourDialog({ open, onClose }: { open: boolean; onClose: () => vo
   const close = () => {
     onClose();
     setIndex(0);
+  };
+
+  const finish = () => {
+    close();
+    onFinish?.();
   };
 
   return (
@@ -81,8 +95,8 @@ export function TourDialog({ open, onClose }: { open: boolean; onClose: () => vo
             </Button>
           )}
           {last ? (
-            <Button onClick={close} data-autofocus>
-              Start studying
+            <Button onClick={finish} data-autofocus>
+              {finishLabel}
             </Button>
           ) : (
             <Button onClick={() => setIndex(index + 1)} data-autofocus>

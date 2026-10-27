@@ -4,6 +4,11 @@
  * The opening of a guided investigation: the question and why it matters,
  * what learners asked, the primary question it rests on, and the choice of
  * difficulty and session length. Resuming shows where the learner left off.
+ * The way in (Begin, or Resume) is offered right under the question too, so
+ * nobody has to scroll past the introduction to start; the full setup below
+ * is where difficulty and length change. Beginning or resuming saves the
+ * level and length as the learner's preferences, so the next investigation
+ * opens the same way.
  *
  * When the session is blocked, nothing here can replace the stored progress:
  * progress saved by a newer version is shown read-only with a reload, and
@@ -29,7 +34,7 @@ import {
   type StudyLength,
 } from "@/domain/study/vocabulary";
 import { formatDate } from "@/lib/format";
-import type { Preferences } from "@/lib/preferences";
+import { readPreferences, updatePreferences, type Preferences } from "@/lib/preferences";
 import { investigateHref } from "@/lib/routes";
 import { cn } from "@/lib/cn";
 import { ChoiceCards } from "./choice-cards";
@@ -63,6 +68,12 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
   const completed = !!progress?.completedAt;
   const commonQuestions = investigation.commonQuestions.slice(0, 3);
 
+  function begin() {
+    // Looking back through a finished investigation, or studying without saving, isn't a choice about how to study next.
+    if (!blocked && !completed) rememberStudySettings(difficulty, length);
+    onStart({ difficulty, length });
+  }
+
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-8">
       <Link
@@ -81,6 +92,26 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
         <p className="mt-4 font-serif text-xl leading-snug text-fg sm:text-2xl">{investigation.question}</p>
         <p className="mt-3 text-base leading-relaxed text-muted">{investigation.hook}</p>
       </header>
+
+      {!completed && !blocked && (
+        <section
+          aria-label={progress ? "Continue" : "Begin"}
+          className="motion-reveal flex flex-col gap-3 rounded-xl border border-accent/30 bg-accent-soft p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5"
+        >
+          <p className="text-sm leading-relaxed text-fg">
+            {progress && completion
+              ? `You’re on step ${Math.min(completion.currentIndex + 1, completion.total)} of ${completion.total}.`
+              : `${DIFFICULTY_LABELS[difficulty]} · ${length === "quick" ? "Quick" : "Deep"}, about ${investigation.estimatedMinutes[length]} min.`}{" "}
+            <a href="#study-setup" className="text-accent underline underline-offset-2 hover:text-accent-strong">
+              {progress ? "Change level or length" : "Change"}
+            </a>
+          </p>
+          <Button onClick={begin} className="shrink-0">
+            {progress ? "Resume" : "Begin"}
+            <ArrowRight aria-hidden />
+          </Button>
+        </section>
+      )}
 
       {completed && progress?.completedAt && (
         <section aria-label="Completed" className="flex flex-col gap-3 rounded-xl border border-green/35 bg-green-soft p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
@@ -176,7 +207,7 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
             <p className="text-xs leading-relaxed text-subtle">Steps you&rsquo;ve finished stay finished at the level you did them.</p>
           )}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button size="lg" onClick={() => onStart({ difficulty, length })} className="w-full sm:w-auto">
+            <Button size="lg" onClick={begin} className="w-full sm:w-auto">
               {blocked
                 ? "Study without saving"
                 : progress && !completed && completion
@@ -223,6 +254,19 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
       />
     </div>
   );
+}
+
+/**
+ * Saves the level and length a learner begins or resumes with as their preferences. Only what differs from the
+ * current preferences is written: beginning with the defaults doesn't store them as if they had been chosen
+ * (updatePreferences stores only changed fields, for the same reason).
+ */
+function rememberStudySettings(difficulty: Difficulty, length: StudyLength) {
+  const current = readPreferences();
+  const change: Partial<Preferences> = {};
+  if (current.difficulty !== difficulty) change.difficulty = difficulty;
+  if (current.studyLength !== length) change.studyLength = length;
+  if (Object.keys(change).length) updatePreferences(change);
 }
 
 function PrimaryQuestionCard({ investigation }: { investigation: StudyInvestigation }) {

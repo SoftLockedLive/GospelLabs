@@ -10,7 +10,7 @@ import type { CompareResponse } from "@/domain/study/activities";
 import type { ActivityOf } from "@/domain/study/content-schema";
 import { VERDICT_LABELS, VERDICTS, type Verdict } from "@/domain/study/vocabulary";
 import { cn } from "@/lib/cn";
-import { ProvenanceLabel } from "../shared/provenance";
+import { WhyLabel } from "../shared/provenance";
 import { feedbackFor, markFor, type BodyProps } from "./body";
 import { ItemFeedbackText, MarkIcon, markSurface } from "./marks";
 
@@ -42,7 +42,7 @@ export function CompareActivity(props: Props) {
                 </div>
                 <MarkIcon mark={mark} finished={finished} className="mt-0.5" />
               </div>
-              <div className="mt-3.5 grid gap-2 sm:grid-cols-3">
+              <div className="mt-3.5 grid grid-cols-1 gap-2 sm:grid-cols-3">
                 {VERDICTS.map((verdict: Verdict) => {
                   const selected = chosen === verdict;
                   return (
@@ -71,7 +71,7 @@ export function CompareActivity(props: Props) {
             <ItemFeedbackText message={feedback} />
             {(finished || mark === "correct") && (
               <div className="motion-reveal mt-3 rounded-lg bg-surface-sunken px-3 py-2.5">
-                <ProvenanceLabel provenance="suggested" />
+                <WhyLabel />
                 <p className="mt-1 text-sm leading-relaxed text-muted">{perspective.rationale}</p>
               </div>
             )}

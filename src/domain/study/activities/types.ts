@@ -39,7 +39,7 @@ export interface EvidenceConnectResponse {
   pairs: Record<string, string>;
 }
 
-/** Clue Investigation. Marks are keyed by option id. */
+/** Follow the Clues. Marks are keyed by option id. */
 export interface ClueResponse {
   /** Clue ids the learner has examined, in the order they opened them. */
   examined: string[];

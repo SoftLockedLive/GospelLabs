@@ -13,12 +13,12 @@ export default function LibraryPage() {
     <PageContainer className="flex flex-col gap-8">
       <PageHeader
         eyebrow="My Library"
-        title="Your investigations"
-        description="Every question you've studied, with its notes and evidence. Pick up wherever you left off."
+        title="Your research notebooks"
+        description="Every question you’ve studied, with its notes and evidence. Pick up wherever you left off."
         actions={
           <ButtonLink href={newInvestigationHref()}>
             <FlaskConical aria-hidden />
-            New investigation
+            New research notebook
           </ButtonLink>
         }
       />

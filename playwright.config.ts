@@ -35,6 +35,8 @@ export default defineConfig({
   reporter: process.env.CI ? "github" : "list",
   use: {
     baseURL: `http://localhost:${PORT}`,
+    // Dates show in the learner's time zone; a fixed one keeps date assertions the same on every machine.
+    timezoneId: "UTC",
     // Most tests are about a learner already using this version: the welcome and What's new are
     // marked as seen, so they don't appear. e2e/release-notes.spec.ts opts out to test them.
     storageState: {

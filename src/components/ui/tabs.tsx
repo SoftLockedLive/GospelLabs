@@ -54,7 +54,8 @@ export function Tabs<T extends string>({ label, items, value, onChange, keepMoun
         role="tablist"
         aria-label={label}
         onKeyDown={onKeyDown}
-        className={cn("scrollbar-none flex gap-1 overflow-x-auto border-b border-line", listClassName)}
+        // Tabs wrap onto another line rather than scrolling: a hidden scrollbar left the last tabs cut off on phones.
+        className={cn("flex flex-wrap gap-x-1 border-b border-line", listClassName)}
       >
         {items.map((item) => {
           const selected = item.value === value;

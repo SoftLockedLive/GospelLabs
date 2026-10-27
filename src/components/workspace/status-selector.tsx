@@ -24,8 +24,8 @@ export function StatusSelector({ value, onChange }: StatusSelectorProps) {
   return (
     <fieldset>
       <legend className="text-sm font-medium text-fg">Status</legend>
-      <p className="mt-1 text-xs text-subtle">You decide when an investigation feels complete.</p>
-      <div className="mt-3 grid gap-2 sm:grid-cols-3">
+      <p className="mt-1 text-xs text-subtle">You decide when a research notebook feels complete.</p>
+      <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
         {INVESTIGATION_STATUSES.map((status) => {
           const selected = value === status;
           return (

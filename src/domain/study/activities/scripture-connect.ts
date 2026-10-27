@@ -4,7 +4,7 @@
  */
 import type { ActivityOf } from "../content-schema";
 import { checkChoice, isChoiceComplete, parseChoice } from "./choice";
-import { field, isRecord } from "./parse";
+import { field, isRecord, stillNeedAnotherLook } from "./parse";
 import type { ActivityChecker, CheckResult, ItemFeedback, ItemMark, ScriptureConnectResponse } from "./types";
 
 type ScriptureConnect = ActivityOf<"scripture-connect">;
@@ -54,7 +54,7 @@ export const scriptureConnect: ActivityChecker<ScriptureConnect, ScriptureConnec
       feedback,
       summary: correct
         ? "Each answer fits the passages."
-        : `${right} of ${results.length} answers fit the passages. Look again at the ${results.length - right === 1 ? "question" : "questions"} marked.`,
+        : stillNeedAnotherLook(results.length - right, "answer", "answers"),
     };
   },
 

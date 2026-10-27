@@ -415,15 +415,39 @@ describe("help policy", () => {
     expect(help.nextHint).toEqual({ index: 0, text: activity.type !== "reflect" ? activity.hints[0] : "" });
   });
 
+  it("offers Continue anyway from the start where the host allows it, but not Show me", () => {
+    const fresh = { attempts: 0, hintsShown: 0, completed: false };
+    expect(helpOptions(activity, fresh, { allowSkip: true })).toMatchObject({ canSkip: true, canReveal: false });
+    expect(helpOptions(activity, fresh, { allowSkip: false }).canSkip).toBe(false);
+  });
+
   it("shows feedback and offers the next hint after a wrong check", () => {
     const help = helpOptions(activity, { attempts: 1, hintsShown: 1, completed: false, lastCheckWrong: true });
     expect(help).toMatchObject({ showFeedback: true, offerHint: true, nextHint: { index: 1 } });
   });
 
-  it("offers Show me after three attempts, and Continue anyway only when allowed", () => {
-    const state = { attempts: ATTEMPTS_BEFORE_REVEAL, hintsShown: 2, completed: false, lastCheckWrong: true };
-    expect(helpOptions(activity, state)).toMatchObject({ canReveal: true, canSkip: false, canRequestHint: false, hintsExhausted: true });
-    expect(helpOptions(activity, state, { allowSkip: true }).canSkip).toBe(true);
+  it("offers Show me after two attempts, with hints still on request", () => {
+    expect(ATTEMPTS_BEFORE_REVEAL).toBe(2);
+    expect(helpOptions(activity, { attempts: 1, hintsShown: 0, completed: false, lastCheckWrong: true }).canReveal).toBe(false);
+    expect(helpOptions(activity, { attempts: 2, hintsShown: 0, completed: false, lastCheckWrong: true })).toMatchObject({
+      canReveal: true,
+      canSkip: false,
+      canRequestHint: true,
+      hintsExhausted: false,
+    });
+  });
+
+  it("offers Show me after one attempt once every hint has been shown", () => {
+    const hints = activity.type !== "reflect" ? activity.hints.length : 0;
+    expect(hints).toBeGreaterThan(1);
+    expect(helpOptions(activity, { attempts: 0, hintsShown: hints, completed: false }).canReveal).toBe(false);
+    expect(helpOptions(activity, { attempts: 1, hintsShown: hints - 1, completed: false, lastCheckWrong: true }).canReveal).toBe(false);
+    expect(helpOptions(activity, { attempts: 1, hintsShown: hints, completed: false, lastCheckWrong: true }, { allowSkip: true })).toMatchObject({
+      canReveal: true,
+      canSkip: true,
+      canRequestHint: false,
+      hintsExhausted: true,
+    });
   });
 
   it("offers nothing once finished, and never for reflections", () => {

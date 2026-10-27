@@ -34,8 +34,8 @@ export function LibraryView() {
       {unreadable > 0 && (
         <p role="status" className="flex items-start gap-2 rounded-lg border border-amber/40 bg-amber-soft px-4 py-3 text-sm text-fg">
           <FileWarning aria-hidden className="mt-0.5 size-4 shrink-0 text-amber" />
-          {unreadable === 1 ? "One saved investigation" : `${unreadable} saved investigations`} couldn&rsquo;t be read
-          and {unreadable === 1 ? "isn't" : "aren't"} shown. {unreadable === 1 ? "It hasn't" : "They haven't"} been
+          {unreadable === 1 ? "One saved research notebook" : `${unreadable} saved research notebooks`} couldn&rsquo;t be read
+          and {unreadable === 1 ? "isn’t" : "aren’t"} shown. {unreadable === 1 ? "It hasn’t" : "They haven’t"} been
           deleted.
         </p>
       )}
@@ -43,17 +43,17 @@ export function LibraryView() {
       {investigations.length === 0 ? (
         <EmptyState
           icon={FlaskConical}
-          title="No investigations yet"
-          description="Start with a question of your own, or pick one from the question bank. Everything you write is saved on this device."
+          title="No research notebooks yet"
+          description="Start with a question of your own, or pick one from the Question Bank. Everything you write is saved on this device."
           action={
             <div className="flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={newInvestigationHref()}>
                 <FlaskConical aria-hidden />
-                Start an investigation
+                New research notebook
               </ButtonLink>
               <ButtonLink href="/questions" variant="secondary">
                 <BookOpen aria-hidden />
-                Browse question bank
+                Browse the Question Bank
               </ButtonLink>
             </div>
           }
@@ -63,14 +63,14 @@ export function LibraryView() {
         <>
           <div
             role="search"
-            aria-label="Filter investigations"
+            aria-label="Filter research notebooks"
             className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-3 sm:flex-row sm:items-center"
           >
             <div className="relative flex-1">
               <Search aria-hidden className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-subtle" />
               <Input
                 type="search"
-                aria-label="Search investigations"
+                aria-label="Search research notebooks"
                 placeholder="Search titles, questions, or evidence"
                 className="pr-9 pl-9 [&::-webkit-search-cancel-button]:hidden"
                 value={filters.query}
@@ -107,8 +107,8 @@ export function LibraryView() {
           <div className="flex min-h-8 items-center justify-between gap-3">
             <p ref={summaryRef} tabIndex={-1} aria-live="polite" className="text-sm text-muted focus:outline-none">
               {filtered
-                ? `${results.length} of ${investigations.length} investigations match`
-                : `${investigations.length} ${investigations.length === 1 ? "investigation" : "investigations"}`}
+                ? `${results.length} of ${investigations.length} notebooks match`
+                : `${investigations.length} ${investigations.length === 1 ? "research notebook" : "research notebooks"}`}
               <span className="sr-only">{announcement}</span>
             </p>
             {filtered && (
@@ -119,7 +119,7 @@ export function LibraryView() {
           </div>
 
           {results.length === 0 ? (
-            <EmptyState icon={SearchX} title="No investigations match" description="Try different words or another status." />
+            <EmptyState icon={SearchX} title="No notebooks match" description="Try different words or another status." />
           ) : (
             <ul className="flex flex-col gap-3">
               {results.map((investigation) => (
@@ -137,7 +137,7 @@ export function LibraryView() {
         onClose={() => setPendingDelete(null)}
         onDeleted={(deleted) => {
           setPendingDelete(null);
-          setAnnouncement(` · Deleted “${deleted.title.trim() || "Untitled investigation"}”`);
+          setAnnouncement(` · Deleted “${deleted.title.trim() || "Untitled notebook"}”`);
           // The button that opened the dialog is gone; keep focus on the list summary.
           requestAnimationFrame(() => summaryRef.current?.focus());
         }}
@@ -148,7 +148,7 @@ export function LibraryView() {
 
 function LibrarySkeleton() {
   return (
-    <div role="status" aria-label="Loading investigations" className="flex animate-pulse flex-col gap-3">
+    <div role="status" aria-label="Loading research notebooks" className="flex animate-pulse flex-col gap-3">
       <div className="h-16 rounded-xl bg-surface" />
       {Array.from({ length: 3 }, (_, i) => (
         <div key={i} className="h-40 rounded-xl border border-line bg-surface" />

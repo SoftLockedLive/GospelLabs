@@ -36,12 +36,12 @@ export function QuestionSection({ investigation, actions, sourceQuestion, onNavi
         )}
       </Field>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <Field label="Title" optional>
           {(props) => (
             <Input
               {...props}
-              placeholder="A short name for this investigation"
+              placeholder="A short name for this notebook"
               value={investigation.title}
               onChange={(event) => actions.setText("title", event.target.value)}
             />

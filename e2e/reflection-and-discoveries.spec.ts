@@ -11,21 +11,21 @@ import {
   sections,
 } from "./helpers";
 
-const saveDialog = (page: Page) => page.getByRole("dialog", { name: "Save a discovery" });
-const discoveryList = (page: Page) => page.getByRole("list", { name: "Your discoveries" });
+const saveDialog = (page: Page) => page.getByRole("dialog", { name: "Save an insight" });
+const discoveryList = (page: Page) => page.getByRole("list", { name: "Your saved insights" });
 const discovery = (page: Page, title: string) =>
   discoveryList(page)
     .locator(":scope > li")
     .filter({ has: page.getByRole("heading", { name: title, exact: true }) });
 
 async function saveDiscovery(page: Page, title: string, insight = "", evidence: RegExp[] = []) {
-  await page.getByRole("button", { name: /^Save discovery/ }).click();
+  await page.getByRole("button", { name: /^Save insight/ }).click();
   const dialog = saveDialog(page);
   await expect(dialog.getByRole("textbox", { name: "Title" })).toBeFocused();
   await dialog.getByRole("textbox", { name: "Title" }).fill(title);
   if (insight) await dialog.getByRole("textbox", { name: "Insight" }).fill(insight);
   for (const name of evidence) await dialog.getByRole("checkbox", { name }).check();
-  await dialog.getByRole("button", { name: "Save discovery" }).click();
+  await dialog.getByRole("button", { name: "Save insight" }).click();
   await expect(dialog).toBeHidden();
 }
 
@@ -34,14 +34,14 @@ test("save discoveries from any section, then review, edit, and delete them in C
   await addEvidence(page, "Mark 8:34", "Let him deny himself, and take up his cross.");
 
   // A title is the only requirement.
-  await page.getByRole("button", { name: "Save discovery" }).click();
-  await saveDialog(page).getByRole("button", { name: "Save discovery" }).click();
-  await expect(saveDialog(page)).toContainText("Give your discovery a short title.");
+  await page.getByRole("button", { name: "Save insight" }).click();
+  await saveDialog(page).getByRole("button", { name: "Save insight" }).click();
+  await expect(saveDialog(page)).toContainText("Give your insight a short title.");
   await saveDialog(page).getByRole("button", { name: "Cancel" }).click();
 
   await saveDiscovery(page, "Discipleship is daily", "Both passages describe a daily choice.", [/^E2/]);
-  await expect(page.getByRole("button", { name: "Save discovery (1 saved)" })).toBeFocused();
-  await expect(page.getByRole("status").filter({ hasText: "Discovery saved" })).toBeAttached();
+  await expect(page.getByRole("button", { name: "Save insight (1 saved)" })).toBeFocused();
+  await expect(page.getByRole("status").filter({ hasText: "Insight saved" })).toBeAttached();
 
   await goToSection(page, "Analysis");
   await saveDiscovery(page, "A question remains");
@@ -50,7 +50,7 @@ test("save discoveries from any section, then review, edit, and delete them in C
   // Review: wide screens offer a shortcut; every screen has Conclusion.
   if (testInfo.project.name === "desktop") {
     await page.getByRole("button", { name: "2 saved · Review" }).click();
-    await expect(page.getByRole("heading", { name: /^Your discoveries/ })).toBeFocused();
+    await expect(page.getByRole("heading", { name: /^Your saved insights/ })).toBeFocused();
   } else {
     await goToSection(page, "Conclusion");
   }
@@ -59,8 +59,8 @@ test("save discoveries from any section, then review, edit, and delete them in C
   await expect(discovery(page, "Discipleship is daily").getByRole("list")).toContainText("E2Mark 8:34");
 
   // Edit: rename and link one more piece of evidence.
-  await discovery(page, "Discipleship is daily").getByRole("button", { name: /^Edit discovery/ }).click();
-  const editDialog = page.getByRole("dialog", { name: "Edit discovery" });
+  await discovery(page, "Discipleship is daily").getByRole("button", { name: /^Edit insight/ }).click();
+  const editDialog = page.getByRole("dialog", { name: "Edit insight" });
   await expect(editDialog.getByRole("textbox", { name: "Title" })).toHaveValue("Discipleship is daily");
   await editDialog.getByRole("textbox", { name: "Title" }).fill("Following Him is daily");
   await editDialog.getByRole("checkbox", { name: /^E1/ }).check();
@@ -77,8 +77,8 @@ test("save discoveries from any section, then review, edit, and delete them in C
   await expect(discovery(page, "Following Him is daily").getByRole("list")).toContainText("E2Mark 8:34");
 
   // Deleting a discovery can be undone.
-  await discovery(page, "A question remains").getByRole("button", { name: /^Delete discovery/ }).click();
-  await expect(page.getByRole("status").filter({ hasText: "Discovery removed" })).toBeVisible();
+  await discovery(page, "A question remains").getByRole("button", { name: /^Delete insight/ }).click();
+  await expect(page.getByRole("status").filter({ hasText: "Insight removed" })).toBeVisible();
   await expect(discoveryList(page).locator(":scope > li")).toHaveCount(1);
   await page.getByRole("button", { name: "Undo" }).click();
   await expect(discoveryList(page).locator(":scope > li")).toHaveCount(2);
@@ -137,7 +137,7 @@ test("Come unto Christ reflection is optional, saves as you type, and doesn't af
 
 test("an investigation saved before reflections and discoveries keeps all of its data", async ({ page }) => {
   await page.goto("/library");
-  await expect(page.getByText("No investigations yet")).toBeVisible();
+  await expect(page.getByText("No research notebooks yet")).toBeVisible();
   await putRawRecord(page, RECORD_BEFORE_REFLECTION);
 
   await page.goto(`/investigations/view?id=${RECORD_BEFORE_REFLECTION.id}`);

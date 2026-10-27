@@ -33,7 +33,7 @@ export function ProgressPath({ investigation, progress, onOpen }: ProgressPathPr
   const currentIndex = mainPathIndex(investigation, progress);
   const inBranch = !!progress.position.branchId;
 
-  // On narrow screens the path scrolls sideways; keep the current step in view.
+  // Six steps fit a 360px phone; longer paths scroll sideways, so keep the current step in view.
   useEffect(() => {
     const list = listRef.current;
     const active = list?.querySelector<HTMLElement>("[data-current]");
@@ -45,7 +45,7 @@ export function ProgressPath({ investigation, progress, onOpen }: ProgressPathPr
     <nav aria-label="Investigation steps">
       {/* `relative` keeps each step's screen-reader text (absolutely positioned) inside this scrolling list;
           without it, the hidden text of steps scrolled out of view widens the whole page. */}
-      <ol ref={listRef} className="scrollbar-none relative -mx-1 flex items-center gap-1 overflow-x-auto px-1 py-1">
+      <ol ref={listRef} className="scrollbar-none relative -mx-1 flex items-center gap-0.5 overflow-x-auto px-1 py-1 sm:gap-1">
         {path.map((step, index) => {
           const ref = { stepId: step.id };
           const status = stepStatus(progress, ref);
@@ -53,8 +53,8 @@ export function ProgressPath({ investigation, progress, onOpen }: ProgressPathPr
           const here = current && !inBranch;
           const openable = canOpenStep(investigation, progress, ref) && !here;
           return (
-            <li key={step.id} className="flex shrink-0 items-center gap-1">
-              {index > 0 && <span aria-hidden className={cn("h-px w-3 sm:w-5", status === "unvisited" ? "bg-line-strong" : "bg-accent/50")} />}
+            <li key={step.id} className="flex shrink-0 items-center gap-0.5 sm:gap-1">
+              {index > 0 && <span aria-hidden className={cn("h-px w-2 sm:w-5", status === "unvisited" ? "bg-line-strong" : "bg-accent/50")} />}
               <button
                 type="button"
                 data-current={current || undefined}
@@ -69,7 +69,7 @@ export function ProgressPath({ investigation, progress, onOpen }: ProgressPathPr
                 <StepDot n={index + 1} status={status} current={current} />
                 <span className={cn("hidden max-w-[11rem] truncate lg:inline", here && "font-medium")}>{step.title}</span>
                 <span className="sr-only">
-                  {`Step ${index + 1}: ${step.title}, ${STATUS_TEXT[status]}${here ? " (current)" : current ? " (you'll return here)" : ""}`}
+                  {`Step ${index + 1}: ${step.title}, ${STATUS_TEXT[status]}${here ? " (current)" : current ? " (you’ll return here)" : ""}`}
                 </span>
               </button>
             </li>

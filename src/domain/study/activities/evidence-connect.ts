@@ -4,7 +4,7 @@
  * the pair's `clue`, which sends the learner back to the evidence.
  */
 import type { ActivityOf } from "../content-schema";
-import { field, idSet, stringRecord } from "./parse";
+import { field, idSet, stillNeedAnotherLook, stringRecord } from "./parse";
 import { seededShuffle } from "./shuffle";
 import type { ActivityChecker, CheckResult, EvidenceConnectResponse, ItemFeedback, ItemMark } from "./types";
 
@@ -63,7 +63,7 @@ export const evidenceConnect: ActivityChecker<EvidenceConnect, EvidenceConnectRe
       feedback,
       summary: correct
         ? "Every connection is supported by the evidence."
-        : `${right} of ${total} connections are supported by the evidence. Look again at the ones marked.`,
+        : stillNeedAnotherLook(total - right, "connection", "connections"),
     };
   },
 

@@ -7,7 +7,7 @@ import { getSources, listConnectSessions } from "@/lib/study-content";
 
 export const metadata: Metadata = {
   title: "Connect with Christ",
-  description: "A quiet few minutes with the Savior: see Him in the scriptures, understand His teachings, or reflect on a verse.",
+  description: "A few quiet minutes with the Savior: see Him in an account from His life, think through a question about His teachings, or reflect on a verse.",
 };
 
 /**

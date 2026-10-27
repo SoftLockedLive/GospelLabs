@@ -37,7 +37,7 @@ test("keeps working offline after the first visit", async ({ page, context, brow
 
   // Pages that were never cached show an honest offline page rather than an error.
   await page.goto("/questions/not-a-real-question");
-  await expect(page.getByText("This page isn't available offline")).toBeVisible();
+  await expect(page.getByText("This page isn’t available offline")).toBeVisible();
 
   await context.setOffline(false);
   await page.goto("/library");

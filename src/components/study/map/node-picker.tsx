@@ -50,7 +50,7 @@ export function NodePicker({ legend, nodes, value, onChange, exclude, error }: N
         <Input
           type="search"
           aria-label={`Search: ${legend}`}
-          placeholder="Search your map"
+          placeholder="Search your Map"
           className="h-11 pl-9"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
@@ -58,7 +58,7 @@ export function NodePicker({ legend, nodes, value, onChange, exclude, error }: N
       </div>
       <div className="max-h-52 overflow-y-auto rounded-lg border border-line bg-surface-sunken/50">
         {shown.length === 0 ? (
-          <p className="px-3 py-3 text-sm text-muted">Nothing on your map matches.</p>
+          <p className="px-3 py-3 text-sm text-muted">Nothing on your Map matches.</p>
         ) : (
           <ul>
             {shown.map((node) => (
@@ -79,7 +79,7 @@ export function NodePicker({ legend, nodes, value, onChange, exclude, error }: N
                   />
                   <KindSwatch kind={node.kind} />
                   <span className="min-w-0 flex-1 break-words text-fg">{node.label}</span>
-                  <span className="hidden shrink-0 text-xs text-subtle min-[420px]:inline">{NODE_KIND_LABELS[node.kind]}</span>
+                  <span className="hidden shrink-0 text-xs text-subtle min-[30rem]:inline">{NODE_KIND_LABELS[node.kind]}</span>
                 </label>
               </li>
             ))}

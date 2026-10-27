@@ -20,14 +20,14 @@ interface DeleteAllDialogProps {
 
 /** What each kind includes, so the list says exactly what will be lost. */
 const INCLUDES: Partial<Record<DataKind, string>> = {
-  investigations: "with their evidence, connections, discoveries, and notes",
+  investigations: "with their evidence, connections, insights, and notes",
   progress: "your progress, answers, and reflections",
   discoveries: "with your notes and highlights",
 };
 
 /**
  * Confirms deleting everything stored on this device: research
- * investigations and all study data, in one transaction. Lists what will be
+ * notebooks and all study data, in one transaction. Lists what will be
  * deleted per kind, offers a backup first, and requires an explicit
  * acknowledgement. Appearance and study preferences are kept.
  */
@@ -62,7 +62,7 @@ export function DeleteAllDialog({ open, counts, onClose, onDeleted }: DeleteAllD
         tone: "status",
         text:
           `Downloaded a backup of ${describeCounts(exported, "your preferences (nothing else is saved yet)")}.` +
-          (unreadable ? ` ${unreadable} damaged ${unreadable === 1 ? "record" : "records"} couldn't be included.` : ""),
+          (unreadable ? ` ${unreadable} damaged ${unreadable === 1 ? "record" : "records"} couldn’t be included.` : ""),
       });
     } catch (cause) {
       setMessage({ tone: "alert", text: toStorageError(cause).message });
@@ -103,7 +103,7 @@ export function DeleteAllDialog({ open, counts, onClose, onDeleted }: DeleteAllD
                 <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-danger" />
                 <span>
                   <span className="font-medium">{countOf(kind, counts[kind])}</span>
-                  {INCLUDES[kind] && <span className="text-muted"> — {INCLUDES[kind]}</span>}
+                  {INCLUDES[kind] && <span className="text-muted">—{INCLUDES[kind]}</span>}
                 </span>
               </li>
             ))}
@@ -118,7 +118,7 @@ export function DeleteAllDialog({ open, counts, onClose, onDeleted }: DeleteAllD
         </div>
         <div>
           <AcknowledgeCheckbox checked={acknowledged} onChange={setAcknowledged}>
-            I understand that all my investigations and study data will be deleted and can&rsquo;t be recovered.
+            I understand that everything listed above will be deleted and can&rsquo;t be recovered.
           </AcknowledgeCheckbox>
           {/* Kept in the dialog, so screen readers announce the message when it appears. */}
           <div role="status">

@@ -1,6 +1,6 @@
 import { expect, type Page } from "@playwright/test";
 
-export const sections = (page: Page) => page.getByRole("navigation", { name: "Investigation sections" });
+export const sections = (page: Page) => page.getByRole("navigation", { name: "Notebook sections" });
 
 export async function goToSection(page: Page, name: string) {
   await sections(page).getByRole("button", { name: new RegExp(name) }).click();

@@ -53,7 +53,7 @@ export function SaveToNotebook({ session, source, note, savedCard, ready, unavai
               href={notebookHref(savedCard.id)}
               className="inline-flex min-h-11 items-center font-medium text-accent hover:text-accent-strong hover:underline"
             >
-              Open it
+              Open in Notebook
             </Link>
           </p>
           {trimmed && trimmed !== savedCard.notes && (
@@ -73,7 +73,7 @@ export function SaveToNotebook({ session, source, note, savedCard, ready, unavai
             onClick={() => save(includeNote ? trimmed : "")}
           >
             <BookmarkPlus aria-hidden />
-            <span className="whitespace-normal">Save this scripture to my Notebook</span>
+            <span className="whitespace-normal">Save to Notebook</span>
           </Button>
           {trimmed && (
             <label htmlFor={checkboxId} className="inline-flex min-h-11 cursor-pointer items-center gap-2.5 text-sm text-sacred-muted">

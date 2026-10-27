@@ -17,7 +17,7 @@ export function StorageErrorState({ error, onRetry, headingLevel = 2 }: StorageE
       <EmptyState
         headingLevel={headingLevel}
         icon={DatabaseZap}
-        title="Saved data couldn't be loaded"
+        title="Saved data couldn’t be loaded"
         description={error.message}
         action={
           onRetry && (

@@ -2,13 +2,29 @@
   "note": "What changed in each release, newest first, in plain words for learners. Drives the What's new card, the update notice, and Settings › About. Version numbers are MAJOR.MINOR.CONTENT (docs/VERSIONING.md); the newest entry must match package.json (checked by tests).",
   "releases": [
     {
+      "version": "2.2.0",
+      "date": "2026-10-26",
+      "kind": "minor",
+      "title": "Smoother studying",
+      "highlights": [
+        "Only have a few minutes? Connect with Christ is right on the home page, and you can stop an investigation after any step and pick up right where you left off.",
+        "New learners start at Easy, Gospel Labs remembers the level you choose, and “Continue anyway” is always there if a step has you stuck.",
+        "Shorter pages: a quick “you did it” at the end of an investigation, and Character of Christ shows the attributes first.",
+        "Answer choices are now shuffled, so the right answer isn’t always first.",
+        "What you write in a reflection, or in the private note on a Character of Christ page, now stays with its Discovery Card in your Notebook.",
+        "Fixed on phones: older research notebooks no longer push the Notebook past the edge of the screen, and activities, tabs, and step paths fit small screens.",
+        "Dates follow your own time zone, so something saved in the evening isn’t dated tomorrow.",
+        "Clearer wording, honest time estimates, smoother keyboard and screen-reader use, and your research notebooks from earlier versions are easier to find."
+      ]
+    },
+    {
       "version": "2.1.0",
       "date": "2026-10-26",
       "kind": "minor",
       "title": "A warmer welcome",
       "highlights": [
         "New to Gospel Labs? A short welcome and tour help you get started, choose a look, and know where to report a problem.",
-        "After an update, a card like this one shows what changed since your last visit.",
+        "After an update, a What’s new card shows what changed since your last visit.",
         "Fixed: tapping anywhere on the Connect with Christ card on the home page now opens it.",
         "Settings › About shows your version and every change since 1.0."
       ]
@@ -22,9 +38,9 @@
         "A new home page: continue where you left off, or start studying in a tap or two, in a quick or a deep session.",
         "Guided investigations of real gospel questions, with hands-on activities, four levels of difficulty, hints that point back to the scriptures, and side questions.",
         "A Discovery Notebook and a personal Discovery Map that grow from what you study.",
-        "Scripture Explorer, the Character of Christ Builder, and Connect with Christ, a quiet few minutes with the Savior.",
+        "Scripture Explorer, Character of Christ, and Connect with Christ, a few quiet minutes with the Savior.",
         "New themes and motion settings, and backups that include all of your study.",
-        "Your research notebooks are still under Research, unchanged."
+        "Your research notebooks are still in My Library, unchanged."
       ]
     },
     {
@@ -34,8 +50,8 @@
       "title": "Guided discovery",
       "highlights": [
         "Research challenges, a discovery trail, and connections between pieces of evidence.",
-        "Save discoveries from any section, and an optional Come unto Christ reflection.",
-        "Open tabs notice updates, and your edits are never silently overwritten."
+        "Save insights from any section, and an optional Come unto Christ reflection.",
+        "If Gospel Labs is open in two tabs, your edits are never silently overwritten."
       ]
     },
     {
@@ -45,7 +61,7 @@
       "title": "First release",
       "highlights": [
         "A private research notebook for gospel questions: question, hypothesis, research, analysis, and conclusion.",
-        "A question bank, evidence cards, autosave, backups, and offline use."
+        "A Question Bank, evidence cards, autosave, backups, and offline use."
       ]
     }
   ]

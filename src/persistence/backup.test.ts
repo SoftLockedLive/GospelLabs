@@ -443,14 +443,14 @@ describe("study records in a backup", () => {
   it("are treated as empty when a version 3 file has no study section, and the preview says so", () => {
     const parsed = parsedOrThrow(envelope([richInvestigation("a")]));
     expect(parsed.study).toEqual(emptyStudyData());
-    expect(parsed.notes).toEqual([expect.stringContaining("no study data")]);
+    expect(parsed.notes).toEqual([expect.stringContaining("no investigation progress")]);
     expect(parsed.investigations).toHaveLength(1);
   });
 
   it("are not imported from a damaged study section, which is reported", () => {
     const parsed = parsedOrThrow(v3({ study: "junk" }));
     expect(parsed.study).toEqual(emptyStudyData());
-    expect(parsed.notes).toEqual([expect.stringContaining("study data is damaged")]);
+    expect(parsed.notes).toEqual([expect.stringContaining("Map connections is damaged")]);
   });
 
   it("are read from the undamaged lists when one list is damaged", () => {
@@ -574,17 +574,17 @@ describe("planRecords", () => {
 describe("describing counts", () => {
   it("uses singular and plural forms", () => {
     expect(countOf("discoveries", 1)).toBe("1 Discovery Card");
-    expect(countOf("investigations", 2)).toBe("2 research investigations");
+    expect(countOf("investigations", 2)).toBe("2 research notebooks");
   });
 
   it("lists only the kinds that have records", () => {
     expect(describeCounts(zeroCounts())).toBe("nothing");
-    expect(describeCounts({ ...zeroCounts(), explorations: 3 })).toBe("3 explorations");
+    expect(describeCounts({ ...zeroCounts(), explorations: 3 })).toBe("3 explored passages and attributes");
     expect(describeCounts({ ...zeroCounts(), investigations: 2, discoveries: 1 })).toBe(
-      "2 research investigations and 1 Discovery Card",
+      "2 research notebooks and 1 Discovery Card",
     );
     expect(describeCounts({ ...zeroCounts(), investigations: 1, progress: 2, personalConnections: 1 })).toBe(
-      "1 research investigation, 2 guided investigations, and 1 Map connection",
+      "1 research notebook, 2 investigations, and 1 Map connection",
     );
   });
 });

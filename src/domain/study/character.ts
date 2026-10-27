@@ -139,9 +139,11 @@ export const withNote = (exploration: Exploration, note: string): Exploration =>
  */
 export function explorationSummary(exploration: Pick<Exploration, "vocabulary" | "completedActivities"> | undefined): string | null {
   if (!exploration) return null;
-  const parts = ["Explored"];
   const words = exploration.vocabulary.length;
   const activities = exploration.completedActivities.length;
+  // Opening the page creates the record; "Explored" waits until the learner has done something.
+  if (words === 0 && activities === 0) return "Opened";
+  const parts = ["Explored"];
   if (words > 0) parts.push(`${words} ${words === 1 ? "word" : "words"}`);
   if (activities > 0) parts.push(`${activities} ${activities === 1 ? "activity" : "activities"}`);
   return parts.join(" · ");

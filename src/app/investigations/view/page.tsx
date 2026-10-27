@@ -4,7 +4,7 @@ import { StoredInvestigation } from "@/components/investigations/stored-investig
 import { PageContainer } from "@/components/layout/app-shell";
 import { WorkspaceSkeleton } from "@/components/workspace/workspace-skeleton";
 
-export const metadata: Metadata = { title: "Investigation" };
+export const metadata: Metadata = { title: "Research notebook" };
 
 /**
  * Investigations live only in this browser's IndexedDB. This page is a static

@@ -6,10 +6,10 @@ type Variant = "primary" | "secondary" | "soft" | "ghost" | "danger";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "motion-press inline-flex shrink-0 items-center justify-center gap-2 rounded-lg font-medium whitespace-nowrap transition-colors select-none disabled:cursor-not-allowed disabled:opacity-45 [&_svg]:size-4 [&_svg]:shrink-0";
+  "motion-press inline-flex shrink-0 items-center justify-center gap-2 rounded-lg font-medium whitespace-nowrap transition-colors select-none disabled:cursor-not-allowed disabled:opacity-45 aria-disabled:cursor-not-allowed aria-disabled:opacity-45 [&_svg]:size-4 [&_svg]:shrink-0";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-accent-fg hover:bg-accent-strong disabled:hover:bg-accent",
+  primary: "bg-accent text-accent-fg hover:bg-accent-strong disabled:hover:bg-accent aria-disabled:hover:bg-accent",
   secondary:
     "border border-line-strong bg-surface text-fg hover:border-accent/50 hover:bg-surface-raised disabled:hover:border-line-strong disabled:hover:bg-surface",
   /** A quieter call to action: tinted, no border. */

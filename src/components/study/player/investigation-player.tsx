@@ -8,6 +8,10 @@
  *   study     the steps, with progress saved as the learner goes
  *   complete  the discovery, saved as a Discovery Card (re-completing updates it)
  *
+ * Leaving the overview adds a browser history entry (#study or #complete), so
+ * Back (or a back swipe) returns to the overview instead of leaving the
+ * investigation. Progress is saved either way.
+ *
  * Everything it needs from content arrives as one bundle from the server
  * page, so the investigation works offline and without any AI.
  */
@@ -51,6 +55,43 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
   const [dismissedSuggestions, setDismissedSuggestions] = useState<ReadonlySet<string>>(() => new Set());
   const [dismissedBranches, setDismissedBranches] = useState<ReadonlySet<string>>(() => new Set());
   const firstView = useRef(true);
+  /** This visit added a history entry for a study or completion view, which Back (or "Overview") undoes. */
+  const pushedView = useRef(false);
+  /** Arrived with ?resume (the dashboard's "Continue studying"): go straight back to the step once progress loads. */
+  const [resuming, setResuming] = useState(false);
+
+  // Back from a step or the discovery: the history entry is gone, so show the overview.
+  useEffect(() => {
+    // ?resume (from the dashboard) goes straight to the step, below. A #study or #complete left by this page
+    // (a reload, a shared link) starts at the overview, like any visit. Either way the address is cleaned up.
+    // Read here, not while rendering: after a client-side navigation the address updates only after the first render.
+    const resume = new URLSearchParams(window.location.search).has("resume");
+    if (resume || window.location.hash) window.history.replaceState(null, "", window.location.pathname);
+    if (resume) queueMicrotask(() => setResuming(true));
+    const onPopState = () => {
+      if (window.location.hash) return;
+      pushedView.current = false;
+      setView("overview");
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  /** Changes view, keeping one history entry for "away from the overview". */
+  function show(next: View) {
+    if (next === "overview") {
+      if (pushedView.current) window.history.back();
+      else setView("overview");
+      return;
+    }
+    const url = `${window.location.pathname}${window.location.search}#${next}`;
+    if (pushedView.current) window.history.replaceState(null, "", url);
+    else {
+      window.history.pushState(null, "", url);
+      pushedView.current = true;
+    }
+    setView(next);
+  }
 
   const assistant = useMemo(
     () => getStudyAssistant(Object.values(bundle.concepts).map((concept) => ({ term: concept.label, description: concept.description }))),
@@ -76,7 +117,23 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
     document.querySelector<HTMLElement>("[data-view-heading] h1")?.focus({ preventScroll: true });
   }, [view]);
 
-  if (progress === undefined) {
+  // "Continue studying" from the dashboard: straight back to the step once progress has loaded (not when
+  // there's nothing to resume, it's finished, or it can't be saved: the overview explains those).
+  useEffect(() => {
+    if (!resuming || progress === undefined) return;
+    const frame = requestAnimationFrame(() => {
+      setResuming(false);
+      if (progress && !progress.completedAt && !session.blocked && session.start({ difficulty: progress.difficulty, length: progress.length })) {
+        show("study");
+      }
+    });
+    return () => cancelAnimationFrame(frame);
+    // Runs when progress first loads; `show` and `session` are read at that moment.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [resuming, progress]);
+
+  // Still loading, or about to go straight to the step (so the overview doesn't flash first).
+  if (progress === undefined || resuming) {
     return (
       <LoadingRegion label="Loading your progress" className="mx-auto flex max-w-3xl flex-col gap-6">
         <Skeleton className="h-4 w-40" />
@@ -150,7 +207,7 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
         await Promise.all([session.flush(), cardSaver.flush()]);
         await saveCompletion(finished);
       }
-      setView("complete");
+      show("complete");
     } finally {
       setFinishing(false);
     }
@@ -171,7 +228,7 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
         setCompletionError(toStorageError(error).message);
       }
     }
-    setView("complete");
+    show("complete");
   }
 
   function onNoteChange(notes: string) {
@@ -197,7 +254,7 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
           }
           noteStatus={noteStatus}
           onNoteChange={onNoteChange}
-          onReviewSteps={() => setView("study")}
+          onReviewSteps={() => show("study")}
           assistant={assistant}
         />
       </div>
@@ -210,7 +267,7 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
         bundle={bundle}
         progress={progress}
         session={session}
-        onOverview={() => setView("overview")}
+        onOverview={() => show("overview")}
         preferences={preferences}
         assistant={assistant}
         onFinish={() => void finish()}
@@ -232,12 +289,12 @@ export function InvestigationPlayer({ bundle }: { bundle: InvestigationBundle })
         preferences={preferences}
         blocked={session.blocked}
         onStart={(settings) => {
-          if (session.start(settings)) setView("study");
+          if (session.start(settings)) show("study");
         }}
         onRestart={() => {
           if (!session.dispatch({ type: "restart" })) return;
           setDiscovery(null);
-          setView("study");
+          show("study");
         }}
         onReview={() => void review()}
       />

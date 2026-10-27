@@ -43,7 +43,7 @@ test("study data and preferences made in the app survive export, delete everythi
   const [card] = await readStore<DiscoveryCard>(page, "discoveries");
   await page.goto("/map");
   await page.getByRole("button", { name: "Add a connection" }).click();
-  const dialog = page.getByRole("dialog", { name: "Connect two discoveries" });
+  const dialog = page.getByRole("dialog", { name: "Connect two things on your Map" });
   await dialog.getByRole("group", { name: "From" }).getByRole("radio", { name: new RegExp(`^${card.concepts[0].label}( |$)`) }).check();
   await dialog.getByRole("group", { name: "To" }).getByRole("radio", { name: new RegExp(`^${card.concepts[1].label}( |$)`) }).check();
   await dialog.getByRole("textbox", { name: /Why you see this connection/ }).fill("Mine to remember.");
@@ -54,7 +54,7 @@ test("study data and preferences made in the app survive export, delete everythi
   await pick(page.getByRole("group", { name: "Theme" }).getByRole("radio", { name: /^Parchment/ }));
   await pick(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Hard/ }));
   await pick(page.getByRole("group", { name: "Motion" }).getByRole("radio", { name: /^Off/ }));
-  await expect(savedData(page)).toHaveText(["0 research investigations", "2 guided investigations", "1 Discovery Card", "1 Map connection", "2 explorations"]);
+  await expect(savedData(page)).toHaveText(["0 research notebooks", "2 investigations", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"]);
   const before = await snapshot(page);
 
   // Export.
@@ -69,7 +69,7 @@ test("study data and preferences made in the app survive export, delete everythi
   const confirm = page.getByRole("dialog", { name: "Delete all data?" });
   await confirm.getByRole("checkbox", { name: /I understand/ }).check();
   await confirm.getByRole("button", { name: "Delete everything" }).click();
-  await expect(savedData(page)).toHaveText(["0 research investigations", "0 guided investigations", "0 Discovery Cards", "0 Map connections", "0 explorations"]);
+  await expect(savedData(page)).toHaveText(["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes"]);
   await pick(page.getByRole("group", { name: "Theme" }).getByRole("radio", { name: /^Lab/ }));
   await pick(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Easy/ }));
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
@@ -81,7 +81,7 @@ test("study data and preferences made in the app survive export, delete everythi
   await importDialog.getByRole("checkbox", { name: /Also restore appearance and study preferences/ }).check();
   await importDialog.getByRole("button", { name: "Import", exact: true }).click();
   await expect(page.getByText(/^Imported: 6 new, 0 updated, 0 unchanged\. Appearance and study preferences restored\.$/)).toBeVisible();
-  await expect(savedData(page)).toHaveText(["0 research investigations", "2 guided investigations", "1 Discovery Card", "1 Map connection", "2 explorations"]);
+  await expect(savedData(page)).toHaveText(["0 research notebooks", "2 investigations", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"]);
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dawn");
   await expect(page.locator("html")).toHaveAttribute("data-motion", "off");
   await expect(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Hard/ })).toBeChecked();

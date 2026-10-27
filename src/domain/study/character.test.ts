@@ -97,7 +97,7 @@ describe("attribute explorations", () => {
 
   it("describes what was explored without totals or goals", () => {
     expect(explorationSummary(undefined)).toBeNull();
-    expect(explorationSummary({ vocabulary: [], completedActivities: [] })).toBe("Explored");
+    expect(explorationSummary({ vocabulary: [], completedActivities: [] })).toBe("Opened");
     expect(explorationSummary({ vocabulary: ["a"], completedActivities: [] })).toBe("Explored · 1 word");
     expect(explorationSummary({ vocabulary: ["a", "b", "c", "d"], completedActivities: ["x", "y"] })).toBe("Explored · 4 words · 2 activities");
     expect(explorationSummary({ vocabulary: [], completedActivities: ["x"] })).toBe("Explored · 1 activity");

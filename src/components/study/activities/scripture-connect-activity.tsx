@@ -40,6 +40,7 @@ export function ScriptureConnectActivity(props: Props) {
               )}
               <ChoiceQuestion
                 question={question}
+                seed={`${activity.id}:${question.id}`}
                 number={several ? index + 1 : undefined}
                 selected={selected}
                 onChange={(next) => onChange({ answers: { ...response.answers, [question.id]: next } })}

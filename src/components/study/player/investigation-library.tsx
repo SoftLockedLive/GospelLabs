@@ -28,13 +28,13 @@ export function InvestigationLibrary({ items }: { items: readonly InvestigationS
         icon={Telescope}
         headingLevel={2}
         title="Investigations are on their way"
-        description="Guided investigations are being written and checked against their sources. Until they're ready, the Question Bank and your research notebook are open."
+        description="Guided investigations are being written and checked against their sources. Until they’re ready, the Question Bank and My Library are open."
       />
     );
   }
 
   return (
-    <ul className="grid gap-4 md:grid-cols-2">
+    <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
       {items.map((item, index) => (
         <li key={item.id}>
           <LibraryCard item={item} status={progress.status === "ready" ? libraryStatus(item, byId.get(item.id)) : null} index={index} />
@@ -106,7 +106,7 @@ function LibraryCard({ item, status, index }: { item: InvestigationSummary; stat
             <dt className="sr-only">Steps</dt>
             <Footprints aria-hidden className="size-3.5 text-subtle" />
             <dd>
-              {quickSteps} core {quickSteps === 1 ? "step" : "steps"}
+              {quickSteps} {quickSteps === 1 ? "step" : "steps"}
               {item.branches > 0 && ` · ${item.branches} side ${item.branches === 1 ? "question" : "questions"}`}
             </dd>
           </div>

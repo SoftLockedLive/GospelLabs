@@ -28,7 +28,7 @@ export function PassageLibrary({ passages }: { passages: readonly PassageListIte
   const byPassage = new Map(explorations.status === "ready" ? explorations.value.map((e) => [e.contentId, e]) : []);
 
   return (
-    <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
       {passages.map((passage, index) => {
         const summary = summarizeExploration(byPassage.get(passage.id), passage.activityIds);
         return (

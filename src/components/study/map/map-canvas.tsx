@@ -379,8 +379,9 @@ export function MapCanvas({ graph, layout, visible, selected, newRefs, initialFo
   // --- Rendering -------------------------------------------------------------------
   const highlighted = useMemo(() => (selected ? neighborsOf(graph, selected) : null), [graph, selected]);
   const showAllLabels = view.k >= 0.6;
-  // Keep labels readable when zoomed out by drawing them larger in map units (quantized to limit re-renders).
-  const labelScale = view.k >= 0.85 ? 1 : Math.min(2.5, Math.round((0.85 / view.k) * 4) / 4);
+  // Keep labels readable when zoomed out by drawing them larger in map units, so they stay about 11px on
+  // screen (quantized to limit re-renders). The old 2.5× cap left them near 8px on a phone's fitted view.
+  const labelScale = view.k >= 1 ? 1 : Math.min(4, Math.round((1 / view.k) * 4) / 4);
   const minHit = Math.min(60, Math.round(22 / view.k / 2) * 2);
 
   return (
@@ -450,7 +451,7 @@ export function MapCanvas({ graph, layout, visible, selected, newRefs, initialFo
         <ZoomButton label="Zoom out" onClick={() => zoomBy(1 / ZOOM_STEP)} disabled={view.k <= MIN_ZOOM + 1e-6}>
           <Minus aria-hidden />
         </ZoomButton>
-        <ZoomButton label="Show the whole map" onClick={fit}>
+        <ZoomButton label="Show your whole Map" onClick={fit}>
           <Maximize aria-hidden />
         </ZoomButton>
       </div>

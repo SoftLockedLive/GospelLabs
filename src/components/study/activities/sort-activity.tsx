@@ -10,7 +10,7 @@ import type { SortResponse } from "@/domain/study/activities";
 import { placeItem, sortItems } from "@/domain/study/activities/sort";
 import type { ActivityOf } from "@/domain/study/content-schema";
 import { cn } from "@/lib/cn";
-import { ProvenanceLabel } from "../shared/provenance";
+import { WhyLabel } from "../shared/provenance";
 import { feedbackFor, markFor, type BodyProps } from "./body";
 import { ItemFeedbackText, MarkIcon, markSurface } from "./marks";
 
@@ -26,7 +26,7 @@ export function SortActivity(props: Props) {
   return (
     <div className="flex flex-col gap-5">
       {described && (
-        <dl className="grid gap-2.5 sm:grid-cols-2">
+        <dl className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
           {activity.categories.map((category) => (
             <div key={category.id} className="rounded-xl border border-line bg-surface-sunken px-4 py-3">
               <dt className="text-sm font-semibold text-fg">{category.label}</dt>
@@ -58,7 +58,8 @@ export function SortActivity(props: Props) {
                   </p>
                   <MarkIcon mark={mark} finished={finished} className="mt-0.5" />
                 </div>
-                <div className="mt-3 flex flex-wrap gap-2">
+                {/* gap-2.5: wrapped pills put the radios a hair under the 24px spacing small targets need (WCAG 2.5.8). */}
+                <div className="mt-3 flex flex-wrap gap-2.5">
                   {activity.categories.map((category) => {
                     const selected = response.placements[item.id] === category.id;
                     return (
@@ -87,7 +88,7 @@ export function SortActivity(props: Props) {
               <ItemFeedbackText message={feedback} />
               {finished && (
                 <div className="motion-reveal mt-3 rounded-lg bg-surface-sunken px-3 py-2.5">
-                  <ProvenanceLabel provenance="suggested" />
+                  <WhyLabel />
                   <p className="mt-1 text-sm leading-relaxed text-muted">{item.why}</p>
                 </div>
               )}

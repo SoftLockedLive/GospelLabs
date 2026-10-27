@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { activitySchema, type ActivityOf, type ActivityType } from "../content-schema";
 import { assembleSentence, fragmentOptions, moveFragment } from "./build-principle";
-import { checkChoice, toggleChoice } from "./choice";
+import { checkChoice, choiceOptions, toggleChoice } from "./choice";
 import { canAnswerClue, examineClue } from "./clue";
 import { VERDICT_FEEDBACK } from "./compare";
 import { connectPair, DEFAULT_PAIR_CLUE, evidenceOptions, isOneToOne } from "./evidence-connect";
@@ -171,7 +171,7 @@ describe("evidence-connect", () => {
       { itemId: "succor", message: "Which verse speaks of knowing how to succor?" },
       { itemId: "love", message: DEFAULT_PAIR_CLUE },
     ]);
-    expect(result.summary).toMatch(/0 of 2/);
+    expect(result.summary).toBe("Two connections still need another look; they’re marked.");
   });
 
   it("never names the right evidence in feedback", () => {
@@ -220,6 +220,14 @@ describe("evidence-connect", () => {
 });
 
 describe("choice questions", () => {
+  it("shows options in a stable order that isn't the order they were written in", () => {
+    const question = scripture.questions[1];
+    const order = choiceOptions(question, "activity:q2").map((option) => option.id);
+    expect(order).toEqual(choiceOptions(question, "activity:q2").map((option) => option.id));
+    expect([...order].sort()).toEqual(question.options.map((option) => option.id).sort());
+    expect(order).not.toEqual(question.options.map((option) => option.id));
+  });
+
   it("toggles multiple-answer options and replaces single answers", () => {
     const multiple = scripture.questions[1];
     expect(toggleChoice(multiple, ["a"], "b")).toEqual(["a", "b"]);
@@ -346,7 +354,7 @@ describe("compare", () => {
       { itemId: "p1", message: VERDICT_FEEDBACK.beyond },
       { itemId: "p3", message: VERDICT_FEEDBACK.supported },
     ]);
-    expect(result.summary).toMatch(/1 of 3/);
+    expect(result.summary).toBe("Two judgments still need another look; they’re marked.");
   });
 
   it("ignores unknown verdicts in stored responses", () => {
@@ -369,7 +377,7 @@ describe("scripture-connect", () => {
     expect(result.correct).toBe(false);
     expect(result.marks).toEqual({ "q1/law": "incorrect", q1: "incorrect", "q2/a": "correct", "q2/b": "correct", q2: "correct" });
     expect(result.feedback).toEqual([{ itemId: "q1/law", message: "Neither passage mentions the law." }]);
-    expect(result.summary).toMatch(/1 of 2 answers/);
+    expect(result.summary).toBe("One answer still needs another look; it’s marked.");
   });
 
   it("accepts the revealed answers", () => {
@@ -379,7 +387,7 @@ describe("scripture-connect", () => {
   it("uses the question's own wording when there is only one question", () => {
     const single = make("scripture-connect", { ...scripture, questions: [scripture.questions[0]] });
     const result = check(single, { answers: { q1: ["law"] } });
-    expect(result.summary).toBe("Not quite. Look again at the evidence.");
+    expect(result.summary).toBe("Not yet. Look again at the evidence.");
     expect(result.marks.q1).toBe("incorrect");
   });
 });
@@ -438,7 +446,7 @@ describe("sort", () => {
     const result = check(sortActivity, { placements: { temptations: "v12", death: "v12", infirmities: "v12" } });
     expect(result.marks).toEqual({ temptations: "incorrect", death: "correct", infirmities: "correct" });
     expect(result.feedback).toEqual([{ itemId: "temptations", message: "Look again at this one. Does the evidence put it under ‘Verse 12’?" }]);
-    expect(result.summary).toMatch(/2 of 3/);
+    expect(result.summary).toBe("One of these still needs another look; it’s marked.");
   });
 });
 

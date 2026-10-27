@@ -42,3 +42,39 @@ export function dedupeConnections(connections: readonly CardConnection[]): CardC
   }
   return [...byId.values()];
 }
+
+/** Something the learner wrote elsewhere (a reflection, a private note) to keep in a card's notes. */
+export interface LearnerWriting {
+  /** Shown on the line above, e.g. the step it was written in. */
+  heading?: string;
+  text: string;
+}
+
+/**
+ * The card's notes with the learner's other writing added, so their own words
+ * stay with the card. Notes stay theirs: nothing is removed, writing already
+ * there isn't repeated, and writing that grew since it was added (it starts
+ * with a paragraph already in the notes) replaces that paragraph instead of
+ * being added again. Anything else is added at the end.
+ */
+export function withLearnerWriting(notes: string, writing: readonly LearnerWriting[]): string {
+  let result = notes;
+  for (const { heading, text: raw } of writing) {
+    const text = raw.trim();
+    if (!text || result.includes(text)) continue;
+    const entry = heading ? `${heading}\n${text}` : text;
+    const paragraphs = result.split(/\n{2,}/);
+    const grown = paragraphs.findIndex((paragraph) => {
+      const body = (heading && paragraph.startsWith(`${heading}\n`) ? paragraph.slice(heading.length + 1) : paragraph)
+        .trim()
+        // "He knows." grows into "He knows, and…": the old ending punctuation isn't part of what continues.
+        .replace(/[.!?…]+$/, "");
+      return body.length >= 10 && text.startsWith(body);
+    });
+    if (grown >= 0) {
+      paragraphs[grown] = entry;
+      result = paragraphs.join("\n\n");
+    } else result = result.trim() ? `${result.trimEnd()}\n\n${entry}` : entry;
+  }
+  return result;
+}

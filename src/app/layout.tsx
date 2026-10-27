@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s · Gospel Labs",
   },
   description:
-    "Study the scriptures and come to know Jesus Christ. Guided, interactive investigations, a Scripture Explorer, and a private notebook of your discoveries — all on your own device.",
+    "Study the scriptures and come to know Jesus Christ. Guided, interactive investigations, a Scripture Explorer, and a private notebook of your discoveries—all on your own device.",
   applicationName: "Gospel Labs",
   manifest: "/manifest.webmanifest",
   appleWebApp: { capable: true, title: "Gospel Labs", statusBarStyle: "black" },

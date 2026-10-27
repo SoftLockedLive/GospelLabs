@@ -57,12 +57,12 @@ export function QuestionFiltersBar({ filters, categories, resultIds, onChange }:
           ))}
         </Select>
         <Select
-          aria-label="Difficulty"
+          aria-label="Level"
           className="lg:w-40"
           value={filters.difficulty ?? ""}
           onChange={(event) => onChange({ difficulty: (event.target.value || null) as Difficulty | null })}
         >
-          <option value="">Any difficulty</option>
+          <option value="">Any level</option>
           {DIFFICULTIES.map((difficulty) => (
             <option key={difficulty} value={difficulty}>
               {DIFFICULTY_LABELS[difficulty]}

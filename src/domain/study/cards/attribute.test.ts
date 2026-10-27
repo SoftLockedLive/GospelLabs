@@ -186,6 +186,16 @@ describe("attributeDiscoveryCard", () => {
     });
     expect(provenance(updated)["scripture:s4|illustrates|attribute:meekness"]).toBe("demonstrated");
   });
+
+  it("keeps the private note from the attribute's page on the card, as the note grows", () => {
+    const exploration = { vocabulary: [], completedActivities: [], note: "I want to be gentle with my kids." };
+    const first = build({ exploration });
+    expect(first.notes).toBe("I want to be gentle with my kids.");
+    // Notes written on the card stay; the page's note, extended since, replaces its earlier copy.
+    const saved = { ...first, notes: `${first.notes}\n\nAdded in the Notebook.` };
+    const grown = build({ existing: saved, now: LATER, exploration: { ...exploration, note: "I want to be gentle with my kids, even when I’m tired." } });
+    expect(grown.notes).toBe("I want to be gentle with my kids, even when I’m tired.\n\nAdded in the Notebook.");
+  });
 });
 
 describe("findAttributeCard", () => {

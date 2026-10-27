@@ -20,7 +20,7 @@ export function ConflictBanner({ conflict, onKeepMine, onLoadStored }: ConflictB
         <p className="flex items-start gap-2">
           <AlertTriangle aria-hidden className="mt-0.5 size-4 shrink-0 text-amber" />
           <span>
-            <strong className="font-semibold">A newer version of Gospel Labs has saved this investigation.</strong> To
+            <strong className="font-semibold">A newer version of Gospel Labs has saved this research notebook.</strong> To
             protect that data, this tab won&rsquo;t save over it. Reload to get the latest version. Edits made in this
             tab since then can&rsquo;t be kept, so copy anything you need first.
           </span>
@@ -41,12 +41,12 @@ export function ConflictBanner({ conflict, onKeepMine, onLoadStored }: ConflictB
         <span>
           {deleted ? (
             <>
-              <strong className="font-semibold">This investigation was deleted elsewhere</strong> (in another tab, or
+              <strong className="font-semibold">This research notebook was deleted elsewhere</strong> (in another tab, or
               by importing a backup). Your recent edits here haven&rsquo;t been saved.
             </>
           ) : (
             <>
-              <strong className="font-semibold">This investigation was changed in another tab or window.</strong> Your
+              <strong className="font-semibold">This research notebook was changed in another tab or window.</strong> Your
               recent edits here haven&rsquo;t been saved, so nothing has been overwritten.
             </>
           )}

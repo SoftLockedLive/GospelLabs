@@ -1,5 +1,5 @@
 /**
- * Connect with Christ: a quiet five minutes. A session opens at once; the
+ * Connect with Christ: a few quiet minutes. A session opens at once; the
  * learner can choose a format or ask for a different session; a private note
  * stays on this device; saving to the Notebook is optional. Nothing is
  * counted, timed, or tracked as a streak.
@@ -94,12 +94,12 @@ test("a private note stays on this device, and saving to the Notebook is optiona
   // Optional: keep the scripture, with the note, in the Notebook.
   const include = page.getByRole("checkbox", { name: "Include my note" });
   await expect(include).toBeChecked();
-  await page.getByRole("button", { name: "Save this scripture to my Notebook" }).click();
+  await page.getByRole("button", { name: "Save to Notebook" }).click();
   await expect(page.getByText(`${source.label} is in your Notebook.`)).toBeVisible();
   const [card] = await readStore<DiscoveryCard>(page, "discoveries");
   expect(card).toMatchObject({ origin: { kind: "connect", contentId: chosen.id }, notes: "He invites me to come as I am." });
 
-  await page.getByRole("link", { name: "Open it" }).click();
+  await page.getByRole("link", { name: "Open in Notebook" }).click();
   await expect(page.getByRole("heading", { level: 1, name: card.title })).toBeVisible();
   await expect(page.getByRole("textbox", { name: /Your notes/ })).toHaveValue("He invites me to come as I am.");
   await expect(page.getByRole("complementary", { name: "Sources explored" })).toContainText(source.label);
@@ -114,7 +114,7 @@ test("a note typed just before leaving is saved, and opening the session again i
   await readToTheEnd(page);
   await page.getByRole("textbox", { name: /A private note/ }).fill("Seen, and not hurried.");
   // Leave at once, before the pause in typing that would save it.
-  await page.getByRole("link", { name: "Close and return to the Dashboard" }).click();
+  await page.getByRole("link", { name: "Close and return Home" }).click();
   await expect(page).toHaveURL("/");
   await expectStored<Exploration>(page, "explorations", (records) => records.some((r) => r.id === id && r.note === "Seen, and not hurried."));
   const written = (await storedSession(page, id))!;

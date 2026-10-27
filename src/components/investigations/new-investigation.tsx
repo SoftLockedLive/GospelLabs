@@ -37,8 +37,8 @@ function Draft({ questionId }: { questionId?: string }) {
         headingLevel={1}
         icon={SearchX}
         title="Question not found"
-        description="That question isn't in the question bank. It may have been removed or the link is incomplete."
-        action={<ButtonLink href="/questions">Browse the question bank</ButtonLink>}
+        description="That question isn’t in the Question Bank. It may have been removed or the link is incomplete."
+        action={<ButtonLink href="/questions">Browse the Question Bank</ButtonLink>}
         className="mt-6 bg-surface"
       />
     );

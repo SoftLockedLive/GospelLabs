@@ -131,8 +131,9 @@ export function conceptOptions(cards: readonly DiscoveryCard[]): FilterOption<No
   return [...options]
     .map(([value, { label, count }]) => {
       const kind = parseNodeRef(value)?.kind;
-      // Name the kind when it isn't a gospel concept, so "Mercy (Christlike attribute)" reads clearly.
-      const suffix = kind && kind !== "concept" ? ` (${NODE_KIND_LABELS[kind]})` : "";
+      // Name the kind when it isn't a gospel concept, so "Mercy · Christlike attribute" reads clearly
+      // (not in parentheses: the menu adds the count in parentheses after it).
+      const suffix = kind && kind !== "concept" ? ` · ${NODE_KIND_LABELS[kind]}` : "";
       return { value, label: `${label}${suffix}`, count };
     })
     .sort((a, b) => a.label.localeCompare(b.label, "en", { sensitivity: "base" }) || (a.value < b.value ? -1 : 1));
@@ -149,10 +150,10 @@ export function sourceKindOptions(cards: readonly DiscoveryCard[]): FilterOption
 
 // --- Grouping -----------------------------------------------------------------------------
 
-const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric" });
 
 export interface CardGroup {
-  /** "YYYY-MM" (UTC), or "undated". */
+  /** "YYYY-MM" in the learner's time zone, or "undated". */
   key: string;
   label: string;
   cards: DiscoveryCard[];
@@ -164,7 +165,7 @@ export function groupCardsByMonth(cards: readonly DiscoveryCard[]): CardGroup[] 
   for (const card of cards) {
     const time = Date.parse(card.createdAt);
     const date = Number.isFinite(time) ? new Date(time) : null;
-    const key = date ? `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}` : "undated";
+    const key = date ? `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}` : "undated";
     const last = groups.at(-1);
     if (last?.key === key) last.cards.push(card);
     else groups.push({ key, label: date ? monthFormatter.format(date) : "Undated", cards: [card] });
@@ -195,7 +196,7 @@ export function researchDiscoveries(investigations: readonly Investigation[], qu
   const terms = searchTerms(query);
   const entries: ResearchDiscovery[] = [];
   for (const investigation of investigations) {
-    const investigationTitle = investigation.title.trim() || investigation.question.trim() || "Untitled investigation";
+    const investigationTitle = investigation.title.trim() || investigation.question.trim() || "Untitled notebook";
     for (const highlight of investigation.discoveryHighlights) {
       if (!highlight.title.trim() && !highlight.insight.trim()) continue;
       if (terms.length && !matchesTerms(normalizeText([highlight.title, highlight.insight, investigationTitle].join("\n")), terms)) continue;

@@ -256,7 +256,7 @@ function HighlightItem({
             Remove
           </Button>
           <Button variant="secondary" size="sm" className="h-11 sm:h-8" onClick={() => setMode("view")} autoFocus>
-            Keep it
+            Cancel
           </Button>
         </div>
       )}

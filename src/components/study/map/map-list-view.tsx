@@ -38,7 +38,7 @@ export function MapListView({ graph, visible, newRefs, selected, onSelect }: Map
             {NODE_KIND_LABELS[kind]}
             <span className="font-normal text-subtle">({nodes.length})</span>
           </h2>
-          <ul className="grid gap-3 xl:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-3 xl:grid-cols-2">
             {nodes.map((node) => {
               const edges = orderedEdges(graph, node).filter((edge) => visible.has(edge.from) && visible.has(edge.to));
               return (

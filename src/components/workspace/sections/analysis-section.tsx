@@ -17,7 +17,7 @@ export function AnalysisSection({ investigation, actions, onNavigate }: SectionP
             <Textarea
               {...props}
               rows={8}
-              placeholder="Compare, connect, and weigh what you've found"
+              placeholder="Compare, connect, and weigh what you’ve found"
               value={investigation.analysisNotes}
               onChange={(event) => actions.setText("analysisNotes", event.target.value)}
             />
@@ -28,7 +28,7 @@ export function AnalysisSection({ investigation, actions, onNavigate }: SectionP
           investigation={investigation}
           actions={actions}
           title="Claims"
-          description="State specific things you've noticed, and link the evidence behind each one."
+          description="State specific things you’ve noticed, and link the evidence behind each one."
           placeholder="Something the evidence suggests…"
           onGoToResearch={goToResearch}
         />

@@ -12,7 +12,7 @@
  *     record lastOpenedAt. updatedAt moves only when the learner's work does.
  *   - Opening a word records it; finishing an activity records it.
  *   - Finishing an activity also creates or updates the attribute's Discovery
- *     Card, as does "Save to my Notebook".
+ *     Card, as does "Save to Notebook".
  */
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { ActivityResult } from "@/components/study/activities/types";

@@ -18,10 +18,10 @@ export function ConnectFrame({ children }: { children: ReactNode }) {
 export function ConnectHeader() {
   return (
     <header className="text-center">
-      <p className="text-xs font-medium tracking-[0.2em] text-sacred-accent uppercase">Five quiet minutes</p>
+      <p className="text-xs font-medium tracking-[0.2em] text-sacred-accent uppercase">A few quiet minutes</p>
       <h1 className="mt-3 font-serif text-3xl font-medium tracking-tight text-balance sm:text-4xl">Connect with Christ</h1>
       <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-pretty text-sacred-muted">
-        A quiet space to come to know the Savior. About five minutes. There’s no timer.
+        A quiet space to come to know the Savior. There’s no timer.
       </p>
     </header>
   );

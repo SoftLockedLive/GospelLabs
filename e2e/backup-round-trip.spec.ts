@@ -42,11 +42,11 @@ test("a 1.0 backup imports, and every 1.1 field survives export and import", asy
   await form.getByRole("button", { name: "Create connection" }).click();
   await openActivity(page, "Challenges");
   await page.getByRole("textbox", { name: "Your response" }).fill("“Daily” stands out.");
-  await page.getByRole("button", { name: /^Save discovery/ }).click();
-  const dialog = page.getByRole("dialog", { name: "Save a discovery" });
+  await page.getByRole("button", { name: /^Save insight/ }).click();
+  const dialog = page.getByRole("dialog", { name: "Save an insight" });
   await dialog.getByRole("textbox", { name: "Title" }).fill("Discipleship is daily");
   await dialog.getByRole("checkbox", { name: /^E1/ }).check();
-  await dialog.getByRole("button", { name: "Save discovery" }).click();
+  await dialog.getByRole("button", { name: "Save insight" }).click();
   await goToSection(page, "Conclusion");
   await page.getByRole("textbox", { name: "What have you learned about Jesus Christ?" }).fill("He asks for daily discipleship.");
   await expectSaved(page);
@@ -55,7 +55,7 @@ test("a 1.0 backup imports, and every 1.1 field survives export and import", asy
   await page.goto("/investigations/new?question=forgiveness-before-the-atonement");
   await page.getByRole("textbox", { name: "Context" }).fill("For a lesson.");
   await goToSection(page, "Research");
-  await page.getByRole("textbox", { name: "Your discoveries" }).fill("Verse 10 ties healing to forgiveness.");
+  await page.getByRole("textbox", { name: "Your notes" }).fill("Verse 10 ties healing to forgiveness.");
   await page.getByRole("checkbox", { name: /explored this step/ }).check();
   await expectSaved(page);
 
@@ -83,7 +83,7 @@ test("a 1.0 backup imports, and every 1.1 field survives export and import", asy
   await deleteDialog.getByRole("button", { name: "Delete everything" }).click();
   await expect(
     page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem").first(),
-  ).toHaveText("0 research investigations");
+  ).toHaveText("0 research notebooks");
   await importBackup(page, testInfo.outputPath("first.json"));
   const second = await exportBackup(page, testInfo.outputPath("second.json"));
   expect(byId(second.investigations)).toEqual(byId(first.investigations));

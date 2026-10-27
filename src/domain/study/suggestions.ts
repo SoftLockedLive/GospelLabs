@@ -12,7 +12,7 @@
  * someone studies: no counts, scores, or streaks influence a suggestion.
  */
 import type { DiscoveryCard, StudyProgress } from "./user-data";
-import { parseNodeRef, type NodeRef, type PrimaryQuestion, type StudyLength } from "./vocabulary";
+import { parseNodeRef, STUDY_LENGTH_MINUTES, type NodeRef, type PrimaryQuestion, type StudyLength } from "./vocabulary";
 
 /** What the dashboard knows about an investigation (built on the server from the full content). */
 export interface InvestigationSummary {
@@ -134,8 +134,6 @@ export interface SuggestionInput<T extends InvestigationSummary> {
 export const RECENT_DISCOVERY_WINDOW = 5;
 /** Each older card counts a little less. */
 const RECENCY_DECAY = 0.75;
-/** A quick session is about 5–10 minutes. */
-const QUICK_SESSION_MINUTES = 10;
 
 const TIER_NOT_STARTED = 100;
 const RELATED_WEIGHT = 10;
@@ -163,9 +161,17 @@ export function recentConcepts(
   return concepts;
 }
 
-/** How well an investigation suits a session length, from 0 to 1. */
+/**
+ * How well an investigation suits a session length, from 0 to 1. For a quick session, shorter is
+ * better: across the quick range (STUDY_LENGTH_MINUTES) fit falls from 1 to 0.4, so with nothing
+ * else to go on, the shortest investigation is suggested first.
+ */
 export function lengthFit(investigation: InvestigationSummary, length: StudyLength): number {
-  if (length === "quick") return investigation.estimatedMinutes.quick <= QUICK_SESSION_MINUTES ? 1 : 0.5;
+  if (length === "quick") {
+    const [shortest, longest] = STUDY_LENGTH_MINUTES.quick;
+    const position = (investigation.estimatedMinutes.quick - shortest) / Math.max(1, longest - shortest);
+    return 1 - 0.6 * Math.min(1, Math.max(0, position));
+  }
   // A deep session is most rewarding where there are deeper steps or side questions to take.
   return deepStepCount(investigation) + investigation.branches > 0 ? 1 : 0.4;
 }

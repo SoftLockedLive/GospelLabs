@@ -54,3 +54,18 @@ export function ProvenanceLabel({ provenance, className }: { provenance: Provena
     </span>
   );
 }
+
+/**
+ * The shorter label for a note on one item of an activity ("Why"), used where
+ * the activity's own explanation already carries the full "Suggested by Gospel
+ * Labs" label: repeating it on every item buried the notes. Screen readers
+ * still hear who wrote it.
+ */
+export function WhyLabel({ className }: { className?: string }) {
+  return (
+    <span className={cn("inline-flex items-center gap-1.5 text-xs font-medium text-muted", className)}>
+      <Lightbulb aria-hidden className="size-3.5" />
+      Why<span className="sr-only"> (suggested by Gospel Labs)</span>
+    </span>
+  );
+}

@@ -12,6 +12,11 @@
  * Skipped steps ("Continue anyway") contribute nothing: the learner didn't
  * study them. Branch steps the learner finished count like main-path steps.
  *
+ * What the learner wrote in reflections goes into the card's notes (each
+ * under its step's title), so their own words are kept with the card, as in
+ * Connect with Christ (see withLearnerWriting: nothing they wrote in the
+ * notes is lost, and nothing is repeated).
+ *
  * Re-completing an investigation updates its existing card (same id,
  * createdAt, notes, highlights) instead of creating another, and discoveries
  * accumulate: what this completion found comes first (fresh snapshots), and
@@ -23,7 +28,7 @@ import { activitySourceIds, resolveActivity } from "../content-registry";
 import type { Source, Step, StudyInvestigation } from "../content-schema";
 import { stepKey, type CardConnection, type DiscoveryCard, type StepState, type StudyProgress } from "../user-data";
 import { nodeRef, type NodeRef } from "../vocabulary";
-import { cardConnection, dedupeConnections, labeledNode, snapshotSource, type LabelFor } from "./common";
+import { cardConnection, dedupeConnections, labeledNode, snapshotSource, withLearnerWriting, type LabelFor, type LearnerWriting } from "./common";
 
 export interface InvestigationCardInput {
   investigation: StudyInvestigation;
@@ -63,6 +68,18 @@ function finishedSteps(investigation: StudyInvestigation, progress: StudyProgres
     finished.push({ step, state, demonstrated: !state.revealed });
   }
   return finished;
+}
+
+/** Each reflection the learner wrote, in content order, under the title of its step. */
+function reflections(investigation: StudyInvestigation, progress: StudyProgress): LearnerWriting[] {
+  const steps = [
+    ...investigation.steps.map((step) => ({ step, key: stepKey(step.id) })),
+    ...investigation.branches.flatMap((branch) => branch.steps.map((step) => ({ step, key: stepKey(step.id, branch.id) }))),
+  ];
+  return steps.flatMap(({ step, key }) => {
+    const text = progress.steps[key]?.reflection?.trim();
+    return text ? [{ heading: step.title, text }] : [];
+  });
 }
 
 export function buildInvestigationCard(input: InvestigationCardInput): DiscoveryCard {
@@ -112,7 +129,7 @@ export function buildInvestigationCard(input: InvestigationCardInput): Discovery
     // This completion's copies first; a demonstrated copy (from either) wins over a suggested one.
     connections: dedupeConnections([...connections, ...earlier.connections]),
     highlights: existing?.highlights ?? [],
-    notes: existing?.notes ?? "",
+    notes: withLearnerWriting(existing?.notes ?? "", reflections(investigation, progress)),
   };
   // Fields written by a newer version of the app are kept.
   return existing ? { ...existing, ...built } : built;

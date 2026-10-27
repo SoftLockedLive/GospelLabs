@@ -6,8 +6,8 @@ test("another tab's changes are noticed at once, and neither tab silently overwr
   const other = await context.newPage();
   await other.goto(url);
   const question = (tab: typeof page) => tab.getByRole("textbox", { name: "Question", exact: true });
-  await other.getByRole("navigation", { name: "Investigation sections" }).getByRole("button", { name: /Question/ }).click();
-  await page.getByRole("navigation", { name: "Investigation sections" }).getByRole("button", { name: /Question/ }).click();
+  await other.getByRole("navigation", { name: "Notebook sections" }).getByRole("button", { name: /Question/ }).click();
+  await page.getByRole("navigation", { name: "Notebook sections" }).getByRole("button", { name: /Question/ }).click();
 
   // The other tab saves; this one, with nothing unsaved, offers to load the newer copy.
   await question(other).fill("Edited in the other tab");

@@ -111,7 +111,7 @@ export function UpdateNotice() {
             {problem?.kind === "unsaved" && (
               <p role="alert" className="text-xs text-fg">
                 Some changes couldn&rsquo;t be saved, so the page wasn&rsquo;t reloaded. Resolve the message on the
-                investigation, then try again.
+                page, then try again.
               </p>
             )}
           </div>

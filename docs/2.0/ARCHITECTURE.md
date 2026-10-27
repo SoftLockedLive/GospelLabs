@@ -170,9 +170,12 @@ restores the main-path position.
 
 1st wrong attempt → feedback that points at evidence (option `feedback`, pair
 `clue`, highlighted source), never the answer. Then hints in order (each
-`hints[]` entry is progressively clearer). After 3 attempts the learner may
-**Show me** (reveal with explanation; connections recorded as *suggested*) or
-**Continue anyway** (skip). Nobody gets stuck; nothing is punished.
+`hints[]` entry is progressively clearer). **Continue anyway** (skip; the step
+can be tried again later and adds nothing to the card) is offered from the
+start. After 2 checked attempts, or 1 once every hint has been shown, the
+learner may **Show me** (reveal with explanation; connections recorded as
+*suggested*). Nobody gets stuck; nothing is punished. (Since 2.2; see
+`src/domain/study/engine/hints.ts`.)
 
 ## Activity contract
 

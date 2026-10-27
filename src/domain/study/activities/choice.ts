@@ -1,14 +1,22 @@
 /**
- * Checking for choice questions, shared by Clue Investigation and Scripture
+ * Checking for choice questions, shared by Follow the Clues and Scripture
  * Connections. A wrong choice gets its own `feedback` (written to send the
  * learner back to the evidence); multiple-answer questions say how many
  * answers are still missing, never which.
  */
 import type { ChoiceQuestion } from "../content-schema";
 import { capitalize, countOf, idSet, stringList } from "./parse";
+import { seededShuffle } from "./shuffle";
 import type { CheckResult, ItemFeedback, ItemMark } from "./types";
 
 export const DEFAULT_OPTION_FEEDBACK = "That doesn't quite match what the evidence says. Read it again, slowly.";
+
+/**
+ * Options in a stable shuffled order. Authors tend to write the right answer
+ * first (and often longest), so showing options as written would give it away.
+ * `seed` should identify the question uniquely, e.g. "<activity id>:<question id>".
+ */
+export const choiceOptions = (question: ChoiceQuestion, seed: string) => seededShuffle(question.options, `${seed}:options`);
 
 /** Selected option ids that still exist, once each. */
 export const parseChoice = (question: ChoiceQuestion, value: unknown): string[] => {
@@ -51,7 +59,7 @@ export function checkChoice(question: ChoiceQuestion, selected: readonly string[
 
   let summary: string;
   if (correct) summary = question.multiple ? "Those answers fit the evidence." : "That fits the evidence.";
-  else if (!question.multiple) summary = "Not quite. Look again at the evidence.";
+  else if (!question.multiple) summary = "Not yet. Look again at the evidence.";
   else if (wrong > 0) {
     summary = `${capitalize(countOf(wrong, "choice doesn't", "choices don't"))} fit the evidence.`;
     if (remaining > 0) summary += ` There ${remaining === 1 ? "is" : "are"} also ${countOf(remaining, "more answer", "more answers")} to find.`;

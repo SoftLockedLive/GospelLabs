@@ -5,7 +5,7 @@ import { ProgressPath, pathFromCounts } from "@/components/ui/progress-path";
 import type { Investigation } from "@/domain/investigation";
 import { studyPosition } from "@/domain/study/suggestions";
 import type { StudyProgress } from "@/domain/study/user-data";
-import { investigationHref, studyInvestigationHref } from "@/lib/routes";
+import { investigationHref, resumeInvestigationHref } from "@/lib/routes";
 import { relativeDay } from "./time";
 import type { InvestigationSummary } from "./types";
 
@@ -30,7 +30,7 @@ export function ContinueList({ items, research, now }: ContinueListProps) {
             <article className={`${rowClasses} border-line`}>
               <div className="min-w-0 flex-1">
                 <h3 className="text-[15px] leading-snug font-semibold text-fg">
-                  <Link href={studyInvestigationHref(investigation.id)} className="outline-none after:absolute after:inset-0 after:rounded-xl">
+                  <Link href={resumeInvestigationHref(investigation.id)} className="outline-none after:absolute after:inset-0 after:rounded-xl">
                     {investigation.title}
                   </Link>
                 </h3>
@@ -80,7 +80,7 @@ export function ContinueList({ items, research, now }: ContinueListProps) {
               <p className="text-xs font-medium text-subtle">Research notebook</p>
               <h3 className="mt-0.5 truncate text-[15px] leading-snug font-semibold text-fg">
                 <Link href={investigationHref(research.latest.id)} className="outline-none after:absolute after:inset-0 after:rounded-xl">
-                  {research.latest.title.trim() || "Untitled investigation"}
+                  {research.latest.title.trim() || "Untitled notebook"}
                 </Link>
               </h3>
               <p className="mt-1 text-xs text-muted">
@@ -92,7 +92,7 @@ export function ContinueList({ items, research, now }: ContinueListProps) {
               href="/library"
               className="relative z-10 hidden min-h-11 shrink-0 items-center rounded-lg px-3 text-sm font-medium text-accent hover:bg-accent-soft sm:inline-flex"
             >
-              All notebooks
+              My Library
             </Link>
             <ChevronRight aria-hidden className="size-5 shrink-0 text-subtle transition-transform group-hover:translate-x-0.5 group-hover:text-accent sm:hidden" />
           </article>

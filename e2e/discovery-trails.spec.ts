@@ -14,7 +14,7 @@ test("explore a trail in any order, record discoveries, and resume where you lef
   await expect(page.getByText("Discovery trail · 5 steps")).toHaveCount(1);
   await page.goto("/questions/forgiveness-before-the-atonement");
   await expect(page.getByRole("heading", { name: "Discovery trail: Forgiveness before the Atonement" })).toBeVisible();
-  await page.getByRole("link", { name: "Start investigation" }).click();
+  await page.getByRole("link", { name: "Start a research notebook" }).click();
 
   // The Question section points to the trail, which lives in Research.
   await expect(page.getByRole("textbox", { name: "Question", exact: true })).toHaveValue(QUESTION);
@@ -32,7 +32,7 @@ test("explore a trail in any order, record discoveries, and resume where you lef
   // Steps aren't locked: jump to step 3, write, and mark it explored.
   await stepButton(page, /^Step 3:/).click();
   await expect(stepTitle(page)).toHaveText("As though He had already come");
-  await trailPanel(page).getByRole("textbox", { name: "Your discoveries" }).fill("Belief that Christ would come.");
+  await trailPanel(page).getByRole("textbox", { name: "Your notes" }).fill("Belief that Christ would come.");
   await trailPanel(page).getByRole("checkbox", { name: /explored this step/ }).check();
   await expectSaved(page);
   await expect(page).toHaveURL(/\/investigations\/view\?id=/);
@@ -58,7 +58,7 @@ test("explore a trail in any order, record discoveries, and resume where you lef
   await goToSection(page, "Research");
   await expect(stepTitle(page)).toHaveText("Before Gethsemane and the cross");
   await stepButton(page, /^Step 3: .*\(explored\) \(has notes\)$/).click();
-  await expect(trailPanel(page).getByRole("textbox", { name: "Your discoveries" })).toHaveValue(
+  await expect(trailPanel(page).getByRole("textbox", { name: "Your notes" })).toHaveValue(
     "Belief that Christ would come.",
   );
   await expect(trailPanel(page).getByRole("checkbox", { name: /explored this step/ })).toBeChecked();

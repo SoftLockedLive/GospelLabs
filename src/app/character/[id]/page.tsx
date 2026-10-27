@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowDown, ArrowLeft, Puzzle } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -15,10 +15,12 @@ import { AttributeStudyProvider } from "@/components/study/character/attribute-s
 import { ReflectionSection } from "@/components/study/character/reflection-section";
 import { ExploredStatus, SaveToNotebook } from "@/components/study/character/save-to-notebook";
 import { VocabularySection } from "@/components/study/character/vocabulary-cards";
+import { buttonClasses } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/page-header";
 import { attributeCardNodeRefs } from "@/domain/study/cards/attribute";
 import { attributeLinksFor } from "@/domain/study/character";
 import type { Source } from "@/domain/study/content-schema";
+import { cn } from "@/lib/cn";
 import { characterHref } from "@/lib/routes";
 import { getAttribute, getNodeLabel, getSources, listAttributes } from "@/lib/study-content";
 
@@ -77,6 +79,12 @@ export default async function AttributePage({ params }: AttributePageProps) {
               <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">{attribute.summary}</p>
               <ExploredStatus />
             </div>
+            {/* The activities come after the reading, many screens down on a phone: this is the way straight there. */}
+            <a href="#activities" className={cn(buttonClasses({ size: "lg" }), "w-full sm:w-fit")}>
+              <Puzzle aria-hidden />
+              Try an activity
+              <ArrowDown aria-hidden />
+            </a>
             <nav aria-label="On this page">
               <ul className="flex flex-wrap gap-2">
                 {sections.map((section) => (

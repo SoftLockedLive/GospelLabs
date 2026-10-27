@@ -23,8 +23,8 @@ export function FeedbackLinks() {
         </a>
       </div>
       <p className="text-xs leading-relaxed text-subtle">
-        These open your email app with a short template. Nothing is sent until you send it, and your investigations
-        are never attached; include only what you&rsquo;re comfortable sharing. Version {APP_RELEASE} (build {APP_VERSION}).
+        These open your email app with a short template. Nothing is sent until you send it, and nothing you&rsquo;ve saved
+        is ever attached; include only what you&rsquo;re comfortable sharing. Version {APP_RELEASE} (build {APP_VERSION}).
       </p>
     </div>
   );

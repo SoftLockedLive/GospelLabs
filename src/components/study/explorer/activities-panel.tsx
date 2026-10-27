@@ -49,7 +49,7 @@ export function ActivitiesPanel({ passage, sources, states, completed, onStateCh
                   ) : (
                     <Badge tone="green" className="motion-success">
                       <CircleCheck aria-hidden />
-                      Done
+                      Completed
                     </Badge>
                   ))}
               </div>

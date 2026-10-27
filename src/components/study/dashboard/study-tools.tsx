@@ -24,7 +24,7 @@ interface StudyToolsProps {
 /** Entry points to Scripture Explorer, Character of Christ, and Connect with Christ. */
 export function StudyTools({ passages, attributes, connectSessions, connectExplorations, now }: StudyToolsProps) {
   return (
-    <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
       <ConnectCard sessions={connectSessions} explorations={connectExplorations} now={now} />
       <ToolCard
         href={explorerHref()}
@@ -138,7 +138,7 @@ function ConnectCard({
         </Link>
       </h3>
       <p className="relative mt-1.5 text-sm leading-relaxed text-sacred-muted">
-        A quiet few minutes with the Savior. Nothing to finish, nothing scored.
+        A few quiet minutes with the Savior. Nothing to finish, nothing scored.
       </p>
       <div className="relative mt-4 border-t border-sacred-line pt-4" aria-live="polite">
         {format ? (

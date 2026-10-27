@@ -85,48 +85,51 @@ export function BuildPrincipleActivity(props: Props) {
               const feedback = feedbackFor(props, id, unchanged);
               return (
                 <li key={id} className={cn("rounded-lg border bg-surface", mark ? markSurface(mark, finished) : "border-line")}>
-                  <div className="flex items-center gap-2 py-1 pr-1 pl-3">
+                  {/* On narrow screens the controls drop below the text rather than squeezing it to a word per line. */}
+                  <div className="flex flex-wrap items-center gap-x-2 py-1 pr-1 pl-3">
                     <span aria-hidden className="w-5 shrink-0 font-mono text-xs text-accent">
                       {index + 1}
                     </span>
-                    <span className="min-w-0 flex-1 py-1.5 text-sm leading-relaxed text-fg">{textOf(id)}</span>
-                    <MarkIcon mark={mark} finished={finished} />
-                    {!readOnly && (
-                      <span className="flex shrink-0">
-                        <button
-                          type="button"
-                          data-placed={id}
-                          data-action="up"
-                          disabled={index === 0}
-                          onClick={() => move(index, -1)}
-                          aria-label={`Move “${textOf(id)}” earlier`}
-                          className={iconButton}
-                        >
-                          <ArrowUp aria-hidden className="size-4" />
-                        </button>
-                        <button
-                          type="button"
-                          data-placed={id}
-                          data-action="down"
-                          disabled={index === response.order.length - 1}
-                          onClick={() => move(index, 1)}
-                          aria-label={`Move “${textOf(id)}” later`}
-                          className={iconButton}
-                        >
-                          <ArrowDown aria-hidden className="size-4" />
-                        </button>
-                        <button
-                          type="button"
-                          data-placed={id}
-                          data-action="remove"
-                          onClick={() => remove(index)}
-                          aria-label={`Take out “${textOf(id)}”`}
-                          className={iconButton}
-                        >
-                          <X aria-hidden className="size-4" />
-                        </button>
-                      </span>
-                    )}
+                    <span className="min-w-0 flex-1 basis-40 py-1.5 text-sm leading-relaxed break-words text-fg">{textOf(id)}</span>
+                    <span className="ml-auto flex shrink-0 items-center gap-2">
+                      <MarkIcon mark={mark} finished={finished} />
+                      {!readOnly && (
+                        <span className="flex shrink-0">
+                          <button
+                            type="button"
+                            data-placed={id}
+                            data-action="up"
+                            disabled={index === 0}
+                            onClick={() => move(index, -1)}
+                            aria-label={`Move “${textOf(id)}” earlier`}
+                            className={iconButton}
+                          >
+                            <ArrowUp aria-hidden className="size-4" />
+                          </button>
+                          <button
+                            type="button"
+                            data-placed={id}
+                            data-action="down"
+                            disabled={index === response.order.length - 1}
+                            onClick={() => move(index, 1)}
+                            aria-label={`Move “${textOf(id)}” later`}
+                            className={iconButton}
+                          >
+                            <ArrowDown aria-hidden className="size-4" />
+                          </button>
+                          <button
+                            type="button"
+                            data-placed={id}
+                            data-action="remove"
+                            onClick={() => remove(index)}
+                            aria-label={`Take out “${textOf(id)}”`}
+                            className={iconButton}
+                          >
+                            <X aria-hidden className="size-4" />
+                          </button>
+                        </span>
+                      )}
+                    </span>
                   </div>
                   {feedback && (
                     <div className="px-3 pb-2.5">

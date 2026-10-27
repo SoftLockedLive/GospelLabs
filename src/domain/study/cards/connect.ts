@@ -1,6 +1,6 @@
 /**
  * Discovery Card for a Connect with Christ session. Created only when the
- * learner chooses "Save this scripture to my Notebook", never automatically.
+ * learner chooses "Save to Notebook", never automatically.
  * The card keeps the session's scripture (so the Map shows it as a scripture
  * node) and, if the learner chooses, their private note. It records no
  * concepts, connections, or anything about how the session went.

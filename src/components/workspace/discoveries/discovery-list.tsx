@@ -10,7 +10,7 @@ import { DiscoveryDialog } from "./discovery-dialog";
 
 export const DISCOVERIES_HEADING_ID = "discoveries-heading";
 
-/** The discoveries saved during this investigation, for review while writing a conclusion. */
+/** The insights saved in this research notebook, for review while writing a conclusion. */
 export function DiscoveryList({ investigation, actions }: { investigation: Investigation; actions: InvestigationActions }) {
   const [editing, setEditing] = useState<DiscoveryHighlight | null>(null);
   const { discoveryHighlights: highlights, evidence } = investigation;
@@ -26,7 +26,7 @@ export function DiscoveryList({ investigation, actions }: { investigation: Inves
           className="flex scroll-mt-40 items-center gap-2 text-sm font-semibold text-fg focus:outline-none"
         >
           <Lightbulb aria-hidden className="size-4 text-accent" />
-          Your discoveries
+          Your saved insights
           {highlights.length > 0 && <span className="font-normal text-subtle">({highlights.length})</span>}
         </h3>
         <p className="mt-1 text-xs leading-relaxed text-subtle">
@@ -36,11 +36,11 @@ export function DiscoveryList({ investigation, actions }: { investigation: Inves
 
       {highlights.length === 0 ? (
         <p className="rounded-lg border border-dashed border-line-strong px-4 py-3 text-sm leading-relaxed text-muted">
-          Nothing saved yet. Whenever something stands out, use <span className="text-fg">Save discovery</span> (the
+          Nothing saved yet. Whenever something stands out, use <span className="text-fg">Save insight</span> (the
           lightbulb beside the steps) and it will gather here.
         </p>
       ) : (
-        <ul aria-label="Your discoveries" className="flex flex-col gap-2">
+        <ul aria-label="Your saved insights" className="flex flex-col gap-2">
           {highlights.map((highlight) => {
             const linked = highlight.evidenceIds.filter((id) => cards.has(id));
             return (
@@ -72,7 +72,7 @@ export function DiscoveryList({ investigation, actions }: { investigation: Inves
                       variant="ghost"
                       size="sm"
                       className="size-8 px-0"
-                      aria-label={`Edit discovery: ${highlight.title}`}
+                      aria-label={`Edit insight: ${highlight.title}`}
                       onClick={() => setEditing(highlight)}
                     >
                       <Pencil aria-hidden />
@@ -81,7 +81,7 @@ export function DiscoveryList({ investigation, actions }: { investigation: Inves
                       variant="ghost"
                       size="sm"
                       className="size-8 px-0 hover:text-danger"
-                      aria-label={`Delete discovery: ${highlight.title}`}
+                      aria-label={`Delete insight: ${highlight.title}`}
                       onClick={() => actions.removeHighlight(highlight.id)}
                     >
                       <Trash2 aria-hidden />
@@ -96,7 +96,7 @@ export function DiscoveryList({ investigation, actions }: { investigation: Inves
 
       <DiscoveryDialog
         open={editing !== null}
-        title="Edit discovery"
+        title="Edit insight"
         submitLabel="Save changes"
         initial={editing ?? undefined}
         evidence={evidence}

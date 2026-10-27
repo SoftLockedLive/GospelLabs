@@ -12,11 +12,12 @@ import rawConnect from "@/content/connect/sessions.json";
 import { INVESTIGATION_FILES } from "@/content/investigations";
 import { PASSAGE_FILES } from "@/content/passages";
 import { check, emptyResponse, isCheckedActivity, isComplete, parseResponse, revealResponse } from "../activities";
+import { choiceOptions } from "../activities/choice";
 import { buildInvestigationCard } from "../cards/investigation";
 import { buildContentRegistry, stepActivities } from "../content-registry";
 import type { Activity } from "../content-schema";
 import { discoveryCardSchema, studyProgressSchema, type StudyProgress } from "../user-data";
-import { DIFFICULTIES, STUDY_LENGTHS } from "../vocabulary";
+import { DIFFICULTIES, STUDY_LENGTH_MINUTES, STUDY_LENGTHS } from "../vocabulary";
 import { bundleInvestigation, labelsLookup } from "./bundle";
 import { mainPath, stepsAround } from "./path";
 import { startProgress, studyReducer, type StudyAction, type StudyCommand } from "./progress";
@@ -55,6 +56,21 @@ describe("curated activities", () => {
   it("has activities to check (once content is written)", () => {
     expect(Array.isArray(allActivities)).toBe(true);
   });
+
+  it("doesn't give choice answers away by their position", () => {
+    // Authors tend to write the right option first; the shuffle must hide that.
+    const shown = allActivities.flatMap(({ activity }) =>
+      activity.type === "clue"
+        ? [{ question: activity.question, seed: `${activity.id}:${activity.question.id}` }]
+        : activity.type === "scripture-connect"
+          ? activity.questions.map((question) => ({ question, seed: `${activity.id}:${question.id}` }))
+          : [],
+    );
+    const single = shown.filter(({ question }) => !question.multiple);
+    const firstIsCorrect = single.filter(({ question, seed }) => question.correct.includes(choiceOptions(question, seed)[0].id));
+    expect(single.length).toBeGreaterThan(0);
+    expect(firstIsCorrect.length / single.length).toBeLessThan(0.5);
+  });
 });
 
 const now = (n: number) => new Date(Date.UTC(2026, 9, 26, 10, 0, n)).toISOString();
@@ -65,6 +81,15 @@ function play(investigation: (typeof registry.investigations)[number], progress:
 
 describe.each(registry.investigations.map((investigation) => [investigation.id, investigation] as const))("investigation %s", (_id, investigation) => {
   const bundle = bundleInvestigation(registry, investigation);
+
+  it("takes as long as the session labels say", () => {
+    // scripts/estimate-study-time.mjs sets estimatedMinutes from the content; STUDY_LENGTH_MINUTES is what learners are told.
+    for (const length of STUDY_LENGTHS) {
+      const [min, max] = STUDY_LENGTH_MINUTES[length];
+      expect(investigation.estimatedMinutes[length], length).toBeGreaterThanOrEqual(min);
+      expect(investigation.estimatedMinutes[length], length).toBeLessThanOrEqual(max);
+    }
+  });
 
   it("labels every Map node its connections and concepts use", () => {
     const steps = [...investigation.steps, ...investigation.branches.flatMap((branch) => branch.steps)];

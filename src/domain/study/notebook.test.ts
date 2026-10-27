@@ -126,12 +126,12 @@ describe("filters", () => {
     ]);
     expect(conceptOptions(cards).map((o) => [o.value, o.label, o.count])).toEqual([
       ["concept:atonement", "Atonement", 2],
-      ["attribute:charity", "Charity (Christlike attribute)", 1],
-      ["vocabulary:succor", "Succor (Vocabulary)", 1],
+      ["attribute:charity", "Charity · Christlike attribute", 1],
+      ["vocabulary:succor", "Succor · Vocabulary", 1],
     ]);
     expect(sourceKindOptions(cards).map((o) => [o.value, o.label, o.count])).toEqual([
       ["scripture", "Scripture", 2],
-      ["speaker", "Speaker's teaching", 1],
+      ["speaker", "Speaker’s teaching", 1],
     ]);
   });
 });
@@ -172,7 +172,7 @@ describe("researchDiscoveries", () => {
 
   it("lists saved discoveries newest first, skipping empty ones", () => {
     expect(researchDiscoveries(investigations).map((d) => [d.highlight.id, d.investigationTitle])).toEqual([
-      ["h3", "Untitled investigation"],
+      ["h3", "Untitled notebook"],
       ["h1", "Faith and works"],
     ]);
   });

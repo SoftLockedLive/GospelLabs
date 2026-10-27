@@ -30,7 +30,7 @@ function NotFound() {
     <EmptyState
       headingLevel={1}
       icon={FileQuestion}
-      title="Investigation not found"
+      title="Research notebook not found"
       description="It may have been deleted, or it was saved in a different browser or on a different device."
       action={<ButtonLink href="/library">Go to My Library</ButtonLink>}
       className="mt-6 bg-surface"
@@ -51,8 +51,8 @@ function LoadedInvestigation({ id, openAt }: { id: string; openAt?: SectionId })
       <EmptyState
         headingLevel={1}
         icon={FileWarning}
-        title="This investigation can't be opened"
-        description="Its saved data didn't pass validation, so it was left untouched rather than risk damaging it."
+        title="This research notebook can’t be opened"
+        description="Its saved data didn’t pass validation, so it was left untouched rather than risk damaging it."
         action={<ButtonLink href="/library">Go to My Library</ButtonLink>}
         className="mt-6 bg-surface"
       />
@@ -64,8 +64,8 @@ function LoadedInvestigation({ id, openAt }: { id: string; openAt?: SectionId })
       <EmptyState
         headingLevel={1}
         icon={RefreshCw}
-        title="This investigation was saved by a newer version"
-        description="A newer version of Gospel Labs saved it. To protect that data, this version won't open it for editing. Reload to get the latest version."
+        title="This research notebook was saved by a newer version"
+        description="A newer version of Gospel Labs saved it. To protect that data, this version won’t open it for editing. Reload to get the latest version."
         action={
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button onClick={() => window.location.reload()}>Reload</Button>

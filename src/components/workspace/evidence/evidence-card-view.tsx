@@ -95,7 +95,7 @@ export function EvidenceCardView({
         </div>
       </header>
 
-      <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+      <dl className="mt-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
         <div>
           <dt className="text-xs font-medium text-subtle">Observation</dt>
           <dd className="mt-1 leading-relaxed whitespace-pre-line text-muted">{card.observation}</dd>

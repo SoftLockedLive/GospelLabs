@@ -7,7 +7,7 @@
  */
 import type { ActivityOf } from "../content-schema";
 import { VERDICTS, type Verdict } from "../vocabulary";
-import { field, idSet, stringRecord } from "./parse";
+import { field, idSet, stillNeedAnotherLook, stringRecord } from "./parse";
 import type { ActivityChecker, CheckResult, CompareResponse, ItemFeedback, ItemMark } from "./types";
 
 type Compare = ActivityOf<"compare">;
@@ -53,7 +53,7 @@ export const compare: ActivityChecker<Compare, CompareResponse> = {
       feedback,
       summary: correct
         ? "Each judgment fits the sources."
-        : `${right} of ${total} judgments fit the sources. Look again at the ones marked.`,
+        : stillNeedAnotherLook(total - right, "judgment", "judgments"),
     };
   },
 

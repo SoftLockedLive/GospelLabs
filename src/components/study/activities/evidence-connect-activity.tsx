@@ -4,7 +4,7 @@
 import type { EvidenceConnectResponse } from "@/domain/study/activities";
 import { connectPair, evidenceOptions, isOneToOne } from "@/domain/study/activities/evidence-connect";
 import type { ActivityOf } from "@/domain/study/content-schema";
-import { ProvenanceLabel } from "../shared/provenance";
+import { WhyLabel } from "../shared/provenance";
 import { feedbackFor, markFor, type BodyProps } from "./body";
 import { MatchBoard } from "./match-board";
 
@@ -34,7 +34,7 @@ export function EvidenceConnectActivity(props: Props) {
         const because = activity.pairs.find((pair) => pair.left === leftId)?.because;
         return because ? (
           <div className="motion-reveal mt-2 rounded-lg bg-surface-sunken px-3 py-2">
-            <ProvenanceLabel provenance="suggested" />
+            <WhyLabel />
             <p className="mt-1 text-sm leading-relaxed text-muted">{because}</p>
           </div>
         ) : null;

@@ -67,7 +67,7 @@ test("create, edit, resume, conclude, and reopen an investigation", async ({ pag
 
 test("start from a curated question and keep editing after the first save", async ({ page }) => {
   await page.goto("/questions/meaningful-prayer");
-  await page.getByRole("link", { name: "Start investigation" }).click();
+  await page.getByRole("link", { name: "Start a research notebook" }).click();
   const question = "What makes prayer meaningful rather than routine?";
   await expect(page.getByRole("textbox", { name: "Question", exact: true })).toHaveValue(question);
 
@@ -101,14 +101,14 @@ test("delete asks for confirmation", async ({ page }) => {
   const item = libraryItem(page, "Short-lived");
 
   await item.getByRole("button", { name: "Delete Short-lived" }).click();
-  const dialog = page.getByRole("dialog", { name: "Delete this investigation?" });
+  const dialog = page.getByRole("dialog", { name: "Delete this research notebook?" });
   await expect(dialog).toContainText("1 evidence card");
   await dialog.getByRole("button", { name: "Cancel" }).click();
   await expect(item).toBeVisible();
 
   await item.getByRole("button", { name: "Delete Short-lived" }).click();
-  await dialog.getByRole("button", { name: "Delete investigation" }).click();
-  await expect(page.getByText("No investigations yet")).toBeVisible();
+  await dialog.getByRole("button", { name: "Delete notebook" }).click();
+  await expect(page.getByText("No research notebooks yet")).toBeVisible();
 });
 
 test("an untouched draft is not saved", async ({ page }) => {
@@ -117,5 +117,5 @@ test("an untouched draft is not saved", async ({ page }) => {
     "What makes prayer meaningful rather than routine?",
   );
   await page.goto("/library");
-  await expect(page.getByText("No investigations yet")).toBeVisible();
+  await expect(page.getByText("No research notebooks yet")).toBeVisible();
 });

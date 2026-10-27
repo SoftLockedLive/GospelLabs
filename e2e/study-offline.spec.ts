@@ -24,7 +24,7 @@ test("after the first visit, the study pages open offline and an investigation c
     { path: "/character/meekness", heading: "Meekness" },
     { path: "/connect", heading: "Connect with Christ" },
     { path: "/notebook", heading: "Your discoveries" },
-    { path: "/map", heading: "Your map of understanding" },
+    { path: "/map", heading: "Your Map of understanding" },
     { path: "/investigate/families-beyond-the-veil", heading: "Loved Ones Beyond the Veil" },
   ];
   for (const { path, heading } of pages) {
@@ -66,8 +66,8 @@ test("a full study session makes no requests to any other site, and nothing is l
   await expect(page.getByRole("main")).not.toContainText("AI-generated");
   await page.getByRole("link", { name: "Open in Notebook" }).click();
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await page.getByRole("link", { name: "See on your Map", exact: true }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "Your map of understanding" })).toBeVisible();
+  await page.getByRole("link", { name: "See on Map", exact: true }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Your Map of understanding" })).toBeVisible();
   await page.goto("/explore/he-will-take-upon-him");
   await page.getByRole("tab", { name: "Key words" }).click();
   await page.goto("/character/meekness");

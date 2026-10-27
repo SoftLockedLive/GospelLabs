@@ -22,8 +22,8 @@ export function AboutVersion() {
         <dd className="font-mono text-xs leading-5 text-fg">{APP_VERSION}</dd>
       </dl>
       <p className="text-xs leading-relaxed text-subtle">
-        Version numbers have three parts: a major update, improvements and fixes, and new content. So 2.1.0 brings
-        improvements to the 2.0 redesign, and a release like 2.1.1 would only add content.
+        Version numbers have three parts. The first goes up for a major update, the second for improvements and fixes,
+        and the third when only study content is added or revised, such as investigations, passages, or Connect sessions.
       </p>
       <div>
         <h3 className="text-sm font-semibold text-fg">What&rsquo;s new</h3>
@@ -37,10 +37,10 @@ export function AboutVersion() {
       <div>
         <Button variant="secondary" onClick={() => setTour(true)}>
           <Compass aria-hidden />
-          Take the tour
+          Take a quick tour
         </Button>
       </div>
-      <TourDialog open={tour} onClose={() => setTour(false)} />
+      <TourDialog open={tour} onClose={() => setTour(false)} finishLabel="Done" />
     </div>
   );
 }

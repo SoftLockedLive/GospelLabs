@@ -66,7 +66,7 @@ describe("workspaceReducer undo", () => {
       now: T1,
     });
     const removed = run(linked, { type: "removeHighlight", id: "hl-1", now: T2 });
-    expect(removed.undo?.label).toBe("Discovery removed");
+    expect(removed.undo?.label).toBe("Insight removed");
     expect(run(removed, { type: "undo" }).investigation).toEqual(linked.investigation);
 
     const evidenceGone = run(linked, { type: "removeEvidence", id: "ev-1", now: T2 });

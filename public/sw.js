@@ -56,9 +56,14 @@ const NETWORK_TIMEOUT_MS = 4000;
 /** Pages are cached without their query string: /investigations/view?id=… shares one entry. */
 const pageKey = (url) => new URL(url, self.location.origin).pathname;
 
+/**
+ * Static asset URLs in a page's HTML. Pages also embed them in escaped JSON
+ * (\"/_next/static/…\"), so a backslash ends a URL too; otherwise it's kept
+ * and the request 404s.
+ */
 function staticAssetsIn(html) {
   const urls = new Set();
-  for (const match of html.matchAll(/["'(](\/_next\/static\/[^"')\s]+)/g)) urls.add(match[1].replace(/&amp;/g, "&"));
+  for (const match of html.matchAll(/["'(](\/_next\/static\/[^"')\s\\]+)/g)) urls.add(match[1].replace(/&amp;/g, "&"));
   return [...urls];
 }
 

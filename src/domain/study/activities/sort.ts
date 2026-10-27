@@ -4,7 +4,7 @@
  * shown once the activity is finished.
  */
 import type { ActivityOf } from "../content-schema";
-import { field, idSet, stringRecord } from "./parse";
+import { field, idSet, stillNeedAnotherLook, stringRecord } from "./parse";
 import { seededShuffle } from "./shuffle";
 import type { ActivityChecker, CheckResult, ItemFeedback, ItemMark, SortResponse } from "./types";
 
@@ -48,7 +48,7 @@ export const sort: ActivityChecker<Sort, SortResponse> = {
       feedback,
       summary: correct
         ? "Everything is sorted the way the evidence shows."
-        : `${right} of ${total} are in the right place. Look again at the ones marked.`,
+        : stillNeedAnotherLook(total - right, "of these", "of these"),
     };
   },
 

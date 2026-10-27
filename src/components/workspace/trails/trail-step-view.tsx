@@ -143,7 +143,7 @@ export function TrailStepView({
         <TrailList
           icon={Scale}
           title="Open to interpretation"
-          hint="Questions the text leaves for you to weigh. Gospel Labs doesn't answer them."
+          hint="Questions the text leaves for you to weigh. Gospel Labs doesn’t answer them."
           items={step.interpretation}
         />
         <TrailList icon={Sparkles} title="To reflect on" hint="Optional and personal." items={step.reflection} />
@@ -175,12 +175,12 @@ export function TrailStepView({
           </div>
         )}
 
-        <Field label="Your discoveries" hint="Saved with this investigation as you type. Write as much or as little as you like.">
+        <Field label="Your notes" hint="Saved with this notebook as you type. Write as much or as little as you like.">
           {(props) => (
             <Textarea
               {...props}
               rows={4}
-              placeholder="What I noticed, what surprised me, what I'm still unsure about…"
+              placeholder="What I noticed, what surprised me, what I’m still unsure about…"
               value={notes?.discoveries ?? ""}
               onChange={(event) => onDiscoveriesChange(event.target.value)}
             />

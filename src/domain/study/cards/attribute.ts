@@ -18,15 +18,16 @@
  *   - sources: the definition's sources, the evidence of finished activities,
  *     and every source a connection cites.
  *
- * Updating never loses anything: the learner's notes and highlights are kept,
- * and anything already demonstrated stays demonstrated.
+ * Updating never loses anything: the learner's notes and highlights are kept
+ * (with their private note from the attribute's page added; see
+ * withLearnerWriting), and anything already demonstrated stays demonstrated.
  */
 import { activitySourceIds } from "../content-registry";
 import type { ChristAttribute, Source } from "../content-schema";
 import type { AttributeLink } from "../character";
 import type { CardConnection, CardSource, DiscoveryCard, Exploration } from "../user-data";
 import { nodeRef, type NodeRef } from "../vocabulary";
-import { cardConnection, dedupeConnections, labeledNode, snapshotSource, type LabelFor } from "./common";
+import { cardConnection, dedupeConnections, labeledNode, snapshotSource, withLearnerWriting, type LabelFor } from "./common";
 
 /** How a finished activity ended. Only `demonstrated` matters to the card. */
 export interface AttributeActivityOutcome {
@@ -41,8 +42,8 @@ export interface AttributeCardInput {
   /** Every source the attribute and its links cite, keyed by id. */
   sources: Readonly<Record<string, Source>>;
   labelFor: LabelFor;
-  /** What the learner has explored so far (opened words, finished activities). */
-  exploration?: Pick<Exploration, "vocabulary" | "completedActivities">;
+  /** What the learner has explored so far (opened words, finished activities) and their private note. */
+  exploration?: Pick<Exploration, "vocabulary" | "completedActivities"> & Partial<Pick<Exploration, "note">>;
   /** How activities finished in this visit ended, by activity id. */
   outcomes?: Readonly<Record<string, AttributeActivityOutcome>>;
   /** The learner's existing card for this attribute, if any (findAttributeCard). */
@@ -152,7 +153,8 @@ export function attributeDiscoveryCard(input: AttributeCardInput): DiscoveryCard
     concepts,
     connections,
     highlights: existing?.highlights ?? [],
-    notes: existing?.notes ?? "",
+    // The private note from the attribute's page goes on the card too, as in Connect with Christ.
+    notes: withLearnerWriting(existing?.notes ?? "", exploration?.note ? [{ text: exploration.note }] : []),
   };
 }
 

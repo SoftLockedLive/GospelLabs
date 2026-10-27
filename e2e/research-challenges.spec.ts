@@ -56,7 +56,7 @@ test("respond to challenges, try another, revisit, edit, and undo a deletion", a
 test("an investigation saved by Gospel Labs 1.0 opens unchanged and accepts challenge responses", async ({ page }) => {
   // Let the app create its database, then store a record exactly as 1.0 wrote it.
   await page.goto("/library");
-  await expect(page.getByText("No investigations yet")).toBeVisible();
+  await expect(page.getByText("No research notebooks yet")).toBeVisible();
   await page.evaluate(
     (record) =>
       new Promise<void>((resolve, reject) => {

@@ -11,12 +11,12 @@ import { DiscoveryDialog } from "./discovery-dialog";
 interface DiscoveryCaptureProps {
   investigation: Investigation;
   actions: InvestigationActions;
-  /** Goes to the list of saved discoveries in Conclusion. */
+  /** Goes to the list of saved insights in Conclusion. */
   onReview: () => void;
 }
 
 /**
- * "Save discovery", always within reach in the sticky step bar: under the
+ * "Save insight", always within reach in the sticky step bar: under the
  * steps when they form a column (from 1280px), beside them otherwise, with
  * its label shown from 768px.
  */
@@ -38,15 +38,18 @@ export function DiscoveryCapture({ investigation, actions, onReview }: Discovery
         variant="secondary"
         size="sm"
         className="h-9 gap-1.5 px-2.5 md:px-3 xl:justify-start"
-        aria-label={count > 0 ? `Save discovery (${count} saved)` : "Save discovery"}
         onClick={() => setOpen(true)}
       >
         {justSaved ? <Check aria-hidden className="text-green" /> : <Lightbulb aria-hidden className="text-accent" />}
-        <span className="hidden md:inline">{justSaved ? "Saved" : "Save discovery"}</span>
+        {/* The name comes from this text (sr-only where there's no room), so it always contains what's visible. */}
+        <span className="sr-only md:not-sr-only">Save insight</span>
         {count > 0 && (
-          <span aria-hidden className="font-mono text-xs text-subtle xl:hidden">
-            {count}
-          </span>
+          <>
+            <span aria-hidden className="font-mono text-xs text-subtle xl:hidden">
+              {count}
+            </span>
+            <span className="sr-only"> ({count} saved)</span>
+          </>
         )}
       </Button>
       {count > 0 && (
@@ -59,14 +62,14 @@ export function DiscoveryCapture({ investigation, actions, onReview }: Discovery
         </button>
       )}
       <p role="status" className="sr-only">
-        {justSaved ? "Discovery saved. You can review it in Conclusion." : ""}
+        {justSaved ? "Insight saved. You can review it in Conclusion." : ""}
       </p>
 
       <DiscoveryDialog
         open={open}
-        title="Save a discovery"
-        description="Keep an insight while it's fresh. Your discoveries gather in Conclusion for review."
-        submitLabel="Save discovery"
+        title="Save an insight"
+        description="Keep an insight while it’s fresh. Your saved insights gather in Conclusion for review."
+        submitLabel="Save insight"
         evidence={investigation.evidence}
         labels={evidenceLabels(investigation.evidence)}
         onSubmit={(input) => {

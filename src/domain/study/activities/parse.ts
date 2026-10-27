@@ -44,3 +44,10 @@ const NUMBER_WORDS = ["no", "one", "two", "three", "four", "five", "six", "seven
 export const countOf = (n: number, singular: string, plural: string) => `${NUMBER_WORDS[n] ?? n} ${n === 1 ? singular : plural}`;
 
 export const capitalize = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+
+/**
+ * "Two judgments still need another look; they’re marked." Says what is left
+ * to revisit, never a score (no "3 of 5").
+ */
+export const stillNeedAnotherLook = (n: number, singular: string, plural: string) =>
+  `${capitalize(countOf(n, `${singular} still needs`, `${plural} still need`))} another look; ${n === 1 ? "it’s" : "they’re"} marked.`;

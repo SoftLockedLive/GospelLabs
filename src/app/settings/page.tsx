@@ -13,12 +13,12 @@ import { PageHeader } from "@/components/ui/page-header";
 export const metadata: Metadata = { title: "Settings" };
 
 const PRIVACY_POINTS = [
-  "No account or sign-in. Gospel Labs doesn't know who you are.",
+  "No account or sign-in. Gospel Labs doesn’t know who you are.",
   "No analytics, advertising, or tracking of any kind.",
   "No AI. Your answers, reflections, and notes are never sent to a model or a server, and no AI features are turned on.",
-  "Your research notebooks and study data (progress, Discovery Cards, Map connections, explorations, and notes) and your preferences are stored only in this browser, on this device, and are included in your backups. Nothing goes to a cloud service.",
-  "Progress records what you've studied, never scores, streaks, or how spiritual you are.",
-  "Clearing this site's data in your browser deletes everything you've saved here, so export backups regularly.",
+  "Your research notebooks, investigation progress, Discovery Cards, Map connections, notes, highlights, and preferences are stored only in this browser, on this device, and are included in your backups. Nothing goes to a cloud service.",
+  "Progress records what you’ve studied, never scores, streaks, or how spiritual you are.",
+  "Clearing this site’s data in your browser deletes everything you’ve saved here, so export backups regularly.",
 ];
 
 export default function SettingsPage() {
@@ -54,7 +54,7 @@ export default function SettingsPage() {
         <SettingsSection
           icon={Database}
           title="Your data"
-          description="Back up, restore, or clear your investigations and study data stored on this device: research notebooks, study progress, Discovery Cards, Map connections, explorations, and preferences."
+          description="Back up, restore, or clear what’s saved on this device: your research notebooks, investigation progress, Discovery Cards, Map connections, notes, highlights, and preferences."
         >
           <DataManagement />
         </SettingsSection>

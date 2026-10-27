@@ -193,7 +193,7 @@ export const evidenceConnectSchema = z
     for (const id of left) if (!paired.has(id)) ctx.addIssue({ code: "custom", message: `Left item "${id}" has no pair`, path: ["pairs"] });
   });
 
-/** Clue Investigation: examine clues one at a time, then answer what they show together. */
+/** Follow the Clues: examine clues one at a time, then answer what they show together. */
 export const clueSchema = z
   .strictObject({
     type: z.literal("clue"),
@@ -365,7 +365,7 @@ export const ACTIVITY_TYPES = [
 
 export const ACTIVITY_TYPE_LABELS: Record<ActivityType, string> = {
   "evidence-connect": "Evidence Connections",
-  clue: "Clue Investigation",
+  clue: "Follow the Clues",
   "build-principle": "Build the Principle",
   compare: "Compare Perspectives",
   "scripture-connect": "Scripture Connections",
@@ -457,7 +457,7 @@ export const investigationSchema = z.strictObject({
    * quotations from the learner survey: survey responses stay private (see scripts/import-learner-questions.mjs).
    */
   commonQuestions: z.array(text(200)).max(4).default([]),
-  estimatedMinutes: z.strictObject({ quick: z.number().int().min(3).max(15), deep: z.number().int().min(10).max(60) }),
+  estimatedMinutes: z.strictObject({ quick: z.number().int().min(3).max(45), deep: z.number().int().min(10).max(90) }),
   intro: text(900),
   sources: z.array(sourceSchema).min(1),
   concepts: z.array(conceptSchema).default([]),

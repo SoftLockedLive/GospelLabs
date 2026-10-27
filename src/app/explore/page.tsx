@@ -30,7 +30,7 @@ export default function ExplorePage() {
       <PageHeader
         eyebrow="Scripture Explorer"
         title="Explore a passage"
-        description="Choose a passage and study it closely: highlight the words that stand out, follow its themes, look up key phrases, and connect it with related scriptures."
+        description="Choose a passage and study it closely: highlight the words that stand out, follow its themes, look up key words, and connect it with related scriptures."
       />
 
       <aside className="flex max-w-3xl items-start gap-3 rounded-xl border border-line bg-surface px-4 py-3.5 text-sm leading-relaxed text-muted">

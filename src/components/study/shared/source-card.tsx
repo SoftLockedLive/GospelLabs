@@ -59,6 +59,33 @@ export function VerseText({ source, className, size = "md" }: { source: Source; 
   );
 }
 
+/** Comparable text: lowercase, straight quotes, no punctuation runs. */
+const comparable = (text: string) =>
+  text
+    .toLowerCase()
+    .replace(/[‘’]/g, "'")
+    .replace(/[“”"]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+/**
+ * The line under a source's label: its title, author, and publication, leaving
+ * out whatever the label already says (a label like `David A. Bednar, “The
+ * Spirit of Revelation”` names both), so nothing reads twice.
+ */
+export function sourceDetails(source: Pick<Source, "label" | "title" | "author" | "publication">): string {
+  const label = comparable(source.label);
+  const said = (text: string) => label.includes(comparable(text));
+  const author = source.author?.replace(/^(Elder|President|Sister|Bishop|Brother)\s+/, "");
+  return [
+    source.title && !said(source.title) ? source.title : null,
+    source.author && !(author && said(author)) ? source.author : null,
+    source.publication,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+}
+
 interface SourceCardProps {
   source: Source;
   /** Show verse text / excerpt (default true). */
@@ -76,13 +103,7 @@ export function SourceCard({ source, showText = true, collapsibleText = false, c
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
           <Heading className="text-sm font-semibold text-fg">{source.label}</Heading>
-          {(source.title || source.author || source.publication) && (
-            <p className="mt-0.5 text-xs text-muted">
-              {[source.title && source.title !== source.label ? source.title : null, source.author, source.publication]
-                .filter(Boolean)
-                .join(" · ")}
-            </p>
-          )}
+          {sourceDetails(source) && <p className="mt-0.5 text-xs text-muted">{sourceDetails(source)}</p>}
         </div>
         <SourceKindBadge kind={source.kind} />
       </div>

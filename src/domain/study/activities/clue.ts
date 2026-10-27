@@ -1,5 +1,5 @@
 /**
- * Clue Investigation: the learner examines clues one at a time (at least
+ * Follow the Clues: the learner examines clues one at a time (at least
  * `minRevealed`, by default all of them), then answers what they show together.
  */
 import type { ActivityOf } from "../content-schema";

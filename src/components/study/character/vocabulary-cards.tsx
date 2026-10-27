@@ -3,7 +3,9 @@
 /**
  * Words to know: each word opens (tap, Enter, or Space) to its meaning and
  * sources. Opening a word records it in the learner's Exploration, which is
- * all "explored" means here: the word was opened.
+ * all "explored" means here: the word was opened. A word whose meaning is
+ * also a safety note ("It never means accepting abuse") starts open, so the
+ * note is never hidden; it's recorded only when the learner opens it.
  */
 import { Check, ChevronDown } from "lucide-react";
 import { useId, useState, type CSSProperties } from "react";
@@ -11,6 +13,7 @@ import type { ChristAttribute, Source } from "@/domain/study/content-schema";
 import { cn } from "@/lib/cn";
 import { StudySection } from "./attribute-sections";
 import { useAttributeStudy } from "./attribute-study-context";
+import { isSafetyNote } from "./collapse";
 import { SourceCitations } from "./source-citations";
 
 export function VocabularySection() {
@@ -18,7 +21,7 @@ export function VocabularySection() {
   const explored = new Set(exploration.status === "ready" ? (exploration.value?.vocabulary ?? []) : []);
   return (
     <StudySection id="words" title="Words to know" description="Open a word to see what it means and where the meaning comes from.">
-      <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {attribute.vocabulary.map((word, index) => (
           <li key={word.id} className="motion-reveal" style={{ "--motion-index": index } as CSSProperties}>
             <VocabularyCard word={word} sources={sources} explored={explored.has(word.id)} onOpen={() => openWord(word.id)} />
@@ -37,7 +40,7 @@ interface VocabularyCardProps {
 }
 
 function VocabularyCard({ word, sources, explored, onOpen }: VocabularyCardProps) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(() => isSafetyNote(word.meaning, word.sourceIds));
   const panelId = useId();
   return (
     <div

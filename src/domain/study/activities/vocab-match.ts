@@ -5,7 +5,7 @@
  * moves it.
  */
 import type { ActivityOf } from "../content-schema";
-import { field, stringRecord } from "./parse";
+import { field, stillNeedAnotherLook, stringRecord } from "./parse";
 import { seededShuffle } from "./shuffle";
 import type { ActivityChecker, CheckResult, ItemFeedback, ItemMark, VocabMatchResponse } from "./types";
 
@@ -106,7 +106,7 @@ export const vocabMatch: ActivityChecker<VocabMatch, VocabMatchResponse> = {
       feedback,
       summary: correct
         ? "Every term is matched the way the scriptures use it."
-        : `${right} of ${total} terms are matched. Look again at the ones marked.`,
+        : stillNeedAnotherLook(total - right, "term", "terms"),
     };
   },
 

@@ -17,25 +17,45 @@ export const DIFFICULTY_LABELS: Record<Difficulty, string> = {
   complex: "Complex",
 };
 
+/**
+ * What each level asks for, in a few plain words a 14-year-old knows (the
+ * start screen, Settings, and the study settings show them under the labels).
+ * Each is a verb phrase, since difficulty suggestions read it after "asks you
+ * to" ("Hard asks you to weigh what the sources say").
+ */
 export const DIFFICULTY_DESCRIPTIONS: Record<Difficulty, string> = {
-  easy: "Recognize and identify",
-  medium: "Explain and connect",
-  hard: "Compare, analyze, and apply",
-  complex: "Synthesize sources and weigh nuance",
+  easy: "Spot it in the verses",
+  medium: "Connect the pieces",
+  hard: "Weigh what the sources say",
+  complex: "Put it all together",
 };
 
 export function isDifficulty(value: unknown): value is Difficulty {
   return DIFFICULTIES.includes(value as Difficulty);
 }
 
-/** Quick sessions follow the core path (about 5–10 minutes); deep sessions add deeper steps and side questions. */
+/** Quick sessions follow the core path; deep sessions add deeper steps and side questions. */
 export const STUDY_LENGTHS = ["quick", "deep"] as const;
 export type StudyLength = (typeof STUDY_LENGTHS)[number];
 
-export const STUDY_LENGTH_LABELS: Record<StudyLength, string> = {
-  quick: "Quick study (5–10 min)",
-  deep: "Deep study (20–40 min)",
+/**
+ * How long a session takes, in minutes, across the investigations (each one's own estimate is in its
+ * content, set by scripts/estimate-study-time.mjs). A test keeps every investigation inside these.
+ */
+export const STUDY_LENGTH_MINUTES: Record<StudyLength, readonly [number, number]> = {
+  quick: [20, 30],
+  deep: [30, 40],
 };
+
+const minutes = (length: StudyLength) => `${STUDY_LENGTH_MINUTES[length][0]}–${STUDY_LENGTH_MINUTES[length][1]} min`;
+
+export const STUDY_LENGTH_LABELS: Record<StudyLength, string> = {
+  quick: `Quick study (${minutes("quick")})`,
+  deep: `Deep study (${minutes("deep")})`,
+};
+
+/** "20–25 min" */
+export const studyLengthMinutes = minutes;
 
 /**
  * Conceptual phases of an investigation: Question → Evidence → Interactive
@@ -48,7 +68,7 @@ export type Phase = (typeof PHASES)[number];
 export const PHASE_LABELS: Record<Phase, string> = {
   question: "Question",
   evidence: "Evidence",
-  discover: "Discovery",
+  discover: "Discover",
   understand: "Understanding",
 };
 
@@ -104,7 +124,7 @@ export type SourceKind = (typeof SOURCE_KINDS)[number];
 export const SOURCE_KIND_LABELS: Record<SourceKind, string> = {
   scripture: "Scripture",
   official: "Official Church resource",
-  speaker: "Speaker's teaching",
+  speaker: "Speaker’s teaching",
   scholarly: "Historical or scholarly analysis",
 };
 
@@ -208,5 +228,5 @@ export const PROVENANCE_LABELS: Record<Provenance, string> = {
   demonstrated: "You discovered",
   suggested: "Suggested by Gospel Labs",
   user: "Your interpretation",
-  ai: "AI-generated — not doctrine or revelation",
+  ai: "AI-generated—not doctrine or revelation",
 };

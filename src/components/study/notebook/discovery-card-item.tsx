@@ -32,7 +32,7 @@ export function DiscoveryCardItem({ card }: { card: DiscoveryCard }) {
         <span aria-hidden>·</span>
         <time dateTime={card.createdAt}>{formatDate(card.createdAt)}</time>
       </p>
-      <h3 id={headingId} className="mt-2 font-medium text-fg">
+      <h3 id={headingId} className="mt-2 font-medium break-words text-fg">
         <Link
           id={cardLinkId(card.id)}
           href={notebookHref(card.id)}
@@ -41,7 +41,7 @@ export function DiscoveryCardItem({ card }: { card: DiscoveryCard }) {
           {card.title}
         </Link>
       </h3>
-      {card.question && <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted">{card.question}</p>}
+      {card.question && <p className="mt-1 line-clamp-2 text-sm leading-relaxed break-words text-muted">{card.question}</p>}
 
       {shown.length > 0 && (
         <ul aria-label="Concepts" className="mt-3 flex flex-wrap gap-1.5">

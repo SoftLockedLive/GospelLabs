@@ -122,8 +122,10 @@ for (const theme of THEMES) {
     await page.getByRole("radio", { name: "List view" }).locator("xpath=ancestor::label[1]").click();
     await expectNoViolations(page, `/map List view (${theme.name})`);
     await page.goto("/connect");
-    for (let i = 0; i < 2; i++) await page.getByRole("button", { name: "Continue", exact: true }).click();
-    await page.getByRole("button", { name: "Take a moment" }).click();
+    // Today's session varies by date, and so does how many sections it has: continue until its pause is offered.
+    const pause = page.getByRole("button", { name: "Take a moment" });
+    for (let i = 0; i < 4 && !(await pause.isVisible()); i++) await page.getByRole("button", { name: "Continue", exact: true }).click();
+    await pause.click();
     await expectNoViolations(page, `/connect at the end of a session (${theme.name})`);
   });
 
@@ -163,7 +165,7 @@ for (const theme of THEMES) {
       await solveStep(page, step, "medium", { next: index < steps.length - 2 });
     }
     await page.getByRole("button", { name: "See your discovery" }).click();
-    await expect(page.getByText("Saved to your Discovery Notebook")).toBeVisible();
+    await expect(page.getByText("Saved to your Notebook.")).toBeVisible();
     await expectNoViolations(page, `the completion view (${theme.name})`);
 
     // The Map with this discovery's node open, and the connection dialog.
@@ -172,8 +174,8 @@ for (const theme of THEMES) {
     await expectNoViolations(page, `the Map with a node open (${theme.name})`);
     // From the node's details (on phones they cover the toolbar, as a bottom sheet).
     await page.getByRole("complementary", { name: inv.title }).getByRole("button", { name: "Connect" }).click();
-    await page.getByRole("dialog", { name: "Connect two discoveries" }).getByRole("button", { name: "Add connection" }).click();
-    await expectNoViolations(page, `the connection dialog with errors (${theme.name})`, page.getByRole("dialog", { name: "Connect two discoveries" }));
+    await page.getByRole("dialog", { name: "Connect two things on your Map" }).getByRole("button", { name: "Add connection" }).click();
+    await expectNoViolations(page, `the connection dialog with errors (${theme.name})`, page.getByRole("dialog", { name: "Connect two things on your Map" }));
   });
 }
 
@@ -252,14 +254,14 @@ async function expectVisibleFocus(page: Page, what: string) {
 
 test("keyboard focus is always visible on study controls", async ({ page }) => {
   await page.goto("/investigate/one-by-one");
-  // A difficulty card (a visually hidden radio inside its label). Tab enters the group at the chosen one.
-  const medium = page.getByRole("radio", { name: /^Medium/ });
-  for (let i = 0; i < 60 && !(await medium.evaluate((el) => el === document.activeElement)); i++) await page.keyboard.press("Tab");
-  await expect(medium).toBeFocused();
+  // A difficulty card (a visually hidden radio inside its label). Tab enters the group at the chosen one (Easy, for a new learner).
+  const easy = page.getByRole("radio", { name: /^Easy/ });
+  for (let i = 0; i < 60 && !(await easy.evaluate((el) => el === document.activeElement)); i++) await page.keyboard.press("Tab");
+  await expect(easy).toBeFocused();
   await expectVisibleFocus(page, "a difficulty choice");
   await page.keyboard.press("ArrowRight");
-  await expect(page.getByRole("radio", { name: /^Hard/ })).toBeFocused();
-  await expect(page.getByRole("radio", { name: /^Hard/ })).toBeChecked();
+  await expect(page.getByRole("radio", { name: /^Medium/ })).toBeFocused();
+  await expect(page.getByRole("radio", { name: /^Medium/ })).toBeChecked();
   await expectVisibleFocus(page, "the next difficulty choice");
   const begin = page.getByRole("button", { name: "Begin the investigation" });
   for (let i = 0; i < 20 && !(await begin.evaluate((el) => el === document.activeElement)); i++) await page.keyboard.press("Tab");
@@ -268,7 +270,7 @@ test("keyboard focus is always visible on study controls", async ({ page }) => {
   // A control inside the first activity (a matching board).
   const inv = investigation("one-by-one");
   const step = pathSteps(inv, "quick")[0];
-  const section = activitySection(stepArticle(page, step), activityAt(step, "hard"));
+  const section = activitySection(stepArticle(page, step), activityAt(step, "medium"));
   await expect(section).toBeVisible();
   const inActivity = () => section.evaluate((el) => el.contains(document.activeElement) && document.activeElement?.tagName === "BUTTON");
   for (let i = 0; i < 80 && !(await inActivity()); i++) await page.keyboard.press("Tab");

@@ -36,7 +36,7 @@ export function EvidencePicker({
             Go to Research
           </Button>
           <Button variant="ghost" size="sm" onClick={onDone}>
-            Close
+            Done
           </Button>
         </div>
       </div>

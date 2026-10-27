@@ -181,7 +181,7 @@ export function ContextPanel({ passage, sources }: { passage: ExplorerPassage; s
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-fg">{setting}</p>
         {(speaker || audience) && (
-          <dl className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
+          <dl className="mt-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
             {speaker && (
               <div>
                 <dt className="text-xs font-semibold tracking-wide text-muted uppercase">Speaker</dt>

@@ -48,7 +48,7 @@ export function QuestionBankBrowser({ questions }: { questions: readonly Curated
         <EmptyState
           icon={SearchX}
           title="No questions match"
-          description="Try different words, or broaden the topic or difficulty."
+          description="Try different words, or broaden the topic or level."
           action={
             <Button variant="secondary" onClick={clear}>
               Clear filters
@@ -56,7 +56,7 @@ export function QuestionBankBrowser({ questions }: { questions: readonly Curated
           }
         />
       ) : (
-        <ul className="grid gap-4 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {results.map((question) => (
             <li key={question.id} className="flex">
               <QuestionCard question={question} />

@@ -41,7 +41,7 @@ const CASES: { type: ActivityType; investigation: string; difficulty: Difficulty
 ];
 
 for (const { type, investigation: id, difficulty, step: stepIndex = 0 } of CASES) {
-  test(`a ${type} activity can be answered and checked in the investigation player`, async ({ page }) => {
+  test(`a ${type} activity can be answered and checked in the investigation player`, async ({ page, isMobile }) => {
     const inv = await startInvestigation(page, id, { difficulty, length: "quick" });
     const steps = pathSteps(inv, "quick");
     for (const earlier of steps.slice(0, stepIndex)) await solveStep(page, earlier, difficulty);
@@ -56,12 +56,27 @@ for (const { type, investigation: id, difficulty, step: stepIndex = 0 } of CASES
     await expect(checkButton(section)).toBeDisabled();
 
     await solveActivity(page, article, activity);
-    // Worked out, not revealed: the explanation is labeled as Gospel Labs' suggestion, and the step's insight follows.
+    // Worked out, not revealed: the explanation is one tap away ("Why it fits"), labeled as Gospel Labs'
+    // suggestion, and the step's insight follows.
     const explanation = section.getByText((activity as CheckedActivity).explanation);
+    await expect(explanation).toBeHidden();
+    await section.getByText("Why it fits").click();
     await expect(explanation).toBeVisible();
     await expect(explanation.locator("xpath=..")).toContainText("Suggested by Gospel Labs");
-    await expect(article.getByRole("region", { name: "What this step brings out" })).toContainText(step.insight);
+    const insight = article.getByRole("region", { name: "What this step brings out" });
+    await expect(insight).toContainText(step.insight);
+    // On phones the insight is cut to a few lines, so "Next step" stays close; "Read more" opens the rest.
+    const readMore = insight.getByRole("button", { name: "Read more" });
+    if (isMobile) {
+      await expect(readMore).toHaveAttribute("aria-expanded", "false");
+      await readMore.click();
+      await expect(insight.getByRole("button", { name: "Show less" })).toHaveAttribute("aria-expanded", "true");
+    } else {
+      await expect(readMore).toHaveCount(0);
+    }
     await expect(article.getByRole("button", { name: "Next step" })).toBeVisible();
+    // Stopping here is fine, and the learner is told so.
+    await expect(article.getByText("A good place to stop if you need to. Your place is saved for next time.")).toBeVisible();
   });
 }
 

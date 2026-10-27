@@ -1,7 +1,7 @@
 "use client";
 
 import { AlertTriangle, Download, Info } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { AcknowledgeCheckbox, Dialog } from "@/components/ui/dialog";
 import { DIFFICULTY_LABELS, STUDY_LENGTH_LABELS } from "@/domain/study/vocabulary";
@@ -22,7 +22,8 @@ import {
   type ImportMode,
   type ParsedBackup,
 } from "@/persistence/backup";
-import { restoreBackupPreferences } from "@/persistence/backup-preferences";
+import { readWelcome, setWelcome } from "@/lib/release-state";
+import { readStoredPreferences, restoreBackupPreferences } from "@/persistence/backup-preferences";
 import { getRepository } from "@/persistence/client";
 import { summaryCounts, type BackupImportSummary } from "@/persistence/full-backup";
 import { toStorageError } from "@/persistence/storage-errors";
@@ -46,7 +47,6 @@ interface ImportDialogProps {
 type Previews = Record<ImportMode, BackupImportSummary>;
 
 /** Preferences are restored by default when replacing everything, and only on request when merging. */
-const PREFERENCE_DEFAULTS: Record<ImportMode, boolean> = { merge: false, replace: true };
 
 const ACTIVITY_LABELS: Record<keyof ActivityPreferences, string> = {
   offerBranches: "Side questions",
@@ -91,12 +91,21 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
   const [mode, setMode] = useState<ImportMode>("merge");
   const [previews, setPreviews] = useState<Previews | null>(null);
   const [acknowledged, setAcknowledged] = useState(false);
-  const [restorePreferences, setRestorePreferences] = useState(PREFERENCE_DEFAULTS);
+  // Whether to restore preferences, per mode, once the learner has chosen; otherwise the default below.
+  const [preferenceChoice, setPreferenceChoice] = useState<Partial<Record<ImportMode, boolean>>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [exportNote, setExportNote] = useState<string | null>(null);
 
   const backup = pending?.backup;
+
+  // Replacing restores preferences by default. Merging does only on a device with none of its own (a new
+  // device, say), where there's nothing to overwrite; otherwise it keeps this device's choices unless asked.
+  const deviceHasPreferences = useMemo(() => !backup || Object.keys(readStoredPreferences()).length > 0, [backup]);
+  const restorePreferences: Record<ImportMode, boolean> = {
+    merge: preferenceChoice.merge ?? !deviceHasPreferences,
+    replace: preferenceChoice.replace ?? true,
+  };
 
   // Preview both modes against the data stored right now.
   useEffect(() => {
@@ -116,7 +125,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
     setMode("merge");
     setPreviews(null);
     setAcknowledged(false);
-    setRestorePreferences(PREFERENCE_DEFAULTS);
+    setPreferenceChoice({});
     setError(null);
     setExportNote(null);
     onClose();
@@ -153,6 +162,8 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
         preferencesFailed = true;
       }
     }
+    // Someone restoring a backup isn't new here: the new-learner welcome would only be in the way.
+    if (readWelcome() === "pending") setWelcome("done");
     setBusy(false);
     close();
     onImported({ summary, preferencesRestored, preferencesFailed });
@@ -195,7 +206,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
             <span className="font-medium text-fg">{pending.fileName}</span>
             {backup.exportedAt && <> · exported {formatDate(backup.exportedAt)}</>} ·{" "}
             {describeCounts(contents, "nothing to import")}
-            {backup.version < 3 && <> · made by Gospel Labs 1.x, before study data existed</>}
+            {backup.version < 3 && <> · made by Gospel Labs 1.x, which saved only research notebooks</>}
           </>
         )
       }
@@ -233,8 +244,8 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
                       <span className="text-fg">
                         {capitalize(DATA_KIND_LABELS[entry.kind].one)} #{entry.index + 1}{" "}
                         {entry.title ?? entry.id ?? "(no id)"}
-                      </span>{" "}
-                      — {entry.reason}
+                      </span>
+                      —{entry.reason}
                     </li>
                   ))}
                 </ul>
@@ -258,7 +269,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
 
           {nothingToImport ? (
             <p className="text-sm text-muted">
-              This backup doesn&rsquo;t contain any investigations or study data to import.
+              This backup doesn&rsquo;t contain anything to import.
             </p>
           ) : (
             <fieldset className="flex flex-col gap-2">
@@ -268,7 +279,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
                 selected={mode === "merge"}
                 onSelect={setMode}
                 title="Merge with my data (recommended)"
-                description="Adds what's in the backup. If something exists in both places, the more recently updated copy is kept. Nothing is deleted."
+                description="Adds what’s in the backup. If something exists in both places, the more recently updated copy is kept. Nothing is deleted."
                 preview={previews && previewLines(previews.merge)}
               />
               <ModeOption
@@ -276,7 +287,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
                 selected={mode === "replace"}
                 onSelect={setMode}
                 title="Replace all my data"
-                description="Deletes every investigation and all study data on this device, then restores exactly what's in the backup."
+                description="Deletes everything you’ve saved on this device, then restores exactly what’s in the backup."
                 preview={previews && previewLines(previews.replace)}
               />
               {!previews && !error && (
@@ -292,7 +303,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
               <input
                 type="checkbox"
                 checked={restorePreferences[mode]}
-                onChange={(event) => setRestorePreferences((current) => ({ ...current, [mode]: event.target.checked }))}
+                onChange={(event) => setPreferenceChoice((current) => ({ ...current, [mode]: event.target.checked }))}
                 className="mt-0.5 size-4 shrink-0 accent-accent"
               />
               <span className="min-w-0">
@@ -324,7 +335,7 @@ export function ImportDialog({ pending, onClose, onImported }: ImportDialogProps
               </p>
               {downloadButton}
               <AcknowledgeCheckbox checked={acknowledged} onChange={setAcknowledged}>
-                I understand that my current investigations and study data will be deleted and can&rsquo;t be
+                I understand that everything now on this device will be deleted and can&rsquo;t be
                 recovered.
               </AcknowledgeCheckbox>
             </div>

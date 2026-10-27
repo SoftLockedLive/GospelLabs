@@ -20,7 +20,7 @@ const REMOVAL_LABELS: Record<RemovalAction, string> = {
   removeEvidence: "Evidence removed",
   removeClaim: "Claim removed",
   removeConnection: "Connection removed",
-  removeHighlight: "Discovery removed",
+  removeHighlight: "Insight removed",
   removeChallengeResponse: "Challenge response removed",
 };
 

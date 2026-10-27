@@ -49,7 +49,9 @@ export function AppShell({ children }: { children: ReactNode }) {
         <UpdateNotice />
         <OfflineNotice />
         <WhatsNew />
-        <main id="main" className="relative isolate flex-1 pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-0">
+        {/* overflow-x-clip: anything too wide is cut off here instead of widening the page, which on phones also
+            pushes the fixed tab bar off screen. e2e/study-responsive.spec.ts still finds such elements. */}
+        <main id="main" className="relative isolate flex-1 overflow-x-clip pb-[calc(6rem+env(safe-area-inset-bottom))] lg:pb-0">
           <div aria-hidden className="bg-page-wash pointer-events-none absolute inset-x-0 top-0 -z-10 h-128" />
           <div aria-hidden className="bg-notebook-grid pointer-events-none absolute inset-0 -z-10" />
           {children}

@@ -127,7 +127,7 @@ test("an activity resumes where it was left, and finishing it is counted on its 
   await openPassage(page);
   const activity = passage.activities.find((a) => a.type === "sort") as ActivityOf<"sort">;
   await page.getByRole("tab", { name: /^Activities/ }).click();
-  await expect(page.getByRole("tab", { name: /^Activities/ })).toHaveAccessibleName(`Activities 0/${passage.activities.length}`);
+  await expect(page.getByRole("tab", { name: /^Activities/ })).toHaveAccessibleName("Activities");
   const section = activitySection(page.getByRole("tabpanel", { name: /^Activities/ }), activity);
   const [item] = activity.items;
   const category = activity.categories.find((c) => c.id === item.category)!;
@@ -139,7 +139,7 @@ test("an activity resumes where it was left, and finishing it is counted on its 
   await expect(section.getByRole("group", { name: item.text, exact: true }).getByRole("radio", { name: category.label, exact: true })).toBeChecked();
 
   await solveActivity(page, page.getByRole("tabpanel", { name: /^Activities/ }), activity);
-  await expect(page.getByRole("tab", { name: /^Activities/ })).toHaveAccessibleName(`Activities 1/${passage.activities.length}`);
+  await expect(page.getByRole("tab", { name: /^Activities/ })).toHaveAccessibleName("Activities 1 completed");
   await page.reload();
   await page.getByRole("tab", { name: /^Activities/ }).click();
   await expect(fitsTheEvidence(section)).toBeVisible();
@@ -153,11 +153,11 @@ test("saving to the Notebook & Map creates one card with the highlight, and savi
   await newHighlight(page).getByRole("textbox", { name: /^Note/ }).fill("To run to help.");
   await newHighlight(page).getByRole("button", { name: "Save highlight" }).click();
 
-  const save = page.getByRole("region", { name: "Save to Notebook & Map" });
+  const save = page.getByRole("region", { name: "Save to Notebook" });
   await expect(save.getByRole("listitem").filter({ hasText: "highlight" }).first()).toContainText("1");
-  await save.getByRole("button", { name: "Save to Notebook & Map" }).click();
-  await expect(save.getByText("Saved to your Notebook and Map.")).toBeVisible();
-  await expect(save.getByRole("button", { name: "Update Notebook & Map" })).toBeVisible();
+  await save.getByRole("button", { name: "Save to Notebook" }).click();
+  await expect(save.getByText("Saved to your Notebook.")).toBeVisible();
+  await expect(save.getByRole("button", { name: "Update Notebook card" })).toBeVisible();
   const [card] = await readStore<DiscoveryCard>(page, "discoveries");
   expect(card).toMatchObject({ origin: { kind: "passage", contentId: PASSAGE_ID }, title: passage.title });
   expect(card.highlights).toMatchObject([{ verse: 12, text: "succor", note: "To run to help.", conceptId: "succor" }]);
@@ -165,8 +165,8 @@ test("saving to the Notebook & Map creates one card with the highlight, and savi
   expect(card.concepts.find((c) => c.ref.endsWith(":succor"))?.demonstrated).toBe(true);
 
   // Saving again updates the same card.
-  await save.getByRole("button", { name: "Update Notebook & Map" }).click();
-  await expect(save.getByText("Saved to your Notebook and Map.")).toBeVisible();
+  await save.getByRole("button", { name: "Update Notebook card" }).click();
+  await expect(save.getByText("Saved to your Notebook.")).toBeVisible();
   expect((await readStore<DiscoveryCard>(page, "discoveries")).map((c) => c.id)).toEqual([card.id]);
 
   await save.getByRole("link", { name: "Open in Notebook" }).click();
@@ -241,8 +241,8 @@ test("if saved work on a passage can't be read, the passage can still be read an
   await expect(words(page)).toBeVisible();
   await expect(word(page, 11, "suffering")).toBeDisabled();
   await expect(highlights(page).getByText("Your highlights can’t be shown until your saved work can be read.")).toBeVisible();
-  const save = page.getByRole("region", { name: "Save to Notebook & Map" });
-  await expect(save.getByRole("button", { name: "Save to Notebook & Map" })).toBeDisabled();
+  const save = page.getByRole("region", { name: "Save to Notebook" });
+  await expect(save.getByRole("button", { name: "Save to Notebook" })).toBeDisabled();
   await page.getByRole("tab", { name: /^Activities/ }).click();
   await expect(page.getByText("Activities open once your saved work on this passage can be read.")).toBeVisible();
 

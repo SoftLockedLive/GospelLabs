@@ -7,11 +7,11 @@
  * version (see playwright.config.ts); these start from an empty browser.
  */
 import { join } from "node:path";
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { expect, test, type Locator, type Page } from "@playwright/test";
 import rawChangelog from "@/content/changelog.json";
 import { compareVersions } from "@/domain/changelog";
-import { RECORD_FROM_1_1 } from "../src/persistence/legacy-fixtures";
+import { BACKUP_FROM_2_0, RECORD_FROM_1_1 } from "../src/persistence/legacy-fixtures";
 import { pick } from "./study-helpers";
 
 test.use({ storageState: { cookies: [], origins: [] } });
@@ -110,11 +110,10 @@ test("a new learner gets the welcome, a tour, a theme choice, the version, and h
   await tour.getByRole("button", { name: "Start studying" }).click();
   await expect(tour).toBeHidden();
 
-  // The welcome stays until the learner is done with it.
-  await expect(welcome(page)).toBeVisible();
-  await welcome(page).getByRole("button", { name: "Start studying" }).click();
+  // Finishing the tour from the welcome finishes the welcome too, and focus stays on the page.
   await expect(welcome(page)).toHaveCount(0);
   expect(await stored(page, WELCOME)).toBe("done");
+  await expect(page.getByRole("heading", { level: 1 })).toBeFocused();
   await page.reload();
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   await expect(welcome(page)).toHaveCount(0);
@@ -183,7 +182,7 @@ test("Settings › About shows the version, every release, and the tour", async 
   await expect(about).toContainText(`${LATEST.version} · ${LATEST.title}`);
   await about.getByText("Earlier releases").click();
   for (const release of RELEASES.slice(1)) await expect(about).toContainText(`${release.version} · ${release.title}`);
-  await about.getByRole("button", { name: "Take the tour" }).click();
+  await about.getByRole("button", { name: "Take a quick tour" }).click();
   await expect(page.getByRole("dialog", { name: "A quick tour" })).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog", { name: "A quick tour" })).toBeHidden();
@@ -205,4 +204,25 @@ test("the welcome, the tour, and What's new have no accessibility violations", a
   await page.goto("/investigate");
   await expect(whatsNew(page)).toBeVisible();
   await expectNoViolations(page, "What's new", whatsNew(page));
+});
+
+test("restoring a backup on a new device restores its preferences by default, and the welcome steps aside", async ({ page }, testInfo) => {
+  await page.goto("/settings");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  // Nothing was stored here before, so this device counts as new until the backup arrives.
+  await expect.poll(() => stored(page, WELCOME)).toBe("pending");
+
+  const path = testInfo.outputPath("backup-from-2-0.json");
+  writeFileSync(path, BACKUP_FROM_2_0);
+  await page.locator('input[type="file"]').setInputFiles(path);
+  const dialog = page.getByRole("dialog", { name: "Import backup" });
+  // This device has no preferences of its own, so there's nothing for the backup's to overwrite.
+  await expect(dialog.getByRole("checkbox", { name: /Also restore appearance and study preferences/ })).toBeChecked();
+  await dialog.getByRole("button", { name: "Import", exact: true }).click();
+  await expect(page.getByText(/Appearance and study preferences restored\./)).toBeVisible();
+
+  expect(await stored(page, WELCOME)).toBe("done");
+  await page.goto("/");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await expect(welcome(page)).toHaveCount(0);
 });

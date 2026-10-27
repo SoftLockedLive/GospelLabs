@@ -49,9 +49,9 @@ export function CardDetail({ cardId, onDeleted }: CardDetailProps) {
         <EmptyState
           headingLevel={1}
           icon={FileQuestion}
-          title="This discovery isn't in your Notebook"
+          title="This discovery isn’t in your Notebook"
           description="It may have been deleted, or it was saved in a different browser or on a different device."
-          action={<ButtonLink href={notebookHref()}>Go to your Notebook</ButtonLink>}
+          action={<ButtonLink href={notebookHref()}>Open your Notebook</ButtonLink>}
           className="bg-surface"
         />
       </div>
@@ -114,7 +114,7 @@ function LoadedCard({ card, onDeleted, onUnsavedNotesChange, gone }: LoadedCardP
               <span>
                 Saved <time dateTime={card.createdAt}>{formatDate(card.createdAt)}</time>
               </span>
-              {card.origin.difficulty && <span>Studied at {DIFFICULTY_LABELS[card.origin.difficulty]} depth</span>}
+              {card.origin.difficulty && <span>Studied at {DIFFICULTY_LABELS[card.origin.difficulty]} difficulty</span>}
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -125,7 +125,7 @@ function LoadedCard({ card, onDeleted, onUnsavedNotesChange, gone }: LoadedCardP
             {mapRef && (
               <ButtonLink href={mapHref(mapRef)} variant="secondary">
                 <MapIcon aria-hidden />
-                See on your Map
+                See on Map
               </ButtonLink>
             )}
             {!gone && (
@@ -153,7 +153,7 @@ function LoadedCard({ card, onDeleted, onUnsavedNotesChange, gone }: LoadedCardP
         </section>
       )}
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-10">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-10">
         <div className="flex min-w-0 flex-col gap-8">
           {card.summary.trim() && (
             <Section id="card-summary" title="What this discovery shows" aside={<ProvenanceLabel provenance="suggested" />}>
@@ -344,7 +344,7 @@ export function CardDetailSkeleton() {
       <div className="h-5 w-40 rounded bg-surface" />
       <div className="h-10 w-2/3 rounded-lg bg-surface" />
       <div className="h-24 rounded-xl bg-surface" />
-      <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_20rem]">
         <div className="h-64 rounded-xl border border-line bg-surface" />
         <div className="h-48 rounded-xl border border-line bg-surface" />
       </div>

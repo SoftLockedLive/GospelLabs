@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpenText, FileWarning, FlaskConical, List, MousePointerClick, NotebookText, Plus, Waypoints } from "lucide-react";
+import { BookOpenText, FileWarning, FlaskConical, List, MousePointerClick, NotebookText, Plus, SlidersHorizontal, Waypoints } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { StorageErrorState } from "@/components/investigations/storage-error-state";
@@ -20,7 +20,7 @@ import { DeleteConnectionDialog } from "./delete-connection-dialog";
 import { MapCanvas, type MapCanvasHandle } from "./map-canvas";
 import { computeMapLayout } from "./map-layout";
 import { listItemId, MapListView } from "./map-list-view";
-import { NodePanel } from "./node-panel";
+import { NODE_PANEL_TITLE_ID, NodePanel } from "./node-panel";
 import { EDGE_LEGEND, EdgeSwatch, KindSwatch } from "./node-style";
 
 const NO_CARDS: DiscoveryCard[] = [];
@@ -51,6 +51,9 @@ export function MapView() {
   const [since] = useState<string | undefined>(() => (typeof window === "undefined" ? undefined : readPreferences().lastMapVisit));
   const [mode, setMode] = useState<ViewMode>("graph");
   const [hiddenKinds, setHiddenKinds] = useState<ReadonlySet<NodeKind>>(() => new Set());
+  /** Phones: the kind filters sit behind one button, so the map itself starts on the first screen. */
+  const [kindsOpen, setKindsOpen] = useState(false);
+  const kindsId = useId();
   const [editor, setEditor] = useState<ConnectionEditor | null>(null);
   const [editorKey, setEditorKey] = useState(0);
   const [pendingDelete, setPendingDelete] = useState<PersonalConnection | null>(null);
@@ -123,12 +126,12 @@ export function MapView() {
   const header = (
     <PageHeader
       eyebrow="Discovery Map"
-      title="Your map of understanding"
+      title="Your Map of understanding"
       description="It grows only from what you discover. Select anything to see how it connects, and why."
       actions={
         <ButtonLink href={notebookHref()} variant="secondary">
           <NotebookText aria-hidden />
-          Notebook
+          Open your Notebook
         </ButtonLink>
       }
     />
@@ -177,15 +180,15 @@ export function MapView() {
         <p role="status" className="flex items-start gap-2 rounded-lg border border-amber/40 bg-amber-soft px-4 py-3 text-sm text-fg">
           <FileWarning aria-hidden className="mt-0.5 size-4 shrink-0 text-amber" />
           {unreadable === 1 ? "One saved record" : `${unreadable} saved records`} couldn&rsquo;t be read and{" "}
-          {unreadable === 1 ? "isn't" : "aren't"} on the map. Nothing has been deleted.
+          {unreadable === 1 ? "isn’t" : "aren’t"} on your Map. Nothing has been deleted.
         </p>
       )}
 
       {missing && (
         <div role="status" className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line-strong bg-surface px-4 py-3 text-sm text-muted">
-          <span>That isn&rsquo;t on your map yet. It appears once one of your discoveries includes it.</span>
+          <span>That isn&rsquo;t on your Map yet. It appears once one of your discoveries includes it.</span>
           <Button variant="ghost" size="sm" className="h-11 sm:h-8" onClick={() => router.replace(mapHref(), { scroll: false })}>
-            Dismiss
+            Got it
           </Button>
         </div>
       )}
@@ -205,12 +208,24 @@ export function MapView() {
               {newRefs.size} new since your last visit
             </p>
           )}
-          <Button onClick={() => openEditor({ mode: "create", from: selected })} disabled={graph.nodes.length < 2} className="h-11 sm:h-10">
-            <Plus aria-hidden />
-            Add a connection
-          </Button>
+          <div className="flex w-full flex-wrap gap-2 min-[480px]:w-auto">
+            <Button
+              variant="secondary"
+              aria-expanded={kindsOpen}
+              aria-controls={kindsId}
+              onClick={() => setKindsOpen((open) => !open)}
+              className="h-11 sm:hidden"
+            >
+              <SlidersHorizontal aria-hidden />
+              {hiddenKinds.size ? `Showing ${kinds.length - kinds.filter((kind) => hiddenKinds.has(kind)).length} of ${kinds.length} kinds` : "Filter"}
+            </Button>
+            <Button onClick={() => openEditor({ mode: "create", from: selected })} disabled={graph.nodes.length < 2} className="h-11 sm:h-10">
+              <Plus aria-hidden />
+              Add a connection
+            </Button>
+          </div>
         </div>
-        <div role="group" aria-label="Show on the map" className="flex flex-wrap gap-2">
+        <div id={kindsId} role="group" aria-label="Show on your Map" className={cn("flex-wrap gap-2 sm:flex", kindsOpen ? "flex" : "hidden")}>
           {kinds.map((kind) => {
             const shown = !hiddenKinds.has(kind);
             return (
@@ -233,7 +248,7 @@ export function MapView() {
         </div>
       </div>
 
-      <div className="grid items-start gap-4 lg:grid-cols-[minmax(0,1fr)_22rem] xl:grid-cols-[minmax(0,1fr)_25rem]">
+      <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(0,1fr)_22rem] xl:grid-cols-[minmax(0,1fr)_25rem]">
         <div className="flex min-w-0 flex-col gap-3">
           <div hidden={mode !== "graph"} className="flex flex-col gap-2">
             <MapCanvas
@@ -282,11 +297,11 @@ export function MapView() {
             onDeleteConnection={setPendingDelete}
           />
         ) : (
-          <aside aria-label="About the map" className="hidden flex-col gap-4 rounded-2xl border border-dashed border-line-strong p-5 lg:sticky lg:top-6 lg:flex">
+          <aside aria-label="About your Map" className="hidden flex-col gap-4 rounded-2xl border border-dashed border-line-strong p-5 lg:sticky lg:top-6 lg:flex">
             <div className="flex items-start gap-3">
               <MousePointerClick aria-hidden className="mt-0.5 size-5 shrink-0 text-accent" />
               <p className="text-sm leading-relaxed text-muted">
-                Select anything on the map to see where you found it, what it connects to, and why.
+                Select anything on your Map to see where you found it, what it connects to, and why.
               </p>
             </div>
             <ul aria-label="Kinds of items" className="flex flex-col gap-2 text-sm text-muted">
@@ -308,7 +323,7 @@ export function MapView() {
         onClose={() => setEditor(null)}
         onSaved={(connection, created) => {
           setEditor(null);
-          setAnnouncement(created ? "Your connection was added to the map." : "Your connection was saved.");
+          setAnnouncement(created ? "Your connection was added to your Map." : "Your connection was saved.");
           if (!selected) select(connection.from.ref);
         }}
       />
@@ -319,10 +334,18 @@ export function MapView() {
         onDeleted={() => {
           setPendingDelete(null);
           setAnnouncement("Your connection was deleted.");
+          // The button that opened the dialog went with the connection: focus the open panel's heading (or the page's).
+          requestAnimationFrame(() => focusHeading(document.getElementById(NODE_PANEL_TITLE_ID) ?? document.querySelector("#main h1")));
         }}
       />
     </div>
   );
+}
+
+function focusHeading(heading: Element | null) {
+  if (!(heading instanceof HTMLElement)) return;
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
 }
 
 function MapEmptyState() {
@@ -330,8 +353,8 @@ function MapEmptyState() {
     <EmptyState
       icon={Waypoints}
       headingLevel={2}
-      title="Your map grows from your discoveries"
-      description="Nothing is drawn here ahead of time. As you finish investigations and explore scripture, the concepts, verses, and questions you work with appear, connected the way you found them. You can add connections of your own, too."
+      title="Your Map grows from your discoveries"
+      description="Nothing is drawn here ahead of time. As you finish investigations and save what you study, the concepts, verses, and questions you work with appear, connected the way you found them. You can add connections of your own, too."
       action={
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={investigateHref()}>
@@ -351,7 +374,7 @@ function MapEmptyState() {
 
 export function MapSkeleton() {
   return (
-    <div role="status" aria-label="Loading your map" className="flex animate-pulse flex-col gap-4">
+    <div role="status" aria-label="Loading your Map" className="flex animate-pulse flex-col gap-4">
       <div className="h-24 rounded-xl bg-surface" />
       <div className="h-[min(60dvh,40rem)] min-h-[20rem] rounded-2xl border border-line bg-surface" />
     </div>

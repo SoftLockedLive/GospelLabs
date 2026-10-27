@@ -135,7 +135,7 @@ export function NodePanel({ graph, node, cardsById, isNew, onClose, onNavigate, 
         </PanelSection>
 
         <PanelSection
-          title="Why it's connected"
+          title="Why it’s connected"
           action={
             <Button variant="ghost" size="sm" className="h-11 sm:h-8" onClick={() => onConnect(node.ref)}>
               <Plus aria-hidden />

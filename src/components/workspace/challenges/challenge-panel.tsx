@@ -23,7 +23,7 @@ import { ChallengeTypeFilter } from "./challenge-type-filter";
 const PLACEHOLDERS: Record<ChallengeType, string> = {
   observe: "What I noticed…",
   connect: "How these relate…",
-  compare: "What's alike, and what's different…",
+  compare: "What’s alike, and what’s different…",
   question: "My new question…",
   apply: "A principle I could act on…",
 };
@@ -154,7 +154,7 @@ export function ChallengePanel({ investigation, actions }: ChallengePanelProps) 
           <Field
             className="mt-5"
             label="Your response"
-            hint="Saved with this investigation as you type. Your words are your own; they're never graded."
+            hint="Saved with this notebook as you type. Your words are your own; they’re never graded."
           >
             {(props) => (
               <Textarea

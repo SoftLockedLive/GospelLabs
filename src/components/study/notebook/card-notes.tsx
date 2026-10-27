@@ -64,7 +64,7 @@ export function CardNotes({ card, onUnsavedChange }: CardNotesProps) {
         aria-describedby={hintId}
         rows={4}
         value={value}
-        placeholder="Anything you'd like to remember about this discovery…"
+        placeholder="Anything you’d like to remember about this discovery…"
         onChange={(event) => {
           setDraft(event.target.value);
           autosave.change(event.target.value);

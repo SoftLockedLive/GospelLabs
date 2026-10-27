@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * "Save to Notebook & Map": creates the passage's Discovery Card, or updates
+ * "Save to Notebook": creates the passage's Discovery Card, or updates
  * it if one was saved before (keeping the learner's Notebook notes). Nothing
  * is saved until the learner asks.
  */
@@ -79,16 +79,24 @@ export function SaveDiscovery({ bundle, exploration, explorationReady, beforeSav
         <div className="max-w-xl">
           <h2 id="save-heading" className="flex items-center gap-2 text-base font-semibold tracking-tight text-fg">
             <NotebookPen aria-hidden className="size-4 text-accent" />
-            Save to Notebook &amp; Map
+            Save to Notebook
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted">
             Keeps this passage as one Discovery Card: your highlights and notes, the themes you worked with, and the connections the
             passage supports. Saving again updates the same card, and anything you&rsquo;ve written on it in your Notebook stays.
           </p>
-          <ul className="mt-4 grid gap-2 text-sm sm:grid-cols-3">
+          <ul className="mt-4 grid grid-cols-1 gap-2 text-sm sm:grid-cols-3">
             <SaveStat value={preview.highlights.length} label={preview.highlights.length === 1 ? "highlight" : "highlights"} />
-            <SaveStat value={`${discovered} of ${preview.concepts.length}`} label="themes you worked with" />
-            <SaveStat value={`${connectionsFound} of ${preview.connections.length}`} label="connections you found" />
+            <SaveStat
+              value={discovered ? `${discovered} of ${preview.concepts.length}` : preview.concepts.length}
+              label={discovered ? "themes you’ve worked with" : preview.concepts.length === 1 ? "theme in this passage" : "themes in this passage"}
+            />
+            <SaveStat
+              value={connectionsFound ? `${connectionsFound} of ${preview.connections.length}` : preview.connections.length}
+              label={
+                connectionsFound ? "connections you’ve found" : preview.connections.length === 1 ? "connection in this passage" : "connections in this passage"
+              }
+            />
           </ul>
           <p className="mt-3 text-xs leading-relaxed text-subtle">
             Themes and connections you haven&rsquo;t worked with are saved as{" "}
@@ -105,12 +113,12 @@ export function SaveDiscovery({ bundle, exploration, explorationReady, beforeSav
             onClick={() => void save()}
           >
             {existing || state.kind === "saved" ? <RefreshCw aria-hidden /> : <BookmarkPlus aria-hidden />}
-            <span className="whitespace-normal">{existing || state.kind === "saved" ? "Update Notebook & Map" : "Save to Notebook & Map"}</span>
+            <span className="whitespace-normal">{existing || state.kind === "saved" ? "Update Notebook card" : "Save to Notebook"}</span>
           </Button>
           {existing && state.kind !== "saved" && (
             <p className="text-xs text-subtle lg:text-right">
               Last saved {formatDate(existing.updatedAt)}
-              {changedSinceSave && " · you've explored more since then"}
+              {changedSinceSave && " · you’ve explored more since then"}
             </p>
           )}
           {savedCardId && (
@@ -124,7 +132,7 @@ export function SaveDiscovery({ bundle, exploration, explorationReady, beforeSav
                 className="inline-flex min-h-11 items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-strong hover:underline"
               >
                 <MapIcon aria-hidden className="size-3.5" />
-                See it on the Map
+                See on Map
               </Link>
             </div>
           )}
@@ -135,7 +143,7 @@ export function SaveDiscovery({ bundle, exploration, explorationReady, beforeSav
         {state.kind === "saved" && (
           <span className="motion-success inline-flex items-center gap-1.5 text-green">
             <Check aria-hidden className="size-4" />
-            Saved to your Notebook and Map.
+            Saved to your Notebook.
           </span>
         )}
         {state.kind === "error" && <span className="text-danger">This couldn&rsquo;t be saved. {state.message}</span>}

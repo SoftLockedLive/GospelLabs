@@ -26,8 +26,8 @@ export function OfflineNotice() {
       <p className="mx-auto flex max-w-6xl items-start gap-2">
         <WifiOff aria-hidden className="mt-0.5 size-4 shrink-0 text-amber" />
         <span>
-          <strong className="font-semibold">You&rsquo;re offline.</strong> Your investigations are saved on this
-          device and keep working. Links to ChurchofJesusChrist.org need an internet connection.
+          <strong className="font-semibold">You&rsquo;re offline.</strong> Everything you&rsquo;ve saved is on this
+          device and keeps working. Links to ChurchofJesusChrist.org need an internet connection.
         </span>
       </p>
     </div>

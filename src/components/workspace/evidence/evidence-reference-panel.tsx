@@ -47,7 +47,7 @@ export function EvidenceReferencePanel({ investigation, onManage }: EvidenceRefe
         {evidence.length === 0 ? (
           <p className="text-sm leading-relaxed text-subtle">No evidence yet. Cards you add in Research appear here.</p>
         ) : (
-          <ul className="grid gap-3 md:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {evidence.map((card) => {
               const count = citations.get(card.id) ?? 0;
               return (

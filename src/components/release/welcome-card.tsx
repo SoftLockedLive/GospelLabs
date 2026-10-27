@@ -23,14 +23,23 @@ export function WelcomeCard() {
 
   if (welcome !== "pending") return null;
 
-  const done = () => setWelcome("done");
+  const done = () => {
+    setWelcome("done");
+    // The card, and the button that was used, are about to go: keep keyboard and screen-reader users on the
+    // page by moving focus to its heading instead of letting it fall back to the document.
+    requestAnimationFrame(() => {
+      const heading = document.getElementById("dashboard-title");
+      if (!heading) return;
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    });
+  };
 
   return (
     <section aria-labelledby="welcome-heading" className="motion-reveal rounded-2xl border border-accent/40 bg-surface p-5 shadow-soft sm:p-7">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
-          <p className="text-xs font-semibold tracking-wide text-accent uppercase">Welcome</p>
-          <h2 id="welcome-heading" className="mt-1.5 font-serif text-2xl leading-snug text-fg">
+          <h2 id="welcome-heading" className="font-serif text-2xl leading-snug text-fg">
             Welcome to Gospel Labs
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
@@ -91,7 +100,7 @@ export function WelcomeCard() {
         </p>
       </div>
 
-      <TourDialog open={tour} onClose={() => setTour(false)} />
+      <TourDialog open={tour} onClose={() => setTour(false)} onFinish={done} />
     </section>
   );
 }

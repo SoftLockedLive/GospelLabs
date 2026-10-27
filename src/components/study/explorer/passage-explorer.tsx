@@ -3,7 +3,7 @@
 /**
  * Scripture Explorer for one passage: the verbatim text with highlighting,
  * study panels (themes, key words and phrases, related scriptures, context,
- * activities), a side-by-side comparison, and "Save to Notebook & Map".
+ * activities), a side-by-side comparison, and "Save to Notebook".
  * Work is autosaved to the passage's Exploration on this device.
  */
 import { ArrowLeft, BookOpenText, Highlighter, TriangleAlert } from "lucide-react";
@@ -88,6 +88,7 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
   const verseText = (number: number) => verses.find((verse) => verse.number === number)?.text ?? "";
   const states = activityStates(exploration);
   const completed = exploration?.completedActivities ?? [];
+  const activitiesCompleted = completed.filter((id) => passage.activities.some((a) => a.id === id)).length;
   const tagged: Record<string, number> = {};
   for (const highlight of highlights) if (highlight.conceptId) tagged[highlight.conceptId] = (tagged[highlight.conceptId] ?? 0) + 1;
 
@@ -247,7 +248,7 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
         </p>
         <ul aria-label="Themes" className="mt-3 flex flex-wrap gap-1.5">
           {passage.themes.map((t) => themes[t.conceptId] && (
-            <li key={t.conceptId}>
+            <li key={t.conceptId} className="max-w-full min-w-0">
               <ThemeChip label={themes[t.conceptId].label} themeRef={themes[t.conceptId].ref} />
             </li>
           ))}
@@ -257,7 +258,7 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
       {loadError && <LoadErrorNotice message={loadError} onRetry={reload} />}
       {status.state === "error" && <StorageNotice message={status.message} onRetry={retry} />}
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,6fr)] lg:gap-10">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,6fr)] lg:gap-10">
         <div className="flex min-w-0 flex-col gap-6">
           <section aria-labelledby="passage-heading" className="rounded-2xl border border-line bg-surface p-4 sm:p-6">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
@@ -399,7 +400,7 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
               {
                 value: "activities",
                 label: "Activities",
-                badge: passage.activities.length ? `${completed.filter((id) => passage.activities.some((a) => a.id === id)).length}/${passage.activities.length}` : undefined,
+                badge: activitiesCompleted > 0 ? `${activitiesCompleted} completed` : undefined,
                 // Activities mount once saved progress has loaded, so they can restore it.
                 panel: loadError && !ready ? (
                   <p className="text-sm text-muted">Activities open once your saved work on this passage can be read.</p>

@@ -41,7 +41,7 @@ export function MotionSelector() {
     <div className="flex flex-col gap-5">
       <fieldset>
         <legend className="sr-only">Motion</legend>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {MOTION_PREFERENCES.map((value) => (
             <ChoiceCard
               key={value}

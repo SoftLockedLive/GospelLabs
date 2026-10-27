@@ -60,7 +60,7 @@ export const CONNECT_ITEM: NavItem = {
   label: "Connect with Christ",
   shortLabel: "Connect",
   icon: HeartHandshake,
-  description: "A quiet five minutes with the Savior",
+  description: "A few quiet minutes with the Savior",
 };
 
 export const NOTEBOOK_ITEM: NavItem = {

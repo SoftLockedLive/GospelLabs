@@ -3,16 +3,18 @@
 /**
  * Renders any study activity with the shared chrome: prompt, evidence,
  * Check, feedback that points back to the evidence, progressive hints,
- * "Show me" and "Continue anyway" after three attempts, and a calm success
- * state with the explanation (labeled as suggested by Gospel Labs).
+ * "Show me" after a couple of tries, a quiet "Continue anyway" from the start
+ * (where the host allows skipping), and a calm success state with the
+ * explanation (labeled as suggested by Gospel Labs). When each is offered is
+ * the help policy's call (engine/hints.ts).
  *
  * The component owns the activity's state while it is on screen, restores it
  * from `initialState`, and reports every meaningful change through
  * `onStateChange` and the end through `onComplete` (once). Answer checking
  * itself is pure (src/domain/study/activities) and tested there.
  */
-import { ArrowRight, CircleCheck, Compass, Eye, Lightbulb } from "lucide-react";
-import { useId, useMemo, useRef, useState, type ReactNode, type Ref } from "react";
+import { ArrowRight, ChevronDown, CircleCheck, Compass, Eye, Lightbulb } from "lucide-react";
+import { useEffect, useId, useMemo, useRef, useState, type ReactNode, type Ref } from "react";
 import { Button } from "@/components/ui/button";
 import { isComplete, parseResponse } from "@/domain/study/activities";
 import { ACTIVITY_TYPE_LABELS, type Activity, type CheckedActivity as CheckedActivityType } from "@/domain/study/content-schema";
@@ -127,6 +129,8 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
   }
 
   function onHint() {
+    // The last hint takes its button away; focus goes to the hint instead of being lost.
+    if (state.hintsShown + 1 >= hintsOf(activity).length) focusNewHelp.current = true;
     update(applyHint(state, hintsOf(activity).length));
   }
 
@@ -137,13 +141,31 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
         ? await moreHelp(activity, state)
         : ({ provenance: "suggested", ...evidencePointer(activity, sources) } satisfies AssistResponse);
       if (reply.hintIndex !== undefined && reply.hintIndex >= state.hintsShown) onHint();
-      else setExtraHelp(reply);
+      else {
+        focusNewHelp.current = true;
+        setExtraHelp(reply);
+      }
     } catch {
+      focusNewHelp.current = true;
       setExtraHelp({ provenance: "suggested", ...evidencePointer(activity, sources) });
     } finally {
       setHelpLoading(false);
     }
   }
+
+  // Help that replaced the button the learner used ("Another hint" after the last hint, "More help") gets focus.
+  const hintList = useRef<HTMLOListElement>(null);
+  const focusNewHelp = useRef(false);
+  const shownHelp = hints.length + (extraHelp ? 1 : 0);
+  useEffect(() => {
+    if (!focusNewHelp.current) return;
+    focusNewHelp.current = false;
+    const items = hintList.current?.querySelectorAll<HTMLElement>(":scope > li");
+    const newest = items?.[items.length - 1];
+    if (!newest) return;
+    newest.tabIndex = -1;
+    newest.focus();
+  }, [shownHelp]);
 
   function onReveal() {
     const { state: next, checked: result } = applyReveal(activity, state);
@@ -191,7 +213,7 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
 
       {/* Always mounted, so each new hint is announced as it appears. */}
       {!finished && (
-        <ol aria-label="Hints" aria-live="polite" className="flex flex-col gap-2 empty:hidden">
+        <ol ref={hintList} aria-label="Hints" aria-live="polite" className="flex flex-col gap-2 empty:hidden">
           {hints.map((hint, index) => (
             <li key={index} className="motion-reveal flex gap-3 rounded-xl border border-line bg-surface-sunken px-4 py-3 text-sm leading-relaxed text-fg">
               <Lightbulb aria-hidden className="mt-0.5 size-4 shrink-0 text-amber" />
@@ -219,13 +241,20 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
 
       {!finished && (
         <div className="flex flex-col gap-3">
+          {/* Only once "Show me" is offered: before that, the choices are Check, a hint, or quietly moving on. */}
           {help.canReveal && (
             <p className="text-sm leading-relaxed text-muted">
               You can keep looking, see the answer with an explanation{help.canSkip ? ", or continue and come back later" : ""}.
             </p>
           )}
           <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
-            <Button size="lg" onClick={onCheck} disabled={!ready || staleWrong} className="w-full sm:w-auto">
+            {/* aria-disabled rather than disabled: after a check that didn't fit, focus stays on Check instead of being lost. */}
+            <Button
+              size="lg"
+              onClick={() => ready && !staleWrong && onCheck()}
+              aria-disabled={!ready || staleWrong}
+              className="w-full sm:w-auto"
+            >
               Check
             </Button>
             {help.canRequestHint && (
@@ -246,8 +275,10 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
                 Show me
               </Button>
             )}
+            {/* Offered from the start so nobody is held on a step, but kept quiet (ghost, smaller, last) so it doesn't
+                tempt anyone before they've tried. md is still 44px tall on touch screens. */}
             {help.canSkip && (
-              <Button variant="ghost" size="lg" onClick={onSkip} className="w-full sm:w-auto">
+              <Button variant="ghost" onClick={onSkip} className="w-full sm:w-auto">
                 Continue anyway
                 <ArrowRight aria-hidden />
               </Button>
@@ -304,13 +335,31 @@ function FinishedPanel({ ref, revealed, children }: { ref: Ref<HTMLDivElement>; 
       </p>
       {revealed && (
         <p className="mt-1.5 text-sm leading-relaxed text-muted">
-          Because you chose to see it, what this step connects is saved as suggested rather than discovered.
+          Because you chose to see the answer, this is saved as “Suggested by Gospel Labs” rather than “You discovered.”
         </p>
       )}
-      <div className="mt-3 border-t border-line pt-3">
-        <ProvenanceLabel provenance="suggested" />
-        <p className="mt-1.5 text-[0.975rem] leading-relaxed text-fg">{children}</p>
-      </div>
+      {revealed ? (
+        <Explanation>{children}</Explanation>
+      ) : (
+        // Worked out: the learner already knows why, so the reasoning is one tap away instead of another
+        // paragraph to scroll past. Shown answers keep it open, since that's what was asked for.
+        <details className="group mt-2">
+          <summary className="flex min-h-11 w-fit cursor-pointer list-none items-center gap-1.5 rounded-md text-sm font-medium text-fg hover:text-accent sm:min-h-0 sm:py-1 [&::-webkit-details-marker]:hidden">
+            <ChevronDown aria-hidden className="size-4 text-subtle transition-transform group-open:rotate-180" />
+            Why it fits
+          </summary>
+          <Explanation>{children}</Explanation>
+        </details>
+      )}
+    </div>
+  );
+}
+
+function Explanation({ children }: { children: ReactNode }) {
+  return (
+    <div className="mt-3 border-t border-line pt-3">
+      <ProvenanceLabel provenance="suggested" />
+      <p className="mt-1.5 text-[0.975rem] leading-relaxed text-fg">{children}</p>
     </div>
   );
 }

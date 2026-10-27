@@ -71,7 +71,7 @@ test("a database created by 1.1 opens in 2.0 with its investigation intact, and 
   expect(upgraded.stores).toEqual(["discoveries", "explorations", "investigations", "personalConnections", "studyProgress"]);
   expect(await getRawRecord(page, RECORD_FROM_1_1.id)).toEqual(RECORD_FROM_1_1);
   await page.goto("/settings");
-  await expect(page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem").first()).toHaveText("1 research investigation");
+  await expect(page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem").first()).toHaveText("1 research notebook");
 
   // The new tables are usable right away, and progress survives a reload.
   const inv = investigation("christ-at-the-center");

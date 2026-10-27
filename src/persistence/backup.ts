@@ -84,14 +84,14 @@ export const emptyStudyData = (): StudyData => ({ progress: [], discoveries: [],
 
 /** Words for each kind in messages: "1 Discovery Card", "Discovery Cards: 2 new". */
 export const DATA_KIND_LABELS: Record<DataKind, { one: string; many: string; heading: string }> = {
-  investigations: { one: "research investigation", many: "research investigations", heading: "Research investigations" },
-  progress: { one: "guided investigation", many: "guided investigations", heading: "Guided investigation progress" },
+  investigations: { one: "research notebook", many: "research notebooks", heading: "Research notebooks" },
+  progress: { one: "investigation", many: "investigations", heading: "Investigation progress" },
   discoveries: { one: "Discovery Card", many: "Discovery Cards", heading: "Discovery Cards" },
   personalConnections: { one: "Map connection", many: "Map connections", heading: "Your Map connections" },
-  explorations: { one: "exploration", many: "explorations", heading: "Explorations" },
+  explorations: { one: "explored passage or attribute", many: "explored passages and attributes", heading: "Explored passages and attributes" },
 };
 
-/** "1 Discovery Card", "3 explorations". */
+/** "1 Discovery Card", "3 explored passages and attributes". */
 export function countOf(kind: DataKind, count: number): string {
   const label = DATA_KIND_LABELS[kind];
   return `${count} ${count === 1 ? label.one : label.many}`;
@@ -110,7 +110,7 @@ export const zeroCounts = (): DataCounts => ({
 export const totalCount = (counts: DataCounts): number => DATA_KINDS.reduce((sum, kind) => sum + counts[kind], 0);
 
 /**
- * The kinds with any records, as a phrase: "2 research investigations and 1
+ * The kinds with any records, as a phrase: "2 research notebooks and 1
  * Discovery Card". Returns `none` when every count is zero.
  */
 export function describeCounts(counts: DataCounts, none = "nothing"): string {
@@ -255,8 +255,11 @@ export function serializeBackup(backup: Backup): string {
   return `${JSON.stringify(backup, null, 2)}\n`;
 }
 
+/** Named for the day it was exported on the learner's own calendar (not UTC, which is often tomorrow by evening). */
 export function backupFileName(exportedAt: string): string {
-  return `gospel-labs-backup-${exportedAt.slice(0, 10)}.json`;
+  const date = new Date(exportedAt);
+  const day = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  return `gospel-labs-backup-${day}.json`;
 }
 
 // --- Parsing ---------------------------------------------------------------------
@@ -415,11 +418,11 @@ function parseStudySection(section: unknown, notes: string[]): { study: StudyDat
   const study = emptyStudyData();
   const skipped: SkippedStudyEntry[] = [];
   if (section === undefined) {
-    notes.push("This file has no study data section, so it contains no study data to import.");
+    notes.push("This file has no investigation progress, Discovery Cards, or Map connections to import.");
     return { study, skipped };
   }
   if (!isRecord(section)) {
-    notes.push("The file's study data is damaged and can't be read, so none of it will be imported.");
+    notes.push("The part of the file with investigation progress, Discovery Cards, and Map connections is damaged and can't be read, so none of it will be imported.");
     return { study, skipped };
   }
   for (const kind of STUDY_KINDS) {
@@ -498,7 +501,7 @@ export function parseBackup(text: string): BackupParseResult {
   }
 
   const envelope = envelopeSchema.safeParse(record);
-  if (!envelope.success) return fail("malformed", "The backup doesn't contain a list of investigations.");
+  if (!envelope.success) return fail("malformed", "The backup doesn't contain a list of research notebooks.");
 
   const notes: string[] = [];
   const { records: investigations, skipped } = validateEntries<Investigation>("investigations", envelope.data.investigations);

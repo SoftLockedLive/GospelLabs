@@ -1,13 +1,13 @@
 "use client";
 
 /**
- * One choice question (Clue Investigation, Scripture Connections): native
+ * One choice question (Follow the Clues, Scripture Connections): native
  * radio buttons or checkboxes in large tappable cards, so keyboard, screen
  * reader, and touch behavior come from the platform.
  */
 import { useId } from "react";
 import type { ItemMark } from "@/domain/study/activities";
-import { toggleChoice } from "@/domain/study/activities/choice";
+import { choiceOptions, toggleChoice } from "@/domain/study/activities/choice";
 import type { ChoiceQuestion as Question } from "@/domain/study/content-schema";
 import { cn } from "@/lib/cn";
 import type { FinishedAs } from "./activity-state";
@@ -15,6 +15,8 @@ import { ItemFeedbackText, MarkIcon, markSurface } from "./marks";
 
 interface ChoiceQuestionProps {
   question: Question;
+  /** Identifies the question across the app ("<activity id>:<question id>"); fixes its shuffled option order. */
+  seed: string;
   selected: readonly string[];
   onChange: (selected: string[]) => void;
   markFor: (optionId: string) => ItemMark | undefined;
@@ -26,7 +28,7 @@ interface ChoiceQuestionProps {
   number?: number;
 }
 
-export function ChoiceQuestion({ question, selected, onChange, markFor, feedbackFor, finished, disabled, note, number }: ChoiceQuestionProps) {
+export function ChoiceQuestion({ question, seed, selected, onChange, markFor, feedbackFor, finished, disabled, note, number }: ChoiceQuestionProps) {
   const name = useId();
   const readOnly = !!finished;
   return (
@@ -37,7 +39,7 @@ export function ChoiceQuestion({ question, selected, onChange, markFor, feedback
         {question.multiple && <span className="mt-1 block text-sm font-normal text-muted">Choose all that apply.</span>}
         {note && <span className="mt-1 block text-sm font-normal text-muted">{note}</span>}
       </legend>
-      {question.options.map((option) => {
+      {choiceOptions(question, seed).map((option) => {
         const checked = selected.includes(option.id);
         const mark = markFor(option.id);
         const feedback = feedbackFor(option.id);

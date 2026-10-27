@@ -12,7 +12,7 @@ interface WorkspaceHeaderProps {
 }
 
 export function WorkspaceHeader({ investigation, saveStatus }: WorkspaceHeaderProps) {
-  const title = investigation.title.trim() || "Untitled investigation";
+  const title = investigation.title.trim() || "Untitled notebook";
 
   return (
     <header className="flex flex-col gap-4">
@@ -25,11 +25,11 @@ export function WorkspaceHeader({ investigation, saveStatus }: WorkspaceHeaderPr
       </Link>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0">
-          <h1 className="text-2xl font-semibold tracking-tight text-fg sm:text-3xl">{title}</h1>
+          <h1 className="text-2xl font-semibold tracking-tight break-words text-fg sm:text-3xl">{title}</h1>
           <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-subtle">
             <StatusBadge status={investigation.status} />
             {investigation.category && (
-              <span className="font-mono tracking-wide uppercase">{investigation.category}</span>
+              <span className="min-w-0 font-mono tracking-wide break-all uppercase">{investigation.category}</span>
             )}
             {investigation.updatedAt !== investigation.createdAt && (
               <span>Last edited {formatDate(investigation.updatedAt)}</span>

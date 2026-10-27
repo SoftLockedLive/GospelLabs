@@ -59,7 +59,7 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={newInvestigationHref(question.id)} size="lg">
             <FlaskConical aria-hidden />
-            Start investigation
+            Start a research notebook
           </ButtonLink>
           <RandomQuestionButton
             questionIds={QUESTION_BANK.map((q) => q.id)}
@@ -112,8 +112,8 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
                 ))}
               </ol>
               <p className="mt-5 text-xs leading-relaxed text-subtle">
-                Start an investigation to take the trail. You&rsquo;ll find it in Research, and your notes are saved
-                with your investigation on this device.
+                Start a research notebook to take the trail. You&rsquo;ll find it in the notebook&rsquo;s Research section,
+                and your notes are saved with that notebook on this device.
               </p>
             </CardContent>
           </Card>
@@ -126,7 +126,7 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
             <CardContent>
               <h2 id="prompts-heading" className="flex items-center gap-2 text-base font-semibold text-fg">
                 <Lightbulb aria-hidden className="size-4 text-accent" />
-                Investigation prompts
+                Prompts to consider
               </h2>
               <ol className="mt-5 flex flex-col gap-3">
                 {question.prompts.map((prompt, index) => (

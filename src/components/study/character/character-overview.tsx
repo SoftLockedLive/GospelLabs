@@ -29,12 +29,12 @@ export function AttributeGrid({ attributes }: { attributes: readonly AttributeOv
   );
 
   return (
-    <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-3">
       {attributes.map((attribute, index) => {
         const explored = explorationSummary(byAttribute.get(attribute.id));
         return (
           <li key={attribute.id} className="motion-reveal" style={{ "--motion-index": index } as CSSProperties}>
-            <article className="group relative flex h-full flex-col gap-3 rounded-2xl border border-line bg-surface p-5 transition-colors has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-accent hover:border-node-attribute/45 hover:bg-surface-raised sm:p-6">
+            <article className="group relative flex h-full flex-col gap-2.5 rounded-2xl border border-line bg-surface p-4 transition-colors has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-2 has-[a:focus-visible]:outline-accent hover:border-node-attribute/45 hover:bg-surface-raised sm:gap-3 sm:p-6">
               <div className="flex items-start justify-between gap-3">
                 <h3 className="font-serif text-xl leading-snug text-fg">
                   <Link href={characterHref(attribute.id)} className="outline-none after:absolute after:inset-0 after:rounded-2xl">

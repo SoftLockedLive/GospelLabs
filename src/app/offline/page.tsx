@@ -11,13 +11,13 @@ export default function OfflinePage() {
   return (
     <StatusPage
       icon={WifiOff}
-      title="This page isn't available offline"
-      description="You're offline, and this page hasn't been saved on this device yet. Everything you've saved still works, along with the main pages of Gospel Labs: investigations, the Scripture Explorer, your Notebook, and your research notebooks."
+      title="This page isn’t available offline"
+      description="You’re offline, and this page hasn’t been saved on this device yet. Everything you’ve saved still works, along with the main pages of Gospel Labs: investigations, Scripture Explorer, your Notebook, and your research notebooks."
       actions={
         <>
           <ButtonLink href="/">Go to Home</ButtonLink>
           <ButtonLink href={notebookHref()} variant="secondary">
-            Your Notebook
+            Open your Notebook
           </ButtonLink>
           <ButtonLink href="/library" variant="secondary">
             My Library

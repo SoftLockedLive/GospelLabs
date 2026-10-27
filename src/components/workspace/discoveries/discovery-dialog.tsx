@@ -69,7 +69,7 @@ function DiscoveryForm({
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!title.trim()) {
-      setError("Give your discovery a short title.");
+      setError("Give your insight a short title.");
       event.currentTarget.querySelector<HTMLInputElement>("input[type=text]")?.focus();
       return;
     }

@@ -1,6 +1,6 @@
 # Gospel Labs 2.1.0
 
-A **minor** release (improvements and fixes) under the MAJOR.MINOR.CONTENT scheme in [VERSIONING.md](VERSIONING.md). Committed and tagged `v2.1.0`. **Not yet pushed or deployed**: waiting for the owner's go-ahead.
+A **minor** release (improvements and fixes) under the MAJOR.MINOR.CONTENT scheme in [VERSIONING.md](VERSIONING.md). Tagged `v2.1.0`; **live since October 26, 2026** (build `20261026184948`).
 
 ## What's in it
 

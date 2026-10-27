@@ -5,7 +5,9 @@
  * attribute and the links the sources make between them; the list beside it
  * carries the same information in words, with notes and sources, and is what
  * keyboard and screen-reader users (and everyone on a phone) use. Choosing an
- * attribute narrows both to its connections.
+ * attribute narrows both to its connections. On a phone the full list (every
+ * connection, many screens long) waits behind a "Show …" button; one
+ * attribute's connections always show.
  */
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -17,6 +19,8 @@ import type { Source } from "@/domain/study/content-schema";
 import { RELATION_PHRASES } from "@/domain/study/vocabulary";
 import { cn } from "@/lib/cn";
 import { characterHref } from "@/lib/routes";
+import { COLLAPSES_ON_PHONES, isSafetyNote } from "./collapse";
+import { PhoneCollapse } from "./phone-collapse";
 
 export type CitedSource = Pick<Source, "id" | "label" | "url" | "kind">;
 
@@ -43,6 +47,8 @@ export function AttributeConnections({ attributes, edges, sources }: AttributeCo
   const touches = (edge: AttributeEdge, id: string) => edge.a === id || edge.b === id;
   const shown = selected ? edges.filter((edge) => touches(edge, selected)) : edges;
   const neighbors = new Set(shown.flatMap((edge) => [edge.a, edge.b]));
+  const safety = shown.map((edge) => edge.links.some((link) => isSafetyNote(link.note, link.sourceIds)));
+  const kept = safety.filter(Boolean).length;
 
   return (
     <div className="flex flex-col gap-5">
@@ -57,7 +63,7 @@ export function AttributeConnections({ attributes, edges, sources }: AttributeCo
         ))}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
         {/* Visual only: the list holds the same information for everyone. */}
         <figure className="hidden rounded-2xl border border-line bg-surface p-3 sm:block" aria-hidden>
           <svg viewBox={`0 0 ${VIEW.width} ${VIEW.height}`} className="h-auto w-full" role="presentation">
@@ -128,13 +134,15 @@ export function AttributeConnections({ attributes, edges, sources }: AttributeCo
               ? `${name(selected)} connects with ${shown.length} ${shown.length === 1 ? "attribute" : "attributes"}`
               : "Every connection the sources make"}
           </h3>
-          <ul aria-labelledby={titleId} className="flex flex-col gap-3">
-            {shown.map((edge) => (
-              <li key={edge.id} className="motion-reveal rounded-xl border border-line bg-surface p-4">
-                <EdgeDetails edge={edge} name={name} selected={selected} sources={sources} />
-              </li>
-            ))}
-          </ul>
+          <PhoneCollapse hidden={selected ? 0 : shown.length - kept} someShown={kept > 0} noun={["connection", "connections"]}>
+            <ul aria-labelledby={titleId} className="flex flex-col gap-3">
+              {shown.map((edge, index) => (
+                <li key={edge.id} className={cn("motion-reveal rounded-xl border border-line bg-surface p-4", !safety[index] && COLLAPSES_ON_PHONES)}>
+                  <EdgeDetails edge={edge} name={name} selected={selected} sources={sources} />
+                </li>
+              ))}
+            </ul>
+          </PhoneCollapse>
         </div>
       </div>
     </div>

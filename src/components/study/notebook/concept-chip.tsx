@@ -29,7 +29,7 @@ export function ConceptChip({ concept, linked = false, className }: ConceptChipP
     <Link
       href={mapHref(concept.ref)}
       className={cn(classes, "min-h-11 py-1 transition-colors hover:border-accent/50 hover:text-fg sm:min-h-8")}
-      aria-label={`${concept.label}: see on your Map`}
+      aria-label={`${concept.label}: see on Map`}
     >
       {content}
     </Link>

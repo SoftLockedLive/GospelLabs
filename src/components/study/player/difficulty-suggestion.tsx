@@ -42,7 +42,7 @@ export function DifficultySuggestionBanner({ suggestion, onAccept, onDismiss }: 
           Switch to {next}
         </Button>
         <Button variant="ghost" onClick={onDismiss} className="w-full sm:w-auto">
-          Keep {DIFFICULTY_LABELS[suggestion.from]}
+          Stay at {DIFFICULTY_LABELS[suggestion.from]}
         </Button>
       </div>
     </aside>

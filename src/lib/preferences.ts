@@ -26,7 +26,8 @@ export const MOTION_LABELS: Record<MotionPreference, string> = {
 export const preferencesSchema = z.object({
   motion: z.enum(MOTION_PREFERENCES).catch("system").default("system"),
   studyLength: z.enum(STUDY_LENGTHS).catch("quick").default("quick"),
-  difficulty: z.enum(DIFFICULTIES).catch("medium").default("medium"),
+  /** New learners start at Easy (most are young teens). The level an investigation is begun or resumed at is saved here (see StartScreen). */
+  difficulty: z.enum(DIFFICULTIES).catch("easy").default("easy"),
   activity: z
     .object({
       /** Offer optional side questions during investigations. */
@@ -85,10 +86,37 @@ export function writePreferences(next: Preferences): void {
   window.dispatchEvent(new Event(PREFERENCES_CHANGE_EVENT));
 }
 
+/** What's actually stored (only fields that were ever set), or {} if nothing or something unreadable is. */
+function storedFields(): Record<string, unknown> {
+  try {
+    const value: unknown = JSON.parse(window.localStorage.getItem(PREFERENCES_STORAGE_KEY) ?? "{}");
+    return value && typeof value === "object" && !Array.isArray(value) ? { ...value } : {};
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Changes some preferences. Only the changed fields are added to what's
+ * stored, so defaults the learner never chose aren't saved as if they had
+ * been (a backup would carry them to another device as choices, and a
+ * device that merely opened the Map would look like it had set preferences).
+ */
 export function updatePreferences(change: Partial<Preferences> | ((current: Preferences) => Partial<Preferences>)): void {
   const current = readPreferences();
   const patch = typeof change === "function" ? change(current) : change;
-  writePreferences({ ...current, ...patch });
+  const merged = { ...storedFields(), ...patch };
+  const value = parsePreferences(merged);
+  // Store the merged fields as valid values (an invalid stored field falls back to its default when read).
+  const valid = Object.fromEntries(Object.keys(merged).filter((key) => key in value).map((key) => [key, value[key as keyof Preferences]]));
+  try {
+    window.localStorage.setItem(PREFERENCES_STORAGE_KEY, JSON.stringify(valid));
+  } catch {
+    cachedRaw = JSON.stringify(valid);
+    cachedValue = value;
+  }
+  window.__gospelLabsApplyMotion?.(value.motion);
+  window.dispatchEvent(new Event(PREFERENCES_CHANGE_EVENT));
 }
 
 export function subscribeToPreferences(onChange: () => void): () => void {

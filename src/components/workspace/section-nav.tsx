@@ -29,7 +29,7 @@ export function SectionNav({ investigation, current, onSelect }: SectionNavProps
   }, [current]);
 
   return (
-    <nav aria-label="Investigation sections">
+    <nav aria-label="Notebook sections">
       <ol
         ref={listRef}
         className="scrollbar-none relative -ml-4 flex gap-1 overflow-x-auto pl-4 sm:-ml-6 sm:pl-6 lg:-ml-10 lg:pl-10 xl:ml-0 xl:flex-col xl:pl-0"

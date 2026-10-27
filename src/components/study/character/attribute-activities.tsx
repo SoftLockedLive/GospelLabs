@@ -49,7 +49,7 @@ export function ActivitiesSection() {
               <>
                 {completed.has(activity.id) && <CheckCircle2 aria-hidden className="size-4 text-green" />}
                 {ACTIVITY_TYPE_LABELS[activity.type]}
-                {completed.has(activity.id) && <span className="sr-only"> (finished)</span>}
+                {completed.has(activity.id) && <span className="sr-only"> (completed)</span>}
               </>
             ),
             panel: <ActivityPanel activity={activity} number={index + 1} doneBefore={completed.has(activity.id)} />,
@@ -85,7 +85,7 @@ function ActivityPanel({ activity, number, doneBefore }: { activity: Activity; n
       {(doneBefore || status?.kind === "finished") && (
         <p className="mb-3 inline-flex items-center gap-1.5 text-xs font-medium text-green">
           <CheckCircle2 aria-hidden className="size-3.5" />
-          {status?.kind === "finished" ? "Finished" : "Finished before"}
+          {status?.kind === "finished" ? "Completed" : "Completed before"}
         </p>
       )}
 
@@ -98,7 +98,7 @@ function ActivityPanel({ activity, number, doneBefore }: { activity: Activity; n
             <p className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase">{ACTIVITY_TYPE_LABELS[activity.type]}</p>
             <h3 className="mt-2 text-base leading-relaxed font-medium text-fg">{activity.prompt}</h3>
           </div>
-          <p className="text-sm leading-relaxed text-muted">You’ve finished this activity before. You’re welcome to work through it again.</p>
+          <p className="text-sm leading-relaxed text-muted">You’ve completed this activity before. You’re welcome to work through it again.</p>
           <Button variant="secondary" onClick={restart}>
             <RotateCcw aria-hidden />
             Do it again
@@ -125,7 +125,7 @@ function FinishedNote({ status, onAgain }: { status: Extract<SessionStatus, { ki
               {status.demonstrated ? ", including what you worked out." : "."}
             </>
           ) : (
-            "Finished."
+            "Completed."
           )}
         </span>
       </p>

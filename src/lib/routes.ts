@@ -24,6 +24,9 @@ export const investigateHref = () => "/investigate";
 /** A guided investigation (one static page per investigation; progress loads in the browser). */
 export const studyInvestigationHref = (id: string) => `/investigate/${encodeURIComponent(id)}`;
 
+/** An investigation in progress, opened straight at the learner's step instead of its overview. */
+export const resumeInvestigationHref = (id: string) => `${studyInvestigationHref(id)}?resume`;
+
 export const explorerHref = (passageId?: string) => (passageId ? `/explore/${encodeURIComponent(passageId)}` : "/explore");
 
 export const characterHref = (attributeId?: string) => (attributeId ? `/character/${encodeURIComponent(attributeId)}` : "/character");
