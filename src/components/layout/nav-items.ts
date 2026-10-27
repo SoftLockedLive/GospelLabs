@@ -110,12 +110,16 @@ export const NAV_GROUPS: readonly NavGroup[] = [
 /** Every destination, in sidebar order (kept for code written against 1.x). */
 export const NAV_ITEMS: readonly NavItem[] = [...NAV_GROUPS.flatMap((group) => group.items), SETTINGS_ITEM];
 
-/** The phone and tablet tab bar; everything else is under More. */
-export const TAB_ITEMS: readonly NavItem[] = [HOME_ITEM, INVESTIGATE_ITEM, NOTEBOOK_ITEM, MAP_ITEM];
+/**
+ * The phone and tablet tab bar; everything else is under More. Connect with Christ is here, not the Map: a few
+ * quiet minutes is the best way in for someone with a few minutes, and the Map reads better on larger screens.
+ */
+export const TAB_ITEMS: readonly NavItem[] = [HOME_ITEM, INVESTIGATE_ITEM, NOTEBOOK_ITEM, CONNECT_ITEM];
 
 /** Sections of the More menu on phones and tablets. */
 export const MORE_GROUPS: readonly NavGroup[] = [
-  { id: "study", label: "Study", items: [EXPLORER_ITEM, CHARACTER_ITEM, CONNECT_ITEM] },
+  { id: "study", label: "Study", items: [EXPLORER_ITEM, CHARACTER_ITEM] },
+  { id: "discoveries", label: "Discoveries", items: [MAP_ITEM] },
   { id: "research", label: "Research", items: [QUESTION_BANK_ITEM, LIBRARY_ITEM] },
 ];
 

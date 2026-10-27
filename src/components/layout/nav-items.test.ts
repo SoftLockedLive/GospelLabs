@@ -40,5 +40,11 @@ describe("navigation", () => {
     expect(isInMore("/settings")).toBe(true);
     expect(isInMore("/notebook")).toBe(false);
     expect(isInMore("/")).toBe(false);
+    expect(isInMore("/map")).toBe(true);
+    expect(isInMore("/connect")).toBe(false);
+  });
+
+  it("puts Connect with Christ in the phone tab bar, a few minutes being the easiest way in", () => {
+    expect(TAB_ITEMS.map((item) => item.href)).toEqual(["/", "/investigate", "/notebook", "/connect"]);
   });
 });

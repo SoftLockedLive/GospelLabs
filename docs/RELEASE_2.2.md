@@ -23,7 +23,7 @@ The same pattern affected My Library and the notebook editor with a pasted-link 
 ## What changed for learners
 
 **For a high-school freshman with a short attention span** (from a second review as a 14–15-year-old on a phone)
-- **A few minutes is enough:** "Only a few minutes? Spend them with the Savior" sits on the first screen of the dashboard and opens Connect with Christ. Even a quick investigation takes 20–30 minutes.
+- **A few minutes is enough:** "Only a few minutes? Spend them with the Savior" sits on the first screen of the dashboard and opens Connect with Christ, and **Connect is in the phone tab bar** (Home, Investigate, Notebook, Connect, More); the Map moved under More. Even a quick investigation takes 20–30 minutes.
 - **The first suggestion is the shortest investigation.** Before, every investigation scored the same, so the longest and most abstract one was always first.
 - **"Continue studying" goes straight back to the step,** not to the overview with its introduction.
 - **After each step:** "A good place to stop if you need to. Your place is saved for next time."
