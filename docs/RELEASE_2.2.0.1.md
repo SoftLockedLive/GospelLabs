@@ -1,6 +1,6 @@
 # Gospel Labs 2.2.0.1
 
-A **patch** under [VERSIONING.md](VERSIONING.md), and the first release with four-part version numbers. Quick studies are now three steps, about 10–15 minutes. The owner numbered it as a patch: no wording changed, only which steps make up a quick study. **Not deployed yet** (see *Release*).
+A **patch** under [VERSIONING.md](VERSIONING.md), and the first release with four-part version numbers. Quick studies are now three steps, about 10–15 minutes. The owner numbered it as a patch: no wording changed, only which steps make up a quick study. **Live since October 26, 2026** (commit `6ea3a75`, tag `v2.2.0.1`, build `20261027052210`).
 
 ## Shorter quick studies
 
@@ -88,10 +88,18 @@ To swap a step, change its `depth` (exactly three `core` steps per investigation
 
 ## Release
 
-Not done yet. On the owner's go-ahead:
-1. Fast-forward `main` to `release-2.2.0.1` and tag `v2.2.0.1`.
-2. Run the survey-text check on the commits being pushed.
-3. Push `main` and the tag only.
-4. Run `npm run deploy`, then `npm run verify:production`.
+Released October 26, 2026 (Mountain time) on the owner's go-ahead:
+- `release-2.2.0.1` fast-forwarded into `main` (`6ea3a75`) and tagged `v2.2.0.1`;
+- the commits checked for survey text before pushing: none;
+- pushed to GitHub (`main` and the tag only);
+- deployed to Atlas (build `20261027052210`).
 
-**Rollback:** `.gospellabs-previous` would hold 2.2.0. No stored data format changed, so going back is safe for learners' data.
+**Checks:**
+- `npm run verify:production` passed, with the same three known warnings as before: no HSTS, NEL headers, and the service-worker cache header.
+- On a phone-sized browser against the live site:
+  - a device that last saw 2.2.0 gets no What's new and is marked current (2.2.0.1);
+  - a device that last saw 2.1.0 gets What's new for 2.2.0, without the patch;
+  - Again and Again's start screen reads "Quick, about 10 min", and the session choice "3 steps: the heart of the investigation.";
+  - Settings › About shows version 2.2.0.1 and lists it as a small fix, with no sideways scroll.
+
+**Rollback:** `.gospellabs-previous` on Atlas now holds 2.2.0 (see [HOSTING.md](HOSTING.md)). No stored data format changed, so going back is safe for learners' data.
