@@ -1,6 +1,6 @@
 # Gospel Labs 2.2.0
 
-A **minor** release under [VERSIONING.md](VERSIONING.md): app fixes and changes made to get Gospel Labs ready for other people to use. **No study content changes:** the content pass is held back for the owner's review and a later content update (see *Held back for a content update*). **Not yet pushed or deployed.**
+A **minor** release under [VERSIONING.md](VERSIONING.md): app fixes and changes made to get Gospel Labs ready for other people to use. **No study content changes:** the content pass is held back for the owner's review and a later content update (see *Held back for a content update*). **Live since October 26, 2026** (commit `6c3ab6e`, tag `v2.2.0`, build `20261027041248`).
 
 ## How it was found
 
@@ -167,17 +167,21 @@ The only content change in 2.2.0 is each investigation's `estimatedMinutes`, mea
   - restoring a backup on a new device;
   - focus after finishing the welcome tour.
 
-## To release
+## Release
 
-The work is committed on the local branch `release-2.2-prep` (not pushed). When the owner approves:
+Released October 26, 2026 (Mountain time) on the owner's go-ahead:
+- `release-2.2-prep` fast-forwarded into `main` (`6c3ab6e`) and tagged `v2.2.0`;
+- pushed to GitHub (`main` and the tag only);
+- deployed to Atlas (build `20261027041248`).
 
-```bash
-git switch main && git merge --ff-only release-2.2-prep
-git tag -a v2.2.0 -m "Gospel Labs 2.2.0"
-npm run build && npm run test:e2e               # the deployed build is the tested one
-git push origin main v2.2.0
-SSH_AUTH_SOCK=/run/user/1000/ssh-agent.socket npm run deploy   # the agent variable only for agent sessions
-npm run verify:production
-```
+**Checks:**
+- `npm run verify:production` passed, with the same three known warnings as before: no HSTS, NEL headers, and the service-worker cache header.
+- On a phone-sized browser against the live site:
+  - the tab bar is Home, Investigate, Notebook, Connect, More;
+  - new visitors get the welcome;
+  - a device that last saw 2.1.0 gets What's new for 2.2.0 only;
+  - the Notebook with a long-titled 1.x research notebook fits a 390px screen with no sideways scroll.
 
-Rollback: [HOSTING.md](HOSTING.md) (`.gospellabs-previous` will hold 2.1.0).
+**Rollback:** `.gospellabs-previous` on Atlas now holds 2.1.0 (see [HOSTING.md](HOSTING.md)). 2.2.0 didn't change the stored data format, so going back is safe for learners' data. 1.1 stays preserved separately.
+
+**Next:** the content update (2.2.1) from `content-2.2.1` after the owner's review; rebase it onto `v2.2.0` first.
