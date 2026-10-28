@@ -176,6 +176,7 @@ The public site is reached through Cloudflare, which, as of 1.1, changes three t
 
 - **Static-file caching:** it caches `.js` and `.svg` files at the edge and serves them with `Cache-Control: max-age=14400` (four hours) instead of Caddy's `no-cache`. That's harmless for build files, whose names change with every build, and for the service worker, which the app registers under a new URL for every build (`/sw.js?v=<build>`) and which browsers fetch past the HTTP cache when checking for updates. HTML pages, the manifest, and `/version.json` aren't affected.
 - **Network Error Logging:** it adds `NEL`/`Report-To` headers, which ask browsers to send connection-error reports to Cloudflare. That traffic is outside the app's control and its Content-Security-Policy; if you want none, turn off Network Error Logging in the Cloudflare dashboard.
+- **Web Analytics beacon:** as of 3.0, Cloudflare injects its Web Analytics script (`static.cloudflareinsights.com`) into pages it serves to browsers. The Content-Security-Policy blocks it, so nothing is sent, but browsers log the block in the console. To remove it, turn off Web Analytics (automatic setup) for the site in the Cloudflare dashboard.
 - **No HSTS:** no `Strict-Transport-Security` header is sent. Consider enabling HSTS in Cloudflare once you're sure the site will stay HTTPS-only.
 
 `npm run verify:production` reports all three as warnings.

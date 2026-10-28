@@ -1,6 +1,8 @@
 # Gospel Labs 3.0
 
-A **major** release under [VERSIONING.md](VERSIONING.md): Gospel Labs looks different as a whole. The goal is a more Christ-centered look, inspired by the Church's Gospel Library app, so the app no longer reads as "AI-generated". **Not released.** It is built on the local branch `new-look-3.0`, with nothing pushed or deployed.
+A **major** release under [VERSIONING.md](VERSIONING.md): Gospel Labs looks different as a whole. The goal is a more Christ-centered look, inspired by the Church's Gospel Library app, so the app no longer reads as "AI-generated".
+
+**Live since October 28, 2026, about 00:32 MDT:** commit `053b3ee`, tag `v3.0.0.0`, build `20261028063245`. The owner tried a local demo first and then approved the release.
 
 The design system is in [DESIGN.md](DESIGN.md).
 
@@ -74,23 +76,31 @@ The four numbers keep the owner's order; each now means one thing, and the first
 - **Returning learners:** What's new for 3.0, "A new look, centered on the Savior", with the tour offered.
 - **New learners:** the welcome, then Home in the new look.
 
-## For the owner: review before release
-1. **The logo** (chosen: "the word as a seed").
-   - A sprout rising from an open book. Alma compares the word to a seed: "an experiment upon my words" (Alma 32:27–28).
-   - It's the app icon (`src/app/icon.svg`, `src/app/apple-icon.png`, `public/icons/`) and sits beside the name (`BrandMark` in `src/components/layout/brand.tsx`).
-   - Check it on your phone's home screen in the demo.
-2. **The paintings.**
-   - The twelve picks and credits are in `src/content/art.json`.
-   - Alternates are in the scratchpad contact sheet. Two alternates were left out on purpose:
-     - Bloch's *Resurrection*: a low-quality file, with a bare chest.
-     - Hofmann's *Jesus among the Doctors*: a German museum photo with possible rights.
-   - Connect with Christ now uses Heinrich Hofmann's *Christ in Gethsemane* (1886), replacing a Rembrandt-workshop head of Christ that the owner didn't like. The source scan is 1,141 px wide, so its 1200 file is slightly upscaled.
-3. **New words.** Please review this new copy:
-   - **What's new for 3.0** (`src/content/changelog.json`). It names "the Church's Gospel Library app" as the inspiration.
-   - **The Journal's prompts:**
-     - "What's on your mind? Write anything."
-     - "Where did you notice the Lord's hand today? Big or small."
-     - "What are you wondering about?"
-   - **The Tender mercy explanation:** Elder Bednar's words from "The Tender Mercies of the Lord" (April 2005), quoted from the talk's text.
-   - **The Home title:** "Search the scriptures. Know Him."
-4. **Content isn't part of this release.** The 2.2.1.0 content pass is still on `content-2.2.1`. If it ships first, 3.0's changelog entry goes above it, and the two branches are merged before the 3.0 release.
+## Release
+- **Checks before deploying:** lint and typecheck were clean; 1,501 unit tests passed; `verify:study` passed (351 sources, 2,721 quotations, 0 failures); end-to-end, 251 passed and 3 skipped (device-specific), desktop and Pixel 7.
+- **Pushed:** `main` and the tag only. The development branch `new-look-3.0` stays local; `main` holds the same tree as one squashed commit.
+- **`verify:production`:** passed. The two warnings (no HSTS, Cloudflare NEL) are the same as in earlier releases.
+- **Paintings:** served as `image/webp`.
+- **Live check on a phone:**
+  - A new visitor gets the welcome with "Choose your look".
+  - A returning 2.2 visitor on a dark-mode phone opens in Evening, with What's new for 3.0 and the look choice.
+  - A Lab user stays in Lab.
+  - A study step pins its evidence and hides the tab bar.
+  - The Journal and Settings › About load.
+  - No broken images, and no page errors.
+- **Cloudflare:** it injects its Web Analytics beacon (`static.cloudflareinsights.com`) into pages for browsers. The Content-Security-Policy blocks it, so nothing is sent, but browsers log the block in the console. It isn't part of the build. To stop it, turn off Web Analytics (automatic setup) for the site in Cloudflare.
+- **Rollback:** `.gospellabs-previous` on Atlas is 2.2.0.1, and rolling back is safe for data. 2.2.0.1 opens the version 3 database and ignores the journal table, and it refuses format 4 backups rather than drop the journal (see HOSTING.md).
+
+## Approved by the owner
+- **The logo:** "the word as a seed", a sprout rising from an open book (Alma 32:27–28). It's the app icon and sits beside the name.
+- **The paintings:**
+  - twelve public-domain works, credited in `src/content/art.json` and Settings › About;
+  - Connect with Christ uses Hofmann's *Christ in Gethsemane* (1886), whose 1200 file is slightly upscaled from a 1,141 px scan;
+  - left out on purpose: Bloch's *Resurrection* (a low-quality file, with a bare chest) and Hofmann's *Jesus among the Doctors* (a German museum photo with possible rights).
+- **The new words:**
+  - the What's new text, which names "the Church's Gospel Library app" as the inspiration;
+  - the Journal's prompts and Elder Bednar's words on tender mercies ("The Tender Mercies of the Lord," April 2005);
+  - the Home title, "Search the scriptures. Know Him."
+
+## Next
+- **Content isn't part of this release.** The held-back content pass on `content-2.2.1` would now ship as **3.0.1.0**, a CONTENT release on top of 3.0. Rebase it onto `main` first.
