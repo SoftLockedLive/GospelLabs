@@ -1,8 +1,8 @@
 /**
  * Whole-backup operations across every IndexedDB table: the 1.x
- * investigations and the four 2.0 study tables. The file format and the
- * import rules are in backup.ts; this module reads the database and applies
- * plans.
+ * investigations, the four 2.0 study tables, and the journal. The file
+ * format and the import rules are in backup.ts; this module reads the
+ * database and applies plans.
  *
  * Guarantees:
  * - **Exports** contain every record exactly as stored, so fields this
@@ -10,14 +10,14 @@
  *   read and that weren't saved by a newer version) are left out and counted.
  *   Records saved by a newer version are exported as stored even if this
  *   version can't read them, so exporting from an older tab never loses them.
- * - **Imports** are atomic: one read-write transaction across all five
+ * - **Imports** are atomic: one read-write transaction across all six
  *   tables. Every incoming record is validated before anything is written,
  *   the plan is recomputed inside the transaction (so it reflects the data at
  *   that moment), and if anything fails (an invalid record, a full disk) the
  *   transaction rolls back and nothing changes.
  * - **Previews** run the same planning as the import, so they report exactly
  *   what the import would do against the data stored right now.
- * - **Delete everything** clears all five tables in one transaction.
+ * - **Delete everything** clears all six tables in one transaction.
  *
  * Callers wrap these in the repository's error guard (see
  * investigation-repository.ts), which also makes them wait for unsaved-edit
@@ -53,6 +53,7 @@ const TABLE_NAMES = {
   discoveries: "discoveries",
   personalConnections: "personalConnections",
   explorations: "explorations",
+  journal: "journal",
 } as const satisfies Record<DataKind, string>;
 
 const tableFor = (db: GospelLabsDatabase, kind: DataKind) => db[TABLE_NAMES[kind]] as unknown as AnyTable;
@@ -200,7 +201,7 @@ export function previewBackupImport(
 
 /**
  * Imports a backup atomically. Merge adds and updates records (see
- * planRecords for the rules); replace deletes every record in all five
+ * planRecords for the rules); replace deletes every record in all six
  * tables, then writes the backup's records. Preferences are not stored in
  * IndexedDB and are not touched here.
  */
@@ -220,7 +221,7 @@ export function importBackup(db: GospelLabsDatabase, contents: BackupContents, m
   })();
 }
 
-/** Deletes every record in all five tables, returning how many of each kind were removed. */
+/** Deletes every record in all six tables, returning how many of each kind were removed. */
 export function deleteEverything(db: GospelLabsDatabase): Promise<DataCounts> {
   return db.transaction("rw", allTables(db), async () => {
     const removed = zeroCounts();

@@ -98,7 +98,7 @@ export function ConnectSessionView({
   return (
     <article aria-labelledby={titleId} className="mt-12 sm:mt-14">
       <header className="text-center">
-        <p className="text-xs font-medium tracking-[0.2em] text-sacred-accent uppercase">{CONNECT_FORMAT_LABELS[session.format]}</p>
+        <p className="scripture-caps text-sacred-accent">{CONNECT_FORMAT_LABELS[session.format]}</p>
         <h2
           id={titleId}
           tabIndex={-1}
@@ -112,7 +112,7 @@ export function ConnectSessionView({
 
       {session.question && (
         <div className="mt-8 border-l-2 border-sacred-accent/60 pl-4">
-          <p className="text-xs font-medium tracking-[0.14em] text-sacred-accent uppercase">The question</p>
+          <p className="scripture-caps text-sacred-accent">The question</p>
           <p className="mt-1.5 font-serif text-xl leading-snug text-pretty text-sacred-fg">{session.question}</p>
         </div>
       )}

@@ -39,7 +39,7 @@ export function ConnectTodayPreview({ sessions, className }: ConnectTodayPreview
     >
       <Sunrise aria-hidden className="mt-0.5 size-5 shrink-0 text-sacred-accent" />
       <span className="flex min-w-0 flex-col gap-1">
-        <span className="text-xs font-medium tracking-[0.16em] text-sacred-accent uppercase">Connect with Christ</span>
+        <span className="scripture-caps text-sacred-accent">Connect with Christ</span>
         <span className="font-serif text-lg leading-snug text-balance">{session?.title ?? "Time with the Savior"}</span>
         <span className="text-sm text-sacred-muted">
           {format ? `Today: ${CONNECT_FORMAT_LABELS[format]} · ` : ""}A few quiet minutes

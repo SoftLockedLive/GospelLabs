@@ -100,7 +100,7 @@ test("connect evidence, edit and delete connections, and keep them consistent", 
   await expectSaved(page);
 
   // Backups include connections.
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   const [download] = await Promise.all([
     page.waitForEvent("download"),
     page.getByRole("button", { name: "Export backup" }).click(),

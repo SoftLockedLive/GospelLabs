@@ -5,7 +5,7 @@
  * to new learners from the welcome card, to returning learners after a major
  * update, and any time from Settings › About.
  */
-import { BookOpenText, Compass, HeartHandshake, NotebookPen, ShieldCheck, Sparkles, type LucideIcon } from "lucide-react";
+import { BookOpenText, Compass, HandHeart, NotebookPen, ShieldCheck, Sunrise, type LucideIcon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog } from "@/components/ui/dialog";
@@ -31,13 +31,13 @@ export const TOUR_STEPS: readonly TourStep[] = [
     text: "Explore a short passage: highlight the words that stand out, see its themes and key words, and compare related scriptures.",
   },
   {
-    icon: Sparkles,
+    icon: HandHeart,
     label: "Character of Christ",
     title: "Come to know His character",
     text: "Study attributes of the Savior through scripture, words to know, and accounts from His life. It helps you learn about Him; it never measures you.",
   },
   {
-    icon: HeartHandshake,
+    icon: Sunrise,
     label: "Connect with Christ",
     title: "Time with the Savior",
     text: "A few quiet minutes with the Savior: see Him in an account from His life, think through a question about His teachings, or reflect on a verse. Nothing to finish, nothing scored.",
@@ -52,7 +52,7 @@ export const TOUR_STEPS: readonly TourStep[] = [
     icon: ShieldCheck,
     label: "Private by design",
     title: "Your study stays with you",
-    text: "There’s no account, tracking, or AI. Everything is saved in this browser on this device, so back it up now and then in Settings. Found a problem? Report it from Settings › Feedback.",
+    text: "There’s no account, tracking, or AI. Everything is saved in this browser on this device, so back it up now and then in Settings. Found a problem? Report it from Settings › Send feedback.",
   },
 ];
 
@@ -108,7 +108,7 @@ export function TourDialog({ open, onClose, finishLabel = "Start studying", onFi
     >
       {/* key: each step is announced and animated as new content. */}
       <section key={index} aria-live="polite" className="motion-reveal flex flex-col gap-3 pb-1">
-        <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-accent uppercase">
+        <p className="flex items-center gap-2 kicker text-muted">
           <span aria-hidden className="flex size-8 items-center justify-center rounded-lg bg-accent-soft">
             <Icon className="size-4" />
           </span>

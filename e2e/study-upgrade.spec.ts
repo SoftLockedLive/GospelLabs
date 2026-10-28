@@ -68,9 +68,9 @@ test("a database created by 1.1 opens in 2.0 with its investigation intact, and 
   await expect(libraryItem(page, RECORD_FROM_1_1.title)).toBeVisible();
   const upgraded = await describeDatabase(page);
   expect(upgraded.version).toBeGreaterThan(VERSION_1_1);
-  expect(upgraded.stores).toEqual(["discoveries", "explorations", "investigations", "personalConnections", "studyProgress"]);
+  expect(upgraded.stores).toEqual(["discoveries", "explorations", "investigations", "journal", "personalConnections", "studyProgress"]);
   expect(await getRawRecord(page, RECORD_FROM_1_1.id)).toEqual(RECORD_FROM_1_1);
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await expect(page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem").first()).toHaveText("1 research notebook");
 
   // The new tables are usable right away, and progress survives a reload.

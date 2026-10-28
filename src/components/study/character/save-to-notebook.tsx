@@ -23,11 +23,11 @@ export function SaveToNotebook() {
   }
 
   return (
-    <section aria-labelledby="keep-title" className="rounded-2xl border border-line bg-surface p-5 shadow-soft sm:p-6">
+    <section aria-labelledby="keep-title" className="border-t border-line pt-6">
       {/* Text above, buttons below and wrapping: side by side, three buttons crushed the text and overflowed at tablet widths. */}
       <div className="flex flex-col gap-5">
         <div className="max-w-2xl">
-          <h2 id="keep-title" className="text-lg font-semibold tracking-tight text-fg">
+          <h2 id="keep-title" className="text-heading text-fg">
             Keep what you’ve studied
           </h2>
           <p className="mt-1 text-sm leading-relaxed text-muted">

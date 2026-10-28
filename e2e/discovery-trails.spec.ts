@@ -66,7 +66,7 @@ test("explore a trail in any order, record discoveries, and resume where you lef
   // My Library shows trail progress, and backups include the notes.
   await page.goto("/library");
   await expect(libraryItem(page, QUESTION)).toContainText("1 of 5 steps explored");
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   const [download] = await Promise.all([
     page.waitForEvent("download"),
     page.getByRole("button", { name: "Export backup" }).click(),
@@ -74,7 +74,7 @@ test("explore a trail in any order, record discoveries, and resume where you lef
   const path = testInfo.outputPath("backup.json");
   await download.saveAs(path);
   const backup = JSON.parse(readFileSync(path, "utf8"));
-  expect(backup.version).toBe(3);
+  expect(backup.version).toBe(4);
   expect(backup.investigations[0].trailProgress).toEqual([
     {
       trailId: "forgiveness-before-the-atonement",

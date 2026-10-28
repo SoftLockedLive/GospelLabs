@@ -27,6 +27,7 @@ const CONTENT_TYPES = {
   ".webmanifest": "application/manifest+json",
   ".svg": "image/svg+xml",
   ".png": "image/png",
+  ".webp": "image/webp",
   ".ico": "image/x-icon",
   ".woff2": "font/woff2",
 };
@@ -69,4 +70,4 @@ createServer((request, response) => {
   });
   if (request.method === "HEAD") return response.end();
   createReadStream(file).pipe(response);
-}).listen(port, () => console.log(`Serving out/ at http://localhost:${port}`));
+}).listen(port, () => console.log(`Serving out/ at http://localhost:${port} (and on this machine's network address)`));

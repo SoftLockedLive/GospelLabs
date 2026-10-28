@@ -5,10 +5,11 @@
  * fully apply or leave the database untouched.
  *
  * Whole-backup operations (export, import, and deleting everything, across
- * the investigations and the 2.0 study tables) are also offered here, so
- * that in the browser they run after unsaved-edit recovery like every other
- * investigation operation (see client.ts): an export always includes edits
- * a closing page left in a safety copy. Their logic is in full-backup.ts.
+ * the investigations and the study tables, the journal included) are also
+ * offered here, so that in the browser they run after unsaved-edit recovery
+ * like every other investigation operation (see client.ts): an export always
+ * includes edits a closing page left in a safety copy. Their logic is in
+ * full-backup.ts.
  */
 import {
   investigationSchema,
@@ -178,7 +179,7 @@ export function createInvestigationRepository(db: GospelLabsDatabase) {
       ),
 
     /**
-     * A backup (format version 3) of everything stored: investigations and
+     * A backup (format version 4) of everything stored: investigations and
      * study data, each record exactly as stored, plus the given preferences
      * (read from localStorage by the caller). `unreadable` counts damaged
      * records that couldn't be included.
@@ -191,7 +192,7 @@ export function createInvestigationRepository(db: GospelLabsDatabase) {
 
     /**
      * Imports a whole backup (investigations and study data) atomically in
-     * one transaction across all five tables. See full-backup.ts.
+     * one transaction across all six tables. See full-backup.ts.
      */
     importBackup: (contents: BackupContents, mode: ImportMode) => guard(() => importBackup(db, contents, mode)),
 

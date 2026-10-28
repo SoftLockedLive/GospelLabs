@@ -51,7 +51,7 @@ export function VerseText({ source, className, size = "md" }: { source: Source; 
     >
       {source.verses.map((verse) => (
         <p key={verse.number}>
-          <sup className="mr-1 font-sans text-[0.7rem] font-semibold text-subtle">{verse.number}</sup>
+          <b className="mr-1.5 text-[0.85em] font-bold">{verse.number}</b>
           {verse.text}
         </p>
       ))}

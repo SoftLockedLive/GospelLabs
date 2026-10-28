@@ -37,7 +37,7 @@ export function EvidenceCardView({
       <header className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-xs text-accent">{label}</span>
+            <span className="font-semibold tabular-nums text-muted">{label}</span>
             <Badge>{SOURCE_TYPE_LABELS[card.sourceType]}</Badge>
             {citationCount > 0 && (
               <span className="inline-flex items-center gap-1 text-xs text-subtle">

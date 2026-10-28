@@ -71,7 +71,7 @@ export function BuildPrincipleActivity(props: Props) {
   return (
     <div ref={rootRef} className="flex flex-col gap-5">
       <section aria-labelledby={`${activity.id}-statement`} className="rounded-xl border border-line bg-surface-sunken p-4 sm:p-5">
-        <h4 id={`${activity.id}-statement`} className="text-xs font-semibold tracking-wide text-muted uppercase">
+        <h4 id={`${activity.id}-statement`} className="kicker text-muted">
           Your principle
         </h4>
         <p aria-live="polite" className={cn("mt-2 min-h-7 font-serif text-lg leading-relaxed", sentence ? "text-fg" : "text-subtle")}>
@@ -87,7 +87,7 @@ export function BuildPrincipleActivity(props: Props) {
                 <li key={id} className={cn("rounded-lg border bg-surface", mark ? markSurface(mark, finished) : "border-line")}>
                   {/* On narrow screens the controls drop below the text rather than squeezing it to a word per line. */}
                   <div className="flex flex-wrap items-center gap-x-2 py-1 pr-1 pl-3">
-                    <span aria-hidden className="w-5 shrink-0 font-mono text-xs text-accent">
+                    <span aria-hidden className="w-5 shrink-0 font-semibold tabular-nums text-muted">
                       {index + 1}
                     </span>
                     <span className="min-w-0 flex-1 basis-40 py-1.5 text-sm leading-relaxed break-words text-fg">{textOf(id)}</span>
@@ -145,7 +145,7 @@ export function BuildPrincipleActivity(props: Props) {
 
       {!readOnly && (
         <section aria-labelledby={`${activity.id}-pieces`}>
-          <h4 id={`${activity.id}-pieces`} className="mb-2.5 text-xs font-semibold tracking-wide text-muted uppercase">
+          <h4 id={`${activity.id}-pieces`} className="mb-2.5 kicker text-muted">
             Pieces
           </h4>
           {pieces.length ? (

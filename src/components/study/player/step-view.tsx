@@ -6,7 +6,7 @@
  * brings out, the concepts it touched, any side question it opens, and the
  * way on.
  */
-import { ArrowLeft, ArrowRight, ChevronDown, CornerDownLeft, Flag, Lightbulb } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown, CornerDownLeft, Flag } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { activitySourceIds, resolveActivity } from "@/domain/study/content-registry";
@@ -15,16 +15,18 @@ import type { InvestigationBundle } from "@/domain/study/engine/bundle";
 import type { DifficultySuggestion } from "@/domain/study/engine/difficulty";
 import { branchesOffered, findBranch, findStep, isStepDone, refKey, stepDifficulty, stepStateAt, stepsAround } from "@/domain/study/engine/path";
 import { canOpenStep, completionState, statusOf } from "@/domain/study/engine/status";
+import { placeLabel } from "@/domain/study/journal";
 import type { StudyProgress } from "@/domain/study/user-data";
 import type { StudyAssistant } from "@/lib/assist";
 import { cn } from "@/lib/cn";
 import type { Preferences } from "@/lib/preferences";
-import { ActivityRenderer } from "../activities/activity-renderer";
-import { EvidencePanel } from "../activities/evidence-panel";
+import { ActivityRenderer, activityEvidence } from "../activities/activity-renderer";
 import type { ActivityState } from "../activities/types";
+import { WriteInJournal } from "../journal/write-in-journal";
 import { ProvenanceLabel } from "../shared/provenance";
 import { BranchOffer } from "./branch-offer";
 import { DifficultySuggestionBanner } from "./difficulty-suggestion";
+import { EvidenceAside, EvidenceDock } from "./step-evidence";
 import { StepConceptList, WordsInStep } from "./step-concepts";
 import { StepTags } from "./step-tags";
 import type { StudySession } from "./use-study-session";
@@ -73,6 +75,8 @@ export function StepView(props: StepViewProps) {
   const concepts = step.concepts.map((id) => bundle.concepts[id]).filter((concept) => !!concept);
   const activitySources = new Set(activitySourceIds(activity));
   const stepSources = step.sourceIds.filter((id) => !activitySources.has(id)).map((id) => sources[id]).filter((source): source is Source => !!source);
+  const evidence = activityEvidence(activity, sources);
+  const hasEvidence = evidence.length + stepSources.length > 0;
   const branches = !inBranch && done ? branchesOffered(investigation, progress, step, preferences.activity) : [];
   const branch = ref.branchId ? findBranch(investigation, ref.branchId) : undefined;
 
@@ -101,128 +105,154 @@ export function StepView(props: StepViewProps) {
   );
 
   return (
-    <article aria-labelledby={`step-${key}`} className="flex flex-col gap-7">
-      <header className="motion-reveal flex flex-col gap-3">
-        <StepTags phase={step.phase} method={step.method} />
-        <h2 id={`step-${key}`} ref={headingRef} tabIndex={-1} className="text-xl font-semibold tracking-tight text-fg outline-none sm:text-2xl">
-          {step.title}
-        </h2>
-        {step.intro && <p className="text-[0.975rem] leading-relaxed text-muted">{step.intro}</p>}
-      </header>
-
-      {stepSources.length > 0 && <EvidencePanel sources={stepSources} title="Sources for this step" />}
-
-      <div className="rounded-2xl border border-line bg-surface p-4 shadow-soft sm:p-6">
-        <ActivityRenderer
-          key={`${key}:${activity.id}`}
-          activity={activity}
-          sources={sources}
-          difficulty={difficulty}
-          initialState={initialState}
-          allowSkip
-          reflectionInput={preferences.activity.showReflections}
-          moreHelp={(a, s) => assistant.moreHelp(a, s, { sources })}
-          onStateChange={(next) =>
-            dispatch(
-              { type: "sync", step: ref, snapshot: { attempts: next.attempts, hintsShown: next.hintsShown, response: next.response, reflection: next.reflection } },
-              // Only writing a reflection waits for a pause in typing. Choices, examined clues, hints, and checks are
-              // discrete actions and save at once, so leaving or reloading right after one doesn't lose it.
-              { typing: (next.reflection ?? "") !== (state?.reflection ?? "") },
-            )
-          }
-          onComplete={onComplete}
-        />
-      </div>
-
-      {!done && <WordsInStep concepts={concepts} assistant={assistant} />}
-
-      {status === "skipped" && (
-        <p className="rounded-xl border border-dashed border-line-strong px-4 py-3 text-sm leading-relaxed text-muted">
-          You moved on from this step. You can try it again here any time.
-        </p>
+    // With evidence, wide screens show it in a column beside the step; narrower ones pin it under the study bar.
+    <article
+      aria-labelledby={`step-${key}`}
+      className={cn(
+        hasEvidence ? "xl:grid xl:grid-cols-[minmax(0,1fr)_minmax(19rem,24rem)] xl:items-start xl:gap-10" : "xl:mx-auto xl:max-w-3xl",
       )}
+    >
+      <div className="flex min-w-0 flex-col gap-7">
+        {/* Set like a chapter of the printed scriptures: the count in spaced capitals, a serif title, and the
+            introduction in italics like a chapter summary. */}
+        <header className="motion-reveal flex flex-col gap-3">
+          <StepTags phase={step.phase} method={step.method} />
+          {!inBranch && (
+            <p className="scripture-caps text-center text-muted">
+              Step {index + 1} of {steps.length}
+            </p>
+          )}
+          <h2 id={`step-${key}`} ref={headingRef} tabIndex={-1} className="text-title text-center text-fg outline-none">
+            {step.title}
+          </h2>
+          {step.intro && <p className="headnote mt-1 text-muted">{step.intro}</p>}
+          <span aria-hidden className="mx-auto mt-3 h-px w-12 bg-line-strong/60" />
+        </header>
 
-      {(status === "complete" || status === "revealed") && (
-        <section aria-label="What this step brings out" className="motion-reveal flex flex-col gap-4 rounded-2xl border border-accent/25 bg-accent-soft p-5 sm:p-6">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <h3 className="flex items-center gap-2 text-sm font-semibold text-fg">
-              <Lightbulb aria-hidden className="size-4 text-accent" />
-              What this step brings out
-            </h3>
-            <ProvenanceLabel provenance="suggested" />
-          </div>
-          <StepInsight key={key} text={step.insight} />
-          <StepConceptList concepts={concepts} demonstrated={status === "complete"} />
-        </section>
-      )}
+        <EvidenceDock sources={evidence} also={stepSources} />
 
-      {done && !inBranch && suggestion && (
-        <DifficultySuggestionBanner suggestion={suggestion} onAccept={props.onAcceptSuggestion} onDismiss={props.onDismissSuggestion} />
-      )}
-
-      {branches
-        .filter((offer) => progress.visitedBranches.includes(offer.id) || !props.dismissedBranches.has(offer.id))
-        .map((offer) => (
-          <BranchOffer
-            key={offer.id}
-            branch={offer}
-            visited={progress.visitedBranches.includes(offer.id)}
-            onExplore={() => dispatch({ type: "enterBranch", branchId: offer.id })}
-            onDismiss={() => props.onDismissBranch(offer.id)}
+        <div>
+          <ActivityRenderer
+            evidenceElsewhere
+            key={`${key}:${activity.id}`}
+            activity={activity}
+            sources={sources}
+            difficulty={difficulty}
+            initialState={initialState}
+            allowSkip
+            reflectionInput={preferences.activity.showReflections}
+            moreHelp={(a, s) => assistant.moreHelp(a, s, { sources })}
+            onStateChange={(next) =>
+              dispatch(
+                { type: "sync", step: ref, snapshot: { attempts: next.attempts, hintsShown: next.hintsShown, response: next.response, reflection: next.reflection } },
+                // Only writing a reflection waits for a pause in typing. Choices, examined clues, hints, and checks are
+                // discrete actions and save at once, so leaving or reloading right after one doesn't lose it.
+                { typing: (next.reflection ?? "") !== (state?.reflection ?? "") },
+              )
+            }
+            onComplete={onComplete}
           />
-        ))}
+        </div>
 
-      {done && inBranch && isLast && branch?.returnNote && (
-        <p className="motion-reveal rounded-xl border border-line bg-surface-sunken px-4 py-3 text-sm leading-relaxed text-fg">{branch.returnNote}</p>
-      )}
+        {!done && <WordsInStep concepts={concepts} assistant={assistant} />}
 
-      {done && !inBranch && isLast && !completion.complete && remaining.length > 0 && (
-        <section aria-label="Steps still open" className="rounded-xl border border-line bg-surface-sunken p-4">
-          <p className="text-sm leading-relaxed text-fg">A few steps on this path are still open. Finish them (or move past them) to complete the investigation.</p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {remaining.map((s) => (
-              <li key={s.id}>
-                <Button variant="secondary" size="sm" onClick={() => dispatch({ type: "open", step: { stepId: s.id } })}>
-                  {s.title}
-                </Button>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      <nav aria-label="Step navigation" className="flex flex-col-reverse gap-3 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
-        {/* At the end of a one-step side question, "Return to the investigation" (below) already goes back. */}
-        {(index > 0 || inBranch) && !(inBranch && index === 0 && done && isLast) ? (
-          <Button variant="ghost" size="lg" onClick={() => dispatch({ type: "previous" })} className="w-full sm:w-auto">
-            {inBranch && index === 0 ? <CornerDownLeft aria-hidden /> : <ArrowLeft aria-hidden />}
-            {inBranch && index === 0 ? "Back to the investigation" : "Previous step"}
-          </Button>
-        ) : (
-          <span aria-hidden className="hidden sm:block" />
+        {status === "skipped" && (
+          <p className="border-l-2 border-line-strong py-1 pl-4 text-sm leading-relaxed text-muted">
+            You moved on from this step. You can try it again here any time.
+          </p>
         )}
-        {done &&
-          (inBranch ? (
-            <Button size="lg" onClick={() => dispatch(isLast ? { type: "returnFromBranch" } : { type: "next" })} className="w-full sm:w-auto">
-              {isLast ? "Return to the investigation" : "Next step"}
-              {isLast ? <CornerDownLeft aria-hidden /> : <ArrowRight aria-hidden />}
-            </Button>
-          ) : isLast ? (
-            <Button size="lg" onClick={onFinish} disabled={!completion.complete || finishing} className="w-full sm:w-auto">
-              <Flag aria-hidden />
-              {finishing ? "Saving your discovery…" : "See your discovery"}
+
+        {(status === "complete" || status === "revealed") && (
+          <section aria-label="What this step brings out" className="motion-reveal flex flex-col gap-3 border-t border-line pt-6">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h3 className="kicker text-fg">What this step brings out</h3>
+              <ProvenanceLabel provenance="suggested" />
+            </div>
+            <StepInsight key={key} text={step.insight} />
+            <StepConceptList concepts={concepts} demonstrated={status === "complete"} />
+            {/* A thought that came up here, kept in the Journal with a link back to this step. */}
+            <WriteInJournal
+              link={{
+                kind: "investigation",
+                contentId: investigation.id,
+                label: placeLabel("investigation", investigation.title, step.title),
+                stepId: step.id,
+                ...(ref.branchId ? { branchId: ref.branchId } : {}),
+              }}
+              className="-ml-3 self-start"
+            />
+          </section>
+        )}
+
+        {done && !inBranch && suggestion && (
+          <DifficultySuggestionBanner suggestion={suggestion} onAccept={props.onAcceptSuggestion} onDismiss={props.onDismissSuggestion} />
+        )}
+
+        {branches
+          .filter((offer) => progress.visitedBranches.includes(offer.id) || !props.dismissedBranches.has(offer.id))
+          .map((offer) => (
+            <BranchOffer
+              key={offer.id}
+              branch={offer}
+              visited={progress.visitedBranches.includes(offer.id)}
+              onExplore={() => dispatch({ type: "enterBranch", branchId: offer.id })}
+              onDismiss={() => props.onDismissBranch(offer.id)}
+            />
+          ))}
+
+        {done && inBranch && isLast && branch?.returnNote && (
+          <p className="motion-reveal border-l-2 border-accent py-1 pl-4 text-[0.975rem] leading-relaxed text-fg">{branch.returnNote}</p>
+        )}
+
+        {done && !inBranch && isLast && !completion.complete && remaining.length > 0 && (
+          <section aria-label="Steps still open" className="border-t border-line pt-5">
+            <p className="text-sm leading-relaxed text-fg">A few steps on this path are still open. Finish them (or move past them) to complete the investigation.</p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {remaining.map((s) => (
+                <li key={s.id}>
+                  <Button variant="secondary" size="sm" onClick={() => dispatch({ type: "open", step: { stepId: s.id } })}>
+                    {s.title}
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <nav aria-label="Step navigation" className="flex flex-col-reverse gap-3 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
+          {/* At the end of a one-step side question, "Return to the investigation" (below) already goes back. */}
+          {(index > 0 || inBranch) && !(inBranch && index === 0 && done && isLast) ? (
+            <Button variant="ghost" size="lg" onClick={() => dispatch({ type: "previous" })} className="w-full sm:w-auto">
+              {inBranch && index === 0 ? <CornerDownLeft aria-hidden /> : <ArrowLeft aria-hidden />}
+              {inBranch && index === 0 ? "Back to the investigation" : "Previous step"}
             </Button>
           ) : (
-            <Button size="lg" onClick={() => dispatch({ type: "next" })} className="w-full sm:w-auto">
-              Next step
-              <ArrowRight aria-hidden />
-            </Button>
-          ))}
-      </nav>
-      {/* Short sessions are fine: say so where someone might stop, rather than making a whole investigation feel required. */}
-      {done && !isLast && !inBranch && props.saved && (
-        <p className="-mt-2 text-center text-sm text-muted sm:text-right">A good place to stop if you need to. Your place is saved for next time.</p>
-      )}
+            <span aria-hidden className="hidden sm:block" />
+          )}
+          {done &&
+            (inBranch ? (
+              <Button size="lg" onClick={() => dispatch(isLast ? { type: "returnFromBranch" } : { type: "next" })} className="w-full sm:w-auto">
+                {isLast ? "Return to the investigation" : "Next step"}
+                {isLast ? <CornerDownLeft aria-hidden /> : <ArrowRight aria-hidden />}
+              </Button>
+            ) : isLast ? (
+              <Button size="lg" onClick={onFinish} disabled={!completion.complete || finishing} className="w-full sm:w-auto">
+                <Flag aria-hidden />
+                {finishing ? "Saving your discovery…" : "See your discovery"}
+              </Button>
+            ) : (
+              <Button size="lg" onClick={() => dispatch({ type: "next" })} className="w-full sm:w-auto">
+                Next step
+                <ArrowRight aria-hidden />
+              </Button>
+            ))}
+        </nav>
+        {/* Short sessions are fine: say so where someone might stop, rather than making a whole investigation feel required. */}
+        {done && !isLast && !inBranch && props.saved && (
+          <p className="-mt-2 text-center text-sm text-muted sm:text-right">A good place to stop if you need to. Your place is saved for next time.</p>
+        )}
+      </div>
+      <EvidenceAside sources={evidence} also={stepSources} />
     </article>
   );
 }
@@ -250,7 +280,7 @@ function StepInsight({ text }: { text: string }) {
 
   return (
     <div className="flex flex-col items-start gap-1">
-      <p ref={textRef} id={textId} className={cn("font-serif text-[1.05rem] leading-relaxed text-fg", !expanded && "line-clamp-3 sm:line-clamp-none")}>
+      <p ref={textRef} id={textId} className={cn("prose-scripture text-fg", !expanded && "line-clamp-3 sm:line-clamp-none")}>
         {text}
       </p>
       {(clamped || expanded) && (

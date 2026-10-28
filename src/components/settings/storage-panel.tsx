@@ -39,7 +39,7 @@ export function SavedDataSummary({ counts }: { counts: DataCounts }) {
       <ul aria-labelledby={headingId} className="mt-2 grid grid-cols-1 gap-x-6 gap-y-1 text-sm text-muted sm:grid-cols-2">
         {DATA_KINDS.map((kind) => (
           <li key={kind}>
-            <span className="font-mono text-fg">{counts[kind]}</span>{" "}
+            <span className="font-semibold tabular-nums text-fg">{counts[kind]}</span>{" "}
             {counts[kind] === 1 ? DATA_KIND_LABELS[kind].one : DATA_KIND_LABELS[kind].many}
           </li>
         ))}

@@ -46,7 +46,7 @@ export function ClueActivity(props: Props) {
       <div>
         <p className="mb-3 flex flex-wrap items-baseline justify-between gap-2 text-sm text-muted">
           <span>Open each clue and notice what it adds.</span>
-          <span aria-live="polite" className="font-mono text-xs text-subtle">
+          <span aria-live="polite" className="font-semibold tabular-nums text-xs text-subtle">
             {examined.size} of {activity.clues.length} examined
           </span>
         </p>
@@ -75,7 +75,7 @@ export function ClueActivity(props: Props) {
                     <Search className="size-3.5" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-mono text-[11px] tracking-wide text-subtle uppercase">Clue {index + 1}</span>
+                    <span className="block text-[13px] font-semibold text-muted">Clue {index + 1}</span>
                     <span className="font-medium text-fg">{clue.title}</span>
                   </span>
                   <ChevronDown aria-hidden className={cn("size-4 shrink-0 text-subtle transition-transform", isOpen && "rotate-180")} />

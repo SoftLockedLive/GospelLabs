@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, FileWarning, FlaskConical, Search, SearchX, X } from "lucide-react";
+import { BookOpen, FileWarning, NotebookTabs, Search, SearchX, X } from "lucide-react";
 import { useMemo, useRef, useState } from "react";
 import { StorageErrorState } from "@/components/investigations/storage-error-state";
 import { Button, ButtonLink } from "@/components/ui/button";
@@ -42,13 +42,13 @@ export function LibraryView() {
 
       {investigations.length === 0 ? (
         <EmptyState
-          icon={FlaskConical}
+          icon={NotebookTabs}
           title="No research notebooks yet"
           description="Start with a question of your own, or pick one from the Question Bank. Everything you write is saved on this device."
           action={
             <div className="flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={newInvestigationHref()}>
-                <FlaskConical aria-hidden />
+                <NotebookTabs aria-hidden />
                 New research notebook
               </ButtonLink>
               <ButtonLink href="/questions" variant="secondary">

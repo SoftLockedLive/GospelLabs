@@ -176,7 +176,7 @@ export function PassageText({
                 emphasized && "bg-accent-soft motion-glow",
               )}
             >
-              <sup className="mr-1.5 font-sans text-[0.7rem] font-semibold text-subtle select-none">{verse.number}</sup>
+              <b className="mr-1.5 text-[0.85em] font-bold select-none">{verse.number}</b>
               {groups.map((group, g) => {
                 const content: ReactNode = group.words.map((word, w) => {
                   const key = { verse: verse.number, index: word.index };

@@ -37,7 +37,7 @@ export function ActivitiesPanel({ passage, sources, states, completed, onStateCh
             <li key={activity.id} className="rounded-xl border border-line bg-surface p-4 sm:p-5">
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                 <h3 className="text-sm font-semibold text-fg">
-                  <span className="mr-2 font-mono text-xs text-accent">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="mr-2 font-semibold tabular-nums text-muted">{`${index + 1}.`}</span>
                   {ACTIVITY_TYPE_LABELS[activity.type]}
                 </h3>
                 {done &&

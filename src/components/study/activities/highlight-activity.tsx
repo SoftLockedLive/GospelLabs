@@ -47,24 +47,23 @@ export function HighlightActivity(props: Props) {
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="flex flex-wrap justify-between gap-2 text-sm text-muted">
-        <span>{readOnly ? "The phrases that answer the question are highlighted." : "Tap each phrase that answers the question. Tap again to unselect."}</span>
-        <span aria-live="polite" className="font-mono text-xs text-subtle">
-          {response.selected.length} selected{required > 1 && !readOnly ? ` · looking for ${required}` : ""}
-        </span>
+      <p className="text-[0.9375rem] leading-relaxed text-muted">
+        {readOnly ? "The phrases that answer the question are marked." : "Tap each phrase that answers the question. Tap again to unmark it."}
       </p>
 
-      <figure className="rounded-xl border border-line bg-surface px-4 py-4 sm:px-6 sm:py-5">
+      {/* Set like the printed scriptures: the reference in spaced capitals, bold verse numbers, and the learner's
+          choices marked as if with a highlighter. */}
+      <figure className="flex flex-col gap-3">
         {source && (
-          <figcaption className="mb-3 flex flex-wrap items-center justify-between gap-2">
-            <span className="text-sm font-semibold text-fg">{source.label}</span>
+          <figcaption className="flex flex-wrap items-center justify-between gap-2">
+            <span className="scripture-caps text-muted">{source.label}</span>
             <SourceKindBadge kind={source.kind} />
           </figcaption>
         )}
-        <div className="flex flex-col gap-3 font-serif text-[1.05rem] leading-[2.15] text-fg">
+        <div className="flex flex-col gap-3 font-serif text-[1.1875rem] leading-[2] text-fg sm:text-xl sm:leading-[2.05]">
           {verses.map((verse) => (
             <p key={`${verse.number}-${verse.chunks[0].index}`}>
-              <sup className="mr-1 font-sans text-[0.7rem] font-semibold text-subtle">{verse.number}</sup>
+              <b className="mr-1.5 text-[0.85em] font-bold">{verse.number}</b>
               {verse.chunks.map((chunk, i) => {
                 const isSelected = selected.has(chunk.index);
                 const mark = isSelected ? markFor(props, String(chunk.index), unchanged(chunk.index)) : undefined;
@@ -80,11 +79,12 @@ export function HighlightActivity(props: Props) {
                       onClick={() => toggle(chunk.index)}
                       onKeyDown={(event) => onKeyDown(event, chunk.index)}
                       className={cn(
-                        "rounded-md px-0.5 py-1 [box-decoration-break:clone] transition-colors [-webkit-box-decoration-break:clone]",
+                        "rounded-[3px] px-0.5 py-0.5 [box-decoration-break:clone] transition-colors [-webkit-box-decoration-break:clone]",
                         !readOnly && "cursor-pointer hover:bg-surface-raised",
                         // A faint dotted underline marks each tappable phrase, so its boundaries show on touch screens (no hover).
-                        !readOnly && !isSelected && "underline decoration-line-strong decoration-dotted decoration-1 underline-offset-[5px]",
-                        isSelected && "bg-accent-soft underline decoration-accent decoration-2 underline-offset-[5px]",
+                        !readOnly && !isSelected && "underline decoration-accent/45 decoration-dotted decoration-[1.5px] underline-offset-[6px]",
+                        // Marked like a highlighter, with a solid underline too, so the choice doesn't rest on color alone.
+                        isSelected && "bg-highlight text-highlight-fg underline decoration-highlight-line decoration-2 underline-offset-[6px]",
                         mark === "correct" && (revealed ? "bg-accent-soft decoration-accent" : "bg-green-soft decoration-green"),
                         mark === "incorrect" && "bg-danger-soft decoration-danger decoration-wavy",
                       )}
@@ -99,8 +99,11 @@ export function HighlightActivity(props: Props) {
             </p>
           ))}
         </div>
-        {source && <SourceLink source={source} className="mt-3" />}
+        {source && <SourceLink source={source} />}
       </figure>
+      <p aria-live="polite" className="text-sm text-muted tabular-nums">
+        {response.selected.length} marked{required > 1 && !readOnly ? ` · looking for ${required}` : ""}
+      </p>
       {wrongFeedback && <p className="motion-reveal text-sm leading-relaxed text-fg">{wrongFeedback}</p>}
     </div>
   );

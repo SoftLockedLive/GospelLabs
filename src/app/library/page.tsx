@@ -1,4 +1,4 @@
-import { FlaskConical } from "lucide-react";
+import { NotebookTabs } from "lucide-react";
 import type { Metadata } from "next";
 import { PageContainer } from "@/components/layout/app-shell";
 import { LibraryView } from "@/components/library/library-view";
@@ -17,7 +17,7 @@ export default function LibraryPage() {
         description="Every question you’ve studied, with its notes and evidence. Pick up wherever you left off."
         actions={
           <ButtonLink href={newInvestigationHref()}>
-            <FlaskConical aria-hidden />
+            <NotebookTabs aria-hidden />
             New research notebook
           </ButtonLink>
         }

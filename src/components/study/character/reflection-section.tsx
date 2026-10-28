@@ -92,7 +92,7 @@ function NoteEditor({ initialNote }: { initialNote: string }) {
       />
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
         <p id={`${id}-hint`} className="text-sacred-muted">
-          Saved only on this device. It’s never shared or checked.
+          Saved only on this device, and shown in your journal. It’s never shared or checked.
         </p>
         <p id={`${id}-status`} role="status" className={status.state === "error" ? "font-medium text-danger" : "text-sacred-muted"}>
           {(status.state === "pending" || status.state === "saving") && "Saving…"}

@@ -5,28 +5,40 @@
  *
  * Themes share one layout and component system; each is a set of color
  * tokens in globals.css under :root[data-theme="…"].
+ *
+ * From 3.0, a device that never chose a theme follows the device: Daylight
+ * when it's set to light, Evening when it's set to dark (before 3.0 it was
+ * always Lab). So nobody opening the app at night in dark mode is met with a
+ * white screen. Only a stored choice keeps someone in Lab; its stored value
+ * is still "dark", so a rollback to 2.x reads it.
  */
-export const THEMES = ["dark", "light", "dawn", "evening"] as const;
+export const THEMES = ["light", "dawn", "evening", "dark"] as const;
 export type Theme = (typeof THEMES)[number];
 
-export const THEME_PREFERENCES = [...THEMES, "system"] as const;
+export const THEME_PREFERENCES = ["system", ...THEMES] as const;
 export type ThemePreference = (typeof THEME_PREFERENCES)[number];
 
 export const THEME_LABELS: Record<ThemePreference, string> = {
-  dark: "Lab",
   light: "Daylight",
   dawn: "Parchment",
   evening: "Evening",
-  system: "System",
+  dark: "Lab",
+  system: "Follow my device",
 };
 
 export const THEME_DESCRIPTIONS: Record<ThemePreference, string> = {
-  dark: "Deep teal, the original Gospel Labs look",
-  light: "Clean and bright",
+  light: "White pages, like a printed book",
   dawn: "Warm paper tones for long reading",
-  evening: "Soft indigo and gold, easy on the eyes at night",
-  system: "Lab or Daylight, following your device",
+  evening: "Deep blue and gold, easy on the eyes at night",
+  dark: "Deep teal, the original Gospel Labs look",
+  system: "Daylight or Evening, as your device is set",
 };
+
+/** Until the learner chooses, Gospel Labs follows the device. */
+export const DEFAULT_THEME_PREFERENCE: ThemePreference = "system";
+
+/** The themes "Follow my device" uses. */
+export const SYSTEM_THEMES = { light: "light", dark: "evening" } as const satisfies Record<string, Theme>;
 
 /** Themes with a light background; used for the browser's color-scheme and theme-color. */
 export const LIGHT_THEMES: readonly Theme[] = ["light", "dawn"];
@@ -41,9 +53,9 @@ export function isThemePreference(value: unknown): value is ThemePreference {
 export function readThemePreference(): ThemePreference {
   try {
     const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
-    return isThemePreference(stored) ? stored : "dark";
+    return isThemePreference(stored) ? stored : DEFAULT_THEME_PREFERENCE;
   } catch {
-    return "dark";
+    return DEFAULT_THEME_PREFERENCE;
   }
 }
 
@@ -78,12 +90,15 @@ export const themeInitScript = `(function(){
   var key = ${JSON.stringify(THEME_STORAGE_KEY)};
   var prefsKey = "gospel-labs:preferences";
   var themes = ${JSON.stringify(THEMES)};
-  var mq = window.matchMedia("(prefers-color-scheme: light)");
+  var fallback = ${JSON.stringify(DEFAULT_THEME_PREFERENCE)};
+  var systemThemes = ${JSON.stringify(SYSTEM_THEMES)};
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
   var rm = window.matchMedia("(prefers-reduced-motion: reduce)");
-  function stored(){ try { return localStorage.getItem(key) || "dark"; } catch (e) { return "dark"; } }
+  function stored(){ try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; } }
   function motionPref(){ try { var p = JSON.parse(localStorage.getItem(prefsKey) || "{}"); return p && p.motion || "system"; } catch (e) { return "system"; } }
   function apply(pref){
-    var theme = pref === "system" ? (mq.matches ? "light" : "dark") : (themes.indexOf(pref) >= 0 ? pref : "dark");
+    if (pref !== "system" && themes.indexOf(pref) < 0) pref = fallback;
+    var theme = pref === "system" ? (mq.matches ? systemThemes.dark : systemThemes.light) : pref;
     document.documentElement.dataset.theme = theme;
   }
   function applyMotion(pref){

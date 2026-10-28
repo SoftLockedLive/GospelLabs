@@ -1,9 +1,11 @@
 import Dexie from "dexie";
 import { IDBFactory, IDBKeyRange } from "fake-indexeddb";
 import { describe, expect, it } from "vitest";
+import type { JournalEntry } from "@/domain/study/journal";
 import { STUDY_DATA_VERSION, type DiscoveryCard, type StudyProgress } from "@/domain/study/user-data";
 import { GospelLabsDatabase } from "./db";
 import { createInvestigationRepository } from "./investigation-repository";
+import { createStudyRepository } from "./study-repository";
 import { createTestStudyRepository } from "./study-test-utils";
 import { RECORD_FROM_1_0 } from "./legacy-fixtures";
 
@@ -34,6 +36,15 @@ const card = (overrides: Partial<DiscoveryCard> = {}): DiscoveryCard => ({
   connections: [],
   highlights: [],
   notes: "",
+  ...overrides,
+});
+
+const entry = (overrides: Partial<JournalEntry> = {}): JournalEntry => ({
+  id: "entry-1",
+  createdAt: NOW,
+  updatedAt: NOW,
+  kind: "tender-mercy",
+  text: "A friend checked on me today.",
   ...overrides,
 });
 
@@ -93,22 +104,54 @@ describe("study repository", () => {
   });
 });
 
+describe("journal entries", () => {
+  it("are saved, read, listed newest first, and deleted, stamped with the data version", async () => {
+    const { study } = createTestStudyRepository();
+    await study.journal.put(entry());
+    await study.journal.put(entry({ id: "entry-2", updatedAt: "2026-10-26T08:00:00.000Z", kind: "question", text: "  Why?  " }));
+    const stored = await study.journal.get("entry-2");
+    expect(stored).toMatchObject({ kind: "question", text: "Why?", dataVersion: STUDY_DATA_VERSION });
+    expect((await study.journal.list()).records.map((record) => record.id)).toEqual(["entry-2", "entry-1"]);
+
+    await study.journal.delete("entry-1");
+    expect(await study.journal.get("entry-1")).toBeUndefined();
+  });
+
+  it("keep their link, and fields added by a newer version", async () => {
+    const { db, study } = createTestStudyRepository();
+    const link = { kind: "attribute" as const, contentId: "charity", label: "Charity · Character of Christ" };
+    await db.journal.put({ ...entry({ link }), futureField: "kept" } as JournalEntry);
+    expect(await study.journal.get("entry-1")).toMatchObject({ link, futureField: "kept" });
+  });
+
+  it("are refused without text, and never replace one saved by a newer version", async () => {
+    const { db, study } = createTestStudyRepository();
+    await expect(study.journal.put(entry({ text: "  " }))).rejects.toMatchObject({ kind: "invalid-data" });
+    expect(await study.journal.get("entry-1")).toBeUndefined();
+    await db.journal.put({ ...entry(), dataVersion: STUDY_DATA_VERSION + 1 });
+    await expect(study.journal.put(entry({ text: "Edited" }))).rejects.toMatchObject({ kind: "version" });
+  });
+});
+
 describe("bulk operations", () => {
   it("snapshots every valid record as stored, counts each table, and deletes all study data together", async () => {
     const { db, study } = createTestStudyRepository();
     await study.completeInvestigation(progress({ completedAt: NOW }), card());
     await db.discoveries.put({ ...card({ id: "card-2" }), futureField: 1 } as DiscoveryCard);
     await db.explorations.put({ id: "broken" } as never);
+    await study.journal.put(entry());
+    await db.journal.put({ id: "broken-entry", text: "" } as never);
 
     const { snapshot, unreadable } = await study.snapshot();
     expect(snapshot.progress.map((record) => record.id)).toEqual(["one-by-one"]);
     expect(snapshot.discoveries.map((record) => record.id).sort()).toEqual(["card-1", "card-2"]);
     expect(snapshot.discoveries.find((record) => record.id === "card-2")).toMatchObject({ futureField: 1 });
-    expect(unreadable).toBe(1);
-    expect(await study.counts()).toEqual({ progress: 1, discoveries: 2, personalConnections: 0, explorations: 1 });
+    expect(snapshot.journal).toEqual([{ ...entry(), dataVersion: STUDY_DATA_VERSION }]);
+    expect(unreadable).toBe(2);
+    expect(await study.counts()).toEqual({ progress: 1, discoveries: 2, personalConnections: 0, explorations: 1, journal: 2 });
 
-    expect(await study.deleteAll()).toBe(4);
-    expect(await study.counts()).toEqual({ progress: 0, discoveries: 0, personalConnections: 0, explorations: 0 });
+    expect(await study.deleteAll()).toBe(6);
+    expect(await study.counts()).toEqual({ progress: 0, discoveries: 0, personalConnections: 0, explorations: 0, journal: 0 });
   });
 
   it("never touches investigations when deleting study data", async () => {
@@ -116,6 +159,7 @@ describe("bulk operations", () => {
     const investigations = createInvestigationRepository(db);
     await db.investigations.put(structuredClone(RECORD_FROM_1_0) as never);
     await study.progress.put(progress());
+    await study.journal.put(entry());
     await study.deleteAll();
     expect(await investigations.count()).toBe(1);
   });
@@ -157,7 +201,7 @@ describe("protecting data the app can't read", () => {
   });
 });
 
-describe("database version 2", () => {
+describe("database versions 2 and 3", () => {
   it("upgrades a 1.x database without touching its investigations", async () => {
     const indexedDB = new IDBFactory();
     const name = `upgrade-${crypto.randomUUID()}`;
@@ -173,8 +217,27 @@ describe("database version 2", () => {
     expect(loaded.status).toBe("found");
     expect(await db.table("investigations").get(record.id)).toEqual(record);
     expect(db.tables.map((table) => table.name).sort()).toEqual(
-      ["discoveries", "explorations", "investigations", "personalConnections", "studyProgress"].sort(),
+      ["discoveries", "explorations", "investigations", "journal", "personalConnections", "studyProgress"].sort(),
     );
+    db.close();
+  });
+
+  it("upgrades a 2.0–2.2 database without touching its records", async () => {
+    const indexedDB = new IDBFactory();
+    const name = `upgrade-2-${crypto.randomUUID()}`;
+    const older = new Dexie(name, { indexedDB, IDBKeyRange });
+    older.version(1).stores({ investigations: "id, updatedAt, status" });
+    older.version(2).stores({ studyProgress: "id, updatedAt", discoveries: "id, updatedAt, createdAt", personalConnections: "id, updatedAt", explorations: "id, kind, updatedAt" });
+    const saved = { ...card(), dataVersion: STUDY_DATA_VERSION };
+    await older.table("discoveries").put(saved);
+    older.close();
+
+    const db = new GospelLabsDatabase(name, { indexedDB, IDBKeyRange });
+    const study = createStudyRepository(db);
+    expect(await db.table("discoveries").get("card-1")).toEqual(saved);
+    expect(await study.journal.list()).toEqual({ records: [], unreadable: 0 });
+    await study.journal.put(entry());
+    expect(await study.counts()).toMatchObject({ discoveries: 1, journal: 1 });
     db.close();
   });
 
@@ -190,5 +253,26 @@ describe("database version 2", () => {
     legacy.version(1).stores({ investigations: "id, updatedAt, status" });
     expect(await legacy.table("investigations").get(record.id)).toEqual(record);
     legacy.close();
+  });
+
+  it("can still be opened by a 2.0–2.2 build after adding the journal (rollback safety)", async () => {
+    const indexedDB = new IDBFactory();
+    const name = `rollback-2-${crypto.randomUUID()}`;
+    const upgraded = new GospelLabsDatabase(name, { indexedDB, IDBKeyRange });
+    const study = createStudyRepository(upgraded);
+    await study.discoveries.put(card());
+    await study.journal.put(entry());
+    upgraded.close();
+
+    const older = new Dexie(name, { indexedDB, IDBKeyRange });
+    older.version(1).stores({ investigations: "id, updatedAt, status" });
+    older.version(2).stores({ studyProgress: "id, updatedAt", discoveries: "id, updatedAt, createdAt", personalConnections: "id, updatedAt", explorations: "id, kind, updatedAt" });
+    expect(await older.table("discoveries").get("card-1")).toMatchObject({ title: "One by one" });
+    older.close();
+
+    // The journal is still there for the newer version.
+    const reopened = new GospelLabsDatabase(name, { indexedDB, IDBKeyRange });
+    expect(await createStudyRepository(reopened).journal.get("entry-1")).toMatchObject({ text: entry().text });
+    reopened.close();
   });
 });

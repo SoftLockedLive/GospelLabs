@@ -154,6 +154,7 @@ Browsers pick up a rollback like any other deployment: the restored build has a 
 
 Rolling back changes only the app's files, but the older app then reads and saves data written by the newer one:
 
+- **From 3.0 back to 2.0–2.2:** safe for data. The older app opens 3.0's version 3 database (tested) and ignores its journal table, so journal entries stay on the device but don't show, and a backup exported from the older app leaves them out. It refuses 3.0's format 4 backups as "made by a newer version". Fixing forward brings the Journal back.
 - **Back to 1.1 or later:** safe for data, including from 2.0 (1.1 opens 2.0's version 2 database; tested). From 1.1 on, the app keeps top-level fields it doesn't recognise when it saves an investigation. If the newer release raised `RECORD_DATA_VERSION`, investigations it saved open with a "saved by a newer version" notice in the older one and can't be edited until you fix forward. Nothing is overwritten.
 - **Back to 1.0** (the first build on Atlas): **avoid this once 1.1 has been live.** 1.0 drops evidence connections, saved discoveries, Come unto Christ reflections, challenge responses, and discovery-trail notes from any investigation it saves, and refuses backups in format version 2. Fix forward instead. If you must roll back to 1.0, do it immediately after a bad deploy, before people have used the new features.
 

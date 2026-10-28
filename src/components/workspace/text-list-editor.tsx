@@ -28,7 +28,7 @@ export function TextListEditor({ items, onAdd, onUpdate, onRemove, itemLabel, pl
         <ol className="flex flex-col gap-3">
           {items.map((item, index) => (
             <li key={item.id} className="flex items-start gap-3">
-              <span aria-hidden className="mt-2.5 w-5 shrink-0 text-right font-mono text-xs text-subtle">
+              <span aria-hidden className="mt-2.5 w-5 shrink-0 text-right font-semibold tabular-nums text-xs text-subtle">
                 {index + 1}.
               </span>
               <Textarea

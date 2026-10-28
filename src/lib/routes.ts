@@ -39,6 +39,9 @@ export function notebookHref(cardId?: string): string {
   return cardId ? `/notebook?card=${encodeURIComponent(cardId)}` : "/notebook";
 }
 
+/** The Journal tab of the Notebook. */
+export const journalHref = () => "/notebook?view=journal";
+
 /** The Discovery Map, optionally focused on one node ("kind:id"). */
 export function mapHref(nodeRef?: string): string {
   return nodeRef ? `/map?node=${encodeURIComponent(nodeRef)}` : "/map";

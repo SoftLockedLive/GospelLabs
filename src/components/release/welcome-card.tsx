@@ -6,12 +6,12 @@
  * using, and how to report a problem. Returning learners never see it; they
  * get What's new instead (see whats-new.tsx, which decides who is new).
  */
-import { Bug, Compass, Palette, X } from "lucide-react";
+import { Bug, Compass, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useSyncExternalStore } from "react";
-import { ThemeSelector } from "@/components/settings/theme-selector";
+import { LookChoice } from "@/components/settings/theme-selector";
 import { Button } from "@/components/ui/button";
-import { Disclosure } from "@/components/ui/disclosure";
+import { displayVersion } from "@/domain/changelog";
 import { APP_RELEASE } from "@/lib/app-version";
 import { feedbackMailto } from "@/lib/feedback";
 import { readWelcome, setWelcome, subscribeToReleaseState } from "@/lib/release-state";
@@ -36,7 +36,7 @@ export function WelcomeCard() {
   };
 
   return (
-    <section aria-labelledby="welcome-heading" className="motion-reveal rounded-2xl border border-accent/40 bg-surface p-5 shadow-soft sm:p-7">
+    <section aria-labelledby="welcome-heading" className="motion-reveal rounded-xl border border-line-strong bg-surface p-5 sm:p-7">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <h2 id="welcome-heading" className="font-serif text-2xl leading-snug text-fg">
@@ -67,26 +67,14 @@ export function WelcomeCard() {
         </Button>
       </div>
 
-      <Disclosure
-        variant="plain"
-        className="mt-4"
-        summary={
-          <span className="inline-flex items-center gap-2">
-            <Palette aria-hidden className="size-4" />
-            Choose a look
-          </span>
-        }
-      >
-        <div className="pt-2 pb-1">
-          <ThemeSelector />
-          <p className="mt-2 text-xs text-subtle">You can change this any time in Settings.</p>
-        </div>
-      </Disclosure>
+      <div className="mt-5 border-t border-line pt-4">
+        <LookChoice />
+      </div>
 
       <div className="mt-4 flex flex-col gap-2 border-t border-line pt-4 text-xs leading-relaxed text-subtle sm:flex-row sm:items-center sm:justify-between">
         <p>
-          You&rsquo;re using Gospel Labs {APP_RELEASE}.{" "}
-          <Link href="/settings#settings-about" className="text-accent underline underline-offset-2 hover:text-accent-strong">
+          You&rsquo;re using Gospel Labs {displayVersion(APP_RELEASE)}.{" "}
+          <Link href="/settings/about" className="text-accent underline underline-offset-2 hover:text-accent-strong">
             What&rsquo;s in this version
           </Link>
         </p>

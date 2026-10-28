@@ -12,8 +12,9 @@ interface PrivateNoteProps {
 
 /**
  * An optional private note, saved with the session on this device as the
- * learner types. It is never required, never evaluated, and shown nowhere
- * else unless the learner saves it to their Notebook.
+ * learner types. It is never required and never evaluated; it also appears
+ * in the learner's Journal (Notebook › Journal), and on a Discovery Card if
+ * they save one.
  *
  * Saved a moment after typing stops, when the field loses focus, and before
  * the page is hidden, closed, or left (including for another session) or
@@ -44,7 +45,7 @@ export function PrivateNote({ sessionId, value, onChange }: PrivateNoteProps) {
         className="w-full resize-y rounded-xl border border-sacred-line bg-surface px-3.5 py-3 font-serif text-base leading-relaxed text-fg transition-colors placeholder:text-subtle hover:border-accent/40 focus-visible:border-accent focus-visible:ring-2 focus-visible:ring-accent/30 focus-visible:outline-none"
       />
       <p id={`${id}-hint`} className="text-xs leading-relaxed text-sacred-muted">
-        Kept only on this device, with this session. You never need to write anything.
+        Kept only on this device, with this session, and in your journal. You never need to write anything.
       </p>
       <p aria-live="polite" className="min-h-4 text-xs text-sacred-muted">
         {status.state === "saved" && "Saved on this device."}

@@ -1,20 +1,26 @@
 "use client";
 
+import Link from "next/link";
 import { useId, useSyncExternalStore } from "react";
 import { ChoiceCard } from "@/components/ui/choice-card";
 import {
-  THEME_DESCRIPTIONS,
-  THEME_LABELS,
-  THEME_PREFERENCES,
+  DEFAULT_THEME_PREFERENCE,
   readThemePreference,
   setThemePreference,
   subscribeToThemePreference,
+  SYSTEM_THEMES,
+  THEME_DESCRIPTIONS,
+  THEME_LABELS,
+  THEME_PREFERENCES,
   type Theme,
+  type ThemePreference,
 } from "@/lib/theme";
+
+const useThemePreference = () => useSyncExternalStore(subscribeToThemePreference, readThemePreference, () => DEFAULT_THEME_PREFERENCE);
 
 /** Theme cards, each with a small live preview drawn in that theme's own colors. */
 export function ThemeSelector() {
-  const current = useSyncExternalStore(subscribeToThemePreference, readThemePreference, () => "dark" as const);
+  const current = useThemePreference();
   const name = useId();
 
   return (
@@ -30,20 +36,62 @@ export function ThemeSelector() {
             onChange={() => setThemePreference(value)}
             label={THEME_LABELS[value]}
             description={THEME_DESCRIPTIONS[value]}
-            preview={
-              value === "system" ? (
-                <div className="grid grid-cols-2 overflow-hidden rounded-lg border border-line">
-                  <ThemePreview theme="dark" bare />
-                  <ThemePreview theme="light" bare />
-                </div>
-              ) : (
-                <ThemePreview theme={value} />
-              )
-            }
+            preview={<ThemeChoicePreview value={value} />}
           />
         ))}
       </div>
     </fieldset>
+  );
+}
+
+/** The looks offered where a learner first meets the new design: their device's choice, Daylight, and Evening. */
+const QUICK_LOOKS: readonly ThemePreference[] = ["system", "light", "evening"];
+
+/**
+ * "Choose your look", in the welcome and in What's new for 3.0: follow the device, Daylight, or Evening, so
+ * nobody has to go looking for a darker screen at night. Someone on Lab or Parchment sees theirs as a fourth
+ * choice, already selected. Every look is in Settings › Appearance.
+ */
+export function LookChoice() {
+  const current = useThemePreference();
+  const name = useId();
+  const looks = QUICK_LOOKS.includes(current) ? QUICK_LOOKS : [...QUICK_LOOKS, current];
+  return (
+    <fieldset>
+      <legend className="text-[0.9375rem] font-semibold text-fg">Choose your look</legend>
+      <div className={looks.length > 3 ? "mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4" : "mt-2 grid grid-cols-3 gap-2"}>
+        {looks.map((value) => (
+          <ChoiceCard
+            key={value}
+            name={name}
+            value={value}
+            checked={current === value}
+            onChange={() => setThemePreference(value)}
+            label={THEME_LABELS[value]}
+            preview={<ThemeChoicePreview value={value} />}
+            className="gap-2 p-2"
+          />
+        ))}
+      </div>
+      <p className="mt-2 text-sm text-muted">
+        Change it any time in{" "}
+        <Link href="/settings/appearance" className="text-accent underline underline-offset-2 hover:text-accent-strong">
+          Settings › Appearance
+        </Link>
+        , where Lab and Parchment are too.
+      </p>
+    </fieldset>
+  );
+}
+
+/** A preview for a choice: the theme itself, or both of the device's themes side by side. */
+function ThemeChoicePreview({ value }: { value: ThemePreference }) {
+  if (value !== "system") return <ThemePreview theme={value} />;
+  return (
+    <div className="grid grid-cols-2 overflow-hidden rounded-lg border border-line">
+      <ThemePreview theme={SYSTEM_THEMES.light} bare />
+      <ThemePreview theme={SYSTEM_THEMES.dark} bare />
+    </div>
   );
 }
 

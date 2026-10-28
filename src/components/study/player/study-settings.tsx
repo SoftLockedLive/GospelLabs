@@ -22,12 +22,9 @@ export function StudySettings({ investigation, difficulty, length, onDifficulty,
   const [open, setOpen] = useState(false);
   return (
     <>
-      <Button variant="secondary" size="sm" onClick={() => setOpen(true)} className="h-11 sm:h-9" aria-haspopup="dialog">
+      <Button variant="link" onClick={() => setOpen(true)} className="h-11 px-3" aria-haspopup="dialog">
         <SlidersHorizontal aria-hidden />
-        <span className="hidden sm:inline">
-          {DIFFICULTY_LABELS[difficulty]} · {length === "quick" ? "Quick" : "Deep"}
-        </span>
-        <span className="sm:hidden">Settings</span>
+        {DIFFICULTY_LABELS[difficulty]} · {length === "quick" ? "Quick" : "Deep"}
         <span className="sr-only">: change difficulty or session length</span>
       </Button>
       <Dialog

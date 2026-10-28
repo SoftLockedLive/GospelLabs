@@ -2,6 +2,21 @@
   "note": "What changed in each release, newest first, in plain words for learners. Drives the What's new card, the update notice, and Settings › About. Version numbers are MAJOR.MINOR.CONTENT.PATCH (docs/VERSIONING.md; three parts before 2.2.0.1); patches are listed only in Settings › About. The newest entry must match package.json (checked by tests).",
   "releases": [
     {
+      "version": "3.0.0.0",
+      "date": "2026-10-28",
+      "kind": "major",
+      "title": "A new look, centered on the Savior",
+      "highlights": [
+        "Gospel Labs has a new look, centered on Jesus Christ and inspired by the Church’s Gospel Library app: white pages, paintings of the Savior, and scripture set like your printed scriptures.",
+        "Paintings by artists like Carl Bloch, Heinrich Hofmann, and Rembrandt lead each investigation and study tool. You’ll find who painted each one in Settings › About.",
+        "New in your Notebook: a Journal. Write a thought, a question, or a tender mercy, and see everything you’ve written anywhere in Gospel Labs, each linked back to where you wrote it.",
+        "More room to study on a phone: a step fills the screen, the evidence stays pinned at the top while you answer, and Check and hints stay within reach at the bottom.",
+        "Settings is a short list now, with one page for each topic, and Settings › About explains what each number in a version means.",
+        "Gospel Labs follows your phone’s light or dark setting: Daylight by day, Evening at night. Choose any look in Settings › Appearance, where Lab and Parchment are too.",
+        "Backups now include your journal."
+      ]
+    },
+    {
       "version": "2.2.0.1",
       "date": "2026-10-26",
       "kind": "patch",

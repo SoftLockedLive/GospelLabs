@@ -35,6 +35,12 @@ const SHELL_PAGES = [
   "/questions",
   "/library",
   "/settings",
+  "/settings/appearance",
+  "/settings/study",
+  "/settings/data",
+  "/settings/privacy",
+  "/settings/feedback",
+  "/settings/about",
   "/investigations/new",
   "/investigations/view",
   "/offline",
@@ -57,13 +63,15 @@ const NETWORK_TIMEOUT_MS = 4000;
 const pageKey = (url) => new URL(url, self.location.origin).pathname;
 
 /**
- * Static asset URLs in a page's HTML. Pages also embed them in escaped JSON
- * (\"/_next/static/…\"), so a backslash ends a URL too; otherwise it's kept
- * and the request 404s.
+ * Static asset URLs in a page's HTML: build files, and the paintings a page
+ * shows (/art/…; only the first file of a srcset follows a quote, so the
+ * smaller one is cached ahead and the larger the first time it's used).
+ * Pages also embed URLs in escaped JSON (\"/_next/static/…\"), so a
+ * backslash ends a URL too; otherwise it's kept and the request 404s.
  */
 function staticAssetsIn(html) {
   const urls = new Set();
-  for (const match of html.matchAll(/["'(](\/_next\/static\/[^"')\s\\]+)/g)) urls.add(match[1].replace(/&amp;/g, "&"));
+  for (const match of html.matchAll(/["'(](\/(?:_next\/static|art)\/[^"')\s\\]+)/g)) urls.add(match[1].replace(/&amp;/g, "&"));
   return [...urls];
 }
 
@@ -148,7 +156,7 @@ async function handleImmutableAsset(request) {
   return response;
 }
 
-/** Icons and the manifest: serve from cache, refresh in the background. */
+/** Icons, paintings, and the manifest: serve from cache, refresh in the background. */
 async function handleStaticFile(request) {
   const assets = await caches.open(ASSETS_CACHE);
   const cached = await assets.match(request);
@@ -178,7 +186,7 @@ self.addEventListener("fetch", (event) => {
     // Client-side navigation data: network only. When offline, Next.js falls
     // back to a full page load, which is served from the page cache above.
     return;
-  } else if (SHELL_FILES.includes(url.pathname) || url.pathname.startsWith("/icons/")) {
+  } else if (SHELL_FILES.includes(url.pathname) || url.pathname.startsWith("/icons/") || url.pathname.startsWith("/art/")) {
     event.respondWith(handleStaticFile(request));
   }
 });

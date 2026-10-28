@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { mapHref } from "@/lib/routes";
@@ -20,7 +20,7 @@ export function ConceptChip({ concept, linked = false, className }: ConceptChipP
   );
   const content = (
     <>
-      {concept.demonstrated && <Sparkles aria-hidden className="size-3 shrink-0" />}
+      {concept.demonstrated && <CircleCheck aria-hidden className="size-3 shrink-0" />}
       <span className="truncate">{concept.label}</span>
     </>
   );

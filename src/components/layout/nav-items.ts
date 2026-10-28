@@ -2,12 +2,12 @@ import {
   BookOpen,
   BookOpenText,
   Compass,
-  HeartHandshake,
+  HandHeart,
   House,
   Library,
   NotebookPen,
   Settings,
-  Sparkles,
+  Sunrise,
   Waypoints,
   type LucideIcon,
 } from "lucide-react";
@@ -51,7 +51,7 @@ export const CHARACTER_ITEM: NavItem = {
   href: "/character",
   label: "Character of Christ",
   shortLabel: "Character",
-  icon: Sparkles,
+  icon: HandHeart,
   description: "Study His attributes and how He showed them",
 };
 
@@ -59,7 +59,7 @@ export const CONNECT_ITEM: NavItem = {
   href: "/connect",
   label: "Connect with Christ",
   shortLabel: "Connect",
-  icon: HeartHandshake,
+  icon: Sunrise,
   description: "A few quiet minutes with the Savior",
 };
 
@@ -67,7 +67,7 @@ export const NOTEBOOK_ITEM: NavItem = {
   href: "/notebook",
   label: "Notebook",
   icon: NotebookPen,
-  description: "Your Discovery Cards",
+  description: "Your Discovery Cards and journal",
 };
 
 export const MAP_ITEM: NavItem = {

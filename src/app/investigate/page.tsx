@@ -18,14 +18,12 @@ export default function InvestigatePage() {
     <PageContainer>
       <div className="flex flex-col gap-8">
         <PageHeader
-          eyebrow="Investigate"
           title="Guided investigations"
           description={
             <>
-              Each one starts with a question learners have asked, then works through the scriptures and the words of prophets to see what
-              they say. A quick study takes about {STUDY_LENGTH_MINUTES.quick.join("–")} minutes; a deep one,{" "}
-              {STUDY_LENGTH_MINUTES.deep.join("–")}. You can stop after any step and pick up where you left off. Whatever you
-              discover is saved to your Notebook.
+              Each starts with a question learners have asked, then looks at what the scriptures and prophets say. A quick study
+              takes about {STUDY_LENGTH_MINUTES.quick.join("–")} minutes, a deep one {STUDY_LENGTH_MINUTES.deep.join("–")}. Stop after
+              any step; your place is saved.
             </>
           }
         />

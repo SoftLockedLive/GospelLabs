@@ -193,7 +193,7 @@ function HighlightItem({
         <button
           type="button"
           onClick={() => onShow(highlight)}
-          className="inline-flex min-h-11 items-center font-mono text-xs tracking-wide text-accent hover:text-accent-strong hover:underline sm:min-h-0 sm:py-1"
+          className="inline-flex min-h-11 items-center font-semibold tabular-nums text-xs tracking-wide text-accent hover:text-accent-strong hover:underline sm:min-h-0 sm:py-1"
         >
           {verseRef}
           <span className="sr-only">: show in the passage</span>

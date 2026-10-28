@@ -1,0 +1,199 @@
+{
+  "note": "Public-domain paintings used as covers (src/lib/art.ts). Credits are copied from each file’s Wikimedia Commons page; images are in public/art/. Never add Church-owned or other copyrighted art.",
+  "artworks": [
+    {
+      "slug": "bloch-gethsemane",
+      "title": "An Angel Comforting Jesus in Gethsemane",
+      "artist": "Carl Bloch",
+      "year": "1873",
+      "institution": "Frederiksborg Castle",
+      "source": "https://commons.wikimedia.org/wiki/File:Gethsemane_Carl_Bloch.jpg",
+      "license": "Public domain",
+      "alt": "Carl Bloch’s painting of an angel comforting Jesus in Gethsemane.",
+      "focus": {
+        "wide": "50% 39%",
+        "standard": "50% 34%"
+      },
+      "height1200": 1438
+    },
+    {
+      "slug": "rembrandt-prodigal-son",
+      "title": "The Return of the Prodigal Son",
+      "artist": "Rembrandt",
+      "year": "c. 1668",
+      "institution": "Hermitage Museum",
+      "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Return_of_the_Prodigal_Son.jpg",
+      "license": "Public domain",
+      "alt": "Rembrandt’s painting of the prodigal son kneeling as his father holds him close.",
+      "focus": {
+        "wide": "50% 25%",
+        "standard": "50% 16%"
+      },
+      "height1200": 1539
+    },
+    {
+      "slug": "bloch-sermon-on-the-mount",
+      "title": "The Sermon on the Mount",
+      "artist": "Carl Bloch",
+      "year": "1877",
+      "institution": "Frederiksborg Castle",
+      "source": "https://commons.wikimedia.org/wiki/File:Bloch-SermonOnTheMount.jpg",
+      "license": "Public domain",
+      "alt": "Carl Bloch’s painting of Jesus teaching a crowd on a hillside.",
+      "focus": {
+        "wide": "50% 6%",
+        "standard": "50% 0%"
+      },
+      "height1200": 1346
+    },
+    {
+      "slug": "holbein-noli-me-tangere",
+      "title": "Noli Me Tangere",
+      "artist": "Hans Holbein the Younger",
+      "year": "1526–28",
+      "institution": "Royal Collection",
+      "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger_%281497-8-1543%29_-_%27Noli_Me_Tangere%27_-_RCIN_400001_-_Royal_Collection.jpg",
+      "license": "Public domain",
+      "alt": "Hans Holbein’s painting of the risen Jesus meeting Mary Magdalene in the garden by the tomb.",
+      "focus": {
+        "wide": "50% 3%",
+        "standard": "50% 0%"
+      },
+      "height1200": 961
+    },
+    {
+      "slug": "brown-washing-feet",
+      "title": "Jesus Washing Peter’s Feet",
+      "artist": "Ford Madox Brown",
+      "year": "1852–56",
+      "institution": "Tate Britain",
+      "source": "https://commons.wikimedia.org/wiki/File:Jesus_washing_Peter%27s_feet.jpg",
+      "license": "Public domain",
+      "alt": "Ford Madox Brown’s painting of Jesus kneeling to wash Peter’s feet.",
+      "focus": {
+        "wide": "50% 28%",
+        "standard": "50% 0%"
+      },
+      "height1200": 1059
+    },
+    {
+      "slug": "hunt-finding-in-temple",
+      "title": "The Finding of the Saviour in the Temple",
+      "artist": "William Holman Hunt",
+      "year": "1854–55",
+      "institution": "Birmingham Museum and Art Gallery",
+      "source": "https://commons.wikimedia.org/wiki/File:William_Holman_Hunt_-_The_Finding_of_the_Saviour_in_the_Temple_-_Google_Art_Project.jpg",
+      "license": "Public domain",
+      "alt": "William Holman Hunt’s painting of Mary finding the boy Jesus among the teachers in the temple.",
+      "focus": {
+        "wide": "50% 0%",
+        "standard": "100% 50%"
+      },
+      "height1200": 735
+    },
+    {
+      "slug": "rembrandt-emmaus",
+      "title": "The Supper at Emmaus",
+      "artist": "Rembrandt",
+      "year": "1648",
+      "source": "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Supper_at_Emmaus.jpg",
+      "license": "Public domain",
+      "alt": "Rembrandt’s painting of the risen Jesus breaking bread with two disciples at Emmaus.",
+      "focus": {
+        "wide": "50% 61%",
+        "standard": "50% 69%"
+      },
+      "height1200": 1244
+    },
+    {
+      "slug": "murillo-bethesda",
+      "title": "Christ healing the Paralytic at the Pool of Bethesda",
+      "artist": "Bartolomé Esteban Murillo",
+      "year": "1667–70",
+      "institution": "National Gallery",
+      "source": "https://commons.wikimedia.org/wiki/File:Curacion_del_paralitico_Murillo_1670.jpg",
+      "license": "Public domain",
+      "alt": "Murillo’s painting of Jesus speaking to a man lying by the pool of Bethesda.",
+      "focus": {
+        "wide": "50% 16%",
+        "standard": "50% 0%"
+      },
+      "height1200": 1092
+    },
+    {
+      "slug": "hofmann-gethsemane",
+      "title": "Christ in Gethsemane",
+      "artist": "Heinrich Hofmann",
+      "year": "1886",
+      "institution": "Riverside Church, New York City",
+      "source": "https://commons.wikimedia.org/wiki/File:Christ_in_Gethsemane.jpg",
+      "license": "Public domain",
+      "alt": "Heinrich Hofmann’s painting of Jesus praying in Gethsemane, looking up into the light.",
+      "focus": {
+        "wide": "50% 22%",
+        "standard": "45% 20%"
+      },
+      "height1200": 1683
+    },
+    {
+      "slug": "hofmann-rich-young-ruler",
+      "title": "Christ and the Rich Young Ruler",
+      "artist": "Heinrich Hofmann",
+      "year": "1889",
+      "institution": "Riverside Church",
+      "source": "https://commons.wikimedia.org/wiki/File:Hoffman-ChristAndTheRichYoungRuler.jpg",
+      "license": "Public domain",
+      "alt": "Heinrich Hofmann’s painting of Jesus speaking with a rich young man and gesturing toward the poor.",
+      "focus": {
+        "wide": "50% 1%",
+        "standard": "50% 0%"
+      },
+      "height1200": 947
+    },
+    {
+      "slug": "rembrandt-prophetess-hannah",
+      "title": "An Old Woman Reading, Probably the Prophetess Hannah",
+      "artist": "Rembrandt",
+      "year": "1631",
+      "institution": "Rijksmuseum",
+      "source": "https://commons.wikimedia.org/wiki/File:Oude_lezende_vrouw%2C_waarschijnlijk_de_profetes_Hanna_Rijksmuseum_SK-A-3066.jpeg",
+      "license": "Public domain",
+      "alt": "Rembrandt’s painting of an old woman reading a large book.",
+      "focus": {
+        "wide": "50% 41%",
+        "standard": "50% 38%"
+      },
+      "height1200": 1505
+    },
+    {
+      "slug": "vermeer-lady-writing",
+      "title": "A Lady Writing",
+      "artist": "Johannes Vermeer",
+      "year": "c. 1665",
+      "institution": "National Gallery of Art",
+      "source": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer%2C_A_Lady_Writing%2C_c._1665%2C_NGA_46437.jpg",
+      "license": "Public domain",
+      "alt": "Vermeer’s painting of a young woman writing at a table.",
+      "focus": {
+        "wide": "50% 44%",
+        "standard": "50% 41%"
+      },
+      "height1200": 1368
+    }
+  ],
+  "uses": {
+    "one-by-one": "bloch-gethsemane",
+    "again-and-again": "rembrandt-prodigal-son",
+    "christ-at-the-center": "bloch-sermon-on-the-mount",
+    "families-beyond-the-veil": "holbein-noli-me-tangere",
+    "fear-god-friend": "brown-washing-feet",
+    "primary-questions": "hunt-finding-in-temple",
+    "recognizing-the-spirit": "rembrandt-emmaus",
+    "when-faithful-people-suffer": "murillo-bethesda",
+    "connect": "hofmann-gethsemane",
+    "character": "hofmann-rich-young-ruler",
+    "explorer": "rembrandt-prophetess-hannah",
+    "journal": "vermeer-lady-writing",
+    "home": "bloch-sermon-on-the-mount"
+  }
+}

@@ -33,11 +33,11 @@ export function CompareActivity(props: Props) {
           <li key={perspective.id} className={cn("rounded-xl border bg-surface p-4 sm:p-5", mark ? markSurface(mark, finished) : "border-line")}>
             <fieldset aria-labelledby={legendId} className="min-w-0">
               <div id={legendId} className="flex items-start gap-3">
-                <span aria-hidden className="mt-0.5 font-mono text-xs text-accent">
-                  {String(index + 1).padStart(2, "0")}
+                <span aria-hidden className="mt-0.5 font-semibold tabular-nums text-muted">
+                  {`${index + 1}.`}
                 </span>
                 <div className="min-w-0 flex-1">
-                  {perspective.voice && <p className="text-xs font-medium tracking-wide text-subtle uppercase">{perspective.voice}</p>}
+                  {perspective.voice && <p className="kicker text-muted">{perspective.voice}</p>}
                   <p className="mt-0.5 text-[0.975rem] leading-relaxed text-fg">{perspective.text}</p>
                 </div>
                 <MarkIcon mark={mark} finished={finished} className="mt-0.5" />

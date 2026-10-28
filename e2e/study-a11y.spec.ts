@@ -40,7 +40,14 @@ const PAGES = [
   `/notebook?card=${CARD_FROM_2_0.id}`,
   "/map",
   `/map?node=${encodeURIComponent("concept:atonement")}`,
+  "/notebook?view=journal",
   "/settings",
+  "/settings/appearance",
+  "/settings/study",
+  "/settings/data",
+  "/settings/privacy",
+  "/settings/feedback",
+  "/settings/about",
   "/library",
   "/questions",
 ];
@@ -101,8 +108,9 @@ async function prepare(page: Page, theme: string) {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.addInitScript({ path: AXE_PATH });
   await page.addInitScript((value) => localStorage.setItem("gospel-labs:theme", value), theme);
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  // Backup and data opens the database, so the records below land in the app's own stores.
   await putRaw(page, "discoveries", [CARD_FROM_2_0]);
   await putRaw(page, "personalConnections", [CONNECTION_FROM_2_0]);
 }
@@ -181,7 +189,7 @@ for (const theme of THEMES) {
 
 test("dialogs from Settings have no violations", async ({ page }) => {
   await prepare(page, "dark");
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await page.getByRole("button", { name: "Delete all data" }).click();
   await expectNoViolations(page, "the delete-all dialog", page.getByRole("dialog", { name: "Delete all data?" }));
 });

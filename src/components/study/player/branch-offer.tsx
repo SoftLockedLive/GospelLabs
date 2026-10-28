@@ -16,7 +16,7 @@ export function BranchOffer({ branch, visited, onExplore, onDismiss }: BranchOff
   const steps = branch.steps.length;
   return (
     <aside aria-label="A related question" className="motion-reveal rounded-xl border border-dashed border-accent/45 bg-surface p-4 sm:p-5">
-      <p className="flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] text-accent uppercase">
+      <p className="flex items-center gap-2 kicker text-muted">
         <GitBranch aria-hidden className="size-3.5" />
         A related question
       </p>

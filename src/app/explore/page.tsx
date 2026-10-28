@@ -1,7 +1,8 @@
-import { BookOpenText, ScrollText } from "lucide-react";
+import { BookOpenText } from "lucide-react";
 import type { Metadata } from "next";
 import { PageContainer } from "@/components/layout/app-shell";
 import { PassageLibrary, type PassageListItem } from "@/components/study/explorer/passage-library";
+import { PageCover } from "@/components/ui/art-image";
 import { EmptyState } from "@/components/ui/empty-state";
 import { PageHeader } from "@/components/ui/page-header";
 import { bundlePassage } from "@/domain/study/explorer";
@@ -27,14 +28,14 @@ export default function ExplorePage() {
 
   return (
     <PageContainer className="flex flex-col gap-8">
+      <PageCover use="explorer" />
       <PageHeader
         eyebrow="Scripture Explorer"
         title="Explore a passage"
         description="Choose a passage and study it closely: highlight the words that stand out, follow its themes, look up key words, and connect it with related scriptures."
       />
 
-      <aside className="flex max-w-3xl items-start gap-3 rounded-xl border border-line bg-surface px-4 py-3.5 text-sm leading-relaxed text-muted">
-        <ScrollText aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+      <aside className="max-w-3xl border-l-2 border-line-strong pl-4 text-[0.9375rem] leading-relaxed text-muted">
         <p>
           Gospel Labs shows short passages word for word, never more than 12 verses at a time, and links each one to the full chapter on
           ChurchofJesusChrist.org so you can read it in context. Your highlights and notes stay on this device.

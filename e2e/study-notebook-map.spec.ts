@@ -136,7 +136,7 @@ test("a finished investigation's card shows its sources, concepts, connections, 
   await expectNoScoring(page);
 
   // The card is in the Notebook's list, and search finds it.
-  await detail.getByRole("link", { name: "Discovery Notebook" }).click();
+  await detail.getByRole("link", { name: "Notebook", exact: true }).click();
   await page.getByRole("searchbox", { name: "Search discoveries" }).fill(card.concepts[0].label);
   await expect(page.getByRole("article").filter({ hasText: inv.title })).toBeVisible();
   await page.getByRole("searchbox", { name: "Search discoveries" }).fill("no such discovery anywhere");

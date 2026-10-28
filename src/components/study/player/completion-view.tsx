@@ -10,8 +10,9 @@
  * learner worked out is labeled "You discovered"; what was shown or explained
  * is labeled "Suggested by Gospel Labs". No scores.
  */
-import { ArrowLeft, BookMarked, Check, ChevronDown, Heart, ListChecks, Network, PartyPopper, Route, Sparkles } from "lucide-react";
+import { ArrowLeft, BookMarked, Check, ChevronDown, CircleCheck, ListChecks, Network } from "lucide-react";
 import { useEffect, useId, useState, type ReactNode } from "react";
+import { ArtImage } from "@/components/ui/art-image";
 import { ButtonLink, Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/input";
 import type { StudyInvestigation } from "@/domain/study/content-schema";
@@ -39,13 +40,16 @@ interface CompletionViewProps {
   assistant: StudyAssistant;
 }
 
-function Section({ title, icon, aside, children, className }: { title: string; icon: ReactNode; aside?: ReactNode; children: ReactNode; className?: string }) {
+/** A part of the discovery: a heading and its text, under a hairline. "sacred" sets apart what points to the Savior. */
+function Section({ title, aside, children, variant = "plain" }: { title: string; aside?: ReactNode; children: ReactNode; variant?: "plain" | "sacred" }) {
   const id = useId();
   return (
-    <section aria-labelledby={id} className={cn("motion-reveal rounded-2xl border border-line bg-surface p-5 sm:p-6", className)}>
+    <section
+      aria-labelledby={id}
+      className={cn("motion-reveal", variant === "sacred" ? "rounded-xl border border-sacred-line bg-sacred p-5 text-sacred-fg sm:p-6" : "border-t border-line pt-6")}
+    >
       <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-        <h2 id={id} className="flex items-center gap-2 text-base font-semibold text-fg">
-          {icon}
+        <h2 id={id} className="text-heading">
           {title}
         </h2>
         {aside}
@@ -106,9 +110,10 @@ export function CompletionView({ investigation, progress, card, saved, saveError
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-6">
-      <header className="motion-reveal rounded-2xl border border-green/30 bg-surface p-5 shadow-soft sm:p-7">
-        <p className="flex items-center gap-2 text-sm font-semibold text-green">
-          <PartyPopper aria-hidden className="motion-success size-5" />
+      <header className="motion-reveal">
+        <ArtImage use={investigation.id} sizes="(min-width: 48rem) 48rem, 100vw" className="mb-5 w-full rounded-xl" decorative />
+        <p className="flex items-center gap-2 text-[0.9375rem] font-semibold text-green">
+          <CircleCheck aria-hidden className="motion-success size-5" />
           You finished the investigation!
         </p>
         {saved && (
@@ -117,20 +122,20 @@ export function CompletionView({ investigation, progress, card, saved, saveError
             Saved to your Notebook.
           </p>
         )}
-        <h1 tabIndex={-1} className="mt-4 text-2xl font-semibold tracking-tight text-fg outline-none sm:text-3xl">
+        <h1 tabIndex={-1} className="text-title mt-3 text-fg outline-none">
           {investigation.title}
         </h1>
-        <p className="mt-1.5 text-base leading-snug text-muted">{investigation.question}</p>
+        <p className="mt-2 font-serif text-lg leading-snug text-muted italic">{investigation.question}</p>
 
         {bigIdea && (
           <section aria-labelledby={bigIdeaId} className="mt-5 border-t border-line pt-4">
             <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
-              <h2 id={bigIdeaId} className="text-xs font-semibold tracking-wide text-muted uppercase">
+              <h2 id={bigIdeaId} className="kicker text-muted">
                 The big idea
               </h2>
               <ProvenanceLabel provenance="suggested" />
             </div>
-            <p className="mt-2 font-serif text-lg leading-snug text-fg">{bigIdea}</p>
+            <p className="prose-scripture mt-2 text-fg">{bigIdea}</p>
           </section>
         )}
 
@@ -142,7 +147,7 @@ export function CompletionView({ investigation, progress, card, saved, saveError
                 <ul aria-label="Concepts you discovered" className="flex flex-wrap gap-2">
                   {demonstratedConcepts.map((concept) => (
                     <li key={concept.ref} className="inline-flex items-center gap-1.5 rounded-full border border-green/35 bg-green-soft px-3 py-1 text-xs font-medium text-fg">
-                      <Sparkles aria-hidden className="size-3 text-green" />
+                      <CircleCheck aria-hidden className="size-3 text-green" />
                       {concept.label}
                     </li>
                   ))}
@@ -198,7 +203,7 @@ export function CompletionView({ investigation, progress, card, saved, saveError
 
       {/* Native <details>: keyboard and screen-reader friendly, closed until the learner wants the full write-up. */}
       <details className="group/everything">
-        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 rounded-2xl border border-line bg-surface px-5 py-3 transition-colors select-none hover:border-accent/40 hover:bg-surface-raised [&::-webkit-details-marker]:hidden">
+        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 rounded-xl border border-line-strong px-5 py-3 transition-colors select-none hover:bg-surface-raised [&::-webkit-details-marker]:hidden">
           <span className="flex min-w-0 flex-col">
             <span className="text-base font-semibold text-fg">See everything you found</span>
             <span className="text-sm text-muted">The full summary, connections, sources, and questions</span>
@@ -207,13 +212,13 @@ export function CompletionView({ investigation, progress, card, saved, saveError
         </summary>
 
         <div className="mt-6 flex flex-col gap-6">
-          <Section title="What the evidence shows" icon={<BookMarked aria-hidden className="size-4 text-accent" />} aside={<ProvenanceLabel provenance="suggested" />}>
+          <Section title="What the evidence shows" aside={<ProvenanceLabel provenance="suggested" />}>
             <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{card.summary}</p>
-            <h3 className="mt-5 text-xs font-semibold tracking-wide text-muted uppercase">Key ideas</h3>
+            <h3 className="mt-5 kicker text-muted">Key ideas</h3>
             <ul className="mt-2 flex flex-col gap-2">
               {discovery.keyIdeas.map((idea) => (
                 <li key={idea} className="flex gap-2.5 text-sm leading-relaxed text-fg">
-                  <ListChecks aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+                  <ListChecks aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
                   {idea}
                 </li>
               ))}
@@ -222,16 +227,15 @@ export function CompletionView({ investigation, progress, card, saved, saveError
 
           <Section
             title="Pointing to Christ"
-            icon={<Heart aria-hidden className="size-4 text-accent" />}
             aside={<ProvenanceLabel provenance="suggested" />}
-            className="border-accent/25 bg-accent-soft"
+            variant="sacred"
           >
             <p className="font-serif text-[1.05rem] leading-relaxed text-fg">{discovery.christConnection}</p>
           </Section>
 
           {/* The concepts are on the card above; these are the connections between them, with their evidence. */}
           {(demonstrated.length > 0 || nothingDemonstrated) && (
-            <Section title="What you discovered" icon={<Sparkles aria-hidden className="size-4 text-green" />} aside={<ProvenanceLabel provenance="demonstrated" />}>
+            <Section title="What you discovered" aside={<ProvenanceLabel provenance="demonstrated" />}>
               {demonstrated.length === 0 ? (
                 <p className="text-sm leading-relaxed text-muted">
                   This time, the answers were shown to you along the way, so what this investigation connects is saved as suggested. Study it again
@@ -248,7 +252,7 @@ export function CompletionView({ investigation, progress, card, saved, saveError
           )}
 
           {suggested.length > 0 && (
-            <Section title="Shown along the way" icon={<Route aria-hidden className="size-4 text-muted" />} aside={<ProvenanceLabel provenance="suggested" />}>
+            <Section title="Shown along the way" aside={<ProvenanceLabel provenance="suggested" />}>
               <ul aria-label="Connections" className="flex flex-col gap-2.5">
                 {suggested.map((connection) => (
                   <ConnectionItem key={connection.id} connection={connection} card={card} />
@@ -258,7 +262,7 @@ export function CompletionView({ investigation, progress, card, saved, saveError
           )}
 
           {followUps.length > 0 && (
-            <Section title="Questions to carry forward" icon={<Route aria-hidden className="size-4 text-accent" />}>
+            <Section title="Questions to carry forward">
               <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-relaxed text-fg marker:text-subtle">
                 {followUps.map((question) => (
                   <li key={question}>{question}</li>
@@ -270,7 +274,7 @@ export function CompletionView({ investigation, progress, card, saved, saveError
         </div>
       </details>
 
-      <section aria-labelledby={noteId} className="motion-reveal rounded-2xl border border-line bg-surface p-5 sm:p-6">
+      <section aria-labelledby={noteId} className="motion-reveal border-t border-line pt-6">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <label id={noteId} htmlFor={`${noteId}-field`} className="flex items-baseline gap-2 text-base font-semibold text-fg">
             Your note

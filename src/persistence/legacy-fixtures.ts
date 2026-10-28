@@ -397,3 +397,46 @@ export const BACKUP_FROM_2_0 = `${JSON.stringify(
   null,
   2,
 )}\n`;
+
+/*
+ * Journal entries and a version 4 backup, written out by hand as Gospel Labs
+ * 3.0 stores and exports them. Today they test the current format; later
+ * versions keep them to prove journal entries still import.
+ */
+
+/** A thought linked to the step where it came up, and a tender mercy with no link. Most recently updated first. */
+export const JOURNAL_FROM_3_0 = [
+  {
+    id: "3c4d5e6f-entry-from-2-3",
+    dataVersion: 1,
+    createdAt: "2026-10-27T07:30:00.000Z",
+    updatedAt: "2026-10-27T07:45:00.000Z",
+    kind: "thought",
+    text: "I want to come back to this step.",
+    link: { kind: "investigation", contentId: "he-knows-how-to-help", label: "He knows how to help · Step 2", stepId: "notice" },
+  },
+  {
+    id: "7a8b9c0d-entry-from-2-3",
+    dataVersion: 1,
+    createdAt: "2026-10-26T21:00:00.000Z",
+    updatedAt: "2026-10-26T21:00:00.000Z",
+    kind: "tender-mercy",
+    text: "A friend checked on me today, right when I needed it.",
+  },
+] as const;
+
+export const STUDY_FROM_3_0 = { ...STUDY_FROM_2_0, journal: JOURNAL_FROM_3_0 } as const;
+
+/** A complete version 4 backup file as exported by 3.0: the 2.0 study data and the journal. */
+export const BACKUP_FROM_3_0 = `${JSON.stringify(
+  {
+    format: "gospel-labs-backup",
+    version: 4,
+    exportedAt: "2026-10-27T08:00:00.000Z",
+    investigations: [RECORD_FROM_1_1],
+    study: STUDY_FROM_3_0,
+    preferences: PREFERENCES_FROM_2_0,
+  },
+  null,
+  2,
+)}\n`;

@@ -35,7 +35,7 @@ function EvidenceEnd({ card, label, onOpen }: { card: EvidenceCard; label: strin
       className="flex min-w-0 flex-col items-start gap-0.5 rounded-lg border border-line bg-surface px-3 py-2 text-left transition-colors hover:border-accent/50"
     >
       <span className="flex items-center gap-2 text-xs">
-        <span className="font-mono text-accent">{label}</span>
+        <span className="font-semibold tabular-nums text-accent">{label}</span>
         <span className="text-subtle">{type}</span>
       </span>
       <span className="line-clamp-2 max-w-full text-sm font-medium break-words text-fg">{card.sourceTitle}</span>

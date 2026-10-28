@@ -61,4 +61,9 @@ export interface ActivityRendererProps {
   moreHelp?: (activity: Activity, state: ActivityState) => Promise<AssistResponse>;
   /** Reflections: show the optional text box (default true). When false, the prompt is offered to ponder. */
   reflectionInput?: boolean;
+  /**
+   * The host keeps the evidence in view itself (a study step's evidence dock and column, which stay on screen
+   * while the learner answers), so the activity doesn't show it again. Use activityEvidence() for the list.
+   */
+  evidenceElsewhere?: boolean;
 }

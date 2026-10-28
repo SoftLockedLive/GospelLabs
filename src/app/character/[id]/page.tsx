@@ -15,6 +15,7 @@ import { AttributeStudyProvider } from "@/components/study/character/attribute-s
 import { ReflectionSection } from "@/components/study/character/reflection-section";
 import { ExploredStatus, SaveToNotebook } from "@/components/study/character/save-to-notebook";
 import { VocabularySection } from "@/components/study/character/vocabulary-cards";
+import { BackLink } from "@/components/ui/back-link";
 import { buttonClasses } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/page-header";
 import { attributeCardNodeRefs } from "@/domain/study/cards/attribute";
@@ -66,16 +67,10 @@ export default async function AttributePage({ params }: AttributePageProps) {
       <PageContainer>
         <div className="mx-auto flex max-w-4xl flex-col gap-12">
           <header className="flex flex-col gap-4">
-            <Link
-              href={characterHref()}
-              className="inline-flex min-h-11 w-fit items-center gap-1.5 rounded-md text-sm text-muted transition-colors hover:text-fg sm:min-h-0 sm:py-1"
-            >
-              <ArrowLeft aria-hidden className="size-4" />
-              Character of Christ
-            </Link>
+            <BackLink href={characterHref()}>Character of Christ</BackLink>
             <div className="flex flex-col gap-2">
               <Eyebrow>Christlike attribute</Eyebrow>
-              <h1 className="font-serif text-3xl leading-tight tracking-tight text-fg sm:text-4xl">{attribute.name}</h1>
+              <h1 className="text-title text-fg">{attribute.name}</h1>
               <p className="max-w-2xl text-base leading-relaxed text-muted sm:text-lg">{attribute.summary}</p>
               <ExploredStatus />
             </div>

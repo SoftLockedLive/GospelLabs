@@ -7,9 +7,9 @@ import {
   Check,
   CornerDownRight,
   ExternalLink,
+  Heart,
   Plus,
   Scale,
-  Sparkles,
   type LucideIcon,
 } from "lucide-react";
 import type { Ref } from "react";
@@ -76,7 +76,7 @@ export function TrailStepView({
 
   return (
     <article aria-labelledby={headingId} className="min-w-0 rounded-lg border border-line bg-surface p-3.5 sm:p-5">
-      <p className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase">
+      <p className="kicker text-muted">
         Step {index + 1} of {total}
       </p>
       <h4
@@ -146,7 +146,7 @@ export function TrailStepView({
           hint="Questions the text leaves for you to weigh. Gospel Labs doesn’t answer them."
           items={step.interpretation}
         />
-        <TrailList icon={Sparkles} title="To reflect on" hint="Optional and personal." items={step.reflection} />
+        <TrailList icon={Heart} title="To reflect on" hint="Optional and personal." items={step.reflection} />
 
         {step.connections.length > 0 && (
           <div>

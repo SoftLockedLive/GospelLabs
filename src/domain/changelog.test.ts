@@ -6,6 +6,7 @@ import {
   assumedLastSeen,
   changelogSchema,
   compareVersions,
+  displayVersion,
   isContentOnly,
   isQuietUpdate,
   releaseKindBetween,
@@ -143,5 +144,19 @@ describe("returning learners whose last version wasn't recorded", () => {
   it("assumes 2.0 when anything only 2.0 writes is present", () => {
     expect(assumedLastSeen({ ...none, hasStudy: true })).toBe("2.0.0");
     expect(assumedLastSeen({ ...none, hasPreferences: true, hasResearch: true })).toBe("2.0.0");
+  });
+});
+
+describe("displayVersion", () => {
+  it("drops trailing zeros, down to MAJOR.MINOR", () => {
+    expect(displayVersion("3.0.0.0")).toBe("3.0");
+    expect(displayVersion("2.2.1.0")).toBe("2.2.1");
+    expect(displayVersion("2.2.0.1")).toBe("2.2.0.1");
+    expect(displayVersion("2.2.0")).toBe("2.2");
+    expect(displayVersion("1.0.0")).toBe("1.0");
+  });
+
+  it("shows an unreadable version as it is", () => {
+    expect(displayVersion("dev")).toBe("dev");
   });
 });

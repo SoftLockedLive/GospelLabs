@@ -200,7 +200,7 @@ function PanelSection({ title, action, children }: { title: string; action?: Rea
   return (
     <section className="flex flex-col gap-2.5">
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-xs font-semibold tracking-wide text-muted uppercase">{title}</h3>
+        <h3 className="kicker text-muted">{title}</h3>
         {action}
       </div>
       {children}

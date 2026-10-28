@@ -1,6 +1,6 @@
 "use client";
 
-import { Ellipsis, ShieldCheck } from "lucide-react";
+import { Ellipsis } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useId, useState } from "react";
@@ -25,7 +25,7 @@ export function SidebarNavList({ pathname }: { pathname: string | null }) {
         const labelId = `${baseId}-${group.id}`;
         return (
           <div key={group.id}>
-            <p id={labelId} className="mb-1.5 px-3 text-[11px] font-semibold tracking-[0.08em] text-subtle uppercase">
+            <p id={labelId} className="mb-1 px-3 text-[13px] font-semibold text-subtle">
               {group.label}
             </p>
             <ul aria-labelledby={labelId} className="flex flex-col gap-0.5">
@@ -54,12 +54,11 @@ function SidebarLink({ item, active }: { item: NavItem; active: boolean }) {
       href={item.href}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group relative flex min-h-10 items-center gap-3 rounded-lg px-3 text-sm font-medium transition-colors",
-        active ? "bg-accent-soft text-fg" : "text-muted hover:bg-surface-raised hover:text-fg",
+        "group relative flex min-h-10 items-center gap-3 rounded-lg px-3 text-[0.9375rem] transition-colors",
+        active ? "bg-accent-soft font-semibold text-accent" : "text-fg hover:bg-surface-raised",
       )}
     >
-      {active && <span aria-hidden className="absolute inset-y-2 left-0 w-0.5 rounded-full bg-accent" />}
-      <Icon aria-hidden className={cn("size-4.5 shrink-0 transition-colors", active ? "text-accent" : "text-subtle group-hover:text-fg")} />
+      <Icon aria-hidden className={cn("size-[1.125rem] shrink-0 transition-colors", active ? "text-accent" : "text-muted group-hover:text-fg")} />
       {item.label}
     </Link>
   );
@@ -67,7 +66,7 @@ function SidebarLink({ item, active }: { item: NavItem; active: boolean }) {
 
 // --- Tab bar (phones and tablets) ---------------------------------------------------
 
-/** The bottom tab bar: Home, Investigate, Notebook, Map, and More. */
+/** The bottom tab bar: Home, Investigate, Notebook, Connect, and More. */
 export function BottomNav() {
   return <BottomNavList pathname={usePathname()} />;
 }
@@ -101,7 +100,7 @@ export function BottomNavList({ pathname }: { pathname: string | null }) {
             className={cn(tabClasses(moreActive), "w-full")}
           >
             <span className={iconPill(moreActive)}>
-              <Ellipsis aria-hidden className="size-5" />
+              <Ellipsis aria-hidden className="size-6" strokeWidth={1.75} />
             </span>
             <span>More</span>
           </button>
@@ -114,18 +113,18 @@ export function BottomNavList({ pathname }: { pathname: string | null }) {
 
 const tabClasses = (active: boolean) =>
   cn(
-    "flex min-h-14 flex-col items-center justify-center gap-0.5 rounded-xl pt-1.5 pb-1 text-[11px] font-medium tracking-tight transition-colors",
-    active ? "text-fg" : "text-muted hover:text-fg",
+    "flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl pt-2 pb-1.5 text-xs transition-colors",
+    active ? "font-semibold text-accent" : "text-muted hover:text-fg",
   );
 
 const iconPill = (active: boolean) =>
-  cn("flex h-7 w-12 items-center justify-center rounded-full transition-colors", active ? "bg-accent-soft text-accent" : "text-current");
+  cn("flex h-8 w-14 items-center justify-center rounded-full transition-colors", active ? "bg-accent-soft text-accent" : "text-current");
 
 function TabIcon({ item, active }: { item: NavItem; active: boolean }) {
   const Icon = item.icon;
   return (
     <span className={iconPill(active)}>
-      <Icon aria-hidden className="size-5" />
+      <Icon aria-hidden className="size-6" strokeWidth={active ? 2 : 1.75} />
     </span>
   );
 }
@@ -140,7 +139,7 @@ function MoreMenu({ open, onClose, pathname }: { open: boolean; onClose: () => v
           const labelId = `${baseId}-${group.id}`;
           return (
             <div key={group.id}>
-              <p id={labelId} className="mb-1 px-3 text-[11px] font-semibold tracking-[0.08em] text-subtle uppercase">
+              <p id={labelId} className="mb-1 px-3 text-[13px] font-semibold text-subtle">
                 {group.label}
               </p>
               <ul aria-labelledby={labelId} className="flex flex-col">
@@ -163,10 +162,7 @@ function MoreMenu({ open, onClose, pathname }: { open: boolean; onClose: () => v
             <MoreLink item={SETTINGS_ITEM} active={pathname !== null && isNavItemActive(SETTINGS_ITEM, pathname)} onNavigate={onClose} />
           </li>
         </ul>
-        <p className="flex items-start gap-2.5 px-3 text-xs leading-relaxed text-subtle">
-          <ShieldCheck aria-hidden className="mt-px size-4 shrink-0 text-accent" />
-          Private by design. No accounts or tracking; everything you study stays on this device.
-        </p>
+        <p className="px-3 text-[13px] leading-relaxed text-subtle">No accounts or tracking. Everything you study stays on this device.</p>
       </nav>
     </Sheet>
   );
@@ -181,22 +177,14 @@ function MoreLink({ item, active, onNavigate, autoFocus }: { item: NavItem; acti
       data-autofocus={autoFocus ? "" : undefined}
       onClick={onNavigate}
       className={cn(
-        "flex min-h-14 items-center gap-3.5 rounded-xl px-3 py-2 transition-colors",
+        "flex min-h-14 items-center gap-4 rounded-lg px-3 py-2 transition-colors",
         active ? "bg-accent-soft" : "hover:bg-surface-raised",
       )}
     >
-      <span
-        aria-hidden
-        className={cn(
-          "flex size-10 shrink-0 items-center justify-center rounded-xl border",
-          active ? "border-accent/40 bg-surface text-accent" : "border-line bg-surface-sunken text-muted",
-        )}
-      >
-        <Icon className="size-5" />
-      </span>
+      <Icon aria-hidden className={cn("size-6 shrink-0", active ? "text-accent" : "text-muted")} strokeWidth={1.75} />
       <span className="flex min-w-0 flex-col">
-        <span className="text-sm font-medium text-fg">{item.label}</span>
-        {item.description && <span className="text-xs text-muted">{item.description}</span>}
+        <span className={cn("text-base", active ? "font-semibold text-accent" : "font-medium text-fg")}>{item.label}</span>
+        {item.description && <span className="text-sm text-muted">{item.description}</span>}
       </span>
     </Link>
   );

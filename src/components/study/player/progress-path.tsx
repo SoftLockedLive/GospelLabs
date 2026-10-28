@@ -81,7 +81,7 @@ export function ProgressPath({ investigation, progress, onOpen }: ProgressPathPr
 }
 
 function StepDot({ n, status, current }: { n: number; status: StepStatus; current: boolean }) {
-  const base = "flex size-8 shrink-0 items-center justify-center rounded-full border font-mono text-[11px]";
+  const base = "flex size-8 shrink-0 items-center justify-center rounded-full border font-semibold tabular-nums text-[11px]";
   if (status === "complete")
     return (
       <span aria-hidden className={cn(base, "border-green/50 bg-green-soft text-green", current && "ring-2 ring-accent/50")}>

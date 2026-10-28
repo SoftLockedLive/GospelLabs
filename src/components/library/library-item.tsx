@@ -28,7 +28,7 @@ export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
       <div className="flex flex-wrap items-center gap-2">
         <StatusBadge status={investigation.status} />
         {investigation.category && (
-          <span className="min-w-0 font-mono text-[11px] tracking-wide break-all text-subtle uppercase">{investigation.category}</span>
+          <span className="min-w-0 text-[13px] font-semibold break-words text-muted">{investigation.category}</span>
         )}
       </div>
       <h2 id={headingId} className="mt-2.5 font-medium break-words text-fg">
@@ -72,7 +72,7 @@ export function LibraryItem({ investigation, onDelete }: LibraryItemProps) {
           <ul className="flex flex-col gap-2.5 border-t border-line px-3.5 py-3">
             {evidence.map((card, index) => (
               <li key={card.id} className="text-sm">
-                <span className="mr-2 font-mono text-xs text-accent">E{index + 1}</span>
+                <span className="mr-2 font-semibold tabular-nums text-muted">E{index + 1}</span>
                 <span className="text-fg">{card.sourceTitle}</span>
                 <p className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-subtle">{card.observation}</p>
               </li>

@@ -32,7 +32,7 @@ export function DifficultySuggestionBanner({ suggestion, onAccept, onDismiss }: 
       </p>
       <p className="mt-1.5 pl-6.5 text-xs text-subtle">
         Steps you&rsquo;ve finished stay as they are. You can turn these suggestions off in{" "}
-        <Link href="/settings" className="text-accent hover:underline">
+        <Link href="/settings/study" className="text-accent hover:underline">
           Settings
         </Link>
         .

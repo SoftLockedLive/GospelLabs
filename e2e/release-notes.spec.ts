@@ -11,7 +11,7 @@ import { join } from "node:path";
 import { readFileSync, writeFileSync } from "node:fs";
 import { expect, test, type Locator, type Page } from "@playwright/test";
 import rawChangelog from "@/content/changelog.json";
-import { compareVersions, isContentOnly, type Release } from "@/domain/changelog";
+import { compareVersions, displayVersion, isContentOnly, type Release } from "@/domain/changelog";
 import { BACKUP_FROM_2_0, RECORD_FROM_1_1 } from "../src/persistence/legacy-fixtures";
 import { pick } from "./study-helpers";
 
@@ -90,15 +90,16 @@ test("a new learner gets the welcome, a tour, a theme choice, the version, and h
   expect(await stored(page, WELCOME)).toBe("pending");
 
   // The version, and a bug report that opens an email with the version filled in.
-  await expect(welcome(page)).toContainText(`You’re using Gospel Labs ${RELEASE}.`);
+  await expect(welcome(page)).toContainText(`You’re using Gospel Labs ${displayVersion(RELEASE)}.`);
   const bug = await welcome(page).getByRole("link", { name: "Report a bug" }).getAttribute("href");
   expect(bug).toMatch(/^mailto:gospellabs@proton\.me\?/);
   expect(decodeURIComponent(bug ?? "")).toContain(`App version: ${RELEASE}`);
 
-  // Choosing a look applies at once.
-  await welcome(page).getByText("Choose a look").click();
-  await pick(welcome(page).getByRole("radio", { name: /Parchment/ }));
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "dawn");
+  // Choosing a look applies at once: until then the device decides, and Evening is one tap away.
+  const looks = welcome(page).getByRole("group", { name: "Choose your look" });
+  await expect(looks.getByRole("radio", { name: /^Follow my device/ })).toBeChecked();
+  await pick(looks.getByRole("radio", { name: /^Evening/ }));
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "evening");
 
   // The tour, from the keyboard: Next keeps focus from step to step.
   await welcome(page).getByRole("button", { name: "Take a quick tour" }).click();
@@ -128,15 +129,17 @@ test("someone returning from 1.1 sees what changed in every release since, on wh
   await page.goto("/investigate");
   const card = whatsNew(page);
   await expect(card).toBeVisible();
-  await expect(card.getByRole("heading", { level: 2 })).toHaveText(`Gospel Labs has been updated to ${RELEASE}`);
-  await expect(card).toContainText(`${LATEST.version} · ${LATEST.title}`);
+  await expect(card.getByRole("heading", { level: 2 })).toHaveText(`Gospel Labs has been updated to ${displayVersion(RELEASE)}`);
+  await expect(card).toContainText(`${displayVersion(LATEST.version)} · ${LATEST.title}`);
   for (const highlight of LATEST.highlights) await expect(card).toContainText(highlight);
+  // A major update with a new look offers a darker one right here.
+  await expect(card.getByRole("group", { name: "Choose your look" }).getByRole("radio", { name: /^Evening/ })).toBeVisible();
 
   // Earlier releases since 1.1 are one click away; 1.1 itself isn't repeated.
   const earlier = since("1.1.0").slice(1);
-  await card.getByText(`Earlier: ${earlier.map((r) => r.version).join(", ")}`).click();
-  for (const release of earlier) await expect(card).toContainText(`${release.version} · ${release.title}`);
-  await expect(card).not.toContainText("1.1.0 ·");
+  await card.getByText(`Earlier: ${earlier.map((r) => displayVersion(r.version)).join(", ")}`).click();
+  for (const release of earlier) await expect(card).toContainText(`${displayVersion(release.version)} · ${release.title}`);
+  await expect(card).not.toContainText(`${displayVersion("1.1.0")} ·`);
   // 2.0 was a major update, so the tour is offered.
   await expect(card.getByRole("button", { name: "Take a quick tour" })).toBeVisible();
 
@@ -160,7 +163,7 @@ test("someone returning from 2.0 sees only what changed since 2.0", async ({ pag
   await page.goto("/");
   const card = whatsNew(page);
   await expect(card).toBeVisible();
-  for (const release of since("2.0.0")) await expect(card).toContainText(`${release.version} · ${release.title}`);
+  for (const release of since("2.0.0")) await expect(card).toContainText(`${displayVersion(release.version)} · ${release.title}`);
   await expect(card).not.toContainText("2.0.0 ·");
   if (!since("2.0.0").some((release) => release.kind === "major")) {
     await expect(card.getByRole("button", { name: "Take a quick tour" })).toHaveCount(0);
@@ -170,7 +173,7 @@ test("someone returning from 2.0 sees only what changed since 2.0", async ({ pag
 test("a recorded version shows only newer releases, and nothing once current", async ({ page }) => {
   await seed(page, { [LAST_SEEN]: "2.0.0", [WELCOME]: "done" });
   await page.goto("/settings");
-  await expect(whatsNew(page)).toContainText(`${LATEST.version} · ${LATEST.title}`);
+  await expect(whatsNew(page)).toContainText(`${displayVersion(LATEST.version)} · ${LATEST.title}`);
   await whatsNew(page).getByRole("button", { name: "Dismiss what’s new" }).click();
   await page.reload();
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
@@ -184,13 +187,13 @@ test("someone on the release before sees just what changed since, as a one-line 
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   if (isContentOnly(since(previous.version))) {
     const note = page.getByRole("complementary", { name: "New content" });
-    await expect(note).toContainText(`New content in ${LATEST.version}: ${LATEST.title}.`);
+    await expect(note).toContainText(`New content in ${displayVersion(LATEST.version)}: ${LATEST.title}.`);
     await expect(whatsNew(page)).toHaveCount(0);
     await note.getByRole("button", { name: "Got it" }).click();
     await expect(note).toHaveCount(0);
   } else {
-    await expect(whatsNew(page)).toContainText(`${LATEST.version} · ${LATEST.title}`);
-    await expect(whatsNew(page)).not.toContainText(`${previous.version} ·`);
+    await expect(whatsNew(page)).toContainText(`${displayVersion(LATEST.version)} · ${LATEST.title}`);
+    await expect(whatsNew(page)).not.toContainText(`${displayVersion(previous.version)} ·`);
     await whatsNew(page).getByRole("button", { name: "Got it" }).click();
   }
   expect(await stored(page, LAST_SEEN)).toBe(RELEASE);
@@ -207,13 +210,13 @@ test("someone who has seen every release but patches gets nothing, and is marked
 
 test("Settings › About shows the version, every release, and the tour", async ({ page }) => {
   await seed(page, { [LAST_SEEN]: RELEASE, [WELCOME]: "done" });
-  await page.goto("/settings");
-  const about = page.getByRole("region", { name: "About" });
-  await expect(about).toContainText(`Version${RELEASE}`);
+  await page.goto("/settings/about");
+  const about = page.getByRole("main");
+  await expect(about).toContainText(`Version ${RELEASE}`);
   // Every release, patches included.
-  await expect(about).toContainText(`${RELEASES[0].version} · ${RELEASES[0].title}`);
+  await expect(about).toContainText(`${displayVersion(RELEASES[0].version)} · ${RELEASES[0].title}`);
   await about.getByText("Earlier releases").click();
-  for (const release of RELEASES.slice(1)) await expect(about).toContainText(`${release.version} · ${release.title}`);
+  for (const release of RELEASES.slice(1)) await expect(about).toContainText(`${displayVersion(release.version)} · ${release.title}`);
   await about.getByRole("button", { name: "Take a quick tour" }).click();
   await expect(page.getByRole("dialog", { name: "A quick tour" })).toBeVisible();
   await page.keyboard.press("Escape");
@@ -226,7 +229,6 @@ test("the welcome, the tour, and What's new have no accessibility violations", a
   await page.addInitScript({ path: AXE_PATH });
   await page.goto("/");
   await expect(welcome(page)).toBeVisible();
-  await welcome(page).getByText("Choose a look").click();
   await expectNoViolations(page, "the welcome card", welcome(page));
   await welcome(page).getByRole("button", { name: "Take a quick tour" }).click();
   await expectNoViolations(page, "the tour", page.getByRole("dialog", { name: "A quick tour" }));
@@ -239,7 +241,7 @@ test("the welcome, the tour, and What's new have no accessibility violations", a
 });
 
 test("restoring a backup on a new device restores its preferences by default, and the welcome steps aside", async ({ page }, testInfo) => {
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
   // Nothing was stored here before, so this device counts as new until the backup arrives.
   await expect.poll(() => stored(page, WELCOME)).toBe("pending");

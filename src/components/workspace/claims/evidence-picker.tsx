@@ -65,7 +65,7 @@ export function EvidencePicker({
                   className="mt-0.5 size-4 shrink-0 accent-[var(--accent)]"
                 />
                 <span className="min-w-0">
-                  <span className="mr-2 font-mono text-xs text-accent">{labels.get(card.id)}</span>
+                  <span className="mr-2 font-semibold tabular-nums text-muted">{labels.get(card.id)}</span>
                   <span className="text-fg">{card.sourceTitle}</span>
                   <span className="mt-0.5 block line-clamp-1 text-xs text-subtle">{card.observation}</span>
                 </span>

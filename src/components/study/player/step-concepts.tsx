@@ -6,7 +6,7 @@
  * (through the study assistant); afterwards they're listed with whether the
  * learner worked them out or saw them suggested.
  */
-import { BookText, Sparkles } from "lucide-react";
+import { BookText, CircleCheck } from "lucide-react";
 import { useState } from "react";
 import { Disclosure } from "@/components/ui/disclosure";
 import type { BundledConcept } from "@/domain/study/engine/bundle";
@@ -60,7 +60,7 @@ export function StepConceptList({ concepts, demonstrated }: { concepts: readonly
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-semibold tracking-wide text-muted uppercase">Concepts</span>
+        <span className="kicker text-muted">Concepts</span>
         <ProvenanceLabel provenance={demonstrated ? "demonstrated" : "suggested"} />
       </div>
       <ul className="flex flex-wrap gap-2">
@@ -72,7 +72,7 @@ export function StepConceptList({ concepts, demonstrated }: { concepts: readonly
               demonstrated ? "border-green/35 bg-green-soft text-fg" : "border-line-strong text-muted",
             )}
           >
-            {demonstrated && <Sparkles aria-hidden className="size-3 text-green" />}
+            {demonstrated && <CircleCheck aria-hidden className="size-3 text-green" />}
             {concept.label}
           </li>
         ))}

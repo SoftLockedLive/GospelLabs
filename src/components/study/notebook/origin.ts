@@ -2,14 +2,14 @@
  * Where a Discovery Card came from, and how to get back there. Shared by the
  * Notebook and the Discovery Map.
  */
-import { BookOpenText, FlaskConical, HeartHandshake, Sunrise, type LucideIcon } from "lucide-react";
+import { BookOpenText, Compass, HandHeart, Sunrise, type LucideIcon } from "lucide-react";
 import type { DiscoveryOrigin } from "@/domain/study/user-data";
 import { characterHref, connectHref, explorerHref, studyInvestigationHref } from "@/lib/routes";
 
 export const ORIGIN_ICONS: Record<DiscoveryOrigin, LucideIcon> = {
-  investigation: FlaskConical,
+  investigation: Compass,
   passage: BookOpenText,
-  attribute: HeartHandshake,
+  attribute: HandHeart,
   connect: Sunrise,
 };
 

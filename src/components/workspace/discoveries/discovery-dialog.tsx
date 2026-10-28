@@ -131,7 +131,7 @@ function DiscoveryForm({
                     onChange={(event) => toggle(card.id, event.target.checked)}
                     className="size-4 shrink-0 accent-accent"
                   />
-                  <span className="font-mono text-xs text-accent">{labels.get(card.id)}</span>
+                  <span className="font-semibold tabular-nums text-muted">{labels.get(card.id)}</span>
                   <span className="min-w-0 truncate text-fg">{card.sourceTitle}</span>
                 </label>
               </li>

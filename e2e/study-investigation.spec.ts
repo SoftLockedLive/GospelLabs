@@ -349,8 +349,8 @@ test("reloading inside a side question, right after a choice, resumes there with
 });
 
 test("study preferences choose the starting difficulty and length of a new investigation", async ({ page }) => {
-  await page.goto("/settings");
-  const preferences = page.getByRole("region", { name: "Study preferences" });
+  await page.goto("/settings/study");
+  const preferences = page.getByRole("main");
   await pick(preferences.getByRole("radio", { name: /^Deep study/ }));
   await pick(preferences.getByRole("radio", { name: /^Complex/ }));
 
@@ -381,8 +381,8 @@ test("a new learner starts at Easy, and the level and length they begin with ope
   await page.goto("/investigate/one-by-one");
   await expect(difficulty.getByRole("radio", { name: /^Hard/ })).toBeChecked();
   await expect(session.getByRole("radio", { name: /^Deep/ })).toBeChecked();
-  await page.goto("/settings");
-  const preferences = page.getByRole("region", { name: "Study preferences" });
+  await page.goto("/settings/study");
+  const preferences = page.getByRole("main");
   await expect(preferences.getByRole("radio", { name: /^Hard/ })).toBeChecked();
   await expect(preferences.getByRole("radio", { name: /^Deep study/ })).toBeChecked();
 });

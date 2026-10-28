@@ -1,10 +1,11 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, FileQuestion, Highlighter, Link2, Map as MapIcon, Quote, Trash2 } from "lucide-react";
+import { ArrowRight, FileQuestion, Highlighter, Link2, Map as MapIcon, Quote, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { StorageErrorState } from "@/components/investigations/storage-error-state";
 import { ProvenanceLabel } from "@/components/study/shared/provenance";
+import { BackLink } from "@/components/ui/back-link";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Eyebrow } from "@/components/ui/page-header";
@@ -45,7 +46,7 @@ export function CardDetail({ cardId, onDeleted }: CardDetailProps) {
   if (!state.value) {
     return (
       <div className="flex flex-col gap-6">
-        <BackLink />
+        <NotebookBackLink />
         <EmptyState
           headingLevel={1}
           icon={FileQuestion}
@@ -60,16 +61,8 @@ export function CardDetail({ cardId, onDeleted }: CardDetailProps) {
   return <LoadedCard card={state.value} onDeleted={onDeleted} onUnsavedNotesChange={setUnsavedNotes} />;
 }
 
-function BackLink() {
-  return (
-    <Link
-      href={notebookHref()}
-      className="inline-flex min-h-11 w-fit items-center gap-1.5 rounded-md text-sm text-muted hover:text-fg sm:min-h-0 sm:py-1"
-    >
-      <ArrowLeft aria-hidden className="size-4" />
-      Discovery Notebook
-    </Link>
-  );
+function NotebookBackLink() {
+  return <BackLink href={notebookHref()}>Notebook</BackLink>;
 }
 
 interface LoadedCardProps {
@@ -95,7 +88,7 @@ function LoadedCard({ card, onDeleted, onUnsavedNotesChange, gone }: LoadedCardP
   return (
     <article aria-labelledby="discovery-card-title" className="motion-reveal flex flex-col gap-8">
       <div className="flex flex-col gap-5">
-        <BackLink />
+        <NotebookBackLink />
         <header className="flex flex-col gap-4">
           <div>
             <Eyebrow className="mb-2 flex items-center gap-1.5">
@@ -146,7 +139,7 @@ function LoadedCard({ card, onDeleted, onUnsavedNotesChange, gone }: LoadedCardP
 
       {card.question && (
         <section aria-labelledby="card-question" className="rounded-xl border border-accent/25 bg-accent-soft px-5 py-4">
-          <h2 id="card-question" className="font-mono text-xs font-medium tracking-[0.14em] text-accent uppercase">
+          <h2 id="card-question" className="kicker text-muted">
             The question
           </h2>
           <p className="mt-1.5 font-serif text-lg leading-relaxed text-fg">{card.question}</p>

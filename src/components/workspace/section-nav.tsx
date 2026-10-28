@@ -51,7 +51,7 @@ export function SectionNav({ investigation, current, onSelect }: SectionNavProps
                 <span
                   aria-hidden
                   className={cn(
-                    "flex size-6 shrink-0 items-center justify-center rounded-full border font-mono text-[11px]",
+                    "flex size-6 shrink-0 items-center justify-center rounded-full border font-semibold tabular-nums text-[11px]",
                     active
                       ? "border-accent bg-accent text-accent-fg"
                       : filled

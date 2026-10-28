@@ -87,13 +87,13 @@ export function ResearchActivityTabs({ tabs, active, onSelect }: ResearchActivit
           >
             <span aria-hidden className="flex items-center gap-1.5">
               <Icon className={cn("size-4 shrink-0", selected ? "text-accent" : "text-subtle")} />
-              {tab.count && <span className="font-mono text-[11px] text-accent sm:hidden">{tab.count}</span>}
+              {tab.count && <span className="font-semibold tabular-nums text-[11px] text-accent sm:hidden">{tab.count}</span>}
             </span>
             <span aria-hidden className="max-w-full truncate">
               {label}
             </span>
             {tab.count && (
-              <span aria-hidden className="hidden font-mono text-xs text-accent sm:inline">
+              <span aria-hidden className="hidden font-semibold tabular-nums text-muted sm:inline">
                 {tab.count}
               </span>
             )}

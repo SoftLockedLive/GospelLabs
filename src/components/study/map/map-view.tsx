@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpenText, FileWarning, FlaskConical, List, MousePointerClick, NotebookText, Plus, SlidersHorizontal, Waypoints } from "lucide-react";
+import { BookOpenText, Compass, FileWarning, List, MousePointerClick, NotebookText, Plus, SlidersHorizontal, Waypoints } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { StorageErrorState } from "@/components/investigations/storage-error-state";
@@ -358,7 +358,7 @@ function MapEmptyState() {
       action={
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={investigateHref()}>
-            <FlaskConical aria-hidden />
+            <Compass aria-hidden />
             Start an investigation
           </ButtonLink>
           <ButtonLink href={explorerHref()} variant="secondary">

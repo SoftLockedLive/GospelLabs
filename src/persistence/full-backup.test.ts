@@ -1,7 +1,7 @@
 /**
  * Whole backups against a real (in-memory) IndexedDB: export, import in both
  * modes, previews, atomic rollback, and deleting everything, across the
- * investigations and all four study tables.
+ * investigations and all five study tables.
  */
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { RECORD_DATA_VERSION, type Investigation } from "@/domain/investigation";
@@ -13,6 +13,7 @@ import {
   BACKUP_FROM_1_0,
   BACKUP_FROM_1_1,
   BACKUP_FROM_2_0,
+  BACKUP_FROM_3_0,
   BACKUP_V2_BEFORE_CONNECTIONS,
   BACKUP_V2_BEFORE_REFLECTION,
   BACKUP_V2_BEFORE_TRAILS,
@@ -24,6 +25,7 @@ import {
   RECORD_FROM_1_1,
   RECORD_FROM_1_1_AS_READ,
   STUDY_FROM_2_0,
+  STUDY_FROM_3_0,
 } from "./legacy-fixtures";
 import { createTestRepository } from "./test-utils";
 
@@ -31,15 +33,17 @@ afterEach(() => vi.restoreAllMocks());
 
 const EXPORTED_AT = "2026-10-26T12:00:00.000Z";
 
-const TABLES: Record<StudyKind, "studyProgress" | "discoveries" | "personalConnections" | "explorations"> = {
+const TABLES: Record<StudyKind, "studyProgress" | "discoveries" | "personalConnections" | "explorations" | "journal"> = {
   progress: "studyProgress",
   discoveries: "discoveries",
   personalConnections: "personalConnections",
   explorations: "explorations",
+  journal: "journal",
 };
 const ALL_TABLES = ["investigations", ...Object.values(TABLES)] as const;
 
-const studyFixture = () => structuredClone(STUDY_FROM_2_0) as unknown as StudyData;
+/** Every kind of study record: the 2.0 data and two journal entries. */
+const studyFixture = () => structuredClone(STUDY_FROM_3_0) as unknown as StudyData;
 
 /** Stores records directly, exactly as given. */
 async function putRaw(db: GospelLabsDatabase, table: (typeof ALL_TABLES)[number], records: readonly unknown[]) {
@@ -81,7 +85,7 @@ describe("export", () => {
     const { backup, counts, unreadable } = await repository.exportBackup(EXPORTED_AT, { preferences: PREFERENCES_FROM_2_0 });
     expect(backup).toEqual({
       format: "gospel-labs-backup",
-      version: 3,
+      version: 4,
       exportedAt: EXPORTED_AT,
       investigations: [withFutureField],
       study: {
@@ -91,7 +95,7 @@ describe("export", () => {
       },
       preferences: PREFERENCES_FROM_2_0,
     });
-    expect(counts).toEqual({ investigations: 1, progress: 1, discoveries: 1, personalConnections: 1, explorations: 2 });
+    expect(counts).toEqual({ investigations: 1, progress: 1, discoveries: 1, personalConnections: 1, explorations: 2, journal: 2 });
     expect(unreadable).toBe(0);
   });
 
@@ -140,6 +144,7 @@ describe("export → delete everything → import → export", () => {
       discoveries: 1,
       personalConnections: 1,
       explorations: 2,
+      journal: 2,
     });
     expect(await repository.countEverything()).toEqual({
       investigations: 0,
@@ -147,13 +152,16 @@ describe("export → delete everything → import → export", () => {
       discoveries: 0,
       personalConnections: 0,
       explorations: 0,
+      journal: 0,
     });
 
     const summary = await repository.importBackup(parsed(first), mode);
-    expect(summary.total).toEqual(kindSummary(8));
+    expect(summary.total).toEqual(kindSummary(10));
+    expect(summary.kinds.journal).toEqual(kindSummary(2));
     const second = await exportText(repository);
     expect(JSON.parse(second)).toEqual(JSON.parse(first));
     expect(JSON.parse(second).study.discoveries[0].futureField).toEqual({ kind: "discoveries" });
+    expect(JSON.parse(second).study.journal).toEqual(study.journal);
   });
 
   it("re-importing the same backup with merge changes nothing", async () => {
@@ -164,7 +172,7 @@ describe("export → delete everything → import → export", () => {
     const before = await contents(db);
 
     const summary = await repository.importBackup(parsed(text), "merge");
-    expect(summary.total).toEqual(kindSummary(0, 0, 6));
+    expect(summary.total).toEqual(kindSummary(0, 0, 8));
     expect(await contents(db)).toEqual(before);
   });
 });
@@ -204,6 +212,7 @@ describe("importing older backups", () => {
       discoveries: kindSummary(0, 0, 0, 1),
       personalConnections: kindSummary(0, 0, 0, 1),
       explorations: kindSummary(0, 0, 0, 2),
+      journal: kindSummary(0, 0, 0, 2),
     });
     expect(await repository.importBackup(backup, "replace")).toEqual(preview);
     expect(await repository.countEverything()).toEqual({
@@ -212,18 +221,44 @@ describe("importing older backups", () => {
       discoveries: 0,
       personalConnections: 0,
       explorations: 0,
+      journal: 0,
     });
   });
 
-  it("restores a 2.0 backup into an empty database exactly", async () => {
+  it("restores a 2.0 backup (version 3) into an empty database exactly, with an empty journal", async () => {
     const { db, repository } = createTestRepository();
     const summary = await repository.importBackup(parsed(BACKUP_FROM_2_0), "replace");
     expect(summary.total).toEqual(kindSummary(6));
+    expect(summary.kinds.journal).toEqual(kindSummary());
     expect(await db.investigations.toArray()).toEqual([RECORD_FROM_1_1]);
+    const study: Partial<Record<StudyKind, readonly { id: string }[]>> = STUDY_FROM_2_0;
     for (const kind of STUDY_KINDS) {
-      expect(await db[TABLES[kind]].toArray()).toEqual(
-        [...STUDY_FROM_2_0[kind]].sort((a, b) => a.id.localeCompare(b.id)),
-      );
+      expect(await db[TABLES[kind]].toArray()).toEqual([...(study[kind] ?? [])].sort((a, b) => a.id.localeCompare(b.id)));
+    }
+    expect(await db.journal.count()).toBe(0);
+  });
+
+  it("merging a 2.0 backup (version 3) leaves the journal alone; replacing says first that it deletes it", async () => {
+    const { db, repository } = createTestRepository();
+    await seedStudy(db);
+    const journal = await db.journal.toArray();
+    const backup = parsed(BACKUP_FROM_2_0);
+
+    expect((await repository.previewBackup(backup, "merge")).kinds.journal).toEqual(kindSummary());
+    expect((await repository.previewBackup(backup, "replace")).kinds.journal).toEqual(kindSummary(0, 0, 0, 2));
+    await repository.importBackup(backup, "merge");
+    expect(await db.journal.toArray()).toEqual(journal);
+    await repository.importBackup(backup, "replace");
+    expect(await db.journal.count()).toBe(0);
+  });
+
+  it("restores a 3.0 backup (version 4) into an empty database exactly, journal included", async () => {
+    const { db, repository } = createTestRepository();
+    const summary = await repository.importBackup(parsed(BACKUP_FROM_3_0), "replace");
+    expect(summary.total).toEqual(kindSummary(8));
+    expect(summary.kinds.journal).toEqual(kindSummary(2));
+    for (const kind of STUDY_KINDS) {
+      expect(await db[TABLES[kind]].toArray()).toEqual([...STUDY_FROM_3_0[kind]].sort((a, b) => a.id.localeCompare(b.id)));
     }
   });
 });
@@ -234,6 +269,7 @@ const EDITS: Record<StudyKind, (record: never) => object> = {
   discoveries: (record: StudyData["discoveries"][number]) => ({ ...record, notes: "Edited" }),
   personalConnections: (record: StudyData["personalConnections"][number]) => ({ ...record, note: "Edited" }),
   explorations: (record: StudyData["explorations"][number]) => ({ ...record, note: "Edited" }),
+  journal: (record: StudyData["journal"][number]) => ({ ...record, text: "Edited" }),
 };
 
 describe.each(STUDY_KINDS)("merging %s", (kind) => {
@@ -290,7 +326,7 @@ describe.each(STUDY_KINDS)("merging %s", (kind) => {
 });
 
 describe("replace", () => {
-  it("deletes every record in all five tables, damaged ones included, then writes the backup's", async () => {
+  it("deletes every record in all six tables, damaged ones included, then writes the backup's", async () => {
     const { db, repository } = createTestRepository();
     await repository.save(richInvestigation("old"), null);
     await seedStudy(db);
@@ -304,11 +340,12 @@ describe("replace", () => {
       discoveries: kindSummary(0, 0, 0, 2),
       personalConnections: kindSummary(0, 0, 0, 1),
       explorations: kindSummary(1, 0, 0, 2),
+      journal: kindSummary(0, 0, 0, 2),
     });
     const after = await contents(db);
     expect(after.investigations.map((record) => (record as { id: string }).id)).toEqual(["new"]);
     expect(after.explorations).toEqual([studyFixture().explorations[1]]);
-    expect([after.studyProgress, after.discoveries, after.personalConnections]).toEqual([[], [], []]);
+    expect([after.studyProgress, after.discoveries, after.personalConnections, after.journal]).toEqual([[], [], [], []]);
   });
 
   it("stamps imported records with the format this version writes", async () => {
@@ -335,10 +372,28 @@ describe("previews", () => {
       discoveries: kindSummary(0, 0, 1),
       personalConnections: kindSummary(0, 0, 1),
       explorations: kindSummary(0, 0, 2),
+      journal: kindSummary(),
     });
-    expect(replace.total).toEqual(kindSummary(6, 0, 0, 6));
+    expect(replace.total).toEqual(kindSummary(6, 0, 0, 8));
     expect(await contents(db)).toEqual(before);
     expect(await repository.importBackup(backup, "merge")).toEqual(merge);
+  });
+
+  it("count journal entries in both modes", async () => {
+    const { db, repository } = createTestRepository();
+    await seedStudy(db);
+    const [kept, edited] = studyFixture().journal;
+    await putRaw(db, "journal", [{ ...kept, id: "only-on-this-device" }]);
+    const backup = parsed(BACKUP_FROM_3_0);
+    backup.study.journal = [kept, { ...edited, text: "Written later", updatedAt: "2026-10-28T00:00:00.000Z" }, { ...kept, id: "new-entry" }];
+
+    const merge = await repository.previewBackup(backup, "merge");
+    const replace = await repository.previewBackup(backup, "replace");
+    expect(merge.kinds.journal).toEqual(kindSummary(1, 1, 1));
+    expect(replace.kinds.journal).toEqual(kindSummary(3, 0, 0, 3));
+    expect(await repository.importBackup(backup, "merge")).toEqual(merge);
+    expect((await db.journal.get(edited.id))?.text).toBe("Written later");
+    expect(await db.journal.count()).toBe(4);
   });
 });
 
@@ -352,12 +407,13 @@ describe("atomic imports", () => {
       kept.progress = kept.progress.map((record) => ({ ...record, id: "kept-progress", discoveryId: "kept-card" }));
       kept.personalConnections = kept.personalConnections.map((record) => ({ ...record, id: "kept-connection" }));
       kept.explorations = kept.explorations.map((record) => ({ ...record, id: `kept-${record.id}` }));
+      kept.journal = kept.journal.map((record) => ({ ...record, id: `kept-${record.id}` }));
       await seedStudy(db, kept);
       const before = await contents(db);
 
       // Tables are written in order, so a failure in a later one comes after earlier writes in the same transaction.
       vi.spyOn(db[failing], "bulkPut").mockRejectedValue(new DOMException("No space", "QuotaExceededError"));
-      await expect(repository.importBackup(parsed(BACKUP_FROM_2_0), mode)).rejects.toMatchObject({ kind: "quota" });
+      await expect(repository.importBackup(parsed(BACKUP_FROM_3_0), mode)).rejects.toMatchObject({ kind: "quota" });
       vi.restoreAllMocks();
       expect(await contents(db)).toEqual(before);
     });
@@ -410,6 +466,7 @@ describe("counting", () => {
       discoveries: 1,
       personalConnections: 1,
       explorations: 2,
+      journal: 2,
     });
   });
 });

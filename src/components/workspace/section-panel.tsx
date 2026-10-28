@@ -12,7 +12,7 @@ export function SectionPanel({ section, headingRef, children }: SectionPanelProp
   return (
     <section aria-labelledby={`section-${section.id}`} className="flex flex-col gap-7">
       <header>
-        <p className="font-mono text-xs tracking-[0.14em] text-accent uppercase">Step 0{section.step}</p>
+        <p className="kicker text-muted">Step {section.step}</p>
         <h2
           ref={headingRef}
           id={`section-${section.id}`}

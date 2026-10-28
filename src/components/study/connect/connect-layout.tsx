@@ -4,12 +4,13 @@
  * Server-safe (no hooks), so the static page can render it before scripts load.
  */
 import type { ReactNode } from "react";
+import { ArtImage } from "@/components/ui/art-image";
 import { LoadingRegion, Skeleton, SkeletonText } from "@/components/ui/skeleton";
 
 export function ConnectFrame({ children }: { children: ReactNode }) {
   return (
-    // The sacred surface covers the page wash and grid behind <main>.
-    <div className="relative min-h-[calc(100dvh-4rem)] bg-sacred text-sacred-fg lg:min-h-dvh">
+    // The sacred surface fills the screen, and below lg also the space <main> keeps clear of the tab bar.
+    <div className="relative -mb-[calc(6rem+env(safe-area-inset-bottom))] min-h-dvh bg-sacred pb-[calc(6rem+env(safe-area-inset-bottom))] text-sacred-fg lg:mb-0 lg:pb-0">
       <div className="mx-auto w-full max-w-[38rem] px-4 pt-10 pb-16 sm:px-6 sm:pt-14 lg:pt-20 lg:pb-24">{children}</div>
     </div>
   );
@@ -18,8 +19,9 @@ export function ConnectFrame({ children }: { children: ReactNode }) {
 export function ConnectHeader() {
   return (
     <header className="text-center">
-      <p className="text-xs font-medium tracking-[0.2em] text-sacred-accent uppercase">A few quiet minutes</p>
-      <h1 className="mt-3 font-serif text-3xl font-medium tracking-tight text-balance sm:text-4xl">Connect with Christ</h1>
+      <ArtImage use="connect" ratio="square" decorative sizes="6rem" priority className="mx-auto mb-5 size-24 rounded-full ring-1 ring-sacred-line" />
+      <p className="scripture-caps text-sacred-accent">A few quiet minutes</p>
+      <h1 className="text-title mt-2">Connect with Christ</h1>
       <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-pretty text-sacred-muted">
         A quiet space to come to know the Savior. There’s no timer.
       </p>

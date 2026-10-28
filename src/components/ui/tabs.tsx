@@ -82,7 +82,7 @@ export function Tabs<T extends string>({ label, items, value, onChange, keepMoun
               {item.badge !== undefined && (
                 <span
                   className={cn(
-                    "rounded-full px-1.5 py-px font-mono text-[11px] tabular-nums",
+                    "rounded-full px-1.5 py-px font-semibold tabular-nums text-[11px] tabular-nums",
                     selected ? "bg-accent-soft text-accent" : "bg-surface-raised text-subtle",
                   )}
                 >

@@ -1,10 +1,11 @@
 /**
  * Releases and what changed in each. Version numbers are
- * MAJOR.MINOR.CONTENT.PATCH (docs/VERSIONING.md):
- *   MAJOR    a major update (2.0's redesign)
- *   MINOR    bug fixes and general changes
- *   CONTENT  content added or revised, with no change to how the app works
- *   PATCH    a small one-off fix, deployed quietly: no What's new, no update notice
+ * MAJOR.MINOR.CONTENT.PATCH (docs/VERSIONING.md), and the first number that
+ * changes decides how learners hear about a release:
+ *   MAJOR    the app looks or works differently as a whole: What's new, and the tour
+ *   MINOR    something learners will notice (a feature, a changed screen, a fix they need to know): What's new
+ *   CONTENT  study content added, revised, or corrected, with no change to the app: a one-line note
+ *   PATCH    a fix that changes nothing learners need to learn, deployed quietly: no What's new, no update notice
  *
  * Releases before 2.2.0.1 had three parts (2.2.0), which read as PATCH 0.
  *
@@ -17,10 +18,11 @@ import { z } from "zod";
 export const RELEASE_KINDS = ["major", "minor", "content", "patch"] as const;
 export type ReleaseKind = (typeof RELEASE_KINDS)[number];
 
+/** For learners: the names Settings › About uses for the four numbers. */
 export const RELEASE_KIND_LABELS: Record<ReleaseKind, string> = {
   major: "Major update",
-  minor: "Improvements and fixes",
-  content: "New content",
+  minor: "Update",
+  content: "Study content",
   patch: "Small fix",
 };
 
@@ -66,6 +68,19 @@ export type Changelog = z.infer<typeof changelogSchema>;
 export function parseVersion(version: string): [number, number, number, number] | null {
   const match = VERSION_PATTERN.exec(version);
   return match ? [Number(match[1]), Number(match[2]), Number(match[3]), Number(match[4] ?? 0)] : null;
+}
+
+/**
+ * How learners see a version: trailing zeros dropped, down to MAJOR.MINOR. 3.0.0.0 reads "3.0", 2.2.1.0 "2.2.1",
+ * and 2.2.0.1 stays "2.2.0.1". The full number is still shown where it matters: Settings › About's four
+ * numbers, and bug reports. An unreadable version is shown as it is.
+ */
+export function displayVersion(version: string): string {
+  const parts = parseVersion(version);
+  if (!parts) return version;
+  let end = 4;
+  while (end > 2 && parts[end - 1] === 0) end--;
+  return parts.slice(0, end).join(".");
 }
 
 /** Negative if a is older than b, positive if newer, 0 if equal. Unparseable versions sort as oldest. */

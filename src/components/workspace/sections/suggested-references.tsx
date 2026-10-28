@@ -20,7 +20,7 @@ export function SuggestedReferences({ references, evidence, onRecord }: Suggeste
 
   return (
     <section aria-labelledby="suggested-refs-heading" className="rounded-xl border border-line bg-surface-sunken/60 p-4">
-      <h3 id="suggested-refs-heading" className="text-xs font-semibold tracking-wide text-fg uppercase">
+      <h3 id="suggested-refs-heading" className="kicker text-fg">
         Suggested starting points
       </h3>
       <p className="mt-1 text-xs leading-relaxed text-subtle">

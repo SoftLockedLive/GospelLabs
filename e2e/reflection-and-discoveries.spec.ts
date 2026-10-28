@@ -87,7 +87,7 @@ test("save discoveries from any section, then review, edit, and delete them in C
   // Everything survives a reload and goes into backups.
   await page.reload();
   await expect(discovery(page, "Following Him is daily")).toBeVisible();
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   const [download] = await Promise.all([
     page.waitForEvent("download"),
     page.getByRole("button", { name: "Export backup" }).click(),

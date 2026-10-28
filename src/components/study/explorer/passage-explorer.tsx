@@ -6,14 +6,14 @@
  * activities), a side-by-side comparison, and "Save to Notebook".
  * Work is autosaved to the passage's Exploration on this device.
  */
-import { ArrowLeft, BookOpenText, Highlighter, TriangleAlert } from "lucide-react";
-import Link from "next/link";
+import { TriangleAlert } from "lucide-react";
 import { useRef, useState } from "react";
 import { PageContainer } from "@/components/layout/app-shell";
 import type { ActivityResult, ActivityState } from "@/components/study/activities/types";
 import { SaveStatusText, StorageNotice } from "@/components/study/player/save-status";
 import { ProvenanceLabel } from "@/components/study/shared/provenance";
 import { SourceLink } from "@/components/study/shared/source-card";
+import { BackLink } from "@/components/ui/back-link";
 import { Button } from "@/components/ui/button";
 import { Eyebrow } from "@/components/ui/page-header";
 import { LoadingRegion, SkeletonText } from "@/components/ui/skeleton";
@@ -226,17 +226,11 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
 
   return (
     <PageContainer className="flex flex-col gap-8">
-      <Link
-        href={explorerHref()}
-        className="inline-flex min-h-11 w-fit items-center gap-1.5 rounded-md text-sm text-muted transition-colors hover:text-fg sm:min-h-0 sm:py-1"
-      >
-        <ArrowLeft aria-hidden className="size-4" />
-        Scripture Explorer
-      </Link>
+      <BackLink href={explorerHref()}>Scripture Explorer</BackLink>
 
       <header className="max-w-3xl">
         <Eyebrow>Scripture Explorer</Eyebrow>
-        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-fg sm:text-3xl">{passage.title}</h1>
+        <h1 className="text-title mt-1 text-fg">{passage.title}</h1>
         <p className="mt-2 flex flex-wrap items-center gap-x-2 text-sm text-muted">
           <span className="font-medium text-fg">{reference}</span>
           {passage.context.speaker && (
@@ -260,16 +254,15 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,7fr)_minmax(0,6fr)] lg:gap-10">
         <div className="flex min-w-0 flex-col gap-6">
-          <section aria-labelledby="passage-heading" className="rounded-2xl border border-line bg-surface p-4 sm:p-6">
-            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-              <h2 id="passage-heading" className="flex items-center gap-2 text-sm font-semibold text-fg">
-                <BookOpenText aria-hidden className="size-4 text-accent" />
+          {/* Set like the printed scriptures: the reference in spaced capitals, then the verses on the page itself. */}
+          <section aria-labelledby="passage-heading">
+            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+              <h2 id="passage-heading" className="scripture-caps text-muted">
                 {reference}
               </h2>
               <SaveStatusText status={status} />
             </div>
-            <p className="mb-4 flex items-start gap-2 text-xs leading-relaxed text-subtle">
-              <Highlighter aria-hidden className="mt-0.5 size-3.5 shrink-0" />
+            <p className="mb-4 text-[0.9375rem] leading-relaxed text-muted">
               Tap words to select a phrase, then save it as a highlight. Tap the first or last word again to shorten it.
             </p>
             <div ref={textRef}>
@@ -351,7 +344,7 @@ export function PassageExplorer({ bundle }: { bundle: PassageBundle }) {
               className="mb-3 flex items-baseline gap-2 text-sm font-semibold text-fg focus:outline-none"
             >
               Your highlights
-              {highlights.length > 0 && <span className="font-mono text-xs font-normal text-subtle">{highlights.length}</span>}
+              {highlights.length > 0 && <span className="font-semibold tabular-nums text-xs font-normal text-subtle">{highlights.length}</span>}
             </h2>
             {loadError && !ready ? (
               <p className="text-sm text-muted">Your highlights can&rsquo;t be shown until your saved work can be read.</p>

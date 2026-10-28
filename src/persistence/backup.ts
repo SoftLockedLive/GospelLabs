@@ -3,17 +3,18 @@
  * database side (reading, and applying plans inside one transaction) is in
  * full-backup.ts.
  *
- * Format (version 3):
+ * Format (version 4):
  *   {
  *     "format": "gospel-labs-backup",
- *     "version": 3,
+ *     "version": 4,
  *     "exportedAt": "2026-10-26T12:00:00.000Z",
  *     "investigations": [ …Investigation records (1.x research notebooks)… ],
  *     "study": {
  *       "progress": [ …StudyProgress… ],
  *       "discoveries": [ …DiscoveryCard… ],
  *       "personalConnections": [ …PersonalConnection… ],
- *       "explorations": [ …Exploration… ]
+ *       "explorations": [ …Exploration… ],
+ *       "journal": [ …JournalEntry… ]
  *     },
  *     "preferences": { "theme": "dawn", "motion": "subtle", "studyLength": "quick",
  *                      "difficulty": "medium", "activity": { "offerBranches": true, … } }
@@ -37,12 +38,20 @@
  *      silently leaving the study data out, which in Replace mode would look
  *      like a complete restore. Older files are upgraded with an empty `study`
  *      and no preferences.
+ *   4  Gospel Labs 3.0: adds `study.journal` (journal entries in the
+ *      Notebook). Nothing else changes. Bumped because 2.0–2.2 (which accept
+ *      up to version 3) read only the four study lists they know: they would
+ *      import the rest of the file and silently leave the journal out, which
+ *      in Replace mode would look like a complete restore. They refuse these
+ *      files as "made by a newer version" instead. Version 3 files are
+ *      upgraded with an empty journal.
  *
  * Every record in a backup is written exactly as stored, so fields added by
  * a newer version survive a round trip through an older one.
  */
 import { z } from "zod";
 import { investigationSchema, RECORD_DATA_VERSION, type Investigation } from "@/domain/investigation";
+import { journalEntrySchema, type JournalEntry } from "@/domain/study/journal";
 import {
   discoveryCardSchema,
   explorationSchema,
@@ -59,14 +68,14 @@ import { DEFAULT_PREFERENCES, MOTION_PREFERENCES, type MotionPreference, type Pr
 import { isThemePreference, type ThemePreference } from "@/lib/theme";
 
 export const BACKUP_FORMAT = "gospel-labs-backup";
-export const BACKUP_VERSION = 3;
+export const BACKUP_VERSION = 4;
 /** Larger files are refused before parsing so the page doesn't freeze. */
 export const MAX_BACKUP_BYTES = 50 * 1024 * 1024;
 
 // --- Kinds of data -------------------------------------------------------------
 
 /** The study tables, by their key in a backup's `study` section. */
-export const STUDY_KINDS = ["progress", "discoveries", "personalConnections", "explorations"] as const;
+export const STUDY_KINDS = ["progress", "discoveries", "personalConnections", "explorations", "journal"] as const;
 export type StudyKind = (typeof STUDY_KINDS)[number];
 
 /** Everything a backup holds records of, one entry per IndexedDB table. */
@@ -78,9 +87,16 @@ export interface StudyData {
   discoveries: DiscoveryCard[];
   personalConnections: PersonalConnection[];
   explorations: Exploration[];
+  journal: JournalEntry[];
 }
 
-export const emptyStudyData = (): StudyData => ({ progress: [], discoveries: [], personalConnections: [], explorations: [] });
+export const emptyStudyData = (): StudyData => ({
+  progress: [],
+  discoveries: [],
+  personalConnections: [],
+  explorations: [],
+  journal: [],
+});
 
 /** Words for each kind in messages: "1 Discovery Card", "Discovery Cards: 2 new". */
 export const DATA_KIND_LABELS: Record<DataKind, { one: string; many: string; heading: string }> = {
@@ -89,6 +105,7 @@ export const DATA_KIND_LABELS: Record<DataKind, { one: string; many: string; hea
   discoveries: { one: "Discovery Card", many: "Discovery Cards", heading: "Discovery Cards" },
   personalConnections: { one: "Map connection", many: "Map connections", heading: "Your Map connections" },
   explorations: { one: "explored passage or attribute", many: "explored passages and attributes", heading: "Explored passages and attributes" },
+  journal: { one: "journal entry", many: "journal entries", heading: "Journal" },
 };
 
 /** "1 Discovery Card", "3 explored passages and attributes". */
@@ -105,6 +122,7 @@ export const zeroCounts = (): DataCounts => ({
   discoveries: 0,
   personalConnections: 0,
   explorations: 0,
+  journal: 0,
 });
 
 export const totalCount = (counts: DataCounts): number => DATA_KINDS.reduce((sum, kind) => sum + counts[kind], 0);
@@ -128,6 +146,7 @@ export function countContents(contents: { investigations: readonly unknown[]; st
     discoveries: contents.study.discoveries.length,
     personalConnections: contents.study.personalConnections.length,
     explorations: contents.study.explorations.length,
+    journal: contents.study.journal.length,
   };
 }
 
@@ -138,6 +157,7 @@ export const RECORD_RULES: Record<DataKind, { schema: z.ZodType; dataVersion: nu
   discoveries: { schema: discoveryCardSchema, dataVersion: STUDY_DATA_VERSION },
   personalConnections: { schema: personalConnectionSchema, dataVersion: STUDY_DATA_VERSION },
   explorations: { schema: explorationSchema, dataVersion: STUDY_DATA_VERSION },
+  journal: { schema: journalEntrySchema, dataVersion: STUDY_DATA_VERSION },
 };
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
@@ -246,6 +266,7 @@ export function createBackup(
       discoveries: [...study.discoveries],
       personalConnections: [...study.personalConnections],
       explorations: [...study.explorations],
+      journal: [...study.journal],
     },
     preferences: { ...preferences },
   };
@@ -298,7 +319,7 @@ export interface ParsedBackup {
   investigations: Investigation[];
   /** Investigations that were invalid, duplicated, or from a newer version, and will not be imported. */
   skipped: SkippedEntry[];
-  /** Valid study records. Empty for version 1 and 2 files. */
+  /** Valid study records. Empty for version 1 and 2 files; no journal entries in version 3 files. */
   study: StudyData;
   /** Study records that will not be imported, and why. */
   studySkipped: SkippedStudyEntry[];
@@ -347,6 +368,14 @@ const MIGRATIONS: Record<number, Migration> = {
     void _preferences;
     return { ...rest, version: 3, study: emptyStudyData() };
   },
+  // 3 → 4: no journal entries. Version 3 never had a journal list, so anything under that key isn't
+  // Gospel Labs data. A missing or damaged study section is left as it is, for parsing to report.
+  3: (data) => {
+    if (!isRecord(data.study)) return { ...data, version: 4 };
+    const { journal: _journal, ...study } = data.study;
+    void _journal;
+    return { ...data, version: 4, study: { ...study, journal: [] } };
+  },
 };
 
 const envelopeSchema = z.object({
@@ -365,6 +394,13 @@ const NEWER_RECORD_REASON = "Saved by a newer version of Gospel Labs. Update the
 
 const text = (value: unknown) => (typeof value === "string" && value ? value : undefined);
 
+/** The first words of a journal entry, so the learner can tell which one it is. */
+function opening(value: unknown): string | undefined {
+  const line = text(value)?.trim().split("\n")[0].trim();
+  if (!line) return undefined;
+  return line.length > 40 ? `${line.slice(0, 40).trimEnd()}…` : line;
+}
+
 /** How a record is named in the list of skipped entries. */
 const TITLES: Record<DataKind, (raw: Record<string, unknown>) => string | undefined> = {
   investigations: (raw) => text(raw.title),
@@ -376,6 +412,7 @@ const TITLES: Record<DataKind, (raw: Record<string, unknown>) => string | undefi
     return from && to ? `${from} → ${to}` : undefined;
   },
   explorations: () => undefined, // the id ("passage:alma-7") names it
+  journal: (raw) => opening(raw.text),
 };
 
 /**

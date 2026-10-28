@@ -1,4 +1,4 @@
-import { ArrowRight, FlaskConical, Lightbulb, Route, ScrollText } from "lucide-react";
+import { ArrowRight, Lightbulb, NotebookTabs, Route, ScrollText } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
@@ -16,7 +16,7 @@ export function QuestionCard({ question }: { question: CuratedQuestion }) {
     <Card className="flex w-full flex-col transition-colors hover:border-line-strong">
       <CardContent className="flex flex-1 flex-col">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[11px] tracking-wide text-subtle uppercase">{question.category}</span>
+          <span className="text-[13px] font-semibold text-muted">{question.category}</span>
           <Badge>{DIFFICULTY_LABELS[question.difficulty]}</Badge>
         </div>
         <h2 className="mt-3 text-base leading-snug font-medium text-fg">
@@ -68,7 +68,7 @@ export function QuestionCard({ question }: { question: CuratedQuestion }) {
           size="sm"
           aria-label={`Start a research notebook: ${question.question}`}
         >
-          <FlaskConical aria-hidden />
+          <NotebookTabs aria-hidden />
           Start a research notebook
         </ButtonLink>
       </CardFooter>

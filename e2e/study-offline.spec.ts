@@ -23,7 +23,8 @@ test("after the first visit, the study pages open offline and an investigation c
     { path: "/explore/he-will-take-upon-him", heading: "He will take upon Him" },
     { path: "/character/meekness", heading: "Meekness" },
     { path: "/connect", heading: "Connect with Christ" },
-    { path: "/notebook", heading: "Your discoveries" },
+    { path: "/notebook", heading: "Notebook" },
+    { path: "/settings/about", heading: "About Gospel Labs" },
     { path: "/map", heading: "Your Map of understanding" },
     { path: "/investigate/families-beyond-the-veil", heading: "Loved Ones Beyond the Veil" },
   ];
@@ -74,7 +75,7 @@ test("a full study session makes no requests to any other site, and nothing is l
   await page.getByRole("region", { name: "Words to know" }).getByRole("button").first().click();
   await page.goto("/connect");
   await page.getByRole("button", { name: "Continue", exact: true }).click();
-  await page.goto("/settings");
+  await page.goto("/settings/privacy");
   await expect(page.getByText("No AI.", { exact: false })).toBeVisible();
 
   context.off("request", record);

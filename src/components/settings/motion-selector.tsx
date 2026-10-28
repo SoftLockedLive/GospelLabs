@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Play, Sparkles } from "lucide-react";
+import { Check, Play } from "lucide-react";
 import { useId, useState, useSyncExternalStore, type CSSProperties } from "react";
 import { Button } from "@/components/ui/button";
 import { ChoiceCard } from "@/components/ui/choice-card";
@@ -71,7 +71,6 @@ export function MotionSelector() {
         {/* Re-keyed on each press so the animations play again. */}
         <div key={demo} aria-hidden className="flex items-center gap-2">
           <span className="motion-reveal flex h-9 items-center gap-1.5 rounded-lg border border-line bg-surface px-3 text-xs font-medium text-fg">
-            <Sparkles className="size-3.5 text-accent" />
             New card
           </span>
           <span

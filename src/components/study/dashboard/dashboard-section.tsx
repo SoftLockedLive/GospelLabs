@@ -16,12 +16,12 @@ export function DashboardSection({ id, title, description, action, children, cla
   const headingId = `${id}-heading`;
   return (
     <section aria-labelledby={headingId} className={cn("min-w-0", className)}>
-      <div className="mb-4 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+      <div className="mb-4 flex flex-wrap items-end justify-between gap-x-6 gap-y-1">
         <div className="min-w-0">
-          <h2 id={headingId} className="text-lg font-semibold tracking-tight text-fg">
+          <h2 id={headingId} className="text-heading text-fg">
             {title}
           </h2>
-          {description && <p className="mt-1 text-sm leading-relaxed text-muted">{description}</p>}
+          {description && <p className="mt-1 text-[0.9375rem] leading-relaxed text-muted">{description}</p>}
         </div>
         {action}
       </div>

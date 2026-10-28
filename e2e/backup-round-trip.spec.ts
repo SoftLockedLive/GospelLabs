@@ -4,7 +4,7 @@ import { BACKUP_FROM_1_0, RECORD_FROM_1_0 } from "../src/persistence/legacy-fixt
 import { addEvidence, expectSaved, goToSection, openActivity } from "./helpers";
 
 async function exportBackup(page: Page, path: string) {
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   const [download] = await Promise.all([
     page.waitForEvent("download"),
     page.getByRole("button", { name: "Export backup" }).click(),
@@ -14,7 +14,7 @@ async function exportBackup(page: Page, path: string) {
 }
 
 async function importBackup(page: Page, path: string) {
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await page.locator('input[type="file"]').setInputFiles(path);
   await page.getByRole("dialog", { name: "Import backup" }).getByRole("button", { name: "Import", exact: true }).click();
   await expect(page.getByText(/^Imported:/)).toBeVisible();
@@ -60,7 +60,7 @@ test("a 1.0 backup imports, and every 1.1 field survives export and import", asy
   await expectSaved(page);
 
   const first = await exportBackup(page, testInfo.outputPath("first.json"));
-  expect(first.version).toBe(3);
+  expect(first.version).toBe(4);
   const legacy = first.investigations.find((i: { id: string }) => i.id === RECORD_FROM_1_0.id);
   expect(legacy).toMatchObject({
     dataVersion: 2,

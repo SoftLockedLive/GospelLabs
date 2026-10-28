@@ -50,7 +50,14 @@ const PAGES = [
   "/notebook",
   `/notebook?card=${CARD_FROM_2_0.id}`,
   "/map",
+  "/notebook?view=journal",
   "/settings",
+  "/settings/appearance",
+  "/settings/study",
+  "/settings/data",
+  "/settings/privacy",
+  "/settings/feedback",
+  "/settings/about",
   "/library",
   "/investigations/view?id=link-titled-notebook",
   "/questions",
@@ -113,8 +120,9 @@ async function expectNoHorizontalOverflow(page: Page, where: string) {
 for (const width of WIDTHS) {
   test(`every main page fits a ${width}px-wide screen`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto("/settings");
+    await page.goto("/settings/data");
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    // Backup and data opens the database, so the records below land in the app's own stores.
     await putRaw(page, "discoveries", [CARD_FROM_2_0]);
     await putRaw(page, "personalConnections", [CONNECTION_FROM_2_0]);
     await putRaw(page, "investigations", [LONG_RESEARCH_NOTEBOOK, LINK_TITLED_NOTEBOOK]);

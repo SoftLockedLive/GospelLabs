@@ -7,7 +7,7 @@ import { expect, test } from "@playwright/test";
 import type { DiscoveryCard } from "@/domain/study/user-data";
 import { completeInvestigation, expectNoScoring, investigation, pathSteps, pick, readStore, solveStep, startInvestigation, stepArticle } from "./study-helpers";
 
-const hero = (page: import("@playwright/test").Page) => page.getByRole("region", { name: "What would you like to study today?" });
+const hero = (page: import("@playwright/test").Page) => page.getByRole("region", { name: /^Search the scriptures/ });
 
 test("starting to study takes two interactions from the dashboard", async ({ page }) => {
   await page.goto("/");
@@ -41,7 +41,7 @@ test("the quick or deep choice persists across reloads and is shared with Settin
   await expect(length.getByRole("radio", { name: /^Deep/ })).toBeChecked();
   await expect(page.getByText("Chosen for a deep study.")).toBeVisible();
 
-  await page.goto("/settings");
+  await page.goto("/settings/study");
   await expect(page.getByRole("radio", { name: /^Deep study/ })).toBeChecked();
   // A deep study is where new investigations start.
   await page.goto("/");

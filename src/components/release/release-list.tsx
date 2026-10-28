@@ -1,5 +1,5 @@
 /** Releases with what changed in each, newest first. Used by What's new and Settings › About. */
-import { RELEASE_KIND_LABELS, type Release } from "@/domain/changelog";
+import { displayVersion, RELEASE_KIND_LABELS, type Release } from "@/domain/changelog";
 import { cn } from "@/lib/cn";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
@@ -12,7 +12,7 @@ export function ReleaseList({ releases, className, headingLevel: Heading = "h3" 
       {releases.map((release) => (
         <li key={release.version}>
           <Heading className="text-sm font-semibold text-fg">
-            {release.version} · {release.title}
+            {displayVersion(release.version)} · {release.title}
           </Heading>
           <p className="mt-0.5 text-xs text-subtle">
             {RELEASE_KIND_LABELS[release.kind]} · {formatReleaseDate(release.date)}

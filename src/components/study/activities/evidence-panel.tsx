@@ -46,7 +46,7 @@ export function EvidencePanel({
         <ChevronDown aria-hidden className={cn("size-4 text-subtle transition-transform", open && "rotate-180")} />
       </button>
       {!collapsible && (
-        <p className="hidden items-center gap-2 text-xs font-semibold tracking-wide text-muted uppercase sm:flex">
+        <p className="hidden items-center gap-2 kicker text-muted sm:flex">
           <BookOpen aria-hidden className="size-3.5 text-accent" />
           {title}
         </p>

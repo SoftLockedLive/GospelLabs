@@ -19,9 +19,9 @@ export function StepTags({ phase, method }: { phase: Phase; method?: LearningMet
   const [open, setOpen] = useState(false);
   const descriptionId = useId();
   return (
-    <div className="hidden flex-col gap-2 sm:flex">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="inline-flex items-center rounded-full border border-accent/30 bg-accent-soft px-2.5 py-0.5 font-mono text-[11px] tracking-wide text-accent uppercase">
+    <div className="hidden flex-col items-center gap-2 sm:flex">
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
+        <span className="text-sm font-semibold text-muted">
           <span className="sr-only">Phase: </span>
           {PHASE_LABELS[phase]}
         </span>
@@ -43,7 +43,7 @@ export function StepTags({ phase, method }: { phase: Phase; method?: LearningMet
         )}
       </div>
       {method && open && (
-        <p id={descriptionId} className="motion-reveal max-w-xl text-xs leading-relaxed text-muted">
+        <p id={descriptionId} className="motion-reveal max-w-xl text-center text-sm leading-relaxed text-muted">
           {LEARNING_METHOD_DESCRIPTIONS[method]} One of the methods of learning Elder Lawrence E. Corbridge described, which all begin with a
           question.
         </p>

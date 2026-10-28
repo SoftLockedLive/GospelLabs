@@ -9,8 +9,9 @@
  */
 import { liveQuery } from "dexie";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import type { CompileJournalInput, JournalEntry } from "@/domain/study/journal";
 import type { DiscoveryCard, Exploration, ExplorationKind, PersonalConnection, StudyProgress } from "@/domain/study/user-data";
-import { getStudyRepository } from "./client";
+import { getRepository, getStudyRepository } from "./client";
 import type { AsyncState } from "./hooks";
 import type { RecordList } from "./study-repository";
 import { toStorageError } from "./storage-errors";
@@ -114,4 +115,41 @@ export function useExplorations(kind?: ExplorationKind): LiveState<Exploration[]
 
 export function useExploration(id: string): LiveState<Exploration | undefined> {
   return useLiveStudyQuery(() => study().explorations.get(id), `exploration:${id}`);
+}
+
+export function useJournalEntries(): LiveState<RecordList<JournalEntry>> {
+  return useLiveStudyQuery(() => study().journal.readAll(), "journal:all");
+}
+
+export function useJournalEntry(id: string): LiveState<JournalEntry | undefined> {
+  return useLiveStudyQuery(() => study().journal.get(id), `journal:${id}`);
+}
+
+/** Every record the compiled Journal reads (compileJournal), and how many stored records couldn't be read. */
+export type JournalSources = Required<Omit<CompileJournalInput, "places">> & { unreadable: number };
+
+/** Journal entries and everything written elsewhere, in one live query, so the compiled Journal follows every change. */
+export function useJournalSources(): LiveState<JournalSources> {
+  return useLiveStudyQuery(async () => {
+    const repository = study();
+    const [entries, progress, discoveries, personalConnections, explorations, research] = await Promise.all([
+      repository.journal.readAll(),
+      repository.progress.readAll(),
+      repository.discoveries.readAll(),
+      repository.personalConnections.readAll(),
+      repository.explorations.readAll(),
+      // Safe inside a live query (see client.ts).
+      getRepository().list(),
+    ]);
+    const lists = [entries, progress, discoveries, personalConnections, explorations];
+    return {
+      entries: entries.records,
+      progress: progress.records,
+      discoveries: discoveries.records,
+      personalConnections: personalConnections.records,
+      explorations: explorations.records,
+      investigations: research.investigations,
+      unreadable: lists.reduce((sum, list) => sum + list.unreadable, research.unreadable),
+    };
+  }, "journal:sources");
 }

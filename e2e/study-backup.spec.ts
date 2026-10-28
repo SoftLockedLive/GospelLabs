@@ -50,11 +50,13 @@ test("study data and preferences made in the app survive export, delete everythi
   await dialog.getByRole("button", { name: "Add connection" }).click();
   await expect(dialog).toBeHidden();
   // Preferences: Parchment, Hard, motion Off.
-  await page.goto("/settings");
+  await page.goto("/settings/appearance");
   await pick(page.getByRole("group", { name: "Theme" }).getByRole("radio", { name: /^Parchment/ }));
-  await pick(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Hard/ }));
   await pick(page.getByRole("group", { name: "Motion" }).getByRole("radio", { name: /^Off/ }));
-  await expect(savedData(page)).toHaveText(["0 research notebooks", "2 investigations", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"]);
+  await page.goto("/settings/study");
+  await pick(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Hard/ }));
+  await page.goto("/settings/data");
+  await expect(savedData(page)).toHaveText(["0 research notebooks", "2 investigations", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes", "0 journal entries"]);
   const before = await snapshot(page);
 
   // Export.
@@ -62,17 +64,20 @@ test("study data and preferences made in the app survive export, delete everythi
   const [download] = await Promise.all([page.waitForEvent("download"), page.getByRole("button", { name: "Export backup" }).click()]);
   await download.saveAs(path);
   const backup = JSON.parse(readFileSync(path, "utf8"));
-  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 3, preferences: { theme: "dawn", difficulty: "hard", motion: "off" } });
+  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 4, preferences: { theme: "dawn", difficulty: "hard", motion: "off" } });
 
   // Delete everything (preferences stay), then change the theme so restoring it can be seen.
   await page.getByRole("button", { name: "Delete all data" }).click();
   const confirm = page.getByRole("dialog", { name: "Delete all data?" });
   await confirm.getByRole("checkbox", { name: /I understand/ }).check();
   await confirm.getByRole("button", { name: "Delete everything" }).click();
-  await expect(savedData(page)).toHaveText(["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes"]);
+  await expect(savedData(page)).toHaveText(["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes", "0 journal entries"]);
+  await page.goto("/settings/appearance");
   await pick(page.getByRole("group", { name: "Theme" }).getByRole("radio", { name: /^Lab/ }));
+  await page.goto("/settings/study");
   await pick(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Easy/ }));
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  await page.goto("/settings/data");
 
   // Import, restoring preferences too.
   await page.locator('input[type="file"]').setInputFiles(path);
@@ -81,16 +86,17 @@ test("study data and preferences made in the app survive export, delete everythi
   await importDialog.getByRole("checkbox", { name: /Also restore appearance and study preferences/ }).check();
   await importDialog.getByRole("button", { name: "Import", exact: true }).click();
   await expect(page.getByText(/^Imported: 6 new, 0 updated, 0 unchanged\. Appearance and study preferences restored\.$/)).toBeVisible();
-  await expect(savedData(page)).toHaveText(["0 research notebooks", "2 investigations", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"]);
+  await expect(savedData(page)).toHaveText(["0 research notebooks", "2 investigations", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes", "0 journal entries"]);
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dawn");
   await expect(page.locator("html")).toHaveAttribute("data-motion", "off");
+  await page.goto("/settings/study");
   await expect(page.getByRole("group", { name: "Default difficulty" }).getByRole("radio", { name: /^Hard/ })).toBeChecked();
   // Every record exactly as it was.
   expect(await snapshot(page)).toEqual(before);
 
   // And the app shows it all again.
   await page.goto("/");
-  await expect(page.getByRole("region", { name: "What would you like to study today?" }).getByRole("heading", { level: 2 })).toHaveText(inProgress.title);
+  await expect(page.getByRole("region", { name: /^Search the scriptures/ }).getByRole("heading", { level: 2 })).toHaveText(inProgress.title);
   await expect(page.getByRole("region", { name: "Your discoveries" })).toContainText(card.title);
   await page.goto(`/notebook?card=${card.id}`);
   await expect(page.getByRole("textbox", { name: /Your notes/ })).toHaveValue("Each one, by name.");

@@ -11,10 +11,10 @@
  * so <div data-theme="dawn"> renders its contents in Parchment (Settings uses
  * this for live theme previews).
  *
- *   dark     "Lab"        deep teal, the original look (default)
- *   light    "Daylight"   clean and bright
+ *   light    "Daylight"   white pages and ink, like a printed book (default, 3.0)
  *   dawn     "Parchment"  warm paper and ink for long reading (light)
- *   evening  "Evening"    soft indigo and gold (dark)
+ *   evening  "Evening"    deep blue and gold (dark)
+ *   dark     "Lab"        deep teal, the original 2.x look (dark)
  *
  * Components use the Tailwind utilities mapped in @theme below (bg-canvas,
  * bg-surface, text-fg, text-muted, border-line, bg-accent, bg-highlight, …),
@@ -30,7 +30,7 @@
  *                        with Christ, testimony of the Savior, prayer and
  *                        ponder prompts. Use with --sacred-fg / --sacred-muted.
  *     --sacred-line      Hairline border on sacred surfaces.
- *     --wash             Soft tint behind the top of every page (decorative).
+ *     --wash             Retired in 3.0 (transparent): pages have no glow.
  *     --scrim            Backdrop behind sheets and dialogs.
  *   Lines
  *     --line             Hairline borders and dividers (decorative).
@@ -64,21 +64,23 @@
  *   `bg-node-concept/15 text-node-concept`)
  *     --node-scripture  --node-concept  --node-question
  *     --node-attribute  --node-vocabulary  --node-investigation
- *   Depth
- *     --elevation-1      Resting cards (shadow-soft).
- *     --elevation-2      Menus, sheets, and popovers (shadow-lifted).
- *   Legacy
- *     --grid-line        The 1.x notebook grid (bg-notebook-grid); faint in Lab
- *                        only, transparent elsewhere.
+ *   Depth (3.0: things on the page are flat and separated by hairlines)
+ *     --elevation-1      Sticky bars and a selected segment (shadow-soft).
+ *     --elevation-2      Menus, sheets, and dialogs (shadow-lifted).
  *
  * Contrast (WCAG 2.2, checked numerically for every theme; see the 2.0 UI
  * report): every text color above is ≥ 4.5:1 on canvas, surface,
  * surface-raised, and surface-sunken, and on the -soft tints over surface;
  * the lowest is --subtle on --green-soft over --surface in Lab (4.64:1).
  * Selected-state borders use --accent (≥ 5.5:1) or accent/80 (≥ 3.5:1).
- * The focus ring (--accent) is ≥ 6:1 against --canvas.
+ * The focus ring (--accent) is ≥ 6:1 against --canvas. In Daylight,
+ * --line-strong (control borders) is ≥ 3:1 against white.
+ *
+ * Gospel Labs 3.0 ("a more Christ-centered look"): white pages, real
+ * paintings, serif scripture set like the printed scriptures, plain lists
+ * with hairlines, and one accent. The accent is only for things you can
+ * tap or the current state, never decoration. See docs/DESIGN.md.
  */
-:root,
 [data-theme="dark"] {
   color-scheme: dark;
   --canvas: #071116;
@@ -114,28 +116,29 @@
   --node-attribute: #f297b6;
   --node-vocabulary: #6fd6a6;
   --node-investigation: #27c6dd;
-  --wash: rgb(39 198 221 / 0.07);
+  --wash: transparent;
   --scrim: rgb(2 8 11 / 0.66);
   --elevation-1: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 1px 2px rgb(0 0 0 / 0.24);
   --elevation-2: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 16px 40px -12px rgb(0 0 0 / 0.6);
-  --grid-line: rgb(160 179 187 / 0.035);
 }
 
+/* :where() keeps the default at zero specificity, so a chosen theme above (Lab) still wins on <html>. */
+:where(:root),
 [data-theme="light"] {
   color-scheme: light;
-  --canvas: #f4f7f8;
+  --canvas: #ffffff;
   --surface: #ffffff;
-  --surface-raised: #ffffff;
-  --surface-sunken: #ebf1f3;
-  --line: rgb(11 38 48 / 0.11);
-  --line-strong: rgb(11 38 48 / 0.22);
-  --fg: #0b1c22;
-  --muted: #475e67;
-  --subtle: #52666e;
-  --accent: #086776;
-  --accent-strong: #06535f;
+  --surface-raised: #f6f6f3;
+  --surface-sunken: #f3f3f0;
+  --line: #e3e3df;
+  --line-strong: #94948f;
+  --fg: #1c1c1c;
+  --muted: #4b4b4b;
+  --subtle: #5e5e5e;
+  --accent: #1f4e9c;
+  --accent-strong: #173b78;
   --accent-fg: #ffffff;
-  --accent-soft: rgb(8 103 118 / 0.1);
+  --accent-soft: rgb(31 78 156 / 0.08);
   --amber: #7a5108;
   --amber-soft: rgb(196 138 32 / 0.14);
   --green: #0f6145;
@@ -147,20 +150,19 @@
   --sacred-fg: #2a2217;
   --sacred-muted: #5f5241;
   --sacred-accent: #7f5a12;
-  --highlight: #fbe7a6;
-  --highlight-fg: #1f1a0b;
-  --highlight-line: #b3800f;
+  --highlight: #ffe36e;
+  --highlight-fg: #1c1c1c;
+  --highlight-line: #9a7400;
   --node-scripture: #2560a3;
   --node-concept: #6a49c0;
   --node-question: #8a5600;
   --node-attribute: #ad3566;
   --node-vocabulary: #1c7448;
   --node-investigation: #086776;
-  --wash: rgb(8 103 118 / 0.05);
-  --scrim: rgb(11 28 34 / 0.42);
-  --elevation-1: 0 1px 2px rgb(11 28 34 / 0.05), 0 1px 3px rgb(11 28 34 / 0.05);
-  --elevation-2: 0 18px 44px -14px rgb(11 28 34 / 0.24), 0 2px 6px rgb(11 28 34 / 0.06);
-  --grid-line: transparent;
+  --wash: transparent;
+  --scrim: rgb(20 20 20 / 0.45);
+  --elevation-1: 0 1px 2px rgb(28 28 28 / 0.06);
+  --elevation-2: 0 18px 44px -14px rgb(28 28 28 / 0.24), 0 2px 6px rgb(28 28 28 / 0.06);
 }
 
 [data-theme="dawn"] {
@@ -174,10 +176,10 @@
   --fg: #2b2118;
   --muted: #5d4f3f;
   --subtle: #66574a;
-  --accent: #1e626c;
-  --accent-strong: #174f58;
+  --accent: #24508f;
+  --accent-strong: #1b3e70;
   --accent-fg: #ffffff;
-  --accent-soft: rgb(30 98 108 / 0.1);
+  --accent-soft: rgb(36 80 143 / 0.1);
   --amber: #7a4d0b;
   --amber-soft: rgb(184 128 40 / 0.15);
   --green: #2d653a;
@@ -198,11 +200,10 @@
   --node-attribute: #a2385e;
   --node-vocabulary: #2d6a3d;
   --node-investigation: #1e626c;
-  --wash: rgb(196 150 70 / 0.1);
+  --wash: transparent;
   --scrim: rgb(43 33 24 / 0.42);
   --elevation-1: 0 1px 2px rgb(74 52 24 / 0.06), 0 1px 3px rgb(74 52 24 / 0.05);
   --elevation-2: 0 18px 44px -14px rgb(74 52 24 / 0.26), 0 2px 6px rgb(74 52 24 / 0.06);
-  --grid-line: transparent;
 }
 
 [data-theme="evening"] {
@@ -240,11 +241,10 @@
   --node-attribute: #f5a0c0;
   --node-vocabulary: #82d6ae;
   --node-investigation: #7fd3e0;
-  --wash: rgb(140 150 255 / 0.07);
+  --wash: transparent;
   --scrim: rgb(5 6 16 / 0.66);
   --elevation-1: 0 1px 0 0 rgb(255 255 255 / 0.03) inset, 0 1px 2px rgb(0 0 0 / 0.28);
   --elevation-2: 0 1px 0 0 rgb(255 255 255 / 0.04) inset, 0 16px 40px -12px rgb(0 0 0 / 0.62);
-  --grid-line: transparent;
 }
 
 @theme inline {
@@ -285,10 +285,16 @@
   --color-scrim: var(--scrim);
   --shadow-soft: var(--elevation-1);
   --shadow-lifted: var(--elevation-2);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  /* Scripture, reflections, and other contemplative text: `font-serif` or `prose-scripture`. */
+  /* Source Sans 3: a warm, open humanist sans, easy to read at small sizes (and its zero isn't slashed, which reads as code). */
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  /* Scripture, titles, reflections, and other contemplative text: `font-serif` or `prose-scripture`. */
   --font-serif: var(--font-literata), ui-serif, Georgia, "Times New Roman", serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, monospace;
+  /* Not loaded since 3.0: monospace reads as a developer tool. Kept only for code-like values. */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* Three radii (docs/DESIGN.md): 8px controls (rounded-lg), 12px objects (rounded-xl), and pills (rounded-full).
+     Larger Tailwind radii collapse to 12px, so nothing on the page is softer than a card. */
+  --radius-2xl: 0.75rem;
+  --radius-3xl: 0.75rem;
   --ease-gentle: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -303,9 +309,10 @@
   html {
     -webkit-tap-highlight-color: transparent;
     text-size-adjust: 100%;
-    /* Below lg, a sticky header (4rem) and a fixed tab bar (about 5rem plus the safe area) cover the page's edges;
-       scroll padding keeps whatever is scrolled to, or focused with the keyboard, out from under them. */
-    scroll-padding-top: 4.5rem;
+    /* Below lg, a fixed tab bar (about 5rem plus the safe area) covers the bottom of the page, and a study step has
+       a sticky bar (3.5rem) at the top; scroll padding keeps whatever is scrolled to, or focused with the keyboard,
+       out from under them. */
+    scroll-padding-top: 4rem;
     scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
     @media (width >= 64rem) {
       scroll-padding-top: 1rem;
@@ -339,30 +346,87 @@
   }
 }
 
-/* --- Backgrounds -------------------------------------------------------------- */
-
-/* The 1.x lab-notebook grid. Faint in Lab; transparent in the other themes. */
-@utility bg-notebook-grid {
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-/* A soft light at the top of the page; place on an absolutely positioned, aria-hidden layer. */
-@utility bg-page-wash {
-  background-image:
-    radial-gradient(60% 100% at 50% 0%, var(--wash), transparent 70%),
-    radial-gradient(40% 70% at 90% 0%, var(--wash), transparent 70%);
-}
-
 /* --- Typography --------------------------------------------------------------- */
+
+/*
+ * The 3.0 type scale (docs/DESIGN.md). Two families: Literata for titles and
+ * anything you read slowly (scripture, questions, reflections), and Source
+ * Sans 3 for everything you operate. No monospace, and no spaced
+ * capitals except the printed-scripture kind (`scripture-caps`).
+ *
+ *   text-title      28/34 → 36/42 at lg. Literata. One per page: its <h1>.
+ *   text-heading    20/28 → 24/32 at sm. Sans, semibold. Section headings.
+ *   kicker          14/20. Sans, semibold, sentence case. The small line above
+ *                   a title ("Repentance and forgiveness"). Pair with a color,
+ *                   usually text-muted (never the accent: it isn't tappable).
+ *   scripture-caps  13/18. Literata in spaced capitals, like "CHAPTER 9" in the
+ *                   printed scriptures. Only for a scripture reference or a
+ *                   step count above a serif title. Pair with a color.
+ *   headnote        17/27 → 18/29. Literata italic, like a chapter summary. For
+ *                   the short introduction under a study step's title. Pair
+ *                   with a color (text-muted, or text-fg on sacred surfaces).
+ *   prose-scripture 18/31. Literata. Scripture and long reflective reading.
+ */
+@utility text-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-optical-sizing: auto;
+  text-wrap: balance;
+  @media (width >= 64rem) {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+  }
+}
+
+@utility text-heading {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 650;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+  @media (width >= 40rem) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@utility kicker {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+@utility scripture-caps {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@utility headnote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 1.6875rem;
+  text-wrap: pretty;
+  @media (width >= 40rem) {
+    font-size: 1.125rem;
+    line-height: 1.8125rem;
+  }
+}
 
 /* Scripture and long-form reflective reading: serif, generous leading, pretty wrapping. */
 @utility prose-scripture {
   font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  line-height: 1.8;
+  font-size: 1.125rem;
+  line-height: 1.75;
   font-optical-sizing: auto;
   text-wrap: pretty;
 }
@@ -377,6 +441,20 @@
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+/* While a study step is open (useFocusMode), phones and tablets hide the tab bar so the scripture has the room.
+   Unlayered, so it wins over the tab bar's and main's own utilities. */
+@media (width < 64rem) {
+  :root[data-chrome="focus"] [data-tabbar] {
+    display: none;
+  }
+  :root[data-chrome="focus"] #main {
+    padding-bottom: 0;
+  }
+  :root[data-chrome="focus"] {
+    scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
   }
 }
 

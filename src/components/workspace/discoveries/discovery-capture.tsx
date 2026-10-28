@@ -45,7 +45,7 @@ export function DiscoveryCapture({ investigation, actions, onReview }: Discovery
         <span className="sr-only md:not-sr-only">Save insight</span>
         {count > 0 && (
           <>
-            <span aria-hidden className="font-mono text-xs text-subtle xl:hidden">
+            <span aria-hidden className="font-semibold tabular-nums text-xs text-subtle xl:hidden">
               {count}
             </span>
             <span className="sr-only"> ({count} saved)</span>

@@ -94,7 +94,7 @@ export function DeleteInvestigationDialog({ investigation, onClose, onDeleted }:
       }
     >
       <p className="text-xs leading-relaxed text-subtle">
-        Tip: Settings › Export backup saves a copy of all your research notebooks first.
+        Tip: Settings › Backup and data › Export backup saves a copy of all your research notebooks first.
       </p>
       {error && (
         <p role="alert" className="mt-3 text-sm text-danger">

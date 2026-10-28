@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { IBM_Plex_Mono, Inter, Literata } from "next/font/google";
+import { Literata, Source_Sans_3 } from "next/font/google";
 import { AppShell } from "@/components/layout/app-shell";
 import { ThemeColorSync } from "@/components/layout/theme-color";
 import { ServiceWorkerRegistration } from "@/components/pwa/service-worker-registration";
@@ -7,14 +7,9 @@ import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 // Fonts are downloaded at build time and served from this site (no requests to other sites).
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-const plexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-plex-mono",
-  display: "swap",
-});
-/** Literata was designed for long-form reading on screens: scripture, reflections, and headings with a human voice. */
+/** Source Sans 3: a warm, open humanist sans for everything you operate, with plain figures (no slashed zero). */
+const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-source-sans", display: "swap" });
+/** Literata was designed for long-form reading on screens: scripture, titles, and reflections. */
 const literata = Literata({
   subsets: ["latin"],
   style: ["normal", "italic"],
@@ -32,7 +27,7 @@ export const metadata: Metadata = {
     "Study the scriptures and come to know Jesus Christ. Guided, interactive investigations, a Scripture Explorer, and a private notebook of your discoveries—all on your own device.",
   applicationName: "Gospel Labs",
   manifest: "/manifest.webmanifest",
-  appleWebApp: { capable: true, title: "Gospel Labs", statusBarStyle: "black" },
+  appleWebApp: { capable: true, title: "Gospel Labs", statusBarStyle: "default" },
   formatDetection: { telephone: false },
 };
 
@@ -41,16 +36,16 @@ export const viewport: Viewport = {
   initialScale: 1,
   viewportFit: "cover",
   // Kept in step with the chosen theme by <ThemeColorSync />.
-  themeColor: "#071116",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      data-theme="dark"
+      data-theme="light"
       suppressHydrationWarning
-      className={`${inter.variable} ${plexMono.variable} ${literata.variable} antialiased`}
+      className={`${sourceSans.variable} ${literata.variable} antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />

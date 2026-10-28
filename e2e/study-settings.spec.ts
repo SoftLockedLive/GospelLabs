@@ -1,6 +1,6 @@
 /**
  * Appearance, motion, and study preferences. Each theme sets <html
- * data-theme> and survives a reload; "System" follows the device; motion
+ * data-theme> and survives a reload; "Follow my device" (the default) follows the device; motion
  * "Off" (or "Follow my device" when the device asks for reduced motion)
  * turns animation off; and the activity options change what investigations offer.
  */
@@ -19,10 +19,12 @@ const THEMES = [
 ] as const;
 
 test("each theme sets the page's theme at once and is kept after a reload", async ({ page }) => {
-  await page.goto("/settings");
-  await expect(html(page)).toHaveAttribute("data-theme", "dark");
-  await expect(themeChoice(page, "Lab")).toBeChecked();
-  for (const { label, theme } of THEMES) {
+  await page.emulateMedia({ colorScheme: "light" });
+  await page.goto("/settings/appearance");
+  // From 3.0, a device that never chose a theme follows the device: Daylight here, as it's set to light.
+  await expect(html(page)).toHaveAttribute("data-theme", "light");
+  await expect(themeChoice(page, "Follow my device")).toBeChecked();
+  for (const { label, theme } of [...THEMES.slice(1), THEMES[0]]) {
     await pick(themeChoice(page, label));
     await expect(html(page)).toHaveAttribute("data-theme", theme);
     await page.reload();
@@ -31,27 +33,45 @@ test("each theme sets the page's theme at once and is kept after a reload", asyn
     // Other pages open in the same theme, before anything else runs (no flash).
     await page.goto("/notebook");
     await expect(html(page)).toHaveAttribute("data-theme", theme);
-    await page.goto("/settings");
+    await page.goto("/settings/appearance");
   }
 });
 
-test("System follows the device's light or dark setting, including changes while open", async ({ page }) => {
+test("someone who chose Lab before 3.0 keeps it, in the new layout", async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem("gospel-labs:theme", "dark"));
+  await page.goto("/");
+  await expect(html(page)).toHaveAttribute("data-theme", "dark");
+  // Lab's own colors, not Daylight's: the page is dark.
+  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe("rgb(7, 17, 22)");
+  await page.goto("/settings/appearance");
+  await expect(themeChoice(page, "Lab")).toBeChecked();
+});
+
+test("a device in dark mode opens in Evening before anything is chosen, so nobody is met with a white screen", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "dark" });
+  await page.goto("/");
+  await expect(html(page)).toHaveAttribute("data-theme", "evening");
+  expect(await page.evaluate(() => getComputedStyle(document.body).backgroundColor)).toBe("rgb(14, 17, 36)");
+});
+
+test("Follow my device switches between Daylight and Evening, including changes while open", async ({ page }) => {
   await page.emulateMedia({ colorScheme: "light" });
-  await page.goto("/settings");
-  await pick(themeChoice(page, "System"));
+  await page.goto("/settings/appearance");
+  await pick(themeChoice(page, "Lab"));
+  await pick(themeChoice(page, "Follow my device"));
   await expect(html(page)).toHaveAttribute("data-theme", "light");
   await page.emulateMedia({ colorScheme: "dark" });
-  await expect(html(page)).toHaveAttribute("data-theme", "dark");
+  await expect(html(page)).toHaveAttribute("data-theme", "evening");
   await page.reload();
-  await expect(html(page)).toHaveAttribute("data-theme", "dark");
-  await expect(themeChoice(page, "System")).toBeChecked();
+  await expect(html(page)).toHaveAttribute("data-theme", "evening");
+  await expect(themeChoice(page, "Follow my device")).toBeChecked();
   await page.emulateMedia({ colorScheme: "light" });
   await expect(html(page)).toHaveAttribute("data-theme", "light");
 });
 
 test("motion Off turns animation off; Follow my device does too when the device asks for reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.goto("/settings");
+  await page.goto("/settings/appearance");
   await expect(motionChoice(page, "Follow my device")).toBeChecked();
   await expect(html(page)).toHaveAttribute("data-motion", "subtle");
 
@@ -88,7 +108,7 @@ const animatedElements = (page: Page) =>
 
 test("with motion Off, nothing animates even when the device doesn't ask for reduced motion", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  await page.goto("/settings");
+  await page.goto("/settings/appearance");
   // With motion on, the interface does animate (so the check below can tell the difference).
   await pick(motionChoice(page, "Full"));
   expect((await animatedElements(page)).length).toBeGreaterThan(0);
@@ -103,7 +123,7 @@ test("with motion Off, nothing animates even when the device doesn't ask for red
 });
 
 test("study activity options: side questions and reflection prompts can be turned off", async ({ page }) => {
-  await page.goto("/settings");
+  await page.goto("/settings/study");
   const options = page.getByRole("group", { name: "During activities" });
   await options.getByRole("switch", { name: /^Offer side questions/ }).click();
   await options.getByRole("switch", { name: /^Show reflection prompts/ }).click();

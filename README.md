@@ -17,14 +17,16 @@ Versions are MAJOR.MINOR.CONTENT.PATCH (major update, improvements and fixes, ne
   - **Side questions** branch off the main path and return you where you were. Progress saves automatically and survives refreshes and updates.
   - Each investigation names the **primary question** it rests on, and steps are tagged with **methods of learning**, following Elder Lawrence E. Corbridge's BYU devotional "Stand Forever" (2019).
 - **Discovery Notebook:** finishing an investigation creates a Discovery Card automatically (sources, concepts, connections, a labeled summary, optional notes), clearly separating what *you discovered* from what *Gospel Labs suggested*. Search, filter, revisit, and manage cards; your 1.x research discoveries appear too.
+- **Journal (3.0):** the Notebook's second tab. Write a thought, a question, or a tender mercy, and see everything you've written anywhere in the app (reflections, card notes, private notes, highlight notes, Map connections, research notes) in one feed, each linked back to where you wrote it. A study step can send a thought here, linked to that step.
 - **Discovery Map:** a personal knowledge network computed only from your discoveries — scriptures, concepts, questions, attributes, vocabulary, and investigations — where every connection shows its evidence. Add, revise, or remove your own connections (always labeled "Your interpretation"). Pan, zoom, keyboard navigation, and an accessible list view.
 - **Scripture Explorer:** eight short passages shown verbatim with links to the full chapter: highlight phrases (touch or keyboard), tag themes, read sourced meanings of key words, compare related scriptures side by side, investigate context, and save to the Notebook and Map.
 - **Character of Christ Builder:** nine Christlike attributes (charity, humility, patience, meekness, mercy, compassion, obedience, forgiveness, long-suffering), each with an official definition, vocabulary, easily confused contrasts (such as meekness vs. weakness), scriptures, accounts from the Savior's life, relationships, and activities. It tracks what you've explored, never how Christlike you are.
 - **Connect with Christ:** quiet, roughly five-minute sessions in three rotating formats (See Christ, Understand Christ, Reflect on Christ). No timer, no counters, no reports of feelings; prayer and notes are optional.
-- **Themes and preferences:** Lab, Daylight, Parchment, and Evening themes (WCAG 2.2 AA contrast), motion (follow device, full, subtle, off), preferred session length, default difficulty, and activity options.
+- **A Christ-centered look (3.0):** white pages, public-domain paintings of the Savior (credited in Settings › About), scripture set like the printed scriptures (Literata, bold verse numbers, italic headnotes, highlighter marks), plain lists, and one ink-blue accent. See [docs/DESIGN.md](docs/DESIGN.md).
+- **Themes and preferences:** Daylight (the default), Parchment, Evening, and Lab themes (WCAG 2.2 AA contrast), motion (follow device, full, subtle, off), preferred session length, default difficulty, and activity options, on short Settings pages.
 - **Optional AI boundary:** Gospel Labs works fully without AI. A clean interface exists for a future, clearly labeled, server-side assistant; the shipped implementation is a local, non-AI helper built from curated content. No AI service, API key, or network call is included.
 - **Welcome and What's new:** new learners get a short welcome and tour (with a theme choice, the version, and how to report a bug); returning learners see what changed since their last visit. Settings › About lists every release.
-- **Backups:** export and import everything (research notebooks, study progress, Discovery Cards, map connections, explorations, preferences) as versioned JSON (format 3), with validation, previews, merge or replace, and atomic, all-or-nothing imports. See [docs/BACKUPS.md](docs/BACKUPS.md).
+- **Backups:** export and import everything (research notebooks, study progress, Discovery Cards, journal entries, map connections, explorations, preferences) as versioned JSON (format 4), with validation, previews, merge or replace, and atomic, all-or-nothing imports. See [docs/BACKUPS.md](docs/BACKUPS.md).
 
 ## Research notebook (from 1.x, preserved)
 
@@ -123,7 +125,7 @@ All curated content is JSON validated by Zod at build time; no code changes are 
 
 ## Feedback
 
-Bug reports and ideas go to **[gospellabs@proton.me](mailto:gospellabs@proton.me)**. In the app, **Settings › Feedback** opens your email app with a short template, and the error page links to the same address. Nothing is sent automatically, and investigations are never attached.
+Bug reports and ideas go to **[gospellabs@proton.me](mailto:gospellabs@proton.me)**. In the app, **Settings › Send feedback** opens your email app with a short template, and the error page links to the same address. Nothing is sent automatically, and investigations are never attached.
 
 ## Project structure
 
@@ -174,7 +176,7 @@ See [docs/2.0/ARCHITECTURE.md](docs/2.0/ARCHITECTURE.md) for the full design. In
 
 ## Testing
 
-- **Unit and integration tests (Vitest):** the 1.x suite plus the 2.0 schemas and content registry (all shipped content validated, every activity's revealed answer checked correct), answer checking for every activity type, the progression engine (difficulty changes, hints, branching, persistence, a playthrough of every investigation), Discovery Card builders, the Map graph and deterministic layout, Notebook search, suggestions, Connect rotation, study repositories, database version-2 upgrade and rollback safety, and backup format 3 (round trips, migrations from formats 1 and 2, atomic rollback, merge rules, preferences).
+- **Unit and integration tests (Vitest):** the 1.x suite plus the 2.0 schemas and content registry (all shipped content validated, every activity's revealed answer checked correct), answer checking for every activity type, the progression engine (difficulty changes, hints, branching, persistence, a playthrough of every investigation), Discovery Card builders, the Map graph and deterministic layout, Notebook search, suggestions, Connect rotation, study repositories, database version-2 upgrade and rollback safety, and backup formats 3 and 4 (round trips, migrations from formats 1 and 2, atomic rollback, merge rules, preferences).
 - **End-to-end tests (Playwright; desktop and mobile Chromium):** run under the production security headers. The 1.x regression suite, plus 2.0 flows; see [docs/GOSPEL_LABS_2.0_RELEASE.md](docs/GOSPEL_LABS_2.0_RELEASE.md) for the current list and results.
 - **Content verification:** `npm run verify:study` checks every source, verse, excerpt, and quotation in 2.0 content against the original.
 

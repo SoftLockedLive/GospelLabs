@@ -60,7 +60,7 @@ export function DiscoveryList({ investigation, actions }: { investigation: Inves
                             key={id}
                             className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-line px-2 py-0.5 text-xs text-muted"
                           >
-                            <span className="font-mono text-accent">{labels.get(id)}</span>
+                            <span className="font-semibold tabular-nums text-accent">{labels.get(id)}</span>
                             <span className="truncate">{cards.get(id)?.sourceTitle}</span>
                           </li>
                         ))}

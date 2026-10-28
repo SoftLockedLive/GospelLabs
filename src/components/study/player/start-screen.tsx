@@ -15,9 +15,10 @@
  * while the stored record can't be read the only way in is to study without
  * saving.
  */
-import { ArrowLeft, ArrowRight, BookMarked, ChevronDown, Compass, MessageCircleQuestionMark, RotateCcw, Sparkles } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight, BookMarked, ChevronDown, CircleCheck, RotateCcw } from "lucide-react";
 import { useId, useState } from "react";
+import { BackLink } from "@/components/ui/back-link";
+import { ArtImage } from "@/components/ui/art-image";
 import { Button } from "@/components/ui/button";
 import { Dialog } from "@/components/ui/dialog";
 import { Eyebrow } from "@/components/ui/page-header";
@@ -25,6 +26,7 @@ import type { StudyInvestigation } from "@/domain/study/content-schema";
 import { findStep, mainPath } from "@/domain/study/engine/path";
 import { completionState } from "@/domain/study/engine/status";
 import type { StudyProgress } from "@/domain/study/user-data";
+import { artCredit, artFor } from "@/lib/art";
 import {
   DIFFICULTIES,
   DIFFICULTY_DESCRIPTIONS,
@@ -67,6 +69,7 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
   const completion = progress ? completionState(investigation, { ...progress, length }) : null;
   const completed = !!progress?.completedAt;
   const commonQuestions = investigation.commonQuestions.slice(0, 3);
+  const artwork = artFor(investigation.id);
 
   function begin() {
     // Looking back through a finished investigation, or studying without saving, isn't a choice about how to study next.
@@ -76,29 +79,33 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-8">
-      <Link
-        href={investigateHref()}
-        className="inline-flex min-h-11 w-fit items-center gap-1.5 rounded-md text-sm text-muted transition-colors hover:text-fg sm:min-h-0 sm:py-1"
-      >
-        <ArrowLeft aria-hidden className="size-4" />
+      <BackLink href={investigateHref()} className="-mb-4">
         Guided investigations
-      </Link>
+      </BackLink>
+
+      {/* The painting is a cover, credited like a museum label. */}
+      {artwork && (
+        <figure className="motion-reveal -mx-5 sm:mx-0">
+          <ArtImage use={investigation.id} priority sizes="(min-width: 48rem) 48rem, 100vw" className="w-full sm:rounded-xl" />
+          <figcaption className="mt-2 px-5 text-[13px] leading-snug text-muted sm:px-0">{artCredit(artwork)}</figcaption>
+        </figure>
+      )}
 
       <header className="motion-reveal">
         <Eyebrow>{investigation.theme}</Eyebrow>
-        <h1 tabIndex={-1} className="mt-3 text-2xl font-semibold tracking-tight text-fg outline-none sm:text-3xl">
+        <h1 tabIndex={-1} className="text-title mt-1 text-fg outline-none">
           {investigation.title}
         </h1>
-        <p className="mt-4 font-serif text-xl leading-snug text-fg sm:text-2xl">{investigation.question}</p>
+        <p className="mt-3 font-serif text-xl leading-snug text-fg italic sm:text-2xl">{investigation.question}</p>
         <p className="mt-3 text-base leading-relaxed text-muted">{investigation.hook}</p>
       </header>
 
       {!completed && !blocked && (
         <section
           aria-label={progress ? "Continue" : "Begin"}
-          className="motion-reveal flex flex-col gap-3 rounded-xl border border-accent/30 bg-accent-soft p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5"
+          className="motion-reveal flex flex-col gap-3 rounded-xl bg-surface-sunken p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5"
         >
-          <p className="text-sm leading-relaxed text-fg">
+          <p className="text-[0.9375rem] leading-relaxed text-fg">
             {progress && completion
               ? `You’re on step ${Math.min(completion.currentIndex + 1, completion.total)} of ${completion.total}.`
               : `${DIFFICULTY_LABELS[difficulty]} · ${length === "quick" ? "Quick" : "Deep"}, about ${investigation.estimatedMinutes[length]} min.`}{" "}
@@ -106,7 +113,7 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
               {progress ? "Change level or length" : "Change"}
             </a>
           </p>
-          <Button onClick={begin} className="shrink-0">
+          <Button size="lg" onClick={begin} className="shrink-0">
             {progress ? "Resume" : "Begin"}
             <ArrowRight aria-hidden />
           </Button>
@@ -114,9 +121,9 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
       )}
 
       {completed && progress?.completedAt && (
-        <section aria-label="Completed" className="flex flex-col gap-3 rounded-xl border border-green/35 bg-green-soft p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
-          <p className="flex items-start gap-2.5 text-sm leading-relaxed text-fg">
-            <Sparkles aria-hidden className="mt-0.5 size-4 shrink-0 text-green" />
+        <section aria-label="Completed" className="flex flex-col gap-3 rounded-xl border-l-4 border-green bg-green-soft p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+          <p className="flex items-start gap-2.5 text-[0.9375rem] leading-relaxed text-fg">
+            <CircleCheck aria-hidden className="mt-0.5 size-4 shrink-0 text-green" />
             You completed this investigation on {formatDate(progress.completedAt)}.
           </p>
           {!blocked && (
@@ -128,31 +135,30 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
         </section>
       )}
 
-      <p className="text-[0.975rem] leading-relaxed text-fg">{investigation.intro}</p>
+      <p className="prose-scripture text-fg">{investigation.intro}</p>
 
       {commonQuestions.length > 0 && (
-        <section aria-labelledby="common-questions" className="rounded-xl border border-line bg-surface p-5 sm:p-6">
-          <h2 id="common-questions" className="flex items-center gap-2 text-sm font-semibold text-fg">
-            <MessageCircleQuestionMark aria-hidden className="size-4 text-accent" />
+        <section aria-labelledby="common-questions" className="border-t border-line pt-6">
+          <h2 id="common-questions" className="text-heading text-fg">
             Questions people ask
           </h2>
           <ul className="mt-4 flex flex-col gap-3">
             {commonQuestions.map((question) => (
-              <li key={question} className="border-l-2 border-accent/40 pl-4 font-serif text-[0.975rem] leading-relaxed text-fg">
+              <li key={question} className="border-l-2 border-line-strong pl-4 font-serif text-[1.0625rem] leading-relaxed text-fg italic">
                 {question}
               </li>
             ))}
           </ul>
-          <p className="mt-4 text-xs text-subtle">This investigation looks for what the sources say.</p>
+          <p className="mt-4 text-sm text-muted">This investigation looks for what the sources say.</p>
         </section>
       )}
 
       <PrimaryQuestionCard investigation={investigation} />
 
       {blocked?.reason === "newer-content" ? (
-        <section aria-labelledby="study-setup" className="flex flex-col gap-4 rounded-2xl border border-line bg-surface p-5 sm:p-6">
+        <section aria-labelledby="study-setup" className="flex flex-col gap-4 border-t border-line pt-6">
           <div>
-            <h2 id="study-setup" className="text-base font-semibold text-fg">
+            <h2 id="study-setup" className="text-heading text-fg">
               Your progress
             </h2>
             {/* Newer progress may stand on a step this version doesn't have. */}
@@ -165,12 +171,12 @@ export function StartScreen({ investigation, progress, preferences, blocked = nu
           <StorageNotice title="Your progress is kept as it was saved." message={blocked.message} detail="" onRetry={reload} retryLabel="Reload" />
         </section>
       ) : (
-        <section aria-labelledby="study-setup" className="flex flex-col gap-6 rounded-2xl border border-line bg-surface p-5 sm:p-6">
+        <section aria-labelledby="study-setup" className="flex flex-col gap-6 border-t border-line pt-6">
           <div>
-            <h2 id="study-setup" className="text-base font-semibold text-fg">
+            <h2 id="study-setup" className="text-heading text-fg">
               {progress && !completed ? "Pick up where you left off" : "How would you like to study?"}
             </h2>
-            <p className="mt-1 text-sm leading-relaxed text-muted">
+            <p className="mt-1 text-[0.9375rem] leading-relaxed text-muted">
               Difficulty changes the kind of thinking each step asks for, not how many questions there are. You can change either one at any time.
             </p>
           </div>
@@ -278,19 +284,18 @@ function PrimaryQuestionCard({ investigation }: { investigation: StudyInvestigat
   const panelId = useId();
   const { id, note } = investigation.primaryQuestion;
   return (
-    <section aria-labelledby="primary-question" className="rounded-xl border border-accent/25 bg-accent-soft p-5 sm:p-6">
-      <h2 id="primary-question" className="flex items-center gap-2 text-sm font-semibold text-fg">
-        <Compass aria-hidden className="size-4 text-accent" />
+    <section aria-labelledby="primary-question" className="border-t border-line pt-6">
+      <h2 id="primary-question" className="text-heading text-fg">
         The question beneath this one
       </h2>
-      <p className="mt-3 font-serif text-lg leading-snug text-fg">{PRIMARY_QUESTION_TEXT[id]}</p>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{note}</p>
+      <p className="mt-3 font-serif text-xl leading-snug text-fg">{PRIMARY_QUESTION_TEXT[id]}</p>
+      <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted">{note}</p>
       <button
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
-        className="mt-3 inline-flex min-h-11 items-center gap-1.5 rounded-md text-sm font-medium text-accent hover:text-accent-strong sm:min-h-0 sm:py-1"
+        className="mt-3 inline-flex min-h-11 items-center gap-1.5 rounded-md text-[0.9375rem] font-semibold text-accent hover:text-accent-strong sm:min-h-0 sm:py-1"
       >
         Primary and secondary questions
         <ChevronDown aria-hidden className={cn("size-4 transition-transform", open && "rotate-180")} />

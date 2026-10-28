@@ -1,12 +1,11 @@
 "use client";
 
-import { BookOpenText, FileWarning, FlaskConical, Library, Map as MapIcon, NotebookPen, Search, SearchX, X } from "lucide-react";
+import { BookOpenText, Compass, FileWarning, Library, NotebookPen, Search, SearchX, X } from "lucide-react";
 import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { StorageErrorState } from "@/components/investigations/storage-error-state";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Input, Select } from "@/components/ui/input";
-import { PageHeader } from "@/components/ui/page-header";
 import {
   conceptOptions,
   EMPTY_NOTEBOOK_FILTERS,
@@ -21,7 +20,7 @@ import {
 } from "@/domain/study/notebook";
 import type { DiscoveryOrigin } from "@/domain/study/user-data";
 import type { NodeRef, SourceKind } from "@/domain/study/vocabulary";
-import { explorerHref, investigateHref, mapHref } from "@/lib/routes";
+import { explorerHref, investigateHref } from "@/lib/routes";
 import { useInvestigationList } from "@/persistence/hooks";
 import { useDiscoveryCards } from "@/persistence/study-hooks";
 import { cardLinkId, DiscoveryCardItem } from "./discovery-card-item";
@@ -77,17 +76,10 @@ export function NotebookBrowser({ filters, onFiltersChange, returnFocusTo, annou
   }, [loaded]);
 
   const header = (
-    <PageHeader
-      eyebrow="Discovery Notebook"
-      title="Your discoveries"
-      description="Each investigation you finish adds a card here. In Scripture Explorer, Character of Christ, and Connect with Christ, choose Save to add one. Notes are optional."
-      actions={
-        <ButtonLink href={mapHref()} variant="secondary">
-          <MapIcon aria-hidden />
-          Open your Map
-        </ButtonLink>
-      }
-    />
+    <p className="max-w-2xl text-[0.9375rem] leading-relaxed text-muted">
+      Each investigation you finish adds a Discovery Card here. In Scripture Explorer, Character of Christ, and Connect with
+      Christ, choose Save to add one.
+    </p>
   );
 
   // Wait for research notebooks too: deciding on the empty state before they load flashed the wrong one.
@@ -168,7 +160,7 @@ export function NotebookBrowser({ filters, onFiltersChange, returnFocusTo, annou
         </div>
       ) : (
         <div className="flex flex-col gap-6">
-          <div role="search" aria-label="Search and filter discoveries" className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-3">
+          <div role="search" aria-label="Search and filter discoveries" className="flex flex-col gap-3">
             {searchBox}
             <div className="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 lg:grid-cols-4">
               <Select
@@ -239,12 +231,12 @@ export function NotebookBrowser({ filters, onFiltersChange, returnFocusTo, annou
           </div>
 
           {results.length === 0 ? (
-            <EmptyState icon={SearchX} title="No discoveries match" description="Try different words or fewer filters." className="bg-surface" />
+            <EmptyState icon={SearchX} title="No discoveries match" description="Try different words or fewer filters." />
           ) : (
             <div className="flex flex-col gap-8">
               {groups.map((group) => (
                 <section key={group.key} aria-labelledby={`notebook-month-${group.key}`} className="flex flex-col gap-3">
-                  <h2 id={`notebook-month-${group.key}`} className="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">
+                  <h2 id={`notebook-month-${group.key}`} className="kicker text-muted">
                     {group.label}
                   </h2>
                   <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -269,13 +261,13 @@ export function NotebookBrowser({ filters, onFiltersChange, returnFocusTo, annou
 /** A short note above the research insights when there are no Discovery Cards yet. */
 function NoCardsYet() {
   return (
-    <div className="flex flex-col gap-3 rounded-xl border border-dashed border-line-strong bg-surface px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
-      <p className="flex items-start gap-2.5 text-sm leading-relaxed text-muted">
-        <NotebookPen aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+    <div className="flex flex-col gap-3 rounded-xl bg-surface-sunken px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between">
+      <p className="flex items-start gap-2.5 text-[0.9375rem] leading-relaxed text-muted">
+        <NotebookPen aria-hidden className="mt-0.5 size-4 shrink-0" />
         No Discovery Cards yet. Finish an investigation and one is added here.
       </p>
       <ButtonLink href={investigateHref()} variant="secondary" size="sm" className="h-11 shrink-0 sm:h-9">
-        <FlaskConical aria-hidden />
+        <Compass aria-hidden />
         Start an investigation
       </ButtonLink>
     </div>
@@ -292,7 +284,7 @@ function NotebookEmptyState({ hasResearchNotebooks = false }: { hasResearchNoteb
       action={
         <div className="flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={investigateHref()}>
-            <FlaskConical aria-hidden />
+            <Compass aria-hidden />
             Start an investigation
           </ButtonLink>
           <ButtonLink href={explorerHref()} variant="secondary">
@@ -307,7 +299,6 @@ function NotebookEmptyState({ hasResearchNotebooks = false }: { hasResearchNoteb
           )}
         </div>
       }
-      className="bg-surface"
     />
   );
 }

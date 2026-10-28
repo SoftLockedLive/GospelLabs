@@ -1,9 +1,10 @@
-import { Sparkles } from "lucide-react";
+import { HandHeart } from "lucide-react";
 import type { Metadata } from "next";
 import { PageContainer } from "@/components/layout/app-shell";
 import { AttributeConnections, type CitedSource } from "@/components/study/character/attribute-connections";
 import { AttributeGrid, type AttributeOverviewItem } from "@/components/study/character/character-overview";
 import { SourceLink } from "@/components/study/shared/source-card";
+import { PageCover } from "@/components/ui/art-image";
 import { EmptyState } from "@/components/ui/empty-state";
 import { PageHeader } from "@/components/ui/page-header";
 import { attributeEdges } from "@/domain/study/character";
@@ -36,27 +37,30 @@ export default function CharacterPage() {
 
   return (
     <PageContainer className="flex flex-col gap-10 sm:gap-12">
-      <PageHeader
+      <div className="flex flex-col gap-6">
+        <PageCover use="character" />
+        <PageHeader
         eyebrow="Character of Christ"
         title="Learn of Him"
         description="Choose one of the Savior’s attributes to learn what it means and how He showed it."
-      />
+        />
+      </div>
 
       <section aria-labelledby="attributes-title" className="flex flex-col gap-5">
-        <h2 id="attributes-title" className="text-lg font-semibold tracking-tight text-fg sm:text-xl">
+        <h2 id="attributes-title" className="text-heading text-fg">
           Attributes of the Savior
         </h2>
         {items.length > 0 ? (
           <AttributeGrid attributes={items} />
         ) : (
-          <EmptyState icon={Sparkles} title="Attributes are on their way" description="Check back soon." className="bg-surface" />
+          <EmptyState icon={HandHeart} title="Attributes are on their way" description="Check back soon." />
         )}
       </section>
 
       {/* The introduction follows the tiles: on a phone the first screen should offer attributes to open, not a citation. */}
       <section aria-label="About the Character of Christ" className="grid gap-5 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         {invitation && invitationVerse && (
-          <figure className="flex flex-col justify-center gap-3 rounded-2xl border border-sacred-line bg-sacred p-5 sm:p-7">
+          <figure className="flex flex-col justify-center gap-3 rounded-xl border border-sacred-line bg-sacred p-5 sm:p-7">
             <blockquote className="prose-scripture text-lg text-sacred-fg">“{invitationVerse.text}”</blockquote>
             <figcaption className="text-sm font-medium text-sacred-muted">
               {invitation.label.split(":")[0]}:{MEEK_AND_LOWLY.verse}

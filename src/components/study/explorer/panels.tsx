@@ -131,7 +131,7 @@ export function KeyPhrasesPanel({ passage, sources, active, onShow, onHighlight 
                 summary={
                   <span className="flex flex-col gap-0.5">
                     <span className="prose-scripture text-[1rem] leading-snug text-fg">{phrase.phrase}</span>
-                    <span className="font-mono text-[11px] font-normal tracking-wide text-subtle">
+                    <span className="font-semibold tabular-nums text-[11px] font-normal tracking-wide text-subtle">
                       {reference}:{phrase.verse}
                     </span>
                   </span>
@@ -151,7 +151,7 @@ export function KeyPhrasesPanel({ passage, sources, active, onShow, onHighlight 
                 </div>
                 {references.length > 0 && (
                   <div className="mt-4">
-                    <h4 className="mb-2 text-xs font-semibold tracking-wide text-muted uppercase">Cross-references</h4>
+                    <h4 className="mb-2 kicker text-muted">Cross-references</h4>
                     <div className="flex flex-col gap-2.5">
                       {references.map((source) => (
                         <SourceCard key={source.id} source={source} headingLevel="h4" className="p-3.5 sm:p-4" />
@@ -184,13 +184,13 @@ export function ContextPanel({ passage, sources }: { passage: ExplorerPassage; s
           <dl className="mt-4 grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
             {speaker && (
               <div>
-                <dt className="text-xs font-semibold tracking-wide text-muted uppercase">Speaker</dt>
+                <dt className="kicker text-muted">Speaker</dt>
                 <dd className="mt-1 leading-relaxed text-fg">{speaker}</dd>
               </div>
             )}
             {audience && (
               <div>
-                <dt className="text-xs font-semibold tracking-wide text-muted uppercase">Audience</dt>
+                <dt className="kicker text-muted">Audience</dt>
                 <dd className="mt-1 leading-relaxed text-fg">{audience}</dd>
               </div>
             )}

@@ -385,7 +385,7 @@ function ModeOption({ value, selected, onSelect, title, description, preview }: 
         <span className="block text-sm font-medium text-fg">{title}</span>
         <span className="mt-0.5 block text-xs leading-relaxed text-muted">{description}</span>
         {preview?.map((line) => (
-          <span key={line} className="mt-1.5 block font-mono text-xs text-subtle">
+          <span key={line} className="mt-1.5 block font-semibold tabular-nums text-xs text-subtle">
             {line}
           </span>
         ))}

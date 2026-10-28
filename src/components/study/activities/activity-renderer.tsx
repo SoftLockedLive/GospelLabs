@@ -17,7 +17,7 @@ import { ArrowRight, ChevronDown, CircleCheck, Compass, Eye, Lightbulb } from "l
 import { useEffect, useId, useMemo, useRef, useState, type ReactNode, type Ref } from "react";
 import { Button } from "@/components/ui/button";
 import { isComplete, parseResponse } from "@/domain/study/activities";
-import { ACTIVITY_TYPE_LABELS, type Activity, type CheckedActivity as CheckedActivityType } from "@/domain/study/content-schema";
+import { ACTIVITY_TYPE_LABELS, type Activity, type CheckedActivity as CheckedActivityType, type Source } from "@/domain/study/content-schema";
 import { evidencePointer, helpOptions, hintsOf } from "@/domain/study/engine/hints";
 import { DIFFICULTY_LABELS } from "@/domain/study/vocabulary";
 import { ASSIST_SOURCE_NOTE, type AssistResponse } from "@/lib/assist";
@@ -60,6 +60,12 @@ function shownInBody(activity: Activity): string[] {
   return [];
 }
 
+/** The evidence an activity shows beside its question: its sources, less any passage its body already shows. */
+export function activityEvidence(activity: Activity, sources: Readonly<Record<string, Source>>): Source[] {
+  const hidden = new Set(shownInBody(activity));
+  return activity.sourceIds.filter((id) => !hidden.has(id)).map((id) => sources[id]).filter((source): source is Source => !!source);
+}
+
 /** Renders the body for the activity's type. Each body narrows `response` to its own format. */
 function Body(props: BodyProps<CheckedActivityType, unknown>) {
   const { activity } = props;
@@ -87,7 +93,7 @@ function Body(props: BodyProps<CheckedActivityType, unknown>) {
 
 type CheckedProps = Omit<ActivityRendererProps, "activity"> & { activity: CheckedActivityType };
 
-function CheckedActivityView({ activity, sources, difficulty, initialState, onStateChange, onComplete, allowSkip, compact, moreHelp }: CheckedProps) {
+function CheckedActivityView({ activity, sources, difficulty, initialState, onStateChange, onComplete, allowSkip, compact, moreHelp, evidenceElsewhere }: CheckedProps) {
   const [state, setState] = useState<ActivityState>(() => restoreActivityState(activity, initialState));
   const [checked, setChecked] = useState<CheckedResponse | null>(() => restoredCheck(activity, restoreActivityState(activity, initialState)));
   const [extraHelp, setExtraHelp] = useState<AssistResponse | null>(null);
@@ -105,8 +111,7 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
   const ready = isComplete(activity, response);
   const showSummary = !!checked && (finished !== null || staleWrong);
 
-  const hidden = new Set(shownInBody(activity));
-  const evidence = activity.sourceIds.filter((id) => !hidden.has(id)).map((id) => sources[id]).filter((source) => !!source);
+  const evidence = activityEvidence(activity, sources);
 
   function update(next: ActivityState) {
     setState(next);
@@ -182,16 +187,16 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
   return (
     <section aria-labelledby={promptId} className={cn("flex min-w-0 flex-col", compact ? "gap-4" : "gap-6")}>
       <header>
-        <p className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase">
+        <p className="kicker text-muted">
           {ACTIVITY_TYPE_LABELS[activity.type]}
-          {difficulty && <span className="text-subtle"> · {DIFFICULTY_LABELS[difficulty]}</span>}
+          {difficulty && <> · {DIFFICULTY_LABELS[difficulty]}</>}
         </p>
-        <h3 id={promptId} className={cn("mt-2 leading-relaxed font-medium text-fg", compact ? "text-base" : "text-base sm:text-lg")}>
+        <h3 id={promptId} className={cn("mt-1.5 font-bold text-fg", compact ? "text-base leading-relaxed" : "text-[1.0625rem] leading-[1.625rem] sm:text-lg")}>
           {activity.prompt}
         </h3>
       </header>
 
-      <EvidencePanel sources={evidence} collapsible={compact} />
+      {!evidenceElsewhere && <EvidencePanel sources={evidence} collapsible={compact} />}
 
       <Body
         activity={activity}
@@ -205,7 +210,7 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
 
       <div aria-live="polite" className="empty:hidden">
         {showSummary && !finished && (
-          <p key={state.attempts} className="motion-reveal rounded-xl border border-amber/30 bg-amber-soft px-4 py-3 text-sm leading-relaxed text-fg">
+          <p key={state.attempts} className="motion-reveal rounded-lg border-l-4 border-amber bg-amber-soft px-4 py-3 text-[0.975rem] leading-relaxed text-fg">
             {checked.result.summary}
           </p>
         )}
@@ -215,17 +220,16 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
       {!finished && (
         <ol ref={hintList} aria-label="Hints" aria-live="polite" className="flex flex-col gap-2 empty:hidden">
           {hints.map((hint, index) => (
-            <li key={index} className="motion-reveal flex gap-3 rounded-xl border border-line bg-surface-sunken px-4 py-3 text-sm leading-relaxed text-fg">
-              <Lightbulb aria-hidden className="mt-0.5 size-4 shrink-0 text-amber" />
+            <li key={index} className="motion-reveal rounded-lg bg-surface-sunken px-4 py-3 text-[0.975rem] leading-relaxed text-fg">
               <span>
-                <span className="sr-only">Hint {index + 1}: </span>
+                <span className="font-semibold text-muted">Hint {index + 1}: </span>
                 {hint}
               </span>
             </li>
           ))}
           {extraHelp && (
-            <li className="motion-reveal flex gap-3 rounded-xl border border-line bg-surface-sunken px-4 py-3 text-sm leading-relaxed text-fg">
-              <Compass aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+            <li className="motion-reveal flex gap-3 rounded-lg bg-surface-sunken px-4 py-3 text-[0.975rem] leading-relaxed text-fg">
+              <Compass aria-hidden className="mt-1 size-4 shrink-0 text-muted" />
               <span className="flex flex-col gap-1.5">
                 <span>{extraHelp.text}</span>
                 <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-subtle">
@@ -247,45 +251,64 @@ function CheckedActivityView({ activity, sources, difficulty, initialState, onSt
               You can keep looking, see the answer with an explanation{help.canSkip ? ", or continue and come back later" : ""}.
             </p>
           )}
-          <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
+          {(help.canReveal || (help.hintsExhausted && !extraHelp)) && (
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
+              {help.canReveal && (
+                <Button variant="secondary" size="lg" onClick={onReveal} className="w-full sm:w-auto">
+                  <Eye aria-hidden />
+                  Show me
+                </Button>
+              )}
+              {help.hintsExhausted && !extraHelp && (
+                <Button variant="ghost" size="lg" onClick={onMoreHelp} disabled={helpLoading} className="w-full sm:w-auto">
+                  <Compass aria-hidden />
+                  More help
+                </Button>
+              )}
+            </div>
+          )}
+          {staleWrong && <p className="text-sm text-muted">Change your answer, then check again.</p>}
+          {!ready && !checked && <p className="text-sm text-muted">{incompleteNote(activity)}</p>}
+          {/* Check and a hint stay in reach at the bottom of a phone screen while the learner reads and taps; the
+              tab bar is hidden during a step, so the bar sits on the bottom edge. In embedded activities (and from
+              `sm` up) it's an ordinary row. */}
+          <div
+            className={cn(
+              "flex items-center gap-2.5",
+              compact
+                ? "flex-col sm:flex-row"
+                : "max-sm:sticky max-sm:bottom-0 max-sm:z-10 max-sm:-mx-5 max-sm:border-t max-sm:border-line max-sm:bg-canvas max-sm:px-4 max-sm:pt-3 max-sm:[padding-bottom:max(0.75rem,env(safe-area-inset-bottom))]",
+            )}
+          >
             {/* aria-disabled rather than disabled: after a check that didn't fit, focus stays on Check instead of being lost. */}
             <Button
               size="lg"
               onClick={() => ready && !staleWrong && onCheck()}
               aria-disabled={!ready || staleWrong}
-              className="w-full sm:w-auto"
+              className={cn(compact ? "w-full sm:w-auto" : "flex-1 sm:flex-none")}
             >
               Check
             </Button>
             {help.canRequestHint && (
-              <Button variant={help.offerHint ? "secondary" : "ghost"} size="lg" onClick={onHint} className="w-full sm:w-auto">
+              <Button
+                variant={help.offerHint ? "secondary" : "link"}
+                size="lg"
+                onClick={onHint}
+                className={compact ? "w-full sm:w-auto" : "shrink-0"}
+              >
                 <Lightbulb aria-hidden />
                 {state.hintsShown === 0 ? "Need a hint?" : "Another hint"}
               </Button>
             )}
-            {help.hintsExhausted && !extraHelp && (
-              <Button variant="ghost" size="lg" onClick={onMoreHelp} disabled={helpLoading} className="w-full sm:w-auto">
-                <Compass aria-hidden />
-                More help
-              </Button>
-            )}
-            {help.canReveal && (
-              <Button variant="secondary" size="lg" onClick={onReveal} className="w-full sm:w-auto">
-                <Eye aria-hidden />
-                Show me
-              </Button>
-            )}
-            {/* Offered from the start so nobody is held on a step, but kept quiet (ghost, smaller, last) so it doesn't
-                tempt anyone before they've tried. md is still 44px tall on touch screens. */}
-            {help.canSkip && (
-              <Button variant="ghost" onClick={onSkip} className="w-full sm:w-auto">
-                Continue anyway
-                <ArrowRight aria-hidden />
-              </Button>
-            )}
           </div>
-          {staleWrong && <p className="text-xs text-subtle">Change your answer, then check again.</p>}
-          {!ready && !checked && <p className="text-xs text-subtle">{incompleteNote(activity)}</p>}
+          {/* Offered from the start so nobody is held on a step, but kept quiet (a plain link-style button, after
+              everything else) so it doesn't tempt anyone before they've tried. Still 44px tall on touch screens. */}
+          {help.canSkip && (
+            <Button variant="ghost" onClick={onSkip} className="self-center sm:self-start">
+              Continue anyway
+              <ArrowRight aria-hidden />
+            </Button>
+          )}
         </div>
       )}
 
@@ -325,8 +348,8 @@ function FinishedPanel({ ref, revealed, children }: { ref: Ref<HTMLDivElement>; 
       ref={ref}
       tabIndex={-1}
       className={cn(
-        "rounded-xl border p-4 outline-none sm:p-5",
-        revealed ? "motion-reveal border-accent/30 bg-accent-soft" : "motion-success border-green/40 bg-green-soft",
+        "rounded-lg border-l-4 p-4 outline-none sm:p-5",
+        revealed ? "motion-reveal border-accent bg-accent-soft" : "motion-success border-green bg-green-soft",
       )}
     >
       <p role="status" className="flex items-center gap-2 text-base font-semibold text-fg">
@@ -359,7 +382,7 @@ function Explanation({ children }: { children: ReactNode }) {
   return (
     <div className="mt-3 border-t border-line pt-3">
       <ProvenanceLabel provenance="suggested" />
-      <p className="mt-1.5 text-[0.975rem] leading-relaxed text-fg">{children}</p>
+      <p className="mt-1.5 font-serif text-[1.0625rem] leading-relaxed text-fg">{children}</p>
     </div>
   );
 }

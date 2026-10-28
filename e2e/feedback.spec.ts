@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
 
 test("settings offers bug reports and idea suggestions by email", async ({ page }) => {
-  await page.goto("/settings");
-  const section = page.getByRole("region", { name: "Feedback" });
+  await page.goto("/settings/feedback");
+  const section = page.getByRole("main");
   await expect(section.getByRole("link", { name: "gospellabs@proton.me" })).toHaveAttribute(
     "href",
     "mailto:gospellabs@proton.me",

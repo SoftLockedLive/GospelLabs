@@ -16,7 +16,7 @@ import { INITIAL_ACTIVITY_STATE, type ActivityRendererProps, type ActivityState 
 
 type Props = Omit<ActivityRendererProps, "activity"> & { activity: ActivityOf<"reflect"> };
 
-export function ReflectActivity({ activity, sources, initialState, onStateChange, onComplete, compact, reflectionInput = true }: Props) {
+export function ReflectActivity({ activity, sources, initialState, onStateChange, onComplete, compact, reflectionInput = true, evidenceElsewhere }: Props) {
   const [state, setState] = useState<ActivityState>(() => ({ ...INITIAL_ACTIVITY_STATE, ...initialState }));
   const completedRef = useRef(!!initialState?.completed);
   const promptId = useId();
@@ -39,7 +39,7 @@ export function ReflectActivity({ activity, sources, initialState, onStateChange
   return (
     <section aria-labelledby={promptId} className={cn("flex flex-col", compact ? "gap-4" : "gap-5")}>
       <header>
-        <p className="flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] text-accent uppercase">
+        <p className="flex items-center gap-2 kicker text-muted">
           <Feather aria-hidden className="size-3.5" />
           Reflection · optional
         </p>
@@ -48,7 +48,7 @@ export function ReflectActivity({ activity, sources, initialState, onStateChange
         </h3>
       </header>
 
-      <EvidencePanel sources={evidence} />
+      {!evidenceElsewhere && <EvidencePanel sources={evidence} />}
 
       {activity.suggestions.length > 0 && (
         <div>

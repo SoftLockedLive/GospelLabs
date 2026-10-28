@@ -38,7 +38,7 @@ export function SortActivity(props: Props) {
 
       <p className="flex justify-between gap-3 text-sm text-muted">
         <span>Choose where each one belongs.</span>
-        <span aria-live="polite" className="font-mono text-xs text-subtle">
+        <span aria-live="polite" className="font-semibold tabular-nums text-xs text-subtle">
           {placed} of {activity.items.length} placed
         </span>
       </p>

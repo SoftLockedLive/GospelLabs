@@ -156,7 +156,7 @@ export function SaveDiscovery({ bundle, exploration, explorationReady, beforeSav
 function SaveStat({ value, label }: { value: number | string; label: string }) {
   return (
     <li className="rounded-lg border border-line bg-surface-sunken px-3 py-2">
-      <span className="block font-mono text-base text-fg tabular-nums">{value}</span>
+      <span className="block font-semibold tabular-nums text-base text-fg tabular-nums">{value}</span>
       <span className="text-xs text-muted">{label}</span>
     </li>
   );

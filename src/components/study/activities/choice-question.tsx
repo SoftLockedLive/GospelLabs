@@ -34,7 +34,7 @@ export function ChoiceQuestion({ question, seed, selected, onChange, markFor, fe
   return (
     <fieldset disabled={disabled} className="flex min-w-0 flex-col gap-3 disabled:opacity-60">
       <legend className="mb-3 text-base leading-relaxed font-medium text-fg">
-        {number !== undefined && <span className="mr-2 font-mono text-xs text-accent">{String(number).padStart(2, "0")}</span>}
+        {number !== undefined && <span className="mr-2 font-semibold tabular-nums text-muted">{`${number}.`}</span>}
         {question.prompt}
         {question.multiple && <span className="mt-1 block text-sm font-normal text-muted">Choose all that apply.</span>}
         {note && <span className="mt-1 block text-sm font-normal text-muted">{note}</span>}

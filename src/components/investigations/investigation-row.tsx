@@ -20,7 +20,7 @@ export function InvestigationRow({ investigation }: { investigation: Investigati
         <div className="flex flex-wrap items-center gap-2">
           <StatusBadge status={investigation.status} />
           {investigation.category && (
-            <span className="min-w-0 font-mono text-[11px] tracking-wide break-all text-subtle uppercase">{investigation.category}</span>
+            <span className="min-w-0 text-[13px] font-semibold break-words text-muted">{investigation.category}</span>
           )}
         </div>
         <p className="mt-2.5 font-medium break-words text-fg">{investigation.title.trim() || "Untitled notebook"}</p>

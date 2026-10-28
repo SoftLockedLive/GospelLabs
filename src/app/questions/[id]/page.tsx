@@ -1,11 +1,11 @@
-import { ArrowLeft, FlaskConical, Lightbulb, Route, ScrollText } from "lucide-react";
+import { Lightbulb, NotebookTabs, Route, ScrollText } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageContainer } from "@/components/layout/app-shell";
 import { newInvestigationHref } from "@/lib/routes";
 import { RandomQuestionButton } from "@/components/questions/random-question-button";
 import { ReferenceList } from "@/components/questions/reference-list";
+import { BackLink } from "@/components/ui/back-link";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,17 +31,11 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
   return (
     <PageContainer>
       <div className="flex max-w-4xl flex-col gap-8">
-      <Link
-        href="/questions"
-        className="inline-flex w-fit items-center gap-1.5 rounded-md py-1 text-sm text-muted transition-colors hover:text-fg"
-      >
-        <ArrowLeft aria-hidden className="size-4" />
-        Question Bank
-      </Link>
+      <BackLink href="/questions">Question Bank</BackLink>
 
       <header>
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-xs tracking-wide text-accent uppercase">{question.category}</span>
+          <span className="kicker text-muted">{question.category}</span>
           <Badge>{DIFFICULTY_LABELS[question.difficulty]}</Badge>
         </div>
         <h1 className="mt-3 text-2xl leading-tight font-semibold tracking-tight text-fg sm:text-3xl">
@@ -58,7 +52,7 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
         )}
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href={newInvestigationHref(question.id)} size="lg">
-            <FlaskConical aria-hidden />
+            <NotebookTabs aria-hidden />
             Start a research notebook
           </ButtonLink>
           <RandomQuestionButton
@@ -101,8 +95,8 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
               <ol className="mt-5 flex flex-col gap-3">
                 {trail.steps.map((step, index) => (
                   <li key={step.id} className="flex gap-3 text-sm leading-relaxed">
-                    <span aria-hidden className="w-5 shrink-0 font-mono text-xs leading-6 text-accent">
-                      {String(index + 1).padStart(2, "0")}
+                    <span aria-hidden className="w-5 shrink-0 font-semibold tabular-nums leading-6 text-muted">
+                      {`${index + 1}.`}
                     </span>
                     <span>
                       <span className="font-medium text-fg">{step.title}</span>
@@ -131,8 +125,8 @@ export default async function QuestionDetailPage({ params }: PageProps<"/questio
               <ol className="mt-5 flex flex-col gap-3">
                 {question.prompts.map((prompt, index) => (
                   <li key={prompt} className="flex gap-3 text-sm leading-relaxed text-muted">
-                    <span aria-hidden className="w-5 shrink-0 font-mono text-xs leading-6 text-accent">
-                      {String(index + 1).padStart(2, "0")}
+                    <span aria-hidden className="w-5 shrink-0 font-semibold tabular-nums leading-6 text-muted">
+                      {`${index + 1}.`}
                     </span>
                     {prompt}
                   </li>

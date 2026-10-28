@@ -54,7 +54,7 @@ function NumberBadge({ n, active }: { n: number; active?: boolean }) {
     <span
       aria-hidden
       className={cn(
-        "flex size-6 shrink-0 items-center justify-center rounded-full border font-mono text-[11px]",
+        "flex size-6 shrink-0 items-center justify-center rounded-full border font-semibold tabular-nums text-[11px]",
         active ? "border-accent bg-accent text-accent-fg" : "border-accent/50 text-accent",
       )}
     >
@@ -186,7 +186,7 @@ function MatchColumns({ leftLabel, rightLabel, left, right, value, onToggle, mar
         </svg>
 
         <div role="group" aria-label={leftLabel} className="flex flex-col gap-2.5">
-          <p className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">{leftLabel}</p>
+          <p className="mb-1 kicker text-muted">{leftLabel}</p>
           {left.map((item) => {
             const mark = marks.get(item.id);
             const isSelected = selected?.side === "left" && selected.id === item.id;
@@ -225,7 +225,7 @@ function MatchColumns({ leftLabel, rightLabel, left, right, value, onToggle, mar
         <div aria-hidden />
 
         <div role="group" aria-label={rightLabel} className="flex flex-col gap-2.5">
-          <p className="mb-1 text-xs font-semibold tracking-wide text-muted uppercase">{rightLabel}</p>
+          <p className="mb-1 kicker text-muted">{rightLabel}</p>
           {right.map((item) => {
             const isSelected = selected?.side === "right" && selected.id === item.id;
             const numbers = connectedTo(item.id);

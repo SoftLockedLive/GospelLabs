@@ -95,7 +95,7 @@ function ActivityPanel({ activity, number, doneBefore }: { activity: Activity; n
       ) : (
         <div className="flex flex-col items-start gap-3">
           <div>
-            <p className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase">{ACTIVITY_TYPE_LABELS[activity.type]}</p>
+            <p className="kicker text-muted">{ACTIVITY_TYPE_LABELS[activity.type]}</p>
             <h3 className="mt-2 text-base leading-relaxed font-medium text-fg">{activity.prompt}</h3>
           </div>
           <p className="text-sm leading-relaxed text-muted">You’ve completed this activity before. You’re welcome to work through it again.</p>

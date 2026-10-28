@@ -58,8 +58,8 @@ const stagger = (index: number) => ({ "--motion-index": index }) as CSSPropertie
 export function DefinitionSection({ attribute, sources }: { attribute: ChristAttribute; sources: Sources }) {
   return (
     <StudySection id="definition" title={`What ${attribute.name.toLowerCase()} means`}>
-      <div className="rounded-2xl border border-line bg-surface p-5 shadow-soft sm:p-6">
-        <p className="max-w-3xl text-[1.0625rem] leading-relaxed text-fg">{attribute.definition.text}</p>
+      <div>
+        <p className="prose-scripture max-w-3xl text-fg">{attribute.definition.text}</p>
         <SourceCitations
           sourceIds={attribute.definition.sourceIds}
           sources={sources}

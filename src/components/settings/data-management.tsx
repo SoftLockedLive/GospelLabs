@@ -118,7 +118,7 @@ export function DataManagement() {
         <ul className="flex flex-col divide-y divide-line">
           <DataAction
             title="Export backup"
-            description="Download everything as a JSON file: your research notebooks, investigation progress, Discovery Cards, Map connections, what you’ve saved in Scripture Explorer and Character of Christ, and your preferences. Keep it somewhere safe."
+            description="Download everything as a file: your research notebooks, investigation progress, Discovery Cards, journal, Map connections, what you’ve saved in Scripture Explorer and Character of Christ, and your preferences. Keep it somewhere safe."
             action={
               <Button variant="secondary" size="md" onClick={exportData} disabled={exporting || unavailable}>
                 <Download aria-hidden />
@@ -149,7 +149,7 @@ export function DataManagement() {
           />
           <DataAction
             title="Delete all data"
-            description="Permanently remove your research notebooks, investigation progress, Discovery Cards, Map connections, and everything else you’ve saved from this device. Preferences are kept."
+            description="Permanently remove your research notebooks, investigation progress, Discovery Cards, journal, Map connections, and everything else you’ve saved from this device. Preferences are kept."
             action={
               <Button
                 variant="danger"

@@ -70,11 +70,11 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
   const setLength = (length: StudyLength) => updatePreferences({ studyLength: length });
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-14">
+    <div className="flex flex-col gap-10 sm:gap-14">
       <DashboardHero now={now} length={studyLength} onLengthChange={setLength} focus={focus} />
 
       {storageError && (
-        <div role="alert" className="flex items-start gap-3 rounded-2xl border border-danger/30 bg-danger-soft p-4 sm:p-5">
+        <div role="alert" className="flex items-start gap-3 rounded-xl border border-danger/30 bg-danger-soft p-4 sm:p-5">
           <DatabaseZap aria-hidden className="mt-0.5 size-5 shrink-0 text-danger" />
           <div>
             <p className="text-sm font-semibold text-fg">Your saved study couldn&rsquo;t be loaded</p>
@@ -97,24 +97,27 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
           title={focus.kind === "start" ? "Or choose another investigation" : "Start a new investigation"}
           description={studyLength === "deep" ? "Chosen for a deep study." : "Chosen for a quick study."}
           action={
-            <Link href={investigateHref()} className="inline-flex min-h-11 items-center gap-1.5 rounded-lg text-sm font-medium text-accent hover:text-accent-strong">
+            <Link href={investigateHref()} className="inline-flex min-h-11 items-center gap-1.5 rounded-lg text-[0.9375rem] font-semibold text-accent hover:text-accent-strong">
               All investigations
               <ArrowRight aria-hidden className="size-4" />
             </Link>
           }
         >
           {loading ? (
-            <div role="status" aria-label="Loading suggestions" className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div role="status" aria-label="Loading suggestions" className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {Array.from({ length: SUGGESTION_COUNT }, (_, i) => (
-                <div key={i} className="flex flex-col gap-3 rounded-2xl border border-line bg-surface p-5">
-                  <Skeleton className="h-3 w-20" />
-                  <Skeleton className="h-5 w-3/4" />
-                  <SkeletonText lines={2} />
+                <div key={i} className="flex gap-4 sm:flex-col">
+                  <Skeleton className="size-24 shrink-0 sm:aspect-video sm:h-auto sm:w-full" />
+                  <div className="flex flex-1 flex-col gap-2">
+                    <Skeleton className="h-3 w-20" />
+                    <Skeleton className="h-5 w-3/4" />
+                    <SkeletonText lines={2} />
+                  </div>
                 </div>
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {listed.map((suggestion, index) => (
                 <InvestigationCard key={suggestion.investigation.id} suggestion={suggestion} length={studyLength} index={index} />
               ))}
@@ -138,14 +141,14 @@ export function StudyDashboard({ content }: { content: DashboardContent }) {
         title="Your discoveries"
         action={
           discoveries.length > 0 ? (
-            <p className="text-sm text-subtle">{discoveries.length === 1 ? "1 discovery" : `${discoveries.length} discoveries`}</p>
+            <p className="text-sm text-muted">{discoveries.length === 1 ? "1 discovery" : `${discoveries.length} discoveries`}</p>
           ) : undefined
         }
       >
         {loading ? (
-          <div role="status" aria-label="Loading your discoveries" className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          <div role="status" aria-label="Loading your discoveries" className="flex flex-col gap-3">
             {Array.from({ length: 3 }, (_, i) => (
-              <Skeleton key={i} className="h-32 rounded-2xl" />
+              <Skeleton key={i} className="h-20" />
             ))}
           </div>
         ) : (

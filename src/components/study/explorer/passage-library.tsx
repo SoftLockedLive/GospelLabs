@@ -37,7 +37,7 @@ export function PassageLibrary({ passages }: { passages: readonly PassageListIte
               href={explorerHref(passage.id)}
               className="group flex h-full flex-col rounded-xl border border-line bg-surface p-5 transition-colors motion-press hover:border-accent/50 hover:bg-surface-raised"
             >
-              <span className="flex items-center gap-2 font-mono text-xs tracking-wide text-accent">
+              <span className="flex items-center gap-2 font-semibold tabular-nums text-xs tracking-wide text-accent">
                 <BookOpenText aria-hidden className="size-3.5" />
                 {passage.reference}
               </span>

@@ -44,14 +44,14 @@ export function VocabMatchActivity(props: Props) {
     <div className="flex flex-col gap-8">
       <section aria-labelledby={`${activity.id}-meanings`}>
         <h4 id={`${activity.id}-meanings`} className="mb-3 text-sm font-semibold text-fg">
-          <span className="mr-2 font-mono text-xs text-accent">01</span>Match each term with its meaning
+          <span className="mr-2 font-semibold tabular-nums text-muted">1.</span>Match each term with its meaning
         </h4>
         {board("meaning")}
       </section>
       {asksExamples(activity) && (
         <section aria-labelledby={`${activity.id}-examples`}>
           <h4 id={`${activity.id}-examples`} className="mb-3 text-sm font-semibold text-fg">
-            <span className="mr-2 font-mono text-xs text-accent">02</span>Match each term with a scriptural example
+            <span className="mr-2 font-semibold tabular-nums text-muted">2.</span>Match each term with a scriptural example
           </h4>
           {board("example")}
         </section>

@@ -27,13 +27,13 @@ const KINDS = Object.keys(STORES) as Kind[];
 /** The per-kind summary in Settings › Your data. */
 const savedData = (page: Page) => page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem");
 
-const NOTHING_SAVED = ["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes"];
-const FIXTURE_SAVED = ["1 research notebook", "1 investigation", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes"];
+const NOTHING_SAVED = ["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes", "0 journal entries"];
+const FIXTURE_SAVED = ["1 research notebook", "1 investigation", "1 Discovery Card", "1 Map connection", "2 explored passages and attributes", "0 journal entries"];
 
 /** Opens Settings and waits until the app has opened (and upgraded) its database. */
 async function openSettings(page: Page) {
-  await page.goto("/settings");
-  await expect(savedData(page)).toHaveCount(5);
+  await page.goto("/settings/data");
+  await expect(savedData(page)).toHaveCount(6);
 }
 
 /** Writes records straight into one of the app's IndexedDB stores, exactly as given. */
@@ -133,7 +133,7 @@ test("study data and preferences survive export, delete everything, and import e
 
   const firstPath = testInfo.outputPath("first.json");
   const first = await exportBackup(page, firstPath);
-  expect(first).toMatchObject({ format: "gospel-labs-backup", version: 3, preferences: PREFERENCES_FROM_2_0 });
+  expect(first).toMatchObject({ format: "gospel-labs-backup", version: 4, preferences: PREFERENCES_FROM_2_0 });
   expect(first.investigations).toEqual([RECORD_FROM_1_1]);
   // Every record exactly as stored, including the field this version doesn't know.
   expect(studyById(first.study)).toEqual(studyById(seededStudy()));

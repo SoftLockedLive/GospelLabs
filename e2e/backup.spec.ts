@@ -6,11 +6,11 @@ import { createInvestigation, libraryItem } from "./helpers";
 /** The per-kind summary in Settings › Your data. */
 const savedData = (page: Page) => page.getByRole("list", { name: "Saved on this device" }).getByRole("listitem");
 
-const NOTHING_SAVED = ["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes"];
-const NO_STUDY_DATA = { progress: [], discoveries: [], personalConnections: [], explorations: [] };
+const NOTHING_SAVED = ["0 research notebooks", "0 investigations", "0 Discovery Cards", "0 Map connections", "0 explored passages and attributes", "0 journal entries"];
+const NO_STUDY_DATA = { progress: [], discoveries: [], personalConnections: [], explorations: [], journal: [] };
 
 async function exportBackup(page: Page, path: string) {
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   const [download] = await Promise.all([
     page.waitForEvent("download"),
     page.getByRole("button", { name: "Export backup" }).click(),
@@ -24,7 +24,7 @@ test("export, delete everything, and restore with merge", async ({ page }, testI
   await createInvestigation(page, "Grace and works");
   const backupPath = testInfo.outputPath("backup.json");
   const backup = await exportBackup(page, backupPath);
-  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 3, study: NO_STUDY_DATA });
+  expect(backup).toMatchObject({ format: "gospel-labs-backup", version: 4, study: NO_STUDY_DATA });
   expect(backup.investigations).toHaveLength(1);
   expect(backup.investigations[0]).toMatchObject({
     evidenceConnections: [],
@@ -64,7 +64,7 @@ test("replace warns before deleting current data", async ({ page }, testInfo) =>
   await exportBackup(page, backupPath);
   await createInvestigation(page, "Created after backup");
 
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await page.locator('input[type="file"]').setInputFiles(backupPath);
   const dialog = page.getByRole("dialog", { name: "Import backup" });
   await dialog.getByText("Replace all my data").click();
@@ -103,7 +103,7 @@ test("a backup exported by Gospel Labs 1.0 imports with all of its data", async 
   const oldBackup = testInfo.outputPath("gospel-labs-backup-1.0.json");
   writeFileSync(oldBackup, BACKUP_FROM_1_0);
 
-  await page.goto("/settings");
+  await page.goto("/settings/data");
   await page.locator('input[type="file"]').setInputFiles(oldBackup);
   const dialog = page.getByRole("dialog", { name: "Import backup" });
   await expect(dialog).toContainText("made by Gospel Labs 1.x");
@@ -118,7 +118,7 @@ test("a backup exported by Gospel Labs 1.0 imports with all of its data", async 
 
   // Exporting again writes the current format, with the 1.0 data unchanged.
   const reexported = await exportBackup(page, testInfo.outputPath("reexported.json"));
-  expect(reexported.version).toBe(3);
+  expect(reexported.version).toBe(4);
   // Imported by this version, so stamped with its record format.
   expect(reexported.investigations).toEqual([{ ...RECORD_FROM_1_0_AS_READ, dataVersion: 2 }]);
   expect(reexported.study).toEqual(NO_STUDY_DATA);

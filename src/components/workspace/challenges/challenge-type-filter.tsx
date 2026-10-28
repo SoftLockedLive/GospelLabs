@@ -53,7 +53,7 @@ export function ChallengeTypeFilter({ value, counts, onChange }: ChallengeTypeFi
               {Icon && <Icon aria-hidden className="size-3.5" />}
               <span aria-hidden>{label}</span>
               {count > 0 && (
-                <span aria-hidden className="font-mono text-xs text-accent">
+                <span aria-hidden className="font-semibold tabular-nums text-muted">
                   {count}
                 </span>
               )}

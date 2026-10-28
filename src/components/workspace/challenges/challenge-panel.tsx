@@ -126,7 +126,7 @@ export function ChallengePanel({ investigation, actions }: ChallengePanelProps) 
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
           <h3
             id="research-challenge-heading"
-            className="flex items-center gap-2 text-xs font-semibold tracking-wide text-fg uppercase"
+            className="flex items-center gap-2 kicker text-fg"
           >
             <Compass aria-hidden className="size-4 text-accent" />
             Research challenge
@@ -197,7 +197,7 @@ function ChallengeText({ challenge }: { challenge: ShownChallenge }) {
   const Icon = CHALLENGE_ICONS[challenge.type];
   return (
     <div className="transition-opacity duration-300 starting:opacity-0">
-      <p className="flex items-center gap-1.5 font-mono text-[11px] tracking-[0.14em] text-accent uppercase">
+      <p className="flex items-center gap-1.5 kicker text-muted">
         <Icon aria-hidden className="size-3.5" />
         {CHALLENGE_TYPE_INFO[challenge.type].label}
       </p>

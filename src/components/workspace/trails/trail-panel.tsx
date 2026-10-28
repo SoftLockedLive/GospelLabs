@@ -53,7 +53,7 @@ export function TrailPanel({ trail, investigation, actions, onRecord, onNavigate
     >
       <div>
         <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-fg uppercase">
+          <p className="flex items-center gap-2 kicker text-fg">
             <Route aria-hidden className="size-4 text-accent" />
             Discovery trail
           </p>
@@ -96,7 +96,7 @@ export function TrailPanel({ trail, investigation, actions, onRecord, onNavigate
                   <span
                     aria-hidden
                     className={cn(
-                      "flex size-6 shrink-0 items-center justify-center rounded-full border font-mono text-[11px]",
+                      "flex size-6 shrink-0 items-center justify-center rounded-full border font-semibold tabular-nums text-[11px]",
                       notes?.explored
                         ? "border-accent bg-accent text-accent-fg"
                         : current

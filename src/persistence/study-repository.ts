@@ -1,15 +1,17 @@
 /**
  * Reads and writes of Gospel Labs 2.0 study data: progress, Discovery Cards,
- * personal connections, and explorations. Like the investigation repository,
- * records are validated on the way in and out, failures surface as
- * StorageErrors, records written by a newer version are never overwritten,
- * and multi-record operations run in one transaction.
+ * personal connections, explorations, and journal entries. Like the
+ * investigation repository, records are validated on the way in and out,
+ * failures surface as StorageErrors, records written by a newer version are
+ * never overwritten, and multi-record operations run in one transaction.
  *
  * Study records use last-write-wins: unlike research notebooks there is no
- * long free-text editing, and each write is a small, complete state.
+ * long, many-part editing, and each write is a small, complete state (a
+ * journal entry is one piece of writing, saved whole like a card's notes).
  */
 import type { Table } from "dexie";
 import type { z } from "zod";
+import { journalEntrySchema, type JournalEntry } from "@/domain/study/journal";
 import {
   discoveryCardSchema,
   explorationSchema,
@@ -116,6 +118,7 @@ export interface StudySnapshot {
   discoveries: DiscoveryCard[];
   personalConnections: PersonalConnection[];
   explorations: Exploration[];
+  journal: JournalEntry[];
 }
 
 export const emptyStudySnapshot = (): StudySnapshot => ({
@@ -123,6 +126,7 @@ export const emptyStudySnapshot = (): StudySnapshot => ({
   discoveries: [],
   personalConnections: [],
   explorations: [],
+  journal: [],
 });
 
 export function createStudyRepository(db: GospelLabsDatabase) {
@@ -130,13 +134,15 @@ export function createStudyRepository(db: GospelLabsDatabase) {
   const discoveries = createStore(db.discoveries, discoveryCardSchema as z.ZodType<DiscoveryCard>);
   const personalConnections = createStore(db.personalConnections, personalConnectionSchema as z.ZodType<PersonalConnection>);
   const explorations = createStore(db.explorations, explorationSchema as z.ZodType<Exploration>);
-  const tables = [db.studyProgress, db.discoveries, db.personalConnections, db.explorations];
+  const journal = createStore(db.journal, journalEntrySchema as z.ZodType<JournalEntry>);
+  const tables = [db.studyProgress, db.discoveries, db.personalConnections, db.explorations, db.journal];
 
   return {
     progress,
     discoveries,
     personalConnections,
     explorations,
+    journal,
 
     /**
      * Saves a completed investigation's progress and its new Discovery Card
@@ -188,11 +194,12 @@ export function createStudyRepository(db: GospelLabsDatabase) {
     snapshot: () =>
       guard(() =>
         db.transaction("r", tables, async () => {
-          const [p, d, c, e] = await Promise.all([
+          const [p, d, c, e, j] = await Promise.all([
             progress.readAll({ asStored: true }),
             discoveries.readAll({ asStored: true }),
             personalConnections.readAll({ asStored: true }),
             explorations.readAll({ asStored: true }),
+            journal.readAll({ asStored: true }),
           ]);
           return {
             snapshot: {
@@ -200,8 +207,9 @@ export function createStudyRepository(db: GospelLabsDatabase) {
               discoveries: d.records,
               personalConnections: c.records,
               explorations: e.records,
+              journal: j.records,
             } satisfies StudySnapshot,
-            unreadable: p.unreadable + d.unreadable + c.unreadable + e.unreadable,
+            unreadable: p.unreadable + d.unreadable + c.unreadable + e.unreadable + j.unreadable,
           };
         }),
       ),
@@ -213,6 +221,7 @@ export function createStudyRepository(db: GospelLabsDatabase) {
         discoveries: await db.discoveries.count(),
         personalConnections: await db.personalConnections.count(),
         explorations: await db.explorations.count(),
+        journal: await db.journal.count(),
       })),
 
     /** Deletes all study data, returning how many records were removed. */

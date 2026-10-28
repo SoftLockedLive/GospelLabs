@@ -72,7 +72,7 @@ export function CardNotes({ card, onUnsavedChange }: CardNotesProps) {
         onBlur={() => void autosave.flush()}
       />
       <p id={hintId} className="text-xs leading-relaxed text-subtle">
-        Only you see these, on this device. They&rsquo;re saved automatically.
+        Only you see these, on this device. They&rsquo;re saved automatically, and shown in your journal too.
       </p>
       {status.state === "deleted" && (
         <p role="alert" className="flex items-start gap-1.5 text-sm text-danger">

@@ -26,7 +26,7 @@ export function ChallengeResponseList({ responses, activeChallengeId, onEdit, on
           return (
             <li key={response.id} className="flex items-start gap-3 px-3.5 py-3">
               <div className="min-w-0 flex-1">
-                <p className="flex items-center gap-1.5 font-mono text-[11px] tracking-wide text-accent uppercase">
+                <p className="flex items-center gap-1.5 kicker text-muted">
                   <Icon aria-hidden className="size-3" />
                   {CHALLENGE_TYPE_INFO[response.type].label}
                 </p>

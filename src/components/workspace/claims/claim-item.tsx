@@ -72,7 +72,7 @@ export function ClaimItem({
                 key={card.id}
                 className="inline-flex max-w-full items-center gap-1.5 rounded-full border border-accent/30 bg-accent-soft py-0.5 pr-1 pl-2.5 text-xs text-fg"
               >
-                <span className="font-mono text-accent">{labels.get(card.id)}</span>
+                <span className="font-semibold tabular-nums text-accent">{labels.get(card.id)}</span>
                 <span className="max-w-48 truncate">{card.sourceTitle}</span>
                 <button
                   type="button"

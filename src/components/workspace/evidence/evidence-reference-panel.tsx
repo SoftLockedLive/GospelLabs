@@ -52,7 +52,7 @@ export function EvidenceReferencePanel({ investigation, onManage }: EvidenceRefe
               const count = citations.get(card.id) ?? 0;
               return (
                 <li key={card.id} className="min-w-0 text-sm">
-                  <span className="mr-2 font-mono text-xs text-accent">{labels.get(card.id)}</span>
+                  <span className="mr-2 font-semibold tabular-nums text-muted">{labels.get(card.id)}</span>
                   <span className="break-words text-fg">{card.sourceTitle}</span>
                   <p className="mt-0.5 line-clamp-2 text-xs leading-relaxed text-subtle">{card.observation}</p>
                   <p className="mt-0.5 text-[11px] text-subtle">

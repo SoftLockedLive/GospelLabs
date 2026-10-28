@@ -4,12 +4,14 @@ import {
   BACKUP_FROM_1_0,
   BACKUP_FROM_1_1,
   BACKUP_FROM_2_0,
+  BACKUP_FROM_3_0,
   BACKUP_V2_BEFORE_TRAILS,
   BACKUP_V2_BEFORE_CONNECTIONS,
   BACKUP_V2_BEFORE_REFLECTION,
   CARD_FROM_2_0,
   CONNECTION_FROM_2_0,
   EXPLORATIONS_FROM_2_0,
+  JOURNAL_FROM_3_0,
   PREFERENCES_FROM_2_0,
   PROGRESS_FROM_2_0,
   RECORD_BEFORE_REFLECTION_AS_READ,
@@ -19,6 +21,7 @@ import {
   RECORD_FROM_1_0_AS_READ,
   RECORD_FROM_1_1_AS_READ,
   STUDY_FROM_2_0,
+  STUDY_FROM_3_0,
 } from "./legacy-fixtures";
 import {
   BACKUP_FORMAT,
@@ -81,9 +84,9 @@ describe("older backup versions", () => {
     ]);
   });
 
-  it("writes the current version (3), including challenge responses and trail progress", () => {
+  it("writes the current version (4), including challenge responses and trail progress", () => {
     const backup = createBackup([richInvestigation("a")], EXPORTED_AT);
-    expect(backup.version).toBe(3);
+    expect(backup.version).toBe(4);
     const [written] = JSON.parse(serializeBackup(backup)).investigations;
     expect(written.challengeResponses).toHaveLength(1);
     expect(written.trailProgress).toEqual(richInvestigation("a").trailProgress);
@@ -255,39 +258,44 @@ describe("planImport", () => {
   });
 });
 
-// --- Version 3: study data and preferences --------------------------------------
+// --- Versions 3 and 4: study data, preferences, and the journal ------------------
 
+/** Every kind of study record: the 2.0 data and two journal entries. */
 const study = (overrides: Partial<StudyData> = {}): StudyData => ({
-  ...(structuredClone(STUDY_FROM_2_0) as unknown as StudyData),
+  ...(structuredClone(STUDY_FROM_3_0) as unknown as StudyData),
   ...overrides,
 });
+/** A file in the current format (version 4) with every kind of study record and preferences. */
+const current = (extra: Record<string, unknown> = {}) =>
+  envelope([], { study: structuredClone(STUDY_FROM_3_0), preferences: PREFERENCES_FROM_2_0, ...extra });
+/** A version 3 file, as 2.0–2.2 write them. */
 const v3 = (extra: Record<string, unknown> = {}) =>
-  envelope([], { study: structuredClone(STUDY_FROM_2_0), preferences: PREFERENCES_FROM_2_0, ...extra });
+  envelope([], { version: 3, study: structuredClone(STUDY_FROM_2_0), preferences: PREFERENCES_FROM_2_0, ...extra });
 const parsedOrThrow = (text: string) => {
   const result = parseBackup(text);
   if (!result.ok) throw new Error(result.error.message);
   return result.backup;
 };
 
-describe("version 3 files", () => {
-  it("write every study record and the preferences exactly as given", () => {
+describe("version 4 files", () => {
+  it("write every study record, journal entries included, and the preferences exactly as given", () => {
     const written = JSON.parse(
       serializeBackup(createBackup([richInvestigation("a")], EXPORTED_AT, { study: study(), preferences: PREFERENCES_FROM_2_0 })),
     );
     expect(written).toEqual({
       format: BACKUP_FORMAT,
-      version: 3,
+      version: 4,
       exportedAt: EXPORTED_AT,
       investigations: [richInvestigation("a")],
-      study: STUDY_FROM_2_0,
+      study: STUDY_FROM_3_0,
       preferences: PREFERENCES_FROM_2_0,
     });
   });
 
   it("always contain a study section, empty when there's no study data", () => {
     expect(JSON.parse(serializeBackup(createBackup([], EXPORTED_AT)))).toMatchObject({
-      version: 3,
-      study: { progress: [], discoveries: [], personalConnections: [], explorations: [] },
+      version: 4,
+      study: { progress: [], discoveries: [], personalConnections: [], explorations: [], journal: [] },
       preferences: {},
     });
   });
@@ -296,6 +304,7 @@ describe("version 3 files", () => {
     const withFutureFields = study({
       discoveries: [{ ...study().discoveries[0], futureField: { kept: true } } as StudyData["discoveries"][number]],
       explorations: study().explorations.map((record) => ({ ...record, laterAddition: 7 })),
+      journal: study().journal.map((entry) => ({ ...entry, mood: "calm", link: entry.link && { ...entry.link, verse: 12 } })),
     });
     const parsed = parsedOrThrow(
       serializeBackup(createBackup([], EXPORTED_AT, { study: withFutureFields, preferences: PREFERENCES_FROM_2_0 })),
@@ -306,20 +315,32 @@ describe("version 3 files", () => {
     expect(parsed.notes).toEqual([]);
   });
 
-  it("imports a backup exported by 2.0 with every record and preference intact", () => {
-    expect(parseBackup(BACKUP_FROM_2_0)).toEqual({
+  it("imports a backup exported by 3.0 with every record and preference intact", () => {
+    expect(parseBackup(BACKUP_FROM_3_0)).toEqual({
       ok: true,
       backup: {
-        version: 3,
-        exportedAt: "2026-10-26T08:00:00.000Z",
+        version: 4,
+        exportedAt: "2026-10-27T08:00:00.000Z",
         investigations: [RECORD_FROM_1_1_AS_READ],
         skipped: [],
-        study: STUDY_FROM_2_0,
+        study: STUDY_FROM_3_0,
         studySkipped: [],
         preferences: PREFERENCES_FROM_2_0,
         notes: [],
       },
     });
+  });
+
+  it("are refused by Gospel Labs 2.0–2.2 as made by a newer version", () => {
+    // 2.0.0 through 2.2.0.1 accept versions 1–3 and read only the four study
+    // lists they know, so they would silently leave the journal out of a
+    // version 3 file. Raising the version makes them answer with their
+    // "newer-version" error instead.
+    const LAST_VERSION_READ_BY_2_2 = 3;
+    const written = JSON.parse(serializeBackup(createBackup([], EXPORTED_AT, { study: study() })));
+    expect(written.format).toBe("gospel-labs-backup");
+    expect(written.version).toBeGreaterThan(LAST_VERSION_READ_BY_2_2);
+    expect(written.study.journal).toEqual(JOURNAL_FROM_3_0);
   });
 
   it("are refused by Gospel Labs 1.1 and 1.0 as made by a newer version", () => {
@@ -334,14 +355,44 @@ describe("version 3 files", () => {
   });
 
   it("from a newer version are still refused, with the same message", () => {
-    const result = parseBackup(envelope([], { version: 4, study: {} }));
+    const result = parseBackup(envelope([], { version: 5, study: {} }));
     expect(result).toEqual({
       ok: false,
       error: {
         kind: "newer-version",
-        message: "This backup was made by a newer version of Gospel Labs (format 4). Update the app, then import it again.",
+        message: "This backup was made by a newer version of Gospel Labs (format 5). Update the app, then import it again.",
       },
     });
+  });
+});
+
+describe("version 3 files", () => {
+  it("from 2.0 import with every record and preference intact, and an empty journal", () => {
+    expect(parseBackup(BACKUP_FROM_2_0)).toEqual({
+      ok: true,
+      backup: {
+        version: 3,
+        exportedAt: "2026-10-26T08:00:00.000Z",
+        investigations: [RECORD_FROM_1_1_AS_READ],
+        skipped: [],
+        study: { ...STUDY_FROM_2_0, journal: [] },
+        studySkipped: [],
+        preferences: PREFERENCES_FROM_2_0,
+        notes: [],
+      },
+    });
+  });
+
+  it("never bring journal entries, even under that key", () => {
+    const parsed = parsedOrThrow(v3({ study: { ...structuredClone(STUDY_FROM_2_0), journal: JOURNAL_FROM_3_0 } }));
+    expect(parsed.study).toEqual({ ...STUDY_FROM_2_0, journal: [] });
+    expect(parsed.studySkipped).toEqual([]);
+  });
+
+  it("without a study section, or with a damaged one, are reported as before", () => {
+    expect(parsedOrThrow(v3({ study: undefined })).notes).toEqual([expect.stringContaining("no investigation progress")]);
+    expect(parsedOrThrow(v3({ study: "junk" })).notes).toEqual([expect.stringContaining("Map connections is damaged")]);
+    expect(parsedOrThrow(v3({ study: "junk" })).study).toEqual(emptyStudyData());
   });
 });
 
@@ -387,7 +438,7 @@ describe("study records in a backup", () => {
       }),
     );
     expect(parsed.study).toEqual(
-      study({ personalConnections: [], explorations: [EXPLORATIONS_FROM_2_0[1]] as unknown as StudyData["explorations"] }),
+      study({ personalConnections: [], explorations: [EXPLORATIONS_FROM_2_0[1]] as unknown as StudyData["explorations"], journal: [] }),
     );
     expect(parsed.studySkipped).toEqual([
       { kind: "progress", index: 1, id: "bad-progress", title: undefined, reason: expect.stringContaining("difficulty") },
@@ -412,16 +463,29 @@ describe("study records in a backup", () => {
   });
 
   it("names Discovery Cards by title", () => {
-    const parsed = parsedOrThrow(v3({ study: { discoveries: [{ ...CARD_FROM_2_0, sources: "none" }] } }));
+    const parsed = parsedOrThrow(current({ study: { discoveries: [{ ...CARD_FROM_2_0, sources: "none" }] } }));
     expect(parsed.studySkipped).toEqual([
       expect.objectContaining({ kind: "discoveries", title: "He knows how to help", reason: expect.stringContaining("sources") }),
+    ]);
+  });
+
+  it("name journal entries by their first words, and skip ones that are empty or of an unknown kind", () => {
+    const [entry] = JOURNAL_FROM_3_0;
+    const long = "Someone held the door for me and smiled, and it changed my whole morning.";
+    const parsed = parsedOrThrow(
+      current({ study: { journal: [{ ...entry, id: "blank", text: "   " }, { ...entry, id: "poem", kind: "poem", text: long }, entry] } }),
+    );
+    expect(parsed.study.journal).toEqual([entry]);
+    expect(parsed.studySkipped).toEqual([
+      { kind: "journal", index: 0, id: "blank", title: undefined, reason: expect.stringContaining("text") },
+      { kind: "journal", index: 1, id: "poem", title: "Someone held the door for me and smiled,…", reason: expect.stringContaining("kind") },
     ]);
   });
 
   it.each(STUDY_KINDS)("keep the first of two %s records with the same id", (kind) => {
     const [first] = study()[kind];
     const second = { ...first, updatedAt: "2026-10-26T00:00:00.000Z" };
-    const parsed = parsedOrThrow(v3({ study: { ...study(), [kind]: [first, second] } }));
+    const parsed = parsedOrThrow(current({ study: { ...study(), [kind]: [first, second] } }));
     expect(parsed.study[kind]).toEqual([first]);
     expect(parsed.studySkipped).toEqual([
       expect.objectContaining({ kind, index: 1, id: first.id, reason: expect.stringContaining("Duplicate id") }),
@@ -432,7 +496,7 @@ describe("study records in a backup", () => {
     const [record] = study()[kind];
     const newerButValid = { ...record, dataVersion: 99 };
     const newerAndUnknownShape = { id: "from-the-future", dataVersion: 99, somethingNew: true };
-    const parsed = parsedOrThrow(v3({ study: { ...study(), [kind]: [newerButValid, newerAndUnknownShape] } }));
+    const parsed = parsedOrThrow(current({ study: { ...study(), [kind]: [newerButValid, newerAndUnknownShape] } }));
     expect(parsed.study[kind]).toEqual([]);
     expect(parsed.studySkipped.map((entry) => [entry.kind, entry.id, entry.reason])).toEqual([
       [kind, record.id, expect.stringContaining("newer version")],
@@ -440,7 +504,7 @@ describe("study records in a backup", () => {
     ]);
   });
 
-  it("are treated as empty when a version 3 file has no study section, and the preview says so", () => {
+  it("are treated as empty when a file has no study section, and the preview says so", () => {
     const parsed = parsedOrThrow(envelope([richInvestigation("a")]));
     expect(parsed.study).toEqual(emptyStudyData());
     expect(parsed.notes).toEqual([expect.stringContaining("no investigation progress")]);
@@ -448,13 +512,13 @@ describe("study records in a backup", () => {
   });
 
   it("are not imported from a damaged study section, which is reported", () => {
-    const parsed = parsedOrThrow(v3({ study: "junk" }));
+    const parsed = parsedOrThrow(current({ study: "junk" }));
     expect(parsed.study).toEqual(emptyStudyData());
     expect(parsed.notes).toEqual([expect.stringContaining("Map connections is damaged")]);
   });
 
   it("are read from the undamaged lists when one list is damaged", () => {
-    const parsed = parsedOrThrow(v3({ study: { ...study(), discoveries: { not: "a list" } } }));
+    const parsed = parsedOrThrow(current({ study: { ...study(), discoveries: { not: "a list" } } }));
     expect(parsed.study).toEqual(study({ discoveries: [] }));
     expect(parsed.notes).toEqual([
       expect.stringContaining("list of Discovery Cards is damaged"),
@@ -464,7 +528,7 @@ describe("study records in a backup", () => {
   });
 
   it("may link progress to a card the file doesn't contain: imported unchanged, with a note", () => {
-    const parsed = parsedOrThrow(v3({ study: { ...study(), discoveries: [] } }));
+    const parsed = parsedOrThrow(current({ study: { ...study(), discoveries: [] } }));
     expect(parsed.study.progress).toEqual([PROGRESS_FROM_2_0]);
     expect(parsed.study.progress[0].discoveryId).toBe(CARD_FROM_2_0.id);
     expect(parsed.notes).toEqual([
@@ -486,7 +550,7 @@ describe("preferences in a backup", () => {
   });
 
   it("keep valid activity options when some are invalid", () => {
-    const parsed = parsedOrThrow(v3({ preferences: { activity: { offerBranches: false, showReflections: "yes" } } }));
+    const parsed = parsedOrThrow(current({ preferences: { activity: { offerBranches: false, showReflections: "yes" } } }));
     expect(parsed.preferences).toEqual({ activity: { offerBranches: false } });
     expect(parsed.notes).toEqual([expect.stringContaining("activity options")]);
   });
@@ -500,14 +564,14 @@ describe("preferences in a backup", () => {
   });
 
   it("are ignored with a note when the section is damaged", () => {
-    const parsed = parsedOrThrow(v3({ preferences: ["dark"] }));
+    const parsed = parsedOrThrow(current({ preferences: ["dark"] }));
     expect(parsed.preferences).toEqual({});
     expect(parsed.notes).toEqual([expect.stringContaining("preferences are damaged")]);
     expect(parsed.study).toEqual(study());
   });
 
   it("may be missing", () => {
-    const parsed = parsedOrThrow(v3({ preferences: undefined }));
+    const parsed = parsedOrThrow(current({ preferences: undefined }));
     expect(parsed.preferences).toEqual({});
     expect(parsed.notes).toEqual([]);
   });
@@ -575,6 +639,8 @@ describe("describing counts", () => {
   it("uses singular and plural forms", () => {
     expect(countOf("discoveries", 1)).toBe("1 Discovery Card");
     expect(countOf("investigations", 2)).toBe("2 research notebooks");
+    expect(countOf("journal", 1)).toBe("1 journal entry");
+    expect(countOf("journal", 3)).toBe("3 journal entries");
   });
 
   it("lists only the kinds that have records", () => {
@@ -586,5 +652,6 @@ describe("describing counts", () => {
     expect(describeCounts({ ...zeroCounts(), investigations: 1, progress: 2, personalConnections: 1 })).toBe(
       "1 research notebook, 2 investigations, and 1 Map connection",
     );
+    expect(describeCounts({ ...zeroCounts(), discoveries: 2, journal: 1 })).toBe("2 Discovery Cards and 1 journal entry");
   });
 });
